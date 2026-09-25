@@ -1,0 +1,459 @@
+{
+  "cache_only": true,
+  "dataset_version": "varshasetu-gefs12r-imd025-jjas-2000-2019-v2",
+  "fss_computed": false,
+  "independent_verification": {
+    "all_accepted_exact": true,
+    "all_accepted_nonnegative": true,
+    "all_statuses_agree": true,
+    "cases": 15,
+    "selected_initializations": [
+      "2019060100",
+      "2019061500",
+      "2019072200",
+      "2019080600",
+      "2019093000"
+    ]
+  },
+  "interval_inventory_rows": 15250,
+  "july22": [
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "c00",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:c00:2 - GEFS:2019-07-22T00:00:00+00:00:c00:1) + GEFS:2019-07-22T00:00:00+00:00:c00:4 + GEFS:2019-07-22T00:00:00+00:00:c00:6 + GEFS:2019-07-22T00:00:00+00:00:c00:8 + GEFS:2019-07-22T00:00:00+00:00:c00:9",
+      "method_b_minimum_normalized_negative_mm": null,
+      "method_b_normalized_negative_count": 0,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day1_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "c00",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "method_a_status": "FAIL",
+      "method_b_formula": "",
+      "method_b_minimum_normalized_negative_mm": "",
+      "method_b_normalized_negative_count": "",
+      "method_b_reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "method_b_segments": "",
+      "method_b_status": "FAIL",
+      "method_b_subtractions": "",
+      "month": "2019-07",
+      "product": "day2_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "c00",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:c00:18 - GEFS:2019-07-22T00:00:00+00:00:c00:17) + GEFS:2019-07-22T00:00:00+00:00:c00:20 + GEFS:2019-07-22T00:00:00+00:00:c00:22 + GEFS:2019-07-22T00:00:00+00:00:c00:24 + GEFS:2019-07-22T00:00:00+00:00:c00:25",
+      "method_b_minimum_normalized_negative_mm": null,
+      "method_b_normalized_negative_count": 0,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day3_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "p01",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:p01:2 - GEFS:2019-07-22T00:00:00+00:00:p01:1) + GEFS:2019-07-22T00:00:00+00:00:p01:4 + GEFS:2019-07-22T00:00:00+00:00:p01:6 + GEFS:2019-07-22T00:00:00+00:00:p01:8 + GEFS:2019-07-22T00:00:00+00:00:p01:9",
+      "method_b_minimum_normalized_negative_mm": -0.04999999999999999,
+      "method_b_normalized_negative_count": 77,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day1_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "p01",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:p01:10 - GEFS:2019-07-22T00:00:00+00:00:p01:9) + GEFS:2019-07-22T00:00:00+00:00:p01:12 + GEFS:2019-07-22T00:00:00+00:00:p01:14 + GEFS:2019-07-22T00:00:00+00:00:p01:16 + GEFS:2019-07-22T00:00:00+00:00:p01:17",
+      "method_b_minimum_normalized_negative_mm": null,
+      "method_b_normalized_negative_count": 0,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day2_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "p01",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:p01:18 - GEFS:2019-07-22T00:00:00+00:00:p01:17) + GEFS:2019-07-22T00:00:00+00:00:p01:20 + GEFS:2019-07-22T00:00:00+00:00:p01:22 + GEFS:2019-07-22T00:00:00+00:00:p01:24 + GEFS:2019-07-22T00:00:00+00:00:p01:25",
+      "method_b_minimum_normalized_negative_mm": null,
+      "method_b_normalized_negative_count": 0,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day3_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "p04",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:p04:2 - GEFS:2019-07-22T00:00:00+00:00:p04:1) + GEFS:2019-07-22T00:00:00+00:00:p04:4 + GEFS:2019-07-22T00:00:00+00:00:p04:6 + GEFS:2019-07-22T00:00:00+00:00:p04:8 + GEFS:2019-07-22T00:00:00+00:00:p04:9",
+      "method_b_minimum_normalized_negative_mm": -0.050000000000000044,
+      "method_b_normalized_negative_count": 69,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day1_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "p04",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:p04:10 - GEFS:2019-07-22T00:00:00+00:00:p04:9) + GEFS:2019-07-22T00:00:00+00:00:p04:12 + GEFS:2019-07-22T00:00:00+00:00:p04:14 + GEFS:2019-07-22T00:00:00+00:00:p04:16 + GEFS:2019-07-22T00:00:00+00:00:p04:17",
+      "method_b_minimum_normalized_negative_mm": null,
+      "method_b_normalized_negative_count": 0,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day2_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    },
+    {
+      "both_pass_max_abs_difference_mm": "",
+      "both_pass_mean_abs_difference_mm": "",
+      "initialization": "2019072200",
+      "member": "p04",
+      "method_a_reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "method_a_status": "FAIL",
+      "method_b_formula": "(GEFS:2019-07-22T00:00:00+00:00:p04:18 - GEFS:2019-07-22T00:00:00+00:00:p04:17) + GEFS:2019-07-22T00:00:00+00:00:p04:20 + GEFS:2019-07-22T00:00:00+00:00:p04:22 + GEFS:2019-07-22T00:00:00+00:00:p04:24 + GEFS:2019-07-22T00:00:00+00:00:p04:25",
+      "method_b_minimum_normalized_negative_mm": null,
+      "method_b_normalized_negative_count": 0,
+      "method_b_reason": "",
+      "method_b_segments": 5,
+      "method_b_status": "PASS",
+      "method_b_subtractions": 1,
+      "month": "2019-07",
+      "product": "day3_24h",
+      "source_manifest": "data/manifests/phase1e/2019-07/daily/source_2019072200.json",
+      "source_manifest_sha256": "bf175d24c275d8355218e9a7d1af3f7209175ce98f39b4466002e43edd326b18"
+    }
+  ],
+  "method_a": {
+    "accepted": 614,
+    "quarantined": 1216
+  },
+  "method_b": {
+    "accepted": 1468,
+    "formulas_by_product": {
+      "day1_24h": [
+        "(3-6)[nested_interval_difference] + (6-12)[direct_interval] + (12-18)[direct_interval] + (18-24)[direct_interval] + (24-27)[direct_interval]"
+      ],
+      "day2_24h": [
+        "(27-30)[nested_interval_difference] + (30-36)[direct_interval] + (36-42)[direct_interval] + (42-48)[direct_interval] + (48-51)[direct_interval]"
+      ],
+      "day3_24h": [
+        "(51-54)[nested_interval_difference] + (54-60)[direct_interval] + (60-66)[direct_interval] + (66-72)[direct_interval] + (72-75)[direct_interval]"
+      ]
+    },
+    "quarantined": 362,
+    "subtraction_counts": {
+      "": 362,
+      "1": 1468
+    }
+  },
+  "method_comparison": {
+    "both_pass_cases": 614,
+    "cell_count": 1474214,
+    "maximum_absolute_difference_mm": 0.05000000000000249,
+    "mean_absolute_difference_mm": 3.6161642747081926e-05,
+    "percentiles_mm": {
+      "50": 0.0,
+      "90": 1.7763568394002505e-15,
+      "95": 3.552713678800501e-15,
+      "99": 7.105427357601002e-15
+    }
+  },
+  "network_calls": 0,
+  "new_eligibility_counts": {
+    "CONTROL_MODEL_ELIGIBLE": 255,
+    "EXTREME_EVENT_ELIGIBLE": 255,
+    "FSS_ELIGIBLE": 255,
+    "FULL_ENSEMBLE_ELIGIBLE": 173,
+    "PAIR_VALID": 255,
+    "REGIME_ELIGIBLE": 366,
+    "REJECTED": 0,
+    "SOURCE_VALID": 366
+  },
+  "old_eligibility_counts": {
+    "CONTROL_MODEL_ELIGIBLE": 52,
+    "EXTREME_EVENT_ELIGIBLE": 52,
+    "FSS_ELIGIBLE": 52,
+    "FULL_ENSEMBLE_ELIGIBLE": 9,
+    "PAIR_VALID": 52,
+    "REGIME_ELIGIBLE": 366,
+    "REJECTED": 0,
+    "SOURCE_VALID": 366
+  },
+  "raw_control_baseline": {
+    "day1_24h": {
+      "bias_mm": 1.9672573459705807,
+      "contingency": {
+        "115.6": {
+          "correct_negatives": 157209,
+          "csi": 0.0416,
+          "ets": 0.0398,
+          "false_alarms": 334,
+          "far": 0.8413,
+          "forecast_events": 397,
+          "frequency_bias": 0.3367,
+          "hits": 63,
+          "misses": 1116,
+          "observed_events": 1179,
+          "pod": 0.0534,
+          "rare_event_warning": false,
+          "threshold_mm": 115.6,
+          "total_records": 158722
+        },
+        "204.5": {
+          "correct_negatives": 158469,
+          "csi": 0.0,
+          "ets": -0.0002,
+          "false_alarms": 44,
+          "far": 1.0,
+          "forecast_events": 44,
+          "frequency_bias": 0.2105,
+          "hits": 0,
+          "misses": 209,
+          "observed_events": 209,
+          "pod": 0.0,
+          "rare_event_warning": false,
+          "threshold_mm": 204.5,
+          "total_records": 158722
+        },
+        "64.5": {
+          "correct_negatives": 152810,
+          "csi": 0.1277,
+          "ets": 0.1178,
+          "false_alarms": 1788,
+          "far": 0.7031,
+          "forecast_events": 2543,
+          "frequency_bias": 0.6166,
+          "hits": 755,
+          "misses": 3369,
+          "observed_events": 4124,
+          "pod": 0.1831,
+          "rare_event_warning": false,
+          "threshold_mm": 64.5,
+          "total_records": 158722
+        }
+      },
+      "mae_mm": 9.424935071760496,
+      "n": 158722,
+      "rmse_mm": 19.229731442053737
+    },
+    "day2_24h": {
+      "bias_mm": -0.1752022216242773,
+      "contingency": {
+        "115.6": {
+          "correct_negatives": 92445,
+          "csi": 0.0342,
+          "ets": 0.0321,
+          "false_alarms": 200,
+          "far": 0.8264,
+          "forecast_events": 242,
+          "frequency_bias": 0.2356,
+          "hits": 42,
+          "misses": 985,
+          "observed_events": 1027,
+          "pod": 0.0409,
+          "rare_event_warning": false,
+          "threshold_mm": 115.6,
+          "total_records": 93672
+        },
+        "204.5": {
+          "correct_negatives": 93459,
+          "csi": 0.0,
+          "ets": -0.0002,
+          "false_alarms": 19,
+          "far": 1.0,
+          "forecast_events": 19,
+          "frequency_bias": 0.0979,
+          "hits": 0,
+          "misses": 194,
+          "observed_events": 194,
+          "pod": 0.0,
+          "rare_event_warning": false,
+          "threshold_mm": 204.5,
+          "total_records": 93672
+        },
+        "64.5": {
+          "correct_negatives": 89324,
+          "csi": 0.1233,
+          "ets": 0.1114,
+          "false_alarms": 1170,
+          "far": 0.6858,
+          "forecast_events": 1706,
+          "frequency_bias": 0.5368,
+          "hits": 536,
+          "misses": 2642,
+          "observed_events": 3178,
+          "pod": 0.1687,
+          "rare_event_warning": false,
+          "threshold_mm": 64.5,
+          "total_records": 93672
+        }
+      },
+      "mae_mm": 9.631493005663087,
+      "n": 93672,
+      "rmse_mm": 21.16518894164928
+    },
+    "day3_24h": {
+      "bias_mm": -1.245347975804451,
+      "contingency": {
+        "115.6": {
+          "correct_negatives": 78558,
+          "csi": 0.0162,
+          "ets": 0.015,
+          "false_alarms": 91,
+          "far": 0.875,
+          "forecast_events": 104,
+          "frequency_bias": 0.1461,
+          "hits": 13,
+          "misses": 699,
+          "observed_events": 712,
+          "pod": 0.0183,
+          "rare_event_warning": false,
+          "threshold_mm": 115.6,
+          "total_records": 79361
+        },
+        "204.5": {
+          "correct_negatives": 79236,
+          "csi": 0.0,
+          "ets": -0.0001,
+          "false_alarms": 7,
+          "far": 1.0,
+          "forecast_events": 7,
+          "frequency_bias": 0.0593,
+          "hits": 0,
+          "misses": 118,
+          "observed_events": 118,
+          "pod": 0.0,
+          "rare_event_warning": false,
+          "threshold_mm": 204.5,
+          "total_records": 79361
+        },
+        "64.5": {
+          "correct_negatives": 76672,
+          "csi": 0.0997,
+          "ets": 0.0935,
+          "false_alarms": 358,
+          "far": 0.5719,
+          "forecast_events": 626,
+          "frequency_bias": 0.2686,
+          "hits": 268,
+          "misses": 2063,
+          "observed_events": 2331,
+          "pod": 0.115,
+          "rare_event_warning": false,
+          "threshold_mm": 64.5,
+          "total_records": 79361
+        }
+      },
+      "mae_mm": 8.77443761130245,
+      "n": 79361,
+      "rmse_mm": 19.13521171294805
+    }
+  },
+  "regime_labels_created": false,
+  "season": "2019-JJAS",
+  "source_cases": 1830,
+  "training_eligible": false,
+  "v1_preserved": {
+    "manifest": "data/manifests/phase1e/2019-JJAS/season_manifest.json",
+    "manifest_sha256": "c68af39654a6449ab7a1d81a5259888dfa1c31568bc83100228ae2e62e6f20ce",
+    "zarr_tree_sha256": "895cecb614a8d39b5e251b8608bb613f5695202c4fdc4b8752e71fd8d1fcc18d"
+  },
+  "zarr": {
+    "path": "data/processed/phase1f/2019-JJAS/varshasetu-gefs12r-imd025-2019-jjas-v2.zarr",
+    "shapes": {
+      "atmosphere": [
+        122,
+        3,
+        6,
+        51,
+        81
+      ],
+      "forecast_rain": [
+        122,
+        3,
+        5,
+        49,
+        49
+      ],
+      "observation_rain": [
+        122,
+        3,
+        49,
+        49
+      ],
+      "valid_mask": [
+        122,
+        3,
+        49,
+        49
+      ]
+    },
+    "tree_sha256": "13fc4ea03f0724fc6a3c0506de1a30b1acb5be4f8dc803c9ea46bb2b5377cb9e"
+  }
+}

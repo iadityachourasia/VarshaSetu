@@ -1,0 +1,35 @@
+{
+  "case": "2019-07-22 five cached rainfall members, 25 messages each",
+  "decoded_values_identical": true,
+  "members": [
+    {
+      "decoded_sha256": "e42eeb2dabbcbe69a442ca494273f8a7c3d16ffe33394c55a73122ae23e2ed89",
+      "messages": 25,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\c00\\apcp_sfc\\selected_003_075_2019072200_c00.grib2"
+    },
+    {
+      "decoded_sha256": "384696265711783fbcb4234d7b5cbb5a8162b2f1990fae9cd4393bf37b46bcb0",
+      "messages": 25,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p01\\apcp_sfc\\selected_003_075_2019072200_p01.grib2"
+    },
+    {
+      "decoded_sha256": "a062af7e6217d17c1c150a4d37987b83a95f03525d53fb2e520168d8a612c6bd",
+      "messages": 25,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p02\\apcp_sfc\\selected_003_075_2019072200_p02.grib2"
+    },
+    {
+      "decoded_sha256": "ff8aad0c0d55c2793dcf6409499ba62c1ce18ca57cf148cf3abab77a71609bce",
+      "messages": 25,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p03\\apcp_sfc\\selected_003_075_2019072200_p03.grib2"
+    },
+    {
+      "decoded_sha256": "59cfccf618cec521b65e08642d279f39c40ff53ad88dd7681e7723a891c2523b",
+      "messages": 25,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p04\\apcp_sfc\\selected_003_075_2019072200_p04.grib2"
+    }
+  ],
+  "sequential_seconds": 20.765079300000252,
+  "speedup": 2.9920090106028314,
+  "two_process_seconds": 6.940179400000034,
+  "warmup_seconds": 14.198918699999922
+}

@@ -1,0 +1,170 @@
+{
+  "day1_24h": {
+    "bias_mm": 1.9672573459705807,
+    "contingency": {
+      "115.6": {
+        "correct_negatives": 157209,
+        "csi": 0.0416,
+        "ets": 0.0398,
+        "false_alarms": 334,
+        "far": 0.8413,
+        "forecast_events": 397,
+        "frequency_bias": 0.3367,
+        "hits": 63,
+        "misses": 1116,
+        "observed_events": 1179,
+        "pod": 0.0534,
+        "rare_event_warning": false,
+        "threshold_mm": 115.6,
+        "total_records": 158722
+      },
+      "204.5": {
+        "correct_negatives": 158469,
+        "csi": 0.0,
+        "ets": -0.0002,
+        "false_alarms": 44,
+        "far": 1.0,
+        "forecast_events": 44,
+        "frequency_bias": 0.2105,
+        "hits": 0,
+        "misses": 209,
+        "observed_events": 209,
+        "pod": 0.0,
+        "rare_event_warning": false,
+        "threshold_mm": 204.5,
+        "total_records": 158722
+      },
+      "64.5": {
+        "correct_negatives": 152810,
+        "csi": 0.1277,
+        "ets": 0.1178,
+        "false_alarms": 1788,
+        "far": 0.7031,
+        "forecast_events": 2543,
+        "frequency_bias": 0.6166,
+        "hits": 755,
+        "misses": 3369,
+        "observed_events": 4124,
+        "pod": 0.1831,
+        "rare_event_warning": false,
+        "threshold_mm": 64.5,
+        "total_records": 158722
+      }
+    },
+    "mae_mm": 9.424935071760496,
+    "n": 158722,
+    "rmse_mm": 19.229731442053737
+  },
+  "day2_24h": {
+    "bias_mm": -0.1752022216242773,
+    "contingency": {
+      "115.6": {
+        "correct_negatives": 92445,
+        "csi": 0.0342,
+        "ets": 0.0321,
+        "false_alarms": 200,
+        "far": 0.8264,
+        "forecast_events": 242,
+        "frequency_bias": 0.2356,
+        "hits": 42,
+        "misses": 985,
+        "observed_events": 1027,
+        "pod": 0.0409,
+        "rare_event_warning": false,
+        "threshold_mm": 115.6,
+        "total_records": 93672
+      },
+      "204.5": {
+        "correct_negatives": 93459,
+        "csi": 0.0,
+        "ets": -0.0002,
+        "false_alarms": 19,
+        "far": 1.0,
+        "forecast_events": 19,
+        "frequency_bias": 0.0979,
+        "hits": 0,
+        "misses": 194,
+        "observed_events": 194,
+        "pod": 0.0,
+        "rare_event_warning": false,
+        "threshold_mm": 204.5,
+        "total_records": 93672
+      },
+      "64.5": {
+        "correct_negatives": 89324,
+        "csi": 0.1233,
+        "ets": 0.1114,
+        "false_alarms": 1170,
+        "far": 0.6858,
+        "forecast_events": 1706,
+        "frequency_bias": 0.5368,
+        "hits": 536,
+        "misses": 2642,
+        "observed_events": 3178,
+        "pod": 0.1687,
+        "rare_event_warning": false,
+        "threshold_mm": 64.5,
+        "total_records": 93672
+      }
+    },
+    "mae_mm": 9.631493005663087,
+    "n": 93672,
+    "rmse_mm": 21.16518894164928
+  },
+  "day3_24h": {
+    "bias_mm": -1.245347975804451,
+    "contingency": {
+      "115.6": {
+        "correct_negatives": 78558,
+        "csi": 0.0162,
+        "ets": 0.015,
+        "false_alarms": 91,
+        "far": 0.875,
+        "forecast_events": 104,
+        "frequency_bias": 0.1461,
+        "hits": 13,
+        "misses": 699,
+        "observed_events": 712,
+        "pod": 0.0183,
+        "rare_event_warning": false,
+        "threshold_mm": 115.6,
+        "total_records": 79361
+      },
+      "204.5": {
+        "correct_negatives": 79236,
+        "csi": 0.0,
+        "ets": -0.0001,
+        "false_alarms": 7,
+        "far": 1.0,
+        "forecast_events": 7,
+        "frequency_bias": 0.0593,
+        "hits": 0,
+        "misses": 118,
+        "observed_events": 118,
+        "pod": 0.0,
+        "rare_event_warning": false,
+        "threshold_mm": 204.5,
+        "total_records": 79361
+      },
+      "64.5": {
+        "correct_negatives": 76672,
+        "csi": 0.0997,
+        "ets": 0.0935,
+        "false_alarms": 358,
+        "far": 0.5719,
+        "forecast_events": 626,
+        "frequency_bias": 0.2686,
+        "hits": 268,
+        "misses": 2063,
+        "observed_events": 2331,
+        "pod": 0.115,
+        "rare_event_warning": false,
+        "threshold_mm": 64.5,
+        "total_records": 79361
+      }
+    },
+    "mae_mm": 8.77443761130245,
+    "n": 79361,
+    "rmse_mm": 19.13521171294805
+  }
+}

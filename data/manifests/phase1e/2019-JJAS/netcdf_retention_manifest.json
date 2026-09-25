@@ -1,0 +1,1258 @@
+{
+  "authoritative_zarr": "data/processed/phase1e/2019-JJAS/varshasetu-gefs12r-imd025-2019-jjas-v1.zarr",
+  "daily_audit_initializations": [
+    "2019061100",
+    "2019072200",
+    "2019093000"
+  ],
+  "note": "Pruned entries remain hash-addressed here and in their acquisition-time derived manifests; they are reproducible from the immutable source cache.",
+  "policy": "Seasonal Zarr is authoritative; retain four monthly storage-format benchmarks and three deterministic daily audit cases only.",
+  "pruned": [
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060100.nc",
+      "sha256": "bbbac04a3c83f75a0727b1a7552facd924be0b4fbb71f28e56f054201c7589a5"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060200.nc",
+      "sha256": "4fa841eb67478950d7bfc3bc818d2474033bfd199f607df8538e7d888123300d"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060300.nc",
+      "sha256": "a83fe6ff6345fa645f8aaf66705dbb6935bb47a7f215fa3342d5966f7612788b"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060400.nc",
+      "sha256": "915652f94b6b0e450f920efc9628b75dafe4767c5faf7eecb6bcb7a643936e6e"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060500.nc",
+      "sha256": "8d4ed385666a42f111d872d4a13326baca23efd4f4b49c1669bd700849e96870"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060600.nc",
+      "sha256": "4a90e4365305065fa92c3cc2b185ae38c465ae75e4329dfb67cd6d214156849c"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060700.nc",
+      "sha256": "3b82dfdb7e049053527d6aeba30f44760766300173e58ddbd8b677ef4b9a62f2"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060800.nc",
+      "sha256": "acc2cda517b6ddb6320b9dc3b47fb5c1dc3c9e258b20b0f8f36bc387c5f6e87d"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019060900.nc",
+      "sha256": "ce3eb496b96bfa52ef5c93db437fe5230cde0d59d24ede962c47a25efea60093"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061000.nc",
+      "sha256": "557290d23b632c2aa22b3052d349f8c63be4123abbc27d61e261f1741e16d653"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061200.nc",
+      "sha256": "2a3975672e5208b11e670c62a034d097af39ac3fbb33a20176f8967ce30e81c2"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061300.nc",
+      "sha256": "e9bbfd1190cd531883140aac6d51e249e85b6623f3bbf47b2bfdd900fdeb06dc"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061400.nc",
+      "sha256": "b5ea40184f1f2f8d2308e6f11022f61a480cea57226b5dc9754f0a62ad0f3bab"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061500.nc",
+      "sha256": "76624a27dbd5701167c08534bb02dc932a1a5902269a9a1d18825c86bbb60f9d"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061600.nc",
+      "sha256": "1145a1c0ecaa4fec7e678dbcb27e2afe00e8b268f4b15ce8afc2247ed30abcbc"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061700.nc",
+      "sha256": "47a2df03d34c80ea59c8a050b292c553918af1b1681673ff49f67874675a0e90"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061800.nc",
+      "sha256": "03e18e5aa960fcedd2e3b071949e63e3b17f60dbf9378d482deec8d5a2afa1d4"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061900.nc",
+      "sha256": "fd38b37dedde01e94ac9b5d6c2df204bb09e07b19a5fa13843dc56f9f136d74c"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062000.nc",
+      "sha256": "b3b300d5978a8f82014a0b09f9407b2495cd1872424e0abd9bb95422e9f9d35e"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062100.nc",
+      "sha256": "654482bdfbb4f6b02402a1155a3d2bdbd66148c24dd32e8761f57e3440df30c7"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062200.nc",
+      "sha256": "076a19917815c222289e90557ce9355e0542406b0fcb2c62071061b62a274d47"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062300.nc",
+      "sha256": "d1e9f69aea23878d2d920931195e058db94f5aa662a8a3eb871839ee9f5ba6bf"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062400.nc",
+      "sha256": "1971dde8413b1979f55669ff6b2adbc181a2567a90c61d2ecba2e8abf215e5f6"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062500.nc",
+      "sha256": "e19cc1ed74fa976b73e3482cd5a6fd62316c3a4b9f82b7b71b3a71d074f905f6"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062600.nc",
+      "sha256": "a7bb767fbae88f0d017702fc925e0ca472a5b98137fa7f2a728b0fad12e7bc45"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062700.nc",
+      "sha256": "1cabe9485400a50ec4a038d989d202e858beec7fd8f776b110b5a743e36e8c12"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062800.nc",
+      "sha256": "fe9c157af5e107aaa504f7d05cc17f16c41a79f050d23c57b64af8b7b0af2555"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019062900.nc",
+      "sha256": "842191b8e7bc037481500700a7c18c45c01123ce092054c9603d753120b8078a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019063000.nc",
+      "sha256": "5a157bc99ab9a0dba9039be0a02e48f4e1e3f66448beca5e10cbdc968d62f115"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060100.nc",
+      "sha256": "3936ffa616c0ed6e1a41b8485eddf0e882a1e4a783ee58843da3c3b8b9d59d26"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060200.nc",
+      "sha256": "76119527032bcd364b452d47b5a04f3e4d76244134132dacfe044da08d7668f9"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060300.nc",
+      "sha256": "f458ff5a1ed7486232591262f411ba433ac68d9fe31c659c5081041ac4c01a52"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060400.nc",
+      "sha256": "ac3fd19a1b465fff9cb9792b71678eff3fc33321a31deb1ed48564d527f22ec7"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060500.nc",
+      "sha256": "5ddf38a5ed288df5e272bb71978676a422312a105477dd13b42d31a749ef02a6"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060600.nc",
+      "sha256": "884417b655d080253555b4ed851e60104f6499f575e7fcfed67ed86406738f1a"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060700.nc",
+      "sha256": "f659b6ba7f736ebe9709a81dd98194581faf2728172c342c4034363ccee9d258"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060800.nc",
+      "sha256": "c6d90b589a622f08445a38e591790fe8da72a8c2e67049d9d827b0f546ffb4a0"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019060900.nc",
+      "sha256": "ea05e3b8a378679f21720377042eac8c54750838c0dca320eaf20e422f556dc3"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061000.nc",
+      "sha256": "654d0f0008edfc31b4c57e1ab5495553f6743282c00c4f1869d930b36e2efddc"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061200.nc",
+      "sha256": "946f8751cfa8efc40a3e3162c289728903abf1358a8954531f7597874f434d15"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061300.nc",
+      "sha256": "94597b567076fa21cd1e5c3bdb367fc846c3223134223505760334f9dd3112e1"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061400.nc",
+      "sha256": "406785d535542e863337ef71ba098df4a23e13e9481d5ef7c7145d289c1b1915"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061500.nc",
+      "sha256": "45dd4ecce6b62b22ac357e5eac708049d221e29a0bdb492dad9e1cecb75d084c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061600.nc",
+      "sha256": "d661c366c067c2cd88f01d4280f1bb92c1382d8f6b4acb00c75eac0856c35907"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061700.nc",
+      "sha256": "3638156078351845211b6a3cb42072a77f6f71ba7865241ac51286b622db7eba"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061800.nc",
+      "sha256": "1254310b7d22f0b2db86280ce66b46476d4b3631201e96cced2f3e0b32be243c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061900.nc",
+      "sha256": "2e6a77459a727a79544775cdd349b49dcc336ce0b40fa6309004979fa2446486"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062000.nc",
+      "sha256": "75d5201144e1be6d76e9b8a94a2a1a4f27d26294c7a4ccaf19baae6daf85b845"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062100.nc",
+      "sha256": "8b8977870060dce3d13686325b45a77c7db574eaf0fa92756535e4af97f9f0b6"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062200.nc",
+      "sha256": "17cf76135db8fb4e6976d566019beb801fd1e5cfbfd82ff0847b5d2a4b5fffce"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062300.nc",
+      "sha256": "fac82960b27f8ced3afb4df187f1105b9b054ac5b2120eb1df9f7b14e5032fff"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062400.nc",
+      "sha256": "9e6938165047b6fb17e94a23c94c3ddd1354ef6639f5b9328e4f464b467fd432"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062500.nc",
+      "sha256": "a6432743dd3d30b1357b8712a804eaf5fbcaa862f08580f158124e6c891276b2"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062600.nc",
+      "sha256": "e5c182242590ab1e601de097a817b8c1f6ea31fb3683c7b148e45cfc278f2f02"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062700.nc",
+      "sha256": "c8802b8186b29c9837a325e3b9e5dba0218cd0d5e5040f2f00ec0d41d9f1c442"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062800.nc",
+      "sha256": "87f7bc387219a0f956b5a87d8c6324fe1d2ab955b85d9efa87790b55e2ecb1b1"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019062900.nc",
+      "sha256": "8d3f21d5fe076269fa6f9998acdc867c51bd43a4cd29a45d9b550f7635392a94"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019063000.nc",
+      "sha256": "b74cc65cb5d7c8adb1014f3fdd1f6965813afca83eacad2f2315f85f1d1a917f"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070100.nc",
+      "sha256": "5cc5a2361e7007739b4cc50e04b1751b3a7fe2f5b9bc56e70f6aabef50f33554"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070200.nc",
+      "sha256": "db3478fbba900c7490c958a21f47aa6964ab24ad793fce9a014dec9d5cf857ab"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070300.nc",
+      "sha256": "2734073d7a3b95131f861513e19fe5526784c31a61ef4d085bce454ff75c4bef"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070400.nc",
+      "sha256": "e403e6d3278e4afd17ca04678fba09d7003e388fffd1ae5afad3cc2ac84459cd"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070500.nc",
+      "sha256": "842f041af60f10bec7c52ceb4d564d254151ffb4e6bfd9a991017837a2bc9ac0"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070600.nc",
+      "sha256": "f8b5d9eb62ccc92079dddd062643e283c0a0454649e0ed70d991de26c8f634c4"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070700.nc",
+      "sha256": "838a0f09e7df6532597fa054f9c3daf8f1c0c85f693e06f442cc30e9aeafdd6a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070800.nc",
+      "sha256": "cd1e34f0df97eff3144d32ebefad19b87e73db6f92771c0307a728564b6078e5"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019070900.nc",
+      "sha256": "505fc0f06955cd706b31654bfa8c96b296248e98be76899794506f9c06b724e3"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071000.nc",
+      "sha256": "b314a1bb93cfe0897e6ba2e3dbd42995d8b29f400f452fdf778d1ccb083624ae"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071100.nc",
+      "sha256": "97facfd239b07bb899f29fd4ca3e94be5d36ebf4d49203c1c6c0ba47a618c18a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071200.nc",
+      "sha256": "5d5c6407259966c9e94f824bb7c767e3a6f0a0ac72a00a35b737499c54f77ed7"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071300.nc",
+      "sha256": "4d83be5f1fbdf2a471b786c13f9c5e2de163c7e30d2ef35dd6193a55f61d82eb"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071400.nc",
+      "sha256": "c583780bd06ef5281916427ae073eab084ee47a9cfb21f50a1f3f232ac51551d"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071500.nc",
+      "sha256": "306fa8daedad61b69fbc849a4a3a0dd5be22fb83d1c9ee15a545976efeb8cd56"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071600.nc",
+      "sha256": "f2e025b9c2174137aa76d7e4f7f1a3940d77b50edb6a2d2f40f7450b4c84022d"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071700.nc",
+      "sha256": "519efdc8b3a705a6725244bd93a72c9ee7cc93523f57a4b5f7eb23da8f9b8814"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071800.nc",
+      "sha256": "73ab229f605066a2a03dfcd28c44353ac9f9d1d7cfac03b130b96d72bc66276f"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019071900.nc",
+      "sha256": "b627757caa61644248b3213989f398cde3b1d45cfd5ebfa60c0611c84cdf2b29"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072000.nc",
+      "sha256": "b0172a7600037c2bea8d56a07c2ed4f78619ef224251c72c2733f389075beb25"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072100.nc",
+      "sha256": "be20d996af7781c670084bb89ad17b3beaf1c220cd5fb193eed369c2acadba35"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072300.nc",
+      "sha256": "f778098a96da5aeaa21a63df633c1e2af0ed9d29dba0350bf75c392076d56224"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072400.nc",
+      "sha256": "e04a891d99ed8329f83e3a51eabf73905986743b36423278629d90e123de0b74"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072500.nc",
+      "sha256": "2f8210d92ec164c3b7137a9c0fa8fd603e1e3f497788b19e12c11b75644bd4e7"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072600.nc",
+      "sha256": "bfe2eb4a3c8fda94ad42ac6d6de8452bcfed7a90b8a2bfdcc43cd13437a56597"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072700.nc",
+      "sha256": "4e5d8df66f64070b377fb1d7cc62c0e8c498892916e591c6242ec5464cd8363b"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072800.nc",
+      "sha256": "617d16274ba857ec53d6e651b321c09e9741c2dd9db89dbbe34c6416aec66191"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072900.nc",
+      "sha256": "9d3462bc9c338695f10d6fac351f37bb92ba33034f91b9999e88194c4e2f2b97"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019073000.nc",
+      "sha256": "caeabeec88c178dfc1f81a7a2739e82d4e5fd2c081969048907949675802a030"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019073100.nc",
+      "sha256": "9380a5c9c8050b889784210e7e2135f763c8c47c4333055ff2a402c838b03bf9"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070100.nc",
+      "sha256": "a0880c07b102fd0e93b44602bf828105e600528695de12d4a84151ab842b29cb"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070200.nc",
+      "sha256": "0e4e1ad9965351376cc379d534547730d47f2e238f1f15293f47a21fe8a84eb8"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070300.nc",
+      "sha256": "64790d85efbd811f7c46560d653c4b2e83bf9a0b35304ea9238f3a15c5795a43"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070400.nc",
+      "sha256": "e670a8459432f4ad9af15c2309d2ba02c05c4087c7f20c3ece3d9df25cc6a29f"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070500.nc",
+      "sha256": "09d0675a75a5d3178a57020d5452d8d6b3c0b9f945231b503f7b7b50cbbd72e3"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070600.nc",
+      "sha256": "e8a4084f3ae7cbb2853c75eeed3deda0350ad85d2976994d5b07e54cb00a58b9"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070700.nc",
+      "sha256": "e5135abd4a0499f92257fefa3375d4dcf83212808dbab103be900fe9b626126e"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070800.nc",
+      "sha256": "c01c87a263aa6d1655fe49892ce4046d3be08366b111863fce801eec718a8cfc"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019070900.nc",
+      "sha256": "4391fd420b2beb6ba6a3156bc06886a4cbb8d7c7ce774fb7bad886ed229fa5ee"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071000.nc",
+      "sha256": "d2e7d975624b7dd172be389629454b4f3d34d8e06625b3e13527c9747f30b8ae"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071100.nc",
+      "sha256": "02d4092f002a99eeae7d8eb3fef1f3e49a4594690ab7e069b42af8187ed87a55"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071200.nc",
+      "sha256": "d5ed1ec00eb5c774c39d6a8ba966b1e2161e2a12832d665641a7ca9e11a134d6"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071300.nc",
+      "sha256": "f41a6ac94dc3d46d6f425f750b675d69f61cf75d560ddb3922d9682e0cdfbfb1"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071400.nc",
+      "sha256": "1e07ee1a470a73f5d443f6d847985cdb17b8e399aea8fe04f71d487d25d28a18"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071500.nc",
+      "sha256": "bc2fc4e9ea1ad0effd27a06441495712b5f82ec5c3aaf407ee28472fa21a36aa"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071600.nc",
+      "sha256": "c7154ac30a38bd91d3dc35382ed85ce72f015bc5468590555e56c726cea30f24"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071700.nc",
+      "sha256": "4acf69e17df05969915eca79b636f95dc5e386e1d2b85b33eb853f3d3c45ba50"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071800.nc",
+      "sha256": "246f1f24221a51a91dd7b5d078443d3726abea6435b93d5247b29e61672c6a64"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019071900.nc",
+      "sha256": "97ff2dad10fb052fe49199a98c2f6596bd43bca0ceeecea68c9f81582530c159"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072000.nc",
+      "sha256": "8ff7df1fbe38748037876f0c7c8e5f18e39f8e8859d22e8074e73658e31bc504"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072100.nc",
+      "sha256": "24a197ab28fee2a2963512fe0cc74b910f0241d4788bf0066f37661255a8331d"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072300.nc",
+      "sha256": "d1bec86a2e365c0dbfdca54778742f9036df9080a0e7a655fad8708469b82543"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072400.nc",
+      "sha256": "2815e7445e18618ee601978b4aa4375b6de3e4744332bf99de0ebb444b5f1ad4"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072500.nc",
+      "sha256": "b09a4dd4c496a927e455a17db647d6a203c7e54204496354b2d4331c6531a5f5"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072600.nc",
+      "sha256": "165d896c0ac77113b142aea27b647ebcb140b5589f21307d7b6a8efc577d4c48"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072700.nc",
+      "sha256": "fd68325dfaf3a6da6e91ff637ea4d8c008f061a6841c7cfb82d53d4a7241a4f5"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072800.nc",
+      "sha256": "800c460842d17f7a6f789e7f3a54892e78e88300400b0ed0ffa2715c494193f5"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072900.nc",
+      "sha256": "3603cab24f4c6a889765fb3eed1989d8eb29c0e24419530be7f13efd2a41dd9f"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019073000.nc",
+      "sha256": "d558fb06883eca57b08802e0b9e89506615d93bcdebbd0ab6098f7d3be853258"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019073100.nc",
+      "sha256": "56a83ce67140c25209af79bc6186c2b3c2d119030de74d9ca0a6db385026a855"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080100.nc",
+      "sha256": "18316efcc9eec8bb85ed9b316203e26d9965dcd0fe7bedcb154f190ae7be7e7e"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080200.nc",
+      "sha256": "6f68d559f4e39c879274c7b2b7c09a089d095ddf66f542ef9a773850d587bb80"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080300.nc",
+      "sha256": "701d7fb699a1379db45cc9320e664a12c59392bb9a718c5f5610bc35bbf0941d"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080400.nc",
+      "sha256": "45703355736b92bc2f01a19d2a07cc0d6a34befebacea8b9968a77133bfcf8d1"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080500.nc",
+      "sha256": "f4b1d66088281f02eab7ec16f84957081995e4339d8d9b612e1ce94d4b59be45"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080600.nc",
+      "sha256": "e0c145ce353abb2f819cde79bec376e25718ddfab8bfde042aa1c066ca65560d"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080700.nc",
+      "sha256": "8b09baf5cf00a3d39d1473229fba979914ae1d122e1a3f1549a63cc972265015"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080800.nc",
+      "sha256": "48990d1faeff65c7aef617b45dc87a6d5e9212ccef137fa47c1dcac353c71a07"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019080900.nc",
+      "sha256": "0d76e26fce9e2a00ac217f1940effc556c7af6c905c75956287f68a0a674c14a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081000.nc",
+      "sha256": "b29bdf1905ac6e97acbfad89f873caf29f9940df1ffe9706cc2aecda34b339c3"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081100.nc",
+      "sha256": "57005e9505f811ea297fe52b00ebcab80754de7e5cae42b1dc13a96c8077a2e3"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081200.nc",
+      "sha256": "3bcf20ad23d3b4973e0f72faf8c4f7c46c5c19e34f01934f7c35d1a11039ffe0"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081300.nc",
+      "sha256": "1ce0b4db56eedb2356581ac8d57bda3ba42a2c7900b5cfc97c15948c6694596b"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081400.nc",
+      "sha256": "94acfa2a1cd780773bacf7864116f1af6ff300d7c07c76642b5b21af5882c89f"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081500.nc",
+      "sha256": "ba1338eede7047316478b55a1b82da5d092284f1f8603d02f44aeec3aa3110f6"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081600.nc",
+      "sha256": "0b91018ff0900c7870a7bc7090eae58d92d08f043ec63bac27d350b120b23f11"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081700.nc",
+      "sha256": "0f72f38dda3732aaa5aefb6b624b4a5d944e9afbaf50e2ef4476d662bd4ee4ec"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081800.nc",
+      "sha256": "691ae769d230be9cbaf511d6bf48c9c2815388dcc5ee541414096827244e7195"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019081900.nc",
+      "sha256": "00df4f5f7c1c55b32a04980133c7aefb65c6d66e7b2c5469e87709f806c796ea"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082000.nc",
+      "sha256": "33b283efd20befaddfc768b2a6bb48cfecb99bb9a289453f42acfd13b5668ae8"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082100.nc",
+      "sha256": "81ea856fe48678810810163d7da85cef49c2bbe5a10dab91eaa8dd7276abc030"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082200.nc",
+      "sha256": "4143f59a693b2fbf5ddd4786455d1aef0287ea520227d93210042cd36bd52ec9"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082300.nc",
+      "sha256": "762be58004c7ef980355f3df1d45a080d630816e585b581bfa95461eba8dcb43"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082400.nc",
+      "sha256": "0dc55e5ac6573f85b9a6011514e0db32f48ac108a77348fdaa9799334ad08edb"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082500.nc",
+      "sha256": "f27aa27ec72eefec9053838cc1621ecdbdd157c4606b33d7ad5e5313421203b0"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082600.nc",
+      "sha256": "cfb57a84e9344b4b02552781f0869d5f2bf792aa2d31cf4b6b1ae1e493293ad6"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082700.nc",
+      "sha256": "b2136559959c273326e4abac1da800336e17e263db7f2df4ccc994fa7346e3c9"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082800.nc",
+      "sha256": "ecd28123cba7928e537de4d77624d01cfd1f1b18a1e1a0c02008f3f8fd94095c"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019082900.nc",
+      "sha256": "6ec82bcba56bc4ce51a99de7644f3dda0494c957ee4fa45a66b05e528d4a26d0"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019083000.nc",
+      "sha256": "add53d14364be4c864be96405a477b6db0b108e1a0e6d3441bab830fb113fb1a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-08/daily/atmosphere_context_2019083100.nc",
+      "sha256": "fc35deb1f570b1f1d76f2474d321d21d198b5b16f8be462ed4504e23696a65b5"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080100.nc",
+      "sha256": "d5545be90a2ce71de93859362832219a7865855f3af2ec8bb9f6f17e757e7571"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080200.nc",
+      "sha256": "87d6ecf765cd9e66f2954124e3754531f1323d44b1e4c9b6ada59820b632578d"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080300.nc",
+      "sha256": "86f6552a4c21717fe0e0e84de984ce7c212da21f0eb2af96ea7046d444d95952"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080400.nc",
+      "sha256": "87f82268fcb6a8ec0bff4be91224982c4d499a517aa4410c409cc118ed71b5de"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080500.nc",
+      "sha256": "420ce306578f09d4d70efc523160ab0c44e9084922bd624ba81ce1e97c3cc49f"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080600.nc",
+      "sha256": "ca16d481aa199d45e886c83684e27f1dbf4c49c298ec41c0048df999a59cebb3"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080700.nc",
+      "sha256": "b29dab6507f74b887263c980d9edcb1d9c2edb6859f8564ad5050fc2cf76d8fb"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080800.nc",
+      "sha256": "235ea3dcb2ae704a14c479888504d932edb93027ee8abfa7c713e51531980252"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019080900.nc",
+      "sha256": "5f639f192181d474abf9fe69adfb766ccc2a212a6fd66a610bab3db4579f1875"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081000.nc",
+      "sha256": "1d2e8d3a4207ac02d75622de4085ffec91da237c30c8c651dfc2553b5e7be261"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081100.nc",
+      "sha256": "678aa3cd2552823ba669017ba1ed63edc83800ff3bebd7e72d773037cfe0d3a0"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081200.nc",
+      "sha256": "94da437db68c4c94e036f3c1b1abdfd1f4bfbdc582994b71ce5e9831cca1dc11"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081300.nc",
+      "sha256": "7eecb4d9a525d5bd7a02264b18645597e41966167f54e33d7ba5e3752dbf15bb"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081400.nc",
+      "sha256": "0e25fd4d7f40e30ed039061440211d67a7a8b254172fd4a3b421985689afa181"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081500.nc",
+      "sha256": "5ebbd13c4d412580b7f30f0cb9eec69f6d3e3165940adad7f4c04b7612e0cbd5"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081600.nc",
+      "sha256": "92e5c6a73cb4e5d2c8a0876b8b9d9a6ce4b3af5627bf9aa1adc4699a7aefc905"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081700.nc",
+      "sha256": "02308d1fc54a59367d9839a2a694e0f37447779ea7c7d52516d459595f048972"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081800.nc",
+      "sha256": "3e3003dfc6e3864ecc4b479ed997be05490ad49b681610b8ddff6f2e324dc4e7"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019081900.nc",
+      "sha256": "088c7f9146928013025a0bad70daa9e8080fa6501c0c031a9f42d8bd886d0fdb"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082000.nc",
+      "sha256": "608fb4eebd65c1610e2f49f8d0bc0480b03ddcc4578344a6824a916cdcba6e8c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082100.nc",
+      "sha256": "16772490d459e5f96064584e00d85ff41fdfed8d456b8d34539e248428122304"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082200.nc",
+      "sha256": "3b0d64c80c9e0387283ceb1b5776bdaf39cc4d3dab1ae2413c636a3279ac28ee"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082300.nc",
+      "sha256": "051e7ea818bf3789f344c8c72efd5f0c07d74a8eaf69cb358142e854a2e51ad9"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082400.nc",
+      "sha256": "df291d831f4ae7966bd94a6cb0cef7741cf32d10f38c439f0c05e5bf2d78af74"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082500.nc",
+      "sha256": "6427d007c8da262c30e56c5a35587ec72a25fe4e4520947743a1badea32fa82d"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082600.nc",
+      "sha256": "7dbbc534aad5b95acd3d0c24f898511b97e677341e0997f75b458841f7f40042"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082700.nc",
+      "sha256": "2558deca51b500b508f8d1f36a73176245cd4a08e40a76996460594e43909975"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082800.nc",
+      "sha256": "4457947480e99820e58400ff70d4e4f30d66858aac7a513beec919418302bcc6"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019082900.nc",
+      "sha256": "065f1b8cbf702fddcf49f330d539fe416266c1a0aa6e9937fd69bbc5e6bbba40"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019083000.nc",
+      "sha256": "e8390c79dfbb7d3452b3cd5bb2766a50d847a08910a3109f79891fe6156e5c6c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-08/daily/rainfall_pair_2019083100.nc",
+      "sha256": "fa065cc7cf69eec3747ecf10a9f3468c475a8fe89a2a127d63545283f45cda88"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090100.nc",
+      "sha256": "0bf72bd46ec81ddac12ad33c1e567a53a69cfef487a266806e3a10041d91c6ad"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090200.nc",
+      "sha256": "ee7a1fc56e43ebcd0fc987107327a42c820cc7ada4a9bce2d2f3697ae67edda3"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090300.nc",
+      "sha256": "2ba2c30246767738bf3f56dcf9285258ed6aef3dfc6c91d698ccf1ee299160c9"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090400.nc",
+      "sha256": "8f30899fbb41362ec897654245671fc442ea0be684ab8449da216b96c91a5205"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090500.nc",
+      "sha256": "4cffb9f96d37d6bbf5b31c01ee7c3eef7018836ed76e8e6a1dc8c862174c8a56"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090600.nc",
+      "sha256": "d73ed957953575bb87f79715b364d83b0ba024d0fc924507f5b49f193a07d410"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090700.nc",
+      "sha256": "42b60288117ed560b2af8096b34bbab028cfdfdd280bf95d1006be3953690beb"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090800.nc",
+      "sha256": "1b05f012d4f845048dd83ec32704909ed5d781b5936efae22c1856bf6c1255b9"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019090900.nc",
+      "sha256": "212fb4fa5a7e90f77026736e59c67d88d1ac53605ade7b6bf9f77eb5c7a26134"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091000.nc",
+      "sha256": "88da6c8f102a1b1f9a87e3028698fdbedc668629f0fe27e8fe8a089e803982e8"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091100.nc",
+      "sha256": "33598ec7d964cb8e3ec7ab4b329a6d01db3ce7c5f8bf444486d9236bb3db3f35"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091200.nc",
+      "sha256": "aea0b1b9607ff0c40500d4b3575b1ec444beea1121f2fbe54b0290d84b0c7cd8"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091300.nc",
+      "sha256": "2c4f8a15b0af9d447970ea01555fa934f5d3d162cdedc5328bd76c1a4cb0cc3a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091400.nc",
+      "sha256": "ad94f50271a973e8586563c51cbaaae30ef630f575635758192518cf2ab52c6a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091500.nc",
+      "sha256": "233efa3cfd5828e967db395d8da8a1030bd7fa542ce21e88f7a48cc842a7ae1c"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091600.nc",
+      "sha256": "6fef2524e8ac6a1e260c8be68a00c317d542a21faf3478b3e8e4fb4634a93027"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091700.nc",
+      "sha256": "2d09a710369535d32dfb2d22c62fb43904a8244d59f4d5ea2eb82708f8bd02ca"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091800.nc",
+      "sha256": "057fcb2f2faa6f56251c854bd99f150412b6d1e0f3a21a9857889f8a46710d0b"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019091900.nc",
+      "sha256": "3cdb9fd7734c1d2a7c92902dcca83226047b7824222d55b95915ee23b3f4b483"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092000.nc",
+      "sha256": "8185ac8b810d9079c31b6b721df982f529bd661307b1a272c2d98c539cbf61a2"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092100.nc",
+      "sha256": "5e32f34af5d4fc716216e7c381e057f678bb8a58b13df8013374b2116360d9e2"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092200.nc",
+      "sha256": "67bba00fcf01f471228ac97cc6e642e0e7afa6b9e9689a8cff746b4f3c1c1179"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092300.nc",
+      "sha256": "298b937736cc69405b69c3f2af9de3c26ddc5c7acc521f9ae6cd1a09c43658a5"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092400.nc",
+      "sha256": "3d5a712c818aea7eaa9d5270746feeabdb5fbe98ed1556bad0a56459609dfd5a"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092500.nc",
+      "sha256": "97acfce2a93b01d4ffeba322fa0dd336180f478ab1b96f6046be57c0664d6417"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092600.nc",
+      "sha256": "631241975c5b7fd281179f7faa2fece3f884c0d37d6307bb583d2eaaf01ebd12"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092700.nc",
+      "sha256": "cc5419a6e14f7944cce07adf3ec49053e7413f4f81ff4b66266b96907e98c10f"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092800.nc",
+      "sha256": "1dbe043200a409e6b4f7d609de71e9bc0efec7c003adbaffa075b7beb50b3046"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019092900.nc",
+      "sha256": "a70c63e2fe0fda12201c61c9505d741f05020ff1db57456d00f101085ed8de43"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090100.nc",
+      "sha256": "92210ec944ae0393c5e073daac0af82d699dfefa9b2314f755ecef60ed7fb783"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090200.nc",
+      "sha256": "538f3475f686c71a3e74b09a03e5650512fd37a779ae12dcbef9331d5281a89f"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090300.nc",
+      "sha256": "22659c9370bcd5a927ed501570d3b8ee993544a324b06f63d4dd85f4e13428c6"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090400.nc",
+      "sha256": "d99d14bbc94ef738e1a0eea078e144f52ddb501827be597436df276137fc3c95"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090500.nc",
+      "sha256": "1dde4e571bc4db5bedc7758a84004f00d27a9d0e84cc53dd704b900b039d548c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090600.nc",
+      "sha256": "017c0aa20d8db00e385f60fc9cde40098b4b0df5c918ad61eb16c0643751fbe6"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090700.nc",
+      "sha256": "94481372cbbb8ea2cd8caa2d4cd099dce15736af8fd4a3033ee4c201ca7c17c3"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090800.nc",
+      "sha256": "73b02097c359d3e4a25762edf076e5be125519b421826adfa7be10aa3af2fd47"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019090900.nc",
+      "sha256": "41cd0fe8a51421de96df80058d1ea562b72048753502276fbb4a3670fb9d2730"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091000.nc",
+      "sha256": "0a4d20a4066d46bba5d32fc44bb73a7dadfce6642f77e992f8a83532d761ffe4"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091100.nc",
+      "sha256": "e3edaa7ef0692412365651804aec0487d698766c3e23279c1fa9eb403fc0afe6"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091200.nc",
+      "sha256": "e57e3a3989b5a60e93f293da75b7b6815888a31ae54122b80cd7129768ca0501"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091300.nc",
+      "sha256": "95ea560e0fd73bbd2350f0b0e0e8d3eefa9753eb18cafa5284768490acf9b92c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091400.nc",
+      "sha256": "fcfd8fda3dcd153d72b0931000677a2590b83a19c19525461224ad208def95fd"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091500.nc",
+      "sha256": "abd927ab946a52f6fb895fe433787b2054a1bcfd7c6fa4c37cc978a7e7774fb4"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091600.nc",
+      "sha256": "576cdee78d3bdca8961b8f61dce00ebd5d4a89510d09fced5b3137378b997b6e"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091700.nc",
+      "sha256": "d7e84ffbe22130fc68fabd763fa0db108c47a63cd209373592261d96a9e0146a"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091800.nc",
+      "sha256": "f501670088b3557c257b513bfb59689443572486507a03a3baf43f5222f3c802"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019091900.nc",
+      "sha256": "b2779fe203cf4ea7893e0dadc264dbb4b6624d357ee0fa0e7e891a95f49738db"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092000.nc",
+      "sha256": "cc412e401cafdef086d789a6f7305e3a3fab3ad44c49982edf4b53f1f389f37c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092100.nc",
+      "sha256": "24ba069e7a7e68b54b1b2e4bbcc31088302388cd914207e6c3ffd9cb3b1a6776"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092200.nc",
+      "sha256": "0d32bbeb91e3fde5683de5a678241604ba8a6b231d50eda2fa6f6d0912eb8a27"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092300.nc",
+      "sha256": "16c9f75e1e1de110c67becb54b29e0b90e23897ea2a571685110b5bb33f0098c"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092400.nc",
+      "sha256": "a37be1b57c7fb327da1bb5c82b1bccab420a2adfdf16f8a1bfd9df812a752192"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092500.nc",
+      "sha256": "4035de6d540c2ad1a285d06d495436594ead1d823697bb9531520f113139ec2f"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092600.nc",
+      "sha256": "2de9f06c2ec1414258049516235f9745ec10f54b7ed9bffe8b0fe41e1444b11a"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092700.nc",
+      "sha256": "29c6fb301a08405132aac413551a7e1f8ae92486c0da6cb0e31674347413c03a"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092800.nc",
+      "sha256": "0489954800b91e7d69fedbb21c0bd4e0c01027b0394ee6ea7fd89715e8e32046"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019092900.nc",
+      "sha256": "01be3cf9c2d4960d50945dc76bf878717ec849cacc56b6d446325240dbaabb24"
+    }
+  ],
+  "pruned_bytes": 57396556,
+  "pruned_count": 238,
+  "retained": [
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-06/daily/atmosphere_context_2019061100.nc",
+      "sha256": "2cf3b5caf522b93969b248b522c9a470021fc6add5f831aeb61bfd3d9584bca5"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-06/daily/rainfall_pair_2019061100.nc",
+      "sha256": "9c4e64ec83f146e938d13a47393acf3f2fc9fa86ae4f90d8327a372c74e678fb"
+    },
+    {
+      "bytes": 14328204,
+      "path": "data/processed/phase1e/2019-06/storage_evaluation/201906_arrays.nc",
+      "sha256": "83768bc6cb460eedb2a90e9f81f8d375dc4e3c2470ae982119035a1931301f8f"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-07/daily/atmosphere_context_2019072200.nc",
+      "sha256": "de0b56b8447c20e28a157e4761efbfe4c797b9fbb90032c7aeea3e68789d568d"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-07/daily/rainfall_pair_2019072200.nc",
+      "sha256": "472843580d227f2251a5f7a08978a4a5d68e1018b24f29e543cc06343663e76a"
+    },
+    {
+      "bytes": 14805712,
+      "path": "data/processed/phase1e/2019-07/storage_evaluation/201907_arrays.nc",
+      "sha256": "68ff6812b8dc3b10f5d77d6c62f7954ac6e4985a2d6fa58305a1a62ba51f9fa5"
+    },
+    {
+      "bytes": 14805712,
+      "path": "data/processed/phase1e/2019-08/storage_evaluation/201908_arrays.nc",
+      "sha256": "53a6ccf07c33578ac2b49abf81c6733e674ac7514f781e4483c7c6c2757a31b0"
+    },
+    {
+      "bytes": 300228,
+      "path": "data/processed/phase1e/2019-09/daily/atmosphere_context_2019093000.nc",
+      "sha256": "9f266d2e99f7da5b6dfd056fd51c8f075e1e2631cb6d684b49c790f8801353ae"
+    },
+    {
+      "bytes": 182096,
+      "path": "data/processed/phase1e/2019-09/daily/rainfall_pair_2019093000.nc",
+      "sha256": "d99ac659c0beb15cd1b3adfaf36d12b493334a5984fc433157fd20a0893d3960"
+    },
+    {
+      "bytes": 14328204,
+      "path": "data/processed/phase1e/2019-09/storage_evaluation/201909_arrays.nc",
+      "sha256": "f133d63dc63b4a94a848d07dd6c2a8d47eda2d21827e8ac4145a7198cd182d0e"
+    }
+  ],
+  "retained_bytes": 59714804,
+  "retained_count": 10
+}

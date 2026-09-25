@@ -1,0 +1,97 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - link "Skip to content" [ref=f9e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - complementary [ref=f9e4]:
+      - link "VarshaSetu overview" [ref=f9e5] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=f9e6]: V
+      - navigation "Primary" [ref=f9e7]:
+        - link "Overview" [ref=f9e8] [cursor=pointer]:
+          - /url: /
+        - link "Forecast Explorer" [ref=f9e12] [cursor=pointer]:
+          - /url: /forecast
+        - link "Extreme Rain" [ref=f9e16] [cursor=pointer]:
+          - /url: /extremes
+        - link "District Intelligence" [ref=f9e19] [cursor=pointer]:
+          - /url: /districts
+        - link "Verification" [ref=f9e24] [cursor=pointer]:
+          - /url: /verification
+        - link "Methodology" [ref=f9e27] [cursor=pointer]:
+          - /url: /methodology
+    - generic [ref=f9e30]:
+      - banner [ref=f9e31]:
+        - generic [ref=f9e32]:
+          - generic [ref=f9e33]: VARSHASetu / SCIENTIFIC WORKSPACE
+          - generic [ref=f9e34]: 2019 JJAS historical test · read-only artifacts
+        - generic [ref=f9e35]: Prototype scientific ready
+      - main [ref=f9e37]:
+        - generic [ref=f9e38]:
+          - generic [ref=f9e39]:
+            - generic [ref=f9e40]:
+              - generic [ref=f9e41]: Historical scientific prototype · not operational
+              - heading "VarshaSetu" [level=1] [ref=f9e42]
+              - paragraph [ref=f9e43]: Regime-Aware AI Post-Processing of Monsoon Rainfall Forecasts
+              - paragraph [ref=f9e44]: Bridging Raw NWP Forecasts and Actionable Rainfall Intelligence.
+              - generic [ref=f9e45]:
+                - link "Explore forecast intelligence" [ref=f9e46] [cursor=pointer]:
+                  - /url: /forecast?case=20190807T000000Z_day2_24h
+                - link "View scientific validation" [ref=f9e49] [cursor=pointer]:
+                  - /url: /verification
+            - generic [ref=f9e50]:
+              - generic [ref=f9e51]: UNTOUCHED 2019 JJAS TEST SEASON
+              - strong [ref=f9e52]: 9.73%
+              - paragraph [ref=f9e53]: lower RMSE than Raw GEFS
+              - generic [ref=f9e54]:
+                - generic [ref=f9e55]:
+                  - text: Raw GEFS
+                  - generic [ref=f9e56]: 19.7735 mm
+                - generic [ref=f9e57]:
+                  - text: Global XGBoost
+                  - generic [ref=f9e58]: 17.8487 mm
+              - generic [ref=f9e59]: "Best deterministic model: frozen Phase 2B M2 Global XGBoost"
+          - generic [ref=f9e60]:
+            - generic [ref=f9e61]: Scientific artifacts verified
+            - generic [ref=f9e65]: 255 control-model cases
+            - generic [ref=f9e70]: 2017 Train · 2018 Validate · 2019 Test
+          - generic [ref=f9e71]:
+            - heading "Explore the evidence" [level=2] [ref=f9e72]
+            - paragraph [ref=f9e73]: Each view serves frozen, read-only historical artifacts.
+          - generic [ref=f9e74]:
+            - link [ref=f9e75] [cursor=pointer]:
+              - /url: /forecast
+              - generic [ref=f9e79]:
+                - strong [ref=f9e80]: Forecast Explorer
+                - paragraph [ref=f9e81]: Inspect Raw GEFS, corrected rainfall, and IMD observations on a shared 0.25° grid.
+            - link [ref=f9e84] [cursor=pointer]:
+              - /url: /extremes
+              - generic [ref=f9e87]:
+                - strong [ref=f9e88]: Extreme Rain
+                - paragraph [ref=f9e89]: Calibrated Heavy and Very Heavy probabilities, reliability, and threshold skill.
+            - link [ref=f9e92] [cursor=pointer]:
+              - /url: /districts
+              - generic [ref=f9e97]:
+                - strong [ref=f9e98]: District Intelligence
+                - paragraph [ref=f9e99]: 188 intersecting districts with area-weighted rainfall and probability summaries.
+          - generic [ref=f9e102]:
+            - generic [ref=f9e103]:
+              - text: SCIENTIFIC BOUNDARY
+              - heading "Skill is metric-specific." [level=2] [ref=f9e104]
+              - paragraph [ref=f9e105]: The global correction improves overall rainfall RMSE. Regime-aware deterministic variants do not beat it, while Raw GEFS remains stronger on deterministic extreme-event CSI/ETS and the reported FSS scales.
+              - link "Inspect every comparison" [ref=f9e106] [cursor=pointer]:
+                - /url: /verification
+            - generic [ref=f9e109]:
+              - generic [ref=f9e110]:
+                - generic [ref=f9e111]: Heavy probability · Brier
+                - strong [ref=f9e112]: "0.0225"
+                - generic [ref=f9e113]: Held-out 2019
+              - generic [ref=f9e114]:
+                - generic [ref=f9e115]: Very Heavy · PR-AUC
+                - strong [ref=f9e116]: "0.155"
+                - generic [ref=f9e117]: Held-out 2019
+              - generic [ref=f9e118]:
+                - generic [ref=f9e119]: Official demo cases
+                - strong [ref=f9e120]: "6"
+                - generic [ref=f9e121]: "First case: 07 Aug 2019, 00:00 UTC"
+          - paragraph [ref=f9e122]: Historical scientific prototype only. Not live forecasting, operational readiness, or current-date GEFS ingestion.
+  - button "Open Next.js Dev Tools" [ref=f9e128] [cursor=pointer]

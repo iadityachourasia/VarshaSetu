@@ -1,0 +1,155 @@
+{
+  "byte_size": 25431832,
+  "download_endpoint": "https://www.imdpune.gov.in/cmpg/Griddata/RF25.php",
+  "elapsed_seconds": 91.12365679999994,
+  "from_cache": false,
+  "path": "data/raw/observations/imd/2018/RF25_ind2018_rfp25.nc",
+  "product": "0.25 degree daily gridded rainfall",
+  "provider": "India Meteorological Department",
+  "request_form": {
+    "RF25": 2018
+  },
+  "request_method": "POST",
+  "response_headers": {
+    "connection": "close",
+    "content-disposition": "attachment; filename=RF25/ind2018_rfp25.nc",
+    "content-security-policy": "upgrade-insecure-requests;",
+    "content-type": "application/octet-stream",
+    "date": "Tue, 22 Sep 2026 15:35:32 GMT",
+    "referrer-policy": "strict-origin",
+    "server": "Apache",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "transfer-encoding": "chunked",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "SAMEORIGIN",
+    "x-xss-protection": "1; mode=block"
+  },
+  "retrieved_at_utc": "2026-09-22T14:41:40.462892+00:00",
+  "scientific_validation": {
+    "first_record": {
+      "calendar": "CF default standard calendar",
+      "dimensions": [
+        "TIME",
+        "LATITUDE",
+        "LONGITUDE"
+      ],
+      "fill_value": -999.0,
+      "latitude_orientation": "ascending",
+      "longitude_convention": "0_to_360",
+      "longitude_orientation": "ascending",
+      "missing_value": -999.0,
+      "netcdf_time_label": "2018-01-01T00:00:00",
+      "rainfall_units": "mm",
+      "record_index": 0,
+      "time_units": "days since 1900-12-31 00:00:00",
+      "time_value": 42735.0
+    },
+    "first_valid_cells": 1301,
+    "inspection": {
+      "dimensions": {
+        "LATITUDE": 129,
+        "LONGITUDE": 135,
+        "TIME": null
+      },
+      "format_magic": "43444601",
+      "global_attributes": {
+        "Conventions": "CF-1.0",
+        "history": "FERRET V6.82   20-Feb-26"
+      },
+      "variables": {
+        "LATITUDE": {
+          "attributes": {
+            "axis": "Y",
+            "point_spacing": "even",
+            "standard_name": "latitude",
+            "units": "degrees_north"
+          },
+          "dimensions": [
+            "LATITUDE"
+          ],
+          "dtype": "d",
+          "shape": [
+            129
+          ]
+        },
+        "LONGITUDE": {
+          "attributes": {
+            "axis": "X",
+            "modulo": 360.0,
+            "point_spacing": "even",
+            "standard_name": "longitude",
+            "units": "degrees_east"
+          },
+          "dimensions": [
+            "LONGITUDE"
+          ],
+          "dtype": "d",
+          "shape": [
+            135
+          ]
+        },
+        "RAINFALL": {
+          "attributes": {
+            "_FillValue": -999.0,
+            "history": "From ind2018_rfp25.grd",
+            "long_name": "Rainfall",
+            "missing_value": -999.0,
+            "units": "mm"
+          },
+          "dimensions": [
+            "TIME",
+            "LATITUDE",
+            "LONGITUDE"
+          ],
+          "dtype": "f",
+          "shape": [
+            365,
+            129,
+            135
+          ]
+        },
+        "TIME": {
+          "attributes": {
+            "axis": "T",
+            "standard_name": "time",
+            "time_origin": "31-DEC-1900",
+            "units": "days since 1900-12-31 00:00:00"
+          },
+          "dimensions": [
+            "TIME"
+          ],
+          "dtype": "d",
+          "shape": [
+            365
+          ]
+        }
+      }
+    },
+    "last_record": {
+      "calendar": "CF default standard calendar",
+      "dimensions": [
+        "TIME",
+        "LATITUDE",
+        "LONGITUDE"
+      ],
+      "fill_value": -999.0,
+      "latitude_orientation": "ascending",
+      "longitude_convention": "0_to_360",
+      "longitude_orientation": "ascending",
+      "missing_value": -999.0,
+      "netcdf_time_label": "2018-12-31T00:00:00",
+      "rainfall_units": "mm",
+      "record_index": 364,
+      "time_units": "days since 1900-12-31 00:00:00",
+      "time_value": 43099.0
+    },
+    "last_valid_cells": 1301,
+    "target_grid_shape": [
+      49,
+      49
+    ]
+  },
+  "sha256": "26bd53aeb2d6f3f7d39516c41606db005dede474906b33462d1a0caef69cd6ec",
+  "source_page": "https://www.imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html",
+  "year": 2018
+}

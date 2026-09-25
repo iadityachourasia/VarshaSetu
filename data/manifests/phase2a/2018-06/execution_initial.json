@@ -1,0 +1,243 @@
+{
+  "average_seconds_per_initialization": 40.395217113333274,
+  "cache_only": false,
+  "collection_manifest": "data/manifests/phase2a/2018-06/monthly_collection_manifest.json",
+  "collection_manifest_sha256": "63fa2256da041ed1a7a4f42080d211358dee678c09c050c86666772d552451fc",
+  "dataset_version": "varshasetu-gefs12r-imd025-jjas-2000-2019-v2",
+  "measured_stage_seconds": {
+    "artifact_write": 2.461192499988101,
+    "atmosphere_decode_interpolate_qc": 42.95021230002021,
+    "monthly_consolidation_and_benchmark": 1.1953109999994922,
+    "precipitation_decode_and_crop": 318.74480930000936,
+    "rainfall_reconstruct_regrid_qc": 0.5945653000453603,
+    "total_initialization": 1208.0813258999879
+  },
+  "network_bytes": {
+    "atmospheric": 314460245,
+    "imd": 0,
+    "index": 7878270,
+    "precipitation": 1184665240,
+    "total": 1507003755
+  },
+  "network_seconds_sum_concurrent_requests": 3096.5669332000434,
+  "network_workers": 6,
+  "peak_rss_bytes": 213266432,
+  "processed_bytes": {
+    "daily_atmospheric_context": 9006840,
+    "daily_manifests": 9444559,
+    "daily_rainfall_pairs": 5462880,
+    "qc_csv_tables": 55912,
+    "regridding_weights": 57816,
+    "storage_evaluation_netcdf": 14328204,
+    "storage_evaluation_zarr": 7347139,
+    "total": 45703350
+  },
+  "qc_summary": {
+    "conservation": {
+      "count": 347,
+      "failures": 0,
+      "maximum": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "tolerance": 1e-10
+    },
+    "event_coverage": {
+      "days_with_heavy_cell": 29,
+      "days_with_very_heavy_cell": 19,
+      "district_counts": "not_computed:no_authoritative_district_geometry",
+      "maximum_observed_rainfall_mm": 332.8304748535156,
+      "total_heavy_grid_cell_events": 793,
+      "total_very_heavy_grid_cell_events": 213,
+      "unique_observation_days": 32
+    },
+    "initialization_status_counts": {
+      "BLOCKED": 0,
+      "FAIL": 0,
+      "PARTIAL": 29,
+      "PASS": 1
+    },
+    "predictor_expected": 540,
+    "predictor_statistics": {
+      "mslp": {
+        "initial_warning_bounds": [
+          80000.0,
+          110000.0
+        ],
+        "max": 103094.5625,
+        "mean": 100353.23723168237,
+        "min": 98625.0859375,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "pwat": {
+        "initial_warning_bounds": [
+          0.0,
+          100.0
+        ],
+        "max": 80.9000015258789,
+        "mean": 45.766785100374406,
+        "min": 1.2999999523162842,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "q700": {
+        "initial_warning_bounds": [
+          0.0,
+          0.1
+        ],
+        "max": 0.017430000007152557,
+        "mean": 0.0069869891838399605,
+        "min": 0.00011000000085914508,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "u850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 28.54180145263672,
+        "mean": 9.026908307669789,
+        "min": -20.82339096069336,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "v850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 21.7762393951416,
+        "mean": 1.1480105111772547,
+        "min": -28.519853591918945,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "z500": {
+        "initial_warning_bounds": [
+          4000.0,
+          7000.0
+        ],
+        "max": 5940.5673828125,
+        "mean": 5837.840291835613,
+        "min": 5737.10009765625,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      }
+    },
+    "predictor_valid": 540,
+    "rainfall_complete": 347,
+    "rainfall_expected": 450,
+    "weight_sha256": "37a3fc3244c0ce6c41bf6c580de8748194e7e1dc839e73e0e17285530e245523"
+  },
+  "raw_source_bytes": {
+    "atmospheric_messages": 314460245,
+    "cache_excluding_receipts": 1507003755,
+    "cache_receipts": 305220,
+    "imd_existing_source": 25431832,
+    "imd_incremental_network": 0,
+    "indexes": 7878270,
+    "precipitation_messages": 1184665240
+  },
+  "reconstruction_method": "canonical_v2",
+  "rerun_daily_manifest_comparison": {
+    "changed_or_new": [
+      "data/manifests/phase2a/2018-06/daily/derived_2018060100.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060200.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060300.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060400.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060500.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060600.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060700.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060800.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018060900.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061000.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061100.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061200.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061300.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061400.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061500.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061600.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061700.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061800.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018061900.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062000.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062100.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062200.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062300.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062400.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062500.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062600.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062700.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062800.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018062900.json",
+      "data/manifests/phase2a/2018-06/daily/derived_2018063000.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060100.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060200.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060300.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060400.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060500.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060600.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060700.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060800.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018060900.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061000.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061100.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061200.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061300.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061400.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061500.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061600.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061700.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061800.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018061900.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062000.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062100.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062200.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062300.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062400.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062500.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062600.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062700.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062800.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018062900.json",
+      "data/manifests/phase2a/2018-06/daily/source_2018063000.json"
+    ],
+    "current_artifact_count": 60,
+    "previous_artifact_count": 0,
+    "removed": [],
+    "unchanged_count": 0
+  },
+  "status": "PARTIAL",
+  "storage_format_evaluation": {
+    "library_versions": {
+      "scipy": "1.16.1",
+      "zarr": "3.2.1"
+    },
+    "netcdf": {
+      "append_chunk_practicality": "fixed classic NetCDF output; rewrite needed for this implementation",
+      "byte_size": 14328204,
+      "full_forecast_read_seconds": 0.011577599998418009,
+      "metadata_preservation": "CF-style variables and attributes",
+      "portability": "single file; broadly portable",
+      "random_slice_mean_seconds": 0.011052516666677548
+    },
+    "zarr": {
+      "append_chunk_practicality": "chunked hierarchy supports initialization-wise extension",
+      "byte_size": 7347139,
+      "full_forecast_read_seconds": 0.05081689999860828,
+      "metadata_preservation": "group and array attributes; CF conventions require project schema",
+      "portability": "many files; efficient object-store/chunk access, less convenient to copy",
+      "random_slice_mean_seconds": 0.0033093066666576004
+    }
+  },
+  "storage_projections": {
+    "assumption": "linear by initialization count from July 2019; excludes provider/version changes, retry variance, filesystem overhead changes, and future extra variables",
+    "bytes_per_initialization": 50087325.96774194,
+    "measured_july_bytes": 1552707105,
+    "projected_20_year_jjas_bytes": 122213075361,
+    "projected_jjas_2019_bytes": 6110653768
+  },
+  "total_runtime_seconds": 1211.8565133999982,
+  "training_eligible": false
+}

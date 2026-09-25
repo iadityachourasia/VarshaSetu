@@ -1,0 +1,26 @@
+{
+  "comparison": "before Phase 1B vs after Phase 1B",
+  "protected_artifacts": {
+    "backend/app/api/routes.py": "2de319f85134652a41317f440d7741dca24476ac9ecdef8f5b5c06de4a3f22a7",
+    "backend/app/data/readiness.py": "778594ffe332049d379b5b0ce469bd53bf6b597c8427cde66167f7df0a02072e",
+    "backend/app/verification/metrics.py": "9df635d198247e1c7aeef10a0bfb29c540ab4c3e0740475676a1d29b24b4f003",
+    "backend/models/README.md": "906a60f064e381feda4a02397c32d88c03715874b3be4807267e7b0c3397b0a2",
+    "backend/models/global_ml.pkl": "c6637d36810f863dfdab391109c4e4d03fbb74e154391766830036ca76a532e4",
+    "backend/models/heavy_rain_clf.pkl": "30927b527a7014414502c21bd2f420d3bb8bf63a5ad559e133e057b947871da5",
+    "backend/models/hist_gradient_boosting.pkl": "c6637d36810f863dfdab391109c4e4d03fbb74e154391766830036ca76a532e4",
+    "backend/models/mos_model.pkl": "b1c8ddf9f2c13ffd6dafef01185475f3a84e7fa75ed15f8b6761d28cbe5f76ce",
+    "backend/models/regime_aware_ml.pkl": "d2499e976c620974ae8993e24b3365c553281e6bc2a620f4c9a36a6708232509",
+    "backend/models/regime_classifier.pkl": "aebcca8ed3ca000eeb97403ae67bd708353ca40100ae7152a64f63d20660a660",
+    "backend/models/very_heavy_rain_clf.pkl": "b74f266dbbc52e3a9f4d92d18bf2e471a55d7516eff92a48bb04a69fad8d1b92",
+    "backend/models/xgb_1000.pkl": "06992722f6ef69209b4b1e8f059bb99c8d22dee4e7ceb46a92f2a8b5f45d86c3",
+    "backend/models/xgb_2000.pkl": "bf07a88bce728ad96cc802ff98619e74a1a38e8d2c4f75ff66b08b35ba052650",
+    "backend/reports/README.md": "f74451d374be64e88bdbc087646390e621c13c275c79942f4c7643857221ecef",
+    "backend/reports/final_test_report.csv": "fbc787ada5cf679ed53bc59683848428168d215c799bc737d6e49e1ed716383f",
+    "backend/reports/final_test_report.json": "e98a6bee66d81f57860b45ccb3df024ff4f9ca5da8ca1205cc36e72dd4bc8f6a",
+    "data/GOA_CLEAN.csv": "7b01a5f35bd32a30c7998401c17d26d1e9b2180fca850b7b5bb56f06fe4cb241",
+    "data/manifests/goa_clean.prototype.json": "6758d639cf6d58f20afc4be8a547dfd64987215685cac49dec4769edf7ca870e"
+  },
+  "scientific_endpoint_behavior_covered_by": "backend/tests/test_pipeline.py",
+  "status": "PASS",
+  "unchanged_count": 18
+}

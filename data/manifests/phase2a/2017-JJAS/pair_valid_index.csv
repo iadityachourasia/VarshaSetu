@@ -1,0 +1,259 @@
+initialization,product,valid_date,SOURCE_VALID,PAIR_VALID,CONTROL_MODEL_ELIGIBLE,FULL_ENSEMBLE_ELIGIBLE,REGIME_ELIGIBLE,EXTREME_EVENT_ELIGIBLE,FSS_ELIGIBLE,REJECTED,quarantine_reason,source_manifest
+2017-06-01T00:00:00+00:00,day1_24h,2017-06-02,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060100.json
+2017-06-01T00:00:00+00:00,day2_24h,2017-06-03,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060100.json
+2017-06-01T00:00:00+00:00,day3_24h,2017-06-04,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017060100.json
+2017-06-02T00:00:00+00:00,day1_24h,2017-06-03,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060200.json
+2017-06-03T00:00:00+00:00,day1_24h,2017-06-04,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060300.json
+2017-06-03T00:00:00+00:00,day2_24h,2017-06-05,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017060300.json
+2017-06-03T00:00:00+00:00,day3_24h,2017-06-06,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017060300.json
+2017-06-04T00:00:00+00:00,day1_24h,2017-06-05,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060400.json
+2017-06-04T00:00:00+00:00,day2_24h,2017-06-06,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060400.json
+2017-06-04T00:00:00+00:00,day3_24h,2017-06-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060400.json
+2017-06-05T00:00:00+00:00,day1_24h,2017-06-06,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060500.json
+2017-06-05T00:00:00+00:00,day2_24h,2017-06-07,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017060500.json
+2017-06-05T00:00:00+00:00,day3_24h,2017-06-08,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060500.json
+2017-06-06T00:00:00+00:00,day1_24h,2017-06-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060600.json
+2017-06-07T00:00:00+00:00,day1_24h,2017-06-08,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060700.json
+2017-06-07T00:00:00+00:00,day2_24h,2017-06-09,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060700.json
+2017-06-08T00:00:00+00:00,day1_24h,2017-06-09,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060800.json
+2017-06-08T00:00:00+00:00,day3_24h,2017-06-11,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017060800.json
+2017-06-09T00:00:00+00:00,day1_24h,2017-06-10,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060900.json
+2017-06-09T00:00:00+00:00,day2_24h,2017-06-11,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017060900.json
+2017-06-09T00:00:00+00:00,day3_24h,2017-06-12,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017060900.json
+2017-06-10T00:00:00+00:00,day1_24h,2017-06-11,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061000.json
+2017-06-10T00:00:00+00:00,day2_24h,2017-06-12,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061000.json
+2017-06-10T00:00:00+00:00,day3_24h,2017-06-13,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017061000.json
+2017-06-11T00:00:00+00:00,day1_24h,2017-06-12,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061100.json
+2017-06-11T00:00:00+00:00,day2_24h,2017-06-13,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017061100.json
+2017-06-12T00:00:00+00:00,day1_24h,2017-06-13,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061200.json
+2017-06-12T00:00:00+00:00,day3_24h,2017-06-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061200.json
+2017-06-13T00:00:00+00:00,day1_24h,2017-06-14,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061300.json
+2017-06-14T00:00:00+00:00,day1_24h,2017-06-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061400.json
+2017-06-14T00:00:00+00:00,day3_24h,2017-06-17,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017061400.json
+2017-06-15T00:00:00+00:00,day1_24h,2017-06-16,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061500.json
+2017-06-15T00:00:00+00:00,day2_24h,2017-06-17,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017061500.json
+2017-06-16T00:00:00+00:00,day1_24h,2017-06-17,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061600.json
+2017-06-16T00:00:00+00:00,day3_24h,2017-06-19,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017061600.json
+2017-06-17T00:00:00+00:00,day1_24h,2017-06-18,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061700.json
+2017-06-18T00:00:00+00:00,day1_24h,2017-06-19,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061800.json
+2017-06-18T00:00:00+00:00,day2_24h,2017-06-20,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017061800.json
+2017-06-18T00:00:00+00:00,day3_24h,2017-06-21,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017061800.json
+2017-06-19T00:00:00+00:00,day1_24h,2017-06-20,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017061900.json
+2017-06-20T00:00:00+00:00,day1_24h,2017-06-21,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062000.json
+2017-06-21T00:00:00+00:00,day1_24h,2017-06-22,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062100.json
+2017-06-21T00:00:00+00:00,day3_24h,2017-06-24,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017062100.json
+2017-06-22T00:00:00+00:00,day1_24h,2017-06-23,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062200.json
+2017-06-22T00:00:00+00:00,day2_24h,2017-06-24,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017062200.json
+2017-06-22T00:00:00+00:00,day3_24h,2017-06-25,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017062200.json
+2017-06-23T00:00:00+00:00,day1_24h,2017-06-24,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062300.json
+2017-06-24T00:00:00+00:00,day1_24h,2017-06-25,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062400.json
+2017-06-24T00:00:00+00:00,day3_24h,2017-06-27,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062400.json
+2017-06-25T00:00:00+00:00,day1_24h,2017-06-26,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062500.json
+2017-06-25T00:00:00+00:00,day2_24h,2017-06-27,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017062500.json
+2017-06-26T00:00:00+00:00,day1_24h,2017-06-27,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062600.json
+2017-06-27T00:00:00+00:00,day1_24h,2017-06-28,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062700.json
+2017-06-27T00:00:00+00:00,day3_24h,2017-06-30,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017062700.json
+2017-06-28T00:00:00+00:00,day1_24h,2017-06-29,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062800.json
+2017-06-28T00:00:00+00:00,day3_24h,2017-07-01,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017062800.json
+2017-06-29T00:00:00+00:00,day1_24h,2017-06-30,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017062900.json
+2017-06-30T00:00:00+00:00,day1_24h,2017-07-01,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-06/daily/source_2017063000.json
+2017-06-30T00:00:00+00:00,day2_24h,2017-07-02,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-06/daily/source_2017063000.json
+2017-06-30T00:00:00+00:00,day3_24h,2017-07-03,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-06/daily/source_2017063000.json
+2017-07-01T00:00:00+00:00,day1_24h,2017-07-02,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070100.json
+2017-07-02T00:00:00+00:00,day1_24h,2017-07-03,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070200.json
+2017-07-02T00:00:00+00:00,day2_24h,2017-07-04,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017070200.json
+2017-07-02T00:00:00+00:00,day3_24h,2017-07-05,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017070200.json
+2017-07-03T00:00:00+00:00,day1_24h,2017-07-04,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070300.json
+2017-07-04T00:00:00+00:00,day1_24h,2017-07-05,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070400.json
+2017-07-04T00:00:00+00:00,day3_24h,2017-07-07,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017070400.json
+2017-07-05T00:00:00+00:00,day1_24h,2017-07-06,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070500.json
+2017-07-05T00:00:00+00:00,day2_24h,2017-07-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070500.json
+2017-07-05T00:00:00+00:00,day3_24h,2017-07-08,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017070500.json
+2017-07-06T00:00:00+00:00,day1_24h,2017-07-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070600.json
+2017-07-06T00:00:00+00:00,day2_24h,2017-07-08,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070600.json
+2017-07-07T00:00:00+00:00,day1_24h,2017-07-08,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070700.json
+2017-07-08T00:00:00+00:00,day1_24h,2017-07-09,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070800.json
+2017-07-08T00:00:00+00:00,day2_24h,2017-07-10,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017070800.json
+2017-07-09T00:00:00+00:00,day1_24h,2017-07-10,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017070900.json
+2017-07-10T00:00:00+00:00,day1_24h,2017-07-11,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071000.json
+2017-07-10T00:00:00+00:00,day2_24h,2017-07-12,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017071000.json
+2017-07-10T00:00:00+00:00,day3_24h,2017-07-13,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017071000.json
+2017-07-11T00:00:00+00:00,day1_24h,2017-07-12,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071100.json
+2017-07-11T00:00:00+00:00,day3_24h,2017-07-14,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071100.json
+2017-07-12T00:00:00+00:00,day1_24h,2017-07-13,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071200.json
+2017-07-12T00:00:00+00:00,day3_24h,2017-07-15,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017071200.json
+2017-07-13T00:00:00+00:00,day1_24h,2017-07-14,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071300.json
+2017-07-13T00:00:00+00:00,day2_24h,2017-07-15,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017071300.json
+2017-07-13T00:00:00+00:00,day3_24h,2017-07-16,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071300.json
+2017-07-14T00:00:00+00:00,day1_24h,2017-07-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071400.json
+2017-07-14T00:00:00+00:00,day2_24h,2017-07-16,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071400.json
+2017-07-15T00:00:00+00:00,day1_24h,2017-07-16,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071500.json
+2017-07-15T00:00:00+00:00,day2_24h,2017-07-17,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071500.json
+2017-07-16T00:00:00+00:00,day1_24h,2017-07-17,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071600.json
+2017-07-17T00:00:00+00:00,day1_24h,2017-07-18,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071700.json
+2017-07-17T00:00:00+00:00,day3_24h,2017-07-20,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017071700.json
+2017-07-18T00:00:00+00:00,day1_24h,2017-07-19,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071800.json
+2017-07-18T00:00:00+00:00,day2_24h,2017-07-20,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017071800.json
+2017-07-18T00:00:00+00:00,day3_24h,2017-07-21,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071800.json
+2017-07-19T00:00:00+00:00,day1_24h,2017-07-20,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071900.json
+2017-07-19T00:00:00+00:00,day3_24h,2017-07-22,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017071900.json
+2017-07-20T00:00:00+00:00,day1_24h,2017-07-21,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072000.json
+2017-07-20T00:00:00+00:00,day2_24h,2017-07-22,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072000.json
+2017-07-20T00:00:00+00:00,day3_24h,2017-07-23,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072000.json
+2017-07-21T00:00:00+00:00,day1_24h,2017-07-22,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072100.json
+2017-07-21T00:00:00+00:00,day2_24h,2017-07-23,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017072100.json
+2017-07-22T00:00:00+00:00,day1_24h,2017-07-23,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072200.json
+2017-07-22T00:00:00+00:00,day2_24h,2017-07-24,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072200.json
+2017-07-23T00:00:00+00:00,day1_24h,2017-07-24,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072300.json
+2017-07-23T00:00:00+00:00,day3_24h,2017-07-26,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072300.json
+2017-07-24T00:00:00+00:00,day1_24h,2017-07-25,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072400.json
+2017-07-24T00:00:00+00:00,day2_24h,2017-07-26,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072400.json
+2017-07-24T00:00:00+00:00,day3_24h,2017-07-27,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072400.json
+2017-07-25T00:00:00+00:00,day1_24h,2017-07-26,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072500.json
+2017-07-25T00:00:00+00:00,day3_24h,2017-07-28,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072500.json
+2017-07-26T00:00:00+00:00,day1_24h,2017-07-27,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072600.json
+2017-07-27T00:00:00+00:00,day1_24h,2017-07-28,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072700.json
+2017-07-27T00:00:00+00:00,day2_24h,2017-07-29,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017072700.json
+2017-07-27T00:00:00+00:00,day3_24h,2017-07-30,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072700.json
+2017-07-28T00:00:00+00:00,day1_24h,2017-07-29,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072800.json
+2017-07-28T00:00:00+00:00,day2_24h,2017-07-30,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-07/daily/source_2017072800.json
+2017-07-28T00:00:00+00:00,day3_24h,2017-07-31,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017072800.json
+2017-07-29T00:00:00+00:00,day1_24h,2017-07-30,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072900.json
+2017-07-29T00:00:00+00:00,day2_24h,2017-07-31,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017072900.json
+2017-07-29T00:00:00+00:00,day3_24h,2017-08-01,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-07/daily/source_2017072900.json
+2017-07-30T00:00:00+00:00,day1_24h,2017-07-31,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017073000.json
+2017-07-30T00:00:00+00:00,day2_24h,2017-08-01,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017073000.json
+2017-07-30T00:00:00+00:00,day3_24h,2017-08-02,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017073000.json
+2017-07-31T00:00:00+00:00,day1_24h,2017-08-01,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017073100.json
+2017-07-31T00:00:00+00:00,day3_24h,2017-08-03,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-07/daily/source_2017073100.json
+2017-08-01T00:00:00+00:00,day1_24h,2017-08-02,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080100.json
+2017-08-01T00:00:00+00:00,day2_24h,2017-08-03,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017080100.json
+2017-08-01T00:00:00+00:00,day3_24h,2017-08-04,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080100.json
+2017-08-02T00:00:00+00:00,day1_24h,2017-08-03,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080200.json
+2017-08-02T00:00:00+00:00,day2_24h,2017-08-04,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017080200.json
+2017-08-02T00:00:00+00:00,day3_24h,2017-08-05,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080200.json
+2017-08-03T00:00:00+00:00,day1_24h,2017-08-04,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080300.json
+2017-08-03T00:00:00+00:00,day2_24h,2017-08-05,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080300.json
+2017-08-03T00:00:00+00:00,day3_24h,2017-08-06,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-08/daily/source_2017080300.json
+2017-08-04T00:00:00+00:00,day1_24h,2017-08-05,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080400.json
+2017-08-04T00:00:00+00:00,day3_24h,2017-08-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080400.json
+2017-08-05T00:00:00+00:00,day1_24h,2017-08-06,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080500.json
+2017-08-05T00:00:00+00:00,day2_24h,2017-08-07,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017080500.json
+2017-08-06T00:00:00+00:00,day1_24h,2017-08-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080600.json
+2017-08-06T00:00:00+00:00,day2_24h,2017-08-08,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017080600.json
+2017-08-07T00:00:00+00:00,day1_24h,2017-08-08,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080700.json
+2017-08-07T00:00:00+00:00,day3_24h,2017-08-10,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-08/daily/source_2017080700.json
+2017-08-08T00:00:00+00:00,day1_24h,2017-08-09,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080800.json
+2017-08-09T00:00:00+00:00,day1_24h,2017-08-10,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017080900.json
+2017-08-09T00:00:00+00:00,day3_24h,2017-08-12,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-08/daily/source_2017080900.json
+2017-08-10T00:00:00+00:00,day1_24h,2017-08-11,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081000.json
+2017-08-11T00:00:00+00:00,day1_24h,2017-08-12,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081100.json
+2017-08-12T00:00:00+00:00,day1_24h,2017-08-13,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081200.json
+2017-08-12T00:00:00+00:00,day2_24h,2017-08-14,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017081200.json
+2017-08-13T00:00:00+00:00,day1_24h,2017-08-14,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081300.json
+2017-08-13T00:00:00+00:00,day2_24h,2017-08-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081300.json
+2017-08-14T00:00:00+00:00,day1_24h,2017-08-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081400.json
+2017-08-14T00:00:00+00:00,day2_24h,2017-08-16,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017081400.json
+2017-08-14T00:00:00+00:00,day3_24h,2017-08-17,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-08/daily/source_2017081400.json
+2017-08-15T00:00:00+00:00,day1_24h,2017-08-16,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081500.json
+2017-08-15T00:00:00+00:00,day2_24h,2017-08-17,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081500.json
+2017-08-15T00:00:00+00:00,day3_24h,2017-08-18,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081500.json
+2017-08-16T00:00:00+00:00,day1_24h,2017-08-17,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081600.json
+2017-08-16T00:00:00+00:00,day2_24h,2017-08-18,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081600.json
+2017-08-17T00:00:00+00:00,day1_24h,2017-08-18,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081700.json
+2017-08-17T00:00:00+00:00,day2_24h,2017-08-19,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081700.json
+2017-08-17T00:00:00+00:00,day3_24h,2017-08-20,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081700.json
+2017-08-18T00:00:00+00:00,day1_24h,2017-08-19,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081800.json
+2017-08-19T00:00:00+00:00,day1_24h,2017-08-20,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081900.json
+2017-08-19T00:00:00+00:00,day2_24h,2017-08-21,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017081900.json
+2017-08-20T00:00:00+00:00,day1_24h,2017-08-21,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082000.json
+2017-08-20T00:00:00+00:00,day2_24h,2017-08-22,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082000.json
+2017-08-21T00:00:00+00:00,day1_24h,2017-08-22,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082100.json
+2017-08-21T00:00:00+00:00,day2_24h,2017-08-23,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017082100.json
+2017-08-21T00:00:00+00:00,day3_24h,2017-08-24,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082100.json
+2017-08-22T00:00:00+00:00,day1_24h,2017-08-23,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082200.json
+2017-08-22T00:00:00+00:00,day2_24h,2017-08-24,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017082200.json
+2017-08-22T00:00:00+00:00,day3_24h,2017-08-25,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-08/daily/source_2017082200.json
+2017-08-23T00:00:00+00:00,day1_24h,2017-08-24,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082300.json
+2017-08-23T00:00:00+00:00,day2_24h,2017-08-25,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017082300.json
+2017-08-24T00:00:00+00:00,day1_24h,2017-08-25,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082400.json
+2017-08-25T00:00:00+00:00,day1_24h,2017-08-26,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082500.json
+2017-08-25T00:00:00+00:00,day2_24h,2017-08-27,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017082500.json
+2017-08-26T00:00:00+00:00,day1_24h,2017-08-27,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082600.json
+2017-08-26T00:00:00+00:00,day2_24h,2017-08-28,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082600.json
+2017-08-27T00:00:00+00:00,day1_24h,2017-08-28,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082700.json
+2017-08-27T00:00:00+00:00,day2_24h,2017-08-29,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017082700.json
+2017-08-27T00:00:00+00:00,day3_24h,2017-08-30,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082700.json
+2017-08-28T00:00:00+00:00,day1_24h,2017-08-29,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082800.json
+2017-08-28T00:00:00+00:00,day2_24h,2017-08-30,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017082800.json
+2017-08-29T00:00:00+00:00,day1_24h,2017-08-30,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017082900.json
+2017-08-29T00:00:00+00:00,day2_24h,2017-08-31,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017082900.json
+2017-08-30T00:00:00+00:00,day1_24h,2017-08-31,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017083000.json
+2017-08-30T00:00:00+00:00,day2_24h,2017-09-01,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-08/daily/source_2017083000.json
+2017-08-30T00:00:00+00:00,day3_24h,2017-09-02,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017083000.json
+2017-08-31T00:00:00+00:00,day1_24h,2017-09-01,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-08/daily/source_2017083100.json
+2017-09-01T00:00:00+00:00,day1_24h,2017-09-02,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090100.json
+2017-09-01T00:00:00+00:00,day3_24h,2017-09-04,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017090100.json
+2017-09-02T00:00:00+00:00,day1_24h,2017-09-03,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090200.json
+2017-09-02T00:00:00+00:00,day2_24h,2017-09-04,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090200.json
+2017-09-03T00:00:00+00:00,day1_24h,2017-09-04,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090300.json
+2017-09-03T00:00:00+00:00,day2_24h,2017-09-05,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090300.json
+2017-09-03T00:00:00+00:00,day3_24h,2017-09-06,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090300.json
+2017-09-04T00:00:00+00:00,day1_24h,2017-09-05,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090400.json
+2017-09-04T00:00:00+00:00,day2_24h,2017-09-06,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-09/daily/source_2017090400.json
+2017-09-04T00:00:00+00:00,day3_24h,2017-09-07,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017090400.json
+2017-09-05T00:00:00+00:00,day1_24h,2017-09-06,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090500.json
+2017-09-05T00:00:00+00:00,day2_24h,2017-09-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090500.json
+2017-09-05T00:00:00+00:00,day3_24h,2017-09-08,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017090500.json
+2017-09-06T00:00:00+00:00,day1_24h,2017-09-07,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090600.json
+2017-09-06T00:00:00+00:00,day2_24h,2017-09-08,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-09/daily/source_2017090600.json
+2017-09-07T00:00:00+00:00,day1_24h,2017-09-08,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090700.json
+2017-09-07T00:00:00+00:00,day2_24h,2017-09-09,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090700.json
+2017-09-07T00:00:00+00:00,day3_24h,2017-09-10,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017090700.json
+2017-09-08T00:00:00+00:00,day1_24h,2017-09-09,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090800.json
+2017-09-08T00:00:00+00:00,day2_24h,2017-09-10,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090800.json
+2017-09-08T00:00:00+00:00,day3_24h,2017-09-11,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090800.json
+2017-09-09T00:00:00+00:00,day1_24h,2017-09-10,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017090900.json
+2017-09-10T00:00:00+00:00,day1_24h,2017-09-11,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091000.json
+2017-09-10T00:00:00+00:00,day2_24h,2017-09-12,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091000.json
+2017-09-11T00:00:00+00:00,day1_24h,2017-09-12,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091100.json
+2017-09-11T00:00:00+00:00,day3_24h,2017-09-14,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54; ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017091100.json
+2017-09-12T00:00:00+00:00,day1_24h,2017-09-13,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091200.json
+2017-09-12T00:00:00+00:00,day3_24h,2017-09-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091200.json
+2017-09-13T00:00:00+00:00,day1_24h,2017-09-14,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091300.json
+2017-09-13T00:00:00+00:00,day2_24h,2017-09-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091300.json
+2017-09-13T00:00:00+00:00,day3_24h,2017-09-16,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017091300.json
+2017-09-14T00:00:00+00:00,day1_24h,2017-09-15,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091400.json
+2017-09-14T00:00:00+00:00,day2_24h,2017-09-16,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-09/daily/source_2017091400.json
+2017-09-15T00:00:00+00:00,day1_24h,2017-09-16,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091500.json
+2017-09-15T00:00:00+00:00,day2_24h,2017-09-17,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091500.json
+2017-09-15T00:00:00+00:00,day3_24h,2017-09-18,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091500.json
+2017-09-16T00:00:00+00:00,day1_24h,2017-09-17,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091600.json
+2017-09-16T00:00:00+00:00,day2_24h,2017-09-18,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-09/daily/source_2017091600.json
+2017-09-17T00:00:00+00:00,day1_24h,2017-09-18,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091700.json
+2017-09-18T00:00:00+00:00,day1_24h,2017-09-19,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091800.json
+2017-09-18T00:00:00+00:00,day2_24h,2017-09-20,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091800.json
+2017-09-18T00:00:00+00:00,day3_24h,2017-09-21,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091800.json
+2017-09-19T00:00:00+00:00,day1_24h,2017-09-20,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017091900.json
+2017-09-19T00:00:00+00:00,day2_24h,2017-09-21,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-09/daily/source_2017091900.json
+2017-09-19T00:00:00+00:00,day3_24h,2017-09-22,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017091900.json
+2017-09-20T00:00:00+00:00,day1_24h,2017-09-21,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092000.json
+2017-09-20T00:00:00+00:00,day3_24h,2017-09-23,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092000.json
+2017-09-21T00:00:00+00:00,day1_24h,2017-09-22,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092100.json
+2017-09-21T00:00:00+00:00,day2_24h,2017-09-23,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092100.json
+2017-09-21T00:00:00+00:00,day3_24h,2017-09-24,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092100.json
+2017-09-22T00:00:00+00:00,day1_24h,2017-09-23,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092200.json
+2017-09-22T00:00:00+00:00,day2_24h,2017-09-24,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-09/daily/source_2017092200.json
+2017-09-23T00:00:00+00:00,day1_24h,2017-09-24,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092300.json
+2017-09-23T00:00:00+00:00,day2_24h,2017-09-25,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30; ValueError: negative difference exceeds packing bound for 27--30,data/manifests/phase2a/2017-09/daily/source_2017092300.json
+2017-09-24T00:00:00+00:00,day1_24h,2017-09-25,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092400.json
+2017-09-25T00:00:00+00:00,day1_24h,2017-09-26,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092500.json
+2017-09-25T00:00:00+00:00,day2_24h,2017-09-27,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092500.json
+2017-09-26T00:00:00+00:00,day1_24h,2017-09-27,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092600.json
+2017-09-27T00:00:00+00:00,day1_24h,2017-09-28,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092700.json
+2017-09-27T00:00:00+00:00,day2_24h,2017-09-29,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092700.json
+2017-09-27T00:00:00+00:00,day3_24h,2017-09-30,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092700.json
+2017-09-28T00:00:00+00:00,day1_24h,2017-09-29,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092800.json
+2017-09-29T00:00:00+00:00,day1_24h,2017-09-30,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017092900.json
+2017-09-30T00:00:00+00:00,day1_24h,2017-10-01,True,True,True,True,True,True,True,False,,data/manifests/phase2a/2017-09/daily/source_2017093000.json
+2017-09-30T00:00:00+00:00,day3_24h,2017-10-03,True,True,True,False,True,True,True,False,ValueError: negative difference exceeds packing bound for 51--54,data/manifests/phase2a/2017-09/daily/source_2017093000.json

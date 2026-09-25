@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-23T13:43:02Z",
+  "title": "Design System: VarshaSetu",
+  "extensions": {
+    "colorMeta": {
+      "canvas-navy": {
+        "role": "neutral",
+        "displayName": "Canvas Navy",
+        "canonical": "#0a141d",
+        "tonalRamp": [
+          "oklch(15% 0.025 250)",
+          "oklch(25% 0.025 250)",
+          "oklch(35% 0.025 250)",
+          "oklch(45% 0.025 250)",
+          "oklch(55% 0.025 250)",
+          "oklch(65% 0.025 250)",
+          "oklch(80% 0.025 250)",
+          "oklch(95% 0.025 250)"
+        ]
+      },
+      "raised-slate": {
+        "role": "neutral",
+        "displayName": "Raised Slate",
+        "canonical": "#12232e",
+        "tonalRamp": [
+          "oklch(15% 0.03 240)",
+          "oklch(25% 0.03 240)",
+          "oklch(35% 0.03 240)",
+          "oklch(45% 0.03 240)",
+          "oklch(55% 0.03 240)",
+          "oklch(65% 0.03 240)",
+          "oklch(80% 0.03 240)",
+          "oklch(95% 0.03 240)"
+        ]
+      },
+      "recessed-navy": {
+        "role": "neutral",
+        "displayName": "Recessed Navy",
+        "canonical": "#0d1c26",
+        "tonalRamp": [
+          "oklch(15% 0.03 240)",
+          "oklch(25% 0.03 240)",
+          "oklch(35% 0.03 240)",
+          "oklch(45% 0.03 240)",
+          "oklch(55% 0.03 240)",
+          "oklch(65% 0.03 240)",
+          "oklch(80% 0.03 240)",
+          "oklch(95% 0.03 240)"
+        ]
+      },
+      "sidebar-navy": {
+        "role": "neutral",
+        "displayName": "Sidebar Navy",
+        "canonical": "#0d1b25",
+        "tonalRamp": [
+          "oklch(15% 0.03 240)",
+          "oklch(25% 0.03 240)",
+          "oklch(35% 0.03 240)",
+          "oklch(45% 0.03 240)",
+          "oklch(55% 0.03 240)",
+          "oklch(65% 0.03 240)",
+          "oklch(80% 0.03 240)",
+          "oklch(95% 0.03 240)"
+        ]
+      },
+      "text-ice": {
+        "role": "neutral",
+        "displayName": "Text Ice",
+        "canonical": "#e9f2f2",
+        "tonalRamp": [
+          "oklch(15% 0.02 190)",
+          "oklch(25% 0.02 190)",
+          "oklch(35% 0.02 190)",
+          "oklch(45% 0.02 190)",
+          "oklch(55% 0.02 190)",
+          "oklch(65% 0.02 190)",
+          "oklch(80% 0.02 190)",
+          "oklch(95% 0.02 190)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Text Muted",
+        "canonical": "#acc1c7",
+        "tonalRamp": [
+          "oklch(15% 0.025 205)",
+          "oklch(25% 0.025 205)",
+          "oklch(35% 0.025 205)",
+          "oklch(45% 0.025 205)",
+          "oklch(55% 0.025 205)",
+          "oklch(65% 0.025 205)",
+          "oklch(80% 0.025 205)",
+          "oklch(95% 0.025 205)"
+        ]
+      },
+      "rule-slate": {
+        "role": "neutral",
+        "displayName": "Rule Slate",
+        "canonical": "#29404b",
+        "tonalRamp": [
+          "oklch(15% 0.035 230)",
+          "oklch(25% 0.035 230)",
+          "oklch(35% 0.035 230)",
+          "oklch(45% 0.035 230)",
+          "oklch(55% 0.035 230)",
+          "oklch(65% 0.035 230)",
+          "oklch(80% 0.035 230)",
+          "oklch(95% 0.035 230)"
+        ]
+      },
+      "action-teal": {
+        "role": "primary",
+        "displayName": "Action Teal",
+        "canonical": "#7bd3c5",
+        "tonalRamp": [
+          "oklch(15% 0.085 175)",
+          "oklch(25% 0.085 175)",
+          "oklch(35% 0.085 175)",
+          "oklch(45% 0.085 175)",
+          "oklch(55% 0.085 175)",
+          "oklch(65% 0.085 175)",
+          "oklch(80% 0.085 175)",
+          "oklch(95% 0.085 175)"
+        ]
+      },
+      "raw-blue": {
+        "role": "secondary",
+        "displayName": "Raw Blue",
+        "canonical": "#78b7df",
+        "tonalRamp": [
+          "oklch(15% 0.1 235)",
+          "oklch(25% 0.1 235)",
+          "oklch(35% 0.1 235)",
+          "oklch(45% 0.1 235)",
+          "oklch(55% 0.1 235)",
+          "oklch(65% 0.1 235)",
+          "oklch(80% 0.1 235)",
+          "oklch(95% 0.1 235)"
+        ]
+      },
+      "observed-violet": {
+        "role": "secondary",
+        "displayName": "Observed Violet",
+        "canonical": "#c1a9f2",
+        "tonalRamp": [
+          "oklch(15% 0.1 305)",
+          "oklch(25% 0.1 305)",
+          "oklch(35% 0.1 305)",
+          "oklch(45% 0.1 305)",
+          "oklch(55% 0.1 305)",
+          "oklch(65% 0.1 305)",
+          "oklch(80% 0.1 305)",
+          "oklch(95% 0.1 305)"
+        ]
+      },
+      "caution-amber": {
+        "role": "tertiary",
+        "displayName": "Caution Amber",
+        "canonical": "#f2bd70",
+        "tonalRamp": [
+          "oklch(15% 0.11 75)",
+          "oklch(25% 0.11 75)",
+          "oklch(35% 0.11 75)",
+          "oklch(45% 0.11 75)",
+          "oklch(55% 0.11 75)",
+          "oklch(65% 0.11 75)",
+          "oklch(80% 0.11 75)",
+          "oklch(95% 0.11 75)"
+        ]
+      },
+      "danger-rose": {
+        "role": "tertiary",
+        "displayName": "Danger Rose",
+        "canonical": "#ef8792",
+        "tonalRamp": [
+          "oklch(15% 0.12 15)",
+          "oklch(25% 0.12 15)",
+          "oklch(35% 0.12 15)",
+          "oklch(45% 0.12 15)",
+          "oklch(55% 0.12 15)",
+          "oklch(65% 0.12 15)",
+          "oklch(80% 0.12 15)",
+          "oklch(95% 0.12 15)"
+        ]
+      },
+      "map-navy": {
+        "role": "neutral",
+        "displayName": "Map Navy",
+        "canonical": "#0b1a25",
+        "tonalRamp": [
+          "oklch(15% 0.03 245)",
+          "oklch(25% 0.03 245)",
+          "oklch(35% 0.03 245)",
+          "oklch(45% 0.03 245)",
+          "oklch(55% 0.03 245)",
+          "oklch(65% 0.03 245)",
+          "oklch(80% 0.03 245)",
+          "oklch(95% 0.03 245)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Overview hero only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section and panel titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Brief explanation and limitation copy."
+      },
+      "label": {
+        "displayName": "Metadata Label",
+        "purpose": "Source, time, coordinate, unit and method metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "selected-segment",
+        "value": "0 1px 4px #0002",
+        "purpose": "Selected segmented controls only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "160ms ease",
+        "purpose": "Navigation and contained control state changes."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Effective duration under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "icon-rail",
+        "value": "1550px"
+      },
+      {
+        "name": "two-map",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile-stack",
+        "value": "760px"
+      },
+      {
+        "name": "narrow-mobile",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary task link or action.",
+      "html": "<button class=\"ds-button-primary\" type=\"button\">Explore forecasts</button>",
+      "css": ".ds-button-primary{border:0;border-radius:5px;background:var(--primary,#7bd3c5);color:var(--primary-foreground,#08262b);padding:12px 16px;font:620 12px 'Segoe UI Variable','Segoe UI',Arial,sans-serif;cursor:pointer;transition:filter 160ms ease}.ds-button-primary:hover{filter:brightness(1.08)}.ds-button-primary:focus-visible{outline:2px solid var(--ring,#9ce6d9);outline-offset:3px}.ds-button-primary:active{filter:brightness(.96)}"
+    },
+    {
+      "name": "Utility Icon Button",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "Compact map, navigation, or theme utility.",
+      "html": "<button class=\"ds-icon-button\" type=\"button\" aria-label=\"Next case\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"m9 18 6-6-6-6\"/></svg></button>",
+      "css": ".ds-icon-button{width:30px;height:30px;display:inline-grid;place-items:center;border:1px solid var(--line,#29404b);border-radius:6px;background:transparent;color:var(--foreground,#e9f2f2);cursor:pointer}.ds-icon-button:hover{background:var(--sidebar-accent,#1b3440)}.ds-icon-button:focus-visible{outline:2px solid var(--ring,#9ce6d9);outline-offset:3px}.ds-icon-button:active{background:var(--accent,#21434a)}"
+    },
+    {
+      "name": "Historical Case Field",
+      "kind": "input",
+      "refersTo": "input-select",
+      "description": "Native historical case or filter selection.",
+      "html": "<label class=\"ds-select-label\">LEAD<select class=\"ds-select\"><option>All leads</option><option>Day 1</option></select></label>",
+      "css": ".ds-select-label{display:flex;flex-direction:column;gap:5px;color:var(--text-subtle,#acc1c7);font:600 10px/1.3 'Cascadia Code',Consolas,monospace;letter-spacing:.075em}.ds-select{min-width:160px;border:1px solid var(--line,#29404b);border-radius:5px;background:var(--surface-recessed,#0d1c26);color:var(--foreground,#e9f2f2);padding:7px 24px 7px 9px;font:11px 'Segoe UI Variable','Segoe UI',Arial,sans-serif}.ds-select:hover{border-color:var(--teal,#7bd3c5)}.ds-select:focus-visible{outline:2px solid var(--ring,#9ce6d9);outline-offset:3px}"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Active destination in the compact scientific rail.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a class=\"ds-nav-link\" href=\"#\">Forecast Explorer</a><a class=\"ds-nav-link ds-nav-active\" href=\"#\" aria-current=\"page\">Verification</a></nav>",
+      "css": ".ds-nav{display:flex;flex-direction:column;gap:4px;width:210px;padding:10px;background:var(--sidebar,#0d1b25)}.ds-nav-link{display:flex;align-items:center;min-height:41px;padding:9px 12px;border-radius:7px;color:var(--sidebar-foreground,#d6e7e8);font:12.5px 'Segoe UI Variable','Segoe UI',Arial,sans-serif;text-decoration:none;transition:background-color 160ms ease,color 160ms ease}.ds-nav-link:hover{background:var(--sidebar-accent,#1b3440)}.ds-nav-active{background:var(--sidebar-accent,#1b3440);color:var(--sidebar-primary,#7bd3c5);font-weight:650}.ds-nav-link:focus-visible{outline:2px solid var(--ring,#9ce6d9);outline-offset:3px}"
+    },
+    {
+      "name": "Historical Case Selector",
+      "kind": "card",
+      "refersTo": "case-selector",
+      "description": "Raised working surface grouping case navigation and filters.",
+      "html": "<div class=\"ds-case-selector\"><div><span class=\"ds-case-kicker\">HISTORICAL CASE</span><strong>15 Jul 2019 · Day 1</strong></div><span class=\"ds-case-meta\">GEFS c00</span></div>",
+      "css": ".ds-case-selector{display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid var(--line,#29404b);border-radius:8px;background:var(--surface-raised,#12232e);color:var(--foreground,#e9f2f2);padding:12px 13px;font:12px 'Segoe UI Variable','Segoe UI',Arial,sans-serif}.ds-case-selector>div{display:flex;flex-direction:column;gap:4px}.ds-case-kicker{color:var(--text-subtle,#acc1c7);font:600 10px/1.3 'Cascadia Code',Consolas,monospace;letter-spacing:.075em}.ds-case-meta{color:var(--text-subtle,#acc1c7);font:10px 'Cascadia Code',Consolas,monospace}"
+    },
+    {
+      "name": "Rainfall Map Panel",
+      "kind": "card",
+      "refersTo": "map-panel",
+      "description": "One peer field in the synchronized comparison; sample plane is neutral.",
+      "html": "<section class=\"ds-map-panel\"><header><span class=\"ds-model-dot\" aria-hidden=\"true\"></span><div><strong>Raw GEFS</strong><small>Uncorrected control forecast</small></div></header><div class=\"ds-map-plane\" aria-label=\"Map data area\"></div></section>",
+      "css": ".ds-map-panel{overflow:hidden;border:1px solid var(--line,#29404b);border-radius:8px;background:var(--surface-raised,#12232e);color:var(--foreground,#e9f2f2);font-family:'Segoe UI Variable','Segoe UI',Arial,sans-serif}.ds-map-panel header{display:flex;align-items:center;gap:9px;min-height:55px;padding:11px 13px}.ds-map-panel header div{display:flex;flex-direction:column;gap:3px}.ds-map-panel strong{font-size:12px;font-weight:650}.ds-map-panel small{font-size:10px;color:var(--text-subtle,#acc1c7)}.ds-model-dot{width:8px;height:8px;border-radius:2px;background:var(--raw,#78b7df)}.ds-map-plane{height:135px;background:#0b1a25}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Scientific Operations Desk",
+    "overview": "VarshaSetu is a compact, code-led place to inspect historical forecast evidence. Near-navy surfaces, fine rules, precise typography, and small teal interaction cues give maps and measurements the dominant visual role. Its atmosphere is institutional, serious, and restrained.\n\nThe interface communicates scientific lineage and uncertainty at the point of use. Forecast fields, reference observations, regime probabilities, and held-out verification remain visibly distinct. The visual system supports a read-only historical prototype; it does not imply current operational forecasting.",
+    "keyCharacteristics": [
+      "Dark-first scientific canvas with a semantic light counterpart.",
+      "Dense, aligned maps and tables with shared scales and explicit units.",
+      "Compact metadata in a system mono stack; measured headings in a system sans stack.",
+      "Teal for interaction, with distinct blue, teal, and violet identities for raw, corrected, and observed fields."
+    ],
+    "rules": [
+      {
+        "name": "The Scientific Color Rule",
+        "body": "Data colors keep stable meanings across routes. A raw/corrected/observed comparison uses the same identities and a shared rainfall scale; probability uses its own labeled scale.",
+        "section": "colors"
+      },
+      {
+        "name": "The Evidence First Rule",
+        "body": "Numeric values use tabular figures, explicit units, and nearby provenance or denominator context where the metric needs it.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Evidence Rule",
+        "body": "Maps, tables, and notes gain hierarchy from alignment, borders, and surface tone; routine scientific panels do not float above the canvas.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do make source, valid period, lead, accumulation window, and observation identity visible around scientific outputs.",
+      "Do keep raw, corrected, and observed rainfall visually comparable through common extent, mask, units, and legend.",
+      "Do provide readable numeric alternatives to maps and preserve keyboard focus and reduced-motion behavior.",
+      "Do pair a favorable metric with its held-out scope and relevant limitation."
+    ],
+    "donts": [
+      "Don't imply the historical prototype is a current operational forecast.",
+      "Don't use generic dashboard decoration, consumer-weather motifs, or animated marks as substitutes for scientific evidence.",
+      "Don't invent metrics, probabilities, map values, or confidence labels in the interface.",
+      "Don't use red and green alone to distinguish scientific series or event categories."
+    ]
+  }
+}

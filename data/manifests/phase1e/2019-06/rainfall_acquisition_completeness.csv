@@ -1,0 +1,451 @@
+initialization,product,member,status,reason,source_chunk_bytes_shared
+2019060100,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,9422207
+2019060100,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9422207
+2019060100,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9422207
+2019060100,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8251598
+2019060100,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8251598
+2019060100,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8251598
+2019060100,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8663093
+2019060100,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8663093
+2019060100,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8663093
+2019060100,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7257950
+2019060100,day2_24h,p03,PASS,,7257950
+2019060100,day3_24h,p03,PASS,,7257950
+2019060100,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8006737
+2019060100,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,8006737
+2019060100,day3_24h,p04,PASS,,8006737
+2019060200,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,9756259
+2019060200,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9756259
+2019060200,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9756259
+2019060200,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7850855
+2019060200,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7850855
+2019060200,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7850855
+2019060200,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,8011968
+2019060200,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8011968
+2019060200,day3_24h,p02,PASS,,8011968
+2019060200,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8903121
+2019060200,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8903121
+2019060200,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8903121
+2019060200,day1_24h,p04,PASS,,8279422
+2019060200,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,8279422
+2019060200,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8279422
+2019060300,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,9319626
+2019060300,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9319626
+2019060300,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9319626
+2019060300,day1_24h,p01,PASS,,7453684
+2019060300,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7453684
+2019060300,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7453684
+2019060300,day1_24h,p02,PASS,,7039721
+2019060300,day2_24h,p02,PASS,,7039721
+2019060300,day3_24h,p02,PASS,,7039721
+2019060300,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7649870
+2019060300,day2_24h,p03,PASS,,7649870
+2019060300,day3_24h,p03,PASS,,7649870
+2019060300,day1_24h,p04,PASS,,7648070
+2019060300,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7648070
+2019060300,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,7648070
+2019060400,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,9314513
+2019060400,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9314513
+2019060400,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9314513
+2019060400,day1_24h,p01,PASS,,7647314
+2019060400,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7647314
+2019060400,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,7647314
+2019060400,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7855677
+2019060400,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7855677
+2019060400,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7855677
+2019060400,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8272966
+2019060400,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8272966
+2019060400,day3_24h,p03,PASS,,8272966
+2019060400,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8625152
+2019060400,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8625152
+2019060400,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8625152
+2019060500,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8306014
+2019060500,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,8306014
+2019060500,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,8306014
+2019060500,day1_24h,p01,PASS,,7615928
+2019060500,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7615928
+2019060500,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7615928
+2019060500,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7615111
+2019060500,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7615111
+2019060500,day3_24h,p02,PASS,,7615111
+2019060500,day1_24h,p03,PASS,,7592701
+2019060500,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7592701
+2019060500,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,7592701
+2019060500,day1_24h,p04,PASS,,7388311
+2019060500,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,7388311
+2019060500,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7388311
+2019060600,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,8776378
+2019060600,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,8776378
+2019060600,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,8776378
+2019060600,day1_24h,p01,PASS,,7607967
+2019060600,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7607967
+2019060600,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,7607967
+2019060600,day1_24h,p02,PASS,,7004308
+2019060600,day2_24h,p02,PASS,,7004308
+2019060600,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7004308
+2019060600,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,8236563
+2019060600,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,8236563
+2019060600,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8236563
+2019060600,day1_24h,p04,PASS,,7773631
+2019060600,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7773631
+2019060600,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7773631
+2019060700,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,9366641
+2019060700,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9366641
+2019060700,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,9366641
+2019060700,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7189183
+2019060700,day2_24h,p01,PASS,,7189183
+2019060700,day3_24h,p01,PASS,,7189183
+2019060700,day1_24h,p02,PASS,,6978740
+2019060700,day2_24h,p02,PASS,,6978740
+2019060700,day3_24h,p02,PASS,,6978740
+2019060700,day1_24h,p03,PASS,,7386330
+2019060700,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7386330
+2019060700,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7386330
+2019060700,day1_24h,p04,PASS,,7354036
+2019060700,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7354036
+2019060700,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7354036
+2019060800,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8714538
+2019060800,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8714538
+2019060800,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8714538
+2019060800,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7168711
+2019060800,day2_24h,p01,PASS,,7168711
+2019060800,day3_24h,p01,PASS,,7168711
+2019060800,day1_24h,p02,PASS,,7820139
+2019060800,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7820139
+2019060800,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7820139
+2019060800,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8395861
+2019060800,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8395861
+2019060800,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8395861
+2019060800,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7576912
+2019060800,day2_24h,p04,PASS,,7576912
+2019060800,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7576912
+2019060900,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8044817
+2019060900,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8044817
+2019060900,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8044817
+2019060900,day1_24h,p01,PASS,,6936983
+2019060900,day2_24h,p01,PASS,,6936983
+2019060900,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,6936983
+2019060900,day1_24h,p02,PASS,,7129615
+2019060900,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7129615
+2019060900,day3_24h,p02,PASS,,7129615
+2019060900,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8394541
+2019060900,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8394541
+2019060900,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8394541
+2019060900,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7765928
+2019060900,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7765928
+2019060900,day3_24h,p04,PASS,,7765928
+2019061000,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7819114
+2019061000,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,7819114
+2019061000,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7819114
+2019061000,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7914945
+2019061000,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,7914945
+2019061000,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7914945
+2019061000,day1_24h,p02,PASS,,6869053
+2019061000,day2_24h,p02,PASS,,6869053
+2019061000,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,6869053
+2019061000,day1_24h,p03,PASS,,6860230
+2019061000,day2_24h,p03,PASS,,6860230
+2019061000,day3_24h,p03,PASS,,6860230
+2019061000,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7130664
+2019061000,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7130664
+2019061000,day3_24h,p04,PASS,,7130664
+2019061100,day1_24h,c00,PASS,,7160420
+2019061100,day2_24h,c00,PASS,,7160420
+2019061100,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7160420
+2019061100,day1_24h,p01,PASS,,6861551
+2019061100,day2_24h,p01,PASS,,6861551
+2019061100,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,6861551
+2019061100,day1_24h,p02,PASS,,7120163
+2019061100,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7120163
+2019061100,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,7120163
+2019061100,day1_24h,p03,PASS,,7071468
+2019061100,day2_24h,p03,PASS,,7071468
+2019061100,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7071468
+2019061100,day1_24h,p04,PASS,,7962550
+2019061100,day2_24h,p04,PASS,,7962550
+2019061100,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7962550
+2019061200,day1_24h,c00,PASS,,7594904
+2019061200,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7594904
+2019061200,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7594904
+2019061200,day1_24h,p01,PASS,,7514636
+2019061200,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7514636
+2019061200,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7514636
+2019061200,day1_24h,p02,PASS,,7276206
+2019061200,day2_24h,p02,PASS,,7276206
+2019061200,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7276206
+2019061200,day1_24h,p03,PASS,,7182213
+2019061200,day2_24h,p03,PASS,,7182213
+2019061200,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7182213
+2019061200,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7476301
+2019061200,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7476301
+2019061200,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7476301
+2019061300,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,8007014
+2019061300,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,8007014
+2019061300,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,8007014
+2019061300,day1_24h,p01,PASS,,6887391
+2019061300,day2_24h,p01,PASS,,6887391
+2019061300,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,6887391
+2019061300,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7290329
+2019061300,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7290329
+2019061300,day3_24h,p02,PASS,,7290329
+2019061300,day1_24h,p03,PASS,,6920228
+2019061300,day2_24h,p03,PASS,,6920228
+2019061300,day3_24h,p03,PASS,,6920228
+2019061300,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8412877
+2019061300,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8412877
+2019061300,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8412877
+2019061400,day1_24h,c00,PASS,,7837370
+2019061400,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7837370
+2019061400,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7837370
+2019061400,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7927362
+2019061400,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7927362
+2019061400,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7927362
+2019061400,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8038905
+2019061400,day2_24h,p02,PASS,,8038905
+2019061400,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8038905
+2019061400,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7544898
+2019061400,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7544898
+2019061400,day3_24h,p03,PASS,,7544898
+2019061400,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7950259
+2019061400,day2_24h,p04,PASS,,7950259
+2019061400,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7950259
+2019061500,day1_24h,c00,PASS,,8223075
+2019061500,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8223075
+2019061500,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8223075
+2019061500,day1_24h,p01,PASS,,7790621
+2019061500,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7790621
+2019061500,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7790621
+2019061500,day1_24h,p02,PASS,,7576235
+2019061500,day2_24h,p02,PASS,,7576235
+2019061500,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7576235
+2019061500,day1_24h,p03,PASS,,7592667
+2019061500,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7592667
+2019061500,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7592667
+2019061500,day1_24h,p04,PASS,,7907993
+2019061500,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7907993
+2019061500,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7907993
+2019061600,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,8203246
+2019061600,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,8203246
+2019061600,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8203246
+2019061600,day1_24h,p01,PASS,,7586055
+2019061600,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7586055
+2019061600,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7586055
+2019061600,day1_24h,p02,PASS,,7567108
+2019061600,day2_24h,p02,PASS,,7567108
+2019061600,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7567108
+2019061600,day1_24h,p03,PASS,,7826070
+2019061600,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7826070
+2019061600,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7826070
+2019061600,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8373574
+2019061600,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8373574
+2019061600,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,8373574
+2019061700,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,9071833
+2019061700,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,9071833
+2019061700,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9071833
+2019061700,day1_24h,p01,PASS,,8027840
+2019061700,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,8027840
+2019061700,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8027840
+2019061700,day1_24h,p02,PASS,,7373721
+2019061700,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7373721
+2019061700,day3_24h,p02,PASS,,7373721
+2019061700,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7575867
+2019061700,day2_24h,p03,PASS,,7575867
+2019061700,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7575867
+2019061700,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,9224829
+2019061700,day2_24h,p04,PASS,,9224829
+2019061700,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9224829
+2019061800,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,9322054
+2019061800,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9322054
+2019061800,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,9322054
+2019061800,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7799632
+2019061800,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7799632
+2019061800,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7799632
+2019061800,day1_24h,p02,PASS,,7580007
+2019061800,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7580007
+2019061800,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7580007
+2019061800,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8669537
+2019061800,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8669537
+2019061800,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,8669537
+2019061800,day1_24h,p04,PASS,,7834332
+2019061800,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7834332
+2019061800,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7834332
+2019061900,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,9045696
+2019061900,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,9045696
+2019061900,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,9045696
+2019061900,day1_24h,p01,PASS,,7405681
+2019061900,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7405681
+2019061900,day3_24h,p01,PASS,,7405681
+2019061900,day1_24h,p02,PASS,,7194955
+2019061900,day2_24h,p02,PASS,,7194955
+2019061900,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,7194955
+2019061900,day1_24h,p03,PASS,,7809736
+2019061900,day2_24h,p03,PASS,,7809736
+2019061900,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7809736
+2019061900,day1_24h,p04,PASS,,8124977
+2019061900,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8124977
+2019061900,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8124977
+2019062000,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,9312572
+2019062000,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,9312572
+2019062000,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9312572
+2019062000,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7382829
+2019062000,day2_24h,p01,PASS,,7382829
+2019062000,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7382829
+2019062000,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8042162
+2019062000,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8042162
+2019062000,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8042162
+2019062000,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,8347070
+2019062000,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8347070
+2019062000,day3_24h,p03,PASS,,8347070
+2019062000,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7702310
+2019062000,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7702310
+2019062000,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7702310
+2019062100,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8027614
+2019062100,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,8027614
+2019062100,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8027614
+2019062100,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7937548
+2019062100,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7937548
+2019062100,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7937548
+2019062100,day1_24h,p02,PASS,,7307650
+2019062100,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7307650
+2019062100,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7307650
+2019062100,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7957252
+2019062100,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7957252
+2019062100,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7957252
+2019062100,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7500244
+2019062100,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7500244
+2019062100,day3_24h,p04,PASS,,7500244
+2019062200,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,9428486
+2019062200,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9428486
+2019062200,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9428486
+2019062200,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7372150
+2019062200,day2_24h,p01,PASS,,7372150
+2019062200,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,7372150
+2019062200,day1_24h,p02,PASS,,8143964
+2019062200,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8143964
+2019062200,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,8143964
+2019062200,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7326199
+2019062200,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,7326199
+2019062200,day3_24h,p03,PASS,,7326199
+2019062200,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8195970
+2019062200,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8195970
+2019062200,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8195970
+2019062300,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8532163
+2019062300,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8532163
+2019062300,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8532163
+2019062300,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7843270
+2019062300,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7843270
+2019062300,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7843270
+2019062300,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7224649
+2019062300,day2_24h,p02,PASS,,7224649
+2019062300,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 63--66,7224649
+2019062300,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7655947
+2019062300,day2_24h,p03,PASS,,7655947
+2019062300,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7655947
+2019062300,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7453961
+2019062300,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7453961
+2019062300,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7453961
+2019062400,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,8924791
+2019062400,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8924791
+2019062400,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8924791
+2019062400,day1_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8663981
+2019062400,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8663981
+2019062400,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8663981
+2019062400,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7733374
+2019062400,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7733374
+2019062400,day3_24h,p02,PASS,,7733374
+2019062400,day1_24h,p03,PASS,,7313846
+2019062400,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7313846
+2019062400,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7313846
+2019062400,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8691221
+2019062400,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,8691221
+2019062400,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8691221
+2019062500,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,9460905
+2019062500,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9460905
+2019062500,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,9460905
+2019062500,day1_24h,p01,PASS,,9227724
+2019062500,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,9227724
+2019062500,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,9227724
+2019062500,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7729559
+2019062500,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7729559
+2019062500,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7729559
+2019062500,day1_24h,p03,PASS,,7909517
+2019062500,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7909517
+2019062500,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7909517
+2019062500,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8176281
+2019062500,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8176281
+2019062500,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 69--72,8176281
+2019062600,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8872476
+2019062600,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8872476
+2019062600,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8872476
+2019062600,day1_24h,p01,PASS,,7446796
+2019062600,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7446796
+2019062600,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7446796
+2019062600,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7803068
+2019062600,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7803068
+2019062600,day3_24h,p02,PASS,,7803068
+2019062600,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8268516
+2019062600,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8268516
+2019062600,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8268516
+2019062600,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8686143
+2019062600,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8686143
+2019062600,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,8686143
+2019062700,day1_24h,c00,PASS,,9330356
+2019062700,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,9330356
+2019062700,day3_24h,c00,PASS,,9330356
+2019062700,day1_24h,p01,PASS,,7180128
+2019062700,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7180128
+2019062700,day3_24h,p01,PASS,,7180128
+2019062700,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,8369719
+2019062700,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8369719
+2019062700,day3_24h,p02,PASS,,8369719
+2019062700,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8405022
+2019062700,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,8405022
+2019062700,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8405022
+2019062700,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7723766
+2019062700,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7723766
+2019062700,day3_24h,p04,PASS,,7723766
+2019062800,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,8829845
+2019062800,day2_24h,c00,PASS,,8829845
+2019062800,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,8829845
+2019062800,day1_24h,p01,PASS,,7303003
+2019062800,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7303003
+2019062800,day3_24h,p01,PASS,,7303003
+2019062800,day1_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7298099
+2019062800,day2_24h,p02,PASS,,7298099
+2019062800,day3_24h,p02,PASS,,7298099
+2019062800,day1_24h,p03,PASS,,7958186
+2019062800,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,7958186
+2019062800,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7958186
+2019062800,day1_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7909980
+2019062800,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 39--42,7909980
+2019062800,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7909980
+2019062900,day1_24h,c00,PASS,,7527728
+2019062900,day2_24h,c00,PASS,,7527728
+2019062900,day3_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7527728
+2019062900,day1_24h,p01,PASS,,6646386
+2019062900,day2_24h,p01,PASS,,6646386
+2019062900,day3_24h,p01,PASS,,6646386
+2019062900,day1_24h,p02,PASS,,7233881
+2019062900,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,7233881
+2019062900,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7233881
+2019062900,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 15--18,7248094
+2019062900,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 45--48,7248094
+2019062900,day3_24h,p03,PASS,,7248094
+2019062900,day1_24h,p04,PASS,,6994421
+2019062900,day2_24h,p04,PASS,,6994421
+2019062900,day3_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,6994421
+2019063000,day1_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 9--12,7686411
+2019063000,day2_24h,c00,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7686411
+2019063000,day3_24h,c00,PASS,,7686411
+2019063000,day1_24h,p01,PASS,,7412805
+2019063000,day2_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7412805
+2019063000,day3_24h,p01,FAIL,ValueError: materially negative reconstructed precipitation for 51--54,7412805
+2019063000,day1_24h,p02,PASS,,7428281
+2019063000,day2_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 33--36,7428281
+2019063000,day3_24h,p02,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7428281
+2019063000,day1_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 21--24,7657095
+2019063000,day2_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7657095
+2019063000,day3_24h,p03,FAIL,ValueError: materially negative reconstructed precipitation for 57--60,7657095
+2019063000,day1_24h,p04,PASS,,7588523
+2019063000,day2_24h,p04,FAIL,ValueError: materially negative reconstructed precipitation for 27--30,7588523
+2019063000,day3_24h,p04,PASS,,7588523

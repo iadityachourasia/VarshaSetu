@@ -1,0 +1,205 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - link "Skip to content" [ref=f12e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - complementary [ref=f12e4]:
+      - link "VarshaSetu overview" [ref=f12e5] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=f12e6]: V
+      - navigation "Primary" [ref=f12e7]:
+        - link "Overview" [ref=f12e8] [cursor=pointer]:
+          - /url: /
+        - link "Forecast Explorer" [ref=f12e12] [cursor=pointer]:
+          - /url: /forecast
+        - link "Extreme Rain" [ref=f12e16] [cursor=pointer]:
+          - /url: /extremes
+        - link "District Intelligence" [ref=f12e19] [cursor=pointer]:
+          - /url: /districts
+        - link "Verification" [ref=f12e24] [cursor=pointer]:
+          - /url: /verification
+        - link "Methodology" [ref=f12e27] [cursor=pointer]:
+          - /url: /methodology
+    - generic [ref=f12e30]:
+      - banner [ref=f12e31]:
+        - generic [ref=f12e32]:
+          - generic [ref=f12e33]: VARSHASetu / SCIENTIFIC WORKSPACE
+          - generic [ref=f12e34]: 2019 JJAS historical test · read-only artifacts
+        - generic [ref=f12e35]: Prototype scientific ready
+      - main [ref=f12e37]:
+        - generic [ref=f12e38]:
+          - generic [ref=f12e39]:
+            - generic [ref=f12e40]:
+              - heading "Scientific Verification" [level=1] [ref=f12e41]
+              - paragraph [ref=f12e42]: Frozen 2019 JJAS held-out results on the authoritative common cases.
+            - generic [ref=f12e43]: Historical scientific prototype · not operational
+          - generic [ref=f12e44]:
+            - generic [ref=f12e45]:
+              - text: PRIMARY DETERMINISTIC RESULT
+              - strong [ref=f12e46]: 9.73% lower RMSE
+              - paragraph [ref=f12e47]: Global XGBoost versus Raw GEFS · untouched 2019 test
+            - generic [ref=f12e48]:
+              - generic [ref=f12e49]:
+                - generic [ref=f12e50]: Raw GEFS
+                - strong [ref=f12e51]: 19.7735 mm
+              - generic [ref=f12e52]:
+                - generic [ref=f12e53]: Global XGBoost
+                - strong [ref=f12e54]: 17.8487 mm
+              - generic [ref=f12e55]:
+                - generic [ref=f12e56]: Paired valid cells
+                - strong [ref=f12e57]: 3,31,755
+          - generic [ref=f12e58]:
+            - heading "Model ladder" [level=2] [ref=f12e59]
+            - paragraph [ref=f12e60]: Same cases and valid-cell mask for M0–M4.
+          - table [ref=f12e62]:
+            - caption [ref=f12e63]: 2019 deterministic model comparison
+            - rowgroup [ref=f12e64]:
+              - row [ref=f12e65]:
+                - columnheader "Model" [ref=f12e66]
+                - columnheader "RMSE · mm" [ref=f12e67]
+                - columnheader "MAE · mm" [ref=f12e68]
+                - columnheader "Bias · mm" [ref=f12e69]
+                - columnheader "Heavy CSI" [ref=f12e70]
+                - columnheader "Very Heavy CSI" [ref=f12e71]
+            - rowgroup [ref=f12e72]:
+              - row [ref=f12e73]:
+                - rowheader "Raw GEFS" [ref=f12e74]
+                - cell "19.7735" [ref=f12e75]
+                - cell "9.3276" [ref=f12e76]
+                - cell "0.5938" [ref=f12e77]
+                - cell "0.120" [ref=f12e78]
+                - cell "0.033" [ref=f12e79]
+              - row [ref=f12e80]:
+                - rowheader "Linear MOS" [ref=f12e81]
+                - cell "18.8020" [ref=f12e82]
+                - cell "9.3611" [ref=f12e83]
+                - cell "0.3454" [ref=f12e84]
+                - cell "0.038" [ref=f12e85]
+                - cell "0.003" [ref=f12e86]
+              - row [ref=f12e87]:
+                - rowheader "Global XGBoostBest RMSE" [ref=f12e88]
+                - cell "17.8487" [ref=f12e89]
+                - cell "8.0730" [ref=f12e90]
+                - cell "-1.5960" [ref=f12e91]
+                - cell "0.049" [ref=f12e92]
+                - cell "0.000" [ref=f12e93]
+              - row [ref=f12e94]:
+                - rowheader "Hard Regime" [ref=f12e95]
+                - cell "18.4858" [ref=f12e96]
+                - cell "8.1121" [ref=f12e97]
+                - cell "-2.2960" [ref=f12e98]
+                - cell "0.009" [ref=f12e99]
+                - cell "0.000" [ref=f12e100]
+              - row [ref=f12e101]:
+                - rowheader "Soft MoE" [ref=f12e102]
+                - cell "18.4398" [ref=f12e103]
+                - cell "8.0973" [ref=f12e104]
+                - cell "-2.2879" [ref=f12e105]
+                - cell "0.008" [ref=f12e106]
+                - cell "0.000" [ref=f12e107]
+          - generic [ref=f12e108]:
+            - strong [ref=f12e109]: Interpretation
+            - paragraph [ref=f12e110]: Soft routing improves on hard routing for RMSE, but neither beats Global ML. Raw GEFS remains stronger on deterministic Heavy and Very Heavy CSI/ETS and the reported FSS scales. Overall rainfall RMSE is not a substitute for extreme-event spatial skill.
+          - generic [ref=f12e111]:
+            - generic [ref=f12e112]:
+              - heading "RMSE comparison" [level=2] [ref=f12e114]
+              - figure "RMSE in mm across the same frozen 255 cases and paired valid-cell mask. Lower is better; M2 Global ML is the minimum." [ref=f12e115]
+            - generic [ref=f12e119]:
+              - generic [ref=f12e120]:
+                - heading "Probability quality" [level=2] [ref=f12e121]
+                - paragraph [ref=f12e122]: Held-out 2019
+              - generic [ref=f12e123]:
+                - generic [ref=f12e124]:
+                  - generic [ref=f12e125]: Heavy
+                  - strong [ref=f12e126]: Brier 0.0225
+                  - generic [ref=f12e127]: PR-AUC 0.338
+                - generic [ref=f12e128]:
+                  - generic [ref=f12e129]: Very Heavy
+                  - strong [ref=f12e130]: Brier 0.0079
+                  - generic [ref=f12e131]: PR-AUC 0.155
+              - paragraph [ref=f12e132]: Very-heavy false-alarm ratio at its frozen threshold is 0.872. Sparse events limit confidence in upper probability bins.
+          - generic [ref=f12e133]:
+            - heading "Extreme spatial skill and reliability" [level=2] [ref=f12e134]
+            - paragraph [ref=f12e135]: Actual 2-D fields and frozen calibrated probabilities.
+          - group "Event threshold" [ref=f12e136]:
+            - button "Heavy · ≥64.5 mm" [ref=f12e137] [cursor=pointer]
+            - button "Very Heavy · ≥115.6 mm" [ref=f12e138] [cursor=pointer]
+          - generic [ref=f12e139]:
+            - generic [ref=f12e140]:
+              - heading "Fractions Skill Score" [level=3] [ref=f12e141]
+              - figure "Fractions Skill Score on actual 2-D fields. Raw and corrected case counts differ by scale where denominator cases are undefined; see the table below." [ref=f12e142]
+              - table [ref=f12e146]:
+                - caption [ref=f12e147]: FSS values and eligible case counts
+                - rowgroup [ref=f12e148]:
+                  - row [ref=f12e149]:
+                    - columnheader "Scale" [ref=f12e150]
+                    - columnheader "Raw FSS / cases" [ref=f12e151]
+                    - columnheader "Corrected FSS / cases" [ref=f12e152]
+                - rowgroup [ref=f12e153]:
+                  - row [ref=f12e154]:
+                    - rowheader "1×1" [ref=f12e155]
+                    - cell "0.215 / 236" [ref=f12e156]
+                    - cell "0.093 / 228" [ref=f12e157]
+                  - row [ref=f12e158]:
+                    - rowheader "3×3" [ref=f12e159]
+                    - cell "0.331 / 236" [ref=f12e160]
+                    - cell "0.145 / 228" [ref=f12e161]
+                  - row [ref=f12e162]:
+                    - rowheader "5×5" [ref=f12e163]
+                    - cell "0.379 / 236" [ref=f12e164]
+                    - cell "0.163 / 228" [ref=f12e165]
+                  - row [ref=f12e166]:
+                    - rowheader "9×9" [ref=f12e167]
+                    - cell "0.427 / 236" [ref=f12e168]
+                    - cell "0.164 / 228" [ref=f12e169]
+            - generic [ref=f12e170]:
+              - heading "Probability reliability" [level=3] [ref=f12e171]
+              - figure "Predicted probability versus observed frequency. Empty upper bins are omitted from the line and listed as zero-sample bins below." [ref=f12e172]
+              - table [ref=f12e176]:
+                - caption [ref=f12e177]: Reliability bins with observed frequencies
+                - rowgroup [ref=f12e178]:
+                  - row [ref=f12e179]:
+                    - columnheader "Predicted bin" [ref=f12e180]
+                    - columnheader "Samples" [ref=f12e181]
+                    - columnheader "Observed" [ref=f12e182]
+                - rowgroup [ref=f12e183]:
+                  - row [ref=f12e184]:
+                    - rowheader "0–10%" [ref=f12e185]
+                    - cell "308,001" [ref=f12e186]
+                    - cell "1.2%" [ref=f12e187]
+                  - row [ref=f12e188]:
+                    - rowheader "10–20%" [ref=f12e189]
+                    - cell "11,409" [ref=f12e190]
+                    - cell "13.2%" [ref=f12e191]
+                  - row [ref=f12e192]:
+                    - rowheader "20–30%" [ref=f12e193]
+                    - cell "4,441" [ref=f12e194]
+                    - cell "26.4%" [ref=f12e195]
+                  - row [ref=f12e196]:
+                    - rowheader "30–40%" [ref=f12e197]
+                    - cell "3,854" [ref=f12e198]
+                    - cell "34.7%" [ref=f12e199]
+                  - row [ref=f12e200]:
+                    - rowheader "40–50%" [ref=f12e201]
+                    - cell "2,921" [ref=f12e202]
+                    - cell "47.5%" [ref=f12e203]
+                  - row [ref=f12e204]:
+                    - rowheader "50–60%" [ref=f12e205]
+                    - cell "1,129" [ref=f12e206]
+                    - cell "60.4%" [ref=f12e207]
+                  - row [ref=f12e208]:
+                    - rowheader "60–70%" [ref=f12e209]
+                    - cell "0" [ref=f12e210]
+                    - cell "Undefined — no samples" [ref=f12e211]
+                  - row [ref=f12e212]:
+                    - rowheader "70–80%" [ref=f12e213]
+                    - cell "0" [ref=f12e214]
+                    - cell "Undefined — no samples" [ref=f12e215]
+                  - row [ref=f12e216]:
+                    - rowheader "80–90%" [ref=f12e217]
+                    - cell "0" [ref=f12e218]
+                    - cell "Undefined — no samples" [ref=f12e219]
+                  - row [ref=f12e220]:
+                    - rowheader "90–100%" [ref=f12e221]
+                    - cell "0" [ref=f12e222]
+                    - cell "Undefined — no samples" [ref=f12e223]
+  - button "Open Next.js Dev Tools" [ref=f12e229] [cursor=pointer]

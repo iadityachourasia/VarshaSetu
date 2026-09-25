@@ -1,0 +1,143 @@
+{
+  "cases": [
+    {
+      "array_file": "20190807T000000Z_day2_24h.npz",
+      "array_sha256": "3d6d577de7952a63cec2385ea370d538376e0ff1db2fd2e3c301bffc818c2968",
+      "case_id": "20190807T000000Z_day2_24h",
+      "case_key": "2019-08-07T00:00:00Z|day2_24h",
+      "corrected_rmse_mm": 50.16359463707631,
+      "dominant_regime": "LOW_DEPRESSION_INFLUENCED",
+      "initialization_utc": "2019-08-07T00:00:00Z",
+      "lead_hours": 48,
+      "mean_heavy_probability": 0.047874610871076584,
+      "mean_very_heavy_probability": 0.01404017023742199,
+      "observed_heavy_cells": 200,
+      "observed_very_heavy_cells": 106,
+      "product": "day2_24h",
+      "raw_rmse_mm": 49.489229535266645,
+      "regime_probabilities": {
+        "ACTIVE_MONSOON": 2.855433988216416e-13,
+        "BREAK_WEAK_MONSOON": 2.80176080014521e-22,
+        "LOW_DEPRESSION_INFLUENCED": 1.0
+      },
+      "valid_period_end_utc": "2019-08-09T03:00:00Z",
+      "valid_period_start_utc": "2019-08-08T03:00:00Z"
+    },
+    {
+      "array_file": "20190808T000000Z_day1_24h.npz",
+      "array_sha256": "3a396b30cd964d71c701be451122263057d7b6893ee390235fdd099eed9e12c4",
+      "case_id": "20190808T000000Z_day1_24h",
+      "case_key": "2019-08-08T00:00:00Z|day1_24h",
+      "corrected_rmse_mm": 51.27702644576541,
+      "dominant_regime": "LOW_DEPRESSION_INFLUENCED",
+      "initialization_utc": "2019-08-08T00:00:00Z",
+      "lead_hours": 24,
+      "mean_heavy_probability": 0.03195656090974808,
+      "mean_very_heavy_probability": 0.009148858487606049,
+      "observed_heavy_cells": 200,
+      "observed_very_heavy_cells": 106,
+      "product": "day1_24h",
+      "raw_rmse_mm": 44.910728372842904,
+      "regime_probabilities": {
+        "ACTIVE_MONSOON": 9.286679758524485e-10,
+        "BREAK_WEAK_MONSOON": 4.158246038290808e-18,
+        "LOW_DEPRESSION_INFLUENCED": 1.0
+      },
+      "valid_period_end_utc": "2019-08-09T03:00:00Z",
+      "valid_period_start_utc": "2019-08-08T03:00:00Z"
+    },
+    {
+      "array_file": "20190804T000000Z_day3_24h.npz",
+      "array_sha256": "2442e95a3a28c911793d2b1941565483be493e1069089e751d514caba6cc7b02",
+      "case_id": "20190804T000000Z_day3_24h",
+      "case_key": "2019-08-04T00:00:00Z|day3_24h",
+      "corrected_rmse_mm": 33.35804627314217,
+      "dominant_regime": "LOW_DEPRESSION_INFLUENCED",
+      "initialization_utc": "2019-08-04T00:00:00Z",
+      "lead_hours": 72,
+      "mean_heavy_probability": 0.03875661641359329,
+      "mean_very_heavy_probability": 0.008222153410315514,
+      "observed_heavy_cells": 174,
+      "observed_very_heavy_cells": 59,
+      "product": "day3_24h",
+      "raw_rmse_mm": 33.115554935595966,
+      "regime_probabilities": {
+        "ACTIVE_MONSOON": 7.004915119068755e-07,
+        "BREAK_WEAK_MONSOON": 1.0691621707707624e-14,
+        "LOW_DEPRESSION_INFLUENCED": 0.9999992847442627
+      },
+      "valid_period_end_utc": "2019-08-07T03:00:00Z",
+      "valid_period_start_utc": "2019-08-06T03:00:00Z"
+    },
+    {
+      "array_file": "20190801T000000Z_day1_24h.npz",
+      "array_sha256": "01c06d9dcfde54f045f842661a9c95cf819876e77eff8ff2f19264056bb317a0",
+      "case_id": "20190801T000000Z_day1_24h",
+      "case_key": "2019-08-01T00:00:00Z|day1_24h",
+      "corrected_rmse_mm": 17.343112649570468,
+      "dominant_regime": "LOW_DEPRESSION_INFLUENCED",
+      "initialization_utc": "2019-08-01T00:00:00Z",
+      "lead_hours": 24,
+      "mean_heavy_probability": 0.036682404577732086,
+      "mean_very_heavy_probability": 0.009146442636847496,
+      "observed_heavy_cells": 44,
+      "observed_very_heavy_cells": 10,
+      "product": "day1_24h",
+      "raw_rmse_mm": 17.303296610662084,
+      "regime_probabilities": {
+        "ACTIVE_MONSOON": 0.002124735852703452,
+        "BREAK_WEAK_MONSOON": 1.9483888280547035e-08,
+        "LOW_DEPRESSION_INFLUENCED": 0.9978752732276917
+      },
+      "valid_period_end_utc": "2019-08-02T03:00:00Z",
+      "valid_period_start_utc": "2019-08-01T03:00:00Z"
+    },
+    {
+      "array_file": "20190802T000000Z_day2_24h.npz",
+      "array_sha256": "eb30927e32a75894ff917ee50cd7527dcc11784b2ef367caa1e5e820d34d8d3a",
+      "case_id": "20190802T000000Z_day2_24h",
+      "case_key": "2019-08-02T00:00:00Z|day2_24h",
+      "corrected_rmse_mm": 42.88562809891978,
+      "dominant_regime": "ACTIVE_MONSOON",
+      "initialization_utc": "2019-08-02T00:00:00Z",
+      "lead_hours": 48,
+      "mean_heavy_probability": 0.07057645171880722,
+      "mean_very_heavy_probability": 0.024147016927599907,
+      "observed_heavy_cells": 147,
+      "observed_very_heavy_cells": 77,
+      "product": "day2_24h",
+      "raw_rmse_mm": 40.91155861851789,
+      "regime_probabilities": {
+        "ACTIVE_MONSOON": 0.8743352293968201,
+        "BREAK_WEAK_MONSOON": 7.447495590895414e-05,
+        "LOW_DEPRESSION_INFLUENCED": 0.12559029459953308
+      },
+      "valid_period_end_utc": "2019-08-04T03:00:00Z",
+      "valid_period_start_utc": "2019-08-03T03:00:00Z"
+    },
+    {
+      "array_file": "20190802T000000Z_day3_24h.npz",
+      "array_sha256": "ec737d25d30b74d97777a0937a08698061313d873862ad7882186bff4699e0f1",
+      "case_id": "20190802T000000Z_day3_24h",
+      "case_key": "2019-08-02T00:00:00Z|day3_24h",
+      "corrected_rmse_mm": 41.33040067445411,
+      "dominant_regime": "LOW_DEPRESSION_INFLUENCED",
+      "initialization_utc": "2019-08-02T00:00:00Z",
+      "lead_hours": 72,
+      "mean_heavy_probability": 0.06283552199602127,
+      "mean_very_heavy_probability": 0.023066191002726555,
+      "observed_heavy_cells": 158,
+      "observed_very_heavy_cells": 70,
+      "product": "day3_24h",
+      "raw_rmse_mm": 41.743367097140876,
+      "regime_probabilities": {
+        "ACTIVE_MONSOON": 0.010158262215554714,
+        "BREAK_WEAK_MONSOON": 1.9852691934829636e-08,
+        "LOW_DEPRESSION_INFLUENCED": 0.9898416996002197
+      },
+      "valid_period_end_utc": "2019-08-05T03:00:00Z",
+      "valid_period_start_utc": "2019-08-04T03:00:00Z"
+    }
+  ],
+  "selection": "three highest observed-heavy-area cases plus middle chronological case at each lead; descriptive only, not skill selection"
+}

@@ -1,0 +1,45 @@
+{
+  "2025_observation_values_opened": false,
+  "common_comparison_sha256": "f4859ee75e94994b97b0988cd5941a08097a6bcff97527534997a7b49093ce56",
+  "decision": "FEATURE_DATASET_PARTIAL",
+  "experiment_sha256": "d5ee92644b64dd496c9070b4868ac25b7f5cab967a9f977581e828798d1eac08",
+  "feature_freeze_sha256": "f1520a32aadef460249ba26a39c106f9593fcd3407c23d2967ddc90d889ed67b",
+  "missing_model_derived_columns": [
+    "frozen_m2_corrected_mm",
+    "regime_p_active",
+    "regime_p_break_weak",
+    "regime_p_low_depression"
+  ],
+  "probability_26_matrix_available": false,
+  "schema": "phase4g-dataset-catalog-v1",
+  "split_sha256": "c400c36d793b68f394774c999bbf6729a439cc9d3bdd415ca9a33f27ce4520b5",
+  "years": {
+    "2023": {
+      "deterministic_cases": 200,
+      "deterministic_cells": 260200,
+      "ensemble_cases": 76,
+      "ensemble_cells": 98876,
+      "regime_cases": 375,
+      "year": 2023,
+      "year_manifest_sha256": "d5f4b832a83d2daa40c14daf8b02b3a18bbdbe6bb854c74c7b068c014267be04"
+    },
+    "2024": {
+      "deterministic_cases": 183,
+      "deterministic_cells": 238083,
+      "ensemble_cases": 67,
+      "ensemble_cells": 87167,
+      "regime_cases": 375,
+      "year": 2024,
+      "year_manifest_sha256": "d7e4c78159debd15183b45f69bce5e9dd15631f4a2aa72bdc4b801dd52873c68"
+    },
+    "2025": {
+      "deterministic_cases": 232,
+      "deterministic_cells": 557032,
+      "ensemble_cases": 75,
+      "ensemble_cells": 180075,
+      "regime_cases": 375,
+      "year": 2025,
+      "year_manifest_sha256": "d62fc0280208cb2dd94e513ecbdbd3089d5c97bbe11448ee04d296d23ec0e541"
+    }
+  }
+}

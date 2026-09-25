@@ -1,0 +1,2318 @@
+{
+  "common_validation_case_count": 251,
+  "common_validation_case_keys": [
+    "2018-06-01T00:00:00Z|day1_24h",
+    "2018-06-01T00:00:00Z|day3_24h",
+    "2018-06-02T00:00:00Z|day1_24h",
+    "2018-06-03T00:00:00Z|day1_24h",
+    "2018-06-03T00:00:00Z|day2_24h",
+    "2018-06-04T00:00:00Z|day1_24h",
+    "2018-06-05T00:00:00Z|day1_24h",
+    "2018-06-05T00:00:00Z|day3_24h",
+    "2018-06-06T00:00:00Z|day1_24h",
+    "2018-06-06T00:00:00Z|day3_24h",
+    "2018-06-07T00:00:00Z|day1_24h",
+    "2018-06-07T00:00:00Z|day3_24h",
+    "2018-06-08T00:00:00Z|day1_24h",
+    "2018-06-08T00:00:00Z|day2_24h",
+    "2018-06-08T00:00:00Z|day3_24h",
+    "2018-06-09T00:00:00Z|day1_24h",
+    "2018-06-10T00:00:00Z|day1_24h",
+    "2018-06-11T00:00:00Z|day1_24h",
+    "2018-06-11T00:00:00Z|day2_24h",
+    "2018-06-12T00:00:00Z|day1_24h",
+    "2018-06-13T00:00:00Z|day1_24h",
+    "2018-06-13T00:00:00Z|day3_24h",
+    "2018-06-14T00:00:00Z|day1_24h",
+    "2018-06-15T00:00:00Z|day1_24h",
+    "2018-06-15T00:00:00Z|day3_24h",
+    "2018-06-16T00:00:00Z|day1_24h",
+    "2018-06-16T00:00:00Z|day2_24h",
+    "2018-06-17T00:00:00Z|day1_24h",
+    "2018-06-18T00:00:00Z|day1_24h",
+    "2018-06-19T00:00:00Z|day1_24h",
+    "2018-06-20T00:00:00Z|day1_24h",
+    "2018-06-20T00:00:00Z|day2_24h",
+    "2018-06-21T00:00:00Z|day1_24h",
+    "2018-06-22T00:00:00Z|day1_24h",
+    "2018-06-23T00:00:00Z|day1_24h",
+    "2018-06-23T00:00:00Z|day2_24h",
+    "2018-06-24T00:00:00Z|day1_24h",
+    "2018-06-24T00:00:00Z|day2_24h",
+    "2018-06-24T00:00:00Z|day3_24h",
+    "2018-06-25T00:00:00Z|day1_24h",
+    "2018-06-25T00:00:00Z|day2_24h",
+    "2018-06-25T00:00:00Z|day3_24h",
+    "2018-06-26T00:00:00Z|day1_24h",
+    "2018-06-27T00:00:00Z|day1_24h",
+    "2018-06-27T00:00:00Z|day3_24h",
+    "2018-06-28T00:00:00Z|day1_24h",
+    "2018-06-28T00:00:00Z|day3_24h",
+    "2018-06-29T00:00:00Z|day1_24h",
+    "2018-06-29T00:00:00Z|day2_24h",
+    "2018-06-29T00:00:00Z|day3_24h",
+    "2018-06-30T00:00:00Z|day1_24h",
+    "2018-06-30T00:00:00Z|day2_24h",
+    "2018-06-30T00:00:00Z|day3_24h",
+    "2018-07-01T00:00:00Z|day1_24h",
+    "2018-07-01T00:00:00Z|day2_24h",
+    "2018-07-02T00:00:00Z|day1_24h",
+    "2018-07-02T00:00:00Z|day2_24h",
+    "2018-07-03T00:00:00Z|day1_24h",
+    "2018-07-03T00:00:00Z|day3_24h",
+    "2018-07-04T00:00:00Z|day1_24h",
+    "2018-07-04T00:00:00Z|day2_24h",
+    "2018-07-04T00:00:00Z|day3_24h",
+    "2018-07-05T00:00:00Z|day1_24h",
+    "2018-07-05T00:00:00Z|day2_24h",
+    "2018-07-06T00:00:00Z|day1_24h",
+    "2018-07-06T00:00:00Z|day2_24h",
+    "2018-07-07T00:00:00Z|day1_24h",
+    "2018-07-07T00:00:00Z|day3_24h",
+    "2018-07-08T00:00:00Z|day1_24h",
+    "2018-07-09T00:00:00Z|day1_24h",
+    "2018-07-09T00:00:00Z|day3_24h",
+    "2018-07-10T00:00:00Z|day1_24h",
+    "2018-07-10T00:00:00Z|day2_24h",
+    "2018-07-10T00:00:00Z|day3_24h",
+    "2018-07-11T00:00:00Z|day1_24h",
+    "2018-07-11T00:00:00Z|day3_24h",
+    "2018-07-12T00:00:00Z|day1_24h",
+    "2018-07-12T00:00:00Z|day2_24h",
+    "2018-07-13T00:00:00Z|day1_24h",
+    "2018-07-13T00:00:00Z|day2_24h",
+    "2018-07-13T00:00:00Z|day3_24h",
+    "2018-07-14T00:00:00Z|day1_24h",
+    "2018-07-14T00:00:00Z|day2_24h",
+    "2018-07-14T00:00:00Z|day3_24h",
+    "2018-07-15T00:00:00Z|day1_24h",
+    "2018-07-15T00:00:00Z|day2_24h",
+    "2018-07-15T00:00:00Z|day3_24h",
+    "2018-07-16T00:00:00Z|day1_24h",
+    "2018-07-16T00:00:00Z|day2_24h",
+    "2018-07-16T00:00:00Z|day3_24h",
+    "2018-07-17T00:00:00Z|day1_24h",
+    "2018-07-18T00:00:00Z|day1_24h",
+    "2018-07-18T00:00:00Z|day2_24h",
+    "2018-07-18T00:00:00Z|day3_24h",
+    "2018-07-19T00:00:00Z|day1_24h",
+    "2018-07-20T00:00:00Z|day1_24h",
+    "2018-07-20T00:00:00Z|day2_24h",
+    "2018-07-20T00:00:00Z|day3_24h",
+    "2018-07-21T00:00:00Z|day1_24h",
+    "2018-07-21T00:00:00Z|day2_24h",
+    "2018-07-21T00:00:00Z|day3_24h",
+    "2018-07-22T00:00:00Z|day1_24h",
+    "2018-07-22T00:00:00Z|day2_24h",
+    "2018-07-22T00:00:00Z|day3_24h",
+    "2018-07-23T00:00:00Z|day1_24h",
+    "2018-07-23T00:00:00Z|day2_24h",
+    "2018-07-23T00:00:00Z|day3_24h",
+    "2018-07-24T00:00:00Z|day1_24h",
+    "2018-07-24T00:00:00Z|day2_24h",
+    "2018-07-24T00:00:00Z|day3_24h",
+    "2018-07-25T00:00:00Z|day1_24h",
+    "2018-07-26T00:00:00Z|day1_24h",
+    "2018-07-27T00:00:00Z|day1_24h",
+    "2018-07-27T00:00:00Z|day2_24h",
+    "2018-07-27T00:00:00Z|day3_24h",
+    "2018-07-28T00:00:00Z|day1_24h",
+    "2018-07-28T00:00:00Z|day2_24h",
+    "2018-07-28T00:00:00Z|day3_24h",
+    "2018-07-29T00:00:00Z|day1_24h",
+    "2018-07-30T00:00:00Z|day1_24h",
+    "2018-07-30T00:00:00Z|day2_24h",
+    "2018-07-30T00:00:00Z|day3_24h",
+    "2018-07-31T00:00:00Z|day1_24h",
+    "2018-07-31T00:00:00Z|day3_24h",
+    "2018-08-01T00:00:00Z|day1_24h",
+    "2018-08-01T00:00:00Z|day2_24h",
+    "2018-08-02T00:00:00Z|day1_24h",
+    "2018-08-02T00:00:00Z|day2_24h",
+    "2018-08-02T00:00:00Z|day3_24h",
+    "2018-08-03T00:00:00Z|day1_24h",
+    "2018-08-04T00:00:00Z|day1_24h",
+    "2018-08-04T00:00:00Z|day2_24h",
+    "2018-08-04T00:00:00Z|day3_24h",
+    "2018-08-05T00:00:00Z|day1_24h",
+    "2018-08-05T00:00:00Z|day2_24h",
+    "2018-08-05T00:00:00Z|day3_24h",
+    "2018-08-06T00:00:00Z|day1_24h",
+    "2018-08-06T00:00:00Z|day2_24h",
+    "2018-08-06T00:00:00Z|day3_24h",
+    "2018-08-07T00:00:00Z|day1_24h",
+    "2018-08-07T00:00:00Z|day2_24h",
+    "2018-08-07T00:00:00Z|day3_24h",
+    "2018-08-08T00:00:00Z|day1_24h",
+    "2018-08-08T00:00:00Z|day2_24h",
+    "2018-08-08T00:00:00Z|day3_24h",
+    "2018-08-09T00:00:00Z|day1_24h",
+    "2018-08-09T00:00:00Z|day2_24h",
+    "2018-08-10T00:00:00Z|day1_24h",
+    "2018-08-10T00:00:00Z|day2_24h",
+    "2018-08-11T00:00:00Z|day1_24h",
+    "2018-08-11T00:00:00Z|day2_24h",
+    "2018-08-11T00:00:00Z|day3_24h",
+    "2018-08-12T00:00:00Z|day1_24h",
+    "2018-08-12T00:00:00Z|day2_24h",
+    "2018-08-13T00:00:00Z|day1_24h",
+    "2018-08-13T00:00:00Z|day3_24h",
+    "2018-08-14T00:00:00Z|day1_24h",
+    "2018-08-14T00:00:00Z|day2_24h",
+    "2018-08-14T00:00:00Z|day3_24h",
+    "2018-08-15T00:00:00Z|day1_24h",
+    "2018-08-15T00:00:00Z|day3_24h",
+    "2018-08-16T00:00:00Z|day1_24h",
+    "2018-08-16T00:00:00Z|day2_24h",
+    "2018-08-16T00:00:00Z|day3_24h",
+    "2018-08-17T00:00:00Z|day1_24h",
+    "2018-08-17T00:00:00Z|day2_24h",
+    "2018-08-18T00:00:00Z|day1_24h",
+    "2018-08-18T00:00:00Z|day3_24h",
+    "2018-08-19T00:00:00Z|day1_24h",
+    "2018-08-19T00:00:00Z|day2_24h",
+    "2018-08-20T00:00:00Z|day1_24h",
+    "2018-08-20T00:00:00Z|day3_24h",
+    "2018-08-21T00:00:00Z|day1_24h",
+    "2018-08-21T00:00:00Z|day3_24h",
+    "2018-08-22T00:00:00Z|day1_24h",
+    "2018-08-22T00:00:00Z|day3_24h",
+    "2018-08-23T00:00:00Z|day1_24h",
+    "2018-08-23T00:00:00Z|day2_24h",
+    "2018-08-24T00:00:00Z|day1_24h",
+    "2018-08-25T00:00:00Z|day1_24h",
+    "2018-08-26T00:00:00Z|day1_24h",
+    "2018-08-26T00:00:00Z|day2_24h",
+    "2018-08-27T00:00:00Z|day1_24h",
+    "2018-08-28T00:00:00Z|day1_24h",
+    "2018-08-28T00:00:00Z|day3_24h",
+    "2018-08-29T00:00:00Z|day1_24h",
+    "2018-08-29T00:00:00Z|day2_24h",
+    "2018-08-29T00:00:00Z|day3_24h",
+    "2018-08-30T00:00:00Z|day1_24h",
+    "2018-08-30T00:00:00Z|day2_24h",
+    "2018-08-30T00:00:00Z|day3_24h",
+    "2018-08-31T00:00:00Z|day1_24h",
+    "2018-08-31T00:00:00Z|day2_24h",
+    "2018-09-01T00:00:00Z|day1_24h",
+    "2018-09-01T00:00:00Z|day3_24h",
+    "2018-09-02T00:00:00Z|day1_24h",
+    "2018-09-02T00:00:00Z|day2_24h",
+    "2018-09-02T00:00:00Z|day3_24h",
+    "2018-09-03T00:00:00Z|day1_24h",
+    "2018-09-03T00:00:00Z|day2_24h",
+    "2018-09-03T00:00:00Z|day3_24h",
+    "2018-09-04T00:00:00Z|day1_24h",
+    "2018-09-04T00:00:00Z|day3_24h",
+    "2018-09-05T00:00:00Z|day1_24h",
+    "2018-09-05T00:00:00Z|day2_24h",
+    "2018-09-06T00:00:00Z|day1_24h",
+    "2018-09-06T00:00:00Z|day2_24h",
+    "2018-09-06T00:00:00Z|day3_24h",
+    "2018-09-07T00:00:00Z|day1_24h",
+    "2018-09-08T00:00:00Z|day1_24h",
+    "2018-09-08T00:00:00Z|day3_24h",
+    "2018-09-09T00:00:00Z|day1_24h",
+    "2018-09-09T00:00:00Z|day2_24h",
+    "2018-09-10T00:00:00Z|day1_24h",
+    "2018-09-10T00:00:00Z|day3_24h",
+    "2018-09-11T00:00:00Z|day1_24h",
+    "2018-09-11T00:00:00Z|day3_24h",
+    "2018-09-12T00:00:00Z|day1_24h",
+    "2018-09-12T00:00:00Z|day3_24h",
+    "2018-09-13T00:00:00Z|day1_24h",
+    "2018-09-13T00:00:00Z|day2_24h",
+    "2018-09-13T00:00:00Z|day3_24h",
+    "2018-09-14T00:00:00Z|day1_24h",
+    "2018-09-14T00:00:00Z|day2_24h",
+    "2018-09-15T00:00:00Z|day1_24h",
+    "2018-09-16T00:00:00Z|day1_24h",
+    "2018-09-17T00:00:00Z|day1_24h",
+    "2018-09-17T00:00:00Z|day2_24h",
+    "2018-09-18T00:00:00Z|day1_24h",
+    "2018-09-19T00:00:00Z|day1_24h",
+    "2018-09-19T00:00:00Z|day2_24h",
+    "2018-09-20T00:00:00Z|day1_24h",
+    "2018-09-21T00:00:00Z|day1_24h",
+    "2018-09-22T00:00:00Z|day1_24h",
+    "2018-09-22T00:00:00Z|day2_24h",
+    "2018-09-23T00:00:00Z|day1_24h",
+    "2018-09-23T00:00:00Z|day3_24h",
+    "2018-09-24T00:00:00Z|day1_24h",
+    "2018-09-24T00:00:00Z|day2_24h",
+    "2018-09-25T00:00:00Z|day1_24h",
+    "2018-09-25T00:00:00Z|day2_24h",
+    "2018-09-26T00:00:00Z|day1_24h",
+    "2018-09-27T00:00:00Z|day1_24h",
+    "2018-09-27T00:00:00Z|day2_24h",
+    "2018-09-27T00:00:00Z|day3_24h",
+    "2018-09-28T00:00:00Z|day1_24h",
+    "2018-09-28T00:00:00Z|day3_24h",
+    "2018-09-29T00:00:00Z|day1_24h",
+    "2018-09-29T00:00:00Z|day2_24h",
+    "2018-09-30T00:00:00Z|day1_24h",
+    "2018-09-30T00:00:00Z|day3_24h"
+  ],
+  "common_validation_cell_count": 326551,
+  "experiment_id": "varshasetu-phase2b-v1",
+  "feature_names": [
+    "raw_c00_rain_mm",
+    "forecast_u850",
+    "forecast_v850",
+    "forecast_q700",
+    "forecast_z500",
+    "forecast_mslp",
+    "forecast_pwat",
+    "pwat_area_mean",
+    "q700_area_mean",
+    "u850_area_mean",
+    "v850_area_mean",
+    "wind_speed_area_mean",
+    "moisture_transport_area_mean",
+    "mslp_area_mean",
+    "mslp_minimum",
+    "mslp_range",
+    "z500_area_mean",
+    "relative_vorticity_area_mean",
+    "relative_vorticity_p90",
+    "latitude_deg",
+    "longitude_deg",
+    "lead_hours"
+  ],
+  "holdout_gate": "Freeze features, preprocessing, model families, fixed hyperparameters, selected target transform, specialist assignments/support, model artifacts, and this manifest before opening 2019 forecast/observation values.",
+  "models_sha256": {
+    "expert_active_monsoon.json": "d7bc48b191373ad8998e3366cfef6964501cd0ef7767211b56b4256893187477",
+    "expert_break_weak_monsoon.json": "9e19bca774d196a3fc3680d78ad3e7fd54dc8fa5f0145c466fb776a2ecb60513",
+    "expert_low_depression_influenced.json": "448a0c2d4515002a20c5ddcf4c20c5eb21c73006e689768e87063a6b3cc32ba8",
+    "global_xgboost.json": "c0b4441071045bb9d1206a7c69645632efe2250adfc8a5464a6f69370d4c1797",
+    "ridge_mos.safe.json": "af834ffa9339bd2eddb50ca3ae37f4f9fb4fe24b5823570e4873f6dc1bdf81a0"
+  },
+  "ridge_candidates": [
+    {
+      "alpha": 0.1,
+      "validation": {
+        "continuous": {
+          "bias_mm": 1.1252942792950884,
+          "mae_mm": 7.313253110620316,
+          "rmse_mm": 14.747380155164658,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 249,
+            "forecast_event_count": 397,
+            "hits": 148,
+            "metrics": {
+              "CSI": 0.022162324049116503,
+              "ETS": 0.02101651601039561,
+              "FAR": 0.6272040302267002,
+              "POD": 0.023020687509721575
+            },
+            "misses": 6281,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 22,
+            "forecast_event_count": 31,
+            "hits": 9,
+            "metrics": {
+              "CSI": 0.005415162454873646,
+              "ETS": 0.005321986034261468,
+              "FAR": 0.7096774193548387,
+              "POD": 0.00548780487804878
+            },
+            "misses": 1631,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          }
+        }
+      }
+    },
+    {
+      "alpha": 1.0,
+      "validation": {
+        "continuous": {
+          "bias_mm": 1.12525331442791,
+          "mae_mm": 7.313229751520189,
+          "rmse_mm": 14.747376396142938,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 249,
+            "forecast_event_count": 397,
+            "hits": 148,
+            "metrics": {
+              "CSI": 0.022162324049116503,
+              "ETS": 0.02101651601039561,
+              "FAR": 0.6272040302267002,
+              "POD": 0.023020687509721575
+            },
+            "misses": 6281,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 22,
+            "forecast_event_count": 31,
+            "hits": 9,
+            "metrics": {
+              "CSI": 0.005415162454873646,
+              "ETS": 0.005321986034261468,
+              "FAR": 0.7096774193548387,
+              "POD": 0.00548780487804878
+            },
+            "misses": 1631,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          }
+        }
+      }
+    },
+    {
+      "alpha": 10.0,
+      "validation": {
+        "continuous": {
+          "bias_mm": 1.1248368356355407,
+          "mae_mm": 7.312995794987368,
+          "rmse_mm": 14.747339863736217,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 249,
+            "forecast_event_count": 397,
+            "hits": 148,
+            "metrics": {
+              "CSI": 0.022162324049116503,
+              "ETS": 0.02101651601039561,
+              "FAR": 0.6272040302267002,
+              "POD": 0.023020687509721575
+            },
+            "misses": 6281,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 22,
+            "forecast_event_count": 31,
+            "hits": 9,
+            "metrics": {
+              "CSI": 0.005415162454873646,
+              "ETS": 0.005321986034261468,
+              "FAR": 0.7096774193548387,
+              "POD": 0.00548780487804878
+            },
+            "misses": 1631,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          }
+        }
+      }
+    },
+    {
+      "alpha": 100.0,
+      "validation": {
+        "continuous": {
+          "bias_mm": 1.1207254164969338,
+          "mae_mm": 7.310690839684794,
+          "rmse_mm": 14.74698440548763,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 248,
+            "forecast_event_count": 396,
+            "hits": 148,
+            "metrics": {
+              "CSI": 0.022165643252957914,
+              "ETS": 0.021022557261580567,
+              "FAR": 0.6262626262626263,
+              "POD": 0.023020687509721575
+            },
+            "misses": 6281,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 22,
+            "forecast_event_count": 31,
+            "hits": 9,
+            "metrics": {
+              "CSI": 0.005415162454873646,
+              "ETS": 0.005321986034261468,
+              "FAR": 0.7096774193548387,
+              "POD": 0.00548780487804878
+            },
+            "misses": 1631,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          }
+        }
+      }
+    }
+  ],
+  "roles": {
+    "final_test": 2019,
+    "training": 2017,
+    "validation_model_selection": 2018
+  },
+  "selected_ridge_alpha": 100.0,
+  "selected_xgboost_rounds": 81,
+  "selected_xgboost_target_strategy_by_2018_rmse": "tweedie",
+  "selection_rule": "Each Ridge alpha and XGBoost target strategy is compared on the common 2018 population; minimum 2018 overall RMSE selects within each candidate family. 2019 is not used for any selection.",
+  "specialists": {
+    "ACTIVE_MONSOON": {
+      "case_count": 99,
+      "fallback": null,
+      "minimum_cases": 30,
+      "minimum_cells": 20000,
+      "trained": true,
+      "valid_cells": 128799
+    },
+    "BREAK_WEAK_MONSOON": {
+      "case_count": 97,
+      "fallback": null,
+      "minimum_cases": 30,
+      "minimum_cells": 20000,
+      "trained": true,
+      "valid_cells": 126197
+    },
+    "LOW_DEPRESSION_INFLUENCED": {
+      "case_count": 62,
+      "fallback": null,
+      "minimum_cases": 30,
+      "minimum_cells": 20000,
+      "trained": true,
+      "valid_cells": 80662
+    }
+  },
+  "test_data_accessed": false,
+  "training_cache_manifest_sha256": "c174698a80c82508fecdbd06f66a98e1e7aaa9a3c7bb2215c1723e579084e81d",
+  "validation_cache_manifest_sha256": "44bfe9e02449cb7ae3494afcc70e556dc4dba76b3f079e67abe99b7971d26cab",
+  "validation_results": {
+    "M0_RAW_GEFS": {
+      "by_forecast_only_regime": {
+        "0": {
+          "continuous": {
+            "bias_mm": -0.22289411559046862,
+            "mae_mm": 6.8747626923987895,
+            "rmse_mm": 15.860101966106559,
+            "sample_count": 101478
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 362,
+              "forecast_event_count": 437,
+              "hits": 75,
+              "metrics": {
+                "CSI": 0.03122398001665279,
+                "ETS": 0.027667819452330374,
+                "FAR": 0.8283752860411899,
+                "POD": 0.03676470588235294
+              },
+              "misses": 1965,
+              "observed_event_count": 2040,
+              "sample_count": 101478,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 6,
+              "forecast_event_count": 7,
+              "hits": 1,
+              "metrics": {
+                "CSI": 0.0016750418760469012,
+                "ETS": 0.001606864406683134,
+                "FAR": 0.8571428571428571,
+                "POD": 0.001692047377326565
+              },
+              "misses": 590,
+              "observed_event_count": 591,
+              "sample_count": 101478,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        },
+        "1": {
+          "continuous": {
+            "bias_mm": 1.3569890552670854,
+            "mae_mm": 4.099357908862724,
+            "rmse_mm": 9.278798127694055,
+            "sample_count": 114488
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 278,
+              "forecast_event_count": 320,
+              "hits": 42,
+              "metrics": {
+                "CSI": 0.06531881804043546,
+                "ETS": 0.06383348101791449,
+                "FAR": 0.86875,
+                "POD": 0.11506849315068493
+              },
+              "misses": 323,
+              "observed_event_count": 365,
+              "sample_count": 114488,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 25,
+              "forecast_event_count": 30,
+              "hits": 5,
+              "metrics": {
+                "CSI": 0.050505050505050504,
+                "ETS": 0.05031904082670702,
+                "FAR": 0.8333333333333334,
+                "POD": 0.06756756756756757
+              },
+              "misses": 69,
+              "observed_event_count": 74,
+              "sample_count": 114488,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        },
+        "2": {
+          "continuous": {
+            "bias_mm": 0.04239534936097785,
+            "mae_mm": 9.33502879892677,
+            "rmse_mm": 19.908621206064684,
+            "sample_count": 110585
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 1350,
+              "forecast_event_count": 1870,
+              "hits": 520,
+              "metrics": {
+                "CSI": 0.09676218831410495,
+                "ETS": 0.08517862983963892,
+                "FAR": 0.7219251336898396,
+                "POD": 0.12922465208747516
+              },
+              "misses": 3504,
+              "observed_event_count": 4024,
+              "sample_count": 110585,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 216,
+              "forecast_event_count": 259,
+              "hits": 43,
+              "metrics": {
+                "CSI": 0.03610411418975651,
+                "ETS": 0.03425245946858606,
+                "FAR": 0.833976833976834,
+                "POD": 0.0441025641025641
+              },
+              "misses": 932,
+              "observed_event_count": 975,
+              "sample_count": 110585,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "by_lead_hours": {
+        "24": {
+          "continuous": {
+            "bias_mm": 1.3606005782665582,
+            "mae_mm": 6.987427390152023,
+            "rmse_mm": 15.79631703202276,
+            "sample_count": 158722
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 1246,
+              "forecast_event_count": 1558,
+              "hits": 312,
+              "metrics": {
+                "CSI": 0.0738986262434865,
+                "ETS": 0.06744626176969203,
+                "FAR": 0.7997432605905006,
+                "POD": 0.10483870967741936
+              },
+              "misses": 2664,
+              "observed_event_count": 2976,
+              "sample_count": 158722,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 222,
+              "forecast_event_count": 261,
+              "hits": 39,
+              "metrics": {
+                "CSI": 0.04024767801857585,
+                "ETS": 0.039029501398347655,
+                "FAR": 0.8505747126436781,
+                "POD": 0.05220883534136546
+              },
+              "misses": 708,
+              "observed_event_count": 747,
+              "sample_count": 158722,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        },
+        "48": {
+          "continuous": {
+            "bias_mm": -0.2455020136496567,
+            "mae_mm": 6.553610349902537,
+            "rmse_mm": 15.509135633663298,
+            "sample_count": 83264
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 436,
+              "forecast_event_count": 589,
+              "hits": 153,
+              "metrics": {
+                "CSI": 0.0731357552581262,
+                "ETS": 0.06791646423756051,
+                "FAR": 0.7402376910016978,
+                "POD": 0.09239130434782608
+              },
+              "misses": 1503,
+              "observed_event_count": 1656,
+              "sample_count": 83264,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 11,
+              "forecast_event_count": 15,
+              "hits": 4,
+              "metrics": {
+                "CSI": 0.008869179600886918,
+                "ETS": 0.00869495180562957,
+                "FAR": 0.7333333333333333,
+                "POD": 0.00909090909090909
+              },
+              "misses": 436,
+              "observed_event_count": 440,
+              "sample_count": 83264,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        },
+        "72": {
+          "continuous": {
+            "bias_mm": -0.6868960174124923,
+            "mae_mm": 6.439311229284486,
+            "rmse_mm": 15.216795253847742,
+            "sample_count": 84565
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 308,
+              "forecast_event_count": 480,
+              "hits": 172,
+              "metrics": {
+                "CSI": 0.0817102137767221,
+                "ETS": 0.0772388928468437,
+                "FAR": 0.6416666666666667,
+                "POD": 0.09571508069003895
+              },
+              "misses": 1625,
+              "observed_event_count": 1797,
+              "sample_count": 84565,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 14,
+              "forecast_event_count": 20,
+              "hits": 6,
+              "metrics": {
+                "CSI": 0.01284796573875803,
+                "ETS": 0.012621446885915752,
+                "FAR": 0.7,
+                "POD": 0.013245033112582781
+              },
+              "misses": 447,
+              "observed_event_count": 453,
+              "sample_count": 84565,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "overall": {
+        "continuous": {
+          "bias_mm": 0.4208482093351796,
+          "mae_mm": 6.734870254564943,
+          "rmse_mm": 15.574882638779094,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 1990,
+            "forecast_event_count": 2627,
+            "hits": 637,
+            "metrics": {
+              "CSI": 0.07566219265946074,
+              "ETS": 0.06994873704561212,
+              "FAR": 0.7575180814617435,
+              "POD": 0.09908228340332867
+            },
+            "misses": 5792,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 247,
+            "forecast_event_count": 296,
+            "hits": 49,
+            "metrics": {
+              "CSI": 0.025967143614202437,
+              "ETS": 0.025199201443258212,
+              "FAR": 0.8344594594594594,
+              "POD": 0.029878048780487804
+            },
+            "misses": 1591,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          }
+        }
+      },
+      "same_case_count": 251,
+      "same_cell_count": 326551
+    },
+    "M1_LINEAR_RIDGE_MOS": {
+      "by_forecast_only_regime": {
+        "0": {
+          "continuous": {
+            "bias_mm": 0.984012710076808,
+            "mae_mm": 7.712211101812176,
+            "rmse_mm": 15.535374723708523,
+            "sample_count": 101478
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 8,
+              "forecast_event_count": 14,
+              "hits": 6,
+              "metrics": {
+                "CSI": 0.0029296875,
+                "ETS": 0.0027926492440865183,
+                "FAR": 0.5714285714285714,
+                "POD": 0.0029411764705882353
+              },
+              "misses": 2034,
+              "observed_event_count": 2040,
+              "sample_count": 101478,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 591,
+              "observed_event_count": 591,
+              "sample_count": 101478,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "1": {
+          "continuous": {
+            "bias_mm": 1.3674230983854068,
+            "mae_mm": 4.135346707041226,
+            "rmse_mm": 8.151504764337485,
+            "sample_count": 114488
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 30,
+              "forecast_event_count": 37,
+              "hits": 7,
+              "metrics": {
+                "CSI": 0.017721518987341773,
+                "ETS": 0.017428090774776094,
+                "FAR": 0.8108108108108109,
+                "POD": 0.019178082191780823
+              },
+              "misses": 358,
+              "observed_event_count": 365,
+              "sample_count": 114488,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 1,
+              "hits": 1,
+              "metrics": {
+                "CSI": 0.013513513513513514,
+                "ETS": 0.013504896932709698,
+                "FAR": 0.0,
+                "POD": 0.013513513513513514
+              },
+              "misses": 73,
+              "observed_event_count": 74,
+              "sample_count": 114488,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        },
+        "2": {
+          "continuous": {
+            "bias_mm": 0.9907747705508646,
+            "mae_mm": 10.22965205411653,
+            "rmse_mm": 18.75959001523748,
+            "sample_count": 110585
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 210,
+              "forecast_event_count": 345,
+              "hits": 135,
+              "metrics": {
+                "CSI": 0.031884742560226734,
+                "ETS": 0.029005709397288224,
+                "FAR": 0.6086956521739131,
+                "POD": 0.03354870775347912
+              },
+              "misses": 3889,
+              "observed_event_count": 4024,
+              "sample_count": 110585,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 22,
+              "forecast_event_count": 30,
+              "hits": 8,
+              "metrics": {
+                "CSI": 0.00802407221664995,
+                "ETS": 0.007760832838621028,
+                "FAR": 0.7333333333333333,
+                "POD": 0.008205128205128205
+              },
+              "misses": 967,
+              "observed_event_count": 975,
+              "sample_count": 110585,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "by_lead_hours": {
+        "24": {
+          "continuous": {
+            "bias_mm": 1.2876123041370449,
+            "mae_mm": 7.140556917606562,
+            "rmse_mm": 14.404623964239653,
+            "sample_count": 158722
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 215,
+              "forecast_event_count": 322,
+              "hits": 107,
+              "metrics": {
+                "CSI": 0.03353180821059229,
+                "ETS": 0.03169976841636463,
+                "FAR": 0.6677018633540373,
+                "POD": 0.03595430107526882
+              },
+              "misses": 2869,
+              "observed_event_count": 2976,
+              "sample_count": 158722,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 19,
+              "forecast_event_count": 28,
+              "hits": 9,
+              "metrics": {
+                "CSI": 0.01174934725848564,
+                "ETS": 0.011579305900085534,
+                "FAR": 0.6785714285714286,
+                "POD": 0.012048192771084338
+              },
+              "misses": 738,
+              "observed_event_count": 747,
+              "sample_count": 158722,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        },
+        "48": {
+          "continuous": {
+            "bias_mm": 1.0068880389066455,
+            "mae_mm": 7.4275972385617965,
+            "rmse_mm": 15.10079444651028,
+            "sample_count": 83264
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 21,
+              "forecast_event_count": 41,
+              "hits": 20,
+              "metrics": {
+                "CSI": 0.011926058437686345,
+                "ETS": 0.011445380127135989,
+                "FAR": 0.5121951219512195,
+                "POD": 0.012077294685990338
+              },
+              "misses": 1636,
+              "observed_event_count": 1656,
+              "sample_count": 83264,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 440,
+              "observed_event_count": 440,
+              "sample_count": 83264,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "72": {
+          "continuous": {
+            "bias_mm": 0.9195775991690086,
+            "mae_mm": 7.514911285306572,
+            "rmse_mm": 15.026907096237123,
+            "sample_count": 84565
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 12,
+              "forecast_event_count": 33,
+              "hits": 21,
+              "metrics": {
+                "CSI": 0.011608623548922056,
+                "ETS": 0.01122533121895607,
+                "FAR": 0.36363636363636365,
+                "POD": 0.011686143572621035
+              },
+              "misses": 1776,
+              "observed_event_count": 1797,
+              "sample_count": 84565,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 3,
+              "forecast_event_count": 3,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": -3.524351910194845e-05,
+                "FAR": 1.0,
+                "POD": 0.0
+              },
+              "misses": 453,
+              "observed_event_count": 453,
+              "sample_count": 84565,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "overall": {
+        "continuous": {
+          "bias_mm": 1.1207254164969338,
+          "mae_mm": 7.310690839684794,
+          "rmse_mm": 14.74698440548763,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 248,
+            "forecast_event_count": 396,
+            "hits": 148,
+            "metrics": {
+              "CSI": 0.022165643252957914,
+              "ETS": 0.021022557261580567,
+              "FAR": 0.6262626262626263,
+              "POD": 0.023020687509721575
+            },
+            "misses": 6281,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 22,
+            "forecast_event_count": 31,
+            "hits": 9,
+            "metrics": {
+              "CSI": 0.005415162454873646,
+              "ETS": 0.005321986034261468,
+              "FAR": 0.7096774193548387,
+              "POD": 0.00548780487804878
+            },
+            "misses": 1631,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          }
+        }
+      },
+      "same_case_count": 251,
+      "same_cell_count": 326551
+    },
+    "M2_GLOBAL_XGBOOST": {
+      "by_forecast_only_regime": {
+        "0": {
+          "continuous": {
+            "bias_mm": -0.8030522992613562,
+            "mae_mm": 6.295408350710844,
+            "rmse_mm": 14.459976788897446,
+            "sample_count": 101478
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 4,
+              "forecast_event_count": 16,
+              "hits": 12,
+              "metrics": {
+                "CSI": 0.005870841487279843,
+                "ETS": 0.00571437961677238,
+                "FAR": 0.25,
+                "POD": 0.0058823529411764705
+              },
+              "misses": 2028,
+              "observed_event_count": 2040,
+              "sample_count": 101478,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 591,
+              "observed_event_count": 591,
+              "sample_count": 101478,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "1": {
+          "continuous": {
+            "bias_mm": 0.3994252354873812,
+            "mae_mm": 3.5730363155421214,
+            "rmse_mm": 7.690125754917408,
+            "sample_count": 114488
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 9,
+              "forecast_event_count": 15,
+              "hits": 6,
+              "metrics": {
+                "CSI": 0.016042780748663103,
+                "ETS": 0.015916950717605016,
+                "FAR": 0.6,
+                "POD": 0.01643835616438356
+              },
+              "misses": 359,
+              "observed_event_count": 365,
+              "sample_count": 114488,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 74,
+              "observed_event_count": 74,
+              "sample_count": 114488,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "2": {
+          "continuous": {
+            "bias_mm": -1.5914964115604298,
+            "mae_mm": 8.349765732085753,
+            "rmse_mm": 18.114314204565108,
+            "sample_count": 110585
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 454,
+              "forecast_event_count": 702,
+              "hits": 248,
+              "metrics": {
+                "CSI": 0.055381866904868245,
+                "ETS": 0.04996241257538653,
+                "FAR": 0.6467236467236467,
+                "POD": 0.061630218687872766
+              },
+              "misses": 3776,
+              "observed_event_count": 4024,
+              "sample_count": 110585,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 975,
+              "observed_event_count": 975,
+              "sample_count": 110585,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "by_lead_hours": {
+        "24": {
+          "continuous": {
+            "bias_mm": -0.4820244089978748,
+            "mae_mm": 5.906912536620025,
+            "rmse_mm": 13.509182372379428,
+            "sample_count": 158722
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 88,
+              "forecast_event_count": 148,
+              "hits": 60,
+              "metrics": {
+                "CSI": 0.0195822454308094,
+                "ETS": 0.01869350809337608,
+                "FAR": 0.5945945945945946,
+                "POD": 0.020161290322580645
+              },
+              "misses": 2916,
+              "observed_event_count": 2976,
+              "sample_count": 158722,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 747,
+              "observed_event_count": 747,
+              "sample_count": 158722,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "48": {
+          "continuous": {
+            "bias_mm": -0.741301411836186,
+            "mae_mm": 6.059484745354135,
+            "rmse_mm": 14.30924446157494,
+            "sample_count": 83264
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 189,
+              "forecast_event_count": 298,
+              "hits": 109,
+              "metrics": {
+                "CSI": 0.05907859078590786,
+                "ETS": 0.05604628037068348,
+                "FAR": 0.6342281879194631,
+                "POD": 0.06582125603864734
+              },
+              "misses": 1547,
+              "observed_event_count": 1656,
+              "sample_count": 83264,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 440,
+              "observed_event_count": 440,
+              "sample_count": 83264,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "72": {
+          "continuous": {
+            "bias_mm": -0.8694705437980947,
+            "mae_mm": 6.257673556617443,
+            "rmse_mm": 14.694377844322311,
+            "sample_count": 84565
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 190,
+              "forecast_event_count": 287,
+              "hits": 97,
+              "metrics": {
+                "CSI": 0.04881731253145445,
+                "ETS": 0.045888844907399175,
+                "FAR": 0.662020905923345,
+                "POD": 0.053978853644963826
+              },
+              "misses": 1700,
+              "observed_event_count": 1797,
+              "sample_count": 84565,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 453,
+              "observed_event_count": 453,
+              "sample_count": 84565,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "overall": {
+        "continuous": {
+          "bias_mm": -0.6484695362634773,
+          "mae_mm": 6.036649937651162,
+          "rmse_mm": 14.029586220359201,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 467,
+            "forecast_event_count": 733,
+            "hits": 266,
+            "metrics": {
+              "CSI": 0.03857308584686775,
+              "ETS": 0.03655692494242567,
+              "FAR": 0.6371077762619373,
+              "POD": 0.04137501944314823
+            },
+            "misses": 6163,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "metrics": {
+              "CSI": 0.0,
+              "ETS": 0.0,
+              "FAR": null,
+              "POD": 0.0
+            },
+            "misses": 1640,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {
+              "FAR": "no forecast events"
+            },
+            "undefined_reason": null
+          }
+        }
+      },
+      "same_case_count": 251,
+      "same_cell_count": 326551
+    },
+    "M3_HARD_REGIME_XGBOOST": {
+      "by_forecast_only_regime": {
+        "0": {
+          "continuous": {
+            "bias_mm": -1.4550585766570356,
+            "mae_mm": 6.261154913299602,
+            "rmse_mm": 14.949053279761477,
+            "sample_count": 101478
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 2040,
+              "observed_event_count": 2040,
+              "sample_count": 101478,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 591,
+              "observed_event_count": 591,
+              "sample_count": 101478,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "1": {
+          "continuous": {
+            "bias_mm": -0.12426595994358282,
+            "mae_mm": 3.422981319023419,
+            "rmse_mm": 7.9297122203818065,
+            "sample_count": 114488
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 365,
+              "observed_event_count": 365,
+              "sample_count": 114488,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 74,
+              "observed_event_count": 74,
+              "sample_count": 114488,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "2": {
+          "continuous": {
+            "bias_mm": -1.6920053677497562,
+            "mae_mm": 8.363741097315454,
+            "rmse_mm": 18.207717742004732,
+            "sample_count": 110585
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 135,
+              "forecast_event_count": 243,
+              "hits": 108,
+              "metrics": {
+                "CSI": 0.025967780716518393,
+                "ETS": 0.023892500468841397,
+                "FAR": 0.5555555555555556,
+                "POD": 0.0268389662027833
+              },
+              "misses": 3916,
+              "observed_event_count": 4024,
+              "sample_count": 110585,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 975,
+              "observed_event_count": 975,
+              "sample_count": 110585,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "by_lead_hours": {
+        "24": {
+          "continuous": {
+            "bias_mm": -0.9475498669849853,
+            "mae_mm": 5.8981728593605345,
+            "rmse_mm": 13.918008276047209,
+            "sample_count": 158722
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 15,
+              "forecast_event_count": 22,
+              "hits": 7,
+              "metrics": {
+                "CSI": 0.002340354396522902,
+                "ETS": 0.002202746178240163,
+                "FAR": 0.6818181818181818,
+                "POD": 0.0023521505376344087
+              },
+              "misses": 2969,
+              "observed_event_count": 2976,
+              "sample_count": 158722,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 747,
+              "observed_event_count": 747,
+              "sample_count": 158722,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "48": {
+          "continuous": {
+            "bias_mm": -1.1714263043610567,
+            "mae_mm": 5.960823412370722,
+            "rmse_mm": 14.44195343678439,
+            "sample_count": 83264
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 38,
+              "forecast_event_count": 78,
+              "hits": 40,
+              "metrics": {
+                "CSI": 0.023612750885478158,
+                "ETS": 0.02271778959371345,
+                "FAR": 0.48717948717948717,
+                "POD": 0.024154589371980676
+              },
+              "misses": 1616,
+              "observed_event_count": 1656,
+              "sample_count": 83264,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 440,
+              "observed_event_count": 440,
+              "sample_count": 83264,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "72": {
+          "continuous": {
+            "bias_mm": -1.1950471147959616,
+            "mae_mm": 6.145240697685107,
+            "rmse_mm": 14.760927003810895,
+            "sample_count": 84565
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 82,
+              "forecast_event_count": 143,
+              "hits": 61,
+              "metrics": {
+                "CSI": 0.032464076636508785,
+                "ETS": 0.03089683235314749,
+                "FAR": 0.5734265734265734,
+                "POD": 0.03394546466332777
+              },
+              "misses": 1736,
+              "observed_event_count": 1797,
+              "sample_count": 84565,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 453,
+              "observed_event_count": 453,
+              "sample_count": 84565,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "overall": {
+        "continuous": {
+          "bias_mm": -1.0687268116056308,
+          "mae_mm": 5.978129213479058,
+          "rmse_mm": 14.274449975053086,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 135,
+            "forecast_event_count": 243,
+            "hits": 108,
+            "metrics": {
+              "CSI": 0.016453382084095063,
+              "ETS": 0.01573601457407822,
+              "FAR": 0.5555555555555556,
+              "POD": 0.01679888007466169
+            },
+            "misses": 6321,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "metrics": {
+              "CSI": 0.0,
+              "ETS": 0.0,
+              "FAR": null,
+              "POD": 0.0
+            },
+            "misses": 1640,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {
+              "FAR": "no forecast events"
+            },
+            "undefined_reason": null
+          }
+        }
+      },
+      "same_case_count": 251,
+      "same_cell_count": 326551
+    },
+    "M4_SOFT_REGIME_MOE": {
+      "by_forecast_only_regime": {
+        "0": {
+          "continuous": {
+            "bias_mm": -1.4275416135774015,
+            "mae_mm": 6.249515205588754,
+            "rmse_mm": 14.895600905506557,
+            "sample_count": 101478
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 2040,
+              "observed_event_count": 2040,
+              "sample_count": 101478,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 591,
+              "observed_event_count": 591,
+              "sample_count": 101478,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "1": {
+          "continuous": {
+            "bias_mm": -0.1056976164413107,
+            "mae_mm": 3.4075959025393683,
+            "rmse_mm": 7.879611323440808,
+            "sample_count": 114488
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 365,
+              "observed_event_count": 365,
+              "sample_count": 114488,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 74,
+              "observed_event_count": 74,
+              "sample_count": 114488,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "2": {
+          "continuous": {
+            "bias_mm": -1.705373900631547,
+            "mae_mm": 8.341298383983968,
+            "rmse_mm": 18.18991981396151,
+            "sample_count": 110585
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 136,
+              "forecast_event_count": 243,
+              "hits": 107,
+              "metrics": {
+                "CSI": 0.025721153846153845,
+                "ETS": 0.023645848188100754,
+                "FAR": 0.5596707818930041,
+                "POD": 0.026590457256461232
+              },
+              "misses": 3917,
+              "observed_event_count": 4024,
+              "sample_count": 110585,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 975,
+              "observed_event_count": 975,
+              "sample_count": 110585,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "by_lead_hours": {
+        "24": {
+          "continuous": {
+            "bias_mm": -0.949034438544091,
+            "mae_mm": 5.87307068249511,
+            "rmse_mm": 13.865799405719924,
+            "sample_count": 158722
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 14,
+              "forecast_event_count": 21,
+              "hits": 7,
+              "metrics": {
+                "CSI": 0.0023411371237458192,
+                "ETS": 0.0022097408147114294,
+                "FAR": 0.6666666666666666,
+                "POD": 0.0023521505376344087
+              },
+              "misses": 2969,
+              "observed_event_count": 2976,
+              "sample_count": 158722,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 747,
+              "observed_event_count": 747,
+              "sample_count": 158722,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "48": {
+          "continuous": {
+            "bias_mm": -1.1553743355132366,
+            "mae_mm": 5.949372838395202,
+            "rmse_mm": 14.431406720526699,
+            "sample_count": 83264
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 37,
+              "forecast_event_count": 76,
+              "hits": 39,
+              "metrics": {
+                "CSI": 0.02303603071470762,
+                "ETS": 0.022163006761938022,
+                "FAR": 0.4868421052631579,
+                "POD": 0.02355072463768116
+              },
+              "misses": 1617,
+              "observed_event_count": 1656,
+              "sample_count": 83264,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 440,
+              "observed_event_count": 440,
+              "sample_count": 83264,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        },
+        "72": {
+          "continuous": {
+            "bias_mm": -1.1673885951435061,
+            "mae_mm": 6.139484664251203,
+            "rmse_mm": 14.733418319650395,
+            "sample_count": 84565
+          },
+          "thresholds": {
+            "heavy_64_5": {
+              "false_alarms": 85,
+              "forecast_event_count": 146,
+              "hits": 61,
+              "metrics": {
+                "CSI": 0.032412327311370885,
+                "ETS": 0.030814618923070858,
+                "FAR": 0.5821917808219178,
+                "POD": 0.03394546466332777
+              },
+              "misses": 1736,
+              "observed_event_count": 1797,
+              "sample_count": 84565,
+              "threshold_mm_24h": 64.5,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "very_heavy_115_6": {
+              "false_alarms": 0,
+              "forecast_event_count": 0,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": 0.0,
+                "FAR": null,
+                "POD": 0.0
+              },
+              "misses": 453,
+              "observed_event_count": 453,
+              "sample_count": 84565,
+              "threshold_mm_24h": 115.6,
+              "undefined_metric_reasons": {
+                "FAR": "no forecast events"
+              },
+              "undefined_reason": null
+            }
+          }
+        }
+      },
+      "overall": {
+        "continuous": {
+          "bias_mm": -1.0581928990420484,
+          "mae_mm": 5.961517880868623,
+          "rmse_mm": 14.239631715690805,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 136,
+            "forecast_event_count": 243,
+            "hits": 107,
+            "metrics": {
+              "CSI": 0.016298552932216298,
+              "ETS": 0.015581181863176077,
+              "FAR": 0.5596707818930041,
+              "POD": 0.01664333488878519
+            },
+            "misses": 6322,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "metrics": {
+              "CSI": 0.0,
+              "ETS": 0.0,
+              "FAR": null,
+              "POD": 0.0
+            },
+            "misses": 1640,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {
+              "FAR": "no forecast events"
+            },
+            "undefined_reason": null
+          }
+        }
+      },
+      "same_case_count": 251,
+      "same_cell_count": 326551
+    }
+  },
+  "xgboost_device": "cpu",
+  "xgboost_parameters": {
+    "colsample_bytree": 0.9,
+    "early_stopping_rounds": 35,
+    "learning_rate": 0.05,
+    "max_bin": 256,
+    "max_depth": 6,
+    "min_child_weight": 5,
+    "n_jobs": 12,
+    "random_state": 26080,
+    "reg_lambda": 2.0,
+    "subsample": 0.9
+  },
+  "xgboost_target_strategy_candidates": {
+    "direct": {
+      "best_iteration": 55,
+      "validation": {
+        "continuous": {
+          "bias_mm": 0.7830117365456809,
+          "mae_mm": 6.746743806419889,
+          "rmse_mm": 14.041102431479887,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 740,
+            "forecast_event_count": 1196,
+            "hits": 456,
+            "metrics": {
+              "CSI": 0.06360719765657692,
+              "ETS": 0.06052151082100543,
+              "FAR": 0.6187290969899666,
+              "POD": 0.07092860475968268
+            },
+            "misses": 5973,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "metrics": {
+              "CSI": 0.0,
+              "ETS": 0.0,
+              "FAR": null,
+              "POD": 0.0
+            },
+            "misses": 1640,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {
+              "FAR": "no forecast events"
+            },
+            "undefined_reason": null
+          }
+        }
+      }
+    },
+    "log1p": {
+      "best_iteration": 71,
+      "validation": {
+        "continuous": {
+          "bias_mm": -3.127098329582584,
+          "mae_mm": 5.479598220109974,
+          "rmse_mm": 14.914838134149987,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "metrics": {
+              "CSI": 0.0,
+              "ETS": 0.0,
+              "FAR": null,
+              "POD": 0.0
+            },
+            "misses": 6429,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {
+              "FAR": "no forecast events"
+            },
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "metrics": {
+              "CSI": 0.0,
+              "ETS": 0.0,
+              "FAR": null,
+              "POD": 0.0
+            },
+            "misses": 1640,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {
+              "FAR": "no forecast events"
+            },
+            "undefined_reason": null
+          }
+        }
+      }
+    },
+    "tweedie": {
+      "best_iteration": 80,
+      "validation": {
+        "continuous": {
+          "bias_mm": -0.6484695362634773,
+          "mae_mm": 6.036649937651162,
+          "rmse_mm": 14.029586220359201,
+          "sample_count": 326551
+        },
+        "thresholds": {
+          "heavy_64_5": {
+            "false_alarms": 467,
+            "forecast_event_count": 733,
+            "hits": 266,
+            "metrics": {
+              "CSI": 0.03857308584686775,
+              "ETS": 0.03655692494242567,
+              "FAR": 0.6371077762619373,
+              "POD": 0.04137501944314823
+            },
+            "misses": 6163,
+            "observed_event_count": 6429,
+            "sample_count": 326551,
+            "threshold_mm_24h": 64.5,
+            "undefined_metric_reasons": {},
+            "undefined_reason": null
+          },
+          "very_heavy_115_6": {
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "metrics": {
+              "CSI": 0.0,
+              "ETS": 0.0,
+              "FAR": null,
+              "POD": 0.0
+            },
+            "misses": 1640,
+            "observed_event_count": 1640,
+            "sample_count": 326551,
+            "threshold_mm_24h": 115.6,
+            "undefined_metric_reasons": {
+              "FAR": "no forecast events"
+            },
+            "undefined_reason": null
+          }
+        }
+      }
+    }
+  }
+}

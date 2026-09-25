@@ -1,0 +1,936 @@
+{
+  "atmospheric_fields": [
+    "u850",
+    "v850",
+    "q700",
+    "z500",
+    "mslp",
+    "pwat"
+  ],
+  "child_manifest_hashes": {
+    "derived:2017080100": "5c1be3249f137653bf280b7cdd3012ee6b819e03398bfc8b4ad35bb6a20c59e4",
+    "derived:2017080200": "87b3e4baedc185bb1d78437cf949971a03880bbd6bdd151b350ab312f5dc3d01",
+    "derived:2017080300": "672e27279e034f13a50254b72fb23ba6f339fcb905308882104c38e9b4cdda40",
+    "derived:2017080400": "004f0e789ecf90e63d64918114e8a8e4aac7088a0738136bab3d01823e83ec00",
+    "derived:2017080500": "49a779e0cb32f35ea6757ac64ebf78c0ca5703dd7eb238e1a8728a6b625d3106",
+    "derived:2017080600": "099a041b2bfb251100cbcc37749125925cb1d4f75f31a7200faef8b3deb8b10c",
+    "derived:2017080700": "5e3eb4888ca5d3f3de683a16f69fb953076463d4b6a44601faa2739cd7589ccd",
+    "derived:2017080800": "9619f6cf670f6331112f9943980d642d23da299d92e14708b2907cb24516a47b",
+    "derived:2017080900": "36d0ecf4a7706c518e968eac80c185ef06fbc4de4d3c017e237332a33271721c",
+    "derived:2017081000": "003a6a996f2b014aec845a914111278751fffabecc4cb67058b8eb311d239bf4",
+    "derived:2017081100": "13cdcaa8e48e3f2a6ddc0cb9ea4568edf7abcf14f9262403f4adfad79d4e6dbf",
+    "derived:2017081200": "43e3f8ecfd83e3b53ac5079542cc1baf3653e152a43b1a888cd02c341436a574",
+    "derived:2017081300": "a600ae72d7563f80f06afb474db30708d92dede39874c359c8656861466fe1c8",
+    "derived:2017081400": "9dd03264d646b7807df3616bd386aa9bec421401d592c9100313eb854b078ba8",
+    "derived:2017081500": "7477142dd7720a7a096088d2d8c96ed190a0d24e91ebe108cee06c3eac639588",
+    "derived:2017081600": "2adc56414855c039a24990fa86a65c65de9a897b8ffb3672ac0d4cc1f99b4466",
+    "derived:2017081700": "d4fea015bba733a027156f501e3eba15eb831cd5154f4eab12cd16a7133141e3",
+    "derived:2017081800": "da88837ac4779b931b3d78b42e2b570eae6a65393ef58f6d18729efe10727ca3",
+    "derived:2017081900": "2045d9c71d11197c9f84a4c027b36eda86928437970bbcb8f052d33152d7a989",
+    "derived:2017082000": "c9cb0388edd730a31951b0300b9e216156c77c1faeb469cada8cff1b4b69e323",
+    "derived:2017082100": "9c15d30503691abfc6994c2701c98c9885e5ce38d4a39f3e8fccc2e1afdd2bc3",
+    "derived:2017082200": "34f4fd562cfbf194bbe9825e10bf11c4c1d5d50ed36896a42de17612240db777",
+    "derived:2017082300": "077df5b2997f2713a12d04c61d71718dc7ada38e8c9e9f29fce022ac500ec847",
+    "derived:2017082400": "394202595205533d8f103771b46e4691172a7a220936e8eb07ae2f55795029f7",
+    "derived:2017082500": "994c38364f7bddfec3b45a6bd329205b7d37c7de2317d21edb5ea3ed74ea913f",
+    "derived:2017082600": "68f28577cfcc65c5d3bfb1121f77520b3fbc27131662ed9dc500523ffed346f6",
+    "derived:2017082700": "4fceea33b90eba372e31f261f0cfb30e91b1e1c37dce730601d1d72447081fc9",
+    "derived:2017082800": "b17bd4d61330b5b1e656754bbb4d6bfe8cb93ec43218fe20dd0133ab2d7d9f74",
+    "derived:2017082900": "db5abf903a1fc00c1888743b723a255bc218d1f064d86a57989844248894b2a1",
+    "derived:2017083000": "cab0ff4d4f51b59a312653f80d720bee0d6be4ae1db3c6a77e7e6e5b03b3960c",
+    "derived:2017083100": "a6b6c27039104821bf00046fa84820af5a66968ffea67ee77a17f209c5e31eb9",
+    "source:2017080100": "040d1f375b38185cb3709a75e6bf999068760bc4bfd84aefd7e6fd34eb7039f8",
+    "source:2017080200": "0d384d9bc0d4f077acc1d3f039c2184ebadd9c8841e78379db2c0e0867aac8db",
+    "source:2017080300": "4ea5fce10904030cb4f1c5b9a4e0f720f25a8e9111d9789fb86e59bd3dfb489d",
+    "source:2017080400": "fbb1f873149319d36aa87cdd365032203c12122c7cd164254742130ad0c30d06",
+    "source:2017080500": "952505c4abfe65c95bcf29a75e5c37ec23e9389ea3a51d9c9f32e772dc5cfa56",
+    "source:2017080600": "e9a3c511ef3e27b70cc217aa8e9af8d65686338c970f70409a907424975e1da6",
+    "source:2017080700": "d0c5747d932bbad6418bf51406dfefbf19c841716a99ecee40cb3a1c9cc9557d",
+    "source:2017080800": "b9a6487dc2193948dd247fd4c0f34ae65c5d339271feba9fa4805e5536684cb8",
+    "source:2017080900": "4b4875610e49c3a44446e90ac0989f7e8e568d84b4b9f07810c6c9435e4923e3",
+    "source:2017081000": "9f4461c0d63808d2ac9783f86f248b17a209588999f9029fece622ce543bb69d",
+    "source:2017081100": "9074402794ff920c794c8c918b38fd18135a5e78c4094574e3b5a5ab7bc4ee77",
+    "source:2017081200": "b3913f88ba0ad1ff13eaf2390f0d56ae833d2345c3b143679f3df777c2bb4ade",
+    "source:2017081300": "a4febbdc728f58a84bb9b3227df2edd43b8b82cbeea497e3ba2f22bbfc1adf54",
+    "source:2017081400": "6de50ca8acbe9b7d5303f2c712e8dfe11d846ae388e5977121a4244806a8dd04",
+    "source:2017081500": "2da2c3c207511ddfc650dc0abeff2440299d2d5c12e70a982e0925a95858b75f",
+    "source:2017081600": "09daae3ee619673837a7b017414ddd289e2650a653dd52c70a6066c36c3262ce",
+    "source:2017081700": "5f68c2d49fb1de0c3892f7e65eaa81966a98cd4db4b24c0be82d7ba66afa3700",
+    "source:2017081800": "401f5297d01a3ef3ea01ab507aed803c28b160f089f38fb981f3f2520c48a443",
+    "source:2017081900": "a539eec6c9b786c00f51c1509226f7caf2d465b059bc071ed4ef8ab86e5c244a",
+    "source:2017082000": "dbfc92a32fc5f0f453a0f09dce6e51cda381455414b6c775cf81c110782c8605",
+    "source:2017082100": "619f079f46e5a62bf7864ad670e5c74e1a70421088a919b114b9cf417b858cb9",
+    "source:2017082200": "66b8f794a9c408118d3a0a468bbc91379773c8de55cbde860486178d631df5f0",
+    "source:2017082300": "b91ed689bb28252b2350303a4429c4ebd34025035259ff774ab61bbdc90ac1a2",
+    "source:2017082400": "2f3b5de33399568bbefe3b1235f9ab4e8b36e284ad61a690b3bf92f761265c42",
+    "source:2017082500": "3bfc6503e2576252bd4c8c4e2c9e979e71d7868f104962b1b4b86620d16b3344",
+    "source:2017082600": "93a02c84905cfee5d042849eb81ce6e6fa76a774dce0b960a05b3cbe1abf7797",
+    "source:2017082700": "1522babd1731eca35cacd3c2c31d1bc38c2e14df787760bbfae5a65f32b7d773",
+    "source:2017082800": "4c61d45d060c1b09043c301de9e8fc249a2b1b249e96e1817c29e87daf3705a5",
+    "source:2017082900": "5df0cfb05b3d827bc832ce456c7daba709bc93ba72683982c04bc79f672799f3",
+    "source:2017083000": "b71747c07f67ffe795fd5cc0e0ef5f47f82e49da54b1efcbc99200b316693609",
+    "source:2017083100": "c0c91679da3c519451c970a7c4d5628c5c9a5984608da86f1f2bc35937db997e"
+  },
+  "collection_id": "phase2a-2017-08-v2",
+  "context_domain": {
+    "east": 95.0,
+    "north": 30.0,
+    "resolution_degrees": 0.5,
+    "south": 5.0,
+    "west": 55.0
+  },
+  "dataset_version": "varshasetu-gefs12r-imd025-jjas-2000-2019-v2",
+  "ensemble_members": [
+    "c00",
+    "p01",
+    "p02",
+    "p03",
+    "p04"
+  ],
+  "expected_initializations": 31,
+  "failed_cases": [
+    {
+      "initialization": "2017080100",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8517244,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080200",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7655404,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080300",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8108763,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080300",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7656959,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080400",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7988864,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080400",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7253042,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080500",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8442182,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080500",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7498241,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080500",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7297237,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080600",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8942366,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080600",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8153101,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080700",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 9617205,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080700",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7813131,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080700",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7794325,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080700",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7794325,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080700",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7834788,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080700",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7935441,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080700",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7935441,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080800",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 9370268,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080800",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9370268,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080800",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8210824,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080800",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8440776,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080800",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9132987,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080900",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8945780,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080900",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7807607,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080900",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7585124,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017080900",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8326039,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081000",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8562555,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081000",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8562555,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081000",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8034470,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081000",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7826149,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081000",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8529824,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081100",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8798172,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081100",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8798172,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081100",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7617289,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081100",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7821872,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081200",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8947460,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081200",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 9524679,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081200",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9524679,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081200",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7592493,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081200",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7531175,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081200",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7531175,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081300",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9087406,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081300",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8003957,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081300",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8406083,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081400",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7545261,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081400",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8337304,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081400",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7594119,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081600",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8920528,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081800",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8796783,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081800",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8796783,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081800",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8054023,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081800",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7468781,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081800",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7452125,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017081900",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8743539,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082000",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8993238,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082000",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9379321,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082100",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7240761,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082200",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7454273,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082200",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8108420,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082200",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8108420,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082300",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8818688,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082300",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7892277,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082300",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7892277,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082300",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7859212,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082400",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 9479750,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082400",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9479750,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082400",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8381139,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082500",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9005849,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082500",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8518845,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082500",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8518845,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082500",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7221733,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082500",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 7262498,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082600",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8105480,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082600",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8906997,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082700",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8862397,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082700",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8524308,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082800",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 9120763,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082800",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8304962,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082800",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8304962,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082800",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8108602,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082900",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8808498,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017082900",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 7043306,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017083000",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8333561,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017083100",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 27--30",
+      "source_chunk_bytes_shared": 8624089,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2017083100",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: negative difference exceeds packing bound for 51--54",
+      "source_chunk_bytes_shared": 8624089,
+      "status": "FAIL"
+    }
+  ],
+  "forecast_provider": "NOAA/NCEP GEFSv12 Reforecast",
+  "network_workers": 6,
+  "observation_provider": "India Meteorological Department 0.25 degree Daily Gridded Rainfall",
+  "observed_initializations": 31,
+  "period": {
+    "end": "2017-08-31",
+    "month": "2017-08",
+    "start": "2017-08-01"
+  },
+  "processed_bytes": {
+    "daily_atmospheric_context": 9307068,
+    "daily_manifests": 9806786,
+    "daily_rainfall_pairs": 5644976,
+    "qc_csv_tables": 54695,
+    "regridding_weights": 57816,
+    "storage_evaluation_netcdf": 14805712,
+    "storage_evaluation_zarr": 7661547,
+    "total": 47338600
+  },
+  "processing_code_hashes": {
+    "backend/app/data/accumulation.py": "612275dde26d29d90f6fa476d548fed12f613ce33decd9a42c5e7c469105915e",
+    "backend/app/data/cache.py": "ba85e6f61bd3c31c0cb77b2978b31c0d5f80ec2d342e593eea20155531b65391",
+    "backend/app/data/monthly_models.py": "f3d997f7f408f1d1ee0c03909a6cf9ceab04451bc0dc287ad54ab4af50c47cae",
+    "backend/app/data/monthly_qc.py": "f8fd1d4bf7d8227f05abc748c53f9610da6945bc111d821dbda1290595a866a2",
+    "backend/app/data/regridding.py": "71b5099824a5da35eb9bd86c75bc28d84e5a4a9dae97cd8bbcbfa328f4f72964",
+    "backend/app/data_sources/imd_rainfall.py": "074930a582daa8cf2fc5ba0013b7add256088275155f480d0ab2ef895ea99c72",
+    "backend/app/data_sources/noaa_gefs_monthly.py": "e1bfa6252f4ad2529bb3bc3525f2417ef4943afad77b5933573181340686f6fc",
+    "scripts/data/acquire_monthly_pilot.py": "3a52b3fcf21ad95e8414474ed8bd0534c63a6b61841f70afbd0ed3cb60101955"
+  },
+  "qc_summary": {
+    "conservation": {
+      "count": 379,
+      "failures": 0,
+      "maximum": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "tolerance": 1e-10
+    },
+    "event_coverage": {
+      "days_with_heavy_cell": 25,
+      "days_with_very_heavy_cell": 17,
+      "district_counts": "not_computed:no_authoritative_district_geometry",
+      "maximum_observed_rainfall_mm": 264.4509582519531,
+      "total_heavy_grid_cell_events": 592,
+      "total_very_heavy_grid_cell_events": 109,
+      "unique_observation_days": 33
+    },
+    "initialization_status_counts": {
+      "BLOCKED": 0,
+      "FAIL": 0,
+      "PARTIAL": 29,
+      "PASS": 2
+    },
+    "predictor_expected": 558,
+    "predictor_statistics": {
+      "mslp": {
+        "initial_warning_bounds": [
+          80000.0,
+          110000.0
+        ],
+        "max": 102241.4921875,
+        "mean": 100485.96515352873,
+        "min": 98857.359375,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "pwat": {
+        "initial_warning_bounds": [
+          0.0,
+          100.0
+        ],
+        "max": 81.80000305175781,
+        "mean": 49.45673908574128,
+        "min": 2.299999952316284,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "q700": {
+        "initial_warning_bounds": [
+          0.0,
+          0.1
+        ],
+        "max": 0.01778268627822399,
+        "mean": 0.007791593848746924,
+        "min": 0.0003399998531676829,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "u850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 26.07917022705078,
+        "mean": 6.867694842312074,
+        "min": -21.046171188354492,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "v850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 20.065391540527344,
+        "mean": 0.6787716710983464,
+        "min": -25.750732421875,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "z500": {
+        "initial_warning_bounds": [
+          4000.0,
+          7000.0
+        ],
+        "max": 5900.4580078125,
+        "mean": 5844.061977613807,
+        "min": 5762.892578125,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      }
+    },
+    "predictor_valid": 558,
+    "rainfall_complete": 379,
+    "rainfall_expected": 465,
+    "weight_sha256": "37a3fc3244c0ce6c41bf6c580de8748194e7e1dc839e73e0e17285530e245523"
+  },
+  "rainfall_products": [
+    "day1_24h",
+    "day2_24h",
+    "day3_24h"
+  ],
+  "reconstruction_method": "canonical_v2",
+  "source_bytes": {
+    "atmospheric_messages": 323859661,
+    "cache_excluding_receipts": 1573817287,
+    "cache_receipts": 315394,
+    "imd_existing_source": 25431832,
+    "imd_incremental_network": 0,
+    "indexes": 8140759,
+    "precipitation_messages": 1241816867
+  },
+  "storage_format": {
+    "authoritative_candidate": "zarr",
+    "netcdf_library": "scipy-1.16.1",
+    "note": "Volatile read timings are retained only in the execution report.",
+    "zarr_version": "3.2.1"
+  },
+  "target_domain": {
+    "east": 80.0,
+    "north": 22.0,
+    "south": 10.0,
+    "west": 68.0
+  },
+  "training_eligible": false
+}

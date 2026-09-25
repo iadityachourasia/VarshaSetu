@@ -1,0 +1,119 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - link "Skip to content" [ref=f8e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - complementary [ref=f8e4]:
+      - link "VarshaSetu overview" [ref=f8e5] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=f8e6]: V
+      - navigation "Primary" [ref=f8e7]:
+        - link "Overview" [ref=f8e8] [cursor=pointer]:
+          - /url: /
+        - link "Forecast Explorer" [ref=f8e12] [cursor=pointer]:
+          - /url: /forecast
+        - link "Extreme Rain" [ref=f8e16] [cursor=pointer]:
+          - /url: /extremes
+        - link "District Intelligence" [ref=f8e19] [cursor=pointer]:
+          - /url: /districts
+        - link "Verification" [ref=f8e24] [cursor=pointer]:
+          - /url: /verification
+        - link "Methodology" [ref=f8e27] [cursor=pointer]:
+          - /url: /methodology
+    - generic [ref=f8e30]:
+      - banner [ref=f8e31]:
+        - generic [ref=f8e32]:
+          - generic [ref=f8e33]: VARSHASetu / SCIENTIFIC WORKSPACE
+          - generic [ref=f8e34]: 2019 JJAS historical test · read-only artifacts
+        - generic [ref=f8e35]: Prototype scientific ready
+      - main [ref=f8e37]:
+        - generic [ref=f8e38]:
+          - generic [ref=f8e39]:
+            - generic [ref=f8e40]:
+              - heading "Methodology" [level=1] [ref=f8e41]
+              - paragraph [ref=f8e42]: From historical NWP forecast to verifiable rainfall intelligence.
+            - generic [ref=f8e43]: Historical scientific prototype · not operational
+          - generic [ref=f8e44]:
+            - generic [ref=f8e45]:
+              - text: SCIENTIFIC CHAIN
+              - heading "Every output has a documented lineage." [level=2] [ref=f8e46]
+              - paragraph [ref=f8e47]: VarshaSetu separates forecast-time inputs from observation-based verification. The interface reads frozen artifacts; it never trains a model or decodes GRIB during a request.
+            - generic [ref=f8e48]:
+              - generic [ref=f8e52]: Historical prototype artifacts verified
+              - strong [ref=f8e53]: 255 forecast cases · 188 intersecting districts
+              - generic [ref=f8e54]: "Readiness: prototype scientific ready; not operational."
+          - generic [ref=f8e55]:
+            - heading "Scientific pipeline" [level=2] [ref=f8e56]
+            - paragraph [ref=f8e57]: Inputs, transformation, product, then verification
+          - list [ref=f8e58]:
+            - listitem [ref=f8e59]:
+              - generic [ref=f8e60]: "01"
+              - generic [ref=f8e61]:
+                - strong [ref=f8e62]: NOAA GEFSv12 Reforecast
+                - paragraph [ref=f8e63]: Historical numerical weather prediction input; not live ingestion.
+            - listitem [ref=f8e66]:
+              - generic [ref=f8e67]: "02"
+              - generic [ref=f8e68]:
+                - strong [ref=f8e69]: Canonical 24-hour rainfall
+                - paragraph [ref=f8e70]: Forecast-accumulation reconstruction on the validated target grid.
+            - listitem [ref=f8e73]:
+              - generic [ref=f8e74]: "03"
+              - generic [ref=f8e75]:
+                - strong [ref=f8e76]: Forecast-only regime analysis
+                - paragraph [ref=f8e77]: Active, Break / Weak, and Low / Depression Influenced probabilities.
+            - listitem [ref=f8e80]:
+              - generic [ref=f8e81]: "04"
+              - generic [ref=f8e82]:
+                - strong [ref=f8e83]: AI rainfall post-processing
+                - paragraph [ref=f8e84]: Frozen M2 Global XGBoost correction selected without 2019 tuning.
+            - listitem [ref=f8e87]:
+              - generic [ref=f8e88]: "05"
+              - generic [ref=f8e89]:
+                - strong [ref=f8e90]: Extreme-event probabilities
+                - paragraph [ref=f8e91]: Separate calibrated Heavy and Very Heavy event models.
+            - listitem [ref=f8e94]:
+              - generic [ref=f8e95]: "06"
+              - generic [ref=f8e96]:
+                - strong [ref=f8e97]: District aggregation
+                - paragraph [ref=f8e98]: Grid-cell polygon overlap weights for intersecting districts.
+            - listitem [ref=f8e101]:
+              - generic [ref=f8e102]: "07"
+              - generic [ref=f8e103]:
+                - strong [ref=f8e104]: Verification
+                - paragraph [ref=f8e105]: Untouched 2019 season; error, event, reliability, and 2-D spatial skill.
+          - generic [ref=f8e106]:
+            - heading "Chronological boundary" [level=2] [ref=f8e107]
+            - paragraph [ref=f8e108]: No 2019-derived model selection or calibration
+          - generic [ref=f8e109]:
+            - generic [ref=f8e110]:
+              - generic [ref=f8e111]: "2017"
+              - strong [ref=f8e112]: TRAIN
+              - paragraph [ref=f8e113]: Fit deterministic, regime and probability models.
+            - generic [ref=f8e114]:
+              - generic [ref=f8e115]: "2018"
+              - strong [ref=f8e116]: VALIDATE / CALIBRATE
+              - paragraph [ref=f8e117]: Freeze model choice, probability calibration and decision thresholds.
+            - generic [ref=f8e118]:
+              - generic [ref=f8e119]: "2019"
+              - strong [ref=f8e120]: UNTOUCHED TEST
+              - paragraph [ref=f8e121]: One-time final historical evaluation; no retuning afterward.
+          - generic [ref=f8e122]:
+            - generic [ref=f8e123]:
+              - heading "Data and provenance" [level=3] [ref=f8e128]
+              - paragraph [ref=f8e129]: NOAA GEFSv12 reforecast provides historical forecast fields. IMD gridded rainfall is the observation reference. The canonical rainfall target is a 49×49, 0.25° grid with explicit validity masks. The district geometry is the documented geoBoundaries IND ADM2 2021 source.
+            - generic [ref=f8e130]:
+              - heading "What the evidence says" [level=3] [ref=f8e133]
+              - paragraph [ref=f8e134]: Global XGBoost has the lowest deterministic RMSE among the frozen model ladder. Soft regime routing edges hard routing but does not beat Global ML. Raw GEFS retains stronger deterministic heavy-event and spatial FSS skill. The UI does not recast those outcomes.
+            - generic [ref=f8e135]:
+              - heading "Limits of readiness" [level=3] [ref=f8e138]
+              - paragraph [ref=f8e139]: This is a historical scientific prototype, not live forecasting. Regime labels are forecast-only pseudo-labels rather than independently observed weather truth. Rare Very Heavy events leave high-probability calibration bins sparse. District outputs cover the validated domain only.
+          - generic [ref=f8e140]:
+            - generic [ref=f8e141]:
+              - generic [ref=f8e142]: Corpus
+              - strong [ref=f8e143]: varshasetu-gefs12r-imd025-2019-jjas-v2
+            - generic [ref=f8e144]:
+              - generic [ref=f8e145]: Deterministic model
+              - strong [ref=f8e146]: Phase 2B M2 Global XGBoost
+            - generic [ref=f8e147]:
+              - generic [ref=f8e148]: Artifact manifest SHA-256
+              - code [ref=f8e149]: 31be2aa797c95364a3d5c04cd26b3a8294b33081d2baa3b0b17085ad63812d89
+  - button "Open Next.js Dev Tools" [ref=f8e155] [cursor=pointer]

@@ -1,0 +1,2787 @@
+{
+  "atmospheric_fields": [
+    "u850",
+    "v850",
+    "q700",
+    "z500",
+    "mslp",
+    "pwat"
+  ],
+  "child_manifest_hashes": {
+    "derived:2019060100": "993fb42ce622a92edaf0a5e2417b6d1c4b6332283f5deaff6beb15d4e8facb2c",
+    "derived:2019060200": "ccba65f192ff570cf82224775adaf63a715b3f455010fadb41853fa33b197e7b",
+    "derived:2019060300": "f5b6e58a20c9e53ce4c016da31ca94e9e2f7991879268991aebfdb396f4d18c2",
+    "derived:2019060400": "cced51029ad8782ebe3011b8c9fc4ee9dafd813c8f44128edc3942eb3ec4f82a",
+    "derived:2019060500": "25cd1a0bf8b3b8a6175ef95b0f8b682a584165c4435109a587d07b9567a81c46",
+    "derived:2019060600": "f3210de1c1fd9348fe9c54bdd8de915525500798e9efde92979d5b21af1d20e4",
+    "derived:2019060700": "475d7d5d84eb29cd50db3c2843acfbefee4781be657cce2c619fb28199971bd2",
+    "derived:2019060800": "28d662b5b8ae5cd870dabbcdd25e4bdee183e14301f412000fa201ea9fd241b2",
+    "derived:2019060900": "d02711ac29c2bebf001a9022348d945df08d5d82b6734a399a7cd7926f68716f",
+    "derived:2019061000": "6d1482c24dab87829193f4a4a7727943a74c416e6162e82757f4a147cf4d92e0",
+    "derived:2019061100": "366a14cde6f919b30fd274fe4c8b9a1612d42d53995119d31ab0c1fc70840d21",
+    "derived:2019061200": "b60bcb03d3cd618c18ab87854d94e2ebb8004b118f27d82335305e3196de1b0c",
+    "derived:2019061300": "b9309cb052a0654662913ac42aed97c86d9b8bc36413287fb16a6c31056b071b",
+    "derived:2019061400": "54dca878708a9fe02ca0d1b7ea7b14fd603e9cff70fb31dcaaeeaeea08469cb1",
+    "derived:2019061500": "74c95d01ca2809c78b69d1681bd5b6a19b140e25474c41be2801bb13bc4cf601",
+    "derived:2019061600": "770803e5876f307e2718041cb9a192ff79c3f99538243028d8dead5dc0d33a46",
+    "derived:2019061700": "bd8c9852a4cdf1a7f093c104f7ead5ecf61c094cfd7f8742a1826b72e1d42d2b",
+    "derived:2019061800": "d9fdedcb26b406055a61ba9e36547fc1c3a7524a41c9da86fac8ec8ec3716488",
+    "derived:2019061900": "e20b8e65f489f7193e67b19a68e030bb4e26a5f18509c8eb4bbd544799a052b7",
+    "derived:2019062000": "77cadf552d40b2586807f8670e6ac3ad34d3517bca42e0dd3b641af7630b6ad9",
+    "derived:2019062100": "abeabffc256dcb07b80959258e2d0ef882c6db1b335acc4a99ad07f59b55a4d2",
+    "derived:2019062200": "128b5b27865b6657355840081802f5b99dba016d4e592180a02b3b0c95a1ee95",
+    "derived:2019062300": "59c14fb115f5959299f48862604f88a2bce588fb5f35a776f8a71d07bff12953",
+    "derived:2019062400": "69bf459a7683743625a1884b85165fad28f5fc9a180b1fae789bba9e8164f2a6",
+    "derived:2019062500": "dc0e8a92a2a79c086e5a92a4e33d8a49dbfb89683e84fb94e132b80c9153c576",
+    "derived:2019062600": "bb9744d2e75a072d81bd9388a2eedce22e1b9c2e053d02c9134755fec23b1a5a",
+    "derived:2019062700": "d663df52916904c9cd2c4e6ff714479c2457fef1ea1bba1b4311b02cb3b336b2",
+    "derived:2019062800": "4d5a8a053617a999f0284baf239c5174ecc75bb90666200aa996a3ed1d3cf6eb",
+    "derived:2019062900": "4c76db53b896711b7371a847216ab64d0276d2697bdf73c6d2aeaee7a56cef68",
+    "derived:2019063000": "d06d1ce943b45531aa3dc3d29caba007752456cd18c8585e77e9a0c7f1961912",
+    "source:2019060100": "03fb1e277fb85a8185772b7ec0ff0140953a76d81d02119173627da1aefe2aec",
+    "source:2019060200": "fd302814bb38d7faca86326b0c7ff912534f3d9d0df82c29676654c480220735",
+    "source:2019060300": "9aa11070dac21daa41f268daad91130c2eae762ad2d24332cd776bd0025384ae",
+    "source:2019060400": "c5e766f15df4bdae4a6cb05b53b38b39f3f65b48c402bc48cd5c36cba681e650",
+    "source:2019060500": "6fa0c67e5b2c3bbe99e427516a4a7e18375742cd199e2ac7340d2907164c7f99",
+    "source:2019060600": "0cf58dc2bdf6e8ba9e56db3f5d3490907ec011cb3a50c9134476b7392a37434c",
+    "source:2019060700": "5565da7e66a8b2c80c86bbbf8b15136abdb89be8c081e6131d08aa9458dea47f",
+    "source:2019060800": "1f1bc42f1cebf88d0731a4c43b25dfe2cc9d6847c1a9db156605b8b43f457900",
+    "source:2019060900": "5e2936ade084e405363df4526be1b69767a69718c9ba96fad220ab7040c40148",
+    "source:2019061000": "8c11dfb97549a9f7e94eeaa1b3c81988c96ebd595d5d8a1d3abb8a76c2d0acec",
+    "source:2019061100": "8090b817dcc9278153480c3f3c956d9dc7721fbe1869d0a1a62563c42db0552d",
+    "source:2019061200": "76bedc216828382f3555002304d08b295e00afb6d1bd8c77abcbc9d6b0434574",
+    "source:2019061300": "94db26ebe67ce9bdabede46a8f6e8e6778585b92d9b5b61580065cc66daea500",
+    "source:2019061400": "fb13eeeed2d1d16fbd99a440f8e6d61e025d32421244bfc40d4c278a8bb838d6",
+    "source:2019061500": "b99f1c64b8dcd9ac3536bd57637bbd703c54aed597d4e41afea1d1c59de2b383",
+    "source:2019061600": "60c9e566de962b247b0d7df5d9fccc262e9138d9f5fb0ec6903173b3b4919694",
+    "source:2019061700": "74056ad8c7c56a8d44f1f361d61f8ed499d5c9a7d1ae6a300b8e124efd5512ad",
+    "source:2019061800": "9f6bbc7e58fad0a7b8d5a9315dec2429350380e24d1bed818945e5f10b0ef4fd",
+    "source:2019061900": "8bce74f30aa8bb8dfdd33c483a0975fb9801a74db4175ed73bb4e1c4e44337f3",
+    "source:2019062000": "f0631a61632775b321fcbcb37a1fa9ce583436e281f08cb5670c5bb9c0dd2422",
+    "source:2019062100": "f41a1f9f6b209a28f428541aabb3326ce0d0cef2cdaffc2d312f0c4d6fedf270",
+    "source:2019062200": "6536d3d59c610a4d1955f621f9d936353ca54f3ade964bffacbfac0df73ca9c3",
+    "source:2019062300": "e9a7f389c1fae7d2e718bad71e949fd89a665e47c0f4ed9181a92c0e0deda357",
+    "source:2019062400": "ce641fb3ef9c2dbfd9120861b88e05bc9c68d48a6ac417ed5495e404c67fb958",
+    "source:2019062500": "c25088a0e3a23062a0b381110e66d70db9b5fafc8f44c72e32b414e22a9d1e1a",
+    "source:2019062600": "9b7424e3c2873854fba11b849fccc9e3039c5e1b736060244f93688f9e58adbf",
+    "source:2019062700": "7f821b949f2f1918718e9b4e9b15d04817786b5804af1a1795ce939abb199344",
+    "source:2019062800": "a766c9e91683c21617b19ea72ea453bf9840361aa4b9ba9f342799eced893fd4",
+    "source:2019062900": "396627eb4c6c3f16a84cc4f8c25e7fbd3e810d4f2684ec1df5ca8fb9c020b870",
+    "source:2019063000": "83c0f51b1821e92562dd5f3c5258f7e27836d7e7414d8ba355539c167485daf8"
+  },
+  "collection_id": "phase1e-2019-06-v1",
+  "context_domain": {
+    "east": 95.0,
+    "north": 30.0,
+    "resolution_degrees": 0.5,
+    "south": 5.0,
+    "west": 55.0
+  },
+  "ensemble_members": [
+    "c00",
+    "p01",
+    "p02",
+    "p03",
+    "p04"
+  ],
+  "expected_initializations": 30,
+  "failed_cases": [
+    {
+      "initialization": "2019060100",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 9422207,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9422207,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9422207,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8251598,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8251598,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8251598,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8663093,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8663093,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8663093,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7257950,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8006737,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060100",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 8006737,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 9756259,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9756259,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9756259,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7850855,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7850855,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7850855,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 8011968,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8011968,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8903121,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8903121,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8903121,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 8279422,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060200",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8279422,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 9319626,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9319626,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9319626,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7453684,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7453684,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7649870,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7648070,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060300",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 7648070,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 9314513,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9314513,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9314513,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7647314,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 7647314,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7855677,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7855677,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7855677,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8272966,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8272966,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8625152,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8625152,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060400",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8625152,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8306014,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 8306014,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 8306014,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7615928,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7615928,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7615111,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7615111,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7592701,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 7592701,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 7388311,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060500",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7388311,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 8776378,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 8776378,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 8776378,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7607967,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 7607967,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7004308,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 8236563,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 8236563,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8236563,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7773631,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060600",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7773631,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 9366641,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9366641,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 9366641,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7189183,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7386330,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7386330,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7354036,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060700",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7354036,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8714538,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8714538,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8714538,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7168711,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7820139,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7820139,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8395861,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8395861,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8395861,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7576912,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060800",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7576912,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8044817,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8044817,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8044817,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 6936983,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7129615,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8394541,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8394541,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8394541,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7765928,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019060900",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7765928,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7819114,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 7819114,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7819114,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7914945,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 7914945,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7914945,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 6869053,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7130664,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061000",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7130664,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061100",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7160420,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061100",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 6861551,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061100",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7120163,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061100",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 7120163,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061100",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7071468,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061100",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7962550,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7594904,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7594904,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7514636,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7514636,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7276206,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7182213,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7476301,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7476301,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061200",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7476301,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 8007014,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 8007014,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 8007014,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 6887391,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7290329,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7290329,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8412877,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8412877,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061300",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8412877,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7837370,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7837370,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7927362,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7927362,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7927362,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8038905,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8038905,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7544898,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7544898,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7950259,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061400",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7950259,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8223075,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8223075,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7790621,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7790621,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7576235,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7592667,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7592667,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7907993,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061500",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7907993,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 8203246,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 8203246,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8203246,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7586055,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7586055,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7567108,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7826070,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7826070,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8373574,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8373574,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061600",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 8373574,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 9071833,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 9071833,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9071833,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 8027840,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8027840,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7373721,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7575867,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7575867,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 9224829,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061700",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9224829,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 9322054,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9322054,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 9322054,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7799632,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7799632,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7799632,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7580007,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7580007,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8669537,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8669537,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 8669537,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7834332,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061800",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7834332,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 9045696,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 9045696,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 9045696,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7405681,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 7194955,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7809736,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8124977,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019061900",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8124977,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 9312572,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 9312572,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9312572,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7382829,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7382829,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8042162,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8042162,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8042162,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 8347070,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8347070,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7702310,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7702310,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062000",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7702310,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8027614,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 8027614,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8027614,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7937548,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7937548,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7937548,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7307650,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7307650,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7957252,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7957252,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7957252,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7500244,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062100",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7500244,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 9428486,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9428486,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9428486,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7372150,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 7372150,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8143964,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 8143964,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7326199,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 7326199,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8195970,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8195970,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062200",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8195970,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8532163,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8532163,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8532163,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7843270,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7843270,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7843270,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7224649,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 63--66",
+      "source_chunk_bytes_shared": 7224649,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7655947,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7655947,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7453961,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7453961,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062300",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7453961,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 8924791,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8924791,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8924791,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p01",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8663981,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8663981,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8663981,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7733374,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7733374,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7313846,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7313846,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8691221,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 8691221,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062400",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8691221,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 9460905,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9460905,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 9460905,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 9227724,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 9227724,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7729559,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7729559,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7729559,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7909517,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7909517,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8176281,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8176281,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062500",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 69--72",
+      "source_chunk_bytes_shared": 8176281,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8872476,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8872476,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8872476,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7446796,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7446796,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7803068,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7803068,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8268516,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8268516,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8268516,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8686143,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8686143,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062600",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 8686143,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 9330356,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7180128,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 8369719,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8369719,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8405022,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 8405022,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8405022,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7723766,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062700",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7723766,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 8829845,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 8829845,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7303003,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "p02",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7298099,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 7958186,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7958186,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "p04",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7909980,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7909980,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062800",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7909980,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062900",
+      "member": "c00",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7527728,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062900",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 7233881,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062900",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7233881,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062900",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 15--18",
+      "source_chunk_bytes_shared": 7248094,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062900",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 45--48",
+      "source_chunk_bytes_shared": 7248094,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019062900",
+      "member": "p04",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 6994421,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "c00",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 9--12",
+      "source_chunk_bytes_shared": 7686411,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "c00",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7686411,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7412805,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p01",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 51--54",
+      "source_chunk_bytes_shared": 7412805,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p02",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 33--36",
+      "source_chunk_bytes_shared": 7428281,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p02",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7428281,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p03",
+      "product": "day1_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 21--24",
+      "source_chunk_bytes_shared": 7657095,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p03",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7657095,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p03",
+      "product": "day3_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 57--60",
+      "source_chunk_bytes_shared": 7657095,
+      "status": "FAIL"
+    },
+    {
+      "initialization": "2019063000",
+      "member": "p04",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 27--30",
+      "source_chunk_bytes_shared": 7588523,
+      "status": "FAIL"
+    }
+  ],
+  "forecast_provider": "NOAA/NCEP GEFSv12 Reforecast",
+  "observation_provider": "India Meteorological Department 0.25 degree Daily Gridded Rainfall",
+  "observed_initializations": 30,
+  "period": {
+    "end": "2019-06-30",
+    "month": "2019-06",
+    "start": "2019-06-01"
+  },
+  "processed_bytes": {
+    "daily_atmospheric_context": 9006840,
+    "daily_manifests": 7880443,
+    "daily_rainfall_pairs": 5462880,
+    "qc_csv_tables": 90009,
+    "regridding_weights": 57816,
+    "storage_evaluation_netcdf": 14328204,
+    "storage_evaluation_zarr": 6352044,
+    "total": 43178236
+  },
+  "processing_code_hashes": {
+    "backend/app/data/accumulation.py": "2d7018941527d2b1846898c44a8ed5f79379b12f7606e379f670a1a4ec5c2fba",
+    "backend/app/data/cache.py": "ba85e6f61bd3c31c0cb77b2978b31c0d5f80ec2d342e593eea20155531b65391",
+    "backend/app/data/monthly_models.py": "f3d997f7f408f1d1ee0c03909a6cf9ceab04451bc0dc287ad54ab4af50c47cae",
+    "backend/app/data/monthly_qc.py": "f8fd1d4bf7d8227f05abc748c53f9610da6945bc111d821dbda1290595a866a2",
+    "backend/app/data/regridding.py": "71b5099824a5da35eb9bd86c75bc28d84e5a4a9dae97cd8bbcbfa328f4f72964",
+    "backend/app/data_sources/imd_rainfall.py": "074930a582daa8cf2fc5ba0013b7add256088275155f480d0ab2ef895ea99c72",
+    "backend/app/data_sources/noaa_gefs_monthly.py": "7c9c61a1dcd672b5b87e784af2f6aac1575e3f650446548e0b3aad44ba4d9bbf",
+    "scripts/data/acquire_monthly_pilot.py": "1aa898ffdddc9c64ef9bbc8219bc1929ccd511c9d0304e165674440c9bc9fbad"
+  },
+  "qc_summary": {
+    "conservation": {
+      "count": 134,
+      "failures": 0,
+      "maximum": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "tolerance": 1e-10
+    },
+    "event_coverage": {
+      "days_with_heavy_cell": 23,
+      "days_with_very_heavy_cell": 10,
+      "district_counts": "not_computed:no_authoritative_district_geometry",
+      "maximum_observed_rainfall_mm": 393.8091735839844,
+      "total_heavy_grid_cell_events": 464,
+      "total_very_heavy_grid_cell_events": 155,
+      "unique_observation_days": 32
+    },
+    "initialization_status_counts": {
+      "BLOCKED": 0,
+      "FAIL": 0,
+      "PARTIAL": 30,
+      "PASS": 0
+    },
+    "predictor_expected": 540,
+    "predictor_statistics": {
+      "mslp": {
+        "initial_warning_bounds": [
+          80000.0,
+          110000.0
+        ],
+        "max": 102785.0390625,
+        "mean": 100381.96282406567,
+        "min": 96548.15625,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "pwat": {
+        "initial_warning_bounds": [
+          0.0,
+          100.0
+        ],
+        "max": 86.9000015258789,
+        "mean": 45.611021809399794,
+        "min": 0.699999988079071,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "q700": {
+        "initial_warning_bounds": [
+          0.0,
+          0.1
+        ],
+        "max": 0.016540000215172768,
+        "mean": 0.007047724491252875,
+        "min": 0.00016999999934341758,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "u850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 42.465919494628906,
+        "mean": 7.585025655393794,
+        "min": -36.26582717895508,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "v850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 44.017642974853516,
+        "mean": 0.8146932435827947,
+        "min": -40.24018859863281,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "z500": {
+        "initial_warning_bounds": [
+          4000.0,
+          7000.0
+        ],
+        "max": 5927.189453125,
+        "mean": 5847.582061998887,
+        "min": 5595.37255859375,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      }
+    },
+    "predictor_valid": 540,
+    "rainfall_complete": 134,
+    "rainfall_expected": 450,
+    "weight_sha256": "37a3fc3244c0ce6c41bf6c580de8748194e7e1dc839e73e0e17285530e245523"
+  },
+  "rainfall_products": [
+    "day1_24h",
+    "day2_24h",
+    "day3_24h"
+  ],
+  "source_bytes": {
+    "atmospheric_messages": 643883484,
+    "cache_excluding_receipts": 3084389571,
+    "cache_receipts": 620922,
+    "imd_existing_source": 25431832,
+    "imd_incremental_network": 0,
+    "indexes": 16019467,
+    "precipitation_messages": 2424486620
+  },
+  "storage_format_evaluation": {
+    "library_versions": {
+      "scipy": "1.16.1",
+      "zarr": "3.2.1"
+    },
+    "netcdf": {
+      "append_chunk_practicality": "fixed classic NetCDF output; rewrite needed for this implementation",
+      "byte_size": 14328204,
+      "full_forecast_read_seconds": 0.029422399999020854,
+      "metadata_preservation": "CF-style variables and attributes",
+      "portability": "single file; broadly portable",
+      "random_slice_mean_seconds": 0.02586555333339978
+    },
+    "zarr": {
+      "append_chunk_practicality": "chunked hierarchy supports initialization-wise extension",
+      "byte_size": 6352044,
+      "full_forecast_read_seconds": 0.12062839999998687,
+      "metadata_preservation": "group and array attributes; CF conventions require project schema",
+      "portability": "many files; efficient object-store/chunk access, less convenient to copy",
+      "random_slice_mean_seconds": 0.010421993333269104
+    }
+  },
+  "target_domain": {
+    "east": 80.0,
+    "north": 22.0,
+    "south": 10.0,
+    "west": 68.0
+  },
+  "training_eligible": false
+}

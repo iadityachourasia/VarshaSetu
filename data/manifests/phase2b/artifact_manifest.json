@@ -1,0 +1,80 @@
+{
+  "execution_device": "cpu",
+  "experiment_id": "varshasetu-phase2b-v1",
+  "feature_builder_source_sha256": "9faf58c4ef7e51ef8480918577a654bb5734ae861132804ef4264eb99b89d248",
+  "feature_cache_manifests": {
+    "2017": "c174698a80c82508fecdbd06f66a98e1e7aaa9a3c7bb2215c1723e579084e81d",
+    "2018": "44bfe9e02449cb7ae3494afcc70e556dc4dba76b3f079e67abe99b7971d26cab",
+    "2019": "c4d10e2403e67dfd4e285eef96ce49b38a4835d156ae98fde72a558356119189"
+  },
+  "feature_cache_paths": {
+    "2017": "data/processed/phase2b/feature_cache/35a5a8224958f89d9d385f2cc8e0019386e0acce3b57d57713d7dfe63ed5240d",
+    "2018": "data/processed/phase2b/feature_cache/54ae9a84965e2b98d99fbe9828846c732dfe5e0bbe0beecabedcd064a787feb0",
+    "2019": "data/processed/phase2b/feature_cache/f500934dd1e4a5e66be40ebbec1e7292c3ab690ef84be7c0c364e39c2296df7d"
+  },
+  "freeze_manifest_sha256": "b9f0634e4db9de606406f7bfd77d23036740513047be557349aefefdd9ecf08d",
+  "hardware_benchmark": {
+    "gpu_before_fit": {
+      "query": "NVIDIA GeForce RTX 5050 Laptop GPU, 309, 8151, 61",
+      "status": "available"
+    },
+    "logical_cpu_count": 16,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "ram_available_bytes_before_fit": 12022792192,
+    "ram_total_bytes": 25380823040,
+    "xgboost_build_info": {
+      "BUILTIN_PREFETCH_PRESENT": false,
+      "CUDA_VERSION": [
+        12,
+        5
+      ],
+      "DEBUG": false,
+      "MM_PREFETCH_PRESENT": true,
+      "THRUST_VERSION": [
+        2,
+        6,
+        1
+      ],
+      "USE_CUDA": true,
+      "USE_DLOPEN_NCCL": false,
+      "USE_FEDERATED": false,
+      "USE_NCCL": false,
+      "USE_OPENMP": true,
+      "USE_RMM": false,
+      "libxgboost": "C:\\SIH26\\Varsha-NXT\\.venv\\Lib\\site-packages\\xgboost\\lib\\xgboost.dll"
+    },
+    "xgboost_version": "3.0.4"
+  },
+  "model_artifact_sha256": {
+    "expert_active_monsoon.json": "d7bc48b191373ad8998e3366cfef6964501cd0ef7767211b56b4256893187477",
+    "expert_break_weak_monsoon.json": "9e19bca774d196a3fc3680d78ad3e7fd54dc8fa5f0145c466fb776a2ecb60513",
+    "expert_low_depression_influenced.json": "448a0c2d4515002a20c5ddcf4c20c5eb21c73006e689768e87063a6b3cc32ba8",
+    "global_xgboost.json": "c0b4441071045bb9d1206a7c69645632efe2250adfc8a5464a6f69370d4c1797",
+    "ridge_mos.safe.json": "af834ffa9339bd2eddb50ca3ae37f4f9fb4fe24b5823570e4873f6dc1bdf81a0"
+  },
+  "no_pickle_or_joblib_authoritative_artifacts": true,
+  "phase1b_historical_lock_sha256": "14e106b95ee5900e71bbca43b003a604d9c0eb44fee092f9e843f756666ac0a9",
+  "phase1b_originally_protected_artifacts": 18,
+  "phase1b_supersession_v1_sha256": "89198ac08889fd3f506dedef4ebbec7565bdb8e16b04572d1a10328edd0c5383",
+  "phase1b_unchanged_original_hashes": 16,
+  "phase1b_versioned_supersessions": 2,
+  "phase1f_2019_zarr_tree_sha256": "13fc4ea03f0724fc6a3c0506de1a30b1acb5be4f8dc803c9ea46bb2b5377cb9e",
+  "phase2a_regime_classifier_sha256": "0761ba62e1aafbf12228f604d43a7b288d5beb3a7e7f01536a5df62b51b6a204",
+  "report_sha256": {
+    "58_AUTHORITATIVE_RAINFALL_MODELING.md": "291c626828da38a7994445dfd69a526621f66968a2ab149cc46786d738c2bdb9",
+    "59_2018_MODEL_SELECTION_REPORT.md": "08da6e9bc33d2b220e90b4e006ef8c3497b1bfefd61da7b01d0d6a473b9843bb",
+    "60_2019_FINAL_TEST_REPORT.md": "93914d22e3f9173c41bf39969ddf645f1f893e8c8fcb973f914d14eb85eabfe6",
+    "61_REGIME_AWARE_BENEFIT_ANALYSIS.md": "5a0c6fe9899cda559ec736e9c0358884dc29bf18bc738f3cf548154232c05781",
+    "62_MODEL_ARTIFACT_MANIFEST.md": "bc238a4b075c539f009dcbb65498fe06af4632062e27e0a71d8b394aa707fdd9"
+  },
+  "runner_source_sha256": "fbe9fbfda6c5ef71f1cb2cf7dbe41ca9c4f17122f1d41400321995b74ca7d203",
+  "runtime_versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.2",
+    "scikit-learn": "1.7.1",
+    "xgboost": "3.0.4",
+    "zarr": "3.2.1"
+  },
+  "test_results_sha256": "df2ed9f24d1edf23b202e4afca08fbf989a7d0c91f6d6a9ff74a34511eee893c"
+}

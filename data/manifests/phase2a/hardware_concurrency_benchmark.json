@@ -1,0 +1,728 @@
+{
+  "benchmark_scope": "bounded representative samples; no scientific artifact mutation",
+  "decode": {
+    "hashes_stable": true,
+    "runs": [
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 2920599552,
+        "results": [
+          {
+            "decoded_sha256": "149f453ca43800ebe18a70e45990d76ac1ea958aed57223abebae306983eed90",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/c00/apcp_sfc/selected_003_075_2019060100_c00.grib2"
+          },
+          {
+            "decoded_sha256": "6df3273422619ae7cac888db87bb49564b8b77a38506523168fb50929d5982f6",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p01/apcp_sfc/selected_003_075_2019060100_p01.grib2"
+          },
+          {
+            "decoded_sha256": "71243d6ca4f12f729b3e9afbaa6db8fc335e6ff5079b8cf63d218ae16c9d57da",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p02/apcp_sfc/selected_003_075_2019060100_p02.grib2"
+          },
+          {
+            "decoded_sha256": "f59d70fbabd769fccceb988dfb37c33cef8e27915b551b090678715a4ab98b16",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p03/apcp_sfc/selected_003_075_2019060100_p03.grib2"
+          },
+          {
+            "decoded_sha256": "272c495af51d1b9f81ef5a92dcc4bdce91bee426e633450a0f4391294ea07052",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p04/apcp_sfc/selected_003_075_2019060100_p04.grib2"
+          },
+          {
+            "decoded_sha256": "8894c7c9ab9c3d5d2710a4e7d40820a7bd72ea0e972840adde46f15948a75a7c",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/c00/apcp_sfc/selected_003_075_2019060200_c00.grib2"
+          },
+          {
+            "decoded_sha256": "1cea6092b828ac0b9992ee13a447260f5a26edda532f3cc6137af5127591e187",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p01/apcp_sfc/selected_003_075_2019060200_p01.grib2"
+          },
+          {
+            "decoded_sha256": "44d80b9a64c2134d011ca8f078f73e47ecdf0d975bc5d0b222ea386a7b266af2",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p02/apcp_sfc/selected_003_075_2019060200_p02.grib2"
+          },
+          {
+            "decoded_sha256": "1fab8aee7ab93ca7beabed0db49acbcc57e1c0b4a4dc879658c454da90022a98",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p03/apcp_sfc/selected_003_075_2019060200_p03.grib2"
+          },
+          {
+            "decoded_sha256": "56fc5499da69807eb06c59f257892420f319f8775fbe7439981f101ad7e30c85",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p04/apcp_sfc/selected_003_075_2019060200_p04.grib2"
+          },
+          {
+            "decoded_sha256": "3b6bbea179bb391484f8fff3bd9ea094042244a9603cc7003a2182496548e4f5",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/c00/apcp_sfc/selected_003_075_2019060300_c00.grib2"
+          },
+          {
+            "decoded_sha256": "4487e058a5f06009899b8bd0a8fb906efb1433f8c47fc9c584a4b56f923146eb",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p01/apcp_sfc/selected_003_075_2019060300_p01.grib2"
+          },
+          {
+            "decoded_sha256": "a76f94ce84d17a9e27669ba87f964f59d5c75143546c917425990fb53677034d",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p02/apcp_sfc/selected_003_075_2019060300_p02.grib2"
+          },
+          {
+            "decoded_sha256": "e9fe0bc7b49dfd3153c90e2b9aa46ae998c067f4f213015a8a4526406507af39",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p03/apcp_sfc/selected_003_075_2019060300_p03.grib2"
+          },
+          {
+            "decoded_sha256": "ad3e7410f956a41ab6a4e3b878dfe8cbce45196a942dcb75603cb5ffd29eda5a",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p04/apcp_sfc/selected_003_075_2019060300_p04.grib2"
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 6.740534600000501,
+        "workers": 4
+      },
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 4353937408,
+        "results": [
+          {
+            "decoded_sha256": "149f453ca43800ebe18a70e45990d76ac1ea958aed57223abebae306983eed90",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/c00/apcp_sfc/selected_003_075_2019060100_c00.grib2"
+          },
+          {
+            "decoded_sha256": "6df3273422619ae7cac888db87bb49564b8b77a38506523168fb50929d5982f6",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p01/apcp_sfc/selected_003_075_2019060100_p01.grib2"
+          },
+          {
+            "decoded_sha256": "71243d6ca4f12f729b3e9afbaa6db8fc335e6ff5079b8cf63d218ae16c9d57da",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p02/apcp_sfc/selected_003_075_2019060100_p02.grib2"
+          },
+          {
+            "decoded_sha256": "f59d70fbabd769fccceb988dfb37c33cef8e27915b551b090678715a4ab98b16",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p03/apcp_sfc/selected_003_075_2019060100_p03.grib2"
+          },
+          {
+            "decoded_sha256": "272c495af51d1b9f81ef5a92dcc4bdce91bee426e633450a0f4391294ea07052",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p04/apcp_sfc/selected_003_075_2019060100_p04.grib2"
+          },
+          {
+            "decoded_sha256": "8894c7c9ab9c3d5d2710a4e7d40820a7bd72ea0e972840adde46f15948a75a7c",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/c00/apcp_sfc/selected_003_075_2019060200_c00.grib2"
+          },
+          {
+            "decoded_sha256": "1cea6092b828ac0b9992ee13a447260f5a26edda532f3cc6137af5127591e187",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p01/apcp_sfc/selected_003_075_2019060200_p01.grib2"
+          },
+          {
+            "decoded_sha256": "44d80b9a64c2134d011ca8f078f73e47ecdf0d975bc5d0b222ea386a7b266af2",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p02/apcp_sfc/selected_003_075_2019060200_p02.grib2"
+          },
+          {
+            "decoded_sha256": "1fab8aee7ab93ca7beabed0db49acbcc57e1c0b4a4dc879658c454da90022a98",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p03/apcp_sfc/selected_003_075_2019060200_p03.grib2"
+          },
+          {
+            "decoded_sha256": "56fc5499da69807eb06c59f257892420f319f8775fbe7439981f101ad7e30c85",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p04/apcp_sfc/selected_003_075_2019060200_p04.grib2"
+          },
+          {
+            "decoded_sha256": "3b6bbea179bb391484f8fff3bd9ea094042244a9603cc7003a2182496548e4f5",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/c00/apcp_sfc/selected_003_075_2019060300_c00.grib2"
+          },
+          {
+            "decoded_sha256": "4487e058a5f06009899b8bd0a8fb906efb1433f8c47fc9c584a4b56f923146eb",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p01/apcp_sfc/selected_003_075_2019060300_p01.grib2"
+          },
+          {
+            "decoded_sha256": "a76f94ce84d17a9e27669ba87f964f59d5c75143546c917425990fb53677034d",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p02/apcp_sfc/selected_003_075_2019060300_p02.grib2"
+          },
+          {
+            "decoded_sha256": "e9fe0bc7b49dfd3153c90e2b9aa46ae998c067f4f213015a8a4526406507af39",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p03/apcp_sfc/selected_003_075_2019060300_p03.grib2"
+          },
+          {
+            "decoded_sha256": "ad3e7410f956a41ab6a4e3b878dfe8cbce45196a942dcb75603cb5ffd29eda5a",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p04/apcp_sfc/selected_003_075_2019060300_p04.grib2"
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 5.758739500000047,
+        "workers": 6
+      },
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 5790117888,
+        "results": [
+          {
+            "decoded_sha256": "149f453ca43800ebe18a70e45990d76ac1ea958aed57223abebae306983eed90",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/c00/apcp_sfc/selected_003_075_2019060100_c00.grib2"
+          },
+          {
+            "decoded_sha256": "6df3273422619ae7cac888db87bb49564b8b77a38506523168fb50929d5982f6",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p01/apcp_sfc/selected_003_075_2019060100_p01.grib2"
+          },
+          {
+            "decoded_sha256": "71243d6ca4f12f729b3e9afbaa6db8fc335e6ff5079b8cf63d218ae16c9d57da",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p02/apcp_sfc/selected_003_075_2019060100_p02.grib2"
+          },
+          {
+            "decoded_sha256": "f59d70fbabd769fccceb988dfb37c33cef8e27915b551b090678715a4ab98b16",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p03/apcp_sfc/selected_003_075_2019060100_p03.grib2"
+          },
+          {
+            "decoded_sha256": "272c495af51d1b9f81ef5a92dcc4bdce91bee426e633450a0f4391294ea07052",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060100/p04/apcp_sfc/selected_003_075_2019060100_p04.grib2"
+          },
+          {
+            "decoded_sha256": "8894c7c9ab9c3d5d2710a4e7d40820a7bd72ea0e972840adde46f15948a75a7c",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/c00/apcp_sfc/selected_003_075_2019060200_c00.grib2"
+          },
+          {
+            "decoded_sha256": "1cea6092b828ac0b9992ee13a447260f5a26edda532f3cc6137af5127591e187",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p01/apcp_sfc/selected_003_075_2019060200_p01.grib2"
+          },
+          {
+            "decoded_sha256": "44d80b9a64c2134d011ca8f078f73e47ecdf0d975bc5d0b222ea386a7b266af2",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p02/apcp_sfc/selected_003_075_2019060200_p02.grib2"
+          },
+          {
+            "decoded_sha256": "1fab8aee7ab93ca7beabed0db49acbcc57e1c0b4a4dc879658c454da90022a98",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p03/apcp_sfc/selected_003_075_2019060200_p03.grib2"
+          },
+          {
+            "decoded_sha256": "56fc5499da69807eb06c59f257892420f319f8775fbe7439981f101ad7e30c85",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060200/p04/apcp_sfc/selected_003_075_2019060200_p04.grib2"
+          },
+          {
+            "decoded_sha256": "3b6bbea179bb391484f8fff3bd9ea094042244a9603cc7003a2182496548e4f5",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/c00/apcp_sfc/selected_003_075_2019060300_c00.grib2"
+          },
+          {
+            "decoded_sha256": "4487e058a5f06009899b8bd0a8fb906efb1433f8c47fc9c584a4b56f923146eb",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p01/apcp_sfc/selected_003_075_2019060300_p01.grib2"
+          },
+          {
+            "decoded_sha256": "a76f94ce84d17a9e27669ba87f964f59d5c75143546c917425990fb53677034d",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p02/apcp_sfc/selected_003_075_2019060300_p02.grib2"
+          },
+          {
+            "decoded_sha256": "e9fe0bc7b49dfd3153c90e2b9aa46ae998c067f4f213015a8a4526406507af39",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p03/apcp_sfc/selected_003_075_2019060300_p03.grib2"
+          },
+          {
+            "decoded_sha256": "ad3e7410f956a41ab6a4e3b878dfe8cbce45196a942dcb75603cb5ffd29eda5a",
+            "message_count": 25,
+            "path": "data/raw/phase1c/gefsv12/2019060300/p04/apcp_sfc/selected_003_075_2019060300_p04.grib2"
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 4.782404499999757,
+        "workers": 8
+      }
+    ],
+    "sample": "15 cached GEFS rainfall chunks from 2019-06-01 through 2019-06-03"
+  },
+  "hardware_logical_cpu_count": 16,
+  "network": {
+    "executed": true,
+    "hashes_stable": true,
+    "runs": [
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 55824384,
+        "results": [
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.4277720999998564,
+            "retries": 0,
+            "sha256": "b822f7774e57802396d846f7f10d4c588f20dde9a7589c1e41c5b48310fa7a53",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/apcp_sfc_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 3.1281926999999996,
+            "retries": 0,
+            "sha256": "e63843827ce2beb2c2487577dfc20d427a12cf16f8a90567d1e8c79cf6b49050",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/ugrd_pres_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 9.667783599999893,
+            "retries": 0,
+            "sha256": "e50d8708c332ff202c0de0c6fc0072f66fb5d1f95b7a4f7400f3e70722fe6804",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/vgrd_pres_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 3.301264299999275,
+            "retries": 0,
+            "sha256": "6408c0b54aea0f2a524314c550e38893dd920f5efb18da3ca7e600544a9f6143",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/spfh_pres_abv700mb_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.7321560999998837,
+            "retries": 0,
+            "sha256": "57582e953b76ea6237b1f16ff1a3381800f5a231906e9d432ea5734677496b83",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/hgt_pres_abv700mb_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 3.2260777999999846,
+            "retries": 0,
+            "sha256": "f827dc26c439f9b33df1a6c55f5523182c7af1334cc1f1e1a7f6eb0e20bc1003",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/pres_msl_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 3.1121237999996083,
+            "retries": 0,
+            "sha256": "70c6ca4fa7ad9b1f445d07822ce3f9d7b22efeba3c3cd3d9aba03225e6c0104c",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/pwat_eatm_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.8101520000000164,
+            "retries": 0,
+            "sha256": "1ef15e7c048097d1099392eadf849488c8a366fcbcb69b5337609143554bab30",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/p01/Days%3A1-10/apcp_sfc_2017060100_p01.grib2"
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 9.680015299999468,
+        "workers": 4
+      },
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 58884096,
+        "results": [
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.7249541999999565,
+            "retries": 0,
+            "sha256": "b822f7774e57802396d846f7f10d4c588f20dde9a7589c1e41c5b48310fa7a53",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/apcp_sfc_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.3488256000000547,
+            "retries": 0,
+            "sha256": "e63843827ce2beb2c2487577dfc20d427a12cf16f8a90567d1e8c79cf6b49050",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/ugrd_pres_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.390784299999723,
+            "retries": 0,
+            "sha256": "e50d8708c332ff202c0de0c6fc0072f66fb5d1f95b7a4f7400f3e70722fe6804",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/vgrd_pres_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 3.074487599999884,
+            "retries": 0,
+            "sha256": "6408c0b54aea0f2a524314c550e38893dd920f5efb18da3ca7e600544a9f6143",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/spfh_pres_abv700mb_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.387503099999776,
+            "retries": 0,
+            "sha256": "57582e953b76ea6237b1f16ff1a3381800f5a231906e9d432ea5734677496b83",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/hgt_pres_abv700mb_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.4118748999999298,
+            "retries": 0,
+            "sha256": "f827dc26c439f9b33df1a6c55f5523182c7af1334cc1f1e1a7f6eb0e20bc1003",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/pres_msl_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.4371986000005563,
+            "retries": 0,
+            "sha256": "70c6ca4fa7ad9b1f445d07822ce3f9d7b22efeba3c3cd3d9aba03225e6c0104c",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/pwat_eatm_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.6840628999998444,
+            "retries": 0,
+            "sha256": "1ef15e7c048097d1099392eadf849488c8a366fcbcb69b5337609143554bab30",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/p01/Days%3A1-10/apcp_sfc_2017060100_p01.grib2"
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 5.082928699999684,
+        "workers": 6
+      },
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 61767680,
+        "results": [
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.4204154999997627,
+            "retries": 0,
+            "sha256": "b822f7774e57802396d846f7f10d4c588f20dde9a7589c1e41c5b48310fa7a53",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/apcp_sfc_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.6276645999996617,
+            "retries": 0,
+            "sha256": "e63843827ce2beb2c2487577dfc20d427a12cf16f8a90567d1e8c79cf6b49050",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/ugrd_pres_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 5.866240199999993,
+            "retries": 0,
+            "sha256": "e50d8708c332ff202c0de0c6fc0072f66fb5d1f95b7a4f7400f3e70722fe6804",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/vgrd_pres_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.756629200000134,
+            "retries": 0,
+            "sha256": "6408c0b54aea0f2a524314c550e38893dd920f5efb18da3ca7e600544a9f6143",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/spfh_pres_abv700mb_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.374053699999422,
+            "retries": 0,
+            "sha256": "57582e953b76ea6237b1f16ff1a3381800f5a231906e9d432ea5734677496b83",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/hgt_pres_abv700mb_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.3529364000005444,
+            "retries": 0,
+            "sha256": "f827dc26c439f9b33df1a6c55f5523182c7af1334cc1f1e1a7f6eb0e20bc1003",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/pres_msl_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.6747661999997945,
+            "retries": 0,
+            "sha256": "70c6ca4fa7ad9b1f445d07822ce3f9d7b22efeba3c3cd3d9aba03225e6c0104c",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/c00/Days%3A1-10/pwat_eatm_2017060100_c00.grib2"
+          },
+          {
+            "byte_range": [
+              0,
+              1048575
+            ],
+            "byte_size": 1048576,
+            "elapsed_seconds": 2.4727611000007528,
+            "retries": 0,
+            "sha256": "1ef15e7c048097d1099392eadf849488c8a366fcbcb69b5337609143554bab30",
+            "url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2017/2017060100/p01/Days%3A1-10/apcp_sfc_2017060100_p01.grib2"
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 5.889693600000101,
+        "workers": 8
+      }
+    ],
+    "sample": "eight one-MiB HTTP ranges from official NOAA 2017 GRIB objects"
+  },
+  "qc": {
+    "hashes_stable": true,
+    "runs": [
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 224874496,
+        "results": [
+          {
+            "index": 0,
+            "negative_forecast_cells": 0,
+            "sha256": "ff89ea4a333cee890e573d4fc4141f0cf8f8c312627621d79946b56afd21182a",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 1,
+            "negative_forecast_cells": 0,
+            "sha256": "860b0aa5ea857776742054f4e9c9241ffae50438c0204430dc57007f2891b275",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 2,
+            "negative_forecast_cells": 0,
+            "sha256": "74f0bcc6dd3f8be6e58ffe09f0896ee4a828c446e99bc34168aa747c498b2bf7",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 3,
+            "negative_forecast_cells": 0,
+            "sha256": "7200bbb1dc98b8bce10e38a64b7181a73b8bbf63b9be41af60c79610051d9034",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 4,
+            "negative_forecast_cells": 0,
+            "sha256": "f3a738188d2ff6eb13cc143b05d40d85aa61a136a3f167d88d43fda9d645b9ba",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 5,
+            "negative_forecast_cells": 0,
+            "sha256": "d66a3a15759e47f423bc8d847b1a484d348df4e76aad84834ff1f51f9384faca",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 6,
+            "negative_forecast_cells": 0,
+            "sha256": "ae82835f9a7dad13ce8a94b07455d63be8cf35f57dce9f13fddda42fb56dd7d8",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 7,
+            "negative_forecast_cells": 0,
+            "sha256": "73692f8411f96f2103e2200e7c5755308200aeca286193ecc2fc828db8f40be9",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 8,
+            "negative_forecast_cells": 0,
+            "sha256": "f3393a40691eb589c306c35ed7b814b0d4d359aafd78ad26b484c4b75425deb9",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 9,
+            "negative_forecast_cells": 0,
+            "sha256": "0d0c90e48f23e226838dd36756d1432093ff310ccb59f591801dac53b5305081",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 10,
+            "negative_forecast_cells": 0,
+            "sha256": "7577fec5e7250f9544baba27e85a36c261310d5b702dbedc7080c2c00b49a5fa",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 11,
+            "negative_forecast_cells": 0,
+            "sha256": "b36ac9d40c92f33b2b8e8895c64919bee351e0109a60ef0cdbafd8c25fd2304c",
+            "valid_observation_cells": 3903
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 0.6800224999997226,
+        "workers": 4
+      },
+      {
+        "failures": [],
+        "peak_aggregate_rss_bytes": 319553536,
+        "results": [
+          {
+            "index": 0,
+            "negative_forecast_cells": 0,
+            "sha256": "ff89ea4a333cee890e573d4fc4141f0cf8f8c312627621d79946b56afd21182a",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 1,
+            "negative_forecast_cells": 0,
+            "sha256": "860b0aa5ea857776742054f4e9c9241ffae50438c0204430dc57007f2891b275",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 2,
+            "negative_forecast_cells": 0,
+            "sha256": "74f0bcc6dd3f8be6e58ffe09f0896ee4a828c446e99bc34168aa747c498b2bf7",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 3,
+            "negative_forecast_cells": 0,
+            "sha256": "7200bbb1dc98b8bce10e38a64b7181a73b8bbf63b9be41af60c79610051d9034",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 4,
+            "negative_forecast_cells": 0,
+            "sha256": "f3a738188d2ff6eb13cc143b05d40d85aa61a136a3f167d88d43fda9d645b9ba",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 5,
+            "negative_forecast_cells": 0,
+            "sha256": "d66a3a15759e47f423bc8d847b1a484d348df4e76aad84834ff1f51f9384faca",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 6,
+            "negative_forecast_cells": 0,
+            "sha256": "ae82835f9a7dad13ce8a94b07455d63be8cf35f57dce9f13fddda42fb56dd7d8",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 7,
+            "negative_forecast_cells": 0,
+            "sha256": "73692f8411f96f2103e2200e7c5755308200aeca286193ecc2fc828db8f40be9",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 8,
+            "negative_forecast_cells": 0,
+            "sha256": "f3393a40691eb589c306c35ed7b814b0d4d359aafd78ad26b484c4b75425deb9",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 9,
+            "negative_forecast_cells": 0,
+            "sha256": "0d0c90e48f23e226838dd36756d1432093ff310ccb59f591801dac53b5305081",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 10,
+            "negative_forecast_cells": 0,
+            "sha256": "7577fec5e7250f9544baba27e85a36c261310d5b702dbedc7080c2c00b49a5fa",
+            "valid_observation_cells": 3903
+          },
+          {
+            "index": 11,
+            "negative_forecast_cells": 0,
+            "sha256": "b36ac9d40c92f33b2b8e8895c64919bee351e0109a60ef0cdbafd8c25fd2304c",
+            "valid_observation_cells": 3903
+          }
+        ],
+        "retry_count": 0,
+        "wall_seconds": 0.5774668000003658,
+        "workers": 6
+      }
+    ],
+    "sample": "12 initialization chunks from immutable Phase 1F 2019 v2 Zarr"
+  }
+}

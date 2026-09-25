@@ -1,0 +1,179 @@
+{
+  "average_seconds_per_initialization": 19.30709557741941,
+  "cache_only": true,
+  "collection_manifest": "data/manifests/phase1e/2019-07/monthly_collection_manifest.json",
+  "collection_manifest_sha256": "543b2619f6c923f71a0284c108a51e61f53052d7db7716dfbec77e54c9dc668b",
+  "measured_stage_seconds": {
+    "artifact_write": 3.3005745000082243,
+    "atmosphere_decode_interpolate_qc": 59.62258179997298,
+    "monthly_consolidation_and_benchmark": 4.247271200001705,
+    "precipitation_decode_and_crop": 513.8723559000027,
+    "rainfall_reconstruct_regrid_qc": 0.30116699996506213,
+    "total_initialization": 589.7126404000082
+  },
+  "network_bytes": {
+    "atmospheric": 0,
+    "imd": 0,
+    "index": 0,
+    "precipitation": 0,
+    "total": 0
+  },
+  "network_seconds_sum_concurrent_requests": 0.0,
+  "peak_rss_bytes": 234573824,
+  "processed_bytes": {
+    "daily_atmospheric_context": 9307068,
+    "daily_manifests": 8138820,
+    "daily_rainfall_pairs": 5644976,
+    "qc_csv_tables": 93682,
+    "regridding_weights": 57816,
+    "storage_evaluation_netcdf": 14805712,
+    "storage_evaluation_zarr": 6734327,
+    "total": 44782401
+  },
+  "qc_summary": {
+    "conservation": {
+      "count": 137,
+      "failures": 0,
+      "maximum": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "tolerance": 1e-10
+    },
+    "event_coverage": {
+      "days_with_heavy_cell": 32,
+      "days_with_very_heavy_cell": 27,
+      "district_counts": "not_computed:no_authoritative_district_geometry",
+      "maximum_observed_rainfall_mm": 364.3852233886719,
+      "total_heavy_grid_cell_events": 1452,
+      "total_very_heavy_grid_cell_events": 347,
+      "unique_observation_days": 33
+    },
+    "initialization_status_counts": {
+      "BLOCKED": 0,
+      "FAIL": 0,
+      "PARTIAL": 31,
+      "PASS": 0
+    },
+    "predictor_expected": 558,
+    "predictor_statistics": {
+      "mslp": {
+        "initial_warning_bounds": [
+          80000.0,
+          110000.0
+        ],
+        "max": 102077.5390625,
+        "mean": 100338.16578246483,
+        "min": 98534.9453125,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "pwat": {
+        "initial_warning_bounds": [
+          0.0,
+          100.0
+        ],
+        "max": 82.30000305175781,
+        "mean": 49.71853725187881,
+        "min": 2.200000047683716,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "q700": {
+        "initial_warning_bounds": [
+          0.0,
+          0.1
+        ],
+        "max": 0.0173799991607666,
+        "mean": 0.007734865990204033,
+        "min": 0.0003100000030826777,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "u850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 29.504243850708008,
+        "mean": 9.146199066366629,
+        "min": -26.48892593383789,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "v850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 22.550010681152344,
+        "mean": 2.0218610008179945,
+        "min": -25.606836318969727,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "z500": {
+        "initial_warning_bounds": [
+          4000.0,
+          7000.0
+        ],
+        "max": 5920.11083984375,
+        "mean": 5837.814377690978,
+        "min": 5740.587890625,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      }
+    },
+    "predictor_valid": 558,
+    "rainfall_complete": 137,
+    "rainfall_expected": 465,
+    "weight_sha256": "37a3fc3244c0ce6c41bf6c580de8748194e7e1dc839e73e0e17285530e245523"
+  },
+  "raw_source_bytes": {
+    "atmospheric_messages": 643883484,
+    "cache_excluding_receipts": 3084389571,
+    "cache_receipts": 620922,
+    "imd_existing_source": 25431832,
+    "imd_incremental_network": 0,
+    "indexes": 16019467,
+    "precipitation_messages": 2424486620
+  },
+  "rerun_daily_manifest_comparison": {
+    "changed_or_new": [],
+    "current_artifact_count": 62,
+    "previous_artifact_count": 62,
+    "removed": [],
+    "unchanged_count": 62
+  },
+  "status": "PARTIAL",
+  "storage_format_evaluation": {
+    "library_versions": {
+      "scipy": "1.16.1",
+      "zarr": "3.2.1"
+    },
+    "netcdf": {
+      "append_chunk_practicality": "fixed classic NetCDF output; rewrite needed for this implementation",
+      "byte_size": 14805712,
+      "full_forecast_read_seconds": 0.04028960000141524,
+      "metadata_preservation": "CF-style variables and attributes",
+      "portability": "single file; broadly portable",
+      "random_slice_mean_seconds": 0.024943699999979193
+    },
+    "zarr": {
+      "append_chunk_practicality": "chunked hierarchy supports initialization-wise extension",
+      "byte_size": 6734327,
+      "full_forecast_read_seconds": 0.11754260000088834,
+      "metadata_preservation": "group and array attributes; CF conventions require project schema",
+      "portability": "many files; efficient object-store/chunk access, less convenient to copy",
+      "random_slice_mean_seconds": 0.010250223333302225
+    }
+  },
+  "storage_projections": {
+    "assumption": "linear by initialization count from July 2019; excludes provider/version changes, retry variance, filesystem overhead changes, and future extra variables",
+    "bytes_per_initialization": 100941031.35483871,
+    "measured_july_bytes": 3129171972,
+    "projected_20_year_jjas_bytes": 246296116506,
+    "projected_jjas_2019_bytes": 12314805825
+  },
+  "total_runtime_seconds": 598.5199629000017,
+  "training_eligible": false
+}

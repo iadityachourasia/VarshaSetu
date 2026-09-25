@@ -1,0 +1,20 @@
+{
+  "schema": "phase2c-reporting-semantic-supersession-v1",
+  "reason": "The original event-contingency helper named the decision cutoff threshold_mm_24h, although its input was a calibrated probability. The numeric contingency and all scores are unchanged.",
+  "original_2018_validation_sha256": "92032223e1bc05e52ac93612a2c1a776fe4c7da9bddb980ab469a2cdae06433a",
+  "original_2019_final_results_sha256": "7ffee9e90d7c84d5c0a6810a7a2ccb7afce034803033322f3456c640bcf16aa4",
+  "interpretation": {
+    "categorical.threshold_mm_24h": "This field in the two original reports is the frozen probability decision cutoff in [0,1], not a rainfall accumulation threshold.",
+    "true_rainfall_thresholds_mm_24h": {"heavy": 64.5, "very_heavy": 115.6},
+    "correct_field_name": "categorical.decision_threshold_probability"
+  },
+  "2018_fold_count_correction": {
+    "original_field_names": ["calibration_initialization_count", "selection_initialization_count"],
+    "original_field_values_are_case_counts": [154, 97],
+    "actual_distinct_initialization_counts": [73, 49],
+    "reason": "The original writer summed a per-case boolean mask; the grouping itself was correctly performed by initialization."
+  },
+  "model_selection_changed": false,
+  "calibration_changed": false,
+  "2019_re_evaluated": false
+}

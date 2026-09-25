@@ -1,0 +1,19 @@
+{
+  "2025_observation_values_opened": false,
+  "decision": "FEATURE_DATASET_PARTIAL",
+  "feature_freeze_sha256": "f1520a32aadef460249ba26a39c106f9593fcd3407c23d2967ddc90d889ed67b",
+  "future_split_manifest_sha256": "c400c36d793b68f394774c999bbf6729a439cc9d3bdd415ca9a33f27ce4520b5",
+  "missing_probability_columns": [
+    "frozen_m2_corrected_mm",
+    "regime_p_active",
+    "regime_p_break_weak",
+    "regime_p_low_depression"
+  ],
+  "model_training_or_inference": false,
+  "schema": "phase4g-experiment-manifest-v1",
+  "year_manifest_sha256": {
+    "2023": "d5f4b832a83d2daa40c14daf8b02b3a18bbdbe6bb854c74c7b068c014267be04",
+    "2024": "d7e4c78159debd15183b45f69bce5e9dd15631f4a2aa72bdc4b801dd52873c68",
+    "2025": "d62fc0280208cb2dd94e513ecbdbd3089d5c97bbe11448ee04d296d23ec0e541"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "manifest_type": "phase-1a-architecture-decision",
+  "manifest_version": "1.0.0",
+  "created_date": "2026-09-19",
+  "training_eligible": false,
+  "scientific_gate": "BLOCKED",
+  "primary_pairing": {
+    "forecast": "NOAA GEFSv12 Reforecast",
+    "observation": "IMD 0.25 degree Daily Gridded Rainfall",
+    "eligible_initialization_period": {
+      "start": "2000-01-01T00:00:00Z",
+      "end": "2019-12-31T00:00:00Z",
+      "qualification": "Pair only windows whose exact IMD ending date exists and passes file-level QC. The final usable bounds remain inventory-dependent."
+    }
+  },
+  "fallback_pairing": {
+    "forecast": "NOAA GEFSv12 Reforecast",
+    "observation": "NASA GPM IMERG Final V07",
+    "reason": "Global 0.1 degree half-hourly research product can be aggregated to the exact 03:00-03:00 UTC window; it remains a secondary truth source."
+  },
+  "domains": {
+    "target": {
+      "south": 10.0,
+      "north": 22.0,
+      "west": 68.0,
+      "east": 80.0,
+      "grid": "IMD native 0.25 degree rectilinear land grid"
+    },
+    "regime_context": {
+      "south": 5.0,
+      "north": 30.0,
+      "west": 55.0,
+      "east": 95.0,
+      "grid": "0.5 degree context grid"
+    }
+  },
+  "daily_products": [
+    {
+      "name": "day1_24h",
+      "initialization_hour_utc": 0,
+      "accumulation_start_lead_hours": 3,
+      "accumulation_end_lead_hours": 27,
+      "observation_window": "previous-day 03:00 UTC to valid-date 03:00 UTC"
+    },
+    {
+      "name": "day2_24h",
+      "initialization_hour_utc": 0,
+      "accumulation_start_lead_hours": 27,
+      "accumulation_end_lead_hours": 51,
+      "observation_window": "previous-day 03:00 UTC to valid-date 03:00 UTC"
+    },
+    {
+      "name": "day3_24h",
+      "initialization_hour_utc": 0,
+      "accumulation_start_lead_hours": 51,
+      "accumulation_end_lead_hours": 75,
+      "observation_window": "previous-day 03:00 UTC to valid-date 03:00 UTC"
+    }
+  ],
+  "mvp_variables": [
+    {"archive_group": "apcp_sfc", "grib_short_name": "tp", "canonical_name": "precipitation", "members": "c00,p01,p02,p03,p04"},
+    {"native_name": "ugrd_pres", "canonical_name": "u850", "level": "850 hPa", "members": "c00 initially"},
+    {"native_name": "vgrd_pres", "canonical_name": "v850", "level": "850 hPa", "members": "c00 initially"},
+    {"native_name": "spfh_pres", "canonical_name": "q700", "level": "700 hPa", "members": "c00 initially"},
+    {"native_name": "hgt_pres_abv700mb", "canonical_name": "z500", "level": "500 hPa", "members": "c00 initially"},
+    {"native_name": "pres_msl", "canonical_name": "mslp", "level": "mean sea level", "members": "c00 initially"},
+    {"native_name": "pwat_eatm", "canonical_name": "tcwv", "level": "entire atmosphere", "members": "c00 initially"}
+  ],
+  "official_access_probe": {
+    "status": "first-grib-message-decoded-and-locally-subset-no-files-retained",
+    "source_url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2000/2000010100/c00/Days%3A1-10/apcp_sfc_2000010100_c00.grib2",
+    "index_url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2000/2000010100/c00/Days%3A1-10/apcp_sfc_2000010100_c00.grib2.idx",
+    "retrieval_date": "2026-09-19",
+    "index_byte_size": 5960,
+    "index_sha256": "acdbf4a70f8766de3c5394b529959c8838e47f5cc61e49721f634bc71b935e50",
+    "message_byte_range": [0, 422514],
+    "message_byte_size": 422515,
+    "message_sha256": "8bd2ef87b6225298e2ae2184ae98ee948591d3ab9357b960eddac04b896a77eb",
+    "observed_message_count": 80,
+    "observed_first_step_ranges": ["0-3", "0-6", "6-9", "6-12"],
+    "decoded_metadata": {
+      "edition": 2,
+      "archive_group": "apcp_sfc",
+      "grib_short_name": "tp",
+      "name": "Total Precipitation",
+      "units": "kg m**-2",
+      "type_of_level": "surface",
+      "data_date": 20000101,
+      "data_time": 0,
+      "step_range": "0-3",
+      "grid_type": "regular_ll",
+      "ni": 1440,
+      "nj": 721,
+      "global_point_count": 1038240,
+      "target_subset_bounds": [10.0, 22.0, 68.0, 80.0],
+      "target_subset_point_count": 2401,
+      "target_subset_nonfinite_count": 0
+    },
+    "limitations": [
+      "Only the first 0-3 hour message was decoded; a complete 24-hour window was not downloaded.",
+      "The index and message were held in memory and not retained as source files.",
+      "No IMD file was acquired; its direct file access, fill value, exact version, and file checksum remain unvalidated."
+    ]
+  },
+  "readiness_effect": "none"
+}

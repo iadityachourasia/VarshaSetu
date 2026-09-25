@@ -1,0 +1,10 @@
+experiment,model_type,rmse,mae,bias,r2,rmse_imp_pct
+A. Raw NWP Baseline,NWP Direct,2.1377,1.5235,-1.0201,0.8894,0.0
+B. Linear MOS / Statistical,Ridge Regression,1.3482,1.029,0.0868,0.956,36.93
+C. XGBoost 1000,XGBoost,1.5719,1.0408,0.1085,0.9402,26.47
+D. XGBoost 2000,XGBoost,1.5719,1.0408,0.1085,0.9402,26.47
+E. HistGradientBoosting,HistGradientBoosting,1.5428,0.9863,0.0252,0.9424,27.83
+F. Selected Global ML,HistGradientBoosting,1.5428,0.9863,0.0252,0.9424,27.83
+G. Global ML Without Terrain/Geo,HistGradientBoosting,1.5399,0.988,0.0463,0.9426,27.96
+H. Regime-Aware ML,Classifier + Per-Regime ML,1.3876,0.9735,0.0032,0.9534,35.09
+I. Oracle Regime ML,True Regime Oracle Routing,1.364,0.967,0.012,0.955,36.19

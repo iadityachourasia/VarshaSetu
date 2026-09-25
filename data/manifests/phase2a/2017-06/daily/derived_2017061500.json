@@ -1,0 +1,92 @@
+{
+  "atmospheric_context": {
+    "byte_size": 300228,
+    "path": "data/processed/phase2a/2017-06/daily/atmosphere_context_2017061500.nc",
+    "sha256": "bb5ea77602fba0faeea5e4cae81bf7bc3eb66b310604596d18fb84d30f7b4884"
+  },
+  "conservation_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initialization_time_utc": "2017-06-15T00:00:00+00:00",
+  "manifest_id": "phase2a-derived-2017061500",
+  "observation_records": [
+    {
+      "date_label": "2017-06-16T00:00:00",
+      "masked_cells": 1100,
+      "product": "day1_24h",
+      "record_index": 166,
+      "stats": {
+        "max": 106.23716735839844,
+        "mean": 10.435748497211732,
+        "min": 0.0,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "valid_cells": 1301,
+      "valid_date": "2017-06-16"
+    },
+    {
+      "date_label": "2017-06-17T00:00:00",
+      "masked_cells": 1100,
+      "product": "day2_24h",
+      "record_index": 167,
+      "stats": {
+        "max": 60.3353157043457,
+        "mean": 4.955451252527369,
+        "min": 0.0,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "valid_cells": 1301,
+      "valid_date": "2017-06-17"
+    },
+    {
+      "date_label": "2017-06-18T00:00:00",
+      "masked_cells": 1100,
+      "product": "day3_24h",
+      "record_index": 168,
+      "stats": {
+        "max": 54.942195892333984,
+        "mean": 3.1088220842531973,
+        "min": 0.0,
+        "negative_count": 0,
+        "nonfinite_count": 0
+      },
+      "valid_cells": 1301,
+      "valid_date": "2017-06-18"
+    }
+  ],
+  "predictor_expected": 18,
+  "predictor_valid": 18,
+  "processing_code_hashes": {
+    "backend/app/data/accumulation.py": "612275dde26d29d90f6fa476d548fed12f613ce33decd9a42c5e7c469105915e",
+    "backend/app/data/cache.py": "ba85e6f61bd3c31c0cb77b2978b31c0d5f80ec2d342e593eea20155531b65391",
+    "backend/app/data/monthly_models.py": "f3d997f7f408f1d1ee0c03909a6cf9ceab04451bc0dc287ad54ab4af50c47cae",
+    "backend/app/data/monthly_qc.py": "f8fd1d4bf7d8227f05abc748c53f9610da6945bc111d821dbda1290595a866a2",
+    "backend/app/data/regridding.py": "71b5099824a5da35eb9bd86c75bc28d84e5a4a9dae97cd8bbcbfa328f4f72964",
+    "backend/app/data_sources/imd_rainfall.py": "074930a582daa8cf2fc5ba0013b7add256088275155f480d0ab2ef895ea99c72",
+    "backend/app/data_sources/noaa_gefs_monthly.py": "e1bfa6252f4ad2529bb3bc3525f2417ef4943afad77b5933573181340686f6fc",
+    "scripts/data/acquire_monthly_pilot.py": "4294fc5fe54f3884edbeaeac830b6fedea9b308bdfe8b55f1b6d037c33eb5073"
+  },
+  "rainfall_complete": 11,
+  "rainfall_expected": 15,
+  "rainfall_pair": {
+    "byte_size": 182096,
+    "path": "data/processed/phase2a/2017-06/daily/rainfall_pair_2017061500.nc",
+    "sha256": "b0537ea387aba8f7f2e74baaa840e035b78e72ebf9a35dbd5466054a1e10d502"
+  },
+  "source_manifest": "data/manifests/phase2a/2017-06/daily/source_2017061500.json",
+  "source_manifest_sha256": "e530f6d4733609a2fd9aa53ff9a3dbcf1e5c96e4b3fe3c919d95047dfb8f48fc",
+  "status": "PARTIAL",
+  "training_eligible": false
+}

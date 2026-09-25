@@ -1,0 +1,371 @@
+- generic [active] [ref=f10e1]:
+  - generic [ref=f10e2]:
+    - link "Skip to content" [ref=f10e3] [cursor=pointer]:
+      - /url: "#main-content"
+    - complementary [ref=f10e4]:
+      - link "VarshaSetu overview" [ref=f10e5] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=f10e6]: V
+      - navigation "Primary"
+    - generic [ref=f10e7]:
+      - banner [ref=f10e8]:
+        - generic [ref=f10e9]:
+          - generic [ref=f10e10]: VARSHASetu / SCIENTIFIC WORKSPACE
+          - generic [ref=f10e11]: 2019 JJAS historical test · read-only artifacts
+        - generic [ref=f10e12]: Prototype scientific ready
+      - main [ref=f10e14]:
+        - generic [ref=f10e15]:
+          - generic [ref=f10e16]:
+            - generic [ref=f10e17]:
+              - heading "Extreme Rain" [level=1] [ref=f10e18]
+              - paragraph [ref=f10e19]: Calibrated event probabilities on the verified historical forecast grid.
+            - generic [ref=f10e20]: Historical scientific prototype · not operational
+          - generic "Historical case selector" [ref=f10e21]:
+            - generic [ref=f10e22]:
+              - generic [ref=f10e23]:
+                - generic [ref=f10e24]: HISTORICAL CASE
+                - strong [ref=f10e25]: 07 Aug 2019, 00:00 UTC
+              - button "Previous case" [ref=f10e26] [cursor=pointer]
+              - button "Next case" [ref=f10e29] [cursor=pointer]
+              - generic [ref=f10e32]:
+                - generic [ref=f10e33]: Select historical case
+                - combobox "Select historical case" [ref=f10e34]:
+                  - option "01 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "02 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "03 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "04 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "05 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "05 Jun 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "05 Jun 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "06 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "06 Jun 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "06 Jun 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "07 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "07 Jun 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "08 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "09 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "09 Jun 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "09 Jun 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "10 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "10 Jun 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "10 Jun 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "11 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "11 Jun 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "11 Jun 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "12 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "12 Jun 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "13 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "13 Jun 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "13 Jun 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "14 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "14 Jun 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "15 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "15 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "16 Jun 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "16 Jun 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "17 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "17 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "18 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "18 Jun 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "19 Jun 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "19 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "19 Jun 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "20 Jun 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "20 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "21 Jun 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "21 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "21 Jun 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "22 Jun 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "23 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "23 Jun 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "24 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "24 Jun 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "25 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "26 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "27 Jun 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "27 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "27 Jun 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "28 Jun 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "28 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "29 Jun 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "29 Jun 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "30 Jun 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "30 Jun 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "30 Jun 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "01 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "01 Jul 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "02 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "02 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "02 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "03 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "03 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "04 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "04 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "05 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "05 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "05 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "06 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "06 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "07 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "07 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "07 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "08 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "08 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "08 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "09 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "09 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "10 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "11 Jul 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "11 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "12 Jul 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "13 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "14 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "14 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "14 Jul 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "15 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "15 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "16 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "16 Jul 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "16 Jul 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "17 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "17 Jul 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "17 Jul 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "18 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "19 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "20 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "21 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "22 Jul 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "22 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "23 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "23 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "23 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "24 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "24 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "25 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "25 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "26 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "27 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "27 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "28 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "29 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "29 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "30 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "30 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "30 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "31 Jul 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "31 Jul 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "31 Jul 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "01 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "01 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "01 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "02 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "02 Aug 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "02 Aug 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "03 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "03 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "03 Aug 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "04 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "04 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "04 Aug 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "05 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "05 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "05 Aug 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "06 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "06 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "07 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "07 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced" [selected]
+                  - option "07 Aug 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "08 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "08 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "09 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "09 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "09 Aug 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "10 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "10 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "11 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "12 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "12 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "13 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "13 Aug 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "13 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "14 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "14 Aug 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "15 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "16 Aug 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "17 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "18 Aug 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "19 Aug 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "20 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "20 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "21 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "21 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "22 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "22 Aug 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "22 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "23 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "23 Aug 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "24 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "24 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "25 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "26 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "26 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "27 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "27 Aug 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "27 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "28 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "28 Aug 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "29 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "29 Aug 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "29 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "30 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "31 Aug 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "31 Aug 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "01 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "01 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "02 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "02 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "02 Sept 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "03 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "03 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "03 Sept 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "04 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "04 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "04 Sept 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "05 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "05 Sept 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "05 Sept 2019, 00:00 UTC · Day 3 · Low / Depression Influenced"
+                  - option "06 Sept 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "06 Sept 2019, 00:00 UTC · Day 2 · Low / Depression Influenced"
+                  - option "06 Sept 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "07 Sept 2019, 00:00 UTC · Day 1 · Low / Depression Influenced"
+                  - option "07 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "08 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "08 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "09 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "09 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "09 Sept 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "10 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "10 Sept 2019, 00:00 UTC · Day 3 · Active Monsoon"
+                  - option "11 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "11 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "11 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "12 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "13 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "13 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "13 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "14 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "14 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "14 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "15 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "15 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "16 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "16 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "16 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "17 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "17 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "17 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "18 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "18 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "19 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "20 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "21 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "21 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "22 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "23 Sept 2019, 00:00 UTC · Day 1 · Active Monsoon"
+                  - option "23 Sept 2019, 00:00 UTC · Day 2 · Active Monsoon"
+                  - option "23 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "24 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "25 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "25 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "26 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "27 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "27 Sept 2019, 00:00 UTC · Day 2 · Break / Weak Monsoon"
+                  - option "27 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "28 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "28 Sept 2019, 00:00 UTC · Day 3 · Break / Weak Monsoon"
+                  - option "29 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+                  - option "30 Sept 2019, 00:00 UTC · Day 1 · Break / Weak Monsoon"
+            - generic [ref=f10e35]:
+              - generic [ref=f10e36]:
+                - text: Lead
+                - combobox "Lead" [ref=f10e37]:
+                  - option "All leads" [selected]
+                  - option "Day 1"
+                  - option "Day 2"
+                  - option "Day 3"
+              - generic [ref=f10e38]:
+                - text: Regime
+                - combobox "Regime" [ref=f10e39]:
+                  - option "All regimes" [selected]
+                  - option "Active"
+                  - option "Break / Weak"
+                  - option "Low / Depression"
+              - generic [ref=f10e40]:
+                - text: Demo cases
+                - combobox "Demo cases" [ref=f10e41]:
+                  - option "Choose official case" [selected]
+                  - option "07 Aug 2019, 00:00 UTC · Day 2"
+                  - option "08 Aug 2019, 00:00 UTC · Day 1"
+                  - option "04 Aug 2019, 00:00 UTC · Day 3"
+                  - option "01 Aug 2019, 00:00 UTC · Day 1"
+                  - option "02 Aug 2019, 00:00 UTC · Day 2"
+                  - option "02 Aug 2019, 00:00 UTC · Day 3"
+          - group "Event threshold" [ref=f10e42]:
+            - button "Heavy · ≥64.5 mm / 24 h" [pressed] [ref=f10e43] [cursor=pointer]
+            - button "Very Heavy · ≥115.6 mm / 24 h" [ref=f10e44] [cursor=pointer]
+          - status "Loading verified probabilities" [ref=f10e45]
+          - generic [ref=f10e50]:
+            - heading "Reliability" [level=2] [ref=f10e51]
+            - paragraph [ref=f10e52]: Predicted probability versus observed event frequency · 2019 held-out test
+          - generic [ref=f10e55]:
+            - strong [ref=f10e56]: Read the curve with counts.
+            - paragraph [ref=f10e57]: Each point represents a non-empty probability bin. The diagonal indicates perfect reliability. Upper bins with zero samples are not evidence of calibration.
+            - table [ref=f10e58]:
+              - caption [ref=f10e59]: Reliability bin counts
+              - rowgroup [ref=f10e60]:
+                - row [ref=f10e61]:
+                  - columnheader "Forecast bin" [ref=f10e62]
+                  - columnheader "Samples" [ref=f10e63]
+                  - columnheader "Observed frequency" [ref=f10e64]
+              - rowgroup [ref=f10e65]:
+                - row [ref=f10e66]:
+                  - rowheader "0–10%" [ref=f10e67]
+                  - cell "308,001" [ref=f10e68]
+                  - cell "1.2%" [ref=f10e69]
+                - row [ref=f10e70]:
+                  - rowheader "10–20%" [ref=f10e71]
+                  - cell "11,409" [ref=f10e72]
+                  - cell "13.2%" [ref=f10e73]
+                - row [ref=f10e74]:
+                  - rowheader "20–30%" [ref=f10e75]
+                  - cell "4,441" [ref=f10e76]
+                  - cell "26.4%" [ref=f10e77]
+                - row [ref=f10e78]:
+                  - rowheader "30–40%" [ref=f10e79]
+                  - cell "3,854" [ref=f10e80]
+                  - cell "34.7%" [ref=f10e81]
+                - row [ref=f10e82]:
+                  - rowheader "40–50%" [ref=f10e83]
+                  - cell "2,921" [ref=f10e84]
+                  - cell "47.5%" [ref=f10e85]
+                - row [ref=f10e86]:
+                  - rowheader "50–60%" [ref=f10e87]
+                  - cell "1,129" [ref=f10e88]
+                  - cell "60.4%" [ref=f10e89]
+                - row [ref=f10e90]:
+                  - rowheader "60–70%" [ref=f10e91]
+                  - cell "0" [ref=f10e92]
+                  - cell "Undefined" [ref=f10e93]
+                - row [ref=f10e94]:
+                  - rowheader "70–80%" [ref=f10e95]
+                  - cell "0" [ref=f10e96]
+                  - cell "Undefined" [ref=f10e97]
+                - row [ref=f10e98]:
+                  - rowheader "80–90%" [ref=f10e99]
+                  - cell "0" [ref=f10e100]
+                  - cell "Undefined" [ref=f10e101]
+                - row [ref=f10e102]:
+                  - rowheader "90–100%" [ref=f10e103]
+                  - cell "0" [ref=f10e104]
+                  - cell "Undefined" [ref=f10e105]
+  - button "Open Next.js Dev Tools" [ref=f10e111] [cursor=pointer]

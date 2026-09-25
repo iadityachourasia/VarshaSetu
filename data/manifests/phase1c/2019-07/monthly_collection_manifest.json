@@ -1,0 +1,269 @@
+{
+  "atmospheric_fields": [
+    "u850",
+    "v850",
+    "q700",
+    "z500",
+    "mslp",
+    "pwat"
+  ],
+  "child_manifest_hashes": {
+    "derived:2019070100": "8de60d5d9ee53aebcb6984ab305a19236f1be1d3b807a01b8fea7b6af0e8fb61",
+    "derived:2019070200": "6c86717ec77673a40cc0536fb9a099889f8f17d317c95d26427eb5831af84995",
+    "derived:2019070300": "8518e83d70cfd1f515f754db3b0d7f4f18bc4bba037186ba0afd69069afd957f",
+    "derived:2019070400": "68048d6e9cdabfb957d20d10bb7f0ced4f0df04984438f835355e64556bf70a3",
+    "derived:2019070500": "4452deecf904cb12fa2335945180079feccd6cdaf47eb424f804accde5aafdac",
+    "derived:2019070600": "5bc630c2336025a676f069de25752015cd3b5af95ab8d779fe8f94647f1b0be5",
+    "derived:2019070700": "bd33180734ea7c879f523afeb3597c1fe978886c5d4c789ff1001a91e5b67001",
+    "derived:2019070800": "8abc9c4b097a1b156a239c4830c8a1403f80f4527f7402e3c6840d6ae5e5ff63",
+    "derived:2019070900": "7e8ce48b445d2260e8448cffd8e3fbfb35297adbfbf43d7bc4a0303ee93a7413",
+    "derived:2019071000": "8b029197408c69f0b2d9f354be3bf6c3bd26e354f73974f5530e7edef9c943c4",
+    "derived:2019071100": "73c17a8d581bc34fea98ea98a6ffb83b0c45fe21940c6d6a0101f16de069d96e",
+    "derived:2019071200": "6c1a077a2b0007011f90bb9652fec436ea02eb126adaed7d4943bd96640da6ed",
+    "derived:2019071300": "28808f2302b6a859a8975b3cc2ff0b816ac12d9162d471e4aa6afd0035962438",
+    "derived:2019071400": "c596f1794f44545e4f4377c3593a938bd91f76f7d952ff2975b8a087137f7e61",
+    "derived:2019071500": "6ad9db1eadc79fb218c9328de7fbe62af2a7a6e0d7af2ffd4170622d8168c3c0",
+    "derived:2019071600": "91962a517e1ad1699227359fdec7c38bd0e45f562fac915caabd37542fd3c5ed",
+    "derived:2019071700": "080612bf636e7ebba98893750fe1d1ed0e9378b557d650648ef7c7d5b28ea154",
+    "derived:2019071800": "dde0e0902cd0e280d3eb0f463f5c3ee51d553b3e1451c144cfb0b22f2745deae",
+    "derived:2019071900": "f042cf8e1d37f80922a7643f68dd74135bd991b3348b882aad8eeabd6e80ea7b",
+    "derived:2019072000": "bfabcf273f09189c15c2c64f475011d6ec41481bb4823cebd32b56d5075ca1a3",
+    "derived:2019072100": "fe1b00bd030b0ec5f0e5f9b637a6f46ac88130eeb37458e21dea0bfdf24a7270",
+    "derived:2019072200": "11fa889cc155413d23df615b95c55539379b063ee862e140f55c48dc6ed53b78",
+    "derived:2019072300": "bfd4270cefa020ab348145d4e29f31bf43f300bea70ee49ee9a16ad62928f459",
+    "derived:2019072400": "09e975fa0482de06afdcbf6af40000b43c7f5d6727a0dd3446a21dd6ed66b06a",
+    "derived:2019072500": "faaa8e407c47070ff9e354560fa8f2c80b018f59e49b4b9114ce4489a99bb0d5",
+    "derived:2019072600": "a3a1abe8325e142682dfa67fe57d907a78df106a6033d07116cc79698599305f",
+    "derived:2019072700": "5dcf254636aeac49717ef79b77abdb8a36c67f84fa0b05151fd3d2dab4064ea4",
+    "derived:2019072800": "7d603eecc845a2fc6aefb5089e83f48ed388da0aa6cb7ffc8c01db7f3fa98718",
+    "derived:2019072900": "15c8d0c3b7c5cb35f51363c418b69c9450b30720a1cac0801c7056a8f200d5ac",
+    "derived:2019073000": "3fde93a24596d3e0f3d61320941ad842d7db0e4fe8b7e732bb7cdd961b51827e",
+    "derived:2019073100": "86c290fe62b22aba86ca785a1bf1c6c071f2d9815339d38f7041a3bc89e29ce8",
+    "source:2019070100": "af4291f784a39713c44395b30e9b769378d59f6458a7eb23e4bd3a06d576d6c9",
+    "source:2019070200": "fe0160aa7ee869b515c987ffccf0616b66242dd8729591be11b11d2f6b2ced28",
+    "source:2019070300": "01a090511bf520a8bbf2df0bde851b1a9d078c3d4d0d4fd8111bd1ac562c3d4c",
+    "source:2019070400": "1f2687b93ca2780ab72655ba7ec6bc8ebf57dbf0a52ede797372ee54316ba500",
+    "source:2019070500": "515ddcb923f55ed238d8d616b07cf77048b476c8146b3a2fafef66da2242f0ea",
+    "source:2019070600": "b52c28a8ac76a2256fddd5eaad93b2766d70525eeb8d628a1e7f246d075f878f",
+    "source:2019070700": "da79c923d6a4869566707541c9b33db2c85f94042fee7f1a53615a516efafbd6",
+    "source:2019070800": "6c9e1b86530929f295f380529ab754e5d739fd6d665d48d6b850e1694d790f56",
+    "source:2019070900": "716bc5c4092f45201875fa19dc8adccad4455eec38e2c2512b6fc8e83db6ed7b",
+    "source:2019071000": "a586a937e6fd2abc610688c5466479f396424f86b7fae7518a275a9a59337b61",
+    "source:2019071100": "7e9d72952d645492783d3a428ec20325e49b6f00e146b9f532a76ab3498979be",
+    "source:2019071200": "93d580113dd4cc1333acbd75be30a4d410e8206be253df03a4be1d47b3906643",
+    "source:2019071300": "d980e54b3ddb1dd559f0e94c11e0e5b105af7a8adca47e190145b89b57d85d9d",
+    "source:2019071400": "935d6e6e7164c332923be7eef8c3f7af215769d2cb5ead2f121bd3c2c88ff1ea",
+    "source:2019071500": "3781c5f0b18f7b4ba2370c5c472fc9ad9a2ee6d80446bacf179edfca2fe17cf6",
+    "source:2019071600": "74534d71e0536c9bf526908ded5afc06f92d52c1befb4cb4d1ad9dab6c702a80",
+    "source:2019071700": "ff3e0d113e3b8ad56d9833e123774f306eb5945c8f060b5eee14960060554203",
+    "source:2019071800": "4c07017e199505b6f174198107b5dc839a4269b5b7c025410a367c6e41a717c9",
+    "source:2019071900": "47cd3c84bfc09b7e62e723d111a523bf43765b3b8f6a30eb77c191816e02a864",
+    "source:2019072000": "9b9da50cd281f5eb0c5d4566cb84b3d3a00f76b5c32f4599f4a7aaa174cd4752",
+    "source:2019072100": "e8eb34f6ddd8ec6deabf16da725f3dadb9abe2d637ea4e70c1e830592b5c37ae",
+    "source:2019072200": "0652666097771d1d2d95298e197c02f016876865596eb0541836f8f396f9769e",
+    "source:2019072300": "bc19f2e5f994db879a4e8e5f5b9c1645463d4891c3f30ea7c8886fd8c4ec307f",
+    "source:2019072400": "d18303ae4c0ade42c924f467a87d3b3bef0247ca7302365769e688c7c70ea944",
+    "source:2019072500": "7f001a1d5ca5ca6b87a0ec06e104e0cb84f25ba0d26f7f63dfa9c701a11a35e2",
+    "source:2019072600": "05ce3e74c1e57c96e374c3225b39ac8dcdb66bc9e9d5b8f507afd5ea19e3d5b1",
+    "source:2019072700": "719d6797c0bacf8af44bd6568440b79ea664d443fe73edcb94ac3af50496fa33",
+    "source:2019072800": "f6462d8e8dbc9aa4ed5a6cdb10905fd9ded7bf81bdf36fcdd9c3b42773314eef",
+    "source:2019072900": "c363a9cc9de08b129449a52a9c9a52d84788ea91b303ba5a51aa508ebe09838d",
+    "source:2019073000": "05b93832bf2c911b22ec7b70c9b357f91573b5fe3576ff7ad85578e87833e669",
+    "source:2019073100": "a5ab57e2f99a55ef6abf96bd5155caa4038694215c5520e66b3cb26f1290a552"
+  },
+  "collection_id": "phase1c-july-2019-v1",
+  "context_domain": {
+    "east": 95.0,
+    "north": 30.0,
+    "resolution_degrees": 0.5,
+    "south": 5.0,
+    "west": 55.0
+  },
+  "ensemble_members": [
+    "c00",
+    "p01",
+    "p02",
+    "p03",
+    "p04"
+  ],
+  "expected_initializations": 31,
+  "failed_cases": [
+    {
+      "initialization": "2019072200",
+      "member": "p01",
+      "product": "day2_24h",
+      "reason": "ValueError: materially negative reconstructed precipitation for 39--42",
+      "source_chunk_bytes_shared": 7727906,
+      "status": "FAIL"
+    }
+  ],
+  "forecast_provider": "NOAA/NCEP GEFSv12 Reforecast",
+  "observation_provider": "India Meteorological Department 0.25 degree Daily Gridded Rainfall",
+  "observed_initializations": 31,
+  "period": {
+    "end": "2019-07-31",
+    "month": "2019-07",
+    "start": "2019-07-01"
+  },
+  "processed_bytes": {
+    "daily_atmospheric_context": 9307068,
+    "daily_manifests": 8578200,
+    "daily_rainfall_pairs": 5644976,
+    "qc_csv_tables": 42722,
+    "regridding_weights": 57816,
+    "storage_evaluation_netcdf": 14805712,
+    "storage_evaluation_zarr": 8670122,
+    "total": 47106616
+  },
+  "processing_code_hashes": {
+    "backend/app/data/accumulation.py": "b2a175a7f2a669073feed04e2acfab9704fcf45bb18bf99e1ed569cdc9c96fac",
+    "backend/app/data/cache.py": "b628a0f6d305c2aadb55746c355b21bac8261ba91391590f55c84ad3f7dd3659",
+    "backend/app/data/monthly_models.py": "58dcdb00a28c8971320f89f612e7c6eca138705b660f18a8963db16ac489a344",
+    "backend/app/data/monthly_qc.py": "f8fd1d4bf7d8227f05abc748c53f9610da6945bc111d821dbda1290595a866a2",
+    "backend/app/data/regridding.py": "71b5099824a5da35eb9bd86c75bc28d84e5a4a9dae97cd8bbcbfa328f4f72964",
+    "backend/app/data_sources/imd_rainfall.py": "074930a582daa8cf2fc5ba0013b7add256088275155f480d0ab2ef895ea99c72",
+    "backend/app/data_sources/noaa_gefs_monthly.py": "0fb686cec408a80116c0663decb00c39968fc1aae0506ac19a1da6064924d563",
+    "scripts/data/acquire_monthly_pilot.py": "5eb4ea0d16a386dd14bb7f7d5c55b7120cde22878ed4c1a0b68d1eff7c9e6fbe"
+  },
+  "qc_summary": {
+    "conservation": {
+      "count": 464,
+      "failures": 0,
+      "maximum": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "tolerance": 1e-10
+    },
+    "event_coverage": {
+      "days_with_heavy_cell": 32,
+      "days_with_very_heavy_cell": 27,
+      "district_counts": "not_computed:no_authoritative_district_geometry",
+      "maximum_observed_rainfall_mm": 364.3852233886719,
+      "total_heavy_grid_cell_events": 1452,
+      "total_very_heavy_grid_cell_events": 347,
+      "unique_observation_days": 33
+    },
+    "initialization_status_counts": {
+      "BLOCKED": 0,
+      "FAIL": 0,
+      "PARTIAL": 1,
+      "PASS": 30
+    },
+    "predictor_expected": 558,
+    "predictor_statistics": {
+      "mslp": {
+        "initial_warning_bounds": [
+          80000.0,
+          110000.0
+        ],
+        "max": 102077.5390625,
+        "mean": 100338.16578246483,
+        "min": 98534.9453125,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "pwat": {
+        "initial_warning_bounds": [
+          0.0,
+          100.0
+        ],
+        "max": 82.30000305175781,
+        "mean": 49.71853725187881,
+        "min": 2.200000047683716,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "q700": {
+        "initial_warning_bounds": [
+          0.0,
+          0.1
+        ],
+        "max": 0.0173799991607666,
+        "mean": 0.007734865990204033,
+        "min": 0.0003100000030826777,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "u850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 29.504243850708008,
+        "mean": 9.146199066366629,
+        "min": -26.48892593383789,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "v850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 22.550010681152344,
+        "mean": 2.0218610008179945,
+        "min": -25.606836318969727,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "z500": {
+        "initial_warning_bounds": [
+          4000.0,
+          7000.0
+        ],
+        "max": 5920.11083984375,
+        "mean": 5837.814377690978,
+        "min": 5740.587890625,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      }
+    },
+    "predictor_valid": 558,
+    "rainfall_complete": 464,
+    "rainfall_expected": 465,
+    "weight_sha256": "37a3fc3244c0ce6c41bf6c580de8748194e7e1dc839e73e0e17285530e245523"
+  },
+  "rainfall_products": [
+    "day1_24h",
+    "day2_24h",
+    "day3_24h"
+  ],
+  "source_bytes": {
+    "atmospheric_messages": 327438341,
+    "cache_excluding_receipts": 1576023863,
+    "cache_receipts": 315702,
+    "imd_existing_source": 25431832,
+    "imd_incremental_network": 0,
+    "indexes": 8140921,
+    "precipitation_messages": 1240444601
+  },
+  "storage_format_evaluation": {
+    "library_versions": {
+      "scipy": "1.16.1",
+      "zarr": "3.2.1"
+    },
+    "netcdf": {
+      "append_chunk_practicality": "fixed classic NetCDF output; rewrite needed for this implementation",
+      "byte_size": 14805712,
+      "full_forecast_read_seconds": 0.02446719999989,
+      "metadata_preservation": "CF-style variables and attributes",
+      "portability": "single file; broadly portable",
+      "random_slice_mean_seconds": 0.02363884666666915
+    },
+    "zarr": {
+      "append_chunk_practicality": "chunked hierarchy supports initialization-wise extension",
+      "byte_size": 8670122,
+      "full_forecast_read_seconds": 0.824986699999954,
+      "metadata_preservation": "group and array attributes; CF conventions require project schema",
+      "portability": "many files; efficient object-store/chunk access, less convenient to copy",
+      "random_slice_mean_seconds": 0.00692871333333945
+    }
+  },
+  "target_domain": {
+    "east": 80.0,
+    "north": 22.0,
+    "south": 10.0,
+    "west": 68.0
+  },
+  "training_eligible": false
+}

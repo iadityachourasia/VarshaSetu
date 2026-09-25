@@ -1,0 +1,50 @@
+{
+  "artifact_version": "phase2a-regimes-v1",
+  "artifacts": {
+    "feature_registry.json": {
+      "byte_size": 3568,
+      "sha256": "dd341008bf7b425c3f65a915be381f45b21a5649b2d97475758b5003c32d20da"
+    },
+    "pseudo_label_definition.json": {
+      "byte_size": 1257,
+      "sha256": "fab7ebfd231eb9187d376b6b8a1f2361c1bceabb5ac83122811f4a9f02d75cac"
+    },
+    "regime_cases_2017_2018.csv": {
+      "byte_size": 298765,
+      "sha256": "b222e8f77cebad897a5dacbaecb2036db0de855e1a3655da4c81647677f30269"
+    },
+    "regime_classifier.safe.json": {
+      "byte_size": 2597,
+      "sha256": "0761ba62e1aafbf12228f604d43a7b288d5beb3a7e7f01536a5df62b51b6a204"
+    },
+    "validation_metrics.json": {
+      "byte_size": 9102,
+      "sha256": "a2bf889eaf6dc2a45f3f34c51e1d4caf7736751c2c47585ed238b9a79c036c93"
+    },
+    "validation_reliability.csv": {
+      "byte_size": 2232,
+      "sha256": "5f39b3c3f35331c1c01ce0aba49b458667cd21f100eb435271ebc5883f4f5ea8"
+    }
+  },
+  "feature_names": [
+    "pwat_area_mean",
+    "q700_area_mean",
+    "u850_area_mean",
+    "v850_area_mean",
+    "wind_speed_area_mean",
+    "moisture_transport_area_mean",
+    "mslp_area_mean",
+    "mslp_minimum",
+    "mslp_range",
+    "z500_area_mean",
+    "relative_vorticity_area_mean",
+    "relative_vorticity_p90"
+  ],
+  "held_out_test_accessed": false,
+  "held_out_test_year": 2019,
+  "random_seed": 26080,
+  "training_cases": 366,
+  "training_year": 2017,
+  "validation_cases": 366,
+  "validation_year": 2018
+}

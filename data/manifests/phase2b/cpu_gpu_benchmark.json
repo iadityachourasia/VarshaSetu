@@ -1,0 +1,63 @@
+{
+  "cpu": {
+    "rounds": 60,
+    "seconds": 0.22963100000015402,
+    "status": "ok",
+    "train_rows": 50000,
+    "validation_rows": 20000
+  },
+  "cuda": {
+    "rounds": 60,
+    "seconds": 28.589846899999884,
+    "status": "ok",
+    "train_rows": 50000,
+    "validation_rows": 20000
+  },
+  "equivalence": {
+    "cuda_repeatability": {
+      "maximum_absolute_prediction_delta": 0.0,
+      "prediction_correlation": 0.9999999999999998,
+      "seconds": 0.32721489999994446,
+      "stable": true,
+      "status": "ok"
+    },
+    "maximum_absolute_csi_drift": 0.012312231129081558,
+    "passed": false,
+    "prediction_correlation": 0.9882553531888851,
+    "relative_rmse_drift": 0.000895546210386857
+  },
+  "hardware": {
+    "gpu_before_fit": {
+      "query": "NVIDIA GeForce RTX 5050 Laptop GPU, 309, 8151, 61",
+      "status": "available"
+    },
+    "logical_cpu_count": 16,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "ram_available_bytes_before_fit": 12022792192,
+    "ram_total_bytes": 25380823040,
+    "xgboost_build_info": {
+      "BUILTIN_PREFETCH_PRESENT": false,
+      "CUDA_VERSION": [
+        12,
+        5
+      ],
+      "DEBUG": false,
+      "MM_PREFETCH_PRESENT": true,
+      "THRUST_VERSION": [
+        2,
+        6,
+        1
+      ],
+      "USE_CUDA": true,
+      "USE_DLOPEN_NCCL": false,
+      "USE_FEDERATED": false,
+      "USE_NCCL": false,
+      "USE_OPENMP": true,
+      "USE_RMM": false,
+      "libxgboost": "C:\\SIH26\\Varsha-NXT\\.venv\\Lib\\site-packages\\xgboost\\lib\\xgboost.dll"
+    },
+    "xgboost_version": "3.0.4"
+  },
+  "selected_device": "cpu"
+}

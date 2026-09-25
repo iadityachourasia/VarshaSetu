@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "record_type": "append_only_protected_artifact_supersession",
+  "historical_lock": "protected_artifact_integrity.json",
+  "historical_lock_sha256": "14e106b95ee5900e71bbca43b003a604d9c0eb44fee092f9e843f756666ac0a9",
+  "historical_lock_is_unchanged": true,
+  "historical_phase1b_status": "PASS",
+  "current_verification": {
+    "baseline_protected_artifacts_unchanged": 16,
+    "superseded_by_versioned_current_hash": 2,
+    "all_current_files_verified": true
+  },
+  "superseded_artifacts": {
+    "backend/app/api/routes.py": {
+      "phase1b_sha256": "2de319f85134652a41317f440d7741dca24476ac9ecdef8f5b5c06de4a3f22a7",
+      "current_sha256": "da030f32305f0936421163894fe2dd0b4825c28a4ca43029aba0c43f2d8d29ff",
+      "reason": "Later Phase 0/2A blocked-API status and audit wording were added. Scientific model, replay, verification, calibration, feature-importance, and sandbox outputs remain fail-closed with HTTP 409; no Phase 2B route was added or connected."
+    },
+    "backend/app/data/readiness.py": {
+      "phase1b_sha256": "778594ffe332049d379b5b0ce469bd53bf6b597c8427cde66167f7df0a02072e",
+      "current_sha256": "6498811db00e790ee10c6bbcb9cf37bbc33cd1f1de469358d82383bcfb2b9264",
+      "reason": "Readiness diagnostics were extended to report the current portable manifest-backed legacy-dataset blockers. The readiness gate remains not-ready and training/artifact inference remain blocked."
+    }
+  },
+  "policy": "The original Phase 1B lock is immutable historical evidence. Future checks must validate the original hashes for unaffected files and the versioned current hashes for explicitly superseded files; never rewrite old expected hashes to erase history."
+}

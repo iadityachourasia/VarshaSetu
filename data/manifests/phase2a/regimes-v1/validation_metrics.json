@@ -1,0 +1,282 @@
+{
+  "balanced_accuracy": 0.9423570383272933,
+  "by_lead": {
+    "24": {
+      "balanced_accuracy": 0.9341216216216216,
+      "case_count": 122,
+      "confusion_matrix_rows_true_columns_predicted": [
+        [
+          34,
+          2,
+          1
+        ],
+        [
+          2,
+          45,
+          1
+        ],
+        [
+          2,
+          0,
+          35
+        ]
+      ],
+      "interpretation": "classifier reproduction/consistency with deterministic prototype pseudo-labels; not objective meteorological truth",
+      "macro_f1": 0.9333270112217481,
+      "multiclass_brier_score": 0.0944695373427163,
+      "multiclass_log_loss": 0.16244080825273982,
+      "per_class": {
+        "ACTIVE_MONSOON": {
+          "f1": 0.9066666666666666,
+          "precision": 0.8947368421052632,
+          "probability_maximum": 0.9994390512407644,
+          "probability_median": 0.03614107652341164,
+          "probability_minimum": 5.330507195365833e-10,
+          "recall": 0.918918918918919,
+          "support": 37
+        },
+        "BREAK_WEAK_MONSOON": {
+          "f1": 0.9473684210526315,
+          "precision": 0.9574468085106383,
+          "probability_maximum": 0.9999999994669493,
+          "probability_median": 0.11548478007565872,
+          "probability_minimum": 2.972846215343054e-15,
+          "recall": 0.9375,
+          "support": 48
+        },
+        "LOW_DEPRESSION_INFLUENCED": {
+          "f1": 0.9459459459459459,
+          "precision": 0.9459459459459459,
+          "probability_maximum": 0.9999990468243481,
+          "probability_median": 0.007297037299258068,
+          "probability_minimum": 7.899209147944017e-28,
+          "recall": 0.9459459459459459,
+          "support": 37
+        }
+      }
+    },
+    "48": {
+      "balanced_accuracy": 0.9185628440135334,
+      "case_count": 122,
+      "confusion_matrix_rows_true_columns_predicted": [
+        [
+          36,
+          1,
+          4
+        ],
+        [
+          2,
+          43,
+          1
+        ],
+        [
+          2,
+          0,
+          33
+        ]
+      ],
+      "interpretation": "classifier reproduction/consistency with deterministic prototype pseudo-labels; not objective meteorological truth",
+      "macro_f1": 0.9161846778285135,
+      "multiclass_brier_score": 0.09842286801928384,
+      "multiclass_log_loss": 0.16773138728233838,
+      "per_class": {
+        "ACTIVE_MONSOON": {
+          "f1": 0.8888888888888888,
+          "precision": 0.9,
+          "probability_maximum": 0.999656172769541,
+          "probability_median": 0.02925540684885343,
+          "probability_minimum": 2.793907566361246e-10,
+          "recall": 0.8780487804878049,
+          "support": 41
+        },
+        "BREAK_WEAK_MONSOON": {
+          "f1": 0.9555555555555556,
+          "precision": 0.9772727272727273,
+          "probability_maximum": 0.9999999997206093,
+          "probability_median": 0.033607769140282726,
+          "probability_minimum": 6.403571063783755e-16,
+          "recall": 0.9347826086956522,
+          "support": 46
+        },
+        "LOW_DEPRESSION_INFLUENCED": {
+          "f1": 0.9041095890410958,
+          "precision": 0.868421052631579,
+          "probability_maximum": 0.999999932989456,
+          "probability_median": 0.021504463116176056,
+          "probability_minimum": 8.246150401095467e-27,
+          "recall": 0.9428571428571428,
+          "support": 35
+        }
+      }
+    },
+    "72": {
+      "balanced_accuracy": 0.9753460508901295,
+      "case_count": 122,
+      "confusion_matrix_rows_true_columns_predicted": [
+        [
+          37,
+          0,
+          1
+        ],
+        [
+          0,
+          42,
+          1
+        ],
+        [
+          1,
+          0,
+          40
+        ]
+      ],
+      "interpretation": "classifier reproduction/consistency with deterministic prototype pseudo-labels; not objective meteorological truth",
+      "macro_f1": 0.9752583087769033,
+      "multiclass_brier_score": 0.07135492982635774,
+      "multiclass_log_loss": 0.13369818361514832,
+      "per_class": {
+        "ACTIVE_MONSOON": {
+          "f1": 0.9736842105263158,
+          "precision": 0.9736842105263158,
+          "probability_maximum": 0.9990677350475144,
+          "probability_median": 0.021185640299564965,
+          "probability_minimum": 3.145380902880265e-10,
+          "recall": 0.9736842105263158,
+          "support": 38
+        },
+        "BREAK_WEAK_MONSOON": {
+          "f1": 0.9882352941176471,
+          "precision": 1.0,
+          "probability_maximum": 0.9999999996854618,
+          "probability_median": 0.022318882822767637,
+          "probability_minimum": 6.824887969479937e-14,
+          "recall": 0.9767441860465116,
+          "support": 43
+        },
+        "LOW_DEPRESSION_INFLUENCED": {
+          "f1": 0.963855421686747,
+          "precision": 0.9523809523809523,
+          "probability_maximum": 0.9999998808019954,
+          "probability_median": 0.0209073957480159,
+          "probability_minimum": 2.3465237885011163e-26,
+          "recall": 0.975609756097561,
+          "support": 41
+        }
+      }
+    }
+  },
+  "case_count": 366,
+  "confusion_matrix_rows_true_columns_predicted": [
+    [
+      107,
+      3,
+      6
+    ],
+    [
+      4,
+      130,
+      3
+    ],
+    [
+      5,
+      0,
+      108
+    ]
+  ],
+  "interpretation": "classifier reproduction/consistency with deterministic prototype pseudo-labels; not objective meteorological truth",
+  "macro_f1": 0.9415023969496733,
+  "multiclass_brier_score": 0.08808244506278595,
+  "multiclass_log_loss": 0.15462345971674218,
+  "per_class": {
+    "ACTIVE_MONSOON": {
+      "f1": 0.9224137931034483,
+      "precision": 0.9224137931034483,
+      "probability_maximum": 0.999656172769541,
+      "probability_median": 0.03162153832446462,
+      "probability_minimum": 2.793907566361246e-10,
+      "recall": 0.9224137931034483,
+      "support": 116
+    },
+    "BREAK_WEAK_MONSOON": {
+      "f1": 0.9629629629629629,
+      "precision": 0.9774436090225563,
+      "probability_maximum": 0.9999999997206093,
+      "probability_median": 0.04188488465762008,
+      "probability_minimum": 6.403571063783755e-16,
+      "recall": 0.948905109489051,
+      "support": 137
+    },
+    "LOW_DEPRESSION_INFLUENCED": {
+      "f1": 0.9391304347826087,
+      "precision": 0.9230769230769231,
+      "probability_maximum": 0.999999932989456,
+      "probability_median": 0.015443042391915508,
+      "probability_minimum": 7.899209147944017e-28,
+      "recall": 0.9557522123893806,
+      "support": 113
+    }
+  },
+  "qualitative_sanity_cases": [
+    {
+      "active_monsoon_score": 1.0624435148431122,
+      "initialization": "2018-06-06T00:00:00+00:00",
+      "lead_hours": 48,
+      "low_depression_score": 1.7630120058606875,
+      "mslp_minimum": 99016.78125,
+      "note": "forecast-field diagnostic only; no observation was consulted",
+      "product": "day2_24h",
+      "pseudo_label": "LOW_DEPRESSION_INFLUENCED",
+      "pwat_area_mean": 49.08576585667692,
+      "relative_vorticity_p90": 5.668817456029487e-05,
+      "selection": "strongest_low_depression_score",
+      "year": 2018
+    },
+    {
+      "active_monsoon_score": 2.4186529834880957,
+      "initialization": "2018-07-15T00:00:00+00:00",
+      "lead_hours": 48,
+      "low_depression_score": 1.6420239688483522,
+      "mslp_minimum": 98937.8515625,
+      "note": "forecast-field diagnostic only; no observation was consulted",
+      "product": "day2_24h",
+      "pseudo_label": "LOW_DEPRESSION_INFLUENCED",
+      "pwat_area_mean": 53.230761634597386,
+      "relative_vorticity_p90": 5.794372901845795e-05,
+      "selection": "strongest_active_score",
+      "year": 2018
+    },
+    {
+      "active_monsoon_score": -2.7076655871587523,
+      "initialization": "2018-09-28T00:00:00+00:00",
+      "lead_hours": 72,
+      "low_depression_score": -2.2716307761522025,
+      "mslp_minimum": 100402.8125,
+      "note": "forecast-field diagnostic only; no observation was consulted",
+      "product": "day3_24h",
+      "pseudo_label": "BREAK_WEAK_MONSOON",
+      "pwat_area_mean": 38.14956516402435,
+      "relative_vorticity_p90": 3.566805954889313e-05,
+      "selection": "weakest_active_score",
+      "year": 2018
+    }
+  ],
+  "training_class_counts": {
+    "ACTIVE_MONSOON": 137,
+    "BREAK_WEAK_MONSOON": 137,
+    "LOW_DEPRESSION_INFLUENCED": 92
+  },
+  "training_class_fractions": {
+    "ACTIVE_MONSOON": 0.3743169398907104,
+    "BREAK_WEAK_MONSOON": 0.3743169398907104,
+    "LOW_DEPRESSION_INFLUENCED": 0.25136612021857924
+  },
+  "validation_class_counts": {
+    "ACTIVE_MONSOON": 116,
+    "BREAK_WEAK_MONSOON": 137,
+    "LOW_DEPRESSION_INFLUENCED": 113
+  },
+  "validation_class_fractions": {
+    "ACTIVE_MONSOON": 0.31693989071038253,
+    "BREAK_WEAK_MONSOON": 0.3743169398907104,
+    "LOW_DEPRESSION_INFLUENCED": 0.3087431693989071
+  }
+}

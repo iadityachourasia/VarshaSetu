@@ -1,0 +1,91 @@
+{
+  "atmosphere_expected": 2196,
+  "atmosphere_valid": 2196,
+  "dataset_version": "varshasetu-gefs12r-imd025-jjas-2000-2019-v2",
+  "eligibility_counts": {
+    "CONTROL_MODEL_ELIGIBLE": 258,
+    "EXTREME_EVENT_ELIGIBLE": 258,
+    "FSS_ELIGIBLE": 258,
+    "FULL_ENSEMBLE_ELIGIBLE": 187,
+    "PAIR_VALID": 258,
+    "REGIME_ELIGIBLE": 366,
+    "REJECTED": 0,
+    "SOURCE_VALID": 366
+  },
+  "event_inventory": {
+    "days": 124,
+    "heavy_days": 101,
+    "heavy_grid_cell_events": 2290,
+    "maximum_observed_rainfall_mm": 358.34234619140625,
+    "very_heavy_days": 54,
+    "very_heavy_grid_cell_events": 430
+  },
+  "imd_source": "data/manifests/phase2a/sources/imd_rf25_2017.json",
+  "initializations_expected": 122,
+  "initializations_observed": 122,
+  "monthly_admission": {
+    "2017-06": {
+      "admission": "MONTH_ACCEPTED_WITH_QUARANTINED_SAMPLES",
+      "atmosphere_expected": 540,
+      "atmosphere_valid": 540,
+      "invalid_units": 106,
+      "rainfall_expected": 450,
+      "rainfall_valid": 344
+    },
+    "2017-07": {
+      "admission": "MONTH_ACCEPTED_WITH_QUARANTINED_SAMPLES",
+      "atmosphere_expected": 558,
+      "atmosphere_valid": 558,
+      "invalid_units": 78,
+      "rainfall_expected": 465,
+      "rainfall_valid": 387
+    },
+    "2017-08": {
+      "admission": "MONTH_ACCEPTED_WITH_QUARANTINED_SAMPLES",
+      "atmosphere_expected": 558,
+      "atmosphere_valid": 558,
+      "invalid_units": 86,
+      "rainfall_expected": 465,
+      "rainfall_valid": 379
+    },
+    "2017-09": {
+      "admission": "MONTH_ACCEPTED_WITH_QUARANTINED_SAMPLES",
+      "atmosphere_expected": 540,
+      "atmosphere_valid": 540,
+      "invalid_units": 71,
+      "rainfall_expected": 450,
+      "rainfall_valid": 379
+    }
+  },
+  "monthly_manifest_lineage": {
+    "2017-06": {
+      "manifest": "data/manifests/phase2a/2017-06/monthly_collection_manifest.json",
+      "sha256": "a9b8ed995604c26e320687f566d8de50b294079f11cf31938d0a99f8e35e666e"
+    },
+    "2017-07": {
+      "manifest": "data/manifests/phase2a/2017-07/monthly_collection_manifest.json",
+      "sha256": "ae00c76feb89e2e42bb21d4f118c3d00153c65cf5337f1b47bff5af88de9c573"
+    },
+    "2017-08": {
+      "manifest": "data/manifests/phase2a/2017-08/monthly_collection_manifest.json",
+      "sha256": "0c0cbd5d9f5d20f092b648d65113e6d6651b782fc2a621410f6e7ad1de84539a"
+    },
+    "2017-09": {
+      "manifest": "data/manifests/phase2a/2017-09/monthly_collection_manifest.json",
+      "sha256": "7943334e726d1be5622431fd931dc0ca53ee2f57f9b8d2542213807f3e54095c"
+    }
+  },
+  "note": "Eligibility is case-tiered; rainfall-model training is not authorized in Phase 2A.",
+  "observation_pairings_expected": 366,
+  "observation_pairings_valid": 366,
+  "rainfall_expected": 1830,
+  "rainfall_quarantined": 341,
+  "rainfall_valid": 1489,
+  "role": "TRAIN",
+  "season": "2017-JJAS",
+  "season_admission": "SEASON_ACCEPTED_WITH_QUARANTINED_SAMPLES",
+  "seasonal_zarr": "data/processed/phase2a/2017-JJAS/varshasetu-gefs12r-imd025-2017-jjas-v2.zarr",
+  "seasonal_zarr_tree_sha256": "6e742e4f148cf0bca435293116785015379614eae17645968ee0106f29c88475",
+  "training_eligible": false,
+  "unique_observation_dates": 124
+}

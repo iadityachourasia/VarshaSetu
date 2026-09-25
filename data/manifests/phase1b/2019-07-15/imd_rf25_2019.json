@@ -1,0 +1,140 @@
+{
+  "access_method": "official form POST RF25=2019 to RF25.php",
+  "byte_size": 25431832,
+  "citation": "Pai D.S. et al. (2014), Development of a new high spatial resolution 0.25 degree daily gridded rainfall data set over India, MAUSAM 65(1), 1-18",
+  "disclaimer": "IMD states it cannot guarantee correctness in all circumstances and accepts no liability for errors, omissions, loss, or damage arising from use.",
+  "filename_or_object_key": "RF25_ind2019_rfp25.nc",
+  "grid": {
+    "coordinate_order": "latitude ascending, longitude ascending",
+    "latitude_range": [
+      6.5,
+      38.5
+    ],
+    "longitude_range": [
+      66.5,
+      100.0
+    ],
+    "resolution_degrees": 0.25,
+    "shape": [
+      129,
+      135
+    ]
+  },
+  "license_or_terms_reference": "Official page citation and disclaimer; Pai et al. (2014)",
+  "manifest_id": "imd-rf25-2019",
+  "netcdf_metadata": {
+    "dimensions": {
+      "LATITUDE": 129,
+      "LONGITUDE": 135,
+      "TIME": null
+    },
+    "format_magic": "43444601",
+    "global_attributes": {
+      "Conventions": "CF-1.0",
+      "history": "FERRET V6.82   20-Feb-26"
+    },
+    "variables": {
+      "LATITUDE": {
+        "attributes": {
+          "axis": "Y",
+          "point_spacing": "even",
+          "standard_name": "latitude",
+          "units": "degrees_north"
+        },
+        "dimensions": [
+          "LATITUDE"
+        ],
+        "dtype": "d",
+        "shape": [
+          129
+        ]
+      },
+      "LONGITUDE": {
+        "attributes": {
+          "axis": "X",
+          "modulo": 360.0,
+          "point_spacing": "even",
+          "standard_name": "longitude",
+          "units": "degrees_east"
+        },
+        "dimensions": [
+          "LONGITUDE"
+        ],
+        "dtype": "d",
+        "shape": [
+          135
+        ]
+      },
+      "RAINFALL": {
+        "attributes": {
+          "_FillValue": -999.0,
+          "history": "From ind2019_rfp25.grd",
+          "long_name": "Rainfall",
+          "missing_value": -999.0,
+          "units": "mm"
+        },
+        "dimensions": [
+          "TIME",
+          "LATITUDE",
+          "LONGITUDE"
+        ],
+        "dtype": "f",
+        "shape": [
+          365,
+          129,
+          135
+        ]
+      },
+      "TIME": {
+        "attributes": {
+          "axis": "T",
+          "standard_name": "time",
+          "time_origin": "31-DEC-1900",
+          "units": "days since 1900-12-31 00:00:00"
+        },
+        "dimensions": [
+          "TIME"
+        ],
+        "dtype": "d",
+        "shape": [
+          365
+        ]
+      }
+    }
+  },
+  "official_url": "https://imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html",
+  "pilot_field_metadata": {
+    "calendar": "CF default standard calendar",
+    "dimensions": [
+      "TIME",
+      "LATITUDE",
+      "LONGITUDE"
+    ],
+    "fill_value": -999.0,
+    "latitude_orientation": "ascending",
+    "longitude_convention": "0_to_360",
+    "longitude_orientation": "ascending",
+    "missing_value": -999.0,
+    "netcdf_time_label": "2019-07-15T00:00:00",
+    "rainfall_units": "mm",
+    "record_index": 195,
+    "time_units": "days since 1900-12-31 00:00:00",
+    "time_value": 43295.0
+  },
+  "provider": "India Meteorological Department, Climate Research and Services, Pune",
+  "retrieval_timestamp_utc": "2026-09-19T06:25:51.559427Z",
+  "sha256": "c551c563b3514d492a2de94c706c1c254d5826656738b4a8e7dbd83841344a5b",
+  "source_type": "observation",
+  "time_coverage": {
+    "accumulation_window_basis": "official external IMD 08:30 IST previous day to 08:30 IST current day; NetCDF does not encode start/end bounds",
+    "calendar": "CF default standard calendar",
+    "netcdf_time_label": "2019-07-15T00:00:00",
+    "pilot_record_index": 195,
+    "pilot_time_value": 43295.0,
+    "records": 365,
+    "time_units": "days since 1900-12-31 00:00:00",
+    "year": 2019
+  },
+  "units": "mm",
+  "variable": "RAINFALL"
+}

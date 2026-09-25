@@ -1,0 +1,12 @@
+{
+  "after_validation": {
+    "changed_artifacts": [],
+    "unchanged_count": 18
+  },
+  "before_reference": "data/manifests/phase1b/2019-07-15/protected_artifact_integrity.json",
+  "before_reference_sha256": "14e106b95ee5900e71bbca43b003a604d9c0eb44fee092f9e843f756666ac0a9",
+  "comparison": "protected Phase 1B baseline before Phase 1C vs recomputed hashes after Phase 1C",
+  "protected_artifact_count": 18,
+  "scientific_endpoint_behavior_covered_by": "backend/tests/test_pipeline.py",
+  "status": "PASS"
+}

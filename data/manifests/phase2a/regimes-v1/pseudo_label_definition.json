@@ -1,0 +1,53 @@
+{
+  "active_score_threshold": -0.11224853039783217,
+  "feature_mean": [
+    47.82246208750873,
+    0.007359377302788713,
+    6.86930122871398,
+    0.6831167704339642,
+    8.85994759104213,
+    441.2414551863704,
+    100546.53562717026,
+    99578.2838755123,
+    2311.5608990778687,
+    5848.341044245667,
+    2.6375958452485796e-06,
+    4.588352840375227e-05
+  ],
+  "feature_names": [
+    "pwat_area_mean",
+    "q700_area_mean",
+    "u850_area_mean",
+    "v850_area_mean",
+    "wind_speed_area_mean",
+    "moisture_transport_area_mean",
+    "mslp_area_mean",
+    "mslp_minimum",
+    "mslp_range",
+    "z500_area_mean",
+    "relative_vorticity_area_mean",
+    "relative_vorticity_p90"
+  ],
+  "feature_scale": [
+    3.0039140670268862,
+    0.0006324323141981384,
+    2.2297555163230114,
+    0.7780707725626969,
+    1.9934285733812473,
+    111.63433307853761,
+    175.2807452514311,
+    401.077945769873,
+    254.2719660664989,
+    9.403230746385736,
+    1.0474026254289223e-06,
+    6.157338094538496e-06
+  ],
+  "fitted_year": 2017,
+  "low_score_threshold": 0.6051076301446793,
+  "regime_names": [
+    "ACTIVE_MONSOON",
+    "BREAK_WEAK_MONSOON",
+    "LOW_DEPRESSION_INFLUENCED"
+  ],
+  "schema_version": 1
+}

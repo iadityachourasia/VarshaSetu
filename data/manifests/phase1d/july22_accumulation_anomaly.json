@@ -1,0 +1,544 @@
+{
+  "affected_cell_count": 2,
+  "affected_cells": [
+    {
+      "latitude": 16.25,
+      "longitude": 76.5,
+      "members": {
+        "c00": {
+          "accumulation_36_39_mm": 1.1,
+          "accumulation_36_42_mm": 7.2,
+          "increment_39_42_mm": 6.1,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p01": {
+          "accumulation_36_39_mm": 0.4,
+          "accumulation_36_42_mm": 0.2,
+          "increment_39_42_mm": -0.2,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p02": {
+          "accumulation_36_39_mm": 3.2,
+          "accumulation_36_42_mm": 12.3,
+          "increment_39_42_mm": 9.100000000000001,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p03": {
+          "accumulation_36_39_mm": 8.1,
+          "accumulation_36_42_mm": 19.400000000000002,
+          "increment_39_42_mm": 11.300000000000002,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p04": {
+          "accumulation_36_39_mm": 15.100000000000001,
+          "accumulation_36_42_mm": 39.5,
+          "increment_39_42_mm": 24.4,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        }
+      },
+      "p01_3x3_neighborhood": [
+        {
+          "accumulation_36_39_mm": 0.0,
+          "accumulation_36_42_mm": 0.0,
+          "increment_39_42_mm": 0.0,
+          "latitude": 16.0,
+          "longitude": 76.25
+        },
+        {
+          "accumulation_36_39_mm": 0.0,
+          "accumulation_36_42_mm": 0.0,
+          "increment_39_42_mm": 0.0,
+          "latitude": 16.0,
+          "longitude": 76.5
+        },
+        {
+          "accumulation_36_39_mm": 0.4,
+          "accumulation_36_42_mm": 0.4,
+          "increment_39_42_mm": 0.0,
+          "latitude": 16.0,
+          "longitude": 76.75
+        },
+        {
+          "accumulation_36_39_mm": 0.0,
+          "accumulation_36_42_mm": 0.0,
+          "increment_39_42_mm": 0.0,
+          "latitude": 16.25,
+          "longitude": 76.25
+        },
+        {
+          "accumulation_36_39_mm": 0.4,
+          "accumulation_36_42_mm": 0.2,
+          "increment_39_42_mm": -0.2,
+          "latitude": 16.25,
+          "longitude": 76.5
+        },
+        {
+          "accumulation_36_39_mm": 1.4000000000000001,
+          "accumulation_36_42_mm": 1.4000000000000001,
+          "increment_39_42_mm": 0.0,
+          "latitude": 16.25,
+          "longitude": 76.75
+        },
+        {
+          "accumulation_36_39_mm": 0.2,
+          "accumulation_36_42_mm": 0.2,
+          "increment_39_42_mm": 0.0,
+          "latitude": 16.5,
+          "longitude": 76.25
+        },
+        {
+          "accumulation_36_39_mm": 1.1,
+          "accumulation_36_42_mm": 1.0,
+          "increment_39_42_mm": -0.10000000000000009,
+          "latitude": 16.5,
+          "longitude": 76.5
+        },
+        {
+          "accumulation_36_39_mm": 2.8000000000000003,
+          "accumulation_36_42_mm": 3.0,
+          "increment_39_42_mm": 0.19999999999999973,
+          "latitude": 16.5,
+          "longitude": 76.75
+        }
+      ]
+    },
+    {
+      "latitude": 21.0,
+      "longitude": 70.75,
+      "members": {
+        "c00": {
+          "accumulation_36_39_mm": 0.1,
+          "accumulation_36_42_mm": 0.1,
+          "increment_39_42_mm": 0.0,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p01": {
+          "accumulation_36_39_mm": 3.2,
+          "accumulation_36_42_mm": 3.0,
+          "increment_39_42_mm": -0.20000000000000018,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p02": {
+          "accumulation_36_39_mm": 0.0,
+          "accumulation_36_42_mm": 0.0,
+          "increment_39_42_mm": 0.0,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p03": {
+          "accumulation_36_39_mm": 2.9000000000000004,
+          "accumulation_36_42_mm": 2.9000000000000004,
+          "increment_39_42_mm": 0.0,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        },
+        "p04": {
+          "accumulation_36_39_mm": 1.4000000000000001,
+          "accumulation_36_42_mm": 2.2,
+          "increment_39_42_mm": 0.8,
+          "packing_error_36_39_mm": null,
+          "packing_error_36_42_mm": null
+        }
+      },
+      "p01_3x3_neighborhood": [
+        {
+          "accumulation_36_39_mm": 6.4,
+          "accumulation_36_42_mm": 6.800000000000001,
+          "increment_39_42_mm": 0.40000000000000036,
+          "latitude": 20.75,
+          "longitude": 70.5
+        },
+        {
+          "accumulation_36_39_mm": 1.4000000000000001,
+          "accumulation_36_42_mm": 1.4000000000000001,
+          "increment_39_42_mm": 0.0,
+          "latitude": 20.75,
+          "longitude": 70.75
+        },
+        {
+          "accumulation_36_39_mm": 0.1,
+          "accumulation_36_42_mm": 0.0,
+          "increment_39_42_mm": -0.1,
+          "latitude": 20.75,
+          "longitude": 71.0
+        },
+        {
+          "accumulation_36_39_mm": 7.1000000000000005,
+          "accumulation_36_42_mm": 7.2,
+          "increment_39_42_mm": 0.09999999999999964,
+          "latitude": 21.0,
+          "longitude": 70.5
+        },
+        {
+          "accumulation_36_39_mm": 3.2,
+          "accumulation_36_42_mm": 3.0,
+          "increment_39_42_mm": -0.20000000000000018,
+          "latitude": 21.0,
+          "longitude": 70.75
+        },
+        {
+          "accumulation_36_39_mm": 1.1,
+          "accumulation_36_42_mm": 1.2000000000000002,
+          "increment_39_42_mm": 0.10000000000000009,
+          "latitude": 21.0,
+          "longitude": 71.0
+        },
+        {
+          "accumulation_36_39_mm": 13.100000000000001,
+          "accumulation_36_42_mm": 13.200000000000001,
+          "increment_39_42_mm": 0.09999999999999964,
+          "latitude": 21.25,
+          "longitude": 70.5
+        },
+        {
+          "accumulation_36_39_mm": 11.5,
+          "accumulation_36_42_mm": 11.4,
+          "increment_39_42_mm": -0.09999999999999964,
+          "latitude": 21.25,
+          "longitude": 70.75
+        },
+        {
+          "accumulation_36_39_mm": 7.5,
+          "accumulation_36_42_mm": 8.0,
+          "increment_39_42_mm": 0.5,
+          "latitude": 21.25,
+          "longitude": 71.0
+        }
+      ]
+    }
+  ],
+  "cache_only": true,
+  "global_cells_below_minus_0_1_mm": 300,
+  "global_increment_min_mm": -0.20000000000000018,
+  "investigation": "GEFSv12 2019-07-22 00Z p01 Day-2 +39-to-+42 increment",
+  "official_index_analysis": {
+    "alternate_precipitation_representation_found": false,
+    "alternative_nested_39_42_matches": [],
+    "conclusion": "No independent official reconstruction is present in the NOAA apcp_sfc index for this initialization/member.",
+    "direct_39_42_matches": [],
+    "index_path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p01\\apcp_sfc\\apcp_sfc_2019072200_p01.grib2.idx",
+    "index_sha256": "ad8179a6a1d1a307093812289052020ff0e0b5c2485e663e4803a28ebf527426",
+    "original_nested_39_42_match": {
+      "prefix": [
+        36,
+        39
+      ],
+      "total": [
+        36,
+        42
+      ]
+    },
+    "receipt_url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast/2019/2019072200/p01/Days%3A1-10/apcp_sfc_2019072200_p01.grib2.idx"
+  },
+  "p01_day2_participating_messages": [
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 10,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 27,
+      "forecastTime": 24,
+      "gridType": "regular_ll",
+      "maximum": 84.9,
+      "message_number": 9,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 24,
+      "stepRange": "24-27",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190723,
+      "validityTime": 300
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 11,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 30,
+      "forecastTime": 24,
+      "gridType": "regular_ll",
+      "maximum": 199.20000000000002,
+      "message_number": 10,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 24,
+      "stepRange": "24-30",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190723,
+      "validityTime": 600
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 10,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 33,
+      "forecastTime": 30,
+      "gridType": "regular_ll",
+      "maximum": 113.60000000000001,
+      "message_number": 11,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 30,
+      "stepRange": "30-33",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190723,
+      "validityTime": 900
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 11,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 36,
+      "forecastTime": 30,
+      "gridType": "regular_ll",
+      "maximum": 196.0,
+      "message_number": 12,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 30,
+      "stepRange": "30-36",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190723,
+      "validityTime": 1200
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 11,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 39,
+      "forecastTime": 36,
+      "gridType": "regular_ll",
+      "maximum": 169.20000000000002,
+      "message_number": 13,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 36,
+      "stepRange": "36-39",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190723,
+      "validityTime": 1500
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 1,
+      "bitsPerValue": 10,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 42,
+      "forecastTime": 36,
+      "gridType": "regular_ll",
+      "maximum": 189.60000000000002,
+      "message_number": 14,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 36,
+      "stepRange": "36-42",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190723,
+      "validityTime": 1800
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 10,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 45,
+      "forecastTime": 42,
+      "gridType": "regular_ll",
+      "maximum": 106.10000000000001,
+      "message_number": 15,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 42,
+      "stepRange": "42-45",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190723,
+      "validityTime": 2100
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 11,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 48,
+      "forecastTime": 42,
+      "gridType": "regular_ll",
+      "maximum": 125.80000000000001,
+      "message_number": 16,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 42,
+      "stepRange": "42-48",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190724,
+      "validityTime": 0
+    },
+    {
+      "Ni": 1440,
+      "Nj": 721,
+      "binaryScaleFactor": 0,
+      "bitsPerValue": 10,
+      "dataRepresentationTemplateNumber": 3,
+      "decimalScaleFactor": 1,
+      "endStep": 51,
+      "forecastTime": 48,
+      "gridType": "regular_ll",
+      "maximum": 111.9,
+      "message_number": 17,
+      "minimum": 0.0,
+      "missingValue": 9999,
+      "name": "Total Precipitation",
+      "numberOfMissing": 0,
+      "numberOfValues": 1038240,
+      "orderOfSpatialDifferencing": 2,
+      "packingError": null,
+      "packingType": "grid_complex_spatial_differencing",
+      "referenceValue": 0.0,
+      "shortName": "tp",
+      "startStep": 48,
+      "stepRange": "48-51",
+      "stepType": "accum",
+      "units": "kg m**-2",
+      "validityDate": 20190724,
+      "validityTime": 300
+    }
+  ],
+  "quantization_analysis": {
+    "accumulation_36_39_quantum_mm": 0.1,
+    "accumulation_36_39_rounding_error_bound_mm": 0.05,
+    "accumulation_36_42_quantum_mm": 0.2,
+    "accumulation_36_42_rounding_error_bound_mm": 0.1,
+    "classification": "SOURCE_INCONSISTENCY",
+    "decoded_value_formula": "Y = (referenceValue + X * 2^E) * 10^-D",
+    "maximum_independent_difference_error_mm": 0.15000000000000002,
+    "note": "ecCodes 2.48 does not expose packingError for these complex-packed messages; bounds are derived from the actual binary and decimal scales with exact zero references.",
+    "operational_tolerance_mm": 0.1,
+    "operationally_admissible": false
+  },
+  "source_files": {
+    "c00": {
+      "bytes": 8652458,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\c00\\apcp_sfc\\selected_003_075_2019072200_c00.grib2",
+      "sha256": "7e4cb1e0184a26fa57fa277134ac19a9ba578ff20a6ca1aabade1cea4adf9390"
+    },
+    "p01": {
+      "bytes": 7727906,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p01\\apcp_sfc\\selected_003_075_2019072200_p01.grib2",
+      "sha256": "662936bf9236160ca3f0f3aea48d73d6d292e3a480db42e1ad89362d00f5e2cf"
+    },
+    "p02": {
+      "bytes": 7568971,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p02\\apcp_sfc\\selected_003_075_2019072200_p02.grib2",
+      "sha256": "9dfe34b339ab27c252e85f806a7f96993b8e6a6a38ef573ea7caa8f56b55ccad"
+    },
+    "p03": {
+      "bytes": 7380139,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p03\\apcp_sfc\\selected_003_075_2019072200_p03.grib2",
+      "sha256": "267fa188c2d762bd6d4c5edb09221166730c2606f811db79133312b3519ec691"
+    },
+    "p04": {
+      "bytes": 8202111,
+      "path": "data\\raw\\phase1c\\gefsv12\\2019072200\\p04\\apcp_sfc\\selected_003_075_2019072200_p04.grib2",
+      "sha256": "c352cc4e559c16cb7e86aaf4867c860007b50e70c29204bf469a0716bea7043a"
+    }
+  },
+  "target_cells_below_minus_0_1_mm": 2,
+  "target_increment_min_mm": -0.20000000000000018
+}

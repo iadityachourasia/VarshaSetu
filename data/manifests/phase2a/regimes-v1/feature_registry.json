@@ -1,0 +1,146 @@
+{
+  "features": [
+    {
+      "availability": "FORECAST_TIME",
+      "name": "u850",
+      "regime_allowed": true
+    },
+    {
+      "availability": "FORECAST_TIME",
+      "name": "v850",
+      "regime_allowed": true
+    },
+    {
+      "availability": "FORECAST_TIME",
+      "name": "q700",
+      "regime_allowed": true
+    },
+    {
+      "availability": "FORECAST_TIME",
+      "name": "z500",
+      "regime_allowed": true
+    },
+    {
+      "availability": "FORECAST_TIME",
+      "name": "mslp",
+      "regime_allowed": true
+    },
+    {
+      "availability": "FORECAST_TIME",
+      "name": "pwat",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "pwat_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "q700_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "u850_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "v850_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "wind_speed_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "moisture_transport_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "mslp_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "mslp_minimum",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "mslp_range",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "z500_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "relative_vorticity_area_mean",
+      "regime_allowed": true
+    },
+    {
+      "availability": "DERIVED_FORECAST_TIME",
+      "name": "relative_vorticity_p90",
+      "regime_allowed": true
+    },
+    {
+      "availability": "STATIC",
+      "name": "latitude",
+      "regime_allowed": false
+    },
+    {
+      "availability": "STATIC",
+      "name": "longitude",
+      "regime_allowed": false
+    },
+    {
+      "availability": "STATIC",
+      "name": "elevation",
+      "regime_allowed": false,
+      "status": "future_source_required"
+    },
+    {
+      "availability": "STATIC",
+      "name": "terrain_gradient",
+      "regime_allowed": false,
+      "status": "future_source_required"
+    },
+    {
+      "availability": "STATIC",
+      "name": "distance_to_coast",
+      "regime_allowed": false,
+      "status": "future_source_required"
+    },
+    {
+      "availability": "STATIC",
+      "name": "district_membership",
+      "regime_allowed": false,
+      "status": "future_source_required"
+    },
+    {
+      "availability": "OBSERVATION_TARGET",
+      "name": "imd_observed_rainfall",
+      "regime_allowed": false
+    },
+    {
+      "availability": "FORBIDDEN_FOR_INFERENCE",
+      "name": "future_valid_observed_temperature",
+      "regime_allowed": false
+    },
+    {
+      "availability": "FORBIDDEN_FOR_INFERENCE",
+      "name": "future_valid_observed_humidity",
+      "regime_allowed": false
+    }
+  ],
+  "leakage_gate": "PASS",
+  "schema_version": 1,
+  "test_year_accessed": false
+}

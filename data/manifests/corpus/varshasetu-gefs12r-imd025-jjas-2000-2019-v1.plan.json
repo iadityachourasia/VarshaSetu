@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "varshasetu-gefs12r-imd025-jjas-2000-2019-v1",
+  "acquisition_status": "NOT_STARTED",
+  "training_eligible": false,
+  "forecast_source": {
+    "provider": "NOAA",
+    "dataset": "GEFSv12 Reforecast",
+    "base_url": "https://noaa-gefs-retrospective.s3.amazonaws.com/GEFSv12/reforecast",
+    "rainfall_archive_object_family": "apcp_sfc",
+    "rainfall_decoded_short_name": "tp"
+  },
+  "forecast_version": "GEFSv12 retrospective archive; source object identity and hashes retained per acquisition unit",
+  "observation_source": {
+    "provider": "India Meteorological Department",
+    "dataset": "0.25 degree Daily Gridded Rainfall",
+    "access": "official IMD Pune annual NetCDF"
+  },
+  "observation_product": "IMD 0.25 degree gauge-based daily rainfall",
+  "years": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+  "season": {
+    "name": "JJAS",
+    "initialization_dates": "June 1 through September 30 inclusive",
+    "observation_dates": "June 2 through October 3 inclusive for each initialization year",
+    "boundary_rule": "admit products by initialization date; never truncate Day-2 or Day-3 at September 30"
+  },
+  "initialization_cycle": "00Z",
+  "expected_initializations": 2440,
+  "rainfall_products": {
+    "day1_24h": [3, 27],
+    "day2_24h": [27, 51],
+    "day3_24h": [51, 75]
+  },
+  "ensemble_members": ["c00", "p01", "p02", "p03", "p04"],
+  "atmospheric_fields": {
+    "member": "c00",
+    "leads_hours": [24, 48, 72],
+    "variables": {
+      "nwp_u850": {"object_family": "ugrd_pres", "level_hpa": 850, "unit": "m s**-1"},
+      "nwp_v850": {"object_family": "vgrd_pres", "level_hpa": 850, "unit": "m s**-1"},
+      "nwp_q700": {"object_family": "spfh_pres_abv700mb", "level_hpa": 700, "unit": "kg kg**-1"},
+      "nwp_z500_height": {"object_family": "hgt_pres_abv700mb", "level_hpa": 500, "unit": "gpm"},
+      "nwp_mslp": {"object_family": "pres_msl", "level": "mean sea level", "unit": "Pa"},
+      "nwp_tcwv": {"object_family": "pwat_eatm", "level": "entire atmosphere", "unit": "kg m**-2"}
+    }
+  },
+  "target_domain": {"south": 10.0, "north": 22.0, "west": 68.0, "east": 80.0},
+  "context_domain": {"south": 5.0, "north": 30.0, "west": 55.0, "east": 95.0},
+  "target_grid": {"authority": "native IMD", "spacing_degrees": 0.25, "shape": [49, 49], "crs": "EPSG:4326"},
+  "context_grid": {"spacing_degrees": 0.5, "shape": [51, 81], "crs": "EPSG:4326"},
+  "accumulation_contract": {
+    "intervals": "half-open",
+    "method": "sum exact three-hour increments; difference only declared nested six-hour and corresponding three-hour messages",
+    "message_selection": "GRIB stepRange, startStep and endStep; never array position"
+  },
+  "regridding_policy": {
+    "rainfall": "first-order conservative overlap with area-conservation QC",
+    "smooth_atmosphere": "bilinear to context grid",
+    "masks": "nearest-neighbour only",
+    "observation_mask": "preserve native IMD valid mask; never fill missing truth"
+  },
+  "negative_residue_policy": {
+    "operational_tolerance_mm": 0.1,
+    "packing_bound": "derive per message from referenceValue, binaryScaleFactor and decimalScaleFactor",
+    "admission": "clamp to zero only when magnitude is within both the 0.1 mm operational cap and the independently quantized difference bound; otherwise quarantine the affected member-product",
+    "prohibited": ["arbitrary clipping", "member substitution", "spatial interpolation", "temporal interpolation", "tolerance widening"]
+  },
+  "eligibility_policy": {
+    "tiers": ["SOURCE_VALID", "PAIR_VALID", "CONTROL_MODEL_ELIGIBLE", "FULL_ENSEMBLE_ELIGIBLE", "REGIME_ELIGIBLE", "EXTREME_EVENT_ELIGIBLE", "FSS_ELIGIBLE", "REJECTED"],
+    "scope": "initialization x product with component validity retained by member and atmospheric bundle",
+    "fail_closed": true
+  },
+  "monthly_qc_policy": {
+    "outcomes": ["MONTH_ACCEPTED", "MONTH_ACCEPTED_WITH_QUARANTINED_SAMPLES", "MONTH_REJECTED"],
+    "required_checks": ["source integrity", "timing", "observation pairing", "rainfall reconstruction", "atmospheric identity", "spatial alignment", "completeness", "lineage"]
+  },
+  "storage_format": {
+    "source_cache": "immutable provider bytes plus receipts and SHA-256",
+    "normalized_arrays": "Zarr v3, versioned and consolidated only after monthly QC",
+    "audit_artifacts": "immutable NetCDF for bounded reviewed cases",
+    "manifests_qc": "JSON and CSV",
+    "training_views": "regenerable indexes/masks; no copied source bytes"
+  },
+  "chunking": {
+    "forecast_rain": {"dimensions": ["init_time", "product", "member", "lat", "lon"], "chunk_shape": [1, 3, 5, 49, 49], "dtype": "float32", "uncompressed_bytes": 144060},
+    "observation_rain": {"dimensions": ["init_time", "product", "lat", "lon"], "chunk_shape": [1, 3, 49, 49], "dtype": "float32", "uncompressed_bytes": 28812},
+    "valid_mask": {"dimensions": ["init_time", "product", "lat", "lon"], "chunk_shape": [1, 3, 49, 49], "dtype": "uint8", "uncompressed_bytes": 7203},
+    "atmosphere": {"dimensions": ["init_time", "lead", "variable", "lat", "lon"], "chunk_shape": [1, 3, 1, 51, 81], "dtype": "float32", "uncompressed_bytes": 49572}
+  },
+  "acquisition_unit": {"unit": "one initialization date", "commit": "component receipts first; atomic unit manifest after QC", "children": ["rainfall member messages", "control atmospheric messages", "observation dates"]},
+  "concurrency": {"noaa_range_requests": 3, "decode_processes": 2, "local_processing_workers": 2, "imd_annual_downloads": 1},
+  "retry_policy": {
+    "maximum_attempts": 5,
+    "backoff_seconds": [2, 4, 8, 16, 32],
+    "retryable_http_status": [408, 425, 429, 500, 502, 503, 504],
+    "non_retryable": ["HTTP 400 except 408", "HTTP 401", "HTTP 403", "HTTP 404 after authoritative index confirmation", "schema or metadata mismatch"],
+    "validation": ["SHA-256", "Content-Length", "Content-Range for byte requests", "GRIB message identity"],
+    "partial_download_policy": "write to unique staging path; never promote partial bytes; resume only with validated range response",
+    "terminal_state": "PERMANENT_FAILURE with component-scoped quarantine metadata"
+  },
+  "split_candidates": {
+    "primary": {"train": [2000, 2013], "validation": [2014, 2016], "test": [2017, 2019]},
+    "sensitivity": "rolling-origin seasonal folds ending before the fixed 2017-2019 final test",
+    "freeze_condition": "confirm regime and extreme-event coverage using training/validation only before model fitting"
+  },
+  "fairness_policy": {"rule": "all models in a scientific comparison use the identical intersected verification-case index unless explicitly labeled otherwise", "denominators_required": true}
+}

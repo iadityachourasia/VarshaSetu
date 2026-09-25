@@ -1,0 +1,57 @@
+{
+  "code_version": "unavailable:not-a-git-checkout",
+  "derived_artifact": "data/processed/pilot/2019-07-15/gefsv12_imd_pair_2019-07-15.nc",
+  "derived_artifact_sha256": "f973e98e7f145c90307fe074a3b76e95eb65a98ba1adadec0f28ccf1183bac0c",
+  "manifest_id": "phase1b-pair-2019-07-15-v1",
+  "processing_code_hashes": {
+    "backend/app/data/accumulation.py": "b2a175a7f2a669073feed04e2acfab9704fcf45bb18bf99e1ed569cdc9c96fac",
+    "backend/app/data/regridding.py": "71b5099824a5da35eb9bd86c75bc28d84e5a4a9dae97cd8bbcbfa328f4f72964",
+    "backend/app/data_sources/imd_rainfall.py": "074930a582daa8cf2fc5ba0013b7add256088275155f480d0ab2ef895ea99c72",
+    "backend/app/data_sources/noaa_gefs.py": "7871311d34303ffb39775cff227fee0f282f46816bcfad6ad7c6e035db318e7b",
+    "scripts/data/acquire_pilot_pair.py": "ef0a3fa2932f074571ea091797b8f18749067cb8cb3d8e06810afb790d60b33e"
+  },
+  "qc_results": {
+    "conservation_relative_difference": 0.0,
+    "conservation_tolerance": 1e-10,
+    "status": "PASS",
+    "valid_target_cells": 1301
+  },
+  "regridding_implementation": {
+    "eccodes_version": "2.48.0",
+    "library": "repository-local NumPy spherical cell-overlap implementation",
+    "numpy_version": "2.2.6",
+    "scipy_version": "1.16.1"
+  },
+  "regridding_method": "first-order conservative spherical rectilinear cell-overlap",
+  "source_manifest_hashes": {
+    "imd_rainfall": "2160c3d0e1b9b35a4bf0c6577d5932f5a603ab6159b209013c9233ba58252147",
+    "noaa_gefs": "30ba4d335a7fae279d5f50a2a501416f811cf22979fa23ad5648f9ebf95422fb"
+  },
+  "target_domain": {
+    "east": 80.0,
+    "north": 22.0,
+    "south": 10.0,
+    "west": 68.0
+  },
+  "target_grid": {
+    "shape": [
+      49,
+      49
+    ],
+    "source": "IMD native 0.25 degree grid",
+    "valid_mask_variable": "valid_mask"
+  },
+  "training_eligible": false,
+  "visual_qc_artifact": "docs/artifacts/phase1b_qc_2019-07-15.png",
+  "weight_artifact": "data/processed/pilot/2019-07-15/gefsv12_to_imd025_conservative_weights.npy",
+  "weight_byte_size": 57816,
+  "weight_hash": "37a3fc3244c0ce6c41bf6c580de8748194e7e1dc839e73e0e17285530e245523",
+  "window_definition": {
+    "duration_hours": 24,
+    "end_utc": "2019-07-15T03:00:00+00:00",
+    "lead_end_hours": 27,
+    "lead_start_hours": 3,
+    "semantics": "half-open",
+    "start_utc": "2019-07-14T03:00:00+00:00"
+  }
+}

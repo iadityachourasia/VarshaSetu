@@ -1,0 +1,243 @@
+{
+  "average_seconds_per_initialization": 80.80738791666667,
+  "cache_only": false,
+  "collection_manifest": "data/manifests/phase2a/2017-06/monthly_collection_manifest.json",
+  "collection_manifest_sha256": "eebc3883cdd0e6e438ba5cf9e05a39d1f77ceec9f2537d004c8257fe3615a61d",
+  "dataset_version": "varshasetu-gefs12r-imd025-jjas-2000-2019-v2",
+  "measured_stage_seconds": {
+    "artifact_write": 2.311894099999563,
+    "atmosphere_decode_interpolate_qc": 39.48813460000633,
+    "monthly_consolidation_and_benchmark": 1.0107352999998511,
+    "precipitation_decode_and_crop": 304.7423625999995,
+    "rainfall_reconstruct_regrid_qc": 0.5935161999932461,
+    "total_initialization": 2421.4080994000005
+  },
+  "network_bytes": {
+    "atmospheric": 316004909,
+    "imd": 0,
+    "index": 7878470,
+    "precipitation": 1201961650,
+    "total": 1525845029
+  },
+  "network_seconds_sum_concurrent_requests": 3786.6837974000027,
+  "network_workers": 6,
+  "peak_rss_bytes": 252706816,
+  "processed_bytes": {
+    "daily_atmospheric_context": 9006840,
+    "daily_manifests": 9437060,
+    "daily_rainfall_pairs": 5462880,
+    "qc_csv_tables": 56157,
+    "regridding_weights": 57816,
+    "storage_evaluation_netcdf": 14328204,
+    "storage_evaluation_zarr": 7436913,
+    "total": 45785870
+  },
+  "qc_summary": {
+    "conservation": {
+      "count": 344,
+      "failures": 0,
+      "maximum": 0.0,
+      "median": 0.0,
+      "minimum": 0.0,
+      "tolerance": 1e-10
+    },
+    "event_coverage": {
+      "days_with_heavy_cell": 24,
+      "days_with_very_heavy_cell": 13,
+      "district_counts": "not_computed:no_authoritative_district_geometry",
+      "maximum_observed_rainfall_mm": 358.34234619140625,
+      "total_heavy_grid_cell_events": 585,
+      "total_very_heavy_grid_cell_events": 115,
+      "unique_observation_days": 32
+    },
+    "initialization_status_counts": {
+      "BLOCKED": 0,
+      "FAIL": 0,
+      "PARTIAL": 29,
+      "PASS": 1
+    },
+    "predictor_expected": 540,
+    "predictor_statistics": {
+      "mslp": {
+        "initial_warning_bounds": [
+          80000.0,
+          110000.0
+        ],
+        "max": 102632.109375,
+        "mean": 100421.93255492012,
+        "min": 99001.328125,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "pwat": {
+        "initial_warning_bounds": [
+          0.0,
+          100.0
+        ],
+        "max": 83.5,
+        "mean": 46.61924701703396,
+        "min": 1.0,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "q700": {
+        "initial_warning_bounds": [
+          0.0,
+          0.1
+        ],
+        "max": 0.01686999946832657,
+        "mean": 0.007092949214766133,
+        "min": 0.0002099999983329326,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "u850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 30.100767135620117,
+        "mean": 7.752581932234901,
+        "min": -21.539234161376953,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "v850": {
+        "initial_warning_bounds": [
+          -150.0,
+          150.0
+        ],
+        "max": 30.732872009277344,
+        "mean": 1.0669122790589431,
+        "min": -27.223283767700195,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      },
+      "z500": {
+        "initial_warning_bounds": [
+          4000.0,
+          7000.0
+        ],
+        "max": 5933.67919921875,
+        "mean": 5847.950356629572,
+        "min": 5752.15625,
+        "missing_fraction": 0.0,
+        "plausibility_warning": null
+      }
+    },
+    "predictor_valid": 540,
+    "rainfall_complete": 344,
+    "rainfall_expected": 450,
+    "weight_sha256": "37a3fc3244c0ce6c41bf6c580de8748194e7e1dc839e73e0e17285530e245523"
+  },
+  "raw_source_bytes": {
+    "atmospheric_messages": 316004909,
+    "cache_excluding_receipts": 1525845029,
+    "cache_receipts": 305222,
+    "imd_existing_source": 25431832,
+    "imd_incremental_network": 0,
+    "indexes": 7878470,
+    "precipitation_messages": 1201961650
+  },
+  "reconstruction_method": "canonical_v2",
+  "rerun_daily_manifest_comparison": {
+    "changed_or_new": [
+      "data/manifests/phase2a/2017-06/daily/derived_2017060100.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060200.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060300.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060400.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060500.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060600.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060700.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060800.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017060900.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061000.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061100.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061200.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061300.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061400.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061500.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061600.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061700.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061800.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017061900.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062000.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062100.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062200.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062300.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062400.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062500.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062600.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062700.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062800.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017062900.json",
+      "data/manifests/phase2a/2017-06/daily/derived_2017063000.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060100.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060200.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060300.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060400.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060500.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060600.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060700.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060800.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017060900.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061000.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061100.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061200.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061300.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061400.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061500.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061600.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061700.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061800.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017061900.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062000.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062100.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062200.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062300.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062400.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062500.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062600.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062700.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062800.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017062900.json",
+      "data/manifests/phase2a/2017-06/daily/source_2017063000.json"
+    ],
+    "current_artifact_count": 60,
+    "previous_artifact_count": 0,
+    "removed": [],
+    "unchanged_count": 0
+  },
+  "status": "PARTIAL",
+  "storage_format_evaluation": {
+    "library_versions": {
+      "scipy": "1.16.1",
+      "zarr": "3.2.1"
+    },
+    "netcdf": {
+      "append_chunk_practicality": "fixed classic NetCDF output; rewrite needed for this implementation",
+      "byte_size": 14328204,
+      "full_forecast_read_seconds": 0.00938819999964835,
+      "metadata_preservation": "CF-style variables and attributes",
+      "portability": "single file; broadly portable",
+      "random_slice_mean_seconds": 0.010394273333334543
+    },
+    "zarr": {
+      "append_chunk_practicality": "chunked hierarchy supports initialization-wise extension",
+      "byte_size": 7436913,
+      "full_forecast_read_seconds": 0.04607699999996839,
+      "metadata_preservation": "group and array attributes; CF conventions require project schema",
+      "portability": "many files; efficient object-store/chunk access, less convenient to copy",
+      "random_slice_mean_seconds": 0.003852099999994607
+    }
+  },
+  "storage_projections": {
+    "assumption": "linear by initialization count from July 2019; excludes provider/version changes, retry variance, filesystem overhead changes, and future extra variables",
+    "bytes_per_initialization": 50697770.93548387,
+    "measured_july_bytes": 1571630899,
+    "projected_20_year_jjas_bytes": 123702561083,
+    "projected_jjas_2019_bytes": 6185128054
+  },
+  "total_runtime_seconds": 2424.2216375000003,
+  "training_eligible": false
+}
