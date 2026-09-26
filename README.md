@@ -281,9 +281,9 @@ in this session, not taken on faith — see
 the full comparison table. To reproduce any of it yourself:
 
 ```powershell
-curl http://127.0.0.1:8000/api/science/model-comparison        # Track A, all models
-curl http://127.0.0.1:8000/api/science/operational/2025/metrics/deterministic  # Track B, 2025
-curl http://127.0.0.1:8000/api/science/operational/quality      # data-quality counts
+curl https://varshasetu.onrender.com/api/science/model-comparison        # Track A, all models
+curl https://varshasetu.onrender.com/api/science/operational/2025/metrics/deterministic  # Track B, 2025
+curl https://varshasetu.onrender.com/api/science/operational/quality      # data-quality counts
 ```
 
 Test suite status as last verified locally against a real backend and the
