@@ -202,6 +202,24 @@ def test_2025_deterministic_headline_numbers(client: TestClient) -> None:
     assert _close(metrics["M4"]["continuous"]["rmse_mm"], 15.2153)
 
 
+def test_2025_ensemble_metrics_headline_numbers(client: TestClient) -> None:
+    payload = client.get("/api/science/operational/2025/metrics/ensemble").json()
+    assert payload["label"] == "MATCHED 75-CASE SUBSET"
+    metrics = payload["metrics"]
+    assert metrics["case_count"] == 75
+    assert metrics["cell_count"] == 97575
+    assert _close(metrics["heavy"]["five_member_fraction"]["brier"], 0.0228866)
+    assert _close(metrics["heavy"]["frozen_ML_same_cells"]["brier"], 0.0208497)
+    assert _close(metrics["very_heavy"]["five_member_fraction"]["brier"], 0.00502342)
+    assert _close(metrics["very_heavy"]["frozen_ML_same_cells"]["brier"], 0.00493453)
+
+
+def test_ensemble_metrics_unavailable_outside_2025(client: TestClient) -> None:
+    for year in (2023, 2024):
+        response = client.get(f"/api/science/operational/{year}/metrics/ensemble")
+        assert response.status_code == 404
+
+
 def test_2024_deterministic_headline_numbers(client: TestClient) -> None:
     metrics = client.get("/api/science/operational/2024/metrics/deterministic").json()["metrics"]
     assert metrics["M0"]["case_count"] == 183
@@ -455,6 +473,63 @@ def test_legacy_science_routes_keep_plain_string_detail(full_app_client: TestCli
     assert response.status_code == 404
     assert isinstance(response.json()["detail"], str)
     assert "code" not in response.json()
+
+
+# ---------------------------------------------------------------------------
+# Phase 5A.2C -- extended case-index selector/casebook metadata
+# ---------------------------------------------------------------------------
+
+
+def test_case_index_never_fabricates_metadata_for_ineligible_cases(client: TestClient) -> None:
+    """A case outside the deterministic-eligible population has no frozen
+    IMD pairing, so its event/valid-date fields must be null, never guessed."""
+    cases = client.get("/api/science/operational/2024/cases", params={"page_size": 400}).json()["cases"]
+    ineligible = next(c for c in cases if not c["deterministic_source_eligible"])
+    assert ineligible["valid_date"] is None
+    assert ineligible["event_heavy"] is None
+    assert ineligible["event_very_heavy"] is None
+    assert ineligible["selected_model_improved_vs_raw"] is None
+
+
+def test_case_index_populates_event_flags_for_eligible_cases(client: TestClient) -> None:
+    cases = client.get("/api/science/operational/2025/cases", params={"page_size": 400}).json()["cases"]
+    eligible = [c for c in cases if c["deterministic_source_eligible"]]
+    assert eligible, "expected at least one deterministic-eligible 2025 case"
+    for case in eligible:
+        assert case["valid_date"] is not None
+        assert isinstance(case["event_heavy"], bool)
+        assert isinstance(case["event_very_heavy"], bool)
+        # A very-heavy event is definitionally also a heavy event.
+        if case["event_very_heavy"]:
+            assert case["event_heavy"] is True
+
+
+def test_case_index_2025_improved_flag_matches_rmse_sign(client: TestClient) -> None:
+    cases = client.get("/api/science/operational/2025/cases", params={"page_size": 400}).json()["cases"]
+    scored = [c for c in cases if c["m1_minus_raw_rmse_mm"] is not None]
+    assert scored, "expected at least one 2025 case with frozen case-level metrics"
+    for case in scored:
+        assert case["selected_model_improved_vs_raw"] == (case["m1_minus_raw_rmse_mm"] < 0)
+
+
+def test_case_index_lead_label_and_calendar_fields_are_consistent(client: TestClient) -> None:
+    cases = client.get("/api/science/operational/2025/cases", params={"page_size": 5}).json()["cases"]
+    for case in cases:
+        assert case["lead_label"] == f"Day {case['lead_hours'] // 24}"
+        assert case["initialization_utc"].startswith(case["initialization_date"])
+        assert case["month"] == int(case["initialization_date"][5:7])
+
+
+def test_case_index_pseudo_regime_class_only_when_regime_eligible(client: TestClient) -> None:
+    for year in (2023, 2024, 2025):
+        cases = client.get(f"/api/science/operational/{year}/cases", params={"page_size": 20}).json()["cases"]
+        for case in cases:
+            if case["regime_source_eligible"]:
+                assert case["pseudo_regime_class"] in (
+                    "ACTIVE_MONSOON", "BREAK_WEAK_MONSOON", "LOW_DEPRESSION_INFLUENCED",
+                )
+            else:
+                assert case["pseudo_regime_class"] is None
 
 
 def test_no_model_execution_in_operational_module() -> None:

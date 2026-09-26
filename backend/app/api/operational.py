@@ -77,6 +77,11 @@ ATMOSPHERE_FIELDS: tuple[str, ...] = ("u850", "v850", "q700", "z500", "mslp", "p
 ENSEMBLE_MEMBERS: tuple[str, ...] = ("c00", "p01", "p02", "p03", "p04")
 REGIME_CLASSES: tuple[str, ...] = ("ACTIVE_MONSOON", "BREAK_WEAK_MONSOON", "LOW_DEPRESSION_INFLUENCED")
 GRID_CELLS = 49 * 49
+# Frozen IMD 24-hour event thresholds (docs/11_SCIENTIFIC_CONSTRAINTS.md); the
+# same constants already used throughout phase4i/phase4j's own heavy/very_heavy
+# metric definitions.
+HEAVY_THRESHOLD_MM = 64.5
+VERY_HEAVY_THRESHOLD_MM = 115.6
 
 # ---------------------------------------------------------------------------
 # Pydantic response contracts
@@ -134,6 +139,17 @@ class OperationalCaseSummary(BaseModel):
     m1_rmse_mm: float | None = None
     raw_rmse_mm: float | None = None
     m1_minus_raw_rmse_mm: float | None = None
+    # Phase 5A.2C: presentation-safe selector/casebook metadata, each field
+    # left null rather than fabricated when no frozen artifact backs it for
+    # that year/case (see docs/96 section 3-4).
+    initialization_date: str
+    month: int
+    lead_label: str
+    valid_date: str | None = None
+    event_heavy: bool | None = None
+    event_very_heavy: bool | None = None
+    pseudo_regime_class: str | None = None
+    selected_model_improved_vs_raw: bool | None = None
 
 
 class OperationalCasesResponse(BaseModel):
@@ -221,6 +237,17 @@ class FSSResponse(BaseModel):
     year: int
     fss: dict[str, Any]
     neighborhoods: list[int] = [1, 3, 5, 9]
+
+
+class EnsembleMetricsResponse(BaseModel):
+    year: int
+    metrics: dict[str, Any]
+    label: str = "MATCHED 75-CASE SUBSET"
+    note: str = (
+        "This matched-population comparison covers only the cases with a complete "
+        "eligible five-member ensemble; it must not be interpreted as a head-to-head "
+        "result on the full final-test population."
+    )
 
 
 class RegimeSummaryResponse(BaseModel):
@@ -549,8 +576,56 @@ def _case_record(case_id: str) -> tuple[dict, int]:
     return record, year
 
 
+@lru_cache(maxsize=3)
+def _paired_cases_by_id(year: int) -> dict[str, dict]:
+    """Case_id -> {row_start, row_count, valid_observation_date, ...} for
+    whichever population manifest that year's deterministic/IMD pairing
+    actually uses. Only covers deterministic-source-eligible cases -- a case
+    outside this population has no frozen IMD pairing and therefore no event
+    flag, which _event_flags_by_case/_valid_date_for_case correctly return as
+    None for rather than fabricating one."""
+    if year == 2025:
+        return _phase4j_population_by_case()
+    return _phase4g_deterministic(year)["cases_by_id"]
+
+
+def _imd_array_for_year(year: int) -> np.ndarray:
+    if year == 2025:
+        return _phase4j_array("pairing/observation_mm.npy")
+    return _phase4g_deterministic(year)["imd"]
+
+
+@lru_cache(maxsize=3)
+def _event_flags_by_case(year: int) -> dict[str, tuple[bool, bool]]:
+    """Per-case (event_heavy, event_very_heavy) from the frozen, already-
+    loaded IMD pairing array -- a deterministic threshold comparison over
+    data already in memory, not a new computation on stored science."""
+    paired = _paired_cases_by_id(year)
+    imd = _imd_array_for_year(year)
+    flags: dict[str, tuple[bool, bool]] = {}
+    for case_id, meta in paired.items():
+        segment = imd[meta["row_start"]: meta["row_start"] + meta["row_count"]]
+        finite = segment[np.isfinite(segment)]
+        if finite.size == 0:
+            continue
+        peak = float(finite.max())
+        flags[case_id] = (peak >= HEAVY_THRESHOLD_MM, peak >= VERY_HEAVY_THRESHOLD_MM)
+    return flags
+
+
+@lru_cache(maxsize=3)
+def _pseudo_regime_class_by_case(year: int) -> dict[str, str]:
+    lookup = _REGIME_LOADER[year]()
+    return {case_id: REGIME_CLASSES[int(np.argmax(vector))] for case_id, vector in lookup.items()}
+
+
 def _case_summary(case_id: str, record: dict, year: int) -> OperationalCaseSummary:
     case_level = _phase4j_case_level_by_case().get(case_id) if year == 2025 else None
+    paired_meta = _paired_cases_by_id(year).get(case_id)
+    event_flags = _event_flags_by_case(year).get(case_id)
+    date8 = record["initialization"][:10]
+    lead_hours = LEAD_HOURS_BY_DAY[record["product"][3]]
+    m1_minus_raw = case_level["M1_minus_raw_rmse_mm"] if case_level else None
     return OperationalCaseSummary(
         case_id=case_id,
         year=year,
@@ -567,7 +642,15 @@ def _case_summary(case_id: str, record: dict, year: int) -> OperationalCaseSumma
         full_5_member_rainfall_qc_pass=record["FULL_5_MEMBER_RAINFALL_QC_PASS"],
         m1_rmse_mm=case_level["M1_rmse_mm"] if case_level else None,
         raw_rmse_mm=case_level["raw_rmse_mm"] if case_level else None,
-        m1_minus_raw_rmse_mm=case_level["M1_minus_raw_rmse_mm"] if case_level else None,
+        m1_minus_raw_rmse_mm=m1_minus_raw,
+        initialization_date=date8,
+        month=int(date8[5:7]),
+        lead_label=f"Day {lead_hours // 24}",
+        valid_date=paired_meta.get("valid_observation_date") if paired_meta else None,
+        event_heavy=event_flags[0] if event_flags else None,
+        event_very_heavy=event_flags[1] if event_flags else None,
+        pseudo_regime_class=_pseudo_regime_class_by_case(year).get(case_id) if record["REGIME_SOURCE_ELIGIBLE"] else None,
+        selected_model_improved_vs_raw=(m1_minus_raw < 0) if m1_minus_raw is not None else None,
     )
 
 
@@ -966,6 +1049,17 @@ def metrics_fss(year: int) -> FSSResponse:
         path = _guard_and_fingerprint(PHASE4I / "fss" / "2024.json", PHASE4I)
         return FSSResponse(year=year, fss=json.loads(path.read_text(encoding="utf-8")))
     return FSSResponse(year=year, fss=_phase4j_json("metrics/fss.json"))
+
+
+@router.get("/{year}/metrics/ensemble", response_model=EnsembleMetricsResponse)
+def metrics_ensemble(year: int) -> EnsembleMetricsResponse:
+    _require_year(year)
+    if year != 2025:
+        raise _science_error(
+            404, ScienceErrorCode.PRODUCT_UNAVAILABLE,
+            f"No frozen matched-population five-member-vs-ML comparison exists for {year}; this comparison is a 2025-only frozen artifact.",
+        )
+    return EnsembleMetricsResponse(year=year, metrics=_phase4j_json("metrics/ensemble.json"))
 
 
 @router.get("/{year}/regimes", response_model=RegimeSummaryResponse)

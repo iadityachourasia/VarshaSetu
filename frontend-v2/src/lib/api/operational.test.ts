@@ -73,6 +73,9 @@ describe("case list parsing", () => {
         deterministic_source_eligible: true, probability_source_eligible: true, regime_source_eligible: true,
         ensemble_source_eligible: false, c00_rainfall_qc_pass: true, full_5_member_rainfall_qc_pass: false,
         m1_rmse_mm: 3.396, raw_rmse_mm: 3.33, m1_minus_raw_rmse_mm: 0.066,
+        initialization_date: "2025-06-01", month: 6, lead_label: "Day 1", valid_date: "2025-06-02",
+        event_heavy: false, event_very_heavy: false, pseudo_regime_class: "BREAK_WEAK_MONSOON",
+        selected_model_improved_vs_raw: false,
       }],
     };
     vi.stubGlobal("fetch", okJson(response));
@@ -90,6 +93,9 @@ describe("case list parsing", () => {
         deterministic_source_eligible: true, probability_source_eligible: true, regime_source_eligible: true,
         ensemble_source_eligible: false, c00_rainfall_qc_pass: true, full_5_member_rainfall_qc_pass: false,
         m1_rmse_mm: null, raw_rmse_mm: null, m1_minus_raw_rmse_mm: null,
+        initialization_date: "2023-06-01", month: 6, lead_label: "Day 1", valid_date: "2023-06-02",
+        event_heavy: null, event_very_heavy: null, pseudo_regime_class: "ACTIVE_MONSOON",
+        selected_model_improved_vs_raw: null,
       }],
     };
     vi.stubGlobal("fetch", okJson(response));

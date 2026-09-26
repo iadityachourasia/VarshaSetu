@@ -79,6 +79,14 @@ export const operationalCaseSummarySchema = z.object({
   m1_rmse_mm: z.number().nullable(),
   raw_rmse_mm: z.number().nullable(),
   m1_minus_raw_rmse_mm: z.number().nullable(),
+  initialization_date: z.string(),
+  month: z.number(),
+  lead_label: z.string(),
+  valid_date: z.string().nullable(),
+  event_heavy: z.boolean().nullable(),
+  event_very_heavy: z.boolean().nullable(),
+  pseudo_regime_class: z.enum(["ACTIVE_MONSOON", "BREAK_WEAK_MONSOON", "LOW_DEPRESSION_INFLUENCED"]).nullable(),
+  selected_model_improved_vs_raw: z.boolean().nullable(),
 });
 export const operationalCasesResponseSchema = z.object({
   year: z.number(),
@@ -214,6 +222,12 @@ export const operationalFssSchema = z.object({
   year: z.number(),
   fss: z.record(z.string(), z.unknown()),
   neighborhoods: z.array(z.number()),
+});
+export const operationalEnsembleMetricsSchema = z.object({
+  year: z.number(),
+  metrics: z.record(z.string(), z.unknown()),
+  label: z.literal("MATCHED 75-CASE SUBSET"),
+  note: z.string(),
 });
 
 // ---------------------------------------------------------------------------
@@ -368,6 +382,9 @@ export function getOperationalProbabilityMetrics(year: OperationalYear, server =
 }
 export function getOperationalFSS(year: OperationalYear, server = false) {
   return getOperational(`/${year}/metrics/fss`, operationalFssSchema, server);
+}
+export function getOperationalEnsembleMetrics(year: OperationalYear, server = false) {
+  return getOperational(`/${year}/metrics/ensemble`, operationalEnsembleMetricsSchema, server);
 }
 export function getOperationalQuality(server = false) {
   return getOperational("/quality", operationalQualitySchema, server);
