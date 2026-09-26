@@ -121,7 +121,7 @@ function PresentationViewToggle() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
-  return <button type="button" className={`icon-button presentation-toggle ${active ? "active" : ""}`} onClick={() => setActive((current) => !current)} aria-pressed={active} title="Presentation View (P)">
+  return <button type="button" className={`presentation-toggle ${active ? "active" : ""}`} onClick={() => setActive((current) => !current)} aria-pressed={active} title="Presentation View (P)">
     <Presentation size={18} aria-hidden="true" /><span>{active ? "Exit Presentation View" : "Presentation View"}</span>
   </button>;
 }

@@ -70,6 +70,12 @@ experiments/
 *.log
 
 # =========================================================
+# Demo launcher runtime state (created/deleted by
+# scripts/demo/start-demo.ps1 / stop-demo.ps1; never meant to be committed)
+# =========================================================
+scripts/demo/.runtime/
+
+# =========================================================
 # OS / IDE
 # =========================================================
 .DS_Store
