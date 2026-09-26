@@ -91,6 +91,10 @@ This directory is the working technical specification, scientific governance sys
 | `89_OPERATIONAL_FINAL_TEST_2025.md` | Phase 4J one-time authorized 2025 operational-era final test, frozen primary result, extremes, FSS, probabilities and holdout-consumption audit | Before any operational-era performance claim |
 | `90_INDEPENDENT_FINAL_SCIENTIFIC_AUDIT.md` | Phase 4K independent recalculation, claim audit and documentation/frontend discrepancy ledger | Before public scientific claims |
 | `91_SCIENTIFIC_COMMUNICATION_ALIGNMENT.md` | Phase 4L canonical claims, 2019/2025 communication boundary and correction verification | Before presentation, frontend copy or demo narration |
+| `92_OPERATIONAL_SCIENCE_PRESENTATION_API.md` | Phase 5A.1 read-only presentation API over the frozen 2023-2025 corpus: routes, integrity model, year capability matrix, known limitations | Before any frontend integration of Track B (2023-2025) data |
+| `93_OPERATIONAL_ATTRIBUTION_AND_FRONTEND_CLIENT.md` | Phase 5A.1B proof of the 2024 model-output and 2023-2025 regime row/pixel attribution, the upgraded capability matrix, and the frontend-v2 Zod client for the operational API | Before exposing or consuming any Track B per-case model/regime grid |
+| `94_SIX_YEAR_EXPLORER_AND_SYNOPTIC_FRONTEND.md` | Phase 5A.2 status: the already-substantial existing six-year frontend, the structured `{code, detail}` error contract, the District Track-B capability fix, and the honestly-scoped remaining gaps | Before further /forecast, /casebook, /ensemble, /regimes, or /districts frontend work |
+| `95_LIVE_OPERATIONAL_FRONTEND_DATA_MIGRATION.md` | Phase 5A.2B: migrates Forecast (Track B) and Data Quality to the live operational API with a verified static fallback layer; a real Zod-validation-bypass bug found and fixed in the fallback logic; honest list of pages not yet migrated | Before migrating Casebook/Ensemble/Regimes/Extremes/Verification, or touching the fallback/data-source model |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule

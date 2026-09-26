@@ -1,0 +1,19 @@
+{
+  "experiment": "2023–2025 historical operational-era GEFS evaluation",
+  "evaluation_year": 2025,
+  "status": "FINAL_TEST_COMPLETED",
+  "source": "Historical NOAA operational GEFS + IMD rainfall",
+  "source_artifact": "experiments/recent_historical/phase4j_operational_final_test_v1/FINAL_TEST_RESULT.json",
+  "source_sha256": "04a7fc2a434d24449365e2cb9978cbc8584f5cc87ea4f132cfaf6e7fc7a4abca",
+  "selected_model": "M1 Ridge MOS",
+  "case_count": 232,
+  "paired_cell_count": 301832,
+  "raw_rmse_mm": 16.165724938462002,
+  "selected_rmse_mm": 15.573561739774954,
+  "secondary_m2_rmse_mm": 15.002232177513372,
+  "heavy_bss": 0.09483459567220909,
+  "very_heavy_bss": 0.02652273448129483,
+  "heavy_far": 0.6957577720207254,
+  "very_heavy_far": 0.8549180327868853,
+  "extreme_spatial_classification": "RAW_BETTER"
+}
