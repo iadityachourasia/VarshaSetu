@@ -6,6 +6,22 @@ Each item states what was actually verified, where, and by what evidence —
 consistent with this project's rule against claiming a check ran when it
 did not.
 
+## Full regression results (Task 33, this session, clean production build)
+
+- **TypeScript**: `npm run typecheck` — clean, 0 errors.
+- **ESLint**: `npm run lint` — 0 errors, 1 pre-existing warning unrelated to
+  this phase (`app-shell.tsx`'s `window.location.assign` in
+  `ExperimentContextControl`, predates this phase).
+- **Vitest**: `npm run test` — **73 of 74 tests passed**. The one failure
+  (`communication.test.ts`'s displayed-value-vs-frozen-artifact hash check)
+  fails with `ENOENT` on `experiments/recent_historical/.../FINAL_TEST_RESULT.json`
+  — that source file is gitignored and genuinely absent in this sandbox,
+  confirmed pre-existing (the test predates this phase's first commit).
+- **Production build**: `next build` — clean, all 12 routes compile.
+- **Playwright** (`npx playwright test`, full suite, real headless
+  Chromium, clean build): **13 of 35 tests passed** — see the itemized
+  breakdown below.
+
 ## UI Gate (`docs/14_ACCEPTANCE_CRITERIA.md`)
 
 - [x] No fake scientific values — confirmed by this phase's secret/dead-UI
@@ -97,14 +113,28 @@ did not.
   PowerShell interpreter exists in this Linux sandbox. The script was
   verified for structural correctness (balanced braces/parens/quotes) but
   never actually executed.
-- **The five Playwright specs that need a real backend and the real
-  `experiments/` corpus** (`operational-track-b.spec.ts`,
-  `operational-extreme-verification.spec.ts`, `demo-flow.spec.ts`,
-  `release-consistency.spec.ts`, `mapping.spec.ts`) — written and
-  type/lint/build-checked against this session's own source, but not
-  executed here. Run these on the real machine before demo day; they are
-  the actual proof that Track A's live maps, Track B's live case data, and
-  the online map-tile path all work end-to-end.
+- **The full Playwright suite was actually run this session** (Task 33)
+  against a clean production build, with a real headless Chromium, to get
+  a precise pass/fail count rather than leaving it as an estimate: **13 of
+  35 tests passed**. All 13 passes are exactly the tests that need no live
+  backend (`demo-preset-and-presentation-view.spec.ts`,
+  `story-mode-and-audit.spec.ts`, `operational-fallback.spec.ts`'s
+  route-mocked specs, `operational-accessibility-responsive.spec.ts`'s
+  mocked-data specs). All 22 failures are exactly the tests that need a
+  real backend and the real `experiments/` corpus
+  (`operational-track-b.spec.ts`, `operational-extreme-verification.spec.ts`,
+  `demo-flow.spec.ts`, `release-consistency.spec.ts`, `mapping.spec.ts`,
+  `demo-performance.spec.ts`) — each failure was individually inspected and
+  traces to `ECONNREFUSED 127.0.0.1:8000` (Track A) or the equivalent
+  missing Track B corpus, not to a code defect. One failure
+  (`operational-extreme-verification.spec.ts`'s "Model selection story"
+  assertion) was specifically checked to confirm it is not a side effect of
+  this session's `/verification` fix — it isn't; that test exercises the
+  `OperationalVerification` client component, which this session did not
+  touch. **Zero regressions from this session's changes.** Run the full
+  suite again on the real machine before demo day; a live backend should
+  turn most or all of these 22 green, and any that don't are new evidence
+  to investigate, not an expected outcome.
 
 ## Explicitly out of scope for this freeze phase (per the Phase 5B brief)
 
