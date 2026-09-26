@@ -105,6 +105,7 @@ This directory is the working technical specification, scientific governance sys
 | `presentation/FINAL_DEMO_NARRATION.md` | Phase 5B: 90-second / 2-minute / 30-second narration scripts aligned scene-for-scene with Story Mode, plus delivery notes and the backup-case switch procedure | Before rehearsing or delivering the live demo |
 | `presentation/JUDGE_QA.md` | Phase 5B: anticipated judge questions by theme (provenance, regime awareness, extreme-skill limitation, scope gaps, reproducibility) with honest, sourced answers | Before the judge Q&A session |
 | `presentation/FINAL_SUBMISSION_CHECKLIST.md` | Phase 5B: this repo's own UI/Demo acceptance gates checked off with evidence, full regression results (73/74 Vitest, 13/35 Playwright -- every failure traced to the sandbox's missing backend/corpus, zero regressions from this phase), and an honest list of what needs the real dev machine (screenshot pack, PowerShell preflight execution) before demo day | Before declaring the submission ready, and as the direct input to `docs/99`'s decision gate |
+| `99_FINAL_SIH_DEMO_FREEZE.md` | Phase 5B release-candidate record: what was built and fixed this freeze phase, full regression evidence, honest real-dev-machine gap list, and the `SIH_DEMO_READY_WITH_MINOR_NOTES` decision gate | Before demo day, and before starting any further product-development cycle on this branch |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule
