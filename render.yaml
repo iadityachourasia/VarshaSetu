@@ -1,0 +1,15 @@
+# Render Blueprint for the VarshaSetu backend (free tier).
+# Deploy: connect this repo in the Render dashboard -> "New +" -> "Blueprint".
+# See docs/102_FREE_DEPLOYMENT.md for the full walkthrough, including the
+# frontend (Vercel) half of the deployment this file doesn't cover.
+services:
+  - type: web
+    name: varshasetu-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /api/science/status
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
