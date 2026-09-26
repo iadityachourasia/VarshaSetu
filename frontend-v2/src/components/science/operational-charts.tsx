@@ -1,8 +1,9 @@
 "use client";
 
 import { CartesianGrid, Legend, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { ErrorState } from "@/components/science/common";
+import { ErrorState, MetricTerm } from "@/components/science/common";
 import type { ProbabilityEventMetrics } from "@/lib/operational-probability-metrics";
+import { MODEL_COLOR, MODEL_LABEL, MODEL_ORDER, MODEL_ROLE, type ModelKey } from "@/lib/model-colors";
 
 // Phase 5A.2D: shared Track-B (2023-2025 operational-era) scientific
 // visualization/table components. Extreme Rain and Verification both
@@ -48,7 +49,7 @@ export function DeterministicCategoricalTable({
   modelNames: Record<string, string>;
 }) {
   if (!metrics) return <ErrorState message="Deterministic event-detection metrics are unavailable for this year." />;
-  return <table className="phase5-table"><thead><tr><th>Model</th><th>POD</th><th>FAR</th><th>CSI</th><th>ETS</th></tr></thead><tbody>
+  return <table className="phase5-table"><thead><tr><th>Model</th><th><MetricTerm term="POD" /></th><th><MetricTerm term="FAR" /></th><th><MetricTerm term="CSI" /></th><th><MetricTerm term="ETS" /></th></tr></thead><tbody>
     {DETERMINISTIC_MODEL_ORDER.map((model) => {
       const item = metrics[model];
       const categorical = item?.[event]?.metrics;
@@ -111,10 +112,10 @@ export function OperationalReliabilityChart({ metric }: { metric: ProbabilityEve
  * is enforced by this component simply never accepting curve-point data. */
 export function ProbabilityQualityCards({ metric }: { metric: ProbabilityEventMetrics }) {
   return <div className="phase5-metric-strip">
-    <span><small>Brier ↓</small><strong>{metric.brier.toFixed(5)}</strong></span>
-    <span><small>BSS ↑</small><strong>{metric.bss >= 0 ? "+" : ""}{metric.bss.toFixed(4)}</strong></span>
-    <span><small>PR-AUC ↑</small><strong>{metric.pr_auc.toFixed(3)}</strong></span>
-    <span><small>ROC-AUC ↑</small><strong>{metric.roc_auc.toFixed(3)}</strong></span>
+    <span><small><MetricTerm term="Brier" /> ↓</small><strong>{metric.brier.toFixed(5)}</strong></span>
+    <span><small><MetricTerm term="BSS" /> ↑</small><strong>{metric.bss >= 0 ? "+" : ""}{metric.bss.toFixed(4)}</strong></span>
+    <span><small><MetricTerm term="PR-AUC" /> ↑</small><strong>{metric.pr_auc.toFixed(3)}</strong></span>
+    <span><small><MetricTerm term="ROC-AUC" /> ↑</small><strong>{metric.roc_auc.toFixed(3)}</strong></span>
     <span><small>Observed event cells</small><strong>{metric.observed_event_count.toLocaleString()}</strong></span>
   </div>;
 }
@@ -123,4 +124,15 @@ export function ProbabilityQualityCards({ metric }: { metric: ProbabilityEventMe
  * literal in JSX with whatever the fetched artifact actually reports. */
 export function PopulationBadge({ cases, cells, label }: { cases: number; cells: number; label?: string }) {
   return <span className="phase5-population-badge">{label ? `${label} · ` : ""}{cases.toLocaleString()} cases · {cells.toLocaleString()} cells</span>;
+}
+
+/** Canonical Raw/M1-M4 model-ladder rail: one consistent color per model,
+ * M1's preselected-primary and M2's secondary-result roles always labeled
+ * (never a visual "M2 won" crown), reused everywhere a model legend is
+ * needed instead of each page inventing its own. */
+export function ModelLadderRail({ selected }: { selected?: ModelKey }) {
+  return <div className="phase5-model-rail" role="list" aria-label="Model ladder">{MODEL_ORDER.map((model) => <div key={model} role="listitem" className={model === selected ? "selected" : ""}>
+    <span className="model-dot" style={{ background: MODEL_COLOR[model] }} aria-hidden="true" />
+    <strong>{model}</strong><small>{MODEL_LABEL[model]}</small><span className="phase5-model-role">{MODEL_ROLE[model]}</span>
+  </div>)}</div>;
 }

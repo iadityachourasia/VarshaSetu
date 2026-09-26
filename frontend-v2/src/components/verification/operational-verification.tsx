@@ -3,13 +3,14 @@
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { DataSourceIndicator, ErrorState, LoadingState } from "@/components/science/common";
+import { DataSourceIndicator, ErrorState, LoadingState, MetricTerm } from "@/components/science/common";
 import { modelNames } from "@/science/frozen/results";
 import { getOperationalDeterministicMetrics, getOperationalFSS, getOperationalProbabilityMetrics, type OperationalYear } from "@/lib/api/operational";
 import { loadOperationalCaseList, type CaseListItem } from "@/lib/operational-case-list";
 import { withStaticFallback, type DataSourceMode } from "@/lib/data-source";
 import { extractProbabilityEventMetrics } from "@/lib/operational-probability-metrics";
 import { median } from "@/lib/stats";
+import { SkillCube } from "@/components/verification/skill-cube";
 import {
   DETERMINISTIC_MODEL_ORDER, DeterministicCategoricalTable, OperationalFssChart, PopulationBadge, ProbabilityQualityCards,
   leadRmse, type DeterministicModelMetrics, type FssEventResult,
@@ -17,7 +18,7 @@ import {
 
 type Year = 2024 | 2025;
 type EventKey = "heavy" | "very_heavy";
-type Tab = "continuous" | "extremes" | "probability" | "spatial" | "lead_time" | "case_outcomes" | "generalization";
+type Tab = "continuous" | "extremes" | "probability" | "spatial" | "lead_time" | "case_outcomes" | "generalization" | "skill_cube";
 const TABS: { key: Tab; label: string }[] = [
   { key: "continuous", label: "Continuous" },
   { key: "extremes", label: "Extremes" },
@@ -26,6 +27,7 @@ const TABS: { key: Tab; label: string }[] = [
   { key: "lead_time", label: "Lead Time" },
   { key: "case_outcomes", label: "Case Outcomes" },
   { key: "generalization", label: "Generalization" },
+  { key: "skill_cube", label: "Skill Cube" },
 ];
 
 /** Each bar is one 2025 final-test case's M1-minus-Raw RMSE, sorted so the
@@ -142,7 +144,7 @@ export function OperationalVerification() {
 
     <div className="phase5-tab-row" role="tablist" aria-label="Verification mode">{TABS.map((item) => <button key={item.key} type="button" role="tab" aria-selected={tab === item.key} onClick={() => setTab(item.key)}>{item.label}</button>)}</div>
 
-    {tab !== "lead_time" && tab !== "case_outcomes" && tab !== "generalization" ? <div className="phase5-controls">
+    {tab !== "lead_time" && tab !== "case_outcomes" && tab !== "generalization" && tab !== "skill_cube" ? <div className="phase5-controls">
       <label>Year<select value={year} onChange={(change) => setYear(Number(change.target.value) as Year)}><option value={2024}>2024 validation</option><option value={2025}>2025 completed final test</option></select></label>
       {tab !== "continuous" ? <label>Event<select value={event} onChange={(change) => setEvent(change.target.value as EventKey)}><option value="heavy">Heavy ≥64.5</option><option value="very_heavy">Very Heavy ≥115.6</option></select></label> : null}
       {currentDeterministicPopulation ? <PopulationBadge cases={currentDeterministicPopulation.case_count} cells={currentDeterministicPopulation.cell_count} /> : null}
@@ -151,7 +153,7 @@ export function OperationalVerification() {
     {tab === "continuous" ? <section className="phase5-analysis-block" role="tabpanel">
       <h2>Continuous verification · {year === 2025 ? "2025 completed final test" : "2024 validation / model selection"}</h2>
       <p>{year === 2025 ? "SELECTED_MODEL_IMPROVED_RMSE: M1 reduced RMSE versus Raw on the completed final test." : "VALIDATION / MODEL SELECTION: M1 was selected here under the frozen primary-RMSE rule. These are not final-test results."}</p>
-      <table className="phase5-table"><thead><tr><th>Model</th><th>RMSE · mm</th><th>MAE · mm</th><th>Bias · mm</th><th>Governance role</th></tr></thead><tbody>{DETERMINISTIC_MODEL_ORDER.map((model) => { const item = det[year]?.[model]; return <tr key={model}><th>{model} · {modelNames[model]}</th><td>{item ? item.continuous.rmse_mm.toFixed(4) : "Unavailable"}</td><td>{item ? item.continuous.mae_mm.toFixed(4) : "Unavailable"}</td><td>{item ? item.continuous.bias_mm.toFixed(4) : "Unavailable"}</td><td>{model === "M1" ? "Preselected primary" : model === "M0" ? "Raw reference" : model === "M2" ? "Secondary final-test result" : "Predeclared secondary"}</td></tr>; })}</tbody></table>
+      <table className="phase5-table"><thead><tr><th>Model</th><th><MetricTerm term="RMSE" /> · mm</th><th><MetricTerm term="MAE" /> · mm</th><th><MetricTerm term="Bias" /> · mm</th><th>Governance role</th></tr></thead><tbody>{DETERMINISTIC_MODEL_ORDER.map((model) => { const item = det[year]?.[model]; return <tr key={model}><th>{model} · {modelNames[model]}</th><td>{item ? item.continuous.rmse_mm.toFixed(4) : "Unavailable"}</td><td>{item ? item.continuous.mae_mm.toFixed(4) : "Unavailable"}</td><td>{item ? item.continuous.bias_mm.toFixed(4) : "Unavailable"}</td><td>{model === "M1" ? "Preselected primary" : model === "M0" ? "Raw reference" : model === "M2" ? "Secondary final-test result" : "Predeclared secondary"}</td></tr>; })}</tbody></table>
       {year === 2025 && det[2025]?.M0 && det[2025]?.M1 ? <p className="phase5-caveat">Difference: {(det[2025].M1.continuous.rmse_mm - det[2025].M0.continuous.rmse_mm).toFixed(4)} mm · relative change {(100 * (det[2025].M1.continuous.rmse_mm - det[2025].M0.continuous.rmse_mm) / det[2025].M0.continuous.rmse_mm).toFixed(4)}%. Do not visually assign &ldquo;winner&rdquo; based only on lowest 2025 RMSE -- M1 remains primary because it was selected before the test, not because it is the single lowest number.</p> : null}
     </section> : null}
 
@@ -195,5 +197,15 @@ export function OperationalVerification() {
         <p className="phase5-caveat">Probability discrimination weakened from validation to final test. The populations differ; this descriptive comparison does not reopen model selection.</p>
       </section>
     </> : null}
+
+    {tab === "skill_cube" ? <section className="phase5-analysis-block" role="tabpanel">
+      <h2>Verification skill cube</h2>
+      <p>Year × model × metric family × event, filterable. Not a literal 5-D cube -- an interactive matrix. Track A (2019 reforecast) and Track B (2023-2025 operational-era) are never compared in one pooled line; this cube covers Track B only.</p>
+      <SkillCube
+        det={{ 2024: det[2024], 2025: det[2025] }}
+        prob={{ 2024: prob2024.data?.data?.metrics, 2025: prob2025.data?.data?.metrics }}
+        fss={{ 2024: fss[2024], 2025: fss[2025] }}
+      />
+    </section> : null}
   </div>;
 }

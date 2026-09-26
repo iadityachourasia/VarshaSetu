@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import type { DataSourceMode } from "@/lib/data-source";
 import { DATA_SOURCE_LABEL } from "@/lib/data-source";
+import { METRIC_DEFINITION } from "@/lib/metric-definitions";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 export function PageHeading({ title, subtitle, action }: { title: string; subtitle: string; action?: ReactNode }) {
   return <div className="page-heading"><div><h1>{title}</h1><p>{subtitle}</p></div>{action}</div>;
@@ -39,4 +41,15 @@ export function DataSourceIndicator({ mode }: { mode: DataSourceMode }) {
   if (mode === "VERIFIED_API") return null;
   const tone = mode === "INTEGRITY_FAILURE" ? "amber" : mode === "VERIFIED_STATIC_FALLBACK" ? "muted" : "amber";
   return <span className={`data-source-chip data-source-${tone}`} role="status">{DATA_SOURCE_LABEL[mode]}</span>;
+}
+
+/** One canonical metric-abbreviation tooltip trigger (lib/metric-definitions.ts
+ * is the single definition source -- no page writes its own). Base UI's
+ * Trigger renders a real focusable element, so the definition is reachable
+ * by keyboard, not only on hover. Falls back to plain text for an
+ * unrecognized term rather than showing an empty tooltip. */
+export function MetricTerm({ term }: { term: string }) {
+  const definition = METRIC_DEFINITION[term];
+  if (!definition) return <>{term}</>;
+  return <Tooltip><TooltipTrigger className="metric-term">{term}</TooltipTrigger><TooltipContent>{definition}</TooltipContent></Tooltip>;
 }
