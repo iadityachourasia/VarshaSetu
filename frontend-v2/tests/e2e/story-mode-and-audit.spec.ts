@@ -1,10 +1,12 @@
 import { expect, test } from "@playwright/test";
 
 // Phase 5A.3, sections 39-53 (Story Mode) and 34-38 (Provenance DAG,
-// Holdout Governance, Limitations panel). All four pages/features here are
-// fully client-side with no live-backend dependency, so unlike most of this
-// phase's other new surfaces these were actually run and pass against a
-// real headless Chromium in this session (see docs/98 section 2).
+// Holdout Governance, Limitations panel); scene order/titles updated in
+// Phase 5B section 12-13 to match the official 12-scene sequence exactly.
+// All four pages/features here are fully client-side with no live-backend
+// dependency, so unlike most of this phase's other new surfaces these were
+// actually run and pass against a real headless Chromium in this session
+// (see docs/99 section 2).
 
 test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
   await page.goto("/");
@@ -14,13 +16,13 @@ test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "The Problem" })).toBeVisible();
 
   await page.getByRole("button", { name: "Next →" }).click();
-  await expect(page.getByRole("heading", { name: "Two Independent Experiments" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Two Experiment Tracks" })).toBeVisible();
 
   await page.keyboard.press("ArrowRight");
-  await expect(page.getByRole("heading", { name: "Forecast Correction" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Forecast Case" })).toBeVisible();
 
   await page.keyboard.press("ArrowLeft");
-  await expect(page.getByRole("heading", { name: "Two Independent Experiments" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Two Experiment Tracks" })).toBeVisible();
 
   await page.getByRole("button", { name: "← Back" }).click();
   await expect(page.getByRole("heading", { name: "The Problem" })).toBeVisible();
@@ -36,7 +38,7 @@ test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
   // Walk to the last scene and confirm the closing content + Exit control.
   for (let i = 0; i < 11; i++) await page.keyboard.press("ArrowRight");
   await expect(page.getByText("Scene 12 of 12")).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Reproducible Science" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Reproducibility" })).toBeVisible();
   await expect(page.getByText("Research prototype for scientifically transparent")).toBeVisible();
   await page.getByRole("button", { name: "Exit", exact: true }).last().click();
   await expect(page.getByRole("dialog", { name: "Present VarshaSetu" })).not.toBeVisible();

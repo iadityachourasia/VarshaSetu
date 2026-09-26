@@ -4,7 +4,7 @@ import Link from "next/link";
 import { StoryMode } from "@/components/story/story-mode";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState, useSyncExternalStore } from "react";
-import { Activity, BookOpenText, CloudRain, Compass, Gauge, MapPinned, Moon, Sun, CalendarDays, Layers3, Orbit, Microscope, Network, ShieldCheck } from "lucide-react";
+import { Activity, BookOpenText, CloudRain, Compass, Gauge, MapPinned, Moon, Presentation, Sun, CalendarDays, Layers3, Orbit, Microscope, Network, ShieldCheck } from "lucide-react";
 
 const navigation = [
   { group: "ANALYSIS", items: [
@@ -96,6 +96,36 @@ function PresentButton() {
   </>;
 }
 
+/** Phase 5B, section 10-11: collapses the sidebar to its already-existing
+ * compact icon rail (reusing the proven <1550px responsive state rather
+ * than inventing a new hidden-nav layout, so navigation stays interactive)
+ * and declutters the header of non-context controls. Experiment/year
+ * context, legends, and limitation labels all live inside page content and
+ * are untouched -- this only changes chrome. "P" toggles it globally
+ * (guarded against firing while typing in a form control), with a visible
+ * Exit affordance always present while active. */
+function PresentationViewToggle() {
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    document.querySelector(".app-shell")?.classList.toggle("presentation-mode", active);
+    return () => document.querySelector(".app-shell")?.classList.remove("presentation-mode");
+  }, [active]);
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key.toLowerCase() !== "p" || event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target as HTMLElement | null;
+      if (target && ["INPUT", "SELECT", "TEXTAREA"].includes(target.tagName)) return;
+      if (target?.isContentEditable) return;
+      setActive((current) => !current);
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+  return <button type="button" className={`icon-button presentation-toggle ${active ? "active" : ""}`} onClick={() => setActive((current) => !current)} aria-pressed={active} title="Presentation View (P)">
+    <Presentation size={18} aria-hidden="true" /><span>{active ? "Exit Presentation View" : "Presentation View"}</span>
+  </button>;
+}
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   return <div className="app-shell">
     <a className="skip-link" href="#main-content">Skip to content</a>
@@ -105,7 +135,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <div className="sidebar-foot"><span className="status-dot" aria-hidden="true" /> Historical prototype</div>
     </aside>
     <div className="app-main">
-      <header className="global-header"><div><span className="global-kicker">VARSHASetu / SCIENTIFIC WORKSPACE</span><span className="global-context">Two separate historical GEFS lineages · no pooled result</span></div><div className="header-actions"><PresentButton /><Suspense fallback={null}><ExperimentContextControl /></Suspense><span className="header-status"><ShieldCheck size={14} aria-hidden="true" /> Historical prototype</span><ThemeToggle /></div></header>
+      <header className="global-header"><div><span className="global-kicker">VARSHASetu / SCIENTIFIC WORKSPACE</span><span className="global-context">Two separate historical GEFS lineages · no pooled result</span></div><div className="header-actions"><Link href="/forecast?demo=official" className="reset-demo-link" title="Restore the official experiment, year, case, and lead">Reset Demo</Link><PresentationViewToggle /><span className="header-hide-in-presentation"><PresentButton /></span><Suspense fallback={null}><ExperimentContextControl /></Suspense><span className="header-status"><ShieldCheck size={14} aria-hidden="true" /> Historical prototype</span><span className="header-hide-in-presentation"><ThemeToggle /></span></div></header>
       <main id="main-content">{children}</main>
     </div>
   </div>;

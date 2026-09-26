@@ -1,11 +1,17 @@
+import { redirect } from "next/navigation";
 import { ForecastWorkspace } from "@/components/forecast/forecast-workspace";
 import { OperationalForecastWorkspace } from "@/components/forecast/operational-workspace";
 import { ErrorState } from "@/components/science/common";
 import { casesSchema, demoCasesSchema, getScience } from "@/lib/api/science";
-import { defaultDemoCase } from "@/lib/demo";
+import { defaultDemoCase, OFFICIAL_OPERATIONAL_CASE_ID, OFFICIAL_OPERATIONAL_YEAR } from "@/lib/demo";
 
-export default async function ForecastPage({ searchParams }: { searchParams: Promise<{ case?: string; experiment?: string; year?: string }> }) {
+export default async function ForecastPage({ searchParams }: { searchParams: Promise<{ case?: string; experiment?: string; year?: string; demo?: string }> }) {
   const query = await searchParams;
+  // Phase 5B: a safe presentation preset -- redirects to the exact same
+  // real query params a presenter would type by hand, then falls through
+  // to the ordinary live/static-fallback data loading below. Never
+  // constructs a result object itself.
+  if (query.demo === "official") redirect(`/forecast?experiment=operational&year=${OFFICIAL_OPERATIONAL_YEAR}&case=${OFFICIAL_OPERATIONAL_CASE_ID}`);
   if (query.experiment === "operational") {
     const year = [2023, 2024, 2025].includes(Number(query.year)) ? Number(query.year) : 2025;
     return <OperationalForecastWorkspace initialYear={year} initialCase={query.case} />;
