@@ -22,7 +22,13 @@ test("2023 Forecast shows only the out-of-fold M2 model, never claimed as an ind
   await page.goto("/forecast");
   await selectOperationalYear(page, 2023);
   await expect(page.getByRole("heading", { name: "Forecast & Atmosphere" })).toBeVisible();
-  const modelSelect = page.getByLabel("Model");
+  // Not getByLabel("Model"): the wrapping <label> makes the select's own
+  // accessible name include its option text, and that same substring also
+  // appears in nearby map region/img aria-labels ("... frozen model map" /
+  // "... frozen model 49 by 49 ..."), so getByLabel("Model") is ambiguous
+  // (strict-mode violation). getByRole("combobox", ...) is unambiguous
+  // because it restricts candidates to the actual <select>.
+  const modelSelect = page.getByRole("combobox", { name: /^Model/ });
   await expect(modelSelect.locator("option")).toHaveCount(1);
   await expect(modelSelect.locator("option")).toHaveText("M2 cross-fit / OOF");
   await expect(page.getByRole("region", { name: "M2 cross-fit / OOF map" })).toBeVisible();
@@ -34,7 +40,7 @@ test("2023 Forecast shows only the out-of-fold M2 model, never claimed as an ind
 test("2024 Forecast offers M1-M4 against IMD, labeled as validation evidence", async ({ page }) => {
   await page.goto("/forecast");
   await selectOperationalYear(page, 2024);
-  const modelSelect = page.getByLabel("Model");
+  const modelSelect = page.getByRole("combobox", { name: /^Model/ });
   for (const model of ["M1", "M2", "M3", "M4"]) {
     await modelSelect.selectOption(model);
     await expect(modelSelect).toHaveValue(model);
@@ -84,10 +90,15 @@ test("Regime: correct year-role wording across 2023 OOF / 2024 prospective / 202
   await expect(page.getByRole("heading", { name: "Regime Intelligence" })).toBeVisible();
   await expect(page.getByText(/out-of-fold cross-fit pathway/)).toBeVisible();
 
-  await page.getByLabel("Year").selectOption("2024");
+  // Not getByLabel("Year"): it's ambiguous with the global header's
+  // "Experiment and year" select, whose accessible name contains "year" as
+  // a case-insensitive substring. getByRole("combobox", ...) restricted to
+  // this page's own Year control avoids the collision.
+  const yearSelect = page.getByRole("combobox", { name: /^Year/ });
+  await yearSelect.selectOption("2024");
   await expect(page.getByText(/frozen prospective-validation prediction/)).toBeVisible();
 
-  await page.getByLabel("Year").selectOption("2025");
+  await yearSelect.selectOption("2025");
   await expect(page.getByText("Active Monsoon", { exact: true }).first()).toBeVisible();
   await expect(page.getByRole("heading", { name: "2025 deterministic model consequence" })).toBeVisible();
 });
@@ -105,7 +116,7 @@ test("Track A regression: 2019 Forecast/Extremes/Verification/Districts unaffect
   await page.goto("/verification");
   await expect(page.getByText("9.73% lower RMSE")).toBeVisible();
   await expect(page.getByRole("heading", { name: "2025 operational-era historical benchmark" })).toBeVisible();
-  await expect(page.getByText(/Different GEFS lineages and evaluation populations/)).toBeVisible();
+  await expect(page.getByText(/different GEFS lineages with different evaluation populations/i)).toBeVisible();
 
   await page.goto("/districts");
   await expect(page.getByRole("heading", { name: "District Intelligence" })).toBeVisible();

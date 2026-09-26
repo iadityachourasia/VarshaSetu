@@ -7,8 +7,8 @@ import { defaultDemoCase } from "@/lib/demo";
 export default async function ExtremesPage({ searchParams }: { searchParams: Promise<{ case?: string; experiment?: string; year?: string }> }) {
   const query = await searchParams;
   if (query.experiment === "operational") {
-    if (query.year && query.year !== "2025") return <div className="page-content"><ErrorState message="Frozen calibrated extreme-probability maps are available here for the completed 2025 final test. Other years remain labeled by their training or validation role." /></div>;
-    return <OperationalExtremes initialCase={query.case} />;
+    const initialYear = [2023, 2024, 2025].includes(Number(query.year)) ? (Number(query.year) as 2023 | 2024 | 2025) : 2025;
+    return <OperationalExtremes initialCase={query.case} initialYear={initialYear} />;
   }
   if (query.year && query.year !== "2019") return <div className="page-content"><ErrorState message="Interactive reforecast probability maps are available for the frozen 2019 final test only." /></div>;
   const result = await Promise.all([

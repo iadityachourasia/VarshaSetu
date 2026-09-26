@@ -32,8 +32,8 @@ const YEARS = [2023, 2024, 2025] as const;
 // rendering a fake disabled chart. Grid geometry (lat/lon centers, valid-
 // cell mask) is presentation-only and continues to read the static bundle,
 // exactly as Ensemble/Regime already do (docs/96 section 19).
-export function OperationalExtremes({ initialCase }: { initialCase?: string }) {
-  const [year, setYear] = useState<OperationalYear>(2025);
+export function OperationalExtremes({ initialCase, initialYear }: { initialCase?: string; initialYear?: OperationalYear }) {
+  const [year, setYear] = useState<OperationalYear>(initialYear ?? 2025);
   const [event, setEvent] = useState<EventKey>("heavy");
   const [mode, setMode] = useState<Mode>("probability");
   const [caseId, setCaseId] = useState(initialCase ?? "");
@@ -120,7 +120,10 @@ export function OperationalExtremes({ initialCase }: { initialCase?: string }) {
     <div className="phase5-tab-row" role="group" aria-label="Extreme analysis mode">{(["probability", "detection", "spatial", "reliability"] as const).map((item) => <button key={item} type="button" aria-pressed={mode === item} onClick={() => setMode(item)}>{item === "spatial" ? "Spatial skill / FSS" : item[0].toUpperCase() + item.slice(1)}</button>)}</div>
 
     {mode === "probability" ? (!eventProbabilityAvailable ? unavailableNote("Calibrated probability") : <>
-      {probabilityMetricsResult.isPending ? <LoadingState /> : !metric ? <ErrorState message="Probability quality metrics are unavailable." /> : <ProbabilityQualityCards metric={metric} />}
+      {probabilityMetricsResult.isPending ? <LoadingState /> : !metric ? <ErrorState message="Probability quality metrics are unavailable." /> : <>
+        <ProbabilityQualityCards metric={metric} />
+        {metric.categorical.metrics.FAR >= 0.5 ? <p className="phase5-caveat">Discrimination and calibration remain limited by rare events at this threshold; the false-alarm ratio is high (FAR {metric.categorical.metrics.FAR.toFixed(3)}).</p> : null}
+      </>}
       <div className="phase5-controls"><label>Historical case<select value={selectedCase?.case_id ?? ""} onChange={(change) => { setCaseId(change.target.value); setSelected(null); }}>{cases.map((item) => <option value={item.case_id} key={item.case_id}>{item.initialization_utc.slice(0, 10)} · {item.lead_label}</option>)}</select></label>{metric ? <span className="phase5-control-note">Frozen decision threshold: {metric.categorical.decision_threshold_probability.toFixed(2)} · probability scale 0–100%</span> : null}</div>
       {probabilityFieldResult.isPending ? <LoadingState /> : probabilityFieldResult.isError || !values || !grid || !mask ? <ErrorState message="The calibrated probability grid is unavailable for this case." /> : <>
         <div className="phase5-prob-map"><GridMap id="operational-probability" title={`${event === "heavy" ? "Heavy" : "Very Heavy"} calibrated probability`} subtitle={`P(IMD ≥${threshold} mm / 24 h) · ${year} · ${selectedCase?.lead_label ?? ""} · ${availability?.role_label ?? ""}`} values={values} mask={mask} grid={grid} palette="probability" geometry={geometry.data?.geometry} selected={selected} onSelect={setSelected} /></div><ProbabilityLegend />

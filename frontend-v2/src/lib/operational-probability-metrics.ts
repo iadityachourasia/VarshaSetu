@@ -1,16 +1,13 @@
-// Phase 5A.2D: `/api/science/operational/{year}/metrics/probability` serves
-// the frozen `metrics/probability.json` artifact "verbatim" for 2025 and an
-// assembled {heavy, very_heavy} object built from two flat frozen files for
-// 2024 (see docs/92 section 15-16 and backend/app/api/operational.py's
-// metrics_probability). The 2024 files are known-flat (brier/bss/pr_auc/... at
-// the top level, confirmed from public/science/operational-v1/
-// probability_validation_2024.json, which is generated from the same
-// artifacts). The 2025 presentation manifest wraps the identical fields one
-// level deeper under a `.metrics` key. This repository's checked-in tree does
-// not contain the raw `experiments/` corpus, so the exact top-level shape of
-// the live 2025 `metrics/probability.json` file itself has not been directly
-// inspected here -- this helper tolerates either shape rather than assuming
-// one, so a real shape difference is never silently misread as "unavailable".
+// `/api/science/operational/{year}/metrics/probability` serves the frozen
+// artifact for each year with a genuinely different nesting: 2025's
+// `metrics/probability.json` wraps the scalar fields one level deeper under
+// a `.metrics` key; 2024's `validation/probability_{heavy,very_heavy}_2024.json`
+// wraps them under `.full_2024_descriptive_metrics` (verified directly
+// against the real live backend -- the object at the un-nested level is a
+// truthy but scalar-metric-free bag of calibration/candidate-model metadata,
+// which previously made this helper silently return the wrong object rather
+// than "unavailable"). This helper checks both known nesting keys before
+// falling back to the record itself.
 export type ProbabilityCategorical = {
   decision_threshold_probability: number;
   metrics: { POD: number; FAR: number; CSI: number; ETS: number };
@@ -39,6 +36,8 @@ export function extractProbabilityEventMetrics(
   const raw = metrics?.[event];
   if (!raw || typeof raw !== "object") return undefined;
   const record = raw as Record<string, unknown>;
-  const unwrapped = record.metrics && typeof record.metrics === "object" ? record.metrics : record;
+  const nested = record.metrics ?? record.full_2024_descriptive_metrics;
+  const unwrapped = nested && typeof nested === "object" ? nested : record;
+  if (typeof (unwrapped as { pr_auc?: unknown }).pr_auc !== "number") return undefined;
   return unwrapped as ProbabilityEventMetrics;
 }

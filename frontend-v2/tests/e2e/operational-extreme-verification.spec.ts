@@ -54,11 +54,15 @@ test("Verification: 2024 model-selection context and 2025 primary/secondary sema
   await expect(tabs).toBeVisible();
 
   await page.getByRole("tab", { name: "Continuous" }).click();
-  await page.getByLabel("Year", { exact: true }).first().selectOption("2024");
+  // Not getByLabel("Year"): ambiguous with the global header's "Experiment
+  // and year" select. getByRole("combobox", ...) restricts candidates to
+  // this tab's own year <select>.
+  const yearSelect = page.getByRole("combobox", { name: /^Year/ });
+  await yearSelect.selectOption("2024");
   await expect(page.getByText(/VALIDATION \/ MODEL SELECTION: M1 was selected here/)).toBeVisible();
-  await page.getByLabel("Year", { exact: true }).first().selectOption("2025");
-  await expect(page.getByText("16.1657")).toBeVisible(); // frozen 2025 Raw RMSE
-  await expect(page.getByText("15.5736")).toBeVisible(); // frozen 2025 M1 RMSE
+  await yearSelect.selectOption("2025");
+  await expect(page.getByRole("cell", { name: "16.1657" })).toBeVisible(); // frozen 2025 Raw RMSE
+  await expect(page.getByRole("cell", { name: "15.5736" })).toBeVisible(); // frozen 2025 M1 RMSE, distinct from the model-selection-story caveat paragraph that also mentions this number
   await expect(page.getByText("Secondary final-test result")).toBeVisible();
 
   await page.getByRole("tab", { name: "Extremes" }).click();
@@ -68,14 +72,19 @@ test("Verification: 2024 model-selection context and 2025 primary/secondary sema
   await expect(page.getByText(/Only scalar PR-AUC\/ROC-AUC exist/)).toBeVisible();
 
   await page.getByRole("tab", { name: "Spatial" }).click();
-  await expect(page.locator(".chart-figure")).toBeVisible();
+  // Scoped to this tab's own tabpanel: the page also renders Track A's
+  // independent verification charts elsewhere (reusing the same
+  // .chart-figure class), which an unscoped locator would also match.
+  await expect(page.getByRole("tabpanel").locator(".chart-figure")).toBeVisible();
 
   await page.getByRole("tab", { name: "Lead Time" }).click();
   await expect(page.getByRole("heading", { name: /2025 lead-time RMSE/ })).toBeVisible();
 
   await page.getByRole("tab", { name: "Case Outcomes" }).click();
-  await expect(page.getByText(/improved/)).toBeVisible();
-  await expect(page.getByText(/Not every case improved/)).toBeVisible();
+  await expect(page.locator(".phase5-outcome-bar span", { hasText: "improved" })).toBeVisible();
+  // "Not every case improved" appears verbatim in both the chart's own
+  // figcaption and this surrounding caveat paragraph -- scope to the latter.
+  await expect(page.locator("p.phase5-caveat", { hasText: "Not every case improved" })).toBeVisible();
 
   await page.getByRole("tab", { name: "Generalization" }).click();
   await expect(page.getByRole("heading", { name: "Validation → Final-Test Behavior" })).toBeVisible();
