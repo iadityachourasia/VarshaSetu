@@ -26,7 +26,7 @@ COPY backend/ backend/
 # never regenerated or altered by this build.
 ARG DATA_BUNDLE_URL=https://github.com/iadityachourasia/VarshaSetu/releases/download/serving-data-v1/varshasetu-serving-data-v1.tar.gz
 RUN curl -fL "$DATA_BUNDLE_URL" -o /tmp/data.tar.gz \
-    && tar -xzf /tmp/data.tar.gz -C /app \
+    && tar --no-same-owner --no-same-permissions -xzf /tmp/data.tar.gz -C /app \
     && rm /tmp/data.tar.gz
 
 ENV PYTHONUNBUFFERED=1
