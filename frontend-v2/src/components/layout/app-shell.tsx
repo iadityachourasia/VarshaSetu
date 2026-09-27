@@ -4,7 +4,7 @@ import Link from "next/link";
 import { StoryMode } from "@/components/story/story-mode";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { Activity, BookOpenText, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, Presentation, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network } from "lucide-react";
+import { Activity, BookOpenText, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, Play, Presentation, RotateCcw, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network } from "lucide-react";
 
 const navigation = [
   { group: "ANALYSIS", items: [
@@ -91,7 +91,7 @@ function ThemeToggle() {
 function PresentButton() {
   const [open, setOpen] = useState(false);
   return <>
-    <button type="button" className="present-button" onClick={() => setOpen(true)}>Present VarshaSetu</button>
+    <button type="button" className="present-button" aria-label="Present VarshaSetu" title="Present VarshaSetu" onClick={() => setOpen(true)}><Play className="present-icon" size={17} fill="currentColor" aria-hidden="true" /><span>Present VarshaSetu</span></button>
     {open ? <StoryMode onClose={() => setOpen(false)} /> : null}
   </>;
 }
@@ -164,11 +164,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     </aside>
     <div className="mobile-app-bar">
       <button ref={menuButton} type="button" className="mobile-menu-button" aria-label="Open navigation" aria-expanded={mobileOpen} aria-controls="mobile-sidebar" onClick={() => setMobileOpen(true)}><Menu size={20} aria-hidden="true" /></button>
-      <Link href="/" className="brand" aria-label="VarshaSetu overview"><span className="brand-mark" aria-hidden="true">V</span><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span></Link>
+      <Link href="/" className="brand" aria-label="VarshaSetu overview"><span className="brand-mark" aria-hidden="true">V</span><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span><span className="mobile-brand-context" aria-hidden="true"><strong>VarshaSetu</strong><span className="mobile-brand-slash">/</span><span className="mobile-brand-descriptor">Scientific workspace</span></span></Link>
     </div>
     {mobileOpen ? <><button type="button" tabIndex={-1} className="mobile-nav-backdrop" aria-label="Close navigation" onClick={() => { setMobileOpen(false); menuButton.current?.focus(); }} /><aside ref={mobileDrawer} className="mobile-sidebar" id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div className="mobile-sidebar-top"><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span><button ref={closeButton} type="button" className="mobile-menu-button" aria-label="Close navigation" onClick={() => { setMobileOpen(false); menuButton.current?.focus(); }}><X size={20} aria-hidden="true" /></button></div><Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation onNavigate={() => setMobileOpen(false)} /></Suspense><div className="sidebar-foot"><span className="status-dot" aria-hidden="true" /> Historical prototype</div></aside></> : null}
     <div className="app-main">
-      <header className="global-header"><div className="header-context"><span className="global-kicker">VarshaSetu / Scientific workspace</span><span className="global-context">Two separate historical GEFS lineages · no pooled result</span></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" title="Restore the official experiment, year, case, and lead">Reset Demo</Link><PresentationViewToggle /><span className="header-hide-in-presentation"><PresentButton /></span><span className="header-hide-in-presentation"><ThemeToggle /></span></div></header>
+      <header className="global-header"><div className="header-context"><span className="global-kicker">VarshaSetu / Scientific workspace</span><span className="global-context">Two separate historical GEFS lineages · no pooled result</span></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" aria-label="Reset Demo" title="Restore the official experiment, year, case, and lead"><RotateCcw className="reset-demo-icon" size={17} aria-hidden="true" /><span>Reset Demo</span></Link><PresentationViewToggle /><span className="header-hide-in-presentation"><PresentButton /></span><span className="header-hide-in-presentation"><ThemeToggle /></span></div></header>
       <main id="main-content">{children}</main>
     </div>
   </div>;

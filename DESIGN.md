@@ -148,9 +148,9 @@ The palette is cool and low-glare, with scientific data colors reserved for iden
 
 ## Layout
 
-The desktop shell uses a left rail and a short contextual header. The rail is wide on large screens and reduces to an icon rail below 1550px. Main content is capped at 1900px. The Forecast Explorer places the case selector immediately above three equal map panels, followed by one shared rainfall legend and the cell, regime, and case-verification readouts. Panel gaps are tight and consistent.
+The desktop shell uses a left rail and a short contextual header. The rail is wide through laptop presentation widths and reduces to an icon rail below 1180px. Main content is capped at 1900px. The Forecast Explorer places the case selector immediately above three equal map panels, followed by one shared rainfall legend and the cell, regime, and case-verification readouts. Panel gaps are tight and consistent.
 
-At 1100px the map triptych wraps to two columns; at 760px it stacks into one column and navigation becomes a horizontal icon row. Case filters form a two-column mobile grid. Inspection and verification details follow the visual data instead of competing with it. The interface preserves exact values and labels on smaller screens rather than reducing scientific detail to decorative summary cards.
+At 1100px the map triptych wraps to two columns; at 760px it stacks into one column and navigation moves into an accessible off-canvas drawer. The mobile top bar uses a small workspace wordmark above a single row of experiment context and four 44px actions. Case filters form a two-column mobile grid. Inspection and verification details follow the visual data instead of competing with it. The interface preserves exact values and labels on smaller screens rather than reducing scientific detail to decorative summary cards.
 
 ## Elevation & Depth
 
@@ -186,7 +186,7 @@ The form language uses gently rounded control corners and restrained panel corne
 
 ### Navigation
 
-- **Style:** Persistent side rail with compact icon-and-label links; active state uses a tonal fill and teal text. Below 1550px it becomes an icon rail, and below 760px a horizontal row. The current page is announced semantically.
+- **Style:** Persistent side rail with compact icon-and-label links; active state uses a tonal fill and teal text. Below 1180px it becomes an icon rail, and below 760px its links move into the mobile drawer. The current page is announced semantically.
 
 ### Synchronized Rainfall Maps
 
