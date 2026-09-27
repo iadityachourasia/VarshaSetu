@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { StoryMode } from "@/components/story/story-mode";
 import { usePathname, useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState, useSyncExternalStore } from "react";
-import { Activity, BookOpenText, CloudRain, Compass, Gauge, MapPinned, Moon, Presentation, Sun, CalendarDays, Layers3, Orbit, Microscope, Network, ShieldCheck } from "lucide-react";
+import { Suspense, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { Activity, BookOpenText, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, Presentation, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network } from "lucide-react";
 
 const navigation = [
   { group: "ANALYSIS", items: [
@@ -27,7 +27,7 @@ const navigation = [
   ] },
 ];
 
-function Navigation() {
+function Navigation({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
   const search = useSearchParams();
   const caseId = search.get("case");
@@ -41,7 +41,7 @@ function Navigation() {
       if (context) { params.set("experiment", experiment); params.set("year", year); }
       if (context && caseId) params.set("case", caseId);
       const url = params.size ? `${href}?${params.toString()}` : href;
-      return <Link key={href} href={url} className={`nav-link ${selected ? "nav-link-active" : ""}`} aria-current={selected ? "page" : undefined} title={label}>
+      return <Link key={href} href={url} className={`nav-link ${selected ? "nav-link-active" : ""}`} aria-current={selected ? "page" : undefined} title={label} onClick={onNavigate}>
         <Icon size={19} strokeWidth={1.8} aria-hidden="true" /><span>{label}</span>
       </Link>;
     })}</div>)}
@@ -121,21 +121,54 @@ function PresentationViewToggle() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
-  return <button type="button" className={`presentation-toggle ${active ? "active" : ""}`} onClick={() => setActive((current) => !current)} aria-pressed={active} title="Presentation View (P)">
-    <Presentation size={18} aria-hidden="true" /><span>{active ? "Exit Presentation View" : "Presentation View"}</span>
+  return <button type="button" className={`presentation-toggle ${active ? "active" : ""}`} onClick={() => setActive((current) => !current)} aria-pressed={active} aria-label={active ? "Exit Presentation View" : "Presentation View"} title="Presentation View (P)">
+    <Presentation size={18} aria-hidden="true" /><span aria-hidden="true">{active ? "Exit Presentation View" : "Presentation View"}</span>
   </button>;
 }
 
 export function AppShell({ children }: { children: React.ReactNode }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const closeButton = useRef<HTMLButtonElement>(null);
+  const mobileDrawer = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const priorOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButton.current?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { setMobileOpen(false); menuButton.current?.focus(); }
+      if (event.key === "Tab" && mobileDrawer.current) {
+        const focusables = [...mobileDrawer.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')];
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+      }
+    };
+    const onResize = () => { if (window.innerWidth > 760) setMobileOpen(false); };
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("resize", onResize);
+    return () => {
+      document.body.style.overflow = priorOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [mobileOpen]);
   return <div className="app-shell">
     <a className="skip-link" href="#main-content">Skip to content</a>
-    <aside className="sidebar">
+    <aside className="sidebar" id="primary-sidebar">
       <Link href="/" className="brand" aria-label="VarshaSetu overview"><span className="brand-mark" aria-hidden="true">V</span><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span></Link>
       <Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation /></Suspense>
       <div className="sidebar-foot"><span className="status-dot" aria-hidden="true" /> Historical prototype</div>
     </aside>
+    <div className="mobile-app-bar">
+      <button ref={menuButton} type="button" className="mobile-menu-button" aria-label="Open navigation" aria-expanded={mobileOpen} aria-controls="mobile-sidebar" onClick={() => setMobileOpen(true)}><Menu size={20} aria-hidden="true" /></button>
+      <Link href="/" className="brand" aria-label="VarshaSetu overview"><span className="brand-mark" aria-hidden="true">V</span><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span></Link>
+    </div>
+    {mobileOpen ? <><button type="button" tabIndex={-1} className="mobile-nav-backdrop" aria-label="Close navigation" onClick={() => { setMobileOpen(false); menuButton.current?.focus(); }} /><aside ref={mobileDrawer} className="mobile-sidebar" id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div className="mobile-sidebar-top"><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span><button ref={closeButton} type="button" className="mobile-menu-button" aria-label="Close navigation" onClick={() => { setMobileOpen(false); menuButton.current?.focus(); }}><X size={20} aria-hidden="true" /></button></div><Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation onNavigate={() => setMobileOpen(false)} /></Suspense><div className="sidebar-foot"><span className="status-dot" aria-hidden="true" /> Historical prototype</div></aside></> : null}
     <div className="app-main">
-      <header className="global-header"><div><span className="global-kicker">VARSHASetu / SCIENTIFIC WORKSPACE</span><span className="global-context">Two separate historical GEFS lineages · no pooled result</span></div><div className="header-actions"><Link href="/forecast?demo=official" className="reset-demo-link" title="Restore the official experiment, year, case, and lead">Reset Demo</Link><PresentationViewToggle /><span className="header-hide-in-presentation"><PresentButton /></span><Suspense fallback={null}><ExperimentContextControl /></Suspense><span className="header-status"><ShieldCheck size={14} aria-hidden="true" /> Historical prototype</span><span className="header-hide-in-presentation"><ThemeToggle /></span></div></header>
+      <header className="global-header"><div className="header-context"><span className="global-kicker">VarshaSetu / Scientific workspace</span><span className="global-context">Two separate historical GEFS lineages · no pooled result</span></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" title="Restore the official experiment, year, case, and lead">Reset Demo</Link><PresentationViewToggle /><span className="header-hide-in-presentation"><PresentButton /></span><span className="header-hide-in-presentation"><ThemeToggle /></span></div></header>
       <main id="main-content">{children}</main>
     </div>
   </div>;

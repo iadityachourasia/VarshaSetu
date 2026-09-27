@@ -3,6 +3,7 @@ import type { DataSourceMode } from "@/lib/data-source";
 import { DATA_SOURCE_LABEL } from "@/lib/data-source";
 import { METRIC_DEFINITION } from "@/lib/metric-definitions";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { AlertTriangle, Inbox } from "lucide-react";
 
 export function PageHeading({ title, subtitle, action }: { title: string; subtitle: string; action?: ReactNode }) {
   return <div className="page-heading"><div><h1>{title}</h1><p>{subtitle}</p></div>{action}</div>;
@@ -17,11 +18,11 @@ export function Metric({ label, value, detail, tone }: { label: string; value: s
 }
 
 export function ErrorState({ message = "Scientific artifacts are unavailable. Start the verified historical API and try again." }: { message?: string }) {
-  return <div className="state-message" role="alert"><strong>Data unavailable</strong><p>{message}</p></div>;
+  return <div className="state-message" role="alert"><span className="state-icon" aria-hidden="true"><AlertTriangle size={18} /></span><strong>Data unavailable</strong><p>{message}</p></div>;
 }
 
 export function EmptyState({ message }: { message: string }) {
-  return <div className="state-message"><strong>Nothing to display</strong><p>{message}</p></div>;
+  return <div className="state-message"><span className="state-icon" aria-hidden="true"><Inbox size={18} /></span><strong>Nothing to display</strong><p>{message}</p></div>;
 }
 
 export function LoadingState({ label = "Loading verified case" }: { label?: string }) {
