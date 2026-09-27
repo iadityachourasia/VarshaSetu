@@ -1,9 +1,10 @@
 "use client";
 
-import { CartesianGrid, Legend, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { CartesianGrid, Legend, Line, LineChart, ReferenceLine, Tooltip, XAxis, YAxis } from "recharts";
 import { ErrorState, MetricTerm } from "@/components/science/common";
+import { ChartFrame } from "@/components/science/chart-frame";
 import type { ProbabilityEventMetrics } from "@/lib/operational-probability-metrics";
-import { MODEL_COLOR, MODEL_LABEL, MODEL_ORDER, MODEL_ROLE, type ModelKey } from "@/lib/model-colors";
+import { IMD_COLOR, MODEL_COLOR, MODEL_LABEL, MODEL_ORDER, MODEL_ROLE, type ModelKey } from "@/lib/model-colors";
 
 // Phase 5A.2D: shared Track-B (2023-2025 operational-era) scientific
 // visualization/table components. Extreme Rain and Verification both
@@ -79,15 +80,15 @@ export function OperationalFssChart({ fss, selectedModelLabel = "Selected model"
     selected: fss[scale].matched_selected.fss,
     cases: fss[scale].matched_case_count,
   }));
-  return <figure className="chart-figure"><div className="chart-frame"><ResponsiveContainer width="100%" height="100%"><LineChart data={data} margin={{ top: 10, right: 15, bottom: 0, left: -18 }}>
+  return <ChartFrame caption={<>Fractions Skill Score on matched paired 2-D cases, frozen ≥50% valid-neighborhood rule. Higher is better; case-count denominators vary by scale (see table below the chart).</>}><LineChart data={data} margin={{ top: 10, right: 15, bottom: 0, left: -18 }}>
     <CartesianGrid stroke="var(--line)" strokeDasharray="2 6" />
-    <XAxis dataKey="scale" tick={{ fill: "var(--text-subtle)", fontSize: 10 }} />
-    <YAxis domain={[0, 0.3]} tick={{ fill: "var(--text-subtle)", fontSize: 10 }} />
+    <XAxis dataKey="scale" tick={{ fill: "var(--text-subtle)", fontSize: 11 }} />
+    <YAxis domain={[0, 0.3]} tick={{ fill: "var(--text-subtle)", fontSize: 11 }} />
     <Tooltip formatter={(value) => (typeof value === "number" ? value.toFixed(4) : value)} />
     <Legend />
-    <Line type="linear" dataKey="raw" name="Raw GEFS" stroke="var(--raw)" strokeWidth={2.5} dot={{ r: 4 }} connectNulls={false} />
-    <Line type="linear" dataKey="selected" name={selectedModelLabel} stroke="var(--corrected)" strokeWidth={2.5} strokeDasharray="5 3" dot={{ r: 4, strokeDasharray: "0" }} connectNulls={false} />
-  </LineChart></ResponsiveContainer></div><figcaption>Fractions Skill Score on matched paired 2-D cases, frozen ≥50% valid-neighborhood rule. Higher is better; case-count denominators vary by scale (see table below the chart).</figcaption></figure>;
+    <Line type="linear" dataKey="raw" name="Raw GEFS" stroke={MODEL_COLOR.M0} strokeWidth={2.5} dot={{ r: 4 }} connectNulls={false} />
+    <Line type="linear" dataKey="selected" name={selectedModelLabel} stroke={MODEL_COLOR.M1} strokeWidth={2.5} strokeDasharray="5 3" dot={{ r: 4, strokeDasharray: "0" }} connectNulls={false} />
+  </LineChart></ChartFrame>;
 }
 
 /** Reliability diagram: predicted probability vs. observed frequency, with
@@ -97,14 +98,14 @@ export function OperationalReliabilityChart({ metric }: { metric: ProbabilityEve
   const data = metric.reliability
     .map((bin) => ({ predicted: bin.mean_predicted_probability, observed: bin.observed_event_frequency, count: bin.sample_count }))
     .filter((bin) => bin.count > 0 && bin.predicted != null && bin.observed != null);
-  return <figure className="chart-figure"><div className="chart-frame"><ResponsiveContainer width="100%" height="100%"><LineChart data={data} margin={{ top: 10, right: 15, bottom: 0, left: -18 }}>
+  return <ChartFrame caption={<>Predicted probability versus observed frequency. Empty upper bins are omitted from the line and listed with their zero sample count in the table below.</>}><LineChart data={data} margin={{ top: 10, right: 15, bottom: 0, left: -18 }}>
     <CartesianGrid stroke="var(--line)" strokeDasharray="2 6" />
-    <XAxis dataKey="predicted" type="number" domain={[0, 1]} tickFormatter={(v: number) => `${Math.round(v * 100)}%`} tick={{ fill: "var(--text-subtle)", fontSize: 10 }} />
-    <YAxis domain={[0, 1]} tickFormatter={(v: number) => `${Math.round(v * 100)}%`} tick={{ fill: "var(--text-subtle)", fontSize: 10 }} />
+    <XAxis dataKey="predicted" type="number" domain={[0, 1]} tickFormatter={(v: number) => `${Math.round(v * 100)}%`} tick={{ fill: "var(--text-subtle)", fontSize: 11 }} />
+    <YAxis domain={[0, 1]} tickFormatter={(v: number) => `${Math.round(v * 100)}%`} tick={{ fill: "var(--text-subtle)", fontSize: 11 }} />
     <Tooltip formatter={(v, name) => [typeof v === "number" ? `${(v * 100).toFixed(1)}%` : v, name]} labelFormatter={(v) => `Mean predicted ${(Number(v) * 100).toFixed(1)}%`} />
-    <ReferenceLine segment={[{ x: 0, y: 0 }, { x: 1, y: 1 }]} stroke="var(--text-subtle)" strokeDasharray="4 4" label={{ value: "Perfect calibration", position: "insideTopLeft", fill: "var(--text-subtle)", fontSize: 9 }} />
-    <Line type="linear" dataKey="observed" name="Observed frequency" stroke="var(--corrected)" strokeWidth={2.5} dot={{ r: 4 }} />
-  </LineChart></ResponsiveContainer></div><figcaption>Predicted probability versus observed frequency. Empty upper bins are omitted from the line and listed with their zero sample count in the table below.</figcaption></figure>;
+    <ReferenceLine segment={[{ x: 0, y: 0 }, { x: 1, y: 1 }]} stroke="var(--text-subtle)" strokeDasharray="4 4" label={{ value: "Perfect calibration", position: "insideTopLeft", fill: "var(--text-subtle)", fontSize: 11 }} />
+    <Line type="linear" dataKey="observed" name="Observed frequency" stroke={IMD_COLOR} strokeWidth={2.5} dot={{ r: 4 }} />
+  </LineChart></ChartFrame>;
 }
 
 /** Scalar-only probability quality cards: Brier/BSS/PR-AUC/ROC-AUC. Section

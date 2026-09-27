@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import type { Map as MapLibreMap } from "maplibre-gl";
 import { ArrowLeftRight, Layers3 } from "lucide-react";
 import { geometrySchema, getScience } from "@/lib/api/science";
-import { DataSourceIndicator, ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/components/science/common";
+import { DataSourceIndicator, EmptyState, ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/components/science/common";
 import { RainLegend } from "@/components/maps/map-legend";
 import { MapControls } from "@/components/maps/map-controls";
 import { nearestValidCell, type CellSelection, type Palette } from "@/lib/maps/grid";
@@ -73,6 +73,7 @@ function OperationalForecastContent({ index, initialYear, initialCase }: { index
   const grid = useMemo(() => operationalGrid(index), [index]);
   const cell = selected ?? nearestValidCell(mask);
   const loaded = detail.data;
+  const sourceMode = [caseListResult.data?.mode, loaded?.mode].find((mode) => mode && mode !== "VERIFIED_API") ?? loaded?.mode;
   const data: OperationalCase | undefined = loaded?.case;
   const models = (loaded?.modelsPresent ?? staticSummary?.models.filter((item) => item !== "M0") ?? []);
   const selectedModel = models.includes(model) ? model : models[0];
@@ -133,8 +134,14 @@ function OperationalForecastContent({ index, initialYear, initialCase }: { index
     raw: data.fields.M0[selectedPoint], model: data.fields[selectedModel]?.[selectedPoint], observed: data.fields.observed[selectedPoint],
     heavy: data.probabilities?.heavy[selectedPoint], veryHeavy: data.probabilities?.very_heavy[selectedPoint],
   } : null;
+  if (caseListResult.isPending) return <div className="page-content"><LoadingState label="Loading case catalogue" /></div>;
+  if (caseListResult.isError || !caseListResult.data) return <div className="page-content"><ErrorState message="The historical case catalogue is unavailable. Retry after the API responds." /></div>;
+  if (caseListResult.data.mode === "INTEGRITY_FAILURE") return <div className="page-content"><ErrorState message={`Scientific artifact integrity check failed: ${caseListResult.data.message ?? "unknown error"}. This is a hard failure and is not masked by cached data.`} /></div>;
+  if (caseListResult.data.mode === "UNAVAILABLE" || caseListResult.data.mode === "NETWORK_FAILURE") return <div className="page-content"><ErrorState message={caseListResult.data.message ?? "The historical case catalogue is unavailable."} /></div>;
+  if (cases.length === 0) return <div className="page-content"><EmptyState message="No eligible historical cases are available for this year." /></div>;
+  if (!staticSummary) return <div className="page-content"><ErrorState message="The selected case is missing from the verified frozen presentation index. Its scientific fields cannot be displayed." /></div>;
   return <div className="page-content phase5-workspace">
-    <PageHeading title="Forecast & Atmosphere" subtitle="Historical forecast analysis · frozen operational-era GEFS and IMD evidence" action={<span style={{ display: "flex", gap: 8, alignItems: "center" }}>{loaded ? <DataSourceIndicator mode={loaded.mode} /> : null}<PrototypeNote /></span>} />
+    <PageHeading title="Forecast & Atmosphere" subtitle="Historical forecast analysis · frozen operational-era GEFS and IMD evidence" action={<span style={{ display: "flex", gap: 8, alignItems: "center" }}>{sourceMode ? <DataSourceIndicator mode={sourceMode} /> : null}<PrototypeNote /></span>} />
     <div className="phase5-context-strip"><strong>Historical operational GEFS</strong><span>2023 cross-fit · 2024 validation · 2025 completed final test</span><span>Not live or an official warning service</span></div>
     <div className="phase5-controls" role="group" aria-label="Historical forecast controls">
       <label>Year<select value={year} onChange={(event) => updateCase(Number(event.target.value), "")}><option value={2023}>2023 · CROSS-FIT / OOF</option><option value={2024}>2024 · VALIDATION</option><option value={2025}>2025 · FINAL TEST</option></select></label>

@@ -2,8 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Cell, Legend, Line, LineChart, ReferenceLine, Tooltip, XAxis, YAxis } from "recharts";
 import { DataSourceIndicator, ErrorState, LoadingState, MetricTerm } from "@/components/science/common";
+import { ChartFrame } from "@/components/science/chart-frame";
+import { MODEL_COLOR, SEMANTIC_COLOR } from "@/lib/model-colors";
 import { modelNames } from "@/science/frozen/results";
 import { getOperationalDeterministicMetrics, getOperationalFSS, getOperationalProbabilityMetrics, type OperationalYear } from "@/lib/api/operational";
 import { loadOperationalCaseList, type CaseListItem } from "@/lib/operational-case-list";
@@ -36,14 +38,14 @@ const TABS: { key: Tab; label: string }[] = [
  * sign-labeled axis and caption, not color alone. */
 function CaseOutcomeChart({ deltas }: { deltas: number[] }) {
   const data = [...deltas].sort((a, b) => a - b).map((delta, index) => ({ index, delta }));
-  return <figure className="chart-figure"><div className="chart-frame"><ResponsiveContainer width="100%" height="100%"><BarChart data={data} margin={{ top: 10, right: 15, bottom: 4, left: 0 }}>
+  return <ChartFrame caption={<>Negative (teal) = M1 improved on Raw for that case; positive (red) = M1 worsened. Not every case improved.</>}><BarChart data={data} margin={{ top: 10, right: 15, bottom: 4, left: 0 }}>
     <CartesianGrid stroke="var(--line)" strokeDasharray="2 6" />
-    <XAxis dataKey="index" tick={false} label={{ value: "Cases, sorted by RMSE change", position: "insideBottom", offset: -2, fill: "var(--text-subtle)", fontSize: 9 }} />
-    <YAxis tick={{ fill: "var(--text-subtle)", fontSize: 10 }} label={{ value: "M1 − Raw RMSE (mm)", angle: -90, position: "insideLeft", fill: "var(--text-subtle)", fontSize: 9 }} />
+    <XAxis dataKey="index" tick={false} label={{ value: "Cases, sorted by RMSE change", position: "insideBottom", offset: -2, fill: "var(--text-subtle)", fontSize: 11 }} />
+    <YAxis tick={{ fill: "var(--text-subtle)", fontSize: 11 }} label={{ value: "M1 − Raw RMSE (mm)", angle: -90, position: "insideLeft", fill: "var(--text-subtle)", fontSize: 11 }} />
     <ReferenceLine y={0} stroke="var(--text-subtle)" />
     <Tooltip formatter={(value) => (typeof value === "number" ? `${value.toFixed(3)} mm` : value)} labelFormatter={() => "Case RMSE change"} />
-    <Bar dataKey="delta">{data.map((entry) => <Cell key={entry.index} fill={entry.delta < 0 ? "var(--corrected)" : "#9c605c"} />)}</Bar>
-  </BarChart></ResponsiveContainer></div><figcaption>Negative (teal) = M1 improved on Raw for that case; positive (red) = M1 worsened. Not every case improved.</figcaption></figure>;
+    <Bar dataKey="delta">{data.map((entry) => <Cell key={entry.index} fill={entry.delta < 0 ? SEMANTIC_COLOR.positive : SEMANTIC_COLOR.negative} />)}</Bar>
+  </BarChart></ChartFrame>;
 }
 
 /** A minimal two-point slope chart: one line per model across the 2024
@@ -55,15 +57,15 @@ function GeneralizationSlopeChart({ raw2024, m1_2024, raw2025, m1_2025 }: { raw2
     { year: "2024 validation", raw: raw2024, m1: m1_2024 },
     { year: "2025 final test", raw: raw2025, m1: m1_2025 },
   ];
-  return <figure className="chart-figure"><div className="chart-frame"><ResponsiveContainer width="100%" height="100%"><LineChart data={data} margin={{ top: 10, right: 15, bottom: 0, left: -18 }}>
+  return <ChartFrame caption={<>M1 improved RMSE relative to Raw in both the model-selection year and the one-time final test -- not proof of universal operational performance.</>}><LineChart data={data} margin={{ top: 10, right: 15, bottom: 0, left: -18 }}>
     <CartesianGrid stroke="var(--line)" strokeDasharray="2 6" />
-    <XAxis dataKey="year" tick={{ fill: "var(--text-subtle)", fontSize: 10 }} />
-    <YAxis tick={{ fill: "var(--text-subtle)", fontSize: 10 }} />
+    <XAxis dataKey="year" tick={{ fill: "var(--text-subtle)", fontSize: 11 }} />
+    <YAxis tick={{ fill: "var(--text-subtle)", fontSize: 11 }} />
     <Tooltip formatter={(value) => (typeof value === "number" ? `${value.toFixed(4)} mm` : value)} />
     <Legend />
-    <Line type="linear" dataKey="raw" name="Raw GEFS" stroke="var(--raw)" strokeWidth={2.5} dot={{ r: 5 }} connectNulls={false} />
-    <Line type="linear" dataKey="m1" name="M1 Ridge MOS" stroke="var(--corrected)" strokeWidth={2.5} strokeDasharray="5 3" dot={{ r: 5 }} connectNulls={false} />
-  </LineChart></ResponsiveContainer></div><figcaption>M1 improved RMSE relative to Raw in both the model-selection year and the one-time final test -- not proof of universal operational performance.</figcaption></figure>;
+    <Line type="linear" dataKey="raw" name="Raw GEFS" stroke={MODEL_COLOR.M0} strokeWidth={2.5} dot={{ r: 5 }} connectNulls={false} />
+    <Line type="linear" dataKey="m1" name="M1 Ridge MOS" stroke={MODEL_COLOR.M1} strokeWidth={2.5} strokeDasharray="5 3" dot={{ r: 5 }} connectNulls={false} />
+  </LineChart></ChartFrame>;
 }
 
 // Phase 5A.2D: live-API-primary for the deterministic and probability metric

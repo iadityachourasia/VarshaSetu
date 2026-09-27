@@ -9,7 +9,7 @@ describe("read-only science API contract", () => {
       provenance: { corpus_version: "v2", deterministic_model: "M2", deterministic_model_sha256: "x", probability_freeze_sha256: "y", artifact_manifest_sha256: "z", prototype_only: true } };
     vi.stubGlobal("fetch", vi.fn(async () => ({ ok: true, json: async () => status })));
     await expect(getScience("/status", statusSchema)).resolves.toEqual(status);
-    expect(fetch).toHaveBeenCalledWith("/api/science/status", { cache: "default" });
+    expect(fetch).toHaveBeenCalledWith("/api/science/status", { cache: "default", signal: expect.any(AbortSignal) });
     expect(statusSchema.safeParse({ ...status, case_count: "255" }).success).toBe(false);
   });
   it("requires spatial grid metadata and paired mask for rainfall maps", () => {

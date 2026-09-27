@@ -15,11 +15,26 @@ import {
   operationalGridFieldSchema,
 } from "./operational";
 
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => { vi.unstubAllGlobals(); vi.restoreAllMocks(); });
 
 const okJson = (body: unknown) => vi.fn(async () => ({ ok: true, json: async () => body }));
 
 describe("operational status/availability parsing", () => {
+  it("classifies an aborted request as a network failure eligible for the existing fallback", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => { throw new DOMException("Request timed out", "TimeoutError"); }));
+    await expect(getOperationalStatus()).rejects.toMatchObject({ kind: "NETWORK_FAILURE" });
+  });
+
+  it("times out a stalled client request and preserves network-failure classification", async () => {
+    const nativeTimeout = AbortSignal.timeout.bind(AbortSignal);
+    const timeout = vi.spyOn(AbortSignal, "timeout").mockImplementation(() => nativeTimeout(5));
+    vi.stubGlobal("fetch", vi.fn((_url: string, init: RequestInit) => new Promise((_resolve, reject) => {
+      init.signal!.addEventListener("abort", () => reject(init.signal!.reason));
+    })));
+    await expect(getOperationalStatus()).rejects.toMatchObject({ kind: "NETWORK_FAILURE" });
+    expect(timeout).toHaveBeenCalledWith(20_000);
+  });
+
   it("parses status and hits the operational path under /api/science", async () => {
     const status = {
       experiment: "operational_gefs_2023_2025", label: "Historical Operational GEFS (Track B)",
@@ -29,7 +44,7 @@ describe("operational status/availability parsing", () => {
     };
     vi.stubGlobal("fetch", okJson(status));
     await expect(getOperationalStatus()).resolves.toEqual(status);
-    expect(fetch).toHaveBeenCalledWith("/api/science/operational/status", { cache: "default" });
+    expect(fetch).toHaveBeenCalledWith("/api/science/operational/status", { cache: "default", signal: expect.any(AbortSignal) });
   });
 
   it("parses year capability responses and preserves unavailable/false literals", async () => {
@@ -81,7 +96,7 @@ describe("case list parsing", () => {
     vi.stubGlobal("fetch", okJson(response));
     const result = await getOperationalCases(2025, { page: 2, pageSize: 10, leadHours: 24 });
     expect(result.total).toBe(375);
-    expect(fetch).toHaveBeenCalledWith("/api/science/operational/2025/cases?page=2&page_size=10&lead_hours=24", { cache: "default" });
+    expect(fetch).toHaveBeenCalledWith("/api/science/operational/2025/cases?page=2&page_size=10&lead_hours=24", { cache: "default", signal: expect.any(AbortSignal) });
   });
 
   it("accepts null case-level metrics for years without a per-case metrics file", async () => {

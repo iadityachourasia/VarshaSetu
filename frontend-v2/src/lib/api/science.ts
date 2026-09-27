@@ -158,7 +158,10 @@ export type Geometry = z.infer<typeof geometrySchema>;
 
 export async function getScience<T>(path: string, schema: z.ZodType<T>, server = false): Promise<T> {
   const base = server ? (process.env.SCIENCE_API_URL ?? "http://127.0.0.1:8000") : "";
-  const response = await fetch(`${base}/api/science${path}`, { cache: server ? "no-store" : "default" });
+  const response = await fetch(`${base}/api/science${path}`, {
+    cache: server ? "no-store" : "default",
+    signal: AbortSignal.timeout(server ? 25_000 : 20_000),
+  });
   if (!response.ok) throw new Error(response.status === 404 ? "Historical case not found" : "Scientific artifacts are unavailable");
   return schema.parse(await response.json());
 }

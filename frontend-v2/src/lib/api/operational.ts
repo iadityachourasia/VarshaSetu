@@ -309,7 +309,10 @@ async function getOperational<T>(path: string, schema: z.ZodType<T>, server = fa
   const base = server ? (process.env.SCIENCE_API_URL ?? "http://127.0.0.1:8000") : "";
   let response: Response;
   try {
-    response = await fetch(`${base}/api/science/operational${path}`, { cache: server ? "no-store" : "default" });
+    response = await fetch(`${base}/api/science/operational${path}`, {
+      cache: server ? "no-store" : "default",
+      signal: AbortSignal.timeout(server ? 25_000 : 20_000),
+    });
   } catch (error) {
     throw classifyOperationalError(null, null, error instanceof Error ? error.message : "Network request failed");
   }
