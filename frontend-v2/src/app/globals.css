@@ -68,7 +68,7 @@
   --card-foreground: #14242e;
   --popover: #ffffff;
   --popover-foreground: #14242e;
-  --primary: #0c7778;
+  --primary: #006b6d;
   --primary-foreground: #ffffff;
   --secondary: #e8eff0;
   --secondary-foreground: #1b3944;
@@ -92,11 +92,11 @@
   --surface-recessed: #edf3f5;
   --text-subtle: #4d626d;
   --line: #cbd8dc;
-  --teal: #087f81;
+  --teal: #006b6d;
   --raw: #27628a;
   --corrected: #087f81;
   --observed: #6d53a2;
-  --amber: #95601f;
+  --amber: #855414;
   --danger: #b84654;
   /* Phase 5A.3: one canonical model-color map, used consistently across
      Forecast/Verification/Extremes/Story Mode/Skill Cube for the Track-B
@@ -351,6 +351,8 @@
 .phase5-heatmap-table th,.phase5-heatmap-table td { padding:9px 6px; text-align:center; border:1px solid var(--line); }
 .phase5-heatmap-table thead th { color:var(--text-subtle); font-size:11px; background:var(--surface-recessed); }
 .phase5-heatmap-table tbody th { text-align:left; color:var(--foreground); font-weight:600; background:var(--surface-recessed); }
+.phase5-heatmap-table td.heatmap-filled { background: var(--heatmap-light); }
+.dark .phase5-heatmap-table td.heatmap-filled { background: var(--heatmap-dark); }
 .phase5-analysis-block:has(.phase5-heatmap-table) { overflow-x:auto; }
 .phase5-model-rail { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; }
 .phase5-model-rail > div { display:flex; align-items:center; gap:7px; padding:8px 11px; border:1px solid var(--line); border-radius:5px; background:var(--surface-raised); font-size:11px; }
@@ -526,5 +528,6 @@
   .global-experiment-control select { flex: 1; width: auto; }
   .page-heading h1 { font-size: 24px; }
   .page-heading p { font-size: var(--text-sm); }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 4px; }
   .phase5-analysis-block { padding: 18px; }
 }

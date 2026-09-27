@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { PageHeading, PrototypeNote } from "@/components/science/common";
 import observations from "../../../public/science/operational-v1/observations_six_seasons.json";
@@ -52,7 +52,10 @@ export function SixSeasonObservations() {
       <table className="phase5-heatmap-table"><thead><tr><th scope="col">Year</th>{months.map((item) => <th scope="col" key={item}>{MONTH_LABEL[item]}</th>)}</tr></thead><tbody>{seasons.map((seasonYear) => <tr key={seasonYear}><th scope="row">{seasonYear}</th>{months.map((monthKey) => {
         const cell = matrix.find((item) => item.year === seasonYear && item.month === monthKey);
         const intensity = cell?.value != null ? Math.min(1, cell.value / matrixMax) : 0;
-        return <td key={monthKey} style={cell?.value != null ? { background: `color-mix(in srgb, var(--teal) ${Math.round(20 + 70 * intensity)}%, var(--surface-raised))` } : undefined} title={`${seasonYear} ${MONTH_LABEL[monthKey]}: ${cell?.value == null ? "no data" : heatmapMetric === "mean_mm" ? `${cell.value.toFixed(2)} mm` : `${cell.value} days`}`}>{cell?.value == null ? "—" : heatmapMetric === "mean_mm" ? cell.value.toFixed(1) : cell.value}</td>;
+        return <td key={monthKey} className={cell?.value != null ? "heatmap-filled" : undefined} style={cell?.value != null ? {
+          "--heatmap-light": `color-mix(in srgb, var(--teal) ${Math.round(12 + 36 * intensity)}%, var(--surface-raised))`,
+          "--heatmap-dark": `color-mix(in srgb, var(--teal) ${Math.round(8 + 20 * intensity)}%, var(--surface-raised))`,
+        } as CSSProperties : undefined} title={`${seasonYear} ${MONTH_LABEL[monthKey]}: ${cell?.value == null ? "no data" : heatmapMetric === "mean_mm" ? `${cell.value.toFixed(2)} mm` : `${cell.value} days`}`}>{cell?.value == null ? "—" : heatmapMetric === "mean_mm" ? cell.value.toFixed(1) : cell.value}</td>;
       })}</tr>)}</tbody></table>
       <p className="phase5-caveat">{HEATMAP_METRIC_LABEL[heatmapMetric]} per year × month, aggregated client-side from the same 750 real daily IMD records used elsewhere on this page. Cell shading is relative to this matrix&rsquo;s own maximum, not an absolute or climatological scale. October covers only the evaluated 1–3 day tail.</p>
     </section>
