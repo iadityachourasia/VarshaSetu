@@ -328,7 +328,17 @@ async function getOperational<T>(path: string, schema: z.ZodType<T>, server = fa
     }
     throw classifyOperationalError(response.status, code, detail);
   }
-  return schema.parse(await response.json());
+  let body: unknown;
+  try {
+    body = await response.json();
+  } catch (error) {
+    // A response can send its headers, then stall while streaming the body.
+    // AbortSignal.timeout applies to that read too. Keep malformed JSON as a
+    // contract failure, but classify an interrupted body as a network failure.
+    if (error instanceof SyntaxError) throw error;
+    throw classifyOperationalError(null, null, error instanceof Error ? error.message : "Network response body failed");
+  }
+  return schema.parse(body);
 }
 
 // ---------------------------------------------------------------------------

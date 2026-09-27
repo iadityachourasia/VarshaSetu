@@ -35,6 +35,14 @@ describe("operational status/availability parsing", () => {
     expect(timeout).toHaveBeenCalledWith(20_000);
   });
 
+  it("classifies an aborted response body as a network failure", async () => {
+    vi.stubGlobal("fetch", vi.fn(async () => ({
+      ok: true,
+      json: async () => { throw new DOMException("signal timed out", "TimeoutError"); },
+    })));
+    await expect(getOperationalStatus()).rejects.toMatchObject({ kind: "NETWORK_FAILURE" });
+  });
+
   it("parses status and hits the operational path under /api/science", async () => {
     const status = {
       experiment: "operational_gefs_2023_2025", label: "Historical Operational GEFS (Track B)",
