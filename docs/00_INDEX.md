@@ -111,6 +111,7 @@ This directory is the working technical specification, scientific governance sys
 | `102_FREE_DEPLOYMENT.md` | Full $0 deployment: backend (Docker, ~750MB real frozen-data footprint published as a GitHub Release asset) on Render's free tier, frontend on Vercel's free tier via `SCIENCE_API_URL` + the existing `next.config.ts` rewrite, verified end-to-end with a real local Docker build serving correct live values on both tracks; explains why the repo was made public | Before deploying, redeploying, or rotating the published data-bundle release |
 | `103_LIVE_FRONTEND_UI_UX_AUDIT_AND_POLISH.md` | Live 12-route visual audit, local responsive/sidebar and overview benchmark repairs, production-build screenshot matrix, browser regressions, and deployment handoff | Before publishing frontend polish or presenting the deployed UI |
 | `104_FRONTEND_HARDENING_AND_POLISH.md` | Forecast timeout and fallback hardening, shared charts, responsive visual polish, full browser regression and deployment verification | Before presenting or extending the polished frontend |
+| `105_VISUAL_DESIGN_AND_AI_SLOP_AUDIT.md` | Read-only local/live design critique, effective token inventory, 66-screen baseline, Story Mode clipping defect, route reviews, scorecard, and ranked design priorities | Before choosing a visual redesign direction; no UI change is authorized by the audit |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule
