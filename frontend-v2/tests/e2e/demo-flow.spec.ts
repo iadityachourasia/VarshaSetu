@@ -105,6 +105,7 @@ test("all six scientific views fit video resolutions and preserve light-theme re
       await page.screenshot({ path: testInfo.outputPath(`${route === "/" ? "overview" : route.slice(1)}-${width}x${height}.png`), fullPage: true });
     }
   }
+  await page.getByRole("button", { name: "Use dark theme" }).click();
   await page.getByRole("button", { name: "Use light theme" }).click();
   await expect(page.locator("html")).not.toHaveClass(/dark/);
   await page.reload();

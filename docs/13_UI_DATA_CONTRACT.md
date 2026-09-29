@@ -4,6 +4,15 @@
 
 > The frontend renders scientific values; it does not invent them.
 
+The Regime Intelligence entry displays a development notice for the 2019
+reforecast context or when the operational catalogue is unavailable. Verified
+operational-era data remains available when present; an artifact integrity
+failure remains an explicit error rather than a development notice.
+
+Ensemble & Uncertainty currently has a matched 2025 operational-era subset.
+The shared navigation targets that experiment directly, and unsupported
+Ensemble URLs redirect there instead of showing a misleading 2019 empty state.
+
 Any scientific number must map to a documented backend field or a transparent arithmetic transformation of backend fields defined in this file.
 
 ## Current issues to remove

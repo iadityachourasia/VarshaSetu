@@ -1,10 +1,13 @@
 # Phase 3A Design System
 
-VarshaSetu uses a dark-first meteorological operations visual language:
+VarshaSetu uses a meteorological operations visual language, with light mode
+on a first visit and a user-selectable dark mode:
 near-black navy ground, tiered slate surfaces, thin disciplined rules,
 controlled teal accents, and direct scientific typography. This is an
 operational workspace, not a generic landing page or trading terminal.
 The light mode reuses semantic tokens rather than duplicate component styles.
+An explicit theme choice persists locally; system color preference does not
+override the first-visit light default.
 
 `frontend-v2/src/app/globals.css` is the executable token source. Core
 semantic colors are `--background`, `--surface-raised`,
@@ -45,9 +48,10 @@ slightly stronger wash for readability, including on small screens. The hero
 title uses larger type with restrained letter spacing. The shared
 sidebar and header
 use stronger active navigation and control hierarchy. On desktop the sidebar
-starts as a 64px icon rail and expands to its existing labeled navigation with
-the logo-position control in the rail. Hovering or focusing that control reveals
-the panel icon; pressing it expands or collapses the sidebar. The rail and labels
+starts as a 64px icon rail. Moving a mouse anywhere into the rail expands its
+existing labeled navigation; leaving the sidebar contracts it. The logo-position
+control remains available for keyboard and touch input. Hovering or focusing
+that control reveals the panel icon. The rail and labels
 reveal as one bounded transition; mobile
 keeps its closed drawer, which slides in on opening. Both paths retain keyboard
 access and honor reduced motion. The sidebar ends with
@@ -62,6 +66,11 @@ and presentation identity. The white-backed artwork is used in light mode.
 The dark-mode mark is a transparent-background extraction of the supplied
 cyan-backed source, so the letterform sits directly on the navy surface.
 Both are decorative beside the accessible VarshaSetu name.
+
+The Regime Intelligence development state uses a full-height, type-led layout
+in both themes. It carries the exact feature availability copy and a route
+back to the overview without presenting unavailable scientific data as a chart
+or metric.
 
 The compact inset shared top bar places the supplied VS logo, VarshaSetu wordmark,
 and scientific workspace context on one row. The wordmark returns to

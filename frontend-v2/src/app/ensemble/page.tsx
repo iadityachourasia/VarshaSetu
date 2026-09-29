@@ -1,8 +1,8 @@
 import { OperationalEnsemble } from "@/components/ensemble/operational-ensemble";
-import { ErrorState } from "@/components/science/common";
+import { redirect } from "next/navigation";
 
 export default async function EnsemblePage({ searchParams }: { searchParams: Promise<{ experiment?: string; year?: string; case?: string }> }) {
   const query = await searchParams;
-  if (query.experiment !== "operational" || query.year && query.year !== "2025") return <div className="page-content"><ErrorState message="The matched, frozen five-member versus calibrated-ML comparison is available for the 2025 operational-era final-test subset. Select Historical Operational GEFS · 2025." /></div>;
+  if (query.experiment !== "operational" || query.year !== "2025") redirect("/ensemble?experiment=operational&year=2025");
   return <OperationalEnsemble initialCase={query.case} />;
 }

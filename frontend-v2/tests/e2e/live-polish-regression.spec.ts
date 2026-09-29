@@ -1,22 +1,38 @@
 import { expect, test } from "@playwright/test";
 
+test("first visits start in light mode regardless of system preference and honor a saved choice", async ({ page }) => {
+  await page.emulateMedia({ colorScheme: "dark" });
+  await page.goto("/");
+  await expect(page.locator("html")).not.toHaveClass(/dark/);
+  await expect(page.getByRole("button", { name: "Use dark theme" })).toBeVisible();
+  await page.getByRole("button", { name: "Use dark theme" }).click();
+  await expect(page.locator("html")).toHaveClass(/dark/);
+  await page.reload();
+  await expect(page.locator("html")).toHaveClass(/dark/);
+  await page.getByRole("button", { name: "Use light theme" }).click();
+  await page.reload();
+  await expect(page.locator("html")).not.toHaveClass(/dark/);
+});
+
 test("supplied logos match the theme across the shared brand surfaces", async ({ page }) => {
   await page.goto("/");
   const mark = page.locator(".sidebar .brand-symbol");
   await expect(mark).toBeVisible();
+  await expect(mark).toHaveCSS("background-image", /varshasetu-light\.png/);
+  await expect(page.locator(".header-brand-copy > a span:last-child")).toHaveCSS("color", "rgb(0, 107, 124)");
+  await page.getByRole("button", { name: "Present VarshaSetu" }).click();
+  await expect(page.locator(".story-identity .brand-symbol")).toHaveCSS("background-image", /varshasetu-light\.png/);
+  await page.getByRole("button", { name: "Exit" }).first().click();
+  await page.getByRole("button", { name: "Use dark theme" }).click();
   await expect(mark).toHaveCSS("background-image", /varshasetu-dark-cutout\.png/);
   await expect(mark).toHaveCSS("background-color", "rgba(0, 0, 0, 0)");
   await expect(page.locator(".header-brand-copy > a span:last-child")).toHaveCSS("color", "rgb(84, 237, 242)");
-  await page.getByRole("button", { name: "Present VarshaSetu" }).click();
-  await expect(page.locator(".story-identity .brand-symbol")).toHaveCSS("background-image", /varshasetu-dark-cutout\.png/);
-  await page.getByRole("button", { name: "Exit" }).first().click();
-  await page.getByRole("button", { name: "Use light theme" }).click();
-  await expect(mark).toHaveCSS("background-image", /varshasetu-light\.png/);
-  await expect(page.locator(".header-brand-copy > a span:last-child")).toHaveCSS("color", "rgb(0, 107, 124)");
   for (const asset of ["varshasetu-light.png", "varshasetu-dark-cutout.png"]) {
     const status = await page.evaluate(async (name) => (await fetch(`/brand/${name}`)).status, asset);
     expect(status).toBe(200);
   }
+
+  await page.getByRole("button", { name: "Use light theme" }).click();
 
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator(".mobile-brand-mark")).toHaveCSS("background-image", /varshasetu-light\.png/);
@@ -24,7 +40,7 @@ test("supplied logos match the theme across the shared brand surfaces", async ({
   await expect(page.locator(".drawer-brand-mark")).toHaveCSS("background-image", /varshasetu-light\.png/);
 });
 
-test("sidebar starts as an icon rail and expands to labeled navigation", async ({ page }) => {
+test("sidebar expands on hover anywhere and contracts on pointer exit", async ({ page }) => {
   for (const width of [820, 1280, 1366, 1440, 1920]) {
     await page.setViewportSize({ width, height: 768 });
     await page.goto("/");
@@ -36,7 +52,10 @@ test("sidebar starts as an icon rail and expands to labeled navigation", async (
     await expect(page.locator(".header-brand-logo")).toBeVisible();
     await expect(page.getByRole("button", { name: "Presentation View" })).toHaveCount(0);
     await expect(page.locator(".sidebar-toggle-logo")).toHaveCSS("opacity", "1");
-    await toggle.hover();
+    await page.locator(".sidebar .nav-link").first().hover();
+    await expect(page.getByRole("button", { name: "Collapse navigation" })).toHaveAttribute("aria-expanded", "true");
+    await expect(page.locator(".sidebar")).toHaveCSS("width", "240px");
+    await page.getByRole("button", { name: "Collapse navigation" }).hover();
     await expect(page.locator(".sidebar-toggle-icon")).toHaveCSS("opacity", "1");
     await expect(page.locator(".sidebar-toggle-logo")).toHaveCSS("opacity", "0");
     const alignment = await page.locator(".header-brandline").evaluate((row) => {
@@ -52,17 +71,14 @@ test("sidebar starts as an icon rail and expands to labeled navigation", async (
     expect(Math.max(...edges.map((edge) => edge.left)) - Math.min(...edges.map((edge) => edge.left)), `left edges at ${width}px`).toBeLessThanOrEqual(1);
     expect(Math.max(...edges.map((edge) => edge.right)) - Math.min(...edges.map((edge) => edge.right)), `right edges at ${width}px`).toBeLessThanOrEqual(1);
     if (width >= 1280) await expect(page.locator(".global-header")).toHaveCSS("height", "64px");
-    await expect(page.locator(".sidebar")).toHaveCSS("width", "64px");
     await expect(page.locator(".sidebar .nav-link").first()).toHaveAttribute("aria-label", "Overview");
-    await toggle.click();
-    await expect(page.getByRole("button", { name: "Collapse navigation" })).toHaveAttribute("aria-expanded", "true");
-    await expect(page.locator(".sidebar")).toHaveCSS("width", "240px");
     await expect(page.locator(".sidebar-brand-name")).toBeVisible();
     await expect(page.locator(".sidebar .nav-group-label").first()).toBeVisible();
     await expect(page.locator(".sidebar .sidebar-foot-copy")).toBeVisible();
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
     expect(overflow, `expanded sidebar document overflow at ${width}px`).toBeLessThanOrEqual(1);
-    await page.getByRole("button", { name: "Collapse navigation" }).click();
+    await page.locator(".global-header").hover();
+    await expect(page.getByRole("button", { name: "Expand navigation" })).toHaveAttribute("aria-expanded", "false");
     await expect(page.locator(".sidebar")).toHaveCSS("width", "64px");
   }
 });
@@ -78,6 +94,15 @@ test("sidebar toggle works by keyboard and respects reduced motion", async ({ pa
   await expect(page.locator(".sidebar")).toHaveCSS("width", "240px");
   const duration = await page.locator(".app-shell").evaluate((node) => parseFloat(getComputedStyle(node).transitionDuration));
   expect(duration).toBeLessThan(0.01);
+});
+
+test("sidebar hover also opens from its archive area", async ({ page }) => {
+  await page.setViewportSize({ width: 1366, height: 768 });
+  await page.goto("/");
+  await page.locator(".sidebar-foot-icon").hover();
+  await expect(page.locator(".sidebar")).toHaveCSS("width", "240px");
+  await page.locator(".global-header").hover();
+  await expect(page.locator(".sidebar")).toHaveCSS("width", "64px");
 });
 
 test("mobile navigation drawer opens, closes with Escape, and returns focus", async ({ page }) => {
@@ -111,7 +136,7 @@ test("mobile header keeps its context and actions in two compact rows", async ({
       page.getByRole("combobox", { name: "Experiment and year" }),
       page.getByRole("link", { name: "Reset Demo" }),
       page.getByRole("button", { name: "Present VarshaSetu" }),
-      page.getByRole("button", { name: "Use light theme" }),
+      page.getByRole("button", { name: "Use dark theme" }),
     ];
     const boxes = await Promise.all(controls.map((control) => control.boundingBox()));
     expect(boxes.every((box) => box && box.height >= 44), `touch targets at ${width}px`).toBe(true);
@@ -128,7 +153,6 @@ test("mobile header keeps its context and actions in two compact rows", async ({
 test("light mobile hero veil fades into its artwork", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/");
-  await page.getByRole("button", { name: "Use light theme" }).click();
   const background = await page.locator(".overview-main").evaluate((element) => getComputedStyle(element).backgroundImage);
   expect(background).toContain("linear-gradient(");
   expect(background).toContain("rgba(247, 252, 253, 0)");

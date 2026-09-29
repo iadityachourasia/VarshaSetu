@@ -39,8 +39,9 @@ function Navigation({ onNavigate }: { onNavigate?: () => void }) {
       const selected = pathname === href;
       const context = ["/forecast", "/casebook", "/extremes", "/ensemble", "/regimes", "/districts", "/verification", "/observations"].includes(href);
       const params = new URLSearchParams();
-      if (context) { params.set("experiment", experiment); params.set("year", year); }
-      if (context && caseId) params.set("case", caseId);
+      if (href === "/ensemble") { params.set("experiment", "operational"); params.set("year", "2025"); }
+      else if (context) { params.set("experiment", experiment); params.set("year", year); }
+      if (context && href !== "/ensemble" && caseId) params.set("case", caseId);
       const url = params.size ? `${href}?${params.toString()}` : href;
       return <Link key={href} href={url} className={`nav-link ${selected ? "nav-link-active" : ""}`} aria-label={label} aria-current={selected ? "page" : undefined} title={label} onClick={onNavigate}>
         <Icon size={19} strokeWidth={1.8} aria-hidden="true" /><span>{label}</span>
@@ -81,8 +82,11 @@ function ThemeToggle() {
       window.addEventListener("varshasetu-theme", callback);
       return () => { window.removeEventListener("storage", callback); window.removeEventListener("varshasetu-theme", callback); };
     },
-    () => window.localStorage.getItem("varshasetu-theme") === "light",
-    () => false,
+    () => {
+      try { return window.localStorage.getItem("varshasetu-theme") !== "dark"; }
+      catch { return true; }
+    },
+    () => true,
   );
   useEffect(() => {
     document.documentElement.classList.toggle("dark", !light);
@@ -163,7 +167,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   }, [mobileOpen]);
   return <div className={`app-shell ${sidebarExpanded ? "sidebar-expanded" : ""}`}>
     <a className="skip-link" href="#main-content">Skip to content</a>
-    <aside className="sidebar" id="primary-sidebar">
+    <aside className="sidebar" id="primary-sidebar"
+      onPointerEnter={(event) => { if (event.pointerType === "mouse") setSidebarExpanded(true); }}
+      onPointerLeave={(event) => { if (event.pointerType === "mouse") setSidebarExpanded(false); }}>
       <div className="sidebar-brand-control">
         <button type="button" className="sidebar-brand-toggle" aria-label={sidebarExpanded ? "Collapse navigation" : "Expand navigation"} aria-expanded={sidebarExpanded} aria-controls="primary-sidebar" onClick={() => setSidebarExpanded((expanded) => !expanded)} title={sidebarExpanded ? "Collapse navigation" : "Expand navigation"}>
           <span className="brand-symbol sidebar-toggle-logo" aria-hidden="true" />

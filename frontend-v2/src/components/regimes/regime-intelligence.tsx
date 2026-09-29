@@ -7,6 +7,7 @@ import { DataSourceIndicator, ErrorState, LoadingState, PageHeading, PrototypeNo
 import { loadOperationalCaseList, REGIME_CLASS_ORDER, type RegimeClass } from "@/lib/operational-case-list";
 import { getOperationalDeterministicMetrics, getOperationalRegime, getOperationalRegimeSummary, type OperationalYear } from "@/lib/api/operational";
 import { withStaticFallback } from "@/lib/data-source";
+import { RegimeWorkInProgress } from "@/components/regimes/regime-work-in-progress";
 
 const REGIME_LABEL: Record<RegimeClass, string> = {
   ACTIVE_MONSOON: "Active Monsoon", BREAK_WEAK_MONSOON: "Break / Weak Monsoon", LOW_DEPRESSION_INFLUENCED: "Low / Depression Influenced",
@@ -48,11 +49,14 @@ export function RegimeIntelligence({ initialYear }: { initialYear: number }) {
   });
 
   if (caseListResult.isPending) return <div className="page-content"><LoadingState /></div>;
-  if (caseListResult.isError || !caseListResult.data || caseListResult.data.mode === "UNAVAILABLE") {
-    return <div className="page-content"><ErrorState message={caseListResult.data?.message ?? "Frozen pseudo-regime catalogue unavailable."} /></div>;
-  }
-  if (caseListResult.data.mode === "INTEGRITY_FAILURE") {
+  if (caseListResult.data?.mode === "INTEGRITY_FAILURE") {
     return <div className="page-content"><ErrorState message={`Scientific artifact integrity check failed: ${caseListResult.data.message}. This is a hard failure and is not masked by cached data.`} /></div>;
+  }
+  if (caseListResult.isError) {
+    return <div className="page-content"><ErrorState message={caseListResult.error instanceof Error ? caseListResult.error.message : "Regime case catalogue could not be loaded."} /></div>;
+  }
+  if (!caseListResult.data || caseListResult.data.mode === "UNAVAILABLE" || caseListResult.data.mode === "NETWORK_FAILURE") {
+    return <RegimeWorkInProgress />;
   }
 
   const regime = regimeResult.data?.data;

@@ -39,16 +39,16 @@ test("overview uses sourced benchmarks, case charts, and theme artwork", async (
   await expect(page.locator(".overview-evidence-row")).toContainText("BSS +0.0265");
   await expect(page.getByRole("link", { name: "Explore 2019 forecast intelligence" })).toContainText("Explore forecast intelligence");
   await expect(page.getByRole("link", { name: "View scientific validation" })).toBeVisible();
-  await expect(page.locator(".overview-hero")).toHaveCSS("background-image", /hero-dark\.avif/);
-  await expect(page.locator(".capability-forecast")).toHaveCSS("background-image", /forecast-dark\.avif/);
-  await expect(page.locator(".capability-extremes")).toHaveCSS("background-image", /extremes-dark\.avif/);
-  await expect(page.locator(".capability-districts")).toHaveCSS("background-image", /districts-dark\.avif/);
-  expect(pageErrors, "initial dark overview hydration").toEqual([]);
-  await page.getByRole("button", { name: "Use light theme" }).click();
   await expect(page.locator(".overview-hero")).toHaveCSS("background-image", /hero-light\.avif/);
   await expect(page.locator(".capability-forecast")).toHaveCSS("background-image", /forecast-light\.avif/);
   await expect(page.locator(".capability-extremes")).toHaveCSS("background-image", /extremes-light\.avif/);
   await expect(page.locator(".capability-districts")).toHaveCSS("background-image", /districts-light\.avif/);
+  expect(pageErrors, "initial light overview hydration").toEqual([]);
+  await page.getByRole("button", { name: "Use dark theme" }).click();
+  await expect(page.locator(".overview-hero")).toHaveCSS("background-image", /hero-dark\.avif/);
+  await expect(page.locator(".capability-forecast")).toHaveCSS("background-image", /forecast-dark\.avif/);
+  await expect(page.locator(".capability-extremes")).toHaveCSS("background-image", /extremes-dark\.avif/);
+  await expect(page.locator(".capability-districts")).toHaveCSS("background-image", /districts-dark\.avif/);
   for (const asset of ["hero", "forecast", "extremes", "districts"]) {
     for (const theme of ["dark", "light"]) {
       const response = await page.request.get(`/overview/${asset}-${theme}.avif`);
@@ -77,10 +77,10 @@ test("overview and shared controls remain usable across viewports", async ({ pag
 
 test("overview has no automated WCAG A/AA violations in either theme", async ({ page }) => {
   await page.goto("/");
-  for (const theme of ["dark", "light"] as const) {
+  for (const theme of ["light", "dark"] as const) {
     const scan = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
     expect(scan.violations, theme).toEqual([]);
-    if (theme === "dark") await page.getByRole("button", { name: "Use light theme" }).click();
+    if (theme === "light") await page.getByRole("button", { name: "Use dark theme" }).click();
   }
 });
 
@@ -108,7 +108,7 @@ test("historical archive card keeps its destination and theme treatment", async 
   await expect(archive).toHaveCSS("background-image", /linear-gradient/);
   await archive.focus();
   await expect(archive).toBeFocused();
-  await page.getByRole("button", { name: "Use light theme" }).click();
+  await page.getByRole("button", { name: "Use dark theme" }).click();
   await expect(archive).toHaveCSS("background-image", /linear-gradient/);
   await archive.click();
   await expect(page).toHaveURL(/\/casebook$/);
