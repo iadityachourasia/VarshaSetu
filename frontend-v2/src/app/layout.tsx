@@ -12,6 +12,16 @@ const themeScript = `try{document.documentElement.classList.toggle('dark',localS
 export const metadata: Metadata = {
   title: "VarshaSetu — Monsoon Rainfall Intelligence",
   description: "Historical scientific prototype for GEFS rainfall post-processing and verification.",
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  appleWebApp: { title: "VarshaSetu" },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -107,7 +107,7 @@ export function StoryMode({ onClose }: { onClose: () => void }) {
   const scene = SCENES[index];
   return <div className="story-overlay" role="dialog" aria-modal="true" aria-label="Present VarshaSetu" ref={dialogRef} tabIndex={-1} onClickCapture={(event) => { if ((event.target as HTMLElement).closest("a[href]")) onClose(); }}>
     <div className="story-topbar">
-      <div className="story-identity"><span aria-hidden="true">V</span><strong>VarshaSetu</strong></div>
+      <div className="story-identity"><span className="brand-symbol" aria-hidden="true" /><strong>VarshaSetu</strong></div>
       <span className="story-progress" aria-live="polite">Scene {index + 1} of {SCENES.length}</span>
       <div className="story-progress-bar" aria-hidden="true"><div style={{ width: `${(100 * (index + 1)) / SCENES.length}%` }} /></div>
       <button type="button" className="story-exit" onClick={onClose}>Exit</button>

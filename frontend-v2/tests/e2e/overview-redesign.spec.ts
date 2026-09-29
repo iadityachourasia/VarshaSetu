@@ -24,7 +24,8 @@ test("overview uses sourced benchmarks, case charts, and theme artwork", async (
     const rmseSize = await panel.locator(".overview-benchmark-values b").first().evaluate((node) => parseFloat(getComputedStyle(node).fontSize));
     expect(prominentSize, `${percent}% should be the largest benchmark figure`).toBeGreaterThan(rmseSize);
   }
-  await expect(page.locator(".overview-benchmark-2025 .overview-benchmark-caveat")).toContainText("Raw GEFS retained better");
+  await expect(page.locator(".overview-benchmark-caveat")).toHaveCount(0);
+  await expect(page.locator(".phase5-caveat")).toContainText("Raw GEFS retained better Heavy and Very Heavy spatial FSS");
   await expect(page.locator(".phase5-caveat")).toContainText("not pooled");
   await expect(page.locator(".overview-art-note")).toHaveCount(0);
   await expect(page.locator(".overview-page .section-heading").first()).toHaveText("Explore the 2019 evidence");

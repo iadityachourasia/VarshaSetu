@@ -899,7 +899,7 @@
   min-width: 0;
   min-height: 0;
   gap: 12px;
-  padding: 20px 22px;
+  padding: 20px 22px 12px;
   background: var(--overview-glass-solid);
   border-color: var(--overview-glass-line);
   border-radius: 11px;
@@ -932,20 +932,6 @@
 .overview-chart-note { margin: 2px 0 0; color: var(--text-subtle); font-size: 12px; line-height: 1.35; }
 .overview-aggregate-chart { min-height: 155px; justify-content: center; }
 .overview-aggregate-row { font-size: 12px; }
-.overview-benchmark-caveat {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  margin: 0;
-  padding: 9px 11px;
-  border-left: 3px solid var(--amber);
-  border-radius: 5px;
-  background: color-mix(in srgb, var(--amber) 8%, var(--overview-glass-solid));
-  color: var(--foreground);
-  font-size: 12px;
-  line-height: 1.4;
-}
-.overview-benchmark-caveat svg { flex: none; color: var(--amber); }
 .overview-benchmark-link { display: inline-flex; align-items: center; gap: 7px; width: fit-content; margin-top: auto; color: var(--overview-cyan); font-size: 13px; font-weight: 700; text-decoration: none; }
 .overview-benchmark-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .overview-page .phase5-caveat {
@@ -1081,7 +1067,7 @@
   .overview-result > p { margin-bottom: 9px; font-size: 13px; }
   .result-pair { gap: 5px; padding-top: 9px; }
   .result-pair span { font-size: 11px; }
-  .overview-page .phase5-benchmark-pair article { padding: 16px; }
+  .overview-page .phase5-benchmark-pair article { padding: 16px 16px 10px; }
   .overview-page .phase5-benchmark-heading { flex-wrap: wrap; }
   .overview-benchmark-improvement { gap: 10px; }
   .overview-benchmark-improvement strong { font-size: clamp(39px, 12vw, 46px); }
@@ -1270,4 +1256,91 @@
   .app-shell, .sidebar-expand-toggle,
   .sidebar .brand-word, .sidebar .nav-group-label, .sidebar .nav-link span,
   .sidebar-foot-copy, .sidebar-foot-arrow, .mobile-nav-backdrop, .mobile-sidebar { transition-duration: 0ms; }
+}
+
+/* Supplied brand artwork replaces the letter placeholder across the shell. */
+.brand-symbol,
+.story-identity > .brand-symbol {
+  display: block;
+  flex: none;
+  overflow: hidden;
+  background: #fff url("/brand/varshasetu-light.png") center / 100% 100% no-repeat;
+  color: transparent;
+  box-shadow: 0 1px 8px rgba(8, 53, 77, .13);
+}
+.dark .brand-symbol,
+.dark .story-identity > .brand-symbol {
+  background: transparent url("/brand/varshasetu-dark-cutout.png") center / 140% 140% no-repeat;
+  box-shadow: none;
+}
+.mobile-sidebar-brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.drawer-brand-mark { width: 34px; height: 34px; border-radius: 7px; }
+
+/* The brand position doubles as the rail control, as in the supplied interaction. */
+@media (min-width: 761px) {
+  .app-shell { --sidebar-width: 64px; }
+  .app-shell.sidebar-expanded { --sidebar-width: 240px; }
+  .sidebar-brand-control { position: relative; display: flex; align-items: center; justify-content: center; height: 62px; min-width: 0; margin-bottom: 3px; white-space: nowrap; }
+  .sidebar-brand-toggle { position: relative; display: grid; place-items: center; flex: none; width: 46px; height: 46px; padding: 0; overflow: hidden; border: 1px solid var(--sidebar-border); border-radius: 10px; background: var(--sidebar-accent); color: var(--sidebar-foreground); cursor: pointer; transition: border-color 180ms ease, background-color 180ms ease; }
+  .sidebar-brand-toggle:hover, .sidebar-brand-toggle:focus-visible { border-color: var(--teal); background: var(--sidebar-accent); }
+  .sidebar-brand-toggle:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  .sidebar-toggle-logo { position: absolute; inset: 2px; border-radius: 7px; transition: opacity 180ms ease, transform 220ms cubic-bezier(.16, 1, .3, 1); }
+  .sidebar-toggle-icon { opacity: 0; transform: scale(.82); transition: opacity 180ms ease, transform 220ms cubic-bezier(.16, 1, .3, 1); }
+  .sidebar-brand-toggle:hover .sidebar-toggle-logo, .sidebar-brand-toggle:focus-visible .sidebar-toggle-logo { opacity: 0; transform: scale(.84); }
+  .sidebar-brand-toggle:hover .sidebar-toggle-icon, .sidebar-brand-toggle:focus-visible .sidebar-toggle-icon { opacity: 1; transform: scale(1); }
+  .sidebar-brand-name { position: absolute; left: 55px; display: block; width: 158px; opacity: 0; visibility: hidden; transform: translateX(-7px); color: var(--sidebar-foreground); font-size: 18px; font-weight: 800; line-height: 1.05; text-decoration: none; transition: opacity 180ms ease, transform 300ms cubic-bezier(.16, 1, .3, 1), visibility 0s linear 180ms; }
+  .sidebar-brand-name small { display: block; margin-top: 5px; color: var(--raw); font-size: 10px; font-weight: 550; letter-spacing: .11em; }
+  .sidebar-expanded .sidebar-brand-control { justify-content: flex-start; }
+  .sidebar-expanded .sidebar-brand-name { opacity: 1; visibility: visible; transform: none; transition-delay: 80ms, 0s, 0s; }
+  .sidebar .nav-link { justify-content: center; padding-inline: 0; }
+  .sidebar-expanded .sidebar .nav-link { justify-content: flex-start; padding-inline: 14px; }
+}
+
+/* Inset workspace header with a larger, readable mark and brand hierarchy. */
+@media (min-width: 761px) {
+  .app-main { --workspace-gutter: 28px; }
+  .page-content { padding-inline: var(--workspace-gutter); }
+  .global-header { top: 10px; width: calc(100% - 2 * var(--workspace-gutter)); max-width: calc(1900px - 2 * var(--workspace-gutter)); min-height: 64px; margin: 10px auto 0; padding: 6px 14px; border: 1px solid var(--sidebar-border); border-radius: 10px; }
+  .header-brandline { align-items: center; gap: 9px; }
+  .header-brand-logo { width: 40px; height: 40px; border-radius: 7px; }
+  .header-brand-copy { display: inline-flex; align-items: baseline; gap: 9px; min-width: 0; }
+  .header-brand-copy > a { color: var(--sidebar-foreground); font-size: 24px; font-weight: 800; line-height: 1.1; letter-spacing: -.03em; text-decoration: none; }
+  .header-brand-copy > a:hover { color: var(--teal); }
+  .header-brand-copy > a span:last-child { color: #006b7c; }
+  .dark .header-brand-copy > a span:last-child { color: #54edf2; }
+  .header-brand-copy > .header-brand-slash { margin-inline: 2px; color: var(--teal); font-size: 18px; font-weight: 700; line-height: 1; }
+  .header-brand-copy > span:last-child { color: var(--foreground); font-size: 12px; font-weight: 560; line-height: 1.2; }
+  .global-header > .header-actions { flex: 1 1 auto; }
+  .global-header .global-experiment-control select { width: 192px; height: 38px; }
+  .global-header .reset-demo-link, .global-header .theme-button, .global-header .present-button { min-height: 38px; }
+  .global-header .theme-button { width: 38px; }
+}
+@media (min-width: 761px) and (max-width: 1180px) {
+  .app-main { --workspace-gutter: 23px; }
+}
+@media (max-width: 760px) {
+  .page-content { padding-inline: 16px; }
+}
+@media (max-width: 760px) {
+  .global-header > .header-actions { grid-template-columns: minmax(0, 1fr) repeat(3, 44px); }
+  .sidebar-brand-control { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-brand-toggle, .sidebar-toggle-logo, .sidebar-toggle-icon, .sidebar-brand-name { transition-duration: 0ms; }
+}
+
+@media (max-width: 760px) {
+  .mobile-brand-context { align-items: center; gap: 7px; line-height: 1; }
+  .mobile-brand-mark { width: 28px; height: 28px; border-radius: 6px; }
+  .mobile-brand-context strong { flex: none; font-size: 15px; line-height: 1; }
+  .mobile-brand-slash { flex: none; font-size: 13px; line-height: 1; }
+  .mobile-brand-descriptor { min-width: 0; font-size: 11.5px; line-height: 1; }
+  .overview-main { background: linear-gradient(180deg, rgba(247, 252, 253, .96) 0%, rgba(247, 252, 253, .93) 56%, rgba(247, 252, 253, .65) 78%, rgba(247, 252, 253, 0) 100%); }
+  .dark .overview-main { background: linear-gradient(180deg, rgba(4, 17, 29, .96) 0%, rgba(4, 17, 29, .91) 56%, rgba(4, 17, 29, .64) 78%, rgba(4, 17, 29, 0) 100%); }
+}
+@media (max-width: 360px) {
+  .mobile-brand-context { gap: 5px; }
+  .mobile-brand-mark { width: 26px; height: 26px; }
+  .mobile-brand-context strong { font-size: 14px; }
+  .mobile-brand-descriptor { font-size: 10.5px; }
 }

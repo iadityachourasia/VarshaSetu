@@ -45,8 +45,10 @@ slightly stronger wash for readability, including on small screens. The hero
 title uses larger type with restrained letter spacing. The shared
 sidebar and header
 use stronger active navigation and control hierarchy. On desktop the sidebar
-starts as a 68px icon rail and expands to its existing labeled navigation with
-a panel toggle in the desktop workspace header. The rail and labels reveal as one bounded transition; mobile
+starts as a 64px icon rail and expands to its existing labeled navigation with
+the logo-position control in the rail. Hovering or focusing that control reveals
+the panel icon; pressing it expands or collapses the sidebar. The rail and labels
+reveal as one bounded transition; mobile
 keeps its closed drawer, which slides in on opening. Both paths retain keyboard
 access and honor reduced motion. The sidebar ends with
 a compact blue glass link to the historical casebook, with accurate 2019 and
@@ -55,21 +57,41 @@ card uses a solid theme-matched fill when transparency is reduced. Scientific
 series still use the established
 Raw and corrected color roles.
 
-The shared top bar centers its panel toggle, stronger VarshaSetu wordmark,
+The supplied VS marks appear in the shared sidebar, mobile header and drawer,
+and presentation identity. The white-backed artwork is used in light mode.
+The dark-mode mark is a transparent-background extraction of the supplied
+cyan-backed source, so the letterform sits directly on the navy surface.
+Both are decorative beside the accessible VarshaSetu name.
+
+The compact inset shared top bar places the supplied VS logo, VarshaSetu wordmark,
 and scientific workspace context on one row. The wordmark returns to
-the overview. Its experiment selection
+the overview. Its left and right borders use the same responsive content gutter
+as the hero, benchmarks, and evidence sections. Its experiment selection
 and utility controls remain grouped to the right, with Present VarshaSetu as
-the single filled action. The mobile top row carries a small V mark and
+the single filled action. The separate Presentation View control and shortcut
+have been removed. The mobile top row carries the VS mark and
 wordmark. The 12-scene presentation mounts at the document root so its modal
 covers the full viewport even though the glass header uses backdrop blur;
 opening it locks background scrolling and makes the workspace inert, while
 closing restores focus to the trigger.
 
+The desktop wordmark, slash, and workspace descriptor share a text baseline,
+while the mark stays vertically centered. “Setu” uses `#54EDF2` in dark mode;
+light mode uses a darker teal to keep the wordmark readable on its pale surface.
+On mobile the brand mark, wordmark, slash, and workspace label share a centerline;
+the light hero copy veil fades vertically into the artwork below its actions.
+
+The generated browser and install icons live in `frontend-v2/public`. Root
+layout metadata declares the SVG, PNG, ICO, Apple touch icon, web-app title,
+and manifest once for every route. The older App Router favicon file was
+removed to avoid a duplicate icon link.
+
 The paired 2019 and 2025 panels retain separate source identities and a
 visible non-pooling caveat. Each panel leads with its sourced aggregate RMSE
 reduction as the largest figure, followed by aligned raw and corrected RMSE
-values and case evidence. The 2025 panel keeps the Raw-better extreme
-FSS limitation beside its RMSE improvement. Charts show actual unsmoothed
+values and case evidence. The shared caveat strip immediately below the panels
+keeps the 2025 Raw-better extreme FSS limitation visible without repeating it
+inside the 2025 card. Both cards use tighter bottom padding. Charts show actual unsmoothed
 per-case RMSE ordered by forecast initialization; connecting segments are
 only visual joins between distinct cases, not a continuous rainfall trend.
 If a complete eligible paired series is unavailable, the panel shows

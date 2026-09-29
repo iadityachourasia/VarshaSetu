@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Activity, AlertTriangle, ArrowRight, ChevronRight, CircleAlert, Cloud, CloudRain, Database, Grid2X2, MapPin, Settings2, Zap } from "lucide-react";
+import { Activity, ArrowRight, ChevronRight, CircleAlert, Cloud, CloudRain, Database, Grid2X2, MapPin, Settings2, Zap } from "lucide-react";
 import { BenchmarkChart } from "@/components/overview/benchmark-chart";
 import { ErrorState, Metric, SectionHeading } from "@/components/science/common";
 import { casesSchema, demoCasesSchema, getScience, modelComparisonSchema, statusSchema, verificationSchema } from "@/lib/api/science";
@@ -24,7 +24,6 @@ function BenchmarkPanel({ benchmark, year, href, source }: { benchmark: Overview
         <div className="overview-benchmark-values"><span><small>Raw GEFS</small><b>{benchmark.raw.toFixed(2)} mm</b></span><ArrowRight size={18} aria-hidden="true" /><span><small>Corrected</small><b>{benchmark.corrected.toFixed(2)} mm</b></span></div>
       </div>
       <BenchmarkChart points={benchmark.series} year={year} raw={benchmark.raw} corrected={benchmark.corrected} correctedLabel={is2025 ? "M1 Ridge MOS" : "M2 Global XGBoost"} />
-      {is2025 ? <p className="overview-benchmark-caveat"><AlertTriangle size={17} aria-hidden="true" /> Raw GEFS retained better Heavy and Very Heavy spatial FSS than selected M1 at all four frozen scales.</p> : null}
       <Link className="overview-benchmark-link" href={href}>Open {year} cases <ArrowRight size={16} aria-hidden="true" /></Link>
     </> : <ErrorState message={is2025 ? "The pinned 2025 final-test result could not be validated." : "The 2019 comparison could not be verified from the read-only scientific API."} />}
   </article>;
