@@ -105,6 +105,28 @@ test("sidebar hover also opens from its archive area", async ({ page }) => {
   await expect(page.locator(".sidebar")).toHaveCSS("width", "64px");
 });
 
+test("sidebar button pins either width despite subsequent hover changes", async ({ page }) => {
+  for (const width of [820, 1440]) {
+    await page.setViewportSize({ width, height: 768 });
+    await page.goto("/");
+    await page.getByRole("button", { name: "Expand navigation" }).focus();
+    await page.keyboard.press("Enter");
+    await expect(page.locator(".sidebar")).toHaveCSS("width", "240px");
+    await page.locator(".global-header").hover();
+    await expect(page.locator(".sidebar")).toHaveCSS("width", "240px");
+
+    await page.getByRole("button", { name: "Collapse navigation" }).click();
+    await expect(page.locator(".sidebar")).toHaveCSS("width", "64px");
+    await page.locator(".global-header").hover();
+    await page.locator(".sidebar .nav-link").first().hover();
+    await expect(page.locator(".sidebar")).toHaveCSS("width", "64px");
+
+    await page.getByRole("button", { name: "Expand navigation" }).click();
+    await page.locator(".global-header").hover();
+    await expect(page.locator(".sidebar")).toHaveCSS("width", "240px");
+  }
+});
+
 test("mobile navigation drawer opens, closes with Escape, and returns focus", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/forecast?experiment=operational&year=2025");

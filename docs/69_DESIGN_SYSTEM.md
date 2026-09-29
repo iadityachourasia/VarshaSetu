@@ -49,9 +49,10 @@ title uses larger type with restrained letter spacing. The shared
 sidebar and header
 use stronger active navigation and control hierarchy. On desktop the sidebar
 starts as a 64px icon rail. Moving a mouse anywhere into the rail expands its
-existing labeled navigation; leaving the sidebar contracts it. The logo-position
-control remains available for keyboard and touch input. Hovering or focusing
-that control reveals the panel icon. The rail and labels
+existing labeled navigation; leaving the sidebar contracts it. Activating the
+logo-position control pins the current expanded or collapsed state until the
+control is activated again, including when the pointer leaves or re-enters.
+Hovering or focusing that control reveals the panel icon. The rail and labels
 reveal as one bounded transition; mobile
 keeps its closed drawer, which slides in on opening. Both paths retain keyboard
 access and honor reduced motion. The sidebar ends with

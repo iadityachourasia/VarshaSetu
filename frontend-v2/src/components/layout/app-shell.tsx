@@ -116,7 +116,9 @@ function PresentButton() {
 }
 
 export function AppShell({ children }: { children: React.ReactNode }) {
-  const [sidebarExpanded, setSidebarExpanded] = useState(false);
+  const [sidebarMode, setSidebarMode] = useState<"auto" | "expanded" | "collapsed">("auto");
+  const [sidebarHovered, setSidebarHovered] = useState(false);
+  const sidebarExpanded = sidebarMode === "auto" ? sidebarHovered : sidebarMode === "expanded";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileMounted, setMobileMounted] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -168,10 +170,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return <div className={`app-shell ${sidebarExpanded ? "sidebar-expanded" : ""}`}>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <aside className="sidebar" id="primary-sidebar"
-      onPointerEnter={(event) => { if (event.pointerType === "mouse") setSidebarExpanded(true); }}
-      onPointerLeave={(event) => { if (event.pointerType === "mouse") setSidebarExpanded(false); }}>
+      onPointerEnter={(event) => { if (event.pointerType === "mouse") setSidebarHovered(true); }}
+      onPointerLeave={(event) => { if (event.pointerType === "mouse") setSidebarHovered(false); }}>
       <div className="sidebar-brand-control">
-        <button type="button" className="sidebar-brand-toggle" aria-label={sidebarExpanded ? "Collapse navigation" : "Expand navigation"} aria-expanded={sidebarExpanded} aria-controls="primary-sidebar" onClick={() => setSidebarExpanded((expanded) => !expanded)} title={sidebarExpanded ? "Collapse navigation" : "Expand navigation"}>
+        <button type="button" className="sidebar-brand-toggle" aria-label={sidebarExpanded ? "Collapse navigation" : "Expand navigation"} aria-expanded={sidebarExpanded} aria-controls="primary-sidebar" onClick={() => setSidebarMode(sidebarExpanded ? "collapsed" : "expanded")} title={sidebarExpanded ? "Collapse navigation" : "Expand navigation"}>
           <span className="brand-symbol sidebar-toggle-logo" aria-hidden="true" />
           {sidebarExpanded ? <PanelLeftClose className="sidebar-toggle-icon" size={22} strokeWidth={1.8} aria-hidden="true" /> : <PanelLeftOpen className="sidebar-toggle-icon" size={22} strokeWidth={1.8} aria-hidden="true" />}
         </button>
