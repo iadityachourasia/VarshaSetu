@@ -7,7 +7,7 @@ test("representative production demo timings", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "VarshaSetu" })).toBeVisible();
   timings.overview_ms = Math.round(performance.now() - start);
   start = performance.now();
-  await page.getByRole("link", { name: /Explore forecast intelligence/i }).click();
+  await page.getByRole("link", { name: /Explore 2019 forecast intelligence/i }).click();
   await expect(page.locator(".map-canvas[data-ready='true']")).toHaveCount(3);
   timings.forecast_navigation_and_science_layers_ms = Math.round(performance.now() - start);
   start = performance.now();

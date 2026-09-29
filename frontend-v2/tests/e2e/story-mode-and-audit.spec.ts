@@ -11,7 +11,15 @@ import { expect, test } from "@playwright/test";
 test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();
-  await expect(page.getByRole("dialog", { name: "Present VarshaSetu" })).toBeVisible();
+  const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
+  await expect(dialog).toBeVisible();
+  const geometry = await dialog.evaluate((element) => {
+    const rect = element.getBoundingClientRect();
+    return { left: rect.left, top: rect.top, width: rect.width, height: rect.height, viewportWidth: innerWidth, viewportHeight: innerHeight };
+  });
+  expect(geometry).toMatchObject({ left: 0, top: 0, width: geometry.viewportWidth, height: geometry.viewportHeight });
+  await expect(dialog.locator(".story-identity")).toContainText("VarshaSetu");
+  await expect(page.locator(".app-shell")).toHaveAttribute("inert", "");
   await expect(page.getByText("Scene 1 of 12")).toBeVisible();
   await expect(page.getByRole("heading", { name: "The Problem" })).toBeVisible();
 
@@ -30,6 +38,8 @@ test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
 
   await page.keyboard.press("Escape");
   await expect(page.getByRole("dialog", { name: "Present VarshaSetu" })).not.toBeVisible();
+  await expect(page.locator(".app-shell")).not.toHaveAttribute("inert", "");
+  await expect(page.getByRole("button", { name: "Present VarshaSetu" })).toBeFocused();
 
   // Re-enter: must start fresh at scene 1, not resume where it left off.
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();

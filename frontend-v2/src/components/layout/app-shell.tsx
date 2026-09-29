@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { StoryMode } from "@/components/story/story-mode";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { Activity, BookOpenText, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, Play, Presentation, RotateCcw, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network } from "lucide-react";
+import { createPortal } from "react-dom";
+import { Activity, BookOpenText, ChevronRight, Clock3, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, PanelLeftClose, PanelLeftOpen, Play, Presentation, RotateCcw, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network } from "lucide-react";
 
 const navigation = [
   { group: "ANALYSIS", items: [
@@ -41,14 +42,23 @@ function Navigation({ onNavigate }: { onNavigate?: () => void }) {
       if (context) { params.set("experiment", experiment); params.set("year", year); }
       if (context && caseId) params.set("case", caseId);
       const url = params.size ? `${href}?${params.toString()}` : href;
-      return <Link key={href} href={url} className={`nav-link ${selected ? "nav-link-active" : ""}`} aria-current={selected ? "page" : undefined} title={label} onClick={onNavigate}>
+      return <Link key={href} href={url} className={`nav-link ${selected ? "nav-link-active" : ""}`} aria-label={label} aria-current={selected ? "page" : undefined} title={label} onClick={onNavigate}>
         <Icon size={19} strokeWidth={1.8} aria-hidden="true" /><span>{label}</span>
       </Link>;
     })}</div>)}
   </nav>;
 }
 
+function ArchiveCard({ onNavigate }: { onNavigate?: () => void }) {
+  return <Link href="/casebook" className="sidebar-foot" aria-label="Browse historical prototype cases" onClick={onNavigate}>
+    <Clock3 className="sidebar-foot-icon" size={25} strokeWidth={1.7} aria-hidden="true" />
+    <span className="sidebar-foot-copy"><strong>Historical prototype</strong><small>2019 &amp; 2025 cases</small></span>
+    <ChevronRight className="sidebar-foot-arrow" size={17} strokeWidth={1.8} aria-hidden="true" />
+  </Link>;
+}
+
 function ExperimentContextControl() {
+  const router = useRouter();
   const pathname = usePathname();
   const search = useSearchParams();
   const experiment = search.get("experiment") === "operational" ? "operational" : "reforecast";
@@ -56,7 +66,7 @@ function ExperimentContextControl() {
   const select = (value: string) => {
     const [nextExperiment, nextYear] = value.split(":");
     const route = nextExperiment === "reforecast" && nextYear !== "2019" ? "/observations" : pathname === "/" ? "/forecast" : pathname;
-    window.location.assign(`${route}?experiment=${nextExperiment}&year=${nextYear}`);
+    router.push(`${route}?experiment=${nextExperiment}&year=${nextYear}`);
   };
   return <label className="global-experiment-control"><span>EXPERIMENT / YEAR</span><select aria-label="Experiment and year" value={`${experiment}:${year}`} onChange={(event) => select(event.target.value)}>
     <optgroup label="GEFSv12 Reforecast"><option value="reforecast:2017">2017 · Train</option><option value="reforecast:2018">2018 · Validate</option><option value="reforecast:2019">2019 · Test</option></optgroup>
@@ -90,9 +100,14 @@ function ThemeToggle() {
 
 function PresentButton() {
   const [open, setOpen] = useState(false);
+  const trigger = useRef<HTMLButtonElement>(null);
+  const close = () => {
+    setOpen(false);
+    requestAnimationFrame(() => trigger.current?.focus());
+  };
   return <>
-    <button type="button" className="present-button" aria-label="Present VarshaSetu" title="Present VarshaSetu" onClick={() => setOpen(true)}><Play className="present-icon" size={17} fill="currentColor" aria-hidden="true" /><span>Present VarshaSetu</span></button>
-    {open ? <StoryMode onClose={() => setOpen(false)} /> : null}
+    <button ref={trigger} type="button" className="present-button" aria-label="Present VarshaSetu" aria-haspopup="dialog" aria-expanded={open} title="Present VarshaSetu" onClick={() => setOpen(true)}><Play className="present-icon" size={16} fill="currentColor" aria-hidden="true" /><span>Present VarshaSetu</span></button>
+    {open ? createPortal(<StoryMode onClose={close} />, document.body) : null}
   </>;
 }
 
@@ -127,17 +142,38 @@ function PresentationViewToggle() {
 }
 
 export function AppShell({ children }: { children: React.ReactNode }) {
+  const [sidebarExpanded, setSidebarExpanded] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileMounted, setMobileMounted] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   const closeButton = useRef<HTMLButtonElement>(null);
   const mobileDrawer = useRef<HTMLElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const openFrame = useRef<number | null>(null);
+  const openMobile = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    if (openFrame.current) cancelAnimationFrame(openFrame.current);
+    setMobileMounted(true);
+    openFrame.current = requestAnimationFrame(() => setMobileOpen(true));
+  };
+  const closeMobile = (restoreFocus = true) => {
+    if (openFrame.current) cancelAnimationFrame(openFrame.current);
+    setMobileOpen(false);
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setMobileMounted(false), 260);
+    if (restoreFocus) menuButton.current?.focus();
+  };
+  useEffect(() => () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    if (openFrame.current) cancelAnimationFrame(openFrame.current);
+  }, []);
   useEffect(() => {
     if (!mobileOpen) return;
     const priorOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     closeButton.current?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") { setMobileOpen(false); menuButton.current?.focus(); }
+      if (event.key === "Escape") closeMobile();
       if (event.key === "Tab" && mobileDrawer.current) {
         const focusables = [...mobileDrawer.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')];
         const first = focusables[0];
@@ -146,7 +182,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
       }
     };
-    const onResize = () => { if (window.innerWidth > 760) setMobileOpen(false); };
+    const onResize = () => { if (window.innerWidth > 760) closeMobile(false); };
     window.addEventListener("keydown", onKeyDown);
     window.addEventListener("resize", onResize);
     return () => {
@@ -155,20 +191,20 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       window.removeEventListener("resize", onResize);
     };
   }, [mobileOpen]);
-  return <div className="app-shell">
+  return <div className={`app-shell ${sidebarExpanded ? "sidebar-expanded" : ""}`}>
     <a className="skip-link" href="#main-content">Skip to content</a>
     <aside className="sidebar" id="primary-sidebar">
       <Link href="/" className="brand" aria-label="VarshaSetu overview"><span className="brand-mark" aria-hidden="true">V</span><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span></Link>
       <Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation /></Suspense>
-      <div className="sidebar-foot"><span className="status-dot" aria-hidden="true" /> Historical prototype</div>
+      <ArchiveCard />
     </aside>
     <div className="mobile-app-bar">
-      <button ref={menuButton} type="button" className="mobile-menu-button" aria-label="Open navigation" aria-expanded={mobileOpen} aria-controls="mobile-sidebar" onClick={() => setMobileOpen(true)}><Menu size={20} aria-hidden="true" /></button>
-      <Link href="/" className="brand" aria-label="VarshaSetu overview"><span className="brand-mark" aria-hidden="true">V</span><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span><span className="mobile-brand-context" aria-hidden="true"><strong>VarshaSetu</strong><span className="mobile-brand-slash">/</span><span className="mobile-brand-descriptor">Scientific workspace</span></span></Link>
+      <button ref={menuButton} type="button" className="mobile-menu-button" aria-label="Open navigation" aria-expanded={mobileOpen} aria-controls="mobile-sidebar" onClick={openMobile}><Menu size={20} aria-hidden="true" /></button>
+      <Link href="/" className="brand" aria-label="VarshaSetu overview"><span className="brand-mark" aria-hidden="true">V</span><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span><span className="mobile-brand-context" aria-hidden="true"><span className="mobile-brand-mark">V</span><strong>VarshaSetu</strong><span className="mobile-brand-slash">/</span><span className="mobile-brand-descriptor">Scientific workspace</span></span></Link>
     </div>
-    {mobileOpen ? <><button type="button" tabIndex={-1} className="mobile-nav-backdrop" aria-label="Close navigation" onClick={() => { setMobileOpen(false); menuButton.current?.focus(); }} /><aside ref={mobileDrawer} className="mobile-sidebar" id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile navigation"><div className="mobile-sidebar-top"><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span><button ref={closeButton} type="button" className="mobile-menu-button" aria-label="Close navigation" onClick={() => { setMobileOpen(false); menuButton.current?.focus(); }}><X size={20} aria-hidden="true" /></button></div><Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation onNavigate={() => setMobileOpen(false)} /></Suspense><div className="sidebar-foot"><span className="status-dot" aria-hidden="true" /> Historical prototype</div></aside></> : null}
+    {mobileMounted ? <><button type="button" tabIndex={-1} className="mobile-nav-backdrop" data-open={mobileOpen} aria-label="Close navigation" aria-hidden={!mobileOpen} inert={!mobileOpen} onClick={() => closeMobile()} /><aside ref={mobileDrawer} className="mobile-sidebar" data-open={mobileOpen} id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden={!mobileOpen} inert={!mobileOpen}><div className="mobile-sidebar-top"><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span><button ref={closeButton} type="button" className="mobile-menu-button" aria-label="Close navigation" onClick={() => closeMobile()}><X size={20} aria-hidden="true" /></button></div><Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation onNavigate={() => closeMobile(false)} /></Suspense><ArchiveCard onNavigate={() => closeMobile(false)} /></aside></> : null}
     <div className="app-main">
-      <header className="global-header"><div className="header-context"><span className="global-kicker">VarshaSetu / Scientific workspace</span><span className="global-context">Two separate historical GEFS lineages · no pooled result</span></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" aria-label="Reset Demo" title="Restore the official experiment, year, case, and lead"><RotateCcw className="reset-demo-icon" size={17} aria-hidden="true" /><span>Reset Demo</span></Link><PresentationViewToggle /><span className="header-hide-in-presentation"><PresentButton /></span><span className="header-hide-in-presentation"><ThemeToggle /></span></div></header>
+      <header className="global-header"><div className="header-context"><div className="header-brandline"><button type="button" className="sidebar-expand-toggle" aria-label={sidebarExpanded ? "Collapse navigation" : "Expand navigation"} aria-expanded={sidebarExpanded} aria-controls="primary-sidebar" onClick={() => setSidebarExpanded((expanded) => !expanded)} title={sidebarExpanded ? "Collapse navigation" : "Expand navigation"}>{sidebarExpanded ? <PanelLeftClose size={19} strokeWidth={1.8} aria-hidden="true" /> : <PanelLeftOpen size={19} strokeWidth={1.8} aria-hidden="true" />}</button><Link href="/" aria-label="Return to VarshaSetu overview">VarshaSetu</Link><span aria-hidden="true">/</span><span>Scientific workspace</span></div></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" aria-label="Reset Demo" title="Restore the official experiment, year, case, and lead"><RotateCcw className="reset-demo-icon" size={17} aria-hidden="true" /><span>Reset Demo</span></Link><PresentationViewToggle /><span className="header-hide-in-presentation"><PresentButton /></span><span className="header-hide-in-presentation"><ThemeToggle /></span></div></header>
       <main id="main-content">{children}</main>
     </div>
   </div>;

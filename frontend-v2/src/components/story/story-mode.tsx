@@ -74,19 +74,40 @@ export function StoryMode({ onClose }: { onClose: () => void }) {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    const shell = document.querySelector<HTMLElement>(".app-shell");
+    const previousInert = shell?.inert ?? false;
+    document.body.style.overflow = "hidden";
+    if (shell) shell.inert = true;
     dialogRef.current?.focus();
     function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") onClose();
-      else if (event.key === "ArrowRight" || event.key === " ") { event.preventDefault(); setIndex((current) => Math.min(current + 1, SCENES.length - 1)); }
+      if (event.key === "Escape") { event.preventDefault(); onClose(); return; }
+      if (event.key === "Tab" && dialogRef.current) {
+        const focusable = [...dialogRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])')];
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && (document.activeElement === first || document.activeElement === dialogRef.current)) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+        return;
+      }
+      const target = event.target as HTMLElement | null;
+      if (target?.closest("input, select, textarea, [contenteditable]")) return;
+      if (event.key === " " && target?.closest("a, button")) return;
+      if (event.key === "ArrowRight" || event.key === " ") { event.preventDefault(); setIndex((current) => Math.min(current + 1, SCENES.length - 1)); }
       else if (event.key === "ArrowLeft") { event.preventDefault(); setIndex((current) => Math.max(current - 1, 0)); }
     }
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      if (shell) shell.inert = previousInert;
+      window.removeEventListener("keydown", onKeyDown);
+    };
   }, [onClose]);
 
   const scene = SCENES[index];
-  return <div className="story-overlay" role="dialog" aria-modal="true" aria-label="Present VarshaSetu" ref={dialogRef} tabIndex={-1}>
+  return <div className="story-overlay" role="dialog" aria-modal="true" aria-label="Present VarshaSetu" ref={dialogRef} tabIndex={-1} onClickCapture={(event) => { if ((event.target as HTMLElement).closest("a[href]")) onClose(); }}>
     <div className="story-topbar">
+      <div className="story-identity"><span aria-hidden="true">V</span><strong>VarshaSetu</strong></div>
       <span className="story-progress" aria-live="polite">Scene {index + 1} of {SCENES.length}</span>
       <div className="story-progress-bar" aria-hidden="true"><div style={{ width: `${(100 * (index + 1)) / SCENES.length}%` }} /></div>
       <button type="button" className="story-exit" onClick={onClose}>Exit</button>

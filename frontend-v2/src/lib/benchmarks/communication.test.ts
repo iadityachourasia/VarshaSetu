@@ -35,8 +35,11 @@ describe("Phase 4L scientific communication", () => {
     const overview = source("src/app/page.tsx");
     const verification = source("src/app/verification/page.tsx");
     const methodology = source("src/app/methodology/page.tsx");
-    expect(overview).toContain("2019 RETROSPECTIVE BENCHMARK");
+    expect(overview).toContain("2019 GEFSv12 REFORECAST");
     expect(overview).toContain("getScience(\"/model-comparison\"");
+    expect(overview).toContain("2025 · HISTORICAL OPERATIONAL GEFS");
+    expect(overview).toContain("The 2019 and 2025 results are not pooled");
+    expect(overview).toContain("Raw GEFS retained better Heavy and Very Heavy spatial FSS");
     expect(verification).toContain("2019 retrospective benchmark");
     expect(verification).toContain("2025 operational-era historical benchmark");
     expect(verification).toContain("different GEFS lineages and populations are not pooled");

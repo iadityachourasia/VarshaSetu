@@ -14,8 +14,8 @@ test("official historical demo path is backed by frozen science", async ({ page 
   await page.goto("/");
   await expect(page.getByRole("heading", { name: "VarshaSetu" })).toBeVisible();
   await expect(page.getByText(expectedReduction + "%", { exact: true })).toBeVisible();
-  await expect(page.getByText(/2019 retrospective benchmark/i).first()).toBeVisible();
-  await page.getByRole("link", { name: /Explore forecast intelligence/i }).click();
+  await expect(page.getByText(/2019 GEFSv12 reforecast/i).first()).toBeVisible();
+  await page.getByRole("link", { name: /Explore 2019 forecast intelligence/i }).click();
   await expect(page.getByRole("heading", { name: "Forecast Explorer" })).toBeVisible();
   await expect(page).toHaveURL(new RegExp(primary));
   await expect(page.getByRole("region", { name: "Raw GEFS map" })).toBeVisible();

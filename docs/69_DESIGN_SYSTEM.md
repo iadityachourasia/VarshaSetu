@@ -34,3 +34,70 @@ All scientific labels explicitly say “historical prototype” where a viewer
 might mistake a case for live weather. A prominent 9.73% RMSE result is
 paired with the limitation that Raw GEFS retains stronger deterministic
 extreme-event skill. No animated or decorative content represents data.
+
+## Overview visual treatment (2026-09-28)
+
+The Overview uses the supplied dark/light AVIF artwork as decorative imagery
+for its hero and three evidence links. CSS selects the matching asset for the saved theme,
+while a tonal overlay preserves text contrast. The light hero veil is thinner
+over the artwork to reduce the white haze, while the copy side retains a
+slightly stronger wash for readability, including on small screens. The hero
+title uses larger type with restrained letter spacing. The shared
+sidebar and header
+use stronger active navigation and control hierarchy. On desktop the sidebar
+starts as a 68px icon rail and expands to its existing labeled navigation with
+a panel toggle in the desktop workspace header. The rail and labels reveal as one bounded transition; mobile
+keeps its closed drawer, which slides in on opening. Both paths retain keyboard
+access and honor reduced motion. The sidebar ends with
+a compact blue glass link to the historical casebook, with accurate 2019 and
+2025 case-year copy, a clock icon, and a visible keyboard focus state. The
+card uses a solid theme-matched fill when transparency is reduced. Scientific
+series still use the established
+Raw and corrected color roles.
+
+The shared top bar centers its panel toggle, stronger VarshaSetu wordmark,
+and scientific workspace context on one row. The wordmark returns to
+the overview. Its experiment selection
+and utility controls remain grouped to the right, with Present VarshaSetu as
+the single filled action. The mobile top row carries a small V mark and
+wordmark. The 12-scene presentation mounts at the document root so its modal
+covers the full viewport even though the glass header uses backdrop blur;
+opening it locks background scrolling and makes the workspace inert, while
+closing restores focus to the trigger.
+
+The paired 2019 and 2025 panels retain separate source identities and a
+visible non-pooling caveat. Each panel leads with its sourced aggregate RMSE
+reduction as the largest figure, followed by aligned raw and corrected RMSE
+values and case evidence. The 2025 panel keeps the Raw-better extreme
+FSS limitation beside its RMSE improvement. Charts show actual unsmoothed
+per-case RMSE ordered by forecast initialization; connecting segments are
+only visual joins between distinct cases, not a continuous rainfall trend.
+If a complete eligible paired series is unavailable, the panel shows
+sourced aggregate comparison bars and labels the case series unavailable.
+
+Overview cards and the shared shell use restrained translucent surfaces,
+fine highlight borders, and moderate backdrop blur. Solid semantic
+surfaces are the fallback when blur is unsupported or the viewer prefers
+reduced transparency. All detailed scientific map and table panels retain
+their established flat data treatment. At narrow widths the hero is
+compressed so the 2019 result appears sooner; charts scroll within their
+own panels instead of causing page overflow. Text over artwork uses a
+strong veil, and the compact image-backed links use a clear icon, text block,
+and circular arrow. The homepage omits explanatory image and reliability
+footnotes to keep the overview concise; scientific scope remains in the
+benchmark labels, caveats, and linked verification views.
+
+The hero uses a wide primary forecast link and a bordered validation link.
+A slim amber verification link states the non-pooled GEFS lineages and
+Raw-better 2025 extreme FSS caveat. Six compact 2025 evidence cards show
+continuous RMSE, spatial FSS, Heavy and Very Heavy BSS together with high
+FAR, regime comparison, and frozen data provenance. At constrained widths
+the cards reflow to preserve readable labels rather than shrinking them.
+
+## 2019 overview outage state
+
+The overview's 2019 benchmark may show a small “API unreachable · verified
+frozen 2019 snapshot” label when the scientific API cannot be reached. The
+snapshot is the same held-out result and per-case series, with its own source
+identity; it is not current forecast data. Integrity and contract failures
+retain the unavailable state.
