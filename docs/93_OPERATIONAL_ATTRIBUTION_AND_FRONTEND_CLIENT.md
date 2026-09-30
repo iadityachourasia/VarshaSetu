@@ -247,3 +247,5 @@ documented as evidence type D, not asserted as type A.
    deliberately not started in this phase.
 3. Do not attempt Track B district aggregation or PR/ROC curve reconstruction
    in either step above — both remain genuinely absent from the frozen corpus.
+   (Update, Phase 4N, `docs/107`: district aggregation was later added as a read-only derived view over the frozen grids for 2024/2025.
+   PR/ROC curve reconstruction remains unavailable.)

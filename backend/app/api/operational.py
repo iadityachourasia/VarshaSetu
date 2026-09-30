@@ -24,10 +24,12 @@ from pydantic import BaseModel
 
 try:
     from backend.app.ml.phase2b import ROOT, sha256_file
-    from backend.app.api.science import _grid_metadata
+    from backend.app.api.science import ARTIFACTS as TRACK_A_ARTIFACTS, _grid_metadata, _store as _track_a_store
+    from backend.app.ml.district_product import aggregate_operational_districts, flat_field
 except ModuleNotFoundError:
     from app.ml.phase2b import ROOT, sha256_file
-    from app.api.science import _grid_metadata
+    from app.api.science import ARTIFACTS as TRACK_A_ARTIFACTS, _grid_metadata, _store as _track_a_store
+    from app.ml.district_product import aggregate_operational_districts, flat_field
 
 
 class ScienceErrorCode(str, Enum):
@@ -108,7 +110,7 @@ class OperationalYearCapabilities(BaseModel):
     fss: bool
     reliability_bins: bool
     pr_roc_curve_arrays: Literal["unavailable"] = "unavailable"
-    district_aggregates: Literal[False] = False
+    district_aggregates: bool = False
     notes: list[str] = []
 
 
@@ -163,6 +165,44 @@ class OperationalCasesResponse(BaseModel):
 class OperationalCaseDetail(OperationalCaseSummary):
     member_qc: dict[str, bool]
     available_products: list[str]
+
+
+class OperationalDistrictRow(BaseModel):
+    district_id: str
+    district_name: str
+    valid_grid_cells: int
+    raw_mean_mm: float
+    raw_max_mm: float
+    corrected_mean_mm: float
+    corrected_max_mm: float
+    heavy_probability: float | None = None
+    very_heavy_probability: float | None = None
+    heavy_area_fraction: float
+    very_heavy_area_fraction: float
+    observed_mean_mm: float
+    observed_max_mm: float
+    observed_heavy_area_fraction: float
+    observed_very_heavy_area_fraction: float
+
+
+class OperationalDistrictsResponse(BaseModel):
+    case_id: str
+    year: int
+    year_role: str
+    model: str
+    model_role: str
+    units: str = "mm/24h"
+    heavy_threshold_mm: float = HEAVY_THRESHOLD_MM
+    very_heavy_threshold_mm: float = VERY_HEAVY_THRESHOLD_MM
+    predicted_regime: str | None = None
+    districts: list[OperationalDistrictRow]
+    source_district_count: int
+    method: str
+    weights_sha256: str
+    geometry_sha256: str
+    geometry_source: str = "geoBoundaries IND ADM2 2021"
+    geometry_license: str = "ODbL 1.0"
+    caveats: list[str]
 
 
 class GridFieldResponse(BaseModel):
@@ -699,6 +739,7 @@ def availability(year: int) -> OperationalYearCapabilities:
                 "never as an independent final-test result.",
                 "Regime probability is out-of-fold, verified via the oof_regime manifest's own "
                 "explicit case_ids array plus a declared-hash cross-check.",
+                "No district product for 2023: there are no probability or M1/M3/M4 output grids to aggregate.",
             ],
         )
     if year == 2024:
@@ -710,7 +751,10 @@ def availability(year: int) -> OperationalYearCapabilities:
             regime_probability="per_case",
             atmosphere_fields=True, ensemble_members="eligible_subset_only",
             case_level_metrics=False, per_cell_metrics=False, fss=True, reliability_bins=True,
+            district_aggregates=True,
             notes=[
+                "District aggregates are area-weighted (Phase 2C overlap weights shared with Track A) over "
+                "the frozen M0-M4/probability/IMD grids; a read-only aggregation, not a new model output.",
                 "2024 model-output case grids are reconstructed via the verified Phase 4G "
                 "case_id -> row_start/pixel_index index; reconstructing all four models this way "
                 "reproduces validation_manifest.json's frozen aggregate RMSE to float32 precision.",
@@ -728,7 +772,10 @@ def availability(year: int) -> OperationalYearCapabilities:
         regime_probability="per_case",
         atmosphere_fields=True, ensemble_members="eligible_subset_only",
         case_level_metrics=True, per_cell_metrics=True, fss=True, reliability_bins=True,
+        district_aggregates=True,
         notes=[
+            "District aggregates are area-weighted (Phase 2C overlap weights shared with Track A) over "
+            "the frozen M0-M4/probability/IMD grids of a consumed holdout; historical replay only.",
             "2025 M1 is the pre-registered primary final-test model; M2 achieved a lower "
             "secondary RMSE but was not selected before the holdout was opened.",
             "Per-case regime probability is indexed by the frozen eligibility file's row order; "
@@ -959,6 +1006,105 @@ def probability(year: int, case_id: str, target: str) -> ProbabilityFieldRespons
         case_id=case_id, year=year, target=target, threshold_probability=threshold,
         calibration_type="frozen isotonic/logistic calibrator selected in Phase 4I", values=values,
     )
+
+
+_MODEL_ROLE: dict[str, str] = {
+    "m1": "Ridge MOS", "m2": "non-regime global ML", "m3": "hard regime-routed ML", "m4": "soft regime-mixture ML",
+}
+_DISTRICT_METHOD = (
+    "Area-overlap weighting of the frozen 0.25 degree target cells (Phase 2C weight matrix shared with Track A; "
+    "cosine-latitude-corrected planar overlap), normalised over the case's valid paired cells. Historical replay of "
+    "frozen predictions; not a live district forecast."
+)
+_DISTRICT_CAVEATS = [
+    "Historical replay: observed IMD district statistics are shown only because this is a retrospective case.",
+    "District values are area-weighted means over valid paired cells only (IMD land cells with a finite forecast); "
+    "districts without any valid cell in this case are omitted.",
+    "Probabilities are frozen calibrated cell probabilities area-averaged per district; area fractions are the share "
+    "of cells at or above the 24 h threshold. They are different measures.",
+    "Maximum is a single-cell maximum, not an area-weighted extreme. Geometry is simplified and is not an official "
+    "current administrative boundary; coverage is limited to the 10-22N, 68-80E validated domain.",
+    "Regime is a forecast-only classifier pseudo-label, not observed meteorological truth.",
+]
+
+
+@lru_cache(maxsize=1)
+def _district_static() -> tuple[list[dict], np.ndarray, str, str]:
+    """Hash-verified district list + Phase 2C overlap weights (Track A's verified store)."""
+    _, _, manifest, _ = _track_a_store()
+    geometry = json.loads((TRACK_A_ARTIFACTS / "districts.geojson").read_text(encoding="utf-8"))
+    districts = [feature["properties"] for feature in geometry["features"]]
+    weights = np.load(TRACK_A_ARTIFACTS / "district_weights.npy", allow_pickle=False)
+    if weights.shape != (len(districts), GRID_CELLS):
+        raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, "District weight matrix does not match district geometry")
+    return districts, weights, manifest["files"]["district_weights.npy"], manifest["files"]["districts.geojson"]
+
+
+def _district_case_fields(year: int, case_id: str, model: str, with_probability: bool) -> dict[str, np.ndarray | None]:
+    """Flat 2401-cell frozen fields for one paired case (NaN off the valid paired cells)."""
+    if year == 2025:
+        population = _phase4j_population_by_case().get(case_id)
+        if population is None:
+            raise _science_error(404, ScienceErrorCode.CASE_NOT_ELIGIBLE, "Case is not in the frozen 2025 final-test population")
+        sl = slice(population["row_start"], population["row_start"] + population["row_count"])
+        pixel = _phase4j_array("pairing/pixel_index.npy")[sl]
+
+        def grid(relative: str) -> np.ndarray:
+            return flat_field(_phase4j_array(relative)[sl], pixel)
+        return {
+            "raw": grid(_PHASE4J_RAINFALL_FIELDS["raw"]), "corrected": grid(_PHASE4J_RAINFALL_FIELDS[model]),
+            "observed": grid(_PHASE4J_RAINFALL_FIELDS["imd"]),
+            "heavy": grid(_PHASE4J_PROBABILITY_FIELDS["heavy"]) if with_probability else None,
+            "very_heavy": grid(_PHASE4J_PROBABILITY_FIELDS["very_heavy"]) if with_probability else None,
+        }
+    phase4g = _phase4g_deterministic(2024)
+    meta = phase4g["cases_by_id"].get(case_id)
+    if meta is None:
+        raise _science_error(404, ScienceErrorCode.CASE_NOT_ELIGIBLE, "Case is not in the frozen 2024 validation population")
+    sl = slice(meta["row_start"], meta["row_start"] + meta["row_count"])
+    pixel = phase4g["pixel_index"][sl]
+
+    def grid24(array: np.ndarray) -> np.ndarray:
+        return flat_field(array[sl], pixel)
+    return {
+        "raw": grid24(_phase4i_array("deterministic_models/M0_2024.npy")),
+        "corrected": grid24(_phase4i_array(_PHASE4I_2024_FIELDS[model])),
+        "observed": grid24(phase4g["imd"]),
+        "heavy": grid24(_phase4i_array(_PHASE4I_2024_PROBABILITY_FIELDS["heavy"])) if with_probability else None,
+        "very_heavy": grid24(_phase4i_array(_PHASE4I_2024_PROBABILITY_FIELDS["very_heavy"])) if with_probability else None,
+    }
+
+
+@router.get("/{year}/cases/{case_id}/districts", response_model=OperationalDistrictsResponse)
+def case_districts(year: int, case_id: str, model: str = Query("m1", pattern="^(m1|m2|m3|m4)$")) -> OperationalDistrictsResponse:
+    _require_year(year)
+    record, record_year = _case_record(case_id)
+    if record_year != year:
+        raise _science_error(404, ScienceErrorCode.CASE_NOT_FOUND, "Case does not belong to the requested year")
+    if year == 2023:
+        raise _science_error(
+            404, ScienceErrorCode.PRODUCT_UNAVAILABLE,
+            "No district product for 2023: it is the train/cross-fit year, so only out-of-fold M2 exists "
+            "and there are no probability or M1/M3/M4 output grids to aggregate.",
+        )
+    districts, weights, weights_sha, geometry_sha = _district_static()
+    with_probability = bool(record.get("PROBABILITY_SOURCE_ELIGIBLE", False))
+    fields = _district_case_fields(year, case_id, model, with_probability)
+    rows = aggregate_operational_districts(
+        districts, weights, raw=fields["raw"], corrected=fields["corrected"], observed=fields["observed"],
+        heavy_p=fields["heavy"], very_heavy_p=fields["very_heavy"])
+    predicted = None
+    if record.get("REGIME_SOURCE_ELIGIBLE", False):
+        vector = _REGIME_LOADER[year]().get(case_id)
+        if vector is not None:
+            predicted = REGIME_CLASSES[int(np.argmax(vector))]
+    role = _MODEL_ROLE[model] + (" (pre-registered primary 2025 final-test model)" if year == 2025 and model == "m1"
+                                 else " (RMSE-selected 2024 model)" if year == 2024 and model == "m1" else "")
+    return OperationalDistrictsResponse(
+        case_id=case_id, year=year, year_role=YEAR_ROLE[year], model=model, model_role=role,
+        predicted_regime=predicted, districts=[OperationalDistrictRow(**row) for row in rows],
+        source_district_count=len(districts), method=_DISTRICT_METHOD, weights_sha256=weights_sha,
+        geometry_sha256=geometry_sha, caveats=_DISTRICT_CAVEATS)
 
 
 @router.get("/{year}/cases/{case_id}/ensemble", response_model=EnsembleResponse)

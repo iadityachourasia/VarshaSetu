@@ -94,10 +94,11 @@ def test_pr_roc_curve_arrays_always_unavailable(client: TestClient) -> None:
         assert capabilities["pr_roc_curve_arrays"] == "unavailable"
 
 
-def test_district_aggregation_always_unavailable(client: TestClient) -> None:
-    for year in (2023, 2024, 2025):
-        capabilities = client.get(f"/api/science/operational/{year}/availability").json()
-        assert capabilities["district_aggregates"] is False
+def test_district_aggregation_capability_matches_frozen_grids(client: TestClient) -> None:
+    # 2023 has no probability or M1/M3/M4 output grids, so no district product; 2024/2025 do.
+    flags = {year: client.get(f"/api/science/operational/{year}/availability").json()["district_aggregates"]
+             for year in (2023, 2024, 2025)}
+    assert flags == {2023: False, 2024: True, 2025: True}
 
 
 def test_2025_m1_is_primary_m2_is_secondary(client: TestClient) -> None:

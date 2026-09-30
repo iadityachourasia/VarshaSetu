@@ -4,6 +4,7 @@ import {
   getOperationalAtmosphere,
   getOperationalAvailability,
   getOperationalCases,
+  getOperationalDistricts,
   getOperationalEnsemble,
   getOperationalFSS,
   getOperationalProbability,
@@ -72,8 +73,8 @@ describe("operational status/availability parsing", () => {
     expect(parsed.pr_roc_curve_arrays).toBe("unavailable");
   });
 
-  it("rejects an availability payload that invents a district_aggregates=true", async () => {
-    const bad = {
+  it("accepts district_aggregates=true (2024/2025 district product) but rejects a non-boolean value", async () => {
+    const payload = {
       year: 2025, role: "FINAL_TEST_COMPLETED", role_label: "x", raw_rainfall: true, imd_observation: true,
       m1: "case_grid", m2: "case_grid", m3: "case_grid", m4: "case_grid",
       heavy_probability: "case_grid", very_heavy_probability: "case_grid", regime_probability: "per_case",
@@ -81,8 +82,43 @@ describe("operational status/availability parsing", () => {
       per_cell_metrics: true, fss: true, reliability_bins: true, pr_roc_curve_arrays: "unavailable",
       district_aggregates: true, notes: [],
     };
-    vi.stubGlobal("fetch", okJson(bad));
+    vi.stubGlobal("fetch", okJson(payload));
+    expect((await getOperationalAvailability(2025)).district_aggregates).toBe(true);
+    vi.stubGlobal("fetch", okJson({ ...payload, district_aggregates: "yes" }));
     await expect(getOperationalAvailability(2025)).rejects.toThrow();
+  });
+});
+
+describe("district product parsing", () => {
+  const row = {
+    district_id: "D1", district_name: "Raigarh", valid_grid_cells: 21, raw_mean_mm: 14.3, raw_max_mm: 30,
+    corrected_mean_mm: 13.3, corrected_max_mm: 28, heavy_probability: 0.006, very_heavy_probability: null,
+    heavy_area_fraction: 0, very_heavy_area_fraction: 0, observed_mean_mm: 100.1, observed_max_mm: 150,
+    observed_heavy_area_fraction: 0.9, observed_very_heavy_area_fraction: 0.2,
+  };
+  const body = {
+    case_id: "20250714_day2_24h", year: 2025, year_role: "FINAL_TEST_COMPLETED", model: "m1", model_role: "Ridge MOS",
+    units: "mm/24h", heavy_threshold_mm: 64.5, very_heavy_threshold_mm: 115.6, predicted_regime: "ACTIVE_MONSOON",
+    districts: [row], source_district_count: 188, method: "x", weights_sha256: "a".repeat(64),
+    geometry_sha256: "b".repeat(64), geometry_source: "geoBoundaries IND ADM2 2021", geometry_license: "ODbL 1.0", caveats: ["c"],
+  };
+
+  it("requests the year/case/model route and keeps nullable probabilities null", async () => {
+    const fetchMock = okJson(body);
+    vi.stubGlobal("fetch", fetchMock);
+    const parsed = await getOperationalDistricts(2025, "20250714_day2_24h", "m3");
+    expect(String((fetchMock as unknown as { mock: { calls: unknown[][] } }).mock.calls[0][0])).toContain("/operational/2025/cases/20250714_day2_24h/districts?model=m3");
+    expect(parsed.districts[0].very_heavy_probability).toBeNull();
+    expect(parsed.districts[0].observed_mean_mm).toBe(100.1);
+  });
+
+  it("rejects a payload missing the observed replay fields or with an unknown model", async () => {
+    const partial: Partial<typeof row> = { ...row };
+    delete partial.observed_mean_mm;
+    vi.stubGlobal("fetch", okJson({ ...body, districts: [partial] }));
+    await expect(getOperationalDistricts(2025, "20250714_day2_24h")).rejects.toThrow();
+    vi.stubGlobal("fetch", okJson({ ...body, model: "m9" }));
+    await expect(getOperationalDistricts(2025, "20250714_day2_24h")).rejects.toThrow();
   });
 });
 

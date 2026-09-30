@@ -22,7 +22,7 @@ LANE A — Track A (retrospective)
 LANE B — Track B (operational-era)
   Historical NOAA operational GEFS ─▶ Forecast-time features ─▶ Pseudo-regime classifier ─▶
   Model ladder (M0-M4, same family) ─▶ Extreme-event probability models ─▶
-  [no district aggregation] ─▶ Verification ─▶ Frozen artifacts (hash-pinned) ─▶
+  [read-only district aggregation, 2024/2025 only; docs/107] ─▶ Verification ─▶ Frozen artifacts (hash-pinned) ─▶
   FastAPI (/api/science/operational/*) ─▶ Frontend
 ```
 
@@ -75,8 +75,8 @@ matters when a judge flips between the slide and the screen.
 - A label on the Track B lane's output: "2025: RMSE improved, extreme
   spatial FSS did not" — the single most important caveat, placed where it
   cannot be missed, not in a footnote.
-- A label on the district-aggregation gap: "Not part of the frozen 2023-2025
-  corpus."
+- A label on the district view: "Read-only aggregation of frozen grids, 2024/2025
+  only; no district-level verification."
 - A small hash-icon annotation on the frozen-artifact-store boxes:
   "SHA-256 pinned; a displayed-value test compares live output against this
   file" (this is literally true — see `docs/91` §3).

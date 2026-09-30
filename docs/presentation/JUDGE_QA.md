@@ -56,11 +56,20 @@ show the actual sealed → authorized → unsealed-once lifecycle.
 ## Regime awareness (the project's core research question)
 
 **Q: Does the "regime-aware" part actually help?**
-Not conclusively, and we say so directly: regime-aware routing (hard or
-soft) did not beat the plain global ML model overall on either benchmark.
-Soft mixture-of-experts improves on hard routing for RMSE, but neither
-beats Global XGBoost. This is an honest negative result for a hypothesis
-this project set out to test — not a hidden failure.
+Not conclusively, and we say so directly. On overall RMSE (and MAE and bias),
+regime-aware routing (hard or soft) did not beat the plain global ML model on
+either benchmark; soft mixture-of-experts improves on hard routing for RMSE,
+but neither beats Global XGBoost. That is an honest negative result for the
+headline metric — not a hidden failure.
+There is a narrower, post-hoc finding we also report, clearly labelled as
+exploratory (`docs/106`): on heavy-rain categorical and spatial skill
+(CSI, FSS) in the 2024 validation year and the consumed 2025 test, the
+regime-aware models were ahead of Raw GEFS, and in 2025 ahead of the global
+model too, but only in the predicted Low/Depression pseudo-regime. In the
+Active regime the global model was as good or better, and in the Break/Weak
+regime every corrected model essentially stopped forecasting heavy rain and
+lost to Raw. It is a hypothesis for future work, not a demonstrated benefit —
+these are pseudo-labels, one year each, with optimistic intervals.
 
 **Q: What is a "pseudo-regime," and why not just call it "the regime"?**
 Because it is a forecast-only classifier output, not an independently
@@ -80,11 +89,17 @@ current negative result is understood.
 
 **Q: Your model reduces RMSE — does that mean it's better at warning about
 extreme rain?**
-No, and this is the single most important caveat in the whole project:
-in the 2025 test, Raw GEFS retained *stronger* extreme-rain spatial skill
-(FSS) than our RMSE-selected model, at every neighbourhood scale tested.
-Lower average error and better extreme-event skill are different
-properties, and improving one did not improve the other here.
+Not for the headline model, and this is the single most important caveat in
+the whole project: in the 2025 test, Raw GEFS retained *stronger* extreme-rain
+spatial skill (FSS) than our RMSE-selected model (preselected M1 Ridge), at
+every neighbourhood scale tested. Lower average error and better extreme-event
+skill are different properties, and improving one did not improve the other
+for that model. We have not shown that *no* corrected model can do better:
+post-hoc diagnostics on the same frozen predictions (`docs/106`) show the
+regime-aware models scoring above Raw on heavy-rain FSS/CSI while still being
+worse on mean error, and none of the corrected models is reliably good at
+very-heavy events. Those post-hoc numbers do not change the declared headline
+and were not used to choose a model.
 
 **Q: Then why report the RMSE win at all if it doesn't help on extremes?**
 Because RMSE and extreme-event spatial skill are genuinely different,
@@ -105,10 +120,14 @@ issue warnings."
 ## Product and scope
 
 **Q: Can I see district-level results for 2025?**
-No — the 2023-2025 historical operational corpus was frozen without a
-district polygon-aggregation step. District Intelligence only works for
-the 2019 track. This is a real, permanent scope gap for this corpus, stated
-on the page itself rather than faking a table from ungrouped grid cells.
+Yes, as a historical replay (`docs/107`). District Intelligence now also
+serves 2024 and 2025: each district's raw, corrected (M1 by default, M2–M4
+selectable), calibrated heavy/very-heavy probability and area fraction, next
+to the IMD observed values, area-weighted with the same overlap weights as
+the 2019 track. Limits we state up front: it is a read-only aggregation of
+frozen grids (not a new model or a separately frozen artifact), 2023 has no
+district product, and there is no district-level verification score yet — so
+we do not claim district-level skill.
 
 **Q: Can I see the ensemble comparison for [some other year]?**
 Only 2025 has the matched five-member-ensemble-vs-calibrated-ML comparison.

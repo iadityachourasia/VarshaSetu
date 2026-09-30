@@ -42,8 +42,10 @@ population — the two tracks are not pooled into one number."*
   Linear Ridge MOS, M2 Global XGBoost, M3 Hard Regime, M4 Soft MoE)
 - Soft routing (M4) improves on hard routing (M3) for RMSE, but **neither
   beats M2 Global XGBoost**
-- Raw GEFS remains **stronger than every corrected model** on deterministic
-  Heavy/Very-Heavy CSI/ETS and on the reported FSS scales
+- In 2019 Raw GEFS remains **stronger than every corrected model (M1–M4)** on
+  deterministic Heavy/Very-Heavy CSI/ETS; FSS was measured for **Raw vs M2
+  only**, where Raw is stronger at every scale (`docs/64`). Do not say Raw has
+  better FSS than "all corrected models" — M1/M3/M4 have no 2019 FSS.
 
 ## 4. Track B (2025) headline
 
@@ -68,6 +70,15 @@ compared against every displayed value by an automated test).
 > (1×1, 3×3, 5×5, 9×9). Lower overall rainfall RMSE did **not** translate
 > into better extreme-rain spatial skill in 2025.
 
+**Scope of that statement (Phase 4M, `docs/106`).** It is a statement about the
+preselected M1 versus Raw — the frozen headline comparison — and must keep
+being worded that way. It is not a statement about all corrected models:
+post-hoc, for **heavy** rain the regime-aware M3/M4 scored higher than Raw on
+FSS and CSI in 2025 (and 2024), mainly in the predicted Low/Depression
+pseudo-regime; for **very-heavy** rain Raw stays best at coarse scales. Use the
+post-hoc numbers only as labelled, descriptive, non-selecting diagnostics
+(2025 is a consumed holdout), never as a replacement headline.
+
 This is not a caveat to bury in small print — the app itself surfaces it on
 Overview, Verification, and in Story Mode's dedicated "Extreme-Skill
 Limitation" scene. State it in the same breath as the RMSE win, every time.
@@ -86,10 +97,11 @@ Limitation" scene. State it in the same breath as the RMSE win, every time.
 
 ## 7. What is genuinely not built (say this plainly if asked)
 
-- No district-level product exists for Track B (2023–2025). The 2023-2025
-  historical operational corpus was frozen without a polygon-overlap
-  aggregation step. District Intelligence only works for the 2019
-  reforecast track.
+- Track B district product (Phase 4N, `docs/107`): **2024 and 2025 only**, as
+  a read-only area-weighted aggregation of the frozen grids (same Phase 2C
+  overlap weights as 2019), historical replay. **2023 has none**, and there is
+  **no district-level verification** (no RMSE/CSI/FSS by district). It is not
+  a frozen, hash-pinned artifact of its own.
 - No five-member-ensemble-vs-ML comparison exists outside the 2025 matched
   subset (not for 2019, 2023, or 2024).
 - No dedicated regime-intelligence UI exists for Track A (2019) — its
@@ -149,7 +161,9 @@ selection reasoning. If asked "why this case," that is the honest answer.
 | "forecast-only pseudo-regime" | "the detected weather regime" / "observed regime" |
 | "completed held-out evaluation" / "consumed final test" | "live," "currently running," "still sealed" |
 | "positive Brier Skill Score, with high FAR" | "calibrated" alone, without the FAR caveat |
-| "regime-aware post-processing did not beat global ML overall" | "regime awareness improves skill" (unqualified) |
+| "regime-aware post-processing did not beat global ML on overall RMSE" | "regime awareness improves skill" (unqualified); also not "regime awareness never helps" |
+| "post-hoc, regime-aware heavy-rain CSI/FSS exceeded Raw in the Low/Depression pseudo-regime (2024, 2025)" | presenting that as a tested or selected result, or as a headline |
+| "Raw had better FSS than the selected M1 (2025) / than M2 (2019)" | "Raw has better FSS than every corrected model" |
 | "historical scientific prototype, not operational" | "operational," "production-ready," "live forecasting" |
 
 ## 12. Sources

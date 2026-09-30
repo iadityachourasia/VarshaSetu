@@ -29,6 +29,9 @@ restricted to intersections with the validated grid. Some intersecting
 districts can have no valid paired cells in a particular forecast case and
 are omitted from that case's table.
 
+Scope note (Phase 4N, `docs/107`): the same pinned geometry and overlap-weight matrix are also used, unchanged, for a read-only
+Track B (operational-era 2024/2025) district aggregation. Nothing in this methodology was altered.
+
 ## Grid-to-polygon calculation
 
 Each 0.25° target center defines a 0.25° latitude-by-longitude cell polygon.

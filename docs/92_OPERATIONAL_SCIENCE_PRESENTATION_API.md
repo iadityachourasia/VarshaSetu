@@ -229,6 +229,8 @@ credential, or bucket key.
   `experiments/recent_historical/` (confirmed by exhaustive search in the
   preceding audit). `district_aggregates: false` is a literal field on every
   year capability response. District Intelligence remains Track-A-only.
+  **Superseded (Phase 4N, `docs/107`):** `district_aggregates` is now a boolean (`true` for 2024 and 2025, `false` for 2023) and
+  `GET /{year}/cases/{case_id}/districts` serves a read-only area-weighted aggregation of the frozen grids (not a frozen artifact).
 - **Per-case regime probability** (2023/2024/2025): `regime_375x3.npy` (2025),
   `2024_prospective_probability.npy`, and the 2023 OOF regime arrays have no
   verified case-id-to-row index discovered during this phase. Serving them

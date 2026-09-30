@@ -53,10 +53,56 @@ export const operationalAvailabilitySchema = z.object({
   fss: z.boolean(),
   reliability_bins: z.boolean(),
   pr_roc_curve_arrays: z.literal("unavailable"),
-  district_aggregates: z.literal(false),
+  district_aggregates: z.boolean(),
   notes: z.array(z.string()),
 });
 export const operationalYearsSchema = z.array(operationalAvailabilitySchema);
+
+// ---------------------------------------------------------------------------
+// District product (per-case area-weighted aggregation of the frozen grids)
+// ---------------------------------------------------------------------------
+
+export const operationalDistrictModelSchema = z.enum(["m1", "m2", "m3", "m4"]);
+export type OperationalDistrictModel = z.infer<typeof operationalDistrictModelSchema>;
+
+export const operationalDistrictRowSchema = z.object({
+  district_id: z.string(),
+  district_name: z.string(),
+  valid_grid_cells: z.number(),
+  raw_mean_mm: z.number(),
+  raw_max_mm: z.number(),
+  corrected_mean_mm: z.number(),
+  corrected_max_mm: z.number(),
+  heavy_probability: z.number().nullable(),
+  very_heavy_probability: z.number().nullable(),
+  heavy_area_fraction: z.number(),
+  very_heavy_area_fraction: z.number(),
+  observed_mean_mm: z.number(),
+  observed_max_mm: z.number(),
+  observed_heavy_area_fraction: z.number(),
+  observed_very_heavy_area_fraction: z.number(),
+});
+export const operationalDistrictsSchema = z.object({
+  case_id: z.string(),
+  year: z.number(),
+  year_role: z.string(),
+  model: operationalDistrictModelSchema,
+  model_role: z.string(),
+  units: z.string(),
+  heavy_threshold_mm: z.number(),
+  very_heavy_threshold_mm: z.number(),
+  predicted_regime: z.string().nullable(),
+  districts: z.array(operationalDistrictRowSchema),
+  source_district_count: z.number(),
+  method: z.string(),
+  weights_sha256: z.string(),
+  geometry_sha256: z.string(),
+  geometry_source: z.string(),
+  geometry_license: z.string(),
+  caveats: z.array(z.string()),
+});
+export type OperationalDistrictRow = z.infer<typeof operationalDistrictRowSchema>;
+export type OperationalDistricts = z.infer<typeof operationalDistrictsSchema>;
 
 // ---------------------------------------------------------------------------
 // Case index / detail
@@ -377,6 +423,9 @@ export function getOperationalAtmosphere(year: OperationalYear, caseId: string, 
 }
 export function getOperationalProbability(year: OperationalYear, caseId: string, target: "heavy" | "very_heavy", server = false) {
   return getOperational(`/${year}/cases/${caseId}/probability/${target}`, operationalProbabilityFieldSchema, server);
+}
+export function getOperationalDistricts(year: OperationalYear, caseId: string, model: OperationalDistrictModel = "m1", server = false) {
+  return getOperational(`/${year}/cases/${caseId}/districts?model=${model}`, operationalDistrictsSchema, server);
 }
 export function getOperationalRegime(year: OperationalYear, caseId: string, server = false) {
   return getOperational(`/${year}/cases/${caseId}/regime`, operationalRegimeSchema, server);
