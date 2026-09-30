@@ -18,4 +18,6 @@
 
 ## Interpretation boundary
 
+Scope note (Phase 4M): the "regime-aware did not beat global" conclusion above is a 2019 Track A result on RMSE and on deterministic CSI/ETS. It must not be extended to Track B heavy-rain categorical/spatial skill, where M3/M4 were later diagnosed separately (`docs/106`).
+
 Regime-aware superiority is not presumed. The statements above are based only on the one-time 2019 held-out results after the prewritten model-choice freeze. This analysis uses prototype pseudo-labels and uncalibrated classifier probabilities; they are not authoritative meteorological labels or calibrated event probabilities. Event counts and uncertainty intervals must be considered alongside point scores. The 2019 result is not used for retuning.

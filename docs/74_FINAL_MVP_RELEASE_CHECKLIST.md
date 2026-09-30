@@ -24,6 +24,7 @@ requires online tiles. Do not describe the sparse offline district fallback as
 equivalent to an online city/road basemap.
 
 Non-negotiable claims: M2 Global XGBoost is the best tested deterministic RMSE
-model; M3/M4 do not beat it; Raw GEFS has stronger reported deterministic
-Heavy/Very Heavy CSI/ETS and FSS. The regime classifier reproduces
+model; M3/M4 do not beat it on RMSE; in 2019 Raw GEFS has stronger reported
+deterministic Heavy/Very Heavy CSI/ETS than every corrected model and stronger
+FSS than M2 (the only model with 2019 FSS, `docs/64`). The regime classifier reproduces
 forecast-only pseudo-labels, not independent meteorological truth.

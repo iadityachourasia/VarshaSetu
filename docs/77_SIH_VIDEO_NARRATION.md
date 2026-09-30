@@ -41,8 +41,9 @@ a nationwide operational service.”
 **02:40–03:15 — Verification.** “The full held-out comparison includes Raw
 GEFS, linear MOS, Global XGBoost, hard regime routing and soft mixture of
 experts. Global XGBoost wins overall deterministic RMSE. Soft routing edges
-hard routing, but neither beats Global ML. Raw GEFS remains stronger on the
-reported deterministic heavy-event CSI/ETS and every evaluated FSS scale.
+hard routing, but neither beats Global ML on RMSE. Raw GEFS remains stronger
+on the reported deterministic heavy-event CSI/ETS, and stronger than Global
+XGBoost on every evaluated FSS scale.
 In this **2019 retrospective benchmark**, very-heavy categorical false-alarm
 ratio is about 0.872 at the frozen probability threshold. Lower average error does not guarantee better extreme-event
 spatial skill.”
@@ -62,5 +63,5 @@ and additional time:** “A different historical operational-GEFS experiment
 trained in 2023, selected its Ridge model in 2024, and completed one final
 2025 evaluation. On 232 cases, selected Ridge reduced RMSE from 16.1657 to
 15.5736 millimetres, or 3.66 percent. Raw GEFS still had stronger heavy and
-very-heavy spatial FSS. These experiments are not pooled, and neither is a
+very-heavy spatial FSS than that selected Ridge model. These experiments are not pooled, and neither is a
 live operational service.” Do not narrate 2025 over 2019 case maps.

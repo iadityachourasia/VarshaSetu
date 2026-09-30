@@ -122,7 +122,7 @@ Scores below use the **121 matched defined cases** at each size. Raw alone had 1
 | 5×5 | .1237 | .0537 |
 | 9×9 | .1713 | .0711 |
 
-Extreme spatial classification: **`RAW_BETTER`** at both thresholds and all declared scales.
+Extreme spatial classification: **`RAW_BETTER`** at both thresholds and all declared scales. This frozen label describes the **Raw vs preselected M1** comparison only; FSS for M2–M4 was not part of the frozen Phase 4J comparison (see the Phase 4M scope note after §32).
 
 ## 20. Regime Analysis
 
@@ -162,7 +162,7 @@ The selected-range sample is not a current-date operational service. IMD annual 
 
 ## 29. Final Claims
 
-Continuous rainfall: selected M1 improves RMSE versus Raw on the frozen primary population. Extreme detection: M1 has lower FAR but worse POD/CSI/ETS at both thresholds. Spatial extremes: Raw beats M1 at every FSS scale. Probability: Heavy and Very Heavy have positive BSS against the fixed 2023 prevalence reference, but Very Heavy has high cutoff FAR. Regime conditioning: M4 beats M3 on RMSE but neither beats M2. Applicability: all cases retained; shift diagnostics descriptive only.
+Continuous rainfall: selected M1 improves RMSE versus Raw on the frozen primary population. Extreme detection: M1 has lower FAR but worse POD/CSI/ETS at both thresholds. Spatial extremes: Raw beats M1 at every FSS scale. Probability: Heavy and Very Heavy have positive BSS against the fixed 2023 prevalence reference, but Very Heavy has high cutoff FAR. Regime conditioning: M4 beats M3 on RMSE but neither beats M2 on RMSE (categorical/spatial behaviour of M3/M4 was not evaluated in this report; see the Phase 4M scope note). Applicability: all cases retained; shift diagnostics descriptive only.
 
 ## 30. Artifact Freeze
 
@@ -175,3 +175,7 @@ Phase 4J focused tests independently recalculate continuous and threshold metric
 ## 32. Final Decision
 
 Deterministic primary: **`SELECTED_MODEL_IMPROVED_RMSE`**. Extreme spatial: **`RAW_BETTER`**. Heavy and very-heavy probability: separately positive BSS, with high very-heavy FAR. Project-level status: **`OPERATIONAL_ERA_BENCHMARK_COMPLETE`**. The exact next task is an independent read-only scientific audit of the frozen Phase 4J evidence; any changed model must use a new experiment version and cannot call 2025 untouched again.
+
+## 33. Scope Note Added by Phase 4M (post-hoc; frozen results above are unchanged)
+
+`RAW_BETTER` and "Raw beats M1 at every FSS scale" are accurate for the preselected primary M1 and must keep being quoted as M1 statements. They are **not** statements about every corrected model. Post-hoc descriptive diagnostics on these same frozen 2025 predictions (`docs/106`; the holdout is consumed, so nothing here may select or re-rank a model) show: for **heavy** rain M3 (FSS 3×3 .274 vs Raw .156) and M4 exceed Raw on FSS and CSI at every scale as point estimates (paired-bootstrap intervals exclude zero for CSI and for FSS 3×3, but not for FSS 9×9; 1×1 and 5×5 were not bootstrapped), M2 exceeds Raw up to 5×5 but not at 9×9 (.242 vs .252), and the regime-aware gain is concentrated in the predicted Low/Depression pseudo-regime; for **very-heavy** rain Raw remains best at the coarse 5×5 and 9×9 scales and M2 almost never forecasts such events (CSI .0007). M1 remains the declared primary result. "Neither M3 nor M4 beats M2" remains true for RMSE, MAE and bias only.

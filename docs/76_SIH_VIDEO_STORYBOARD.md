@@ -36,6 +36,7 @@ demonstration. The completed 2025 operational-era final test is a different
 GEFS lineage and population; do not overlay its figures on any 2019 map. A
 separate sourced Verification/report slide may state that the preselected M1
 Ridge reduced 2025 RMSE from 16.1657 to 15.5736 mm (3.66%) on 232 cases,
-while Raw GEFS retained better heavy/very-heavy spatial FSS. Cite
+while Raw GEFS retained better heavy/very-heavy spatial FSS than that
+selected M1 (not than every corrected model; `docs/106`). Cite
 `89_OPERATIONAL_FINAL_TEST_2025.md` and the Phase 4K audit. Re-time the video
 explicitly if this segment is added; do not silently squeeze away limitations.

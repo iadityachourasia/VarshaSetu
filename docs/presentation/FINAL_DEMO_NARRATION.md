@@ -34,7 +34,7 @@ the app's usual entry point) if using the guided overlay.
 > [switch to `?demo=official`, the 2025 case]
 >
 > But here's the honest part: in 2025, Raw GEFS actually kept *better*
-> extreme-rain spatial skill than our corrected model, at every scale we
+> extreme-rain spatial skill than our headline Ridge model, at every scale we
 > tested. Lower overall error did not mean better extreme-event skill — we
 > say that on the same screen as the RMSE win, not in a footnote.
 >
@@ -86,8 +86,9 @@ Close with the same closing line as the 90-second script.
 > post-processing can fix systematic bias in raw monsoon rainfall
 > forecasts. On our two completed historical benchmarks, we cut RMSE by
 > about 9.7% in 2019 and 3.7% in 2025 — but we're upfront that in 2025, the
-> raw forecast actually kept better skill on the extreme events that matter
-> most for warnings. Everything's frozen, hash-verified, and reproducible —
+> raw forecast actually kept better extreme-event spatial skill than our
+> headline Ridge model, and our regime-aware variants only showed promise on
+> heavy rain in one regime — a hypothesis, not a proven benefit. Everything's frozen, hash-verified, and reproducible —
 > this isn't a live system, it's honest science."
 
 ## 4. Delivery notes

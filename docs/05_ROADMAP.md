@@ -272,8 +272,9 @@ very-heavy classifiers, used 2018 initialization-grouped calibration/selection,
 then made a one-time 2019 probability/FSS/district evaluation only after a
 hash-written selection freeze. The frozen Phase 2B M2 deterministic model was
 not retrained or reselected. See `docs/63`–`docs/67` and
-`data/manifests/phase2c/`. Raw GEFS remains stronger on deterministic FSS
-and CSI/ETS at the extreme thresholds; the dedicated probability products
+`data/manifests/phase2c/`. In 2019 Raw GEFS remains stronger than M2 on
+deterministic FSS (the only model with 2019 FSS) and stronger than every
+corrected model on CSI/ETS at the extreme thresholds; the dedicated probability products
 have positive 2019 BSS relative to 2017 climatology but imperfect reliability.
 The new read-only `/api/science` serves historical prototype artifacts only.
 Legacy API blocks, live-ingestion limitations and operational readiness remain

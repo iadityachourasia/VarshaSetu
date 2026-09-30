@@ -24,13 +24,15 @@ separate consumed 2025 operational-era benchmark is not visualized by these maps
    district; show area-weighted mean/max rainfall, event probabilities and
    affected fractions. Do not imply nationwide or unvalidated MP coverage.
 7. Open Verification. Show the complete M0–M4 table and 1×1/3×3/5×5/9×9
-   FSS. Say plainly: M2 wins overall RMSE; Raw remains stronger on the
-   reported deterministic extreme-event spatial skill.
+   FSS. Say plainly: M2 wins overall RMSE; Raw remains stronger than M2 on
+   the reported deterministic extreme-event spatial skill (2019 FSS exists
+   only for Raw vs M2).
 8. End on Methodology: 2017 train, 2018 validate/calibrate, completed 2019
    final test; provenance and the non-operational readiness boundary. If the
    2025 result is included, show a separate sourced verification summary:
    preselected M1 Ridge reduced RMSE by 3.66% on 232 historical operational-era
-   cases, while Raw retained better extreme spatial FSS. Never merge it with
+   cases, while Raw retained better extreme spatial FSS than that selected M1
+   (not a statement about every corrected model; see `docs/106`). Never merge it with
    the 2019 map story or pool the metrics.
 
 The automated path is `frontend-v2/tests/e2e/demo-flow.spec.ts`. Its

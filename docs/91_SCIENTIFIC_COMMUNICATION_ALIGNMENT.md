@@ -33,6 +33,8 @@ On the one-time completed 2025 historical operational-era final test, **M1 Ridge
 
 The 2025 M1 continuous-RMSE improvement coexists with **Raw GEFS better heavy and very-heavy spatial FSS** at all frozen 1×1, 3×3, 5×5, and 9×9 scales, and lower selected-M1 heavy/very-heavy CSI/ETS than Raw. Verification now makes the spatial caveat visible next to the separate 2025 summary rather than hiding it in a tooltip. Heavy and very-heavy thresholds are inclusive **≥64.5** and **≥115.6 mm per 24 h**; the 2019 Extreme Rain page continues to show its own frozen threshold results, not 2025 scores.
 
+Scope addendum (Phase 4M, `docs/106`): every "Raw has better FSS" claim is a **selected-M1 (2025)** or **M2 (2019)** claim, and must be worded that way; it is not a claim about M3/M4. Post-hoc diagnostics show regime-aware heavy-rain CSI/FSS above Raw in the Low/Depression pseudo-regime (2024, 2025), so "corrected models lose on extremes" and "regime awareness never helps" are both forbidden generalisations. Existing UI copy already scopes the statement to the selected M1 and needs no change.
+
 ## 8. Probability Claims
 
 Both frozen 2025 calibrated probability models achieved positive Brier Skill Score against the frozen 2023-prevalence reference: heavy **+0.09483**, very heavy **+0.02652**. At frozen decision thresholds 0.10/0.05, FAR remained **0.69576/0.85492**. PR-AUC weakened from 2024 to 2025, and upper reliability bins were sparse. “Calibrated” identifies the fitted 2024 method; it does not mean 2025 probabilities were perfectly reliable. The interactive probability map remains the separate 2019 model, calibrated on 2018, and is explicitly not a live warning.
