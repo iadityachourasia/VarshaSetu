@@ -122,3 +122,19 @@ test("2024 supports the compare view and history with the development-year label
   await expect(page.locator(".district-compare-table tbody tr").first()).toBeVisible();
   await expect(page.locator(".district-history").getByRole("heading", { name: /across \d+ 2024 cases/ })).toBeVisible();
 });
+
+test("the case download links serve the same districts as the table, with provenance", async ({ page }) => {
+  await page.goto(`/districts?experiment=operational&year=2025&case=${CASE_2025}`);
+  const links = page.getByTestId("district-export");
+  await expect(links).toBeVisible();
+  const href = await links.getByRole("link", { name: "CSV" }).getAttribute("href");
+  expect(href).toContain(`/2025/cases/${CASE_2025}/districts/export?format=csv`);
+  const response = await page.request.get(href!);
+  expect(response.ok()).toBeTruthy();
+  expect(response.headers()["content-disposition"]).toContain("attachment");
+  const [header, ...rows] = (await response.text()).trim().split("\n");
+  expect(rows).toHaveLength(187);
+  for (const column of ["label", "year_role", "weights_sha256", "m4_improvement_vs_raw_mm", "raw_error_mm"]) expect(header.split(",")).toContain(column);
+  expect(rows[0]).toContain("FINAL_TEST_COMPLETED");
+  expect(rows[0]).toContain("not an operational warning");
+});

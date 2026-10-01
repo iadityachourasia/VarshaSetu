@@ -19,7 +19,7 @@ from pathlib import Path
 from typing import Any, Literal
 
 import numpy as np
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Response
 from pydantic import BaseModel
 
 try:
@@ -1264,6 +1264,48 @@ def case_districts_compare(year: int, case_id: str) -> OperationalDistrictCompar
         model_roles={m: _model_role(year, m) for m in _COMPARE_MODELS}, predicted_regime=predicted,
         improvement_definition=_IMPROVEMENT_DEFINITION, districts=out, source_district_count=len(districts),
         method=_DISTRICT_METHOD, weights_sha256=weights_sha, geometry_sha256=geometry_sha, caveats=_DISTRICT_CAVEATS)
+
+
+CSV_EOL = chr(10)
+EXPORT_LABEL = "Historical District Decision-Support Prototype - not an operational warning or advisory"
+
+
+def _csv_cell(value: Any) -> Any:
+    return "" if value is None else value
+
+
+@router.get("/{year}/cases/{case_id}/districts/export")
+def case_districts_export(year: int, case_id: str, format: str = Query("csv", pattern="^(csv|json)$")) -> Response:
+    """Download the district comparison of one case: Raw, M1-M4 and IMD, with the provenance needed to reuse it honestly.
+
+    The numbers are the ones served by /districts/compare (same code path, same Phase 2C weights); nothing is recomputed or rounded here.
+    """
+    import csv
+    import io
+
+    body = case_districts_compare(year, case_id)
+    filename = f"varshasetu_districts_B_{year}_{case_id}.{format}"
+    headers = {"Content-Disposition": f'attachment; filename="{filename}"', "X-Weights-SHA256": body.weights_sha256, "X-Geometry-SHA256": body.geometry_sha256}
+    if format == "json":
+        return Response(json.dumps({"schema": "varshasetu-district-export-v1", "label": EXPORT_LABEL, **body.model_dump()}, ensure_ascii=False, allow_nan=False, indent=2),
+                        media_type="application/json", headers=headers)
+    fixed = ["label", "year", "year_role", "case_id", "predicted_regime", "units", "district_id", "district_name", "valid_grid_cells",
+             "observed_mean_mm", "observed_max_mm", "observed_heavy_area_fraction", "observed_very_heavy_area_fraction", "raw_mean_mm", "raw_max_mm", "raw_error_mm"]
+    per_model = ["mean_mm", "max_mm", "heavy_area_fraction", "very_heavy_area_fraction", "error_mm", "improvement_vs_raw_mm"]
+    tail = ["heavy_probability", "very_heavy_probability", "method", "weights_sha256", "geometry_sha256"]
+    columns = fixed + [f"{m}_{f}" for m in body.models for f in per_model] + tail
+    buffer = io.StringIO()
+    writer = csv.DictWriter(buffer, fieldnames=columns, lineterminator=CSV_EOL)
+    writer.writeheader()
+    for row in body.districts:
+        record = {"label": EXPORT_LABEL, "year": year, "year_role": body.year_role, "case_id": case_id, "predicted_regime": body.predicted_regime, "units": body.units,
+                  **{k: getattr(row, k) for k in fixed[6:]}, "heavy_probability": row.heavy_probability, "very_heavy_probability": row.very_heavy_probability,
+                  "method": body.method, "weights_sha256": body.weights_sha256, "geometry_sha256": body.geometry_sha256}
+        for model in body.models:
+            cell = row.models[model]
+            record.update({f"{model}_{f}": getattr(cell, f) for f in per_model})
+        writer.writerow({k: _csv_cell(v) for k, v in record.items()})
+    return Response(buffer.getvalue(), media_type="text/csv; charset=utf-8", headers=headers)
 
 
 @lru_cache(maxsize=64)

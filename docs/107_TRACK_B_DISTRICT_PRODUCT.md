@@ -72,3 +72,8 @@ Update (Phase 6B, `docs/111`): the single-model limitation above has since been 
 - Playwright specs must run against `next start` (the specs use `127.0.0.1`); under `next dev` that origin is blocked from hydrating and pages stay on their loading skeleton.
 
 Gate: `TRACK_B_DISTRICT_PRODUCT_COMPLETE_VERIFICATION_NOT_STARTED`.
+
+## Addendum: downloading a case (2026-10-01)
+
+`GET /api/science/operational/{year}/cases/{case_id}/districts/export?format=csv|json` returns the same district comparison the page shows (it calls the comparison code path directly, so nothing is recomputed or rounded): Raw, M1 to M4 and IMD for every district, the errors and the improvement-versus-Raw values, and the provenance as columns (`label`, `year_role`, `case_id`, `predicted_regime`, `units`, `method`, `weights_sha256`, `geometry_sha256`) so a downloaded file cannot lose its label. The 2025 file therefore says `FINAL_TEST_COMPLETED` in every row, and every row says the product is a historical decision-support prototype, not an operational warning. The JSON form also carries the caveats. The district page links both formats for the selected case. Tests: `backend/tests/test_district_export.py` and the last case of `frontend-v2/tests/e2e/operational-districts.spec.ts`.
+
