@@ -37,3 +37,13 @@ def test_image_ships_only_backend_code_and_the_pinned_bundle():
     for excluded in ("data/", "experiments/", ".git/", "frontend-v2/"):
         assert excluded in ignore
     assert "releases/download/serving-data-v1/" in DOCKERFILE and "latest" not in DOCKERFILE.split("ARG DATA_BUNDLE_URL")[1].split("\n")[0]
+
+
+def test_ci_workflow_uses_the_same_pinned_bundle_as_the_dockerfile():
+    workflow = (ROOT / ".github/workflows/ci.yml").read_text(encoding="utf-8")
+    docker_digest = re.search(r"^ARG DATA_BUNDLE_SHA256=([0-9a-f]{64})$", DOCKERFILE, re.M).group(1)
+    docker_url = re.search(r"^ARG DATA_BUNDLE_URL=(\S+)$", DOCKERFILE, re.M).group(1)
+    assert f"DATA_BUNDLE_SHA256: {docker_digest}" in workflow and f"DATA_BUNDLE_URL: {docker_url}" in workflow
+    assert "sha256sum -c" in workflow and workflow.index("sha256sum -c") < workflow.index("tar --no-same-owner")
+    assert "--retry-all-errors" in workflow and "permissions:\n  contents: read" in workflow
+    assert "pytest backend/tests" in workflow and "-rs" in workflow, "skips must be printed, never silent"
