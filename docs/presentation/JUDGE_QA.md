@@ -180,3 +180,36 @@ That improving overall rainfall RMSE did not improve extreme-event spatial
 skill in the more recent 2025 benchmark — the exact metric that matters
 most for heavy-rain warnings. That is the project's own stated primary
 open problem, not a footnote.
+
+## Requirement coverage and production readiness (added 2026-10-01)
+
+**Q: Is everything in the problem statement implemented?**
+No, and the app says so on one page (`/compliance`, with every figure resolved from hash-verified evidence). Of the 14 official requirement IDs, 12 are implemented and 2 are partial:
+regime classification (three forecast-only pseudo-regimes; coastal and orographic only as rule-based zones without a specialist model; no western-disturbance class) and improvement over raw
+(RMSE improves, but heavy and very-heavy rain skill is mixed). "Implemented" means the capability exists, is reachable and is evidence-backed, not that it beats raw everywhere.
+
+**Q: Where do your models fail?**
+The clearest, repeated failure is the Western Ghats coast. Those 109 cells (8 % of the land cells) hold about 35 to 43 % of observed heavy-rain cell-case pairs, yet Raw GEFS forecasts only about
+7 to 22 % as many heavy events there, in both benchmarks and all four years. No frozen model removes it, and the corrected models behave differently by track and year (`docs/117`, `docs/118`).
+In the interior the corrected models forecast almost no heavy rain. We report it because it points to the next experiment, a model given geography and forecast-time forcing (`docs/124`, a proposal that
+is not yet approved or trained).
+
+**Q: How do you handle western disturbances and the coastal and orographic regimes the problem names?**
+Honestly: not as classes. Coastal and orographic influence is studied as rule-based geographic zones with verification of the existing models (no specialist model). Western disturbances are not
+implemented; a feasibility study (`docs/122`) shows the evaluation domain excludes the region where they act, no label source or upper-air fields are available, and the monsoon-season sample is small.
+
+**Q: Can it forecast tomorrow's rain?**
+Not yet. It is a historical replay of frozen models against known observations. A live design exists (`docs/125`); it would label every output experimental and unverified, because skill cannot be measured until observations arrive.
+
+**Q: How do you know the regime classes are right?**
+We don't claim they are. The 0.94 and 0.88 figures are agreement with the project's own forecast-only labelling rule. Independent validation does not exist yet; the candidate sources and the obstacles
+(for example the active and break criteria need a longer rainfall record than the project holds) are in `docs/123`.
+
+**Q: What is the synoptic chart, and is it an analysis?**
+It draws 850-hPa wind, 500-hPa height contours and sea-level pressure lines from the frozen control-member forecast fields on the 0.5-degree grid, for the operational-era years. It is forecast
+data, not an analysis, and it does not explain why any correction was made. The grid's georeferencing was verified against the independently stored Track A coordinates (`docs/121`).
+
+**Q: Is it safe to run in production?**
+It is a read-only API that serves hash-verified frozen artifacts and fails closed on any integrity mismatch. Production hardening (`docs/120`): explicit CORS origins without credentials, a
+liveness endpoint that reports version and commit, retired static audit routes, a checksum-verified and retried data-bundle download, CI on every push, and an explicit policy for tests that need the
+data bundle. It is a historical research prototype, not an official warning service.

@@ -169,19 +169,21 @@ error, never silently masked. See
 ```
 VarshaSetu/
 ├── backend/              FastAPI read-only science API (Python 3.12)
-│   ├── app/api/          science.py (Track A) · operational.py (Track B)
+│   ├── app/api/          science.py (Track A) · operational.py (Track B) · evidence.py and zones.py
+│   │                     (hash-verified regime, district, zone and requirement-coverage evidence)
 │   ├── app/services/     legacy pipeline (blocked, quarantined — see below)
-│   └── tests/            pytest suite (193+ tests)
+│   └── tests/            pytest suite (388 tests; bare checkouts skip, with printed reasons, the tests that need the data bundle)
 ├── frontend-v2/           Next.js 16 / React 19 presentation frontend (the demo app)
-│   ├── src/app/           12 routes: forecast, casebook, extremes, ensemble,
-│   │                      regimes, districts, verification, observations,
-│   │                      quality, methodology, audit, and the overview
-│   └── tests/e2e/         Playwright suite (35+ specs, real backend)
+│   ├── src/app/           14 routes: the overview, forecast (with the synoptic chart),
+│   │                      casebook, extremes, ensemble, regimes, districts, verification,
+│   │                      observations, quality, methodology, audit, zones, compliance
+│   └── tests/e2e/         Playwright suite (101 tests, real backend)
 ├── frontend/              legacy Vite app (blocked CSV path — not the demo app)
 ├── data/ · experiments/   frozen scientific artifacts (gitignored; see below)
 ├── scripts/demo/          one-command demo launcher + preflight + stop
 ├── docs/                  100+ numbered documents — docs/00_INDEX.md is the map
-├── Dockerfile             backend container for free hosting (Render)
+├── Dockerfile             backend container for free hosting (Render); the data bundle is checksum-verified
+├── .github/workflows/     CI: backend tests, frontend lint/types/unit/build, Dockerfile lint
 └── render.yaml            one-click Render Blueprint
 ```
 
@@ -287,15 +289,16 @@ curl https://varshasetu.onrender.com/api/science/operational/quality      # data
 ```
 
 Test suite status as last verified locally against a real backend and the
-real frozen corpus (not a CI badge — re-run these yourself, commands above):
+real frozen corpus on 2026-10-01 (re-run these yourself, commands above; CI runs the
+backend, frontend and Dockerfile checks on every push, but not the end-to-end suite):
 
 | Suite | Result |
 |---|---|
-| Backend (`pytest backend/tests`) | 193 passed |
-| Frontend unit (`npm run test`) | 76 passed |
-| Frontend E2E (`npm run e2e`, single worker) | 35 passed |
+| Backend (`pytest backend/tests`) | 388 passed (a bare clone without the data bundle: 235 passed, 76 skipped with reasons) |
+| Frontend unit (`npm run test`) | 134 passed |
+| Frontend E2E (`npm run e2e`, single worker) | 101 passed |
 | TypeScript / ESLint | clean |
-| Production build | clean, all 12 routes |
+| Production build | clean, all 14 routes |
 
 ## Scientific Constraints (non-negotiable)
 

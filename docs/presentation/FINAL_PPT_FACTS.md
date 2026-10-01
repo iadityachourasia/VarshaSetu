@@ -109,12 +109,25 @@ Limitation" scene. State it in the same breath as the RMSE win, every time.
   nothing about warning skill.
 - No five-member-ensemble-vs-ML comparison exists outside the 2025 matched
   subset (not for 2019, 2023, or 2024).
-- No dedicated regime-intelligence UI exists for Track A (2019) — its
-  forecast-only pseudo-regime methodology is documented in prose only.
+- (Updated 2026-10-01) Track A (2019) now has a regime page with evidence tables (`docs/109`); the regime classes remain forecast-only pseudo-labels.
 - Regime classes are **forecast-only pseudo-labels**, not independently
   observed monsoon-regime truth. The 2023 out-of-fold balanced agreement
   with these pseudo-labels is 0.8806 — that is agreement with a pseudo-label,
   not meteorological ground truth.
+
+### Added after the Phase 5B freeze (2026-10-01) — what to say, and what not to
+
+- **Coastal and orographic.** The project defines rule-based geographic-forcing zones (distance to coast and local terrain relief, `docs/115`, `docs/116`) and verifies the frozen
+  models inside them (`docs/117`, `docs/118`; page: Geographic Zones). There is **no coastal or orographic specialist model**, so the requirement is shown as *partial*, never implemented.
+- **The main finding.** The Western Ghats coast (109 of the 1,301 land cells) holds roughly 35 to 43 % of all observed heavy-rain cell-case pairs in every population, and Raw GEFS forecasts
+  only about 7 to 22 % as many heavy events as were observed there. No frozen model fixes it; the corrected models help on the operational-era track (differently in 2024 and 2025) and
+  not on the 2019 reforecast track. This is the evidence-based target for the next model; it is a finding about frozen models, not a new skill claim.
+- **Western disturbances** are not implemented. A feasibility study (`docs/122`) found no label source, no upper-tropospheric fields and an evaluation domain (10–22° N) that excludes the region where they act.
+- **Independent regime validation** does not exist; a source probe (`docs/123`) lists candidate sources and obstacles. Do not call the 0.9424 (2018) or 0.8806 (2023 out-of-fold) figures accuracy.
+- **Live or new-cycle forecasting** is not built; only a design exists (`docs/125`). The app is a historical replay.
+- **Synoptic chart** (Forecast page, operational-era years): wind arrows, 500-hPa height contours and sea-level pressure lines from the frozen control-member forecast fields. It is not an analysis and not a causal explanation.
+- **Requirement coverage** is one page, `/compliance`, resolved from hash-verified evidence: 12 of the 14 official requirement IDs are implemented and 2 are partial (regime classification, and improvement over raw because heavy-rain skill is mixed).
+- **Not yet decided by the project owner:** the independent test period for any new model, IMD data-redistribution rights, and the label sources for western disturbances and regime validation.
 
 ## 8. Data quality (acquisition, cited in Story Mode's "Data Quality" scene)
 

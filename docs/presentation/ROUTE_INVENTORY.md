@@ -60,7 +60,7 @@ exercised where it could genuinely be exercised in this environment:
 Every route was designed with an explicit fallback or an honest unavailable
 message for the parts of its scope that are genuinely incomplete (no
 district product for Track B, no ensemble comparison outside 2025, no
-regime UI for Track A). None of the 12 routes crashes, hangs, or fabricates
+regime UI for Track A; as of 2026-10-01 the Track B district product and the Track A regime UI exist, see the addendum below). None of the 12 routes crashes, hangs, or fabricates
 data under any navigation state exercised in this session. The two routes
 with a hard live-backend dependency and no fallback (`/`, and the Track A
 branch of `/forecast`, `/casebook`, `/extremes`, `/districts`) are exactly
@@ -92,3 +92,5 @@ constraint and is not a new risk introduced by this freeze phase.
 |---|---|---|
 | `/compliance` | `/api/science/evidence/ps-coverage` (hash-verified manifest; every figure resolved from frozen evidence) | live API, hard failure on integrity errors; planned items shown as planned |
 | `/zones` | `/api/science/evidence/zones/*` (hash-chain-verified Phase 7 evidence; static SVG map, no tile service) | live API, hard failure on integrity errors; post-hoc years labelled; Stage 3 not authorised |
+
+The Forecast route also offers a **Synoptic chart** variable for the operational-era years (`docs/121`): wide-domain wind arrows, 500-hPa height contours and sea-level pressure lines drawn from the frozen forecast fields, live API only, hard failure on integrity errors, and a message instead of a chart when a case's atmosphere failed quality control.

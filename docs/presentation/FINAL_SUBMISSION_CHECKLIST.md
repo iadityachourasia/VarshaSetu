@@ -17,7 +17,7 @@ did not.
   fails with `ENOENT` on `experiments/recent_historical/.../FINAL_TEST_RESULT.json`
   — that source file is gitignored and genuinely absent in this sandbox,
   confirmed pre-existing (the test predates this phase's first commit).
-- **Production build**: `next build` — clean, all 12 routes compile.
+- **Production build**: `next build` — clean, all 14 routes compile (12 at the Phase 5B freeze; `/compliance` and `/zones` were added later, `docs/114`, `docs/119`).
 - **Playwright** (`npx playwright test`, full suite, real headless
   Chromium, clean build): **13 of 35 tests passed** — see the itemized
   breakdown below.
