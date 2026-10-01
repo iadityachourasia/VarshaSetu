@@ -1,3 +1,4 @@
+import re
 import sys
 from pathlib import Path
 
@@ -18,15 +19,27 @@ if str(BACKEND_DIR) not in sys.path:
 # ---------------------------------------------------------------------------------------------------------------------
 ROOT = BACKEND_DIR.parent
 BUNDLE_MARKER = ROOT / "data/manifests/phase2c/district_weights.npy"
-EXPERIMENT_CODE_MARKER = ROOT / "experiments/recent_historical/phase4i_operational_model_development_v1/freeze.py"
 CORPUS_PROTOCOL = ROOT / "experiments/recent_historical/operational_corpus_protocol_v1"
 
-EXPERIMENT_CODE_MODULES = (
-    "test_phase4b_external.py", "test_phase4c_comparability.py", "test_phase4e_inventory.py", "test_phase4f_source.py",
-    "test_phase4g_features.py", "test_phase4h_protocol.py", "test_phase4i_operational.py", "test_phase4j_final_test.py",
-    "test_phase4m_regime_diagnostics.py",
-)
-collect_ignore = [] if EXPERIMENT_CODE_MARKER.is_file() else list(EXPERIMENT_CODE_MODULES)
+_EXPERIMENT_IMPORT = re.compile(r"experiments\.recent_historical\.([A-Za-z0-9_]+)")
+
+
+def _missing_experiment_code(test_file: Path) -> list[str]:
+    """Experiment packages (gitignored local code under experiments/) that a test module imports but this checkout lacks.
+
+    The serving-data bundle ships some experiments/ directories (data), so "the directory exists" is not enough: each imported
+    package must actually exist (a package directory, which may be a namespace package, or a module file).
+    """
+    base = ROOT / "experiments" / "recent_historical"
+    missing = []
+    for name in sorted(set(_EXPERIMENT_IMPORT.findall(test_file.read_text(encoding="utf-8", errors="ignore")))):
+        if not ((base / name).is_dir() or (base / f"{name}.py").is_file()):
+            missing.append(name)
+    return missing
+
+
+EXPERIMENT_CODE_MODULES = {f.name: missing for f in sorted(Path(__file__).parent.glob("test_*.py")) if (missing := _missing_experiment_code(f))}
+collect_ignore = list(EXPERIMENT_CODE_MODULES)
 
 # (module, test name or None for the whole module, required path, what it is)
 SKIP_WITHOUT = (
@@ -39,8 +52,8 @@ SKIP_WITHOUT = (
 
 def pytest_report_header(config):
     lines = []
-    if collect_ignore:
-        lines.append(f"not collected (experiment code under experiments/ is gitignored and absent): {len(collect_ignore)} modules")
+    for module, missing in EXPERIMENT_CODE_MODULES.items():
+        lines.append(f"not collected: {module} (needs gitignored local experiment code that is absent: {', '.join(missing)})")
     if not BUNDLE_MARKER.is_file():
         lines.append("serving-data bundle absent: bundle-dependent tests are skipped")
     return lines or ["all optional data and experiment code present"]
