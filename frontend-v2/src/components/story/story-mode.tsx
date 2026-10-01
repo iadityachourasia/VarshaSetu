@@ -1,8 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { getScience, modelComparisonSchema } from "@/lib/api/science";
+import { buildStoryFacts, count, mm, rmseChange, signedScore, type StoryFacts } from "@/lib/story-facts";
+import { final2025 } from "@/science/frozen/results";
+import staticQuality from "../../../public/science/operational-v1/quality.json";
 
 // Phase 5B, sections 12-13: audited against the official 12-scene sequence
 // (Problem / Two tracks / Forecast case / Correction vs observation /
@@ -15,12 +20,17 @@ import type { ReactNode } from "react";
 // (ensemble) scene not in the official sequence -- reordered and dropped
 // here, not because that content was wrong, but to match the sequence this
 // phase specifies. Every number is one already verified and displayed
-// elsewhere in this app -- Story Mode narrates existing frozen evidence, it
-// does not compute or fetch anything new. The product remains fully usable
-// without ever opening this.
+// elsewhere in this app. No scientific number is typed in this file: every
+// figure is derived in lib/story-facts.ts from the live hash-verified API (2019)
+// and the generated frozen presentation bundle (2025, data quality), and a scene
+// whose source is unavailable says so instead of showing a number. The product
+// remains fully usable without ever opening this.
 type Scene = { title: string; body: ReactNode };
 
-const SCENES: Scene[] = [
+const UNAVAILABLE = <p className="phase5-caveat">This figure comes from the verified API, which is not reachable right now, so no number is shown.</p>;
+
+function buildScenes(facts: StoryFacts): Scene[] {
+  return [
   { title: "The Problem", body: <p>Raw NWP precipitation forecasts can contain systematic errors, especially in complex monsoon conditions. VarshaSetu studies whether regime-aware, forecast-time post-processing can reduce that error without inventing new observations.</p> },
   { title: "Two Experiment Tracks", body: <>
     <div className="story-track-pair">
@@ -44,27 +54,31 @@ const SCENES: Scene[] = [
     <p className="phase5-caveat">These are <strong>forecast-only pseudo-regimes</strong>, not independently observed monsoon regime truth.</p>
   </> },
   { title: "Extreme Probability", body: <>
-    <div className="story-stat-row"><span><strong>+0.0948</strong><small>Heavy BSS</small></span><span><strong>+0.0265</strong><small>Very-heavy BSS</small></span></div>
-    <p className="phase5-caveat">Both 2025 calibrated probability models achieved positive Brier Skill Score against the frozen reference. Very-heavy false-alarm ratio nonetheless remained high.</p>
+    {facts.probability2025 ? <div className="story-stat-row"><span><strong>{signedScore(facts.probability2025.heavyBss)}</strong><small>Heavy BSS</small></span><span><strong>{signedScore(facts.probability2025.veryHeavyBss)}</strong><small>Very-heavy BSS</small></span></div> : UNAVAILABLE}
+    <p className="phase5-caveat">Brier Skill Score against the frozen 2023 event-prevalence reference, shown with its sign. Very-heavy false-alarm ratio nonetheless remained high.</p>
   </> },
   { title: "2019 Benchmark", body: <>
-    <div className="story-stat-row"><span><strong>19.77 mm</strong><small>Raw GEFS</small></span><span><strong>17.85 mm</strong><small>Global XGBoost</small></span><span><strong>−9.73%</strong><small>RMSE reduction</small></span></div>
-    <p className="micro-note">255 completed held-out cases · NOAA GEFSv12 reforecast + IMD.</p>
+    {facts.benchmark2019 ? <div className="story-stat-row"><span><strong>{mm(facts.benchmark2019.rawRmse)}</strong><small>Raw GEFS RMSE</small></span><span><strong>{mm(facts.benchmark2019.correctedRmse)}</strong><small>{facts.benchmark2019.correctedLabel} RMSE</small></span><span><strong>{rmseChange(facts.benchmark2019.reductionPercent)}</strong><small>RMSE change vs Raw</small></span></div> : UNAVAILABLE}
+    <p className="micro-note">{facts.benchmark2019 ? `${count(facts.benchmark2019.cases)} completed held-out cases` : "Completed held-out cases"} · NOAA GEFSv12 reforecast + IMD.</p>
   </> },
   { title: "2025 Final Test", body: <>
-    <div className="story-stat-row"><span><strong>16.17 mm</strong><small>Raw GEFS</small></span><span><strong>15.57 mm</strong><small>Preselected M1</small></span><span><strong>−3.66%</strong><small>RMSE reduction</small></span></div>
-    <p className="micro-note">232 cases, one-time historical final test. <strong>M1 was selected before the 2025 holdout was opened</strong> -- not revised by anything observed afterward.</p>
+    {facts.final2025 ? <div className="story-stat-row"><span><strong>{mm(facts.final2025.rawRmse)}</strong><small>Raw GEFS RMSE</small></span><span><strong>{mm(facts.final2025.correctedRmse)}</strong><small>{facts.final2025.correctedLabel} RMSE</small></span><span><strong>{rmseChange(facts.final2025.reductionPercent)}</strong><small>RMSE change vs Raw</small></span></div> : UNAVAILABLE}
+    <p className="micro-note">{facts.final2025 ? `${count(facts.final2025.cases)} cases` : "Completed cases"}, one-time historical final test. <strong>M1 was selected before the 2025 holdout was opened</strong> -- not revised by anything observed afterward.</p>
   </> },
   { title: "Extreme-Skill Limitation", body: <p className="story-headline">Raw GEFS retained better extreme-rain spatial FSS than the RMSE-selected model, at every tested neighborhood size. Lower overall RMSE did not translate into better extreme-rain spatial skill -- stated here deliberately, not hidden in a footnote.</p> },
   { title: "Data Quality", body: <>
-    <div className="story-stat-row"><span><strong>1,125</strong><small>Scheduled</small></span><span><strong>615</strong><small>c00 QC-eligible</small></span><span><strong>218</strong><small>Five-member QC-eligible</small></span></div>
+    {facts.quality ? <div className="story-stat-row"><span><strong>{count(facts.quality.scheduled)}</strong><small>Scheduled</small></span><span><strong>{count(facts.quality.c00Eligible)}</strong><small>c00 QC-eligible</small></span><span><strong>{count(facts.quality.fiveMemberEligible)}</strong><small>Five-member QC-eligible</small></span></div> : UNAVAILABLE}
     <p className="micro-note">Every scheduled message was acquired; the eligible counts reflect canonical scientific QC attrition, not missing data.</p>
   </> },
   { title: "Reproducibility", body: <>
     <ul className="phase5-limitations"><li>Frozen models -- no retraining after any test was opened</li><li>Hash-verified artifacts at every stage</li><li>A one-time final test, consumed once</li><li>Independent recalculation of the headline claims</li></ul>
     <p className="story-closing"><strong>VarshaSetu</strong><br />Research prototype for scientifically transparent monsoon forecast post-processing.</p>
   </> },
-];
+  ];
+}
+
+// The number of scenes does not depend on the data; keyboard handling uses this constant so the effect never re-subscribes.
+const SCENE_COUNT = buildScenes({ benchmark2019: null, final2025: null, probability2025: null, quality: null }).length;
 
 /** The caller mounts this only while open (see PresentButton in
  * app-shell.tsx), so each open starts fresh at scene 0 -- no reset-on-
@@ -72,6 +86,9 @@ const SCENES: Scene[] = [
 export function StoryMode({ onClose }: { onClose: () => void }) {
   const [index, setIndex] = useState(0);
   const dialogRef = useRef<HTMLDivElement>(null);
+  // 2019 comes from the live verified API; 2025 and data quality come from the generated frozen presentation bundle.
+  const comparison = useQuery({ queryKey: ["story-model-comparison"], queryFn: () => getScience("/model-comparison", modelComparisonSchema), staleTime: 5 * 60_000, retry: 1 });
+  const SCENES = useMemo(() => buildScenes(buildStoryFacts({ comparison: comparison.data ?? null, final2025, quality: staticQuality })), [comparison.data]);
 
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -93,7 +110,7 @@ export function StoryMode({ onClose }: { onClose: () => void }) {
       const target = event.target as HTMLElement | null;
       if (target?.closest("input, select, textarea, [contenteditable]")) return;
       if (event.key === " " && target?.closest("a, button")) return;
-      if (event.key === "ArrowRight" || event.key === " ") { event.preventDefault(); setIndex((current) => Math.min(current + 1, SCENES.length - 1)); }
+      if (event.key === "ArrowRight" || event.key === " ") { event.preventDefault(); setIndex((current) => Math.min(current + 1, SCENE_COUNT - 1)); }
       else if (event.key === "ArrowLeft") { event.preventDefault(); setIndex((current) => Math.max(current - 1, 0)); }
     }
     window.addEventListener("keydown", onKeyDown);
