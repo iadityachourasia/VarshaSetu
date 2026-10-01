@@ -128,6 +128,7 @@ This directory is the working technical specification, scientific governance sys
 | `119_ZONE_EVIDENCE_API_AND_PAGE.md` | Phase 7E: read-only hash-chain-verified zone evidence API, Geographic Zones page, coverage row moved to PARTIAL (never implemented), verification results | Before changing the zone API, the page or the coastal/orographic coverage status |
 | `120_PRODUCTION_HARDENING.md` | Phase 7F: explicit CORS, single version source, honest health, retired static audit routes, checksum-verified and retried bundle download, CI, explicit skip policy, line-ending independent governance hashes, Story Mode figures derived from evidence | Before changing CORS, health, the Dockerfile, CI or Story Mode figures |
 | `121_SYNOPTIC_CHART_AND_CONTEXT_GRID.md` | Phase 8A: synoptic chart (wind, height, pressure, shading) built from the frozen 51x81 fields; the grid's georeferencing verified against Track A's stored coordinates | Before changing the atmosphere API, the synoptic chart or its coordinates |
+| `122_WESTERN_DISTURBANCE_FEASIBILITY.md` | Phase 8B: western-disturbance feasibility study (investigation only): domains, verified data inventory, label sources, staged path, owner decisions; requirement stays planned | Before any western-disturbance label, download or model |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule
