@@ -24,8 +24,10 @@ COPY backend/ backend/
 # .gitignore'd (too large for a normal git push) and are instead published as
 # a GitHub Release asset -- a one-time, immutable, already-frozen bundle,
 # never regenerated or altered by this build.
+# --retry/--retry-all-errors/-C -: a connection reset mid-download (curl exit 56) otherwise fails the whole build; with these flags curl
+# retries and resumes from the partial file. The bundle is immutable, so resuming cannot mix versions.
 ARG DATA_BUNDLE_URL=https://github.com/iadityachourasia/VarshaSetu/releases/download/serving-data-v1/varshasetu-serving-data-v1.tar.gz
-RUN curl -fL "$DATA_BUNDLE_URL" -o /tmp/data.tar.gz \
+RUN curl -fL --retry 8 --retry-delay 5 --retry-all-errors -C - "$DATA_BUNDLE_URL" -o /tmp/data.tar.gz \
     && tar --no-same-owner --no-same-permissions -xzf /tmp/data.tar.gz -C /app \
     && rm /tmp/data.tar.gz
 
