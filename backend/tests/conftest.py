@@ -25,17 +25,29 @@ _EXPERIMENT_IMPORT = re.compile(r"experiments\.recent_historical\.([A-Za-z0-9_]+
 
 
 def _missing_experiment_code(test_file: Path) -> list[str]:
-    """Experiment packages (gitignored local code under experiments/) that a test module imports but this checkout lacks.
+    """Experiment packages (gitignored local code under experiments/) that a test module needs but this checkout lacks.
 
-    The serving-data bundle ships some experiments/ directories (data), so "the directory exists" is not enough: each imported
-    package must actually exist (a package directory, which may be a namespace package, or a module file).
+    Transitive: a package that exists (the serving-data bundle ships some experiments/ directories) may itself import a package that
+    does not, so the imports of every present package are followed. A package counts as present when its directory (possibly a
+    namespace package) or a module file exists.
     """
     base = ROOT / "experiments" / "recent_historical"
-    missing = []
-    for name in sorted(set(_EXPERIMENT_IMPORT.findall(test_file.read_text(encoding="utf-8", errors="ignore")))):
-        if not ((base / name).is_dir() or (base / f"{name}.py").is_file()):
+    pending = sorted(set(_EXPERIMENT_IMPORT.findall(test_file.read_text(encoding="utf-8", errors="ignore"))))
+    seen: set[str] = set()
+    missing: list[str] = []
+    while pending:
+        name = pending.pop()
+        if name in seen:
+            continue
+        seen.add(name)
+        if (base / name).is_dir():
+            for source in (base / name).rglob("*.py"):
+                pending.extend(_EXPERIMENT_IMPORT.findall(source.read_text(encoding="utf-8", errors="ignore")))
+        elif (base / f"{name}.py").is_file():
+            pending.extend(_EXPERIMENT_IMPORT.findall((base / f"{name}.py").read_text(encoding="utf-8", errors="ignore")))
+        else:
             missing.append(name)
-    return missing
+    return sorted(missing)
 
 
 EXPERIMENT_CODE_MODULES = {f.name: missing for f in sorted(Path(__file__).parent.glob("test_*.py")) if (missing := _missing_experiment_code(f))}
