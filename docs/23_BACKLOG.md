@@ -51,7 +51,7 @@ district products, regime labels, or the multi-year corpus.
 
 ## P2 — Scientific
 
-- [ ] Validate regime label methodology. (Only pseudo-label agreement exists; independent validation is PLANNED, see `/compliance`.)
+- [ ] Validate regime label methodology. (Only pseudo-label agreement exists; independent validation is PLANNED, see `/compliance`. Source probe done in `docs/123`; waiting on owner decisions on the rainfall climatology and the depression-record terms.)
 - [x] Evaluate event-aware extreme model. (`docs/63`, `docs/89`)
 - [x] Reliability diagram.
 - [x] Brier Skill Score.
@@ -94,3 +94,16 @@ and production storage/chunk/retry design. Next: acquire exactly one complete
 JJAS season under v1 in reviewed monthly batches, run monthly plus seasonal QC,
 and stop for review. Multi-year acquisition beyond that season, ML training,
 regime labels, and scientific endpoint activation remain blocked.
+
+## Status after Phase 7F / 8A–8C (2026-10-01)
+
+- [x] Production hardening: explicit CORS, single version source, honest health, retired static audit routes, checksum-verified and retried bundle download, CI, explicit skip policy (`docs/120`).
+- [x] Synoptic chart (wind, height, pressure, shading) on the Forecast page, with the context grid's georeferencing verified (`docs/121`).
+- [x] Western-disturbance feasibility study, investigation only (`docs/122`). The requirement stays planned.
+- [x] Independent regime validation source probe, no labelling (`docs/123`). The requirement stays planned.
+- [ ] Western-disturbance work: owner decisions needed (label source, northward domain extension, downloads, season scope), `docs/122` section 9.
+- [ ] Independent regime validation: owner decisions needed (climatology, depression record terms, partial validation, expert review), `docs/123` section 5.
+- [ ] A new model (M5) and a geography-aware model (Stage 3): need an independent test period and the IMD redistribution decision.
+- [ ] Live or new-cycle inference: separate worker; not started.
+- [ ] Story Mode 2.0 and demo polish.
+
