@@ -64,30 +64,30 @@ def test_legacy_blocked_gate_and_scientific_api_are_unchanged(client):
     assert client.get("/api/metrics/overall").status_code in (409, 410)
     if client.get("/api/metrics/overall").status_code == 409:
         assert client.get("/api/metrics/overall").json()["detail"]["status"] == "blocked_by_scientific_readiness_gate"
-    assert client.get("/api/science/status").status_code == 200
+    assert client.get("/api/health").status_code == 200
     assert client.get("/api/science/evidence/ps-coverage").status_code == 200
 
 
 # ------------------------------------------------------------------ CORS
 def test_cors_allows_named_origins_without_credentials(client):
     origin = "https://varshasetu.vercel.app"
-    preflight = client.options("/api/science/status", headers={"Origin": origin, "Access-Control-Request-Method": "GET"})
+    preflight = client.options("/api/health", headers={"Origin": origin, "Access-Control-Request-Method": "GET"})
     assert preflight.status_code == 200 and preflight.headers["access-control-allow-origin"] == origin
     assert "access-control-allow-credentials" not in preflight.headers
-    simple = client.get("/api/science/status", headers={"Origin": origin})
+    simple = client.get("/api/health", headers={"Origin": origin})
     assert simple.headers["access-control-allow-origin"] == origin and "access-control-allow-credentials" not in simple.headers
 
 
 @pytest.mark.parametrize("origin", ["https://evil.example", "https://varshasetu.vercel.app.evil.example", "http://localhost:9999", "null"])
 def test_cors_refuses_other_origins(client, origin):
-    response = client.get("/api/science/status", headers={"Origin": origin})
+    response = client.get("/api/health", headers={"Origin": origin})
     assert response.status_code == 200 and "access-control-allow-origin" not in response.headers
-    preflight = client.options("/api/science/status", headers={"Origin": origin, "Access-Control-Request-Method": "GET"})
+    preflight = client.options("/api/health", headers={"Origin": origin, "Access-Control-Request-Method": "GET"})
     assert "access-control-allow-origin" not in preflight.headers
 
 
 def test_cors_methods_are_read_only(client):
-    preflight = client.options("/api/science/status", headers={"Origin": "http://localhost:3100", "Access-Control-Request-Method": "POST"})
+    preflight = client.options("/api/health", headers={"Origin": "http://localhost:3100", "Access-Control-Request-Method": "POST"})
     assert preflight.status_code == 400                      # POST is not an allowed cross-origin method
 
 

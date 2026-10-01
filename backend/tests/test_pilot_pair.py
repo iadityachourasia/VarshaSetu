@@ -154,6 +154,27 @@ def test_source_and_derived_manifests_retain_identity_hashes_and_block_training(
     assert len(readiness.blockers) == 5
 
 
+TEXT_SUFFIXES = {".py", ".json", ".md", ".txt", ".csv", ".yaml", ".yml"}
+
+
+def _lf_sha256(path: Path) -> str:
+    """SHA-256 of a protected artifact, identical on a Windows checkout (CRLF) and a Linux one (LF).
+
+    Text files are hashed over line-ending-normalised (LF) bytes, which is how the Phase 1B lock and the supersession records
+    were recorded; binary files (the pickled legacy models) are hashed over their exact bytes.
+    """
+    data = path.read_bytes()
+    if path.suffix.lower() in TEXT_SUFFIXES:
+        data = data.replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()
+
+
+def _crlf_sha256(path: Path) -> str:
+    """SHA-256 over canonical CRLF bytes. The pilot source manifests' hashes were recorded from Windows working copies (CRLF)
+    while git stores them with LF; normalising to CRLF makes the check identical on every checkout without touching the record."""
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")).hexdigest()
+
+
 def test_checked_in_pilot_manifests_preserve_pairing_identity_and_block_training():
     repository_root = Path(__file__).resolve().parents[2]
     manifest_dir = repository_root / "data/manifests/phase1b/2019-07-15"
@@ -169,8 +190,8 @@ def test_checked_in_pilot_manifests_preserve_pairing_identity_and_block_training
     )
     qc = json.loads(qc_path.read_text(encoding="utf-8"))
 
-    noaa_manifest_hash = hashlib.sha256(noaa_path.read_bytes()).hexdigest()
-    imd_manifest_hash = hashlib.sha256(imd_path.read_bytes()).hexdigest()
+    noaa_manifest_hash = _crlf_sha256(noaa_path)
+    imd_manifest_hash = _crlf_sha256(imd_path)
 
     assert noaa.source_type == "forecast"
     assert noaa.variable == "apcp_sfc archive object / tp GRIB short name"
@@ -214,17 +235,17 @@ def test_phase1b_protected_artifact_history_and_versioned_supersession():
     records = sorted(integrity_path.parent.glob("protected_artifact_supersession_v*.json"), key=lambda p: int(p.stem.rsplit("_v", 1)[1]))
     assert [p.name for p in records][0] == "protected_artifact_supersession_v1.json" and len(records) >= 1
     for earlier, later in zip(records, records[1:]):
-        assert json.loads(later.read_text(encoding="utf-8"))["supersedes_record"]["sha256"] == hashlib.sha256(earlier.read_bytes()).hexdigest()
+        assert json.loads(later.read_text(encoding="utf-8"))["supersedes_record"]["sha256"] == _lf_sha256(earlier)
     supersession_path = records[-1]
     supersession = json.loads(supersession_path.read_text(encoding="utf-8"))
     assert supersession["record_type"] == "append_only_protected_artifact_supersession"
     assert supersession["historical_lock_is_unchanged"] is True
-    assert hashlib.sha256(integrity_path.read_bytes()).hexdigest() == supersession["historical_lock_sha256"]
+    assert _lf_sha256(integrity_path) == supersession["historical_lock_sha256"]
     superseded = supersession["superseded_artifacts"]
     assert set(superseded) == {"backend/app/api/routes.py", "backend/app/data/readiness.py"}
     unchanged_count = 0
     for relative_path, expected_hash in integrity["protected_artifacts"].items():
-        actual_hash = hashlib.sha256((repository_root / relative_path).read_bytes()).hexdigest()
+        actual_hash = _lf_sha256(repository_root / relative_path)
         if relative_path in superseded:
             assert superseded[relative_path]["phase1b_sha256"] == expected_hash
             assert superseded[relative_path]["current_sha256"] == actual_hash
