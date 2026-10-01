@@ -14,9 +14,11 @@ import { useWeatherMap } from "@/components/maps/use-weather-map";
 
 const DOMAIN: [number, number, number, number] = [67.875, 9.875, 80.125, 22.125];
 
-export default function DistrictMap({ geometry, districts, selectedId, onSelect, onReady }: {
+export default function DistrictMap({ geometry, districts, selectedId, onSelect, onReady, colorFor = rainfallColor }: {
   geometry: Geometry["geometry"]; districts: District[]; selectedId: string | null;
   onSelect: (id: string) => void; onReady?: (map: MapLibreMap | null) => void;
+  /** Colour scale for the polygon value carried in `corrected_mean_mm` (defaults to the rainfall scale). */
+  colorFor?: (value: number) => string;
 }) {
   const settings = useMapSettings();
   const element = useRef<HTMLDivElement>(null);
@@ -27,9 +29,9 @@ export default function DistrictMap({ geometry, districts, selectedId, onSelect,
     const byId = new Map(districts.map((item) => [item.district_id, item]));
     return { type: "FeatureCollection", features: geometry.features.map((feature) => {
       const district = byId.get(feature.properties.district_id);
-      return { ...feature, properties: { ...feature.properties, corrected_mean_mm: district?.corrected_mean_mm ?? null, color: district ? rainfallColor(district.corrected_mean_mm) : "#566a72" } };
+      return { ...feature, properties: { ...feature.properties, corrected_mean_mm: district?.corrected_mean_mm ?? null, color: district ? colorFor(district.corrected_mean_mm) : "#566a72" } };
     }) } as FeatureCollection;
-  }, [geometry, districts]);
+  }, [geometry, districts, colorFor]);
   useEffect(() => { selectRef.current = onSelect; readyRef.current = onReady; }, [onSelect, onReady]);
 
   const installLayers = useCallback((map: MapLibreMap) => {

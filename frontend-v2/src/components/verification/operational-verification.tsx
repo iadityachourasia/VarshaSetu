@@ -18,14 +18,19 @@ import {
   leadRmse, type DeterministicModelMetrics, type FssEventResult,
 } from "@/components/science/operational-charts";
 
+import { RegimeEvidencePanel } from "@/components/regimes/regime-evidence-panel";
+import { DistrictVerificationPanel } from "@/components/verification/district-verification-panel";
+
 type Year = 2024 | 2025;
 type EventKey = "heavy" | "very_heavy";
-type Tab = "continuous" | "extremes" | "probability" | "spatial" | "lead_time" | "case_outcomes" | "generalization" | "skill_cube";
+type Tab = "continuous" | "extremes" | "probability" | "spatial" | "regime_aware" | "district_level" | "lead_time" | "case_outcomes" | "generalization" | "skill_cube";
 const TABS: { key: Tab; label: string }[] = [
   { key: "continuous", label: "Continuous" },
   { key: "extremes", label: "Extremes" },
   { key: "probability", label: "Probability" },
   { key: "spatial", label: "Spatial" },
+  { key: "regime_aware", label: "Regime-aware" },
+  { key: "district_level", label: "District-level" },
   { key: "lead_time", label: "Lead Time" },
   { key: "case_outcomes", label: "Case Outcomes" },
   { key: "generalization", label: "Generalization" },
@@ -148,7 +153,7 @@ export function OperationalVerification() {
 
     {tab !== "lead_time" && tab !== "case_outcomes" && tab !== "generalization" && tab !== "skill_cube" ? <div className="phase5-controls">
       <label>Year<select value={year} onChange={(change) => setYear(Number(change.target.value) as Year)}><option value={2024}>2024 validation</option><option value={2025}>2025 completed final test</option></select></label>
-      {tab !== "continuous" ? <label>Event<select value={event} onChange={(change) => setEvent(change.target.value as EventKey)}><option value="heavy">Heavy ≥64.5</option><option value="very_heavy">Very Heavy ≥115.6</option></select></label> : null}
+      {tab !== "continuous" && tab !== "regime_aware" && tab !== "district_level" ? <label>Event<select value={event} onChange={(change) => setEvent(change.target.value as EventKey)}><option value="heavy">Heavy ≥64.5</option><option value="very_heavy">Very Heavy ≥115.6</option></select></label> : null}
       {currentDeterministicPopulation ? <PopulationBadge cases={currentDeterministicPopulation.case_count} cells={currentDeterministicPopulation.cell_count} /> : null}
     </div> : null}
 
@@ -175,6 +180,10 @@ export function OperationalVerification() {
       <h2>Spatial skill (FSS) · {year}</h2>
       {(year === 2025 ? fss2025 : fss2024).isPending ? <LoadingState /> : !currentFssEvent ? <ErrorState message="FSS results are unavailable for this year." /> : <OperationalFssChart fss={currentFssEvent} selectedModelLabel="M1 Ridge MOS" />}
     </section> : null}
+
+    {tab === "regime_aware" ? <div role="tabpanel"><RegimeEvidencePanel track="B" year={year} /></div> : null}
+
+    {tab === "district_level" ? <div role="tabpanel"><DistrictVerificationPanel year={year} /></div> : null}
 
     {tab === "lead_time" ? <section className="phase5-analysis-block" role="tabpanel"><h2>2025 lead-time RMSE · paired common cells</h2><table className="phase5-table"><thead><tr><th>Model</th><th>Day 1</th><th>Day 2</th><th>Day 3</th></tr></thead><tbody>{DETERMINISTIC_MODEL_ORDER.map((model) => <tr key={model}><th>{modelNames[model]}</th>{(["24", "48", "72"] as const).map((hour) => { const value = leadRmse(det[2025]?.[model]?.leads?.[hour]); return <td key={hour}>{value == null ? "Unavailable" : value.toFixed(3)}</td>; })}</tr>)}</tbody></table></section> : null}
 

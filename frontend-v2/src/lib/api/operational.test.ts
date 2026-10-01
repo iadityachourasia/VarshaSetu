@@ -5,6 +5,8 @@ import {
   getOperationalAvailability,
   getOperationalCases,
   getOperationalDistricts,
+  getOperationalDistrictsCompare,
+  getOperationalDistrictHistory,
   getOperationalEnsemble,
   getOperationalFSS,
   getOperationalProbability,
@@ -119,6 +121,45 @@ describe("district product parsing", () => {
     await expect(getOperationalDistricts(2025, "20250714_day2_24h")).rejects.toThrow();
     vi.stubGlobal("fetch", okJson({ ...body, model: "m9" }));
     await expect(getOperationalDistricts(2025, "20250714_day2_24h")).rejects.toThrow();
+  });
+});
+
+describe("district compare and history parsing", () => {
+  const cell = { mean_mm: 13.3, max_mm: 28, heavy_area_fraction: 0, very_heavy_area_fraction: 0, error_mm: -86.8, improvement_vs_raw_mm: -1 };
+  const compareBody = {
+    case_id: "20250714_day2_24h", year: 2025, year_role: "FINAL_TEST_COMPLETED", models: ["m1", "m2", "m3", "m4"],
+    model_roles: { m1: "Ridge MOS" }, units: "mm/24h", heavy_threshold_mm: 64.5, very_heavy_threshold_mm: 115.6, predicted_regime: null,
+    improvement_definition: "closer to IMD than Raw", source_district_count: 188, method: "x", weights_sha256: "a".repeat(64), geometry_sha256: "b".repeat(64), caveats: ["c"],
+    districts: [{ district_id: "D1", district_name: "Raigarh", valid_grid_cells: 21, raw_mean_mm: 14.3, raw_max_mm: 30, raw_error_mm: -85.8, observed_mean_mm: 100.1,
+      observed_max_mm: 150, observed_heavy_area_fraction: 0.9, observed_very_heavy_area_fraction: 0.2, heavy_probability: 0.006, very_heavy_probability: null,
+      models: { m1: cell, m2: cell, m3: cell, m4: cell } }],
+  };
+
+  it("requests the compare route and keeps nullable probabilities null", async () => {
+    const fetchMock = okJson(compareBody);
+    vi.stubGlobal("fetch", fetchMock);
+    const parsed = await getOperationalDistrictsCompare(2025, "20250714_day2_24h");
+    expect(String((fetchMock as unknown as { mock: { calls: unknown[][] } }).mock.calls[0][0])).toContain("/operational/2025/cases/20250714_day2_24h/districts/compare");
+    expect(parsed.districts[0].very_heavy_probability).toBeNull();
+    expect(parsed.districts[0].models.m3.improvement_vs_raw_mm).toBe(-1);
+  });
+
+  it("rejects a compare payload that is missing one of the four models", async () => {
+    const broken = structuredClone(compareBody) as unknown as { districts: { models: Record<string, unknown> }[] };
+    delete broken.districts[0].models.m4;
+    vi.stubGlobal("fetch", okJson(broken));
+    await expect(getOperationalDistrictsCompare(2025, "20250714_day2_24h")).rejects.toThrow();
+  });
+
+  it("requests the history route with an encoded district id and model", async () => {
+    const history = { year: 2025, year_role: "FINAL_TEST_COMPLETED", district_id: "D 1", district_name: "Raigarh", model: "m3", model_role: "hard", case_count: 1,
+      points: [{ case_id: "20250601_day1_24h", initialization_utc: "2025-06-01T00:00:00Z", lead_hours: 24, valid_grid_cells: 21, raw_mean_mm: 5, model_mean_mm: 17, observed_mean_mm: 12 }],
+      descriptive_only_note: "Descriptive history only", method: "x", weights_sha256: "a".repeat(64), caveats: [] };
+    const fetchMock = okJson(history);
+    vi.stubGlobal("fetch", fetchMock);
+    const parsed = await getOperationalDistrictHistory(2025, "D 1", "m3");
+    expect(String((fetchMock as unknown as { mock: { calls: unknown[][] } }).mock.calls[0][0])).toContain("/operational/2025/districts/D%201/history?model=m3");
+    expect(parsed.points[0].observed_mean_mm).toBe(12);
   });
 });
 

@@ -7,7 +7,7 @@ import { DataSourceIndicator, ErrorState, LoadingState, PageHeading, PrototypeNo
 import { loadOperationalCaseList, REGIME_CLASS_ORDER, type RegimeClass } from "@/lib/operational-case-list";
 import { getOperationalDeterministicMetrics, getOperationalRegime, getOperationalRegimeSummary, type OperationalYear } from "@/lib/api/operational";
 import { withStaticFallback } from "@/lib/data-source";
-import { RegimeWorkInProgress } from "@/components/regimes/regime-work-in-progress";
+import { RegimeEvidencePanel } from "@/components/regimes/regime-evidence-panel";
 
 const REGIME_LABEL: Record<RegimeClass, string> = {
   ACTIVE_MONSOON: "Active Monsoon", BREAK_WEAK_MONSOON: "Break / Weak Monsoon", LOW_DEPRESSION_INFLUENCED: "Low / Depression Influenced",
@@ -56,7 +56,7 @@ export function RegimeIntelligence({ initialYear }: { initialYear: number }) {
     return <div className="page-content"><ErrorState message={caseListResult.error instanceof Error ? caseListResult.error.message : "Regime case catalogue could not be loaded."} /></div>;
   }
   if (!caseListResult.data || caseListResult.data.mode === "UNAVAILABLE" || caseListResult.data.mode === "NETWORK_FAILURE") {
-    return <RegimeWorkInProgress />;
+    return <div className="page-content"><ErrorState message={caseListResult.data?.message ?? "The regime case catalogue is unavailable. Start the verified historical API and try again."} /></div>;
   }
 
   const regime = regimeResult.data?.data;
@@ -80,5 +80,6 @@ export function RegimeIntelligence({ initialYear }: { initialYear: number }) {
       {year === 2025 ? <p className="phase5-caveat small-label">Per-case attribution for 2025 is validated by reproducing both the full-375 classifier counts and this 232-case paired count from frozen eligibility ordering, not an explicit dedicated case-ID array — see Provenance for details.</p> : null}
     </section> : null}
     {year === 2025 ? <section className="phase5-analysis-block"><h2>2025 deterministic model consequence</h2>{deterministicResult.isPending ? <LoadingState /> : !det ? <ErrorState message="Deterministic metrics are unavailable." /> : <div className="phase5-metric-strip"><span><small>M2 Global</small><strong>{det.M2.continuous.rmse_mm.toFixed(4)} mm</strong></span><span><small>M3 Hard</small><strong>{det.M3.continuous.rmse_mm.toFixed(4)} mm</strong></span><span><small>M4 Soft</small><strong>{det.M4.continuous.rmse_mm.toFixed(4)} mm</strong></span></div>}<p className="phase5-caveat">Soft routing beat hard routing overall. Neither regime-aware model beat global M2 overall. M1 Ridge remains the preselected primary final-test model.</p></section> : null}
+    <RegimeEvidencePanel track="B" year={year} />
   </div>;
 }

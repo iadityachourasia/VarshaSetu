@@ -2,7 +2,7 @@ import type { FeatureCollection, Polygon } from "geojson";
 import type { Grid } from "@/lib/api/science";
 
 export type CellSelection = { row: number; column: number };
-export type Palette = "rainfall" | "probability" | "error-difference" | "u850" | "v850" | "q700" | "z500" | "mslp" | "pwat";
+export type Palette = "rainfall" | "probability" | "error-difference" | "improvement" | "u850" | "v850" | "q700" | "z500" | "mslp" | "pwat";
 export type RasterMode = "weather" | "grid";
 export type RasterPixels = { width: number; height: number; data: Uint8ClampedArray<ArrayBuffer> };
 
@@ -26,6 +26,7 @@ const cache = new WeakMap<object, WeakMap<object, Map<string, RasterPixels>>>();
 const rainStops: [number, string][] = [[0, "#142a37"], [0.1, "#315c78"], [5, "#3d8db5"], [20, "#58bad0"], [40, "#79d1bf"], [64.5, "#e6a854"], [115.6, "#dd6677"], [200, "#a94769"]];
 const probabilityStops: [number, string][] = [[0, "#292647"], [0.05, "#493f81"], [0.15, "#465ca2"], [0.3, "#3f9a9f"], [0.5, "#94c478"], [0.7, "#dcc968"], [1, "#f1e18c"]];
 const fieldStops: Record<Exclude<Palette, "rainfall" | "probability">, [number, string][]> = {
+  improvement: [[-5, "#b4553f"], [-2, "#e0956f"], [-0.5, "#e8d4c4"], [0, "#d9ded9"], [0.5, "#b9dcd2"], [2, "#5fb3a3"], [5, "#2f8577"]],
   "error-difference": [[-100, "#327eac"], [-40, "#59a9c8"], [-10, "#a8d5d4"], [0, "#d9ded9"], [10, "#ebbe89"], [40, "#db835f"], [100, "#a74755"]],
   u850: [[-20, "#484b91"], [-10, "#5f83bb"], [0, "#cedbd6"], [10, "#e0ae75"], [25, "#ac5d58"]],
   v850: [[-20, "#484b91"], [-10, "#5f83bb"], [0, "#cedbd6"], [10, "#e0ae75"], [25, "#ac5d58"]],
@@ -62,6 +63,18 @@ export function rainfallColor(value: number): string {
   if (value < 64.5) return "#79d1bf";
   if (value < 115.6) return "#e6a854";
   return "#dd6677";
+}
+
+/** Diverging colour for a district mean improvement over Raw (mm): warm = farther from IMD than Raw, teal = closer. */
+export function improvementColor(value: number): string {
+  const [r, g, b] = smoothColor(value, "improvement");
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+/** Diverging colour for a signed district error (mm): cool = under-forecast, warm = over-forecast, neutral near 0. */
+export function errorColor(value: number): string {
+  const [r, g, b] = smoothColor(value, "error-difference");
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 export function probabilityColor(value: number): string {

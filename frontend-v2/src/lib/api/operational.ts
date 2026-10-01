@@ -101,7 +101,77 @@ export const operationalDistrictsSchema = z.object({
   geometry_license: z.string(),
   caveats: z.array(z.string()),
 });
+export const operationalDistrictModelCellSchema = z.object({
+  mean_mm: z.number(),
+  max_mm: z.number(),
+  heavy_area_fraction: z.number(),
+  very_heavy_area_fraction: z.number(),
+  error_mm: z.number(),
+  improvement_vs_raw_mm: z.number(),
+});
+export const operationalDistrictCompareRowSchema = z.object({
+  district_id: z.string(),
+  district_name: z.string(),
+  valid_grid_cells: z.number(),
+  raw_mean_mm: z.number(),
+  raw_max_mm: z.number(),
+  raw_error_mm: z.number(),
+  observed_mean_mm: z.number(),
+  observed_max_mm: z.number(),
+  observed_heavy_area_fraction: z.number(),
+  observed_very_heavy_area_fraction: z.number(),
+  heavy_probability: z.number().nullable(),
+  very_heavy_probability: z.number().nullable(),
+  models: z.object({
+    m1: operationalDistrictModelCellSchema, m2: operationalDistrictModelCellSchema,
+    m3: operationalDistrictModelCellSchema, m4: operationalDistrictModelCellSchema,
+  }),
+});
+export const operationalDistrictCompareSchema = z.object({
+  case_id: z.string(),
+  year: z.number(),
+  year_role: z.string(),
+  models: z.array(operationalDistrictModelSchema),
+  model_roles: z.record(z.string(), z.string()),
+  units: z.string(),
+  heavy_threshold_mm: z.number(),
+  very_heavy_threshold_mm: z.number(),
+  predicted_regime: z.string().nullable(),
+  improvement_definition: z.string(),
+  districts: z.array(operationalDistrictCompareRowSchema),
+  source_district_count: z.number(),
+  method: z.string(),
+  weights_sha256: z.string(),
+  geometry_sha256: z.string(),
+  caveats: z.array(z.string()),
+});
+export const operationalDistrictHistoryPointSchema = z.object({
+  case_id: z.string(),
+  initialization_utc: z.string(),
+  lead_hours: z.number(),
+  valid_grid_cells: z.number(),
+  raw_mean_mm: z.number(),
+  model_mean_mm: z.number(),
+  observed_mean_mm: z.number(),
+});
+export const operationalDistrictHistorySchema = z.object({
+  year: z.number(),
+  year_role: z.string(),
+  district_id: z.string(),
+  district_name: z.string(),
+  model: operationalDistrictModelSchema,
+  model_role: z.string(),
+  case_count: z.number(),
+  points: z.array(operationalDistrictHistoryPointSchema),
+  descriptive_only_note: z.string(),
+  method: z.string(),
+  weights_sha256: z.string(),
+  caveats: z.array(z.string()),
+});
 export type OperationalDistrictRow = z.infer<typeof operationalDistrictRowSchema>;
+export type OperationalDistrictCompare = z.infer<typeof operationalDistrictCompareSchema>;
+export type OperationalDistrictCompareRow = z.infer<typeof operationalDistrictCompareRowSchema>;
+export type OperationalDistrictHistory = z.infer<typeof operationalDistrictHistorySchema>;
 export type OperationalDistricts = z.infer<typeof operationalDistrictsSchema>;
 
 // ---------------------------------------------------------------------------
@@ -426,6 +496,12 @@ export function getOperationalProbability(year: OperationalYear, caseId: string,
 }
 export function getOperationalDistricts(year: OperationalYear, caseId: string, model: OperationalDistrictModel = "m1", server = false) {
   return getOperational(`/${year}/cases/${caseId}/districts?model=${model}`, operationalDistrictsSchema, server);
+}
+export function getOperationalDistrictsCompare(year: OperationalYear, caseId: string, server = false) {
+  return getOperational(`/${year}/cases/${caseId}/districts/compare`, operationalDistrictCompareSchema, server);
+}
+export function getOperationalDistrictHistory(year: OperationalYear, districtId: string, model: OperationalDistrictModel = "m1", server = false) {
+  return getOperational(`/${year}/districts/${encodeURIComponent(districtId)}/history?model=${model}`, operationalDistrictHistorySchema, server);
 }
 export function getOperationalRegime(year: OperationalYear, caseId: string, server = false) {
   return getOperational(`/${year}/cases/${caseId}/regime`, operationalRegimeSchema, server);
