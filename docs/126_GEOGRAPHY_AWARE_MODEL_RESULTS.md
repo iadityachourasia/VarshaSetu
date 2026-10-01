@@ -143,3 +143,8 @@ The protocol attributes a gain to geography only if A3 beats the internal contro
 Tests: `backend/tests/test_geoaware.py` (13, pure functions equal the protocol) and `backend/tests/test_geoaware_evidence.py` (7, hash chain, the selection re-derived from the stored table, baselines equal to the Stage 1 evidence, the decision re-derived from the evaluation files).
 
 Gate: `P3_GEOAWARE_M5A_RESULT_RECORDED_RULE_NOT_MET`.
+
+## Addendum: serving the experiment (2026-10-01)
+
+The frozen Phase 9 files are now served read-only and hash-verified at `/api/science/evidence/geoaware/{overview,evaluation?year=}` (`backend/app/api/geoaware.py`) and shown at the page `/geoaware` ("Geography-Aware Experiment"). The API walks the whole chain (protocol, selection freeze, manifest, every listed file and the references between them) and answers 503 on any mismatch; the 2025 evaluation carries the mandatory post-hoc label; an unknown year is a structured 404. The page shows the negative verdict first, the per-year tables for Raw, the global model and the two selected geography arms, the selection table (including the arms with no eligible configuration), and the protocol gap. Its narrative sentences are derived from the decision file's flags, not typed. Tests: `backend/tests/test_geoaware_api.py`, `frontend-v2/src/lib/api/geoaware.test.ts`, `frontend-v2/tests/e2e/geoaware.spec.ts`. Nothing here changes any result, status or the PS coverage row.
+

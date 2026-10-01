@@ -21,6 +21,7 @@ try:
     from backend.app.api.operational import router as operational_router
     from backend.app.api.evidence import router as evidence_router
     from backend.app.api.zones import router as zones_router
+    from backend.app.api.geoaware import router as geoaware_router
 except ModuleNotFoundError:
     from app.core.cors import ALLOWED_HEADERS, ALLOWED_METHODS, allowed_origins
     from app.version import API_VERSION, deployed_commit
@@ -29,6 +30,7 @@ except ModuleNotFoundError:
     from app.api.operational import router as operational_router
     from app.api.evidence import router as evidence_router
     from app.api.zones import router as zones_router
+    from app.api.geoaware import router as geoaware_router
 
 def warm_evidence_caches() -> dict[str, str]:
     """Pre-verify and cache the small hash-chained evidence files so the first visitor does not pay for it.
@@ -84,6 +86,7 @@ app.include_router(science_router, prefix="/api")
 app.include_router(operational_router, prefix="/api")
 app.include_router(evidence_router, prefix="/api")
 app.include_router(zones_router, prefix="/api")
+app.include_router(geoaware_router, prefix="/api")
 
 
 @app.exception_handler(HTTPException)
