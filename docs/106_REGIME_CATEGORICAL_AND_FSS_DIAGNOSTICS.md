@@ -70,7 +70,7 @@ Sparse (2025: 1 430 event cells, 121 cases; 2024: 1 589 cells). 2025 overall CSI
 
 ## 5. What this changes about earlier statements
 
-1. "Raw GEFS beats corrected models on FSS at every scale" (docs/60, 64, 89, `FINAL_PPT_FACTS §3`) is true **only for the pairs that were measured**: M2 in 2019 and M1 in 2025. For **heavy rain, M3/M4 (and M2 at fine scales) exceed Raw on FSS and CSI in both 2024 and 2025**; for very-heavy rain in 2025 Raw still wins at coarse scales and M2 collapses.
+1. "Raw GEFS beats corrected models on FSS at every scale" (docs/60, 64, 89, `FINAL_PPT_FACTS §3`) was, when this phase was written, verified only for the pairs then measured (M2 in 2019, M1 in 2025); `docs/108` has since measured all four corrected models on Track A and confirms it there. On **Track B heavy rain, M3/M4 (and M2 at fine scales) exceed Raw on FSS and CSI in both 2024 and 2025**; for very-heavy rain in 2025 Raw still wins at coarse scales and M2 collapses.
 2. "Regime-aware did not beat global" (`JUDGE_QA`) is correct for RMSE/MAE/bias only. For heavy-rain categorical/spatial skill in 2024 and 2025, hard-routed M3 is nominally best overall, with the M3 − M2 overall interval excluding zero in 2024 (CSI) but not in 2025.
 3. The benefit is **entirely regime-specific**: it comes from the Low/Depression specialist. In the Active regime the global model is as good or better (2025) and corrected models are below Raw (2024). In Break/Weak M2/M3/M4 forecast essentially no heavy cell (frequency bias ≤ 0.001; zero CSI/FSS) and lose to Raw — the Break specialist has collapsed to "no extreme rain". (M1, not shown in the table, is also below Raw there.)
 4. The regime-aware models have worse MAE, positive bias (2025 +0.17/+0.25 mm vs −0.93 M2) and do not improve RMSE, so the honest framing is a trade-off: better categorical/spatial extreme skill in one regime versus worse mean error.
@@ -82,7 +82,7 @@ Rewording applied after this phase: scope notes or narrowed sentences in `docs/0
 - Post-hoc and exploratory: many contrasts, no multiplicity correction. 2025 cannot be used for model choice; 2024 is the selection year.
 - Single year per result; three-class pseudo-regimes; Low/Depression is one class among three and dominates event counts (2025: 2 517 of 6 760 heavy cells; 2024: 4 798 of 6 366).
 - Bootstrap intervals ignore temporal autocorrelation and are optimistic; very-heavy intervals rest on few event cases.
-- Track A (2019) is not covered: per-case M3/M4 grids are not served or cached in a form used here.
+- Track A is covered separately in `docs/108` (frozen experts applied to the cached 2018/2019 feature matrices). **The Track B pattern does not replicate there**: M3/M4 score below Raw on heavy-rain CSI and FSS in both Track A years.
 - Frozen primary-model statements in docs/89 (M1, `RAW_BETTER`) remain correct and are not altered by this phase.
 
 ## 7. Reproduce

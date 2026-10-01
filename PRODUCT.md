@@ -20,11 +20,12 @@ The product connects actual NWP reforecast inputs to canonical 24-hour rainfall 
 
 ## Operating Context
 
-The present release is a read-only historical scientific prototype based on the frozen 2017 train, 2018 validation/calibration, and untouched 2019 test workflow. It is suitable for technical presentation and historical case exploration, not current-date operational forecasting.
+The present release is a read-only historical scientific prototype with two separate, non-pooled experiments: the GEFSv12 reforecast (2017 train, 2018 validation/calibration, 2019 completed final test) and historical operational GEFS (2023 training/cross-fit, 2024 validation/selection, 2025 completed one-time final test). Both final-test years are consumed, so later analyses of them are post-hoc. It is suitable for technical presentation and historical case exploration, not current-date operational forecasting.
 
 ## Capabilities and Constraints
 
-- Forecast Explorer compares Raw GEFS, Phase 2B M2 Global XGBoost correction, and IMD observation on the same grid and scale.
+- Forecast Explorer compares Raw GEFS, the corrected models (M1 to M4 on the operational-era track, M2 on the 2019 track) and IMD observation on the same grid and scale.
+- Regime Intelligence, the Verification Lab (regime-aware and district-level views, downloadable reports) and the SIH26080 Compliance page show forecast-only pseudo-regimes, verification by regime, lead and district, and an evidence-linked requirement-coverage view with planned items kept visibly unimplemented.
 - Phase 2C provides Heavy and Very Heavy probabilities, FSS, district aggregations, and official historical demo cases through read-only science APIs.
 - Frozen scientific artifacts, thresholds, metrics, corpus, and model identities must not be changed by frontend work.
 - Missing or invalid scientific data must be labeled unavailable, never fabricated or displayed as zero.

@@ -4,14 +4,14 @@
 |---|---|---:|---:|---|---|
 | R01 | Raw NWP fields not authentic forecast data | Critical | Medium/High | July 2019 GEFS reforecast source lineage validated; historical corpus absent | Resolve pilot exception, then reviewed historical manifests |
 | R02 | Future-valid-time atmospheric leakage | Critical | Medium/High | July forecast-time atmospheric pilot passed; prototype/model features remain unresolved | Feature registry + source audit before training |
-| R03 | Missing `regime_id` methodology | Critical | High | Unresolved | Reproducible label pipeline |
+| R03 | Missing `regime_id` methodology | Critical | High | **Resolved for the canonical research track**: forecast-only pseudo-labels reproduce exactly (`docs/54`, `docs/55`); legacy-CSV labels remain unrecoverable | Keep pseudo-label wording; independent validation planned |
 | R04 | Scientific training cannot reproduce from clean authoritative inputs | Critical | High | Confirmed; training blocked | Complete authoritative pairing/labels, then clean-run training |
-| R05 | Wrong accumulation thresholds | Critical | High | Verified in audited version | Build correct 24h product |
-| R06 | No FSS | Critical | Certain | Verified | Gridded data + implementation |
-| R07 | No district grid product | High | Certain | Verified | Geo aggregation |
+| R05 | Wrong accumulation thresholds | Critical | High | **Resolved for the canonical track**: 24-hour windows and IMD 24-hour categories; the legacy 6-hour CSV stays quarantined | Maintain unit/accumulation metadata |
+| R06 | No FSS | Critical | Certain | **Resolved**: true 2-D FSS for all five models on both tracks (`docs/64`, `docs/108`) | Keep multi-scale reporting |
+| R07 | No district grid product | High | Certain | **Resolved**: Track A 2019 and Track B 2024/2025 (`docs/65`, `docs/107`, `docs/111`); district verification `docs/113` | Maintain; 2023 and other regions not covered |
 | R08 | Extreme-event scarcity | High | High | Verified | Longer history/weighted modeling |
-| R09 | Regime model weaker than MOS overall RMSE | High | Medium | Verified saved result | Improve labels/gating; honest ablation |
-| R10 | Frontend displays generated/static science | High | High | Verified | UI contract |
+| R09 | Regime model weaker than MOS overall RMSE | High | Medium | **Still true**: regime-aware models do not beat the global model on RMSE, MAE or bias on either track (`docs/61`, `docs/89`); their heavy-rain event gain is track- and regime-specific and not replicated on the 2019 reforecast track (`docs/108`) | Honest ablation; keep claims scoped |
+| R10 | Frontend displays generated/static science | High | High | Mitigated: UI numbers come from hash-verified APIs/evidence, copy-guard tests; residual hardcoded numbers listed in the P3 hardening plan | Extend the guard; generate Story Mode numbers from evidence |
 | R11 | Dataset provenance challenged by judges | Critical | High | July source→daily→monthly hashes exist; training corpus lineage unresolved | Preserve hierarchy through reviewed corpus acquisition |
 | R12 | Complex model overfits | High | Medium | Ongoing | Keep strong baselines |
 | R13 | Grid misalignment creates fake skill changes | Critical | Medium | 464 rainfall mappings and 558 context fields passed; multi-year variation untested | Preserve monthly alignment/conservation gates |
@@ -57,3 +57,13 @@ quarantine and explicit eligibility tiers. Residual risk remains that additional
 archive inconsistencies may occur during historical acquisition; monthly QC and
 small reviewed batches are mandatory. The corpus plan is not acquired and no
 training is authorized.
+
+## Phase 6 risk additions (2026-10-01)
+
+| ID | Risk | Severity | Probability | Current status | Mitigation |
+|---|---|---:|---:|---|---|
+| R30 | IMD gridded data redistribution rights are unresolved, yet IMD-derived arrays are in a public release bundle | High | Medium | Open (`docs/80`, `docs/102`) | Resolve and record before any further third-party upload (including remote training services) |
+| R31 | Validation year reuse: 2024 has served model selection, calibration and diagnostics; no untouched test period remains (2019 and 2025 consumed) | High | High | Open | New independent period or development-only claims; never call 2019/2025 untouched |
+| R32 | A regime-aware gain seen on one track is generalised to the other | High | Medium | Mitigated in wording (`docs/108`): the Track B heavy-rain gain does not replicate on Track A | Name the track in every claim (`docs/91` addendum) |
+| R33 | Hash-manifested evidence altered by line-ending conversion on checkout | Medium | Medium | Mitigated: `.gitattributes` marks `backend/app/evidence_data/**` as `-text` | Keep evidence files byte-stable; tests verify hashes |
+| R34 | Many-district testing produces chance 'improved/worsened' districts | Medium | High | Mitigated: counts shown beside the expected-by-chance number (`docs/112`, `docs/113`) | Keep the denominator and chance caveat with every district claim |

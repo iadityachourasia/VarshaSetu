@@ -44,10 +44,11 @@ population. Raw/Corrected denominator-contributor counts are shown below.
 
 For the pair evaluated here — **Raw GEFS vs the M2 global model on the 2019
 Track A population** — Raw GEFS is stronger at every evaluated FSS threshold and
-spatial scale. FSS was not computed for M1, M3 or M4 in 2019, so this result
-must not be read as "Raw beats every corrected model on FSS". The Track B
-diagnostics in `docs/106` show that this does not generalise: for heavy rain
-the regime-aware M3/M4 exceed Raw on FSS in 2024 and 2025.
+spatial scale. This file covers M2 only; `docs/108` has since measured M1, M3 and
+M4 too and confirms that on Track A (2018 and 2019) Raw beats **every** corrected
+model at every scale and threshold. That is a Track A result: on Track B the
+regime-aware M3/M4 exceed Raw on heavy-rain FSS in 2024 and 2025 (`docs/106`), so
+it must not be generalised across tracks.
 The M2 corrected forecast improves aggregate RMSE but suppresses very-heavy
 deterministic events. The calibrated binary probability outputs are a separate
 product; they do not retroactively improve deterministic FSS. No FSS-based

@@ -306,7 +306,7 @@ weaken. In summary:
   calibration/QC/model selection outside an explicitly authorized phase.
 - No fabricated values, no invented PR/ROC curves. Track-B district
   aggregates are a read-only area-weighted view of the frozen grids for 2024/2025
-  only (`docs/107`); 2023 has none and there is no district-level verification.
+  only (`docs/107`); 2023 has none. District-level verification exists for 2024/2025 under a frozen protocol (`docs/112`, `docs/113`).
 - Forecast-time causal validity only: no feature that wouldn't exist at the
   moment a real forecast is issued.
 - Reanalysis (ERA5/IMDAA) may inform regime-label research; it is never

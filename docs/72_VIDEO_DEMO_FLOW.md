@@ -24,9 +24,8 @@ separate consumed 2025 operational-era benchmark is not visualized by these maps
    district; show area-weighted mean/max rainfall, event probabilities and
    affected fractions. Do not imply nationwide or unvalidated MP coverage.
 7. Open Verification. Show the complete M0–M4 table and 1×1/3×3/5×5/9×9
-   FSS. Say plainly: M2 wins overall RMSE; Raw remains stronger than M2 on
-   the reported deterministic extreme-event spatial skill (2019 FSS exists
-   only for Raw vs M2).
+   FSS. Say plainly: M2 wins overall RMSE; Raw remains stronger than every corrected model on
+   the reported deterministic extreme-event spatial skill (`docs/108`).
 8. End on Methodology: 2017 train, 2018 validate/calibrate, completed 2019
    final test; provenance and the non-operational readiness boundary. If the
    2025 result is included, show a separate sourced verification summary:

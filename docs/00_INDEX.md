@@ -114,6 +114,14 @@ This directory is the working technical specification, scientific governance sys
 | `105_VISUAL_DESIGN_AND_AI_SLOP_AUDIT.md` | Read-only local/live design critique, effective token inventory, 66-screen baseline, Story Mode clipping defect, route reviews, scorecard, and ranked design priorities | Before choosing a visual redesign direction; no UI change is authorized by the audit |
 | `106_REGIME_CATEGORICAL_AND_FSS_DIAGNOSTICS.md` | Phase 4M: FSS for M0–M4 and regime/lead-stratified POD/FAR/CSI/ETS on frozen 2024 (development) and 2025 (consumed, post-hoc descriptive) grids; reproduction gate vs docs/88–89; finding that the regime-aware heavy-rain gain is confined to the Low/Depression regime and that "Raw beats corrected on FSS" holds only for the M1/M2 pairs previously measured | Before quoting any regime-aware or FSS statement; before rewording docs/60, 64, 89 or `JUDGE_QA` |
 | `107_TRACK_B_DISTRICT_PRODUCT.md` | Phase 4N: Track B (2024/2025) district table/map as a read-only area-weighted aggregation of frozen grids with the Phase 2C weights shared with Track A; verification of the implementation; limits (no 2023, no district-level verification, not a frozen artifact); supersedes the "no Track B district product" statements | Before any district claim for the operational-era track, and before proposing district-level verification |
+| `108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md` | Phase 6A (P0-1): regime/lead-stratified FSS + categorical evidence for M0–M4 packaged as tracked, hash-manifested files and served read-only at `/api/science/evidence/*`; new Track A 2018/2019 M3/M4 diagnostics (frozen models, exact reproduction); finding that the Track B heavy-rain regime-aware gain does **not** replicate on Track A | Before quoting any FSS or regime-aware statement, and before building the regime/verification UI (P0-2/P0-3) |
+| `109_REGIME_INTELLIGENCE_UI_COMPLETION.md` | Phase 6D (P0-2): removes the Regime "Feature in Development" state; Track A workbench and a shared regime-aware verification panel (by pseudo-regime and lead; RMSE, POD, FAR, CSI, ETS, FSS; paired differences) for both tracks, with mandatory post-hoc labels and undefined-value handling | Before changing the Regime page or quoting what it shows |
+| `110_VERIFICATION_REGIME_AWARE_TAB_AND_REPORT_EXPORT.md` | Phase 6E (P0-3): Regime-aware tab/section in the Verification Lab (both tracks) and a hash-verified, downloadable verification report (Markdown/CSV/JSON) covering RMSE, ETS, CSI, POD, FAR, FSS by regime and lead, with undefined values preserved | Before changing the verification report or quoting its contents |
+| `111_DISTRICT_PRODUCT_COMPLETION.md` | Phase 6B (P0-4): Track B district compare-all-models endpoint and view, per-district error and improvement vs Raw (single-case, district-mean; not a skill score), diverging error map, descriptive district history (no skill statistic), and the Historical District Decision-Support Prototype label | Before changing the district product or quoting any district-level figure |
+| `112_DISTRICT_VERIFICATION_PROTOCOL.md` | Phase 6C (P0-5): APPROVED and hash-frozen district-level verification protocol v1 (E1 primary, 30 observed events, >= 5 valid cells, latitude bands) with observation-only support counts; written before any result | Before changing or quoting district-level verification rules |
+| `113_DISTRICT_VERIFICATION_RESULTS.md` | Phase 6C (P0-5): execution of protocol v1 for Track B 2024/2025 - hash-manifested evidence, `/api/science/evidence/district-verification` + reports, Verification Lab District-level tab; findings: district event CSI improves for M3/M4 while district-mean error worsens, no very-heavy gain, improved/worsened counts vs chance | Before quoting any district-level skill figure |
+| `114_PS_COVERAGE_AND_GOVERNANCE_REFRESH.md` | Phase 6F (P0-6): `/compliance` SIH26080 requirement-coverage page, evidence-resolved coverage manifest and endpoint, generated `docs/22` status block, and refresh of stale governance documents; planned items are never shown as implemented | Before changing requirement status, the coverage manifest, or governance documents |
+| `115_COASTAL_OROGRAPHIC_REGIME_PROTOCOL.md` | Phase 7A (P0-7): APPROVED and hash-frozen (Stages 0–2 only) — staged protocol for a per-cell geographic-forcing dimension (static sources, rule-based coastal/orographic zones, forecast-time forcing strata, pre-registered questions); no acquisition or training done yet | Before acquiring static geography or claiming any coastal/orographic result |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule
@@ -126,24 +134,16 @@ If documentation and code disagree:
 3. update the documentation,
 4. do not pretend the conflict does not exist.
 
-## Current highest-priority blocker chain
+## Current priorities (replaces the Phase 0-1 blocker chain)
+
+The Phase 0-1 chain (reproducibility, provenance, causality, accumulation, pairing, FSS, districts, calibration) is resolved for the canonical research track.
+What remains, in order (see `docs/22` and the app's `/compliance` page for the evidence-linked status):
 
 ```text
-Repository reproducibility
-        ↓
-Data provenance
-        ↓
-Forecast-time causality
-        ↓
-Correct rainfall accumulation
-        ↓
-Real gridded NWP/observation pairing
-        ↓
-FSS + district product
-        ↓
-Regime-model improvement
-        ↓
-Probability calibration
-        ↓
-Demo polish
+1. Coastal / orographic regime protocol (write, approve, then train)   - mandatory PS regime still PLANNED
+2. Western-disturbance feasibility (domain, upper-air fields, labels)  - mandatory PS regime still PLANNED
+3. Independent regime validation set                                   - labels are pseudo-label agreement only
+4. Next-generation model (M5) after protocol approval                  - data and independent-test question first
+5. Live / new-cycle inference                                          - currently historical replay only
+6. Engineering hardening (CORS, versions, checksums, CI)               - see the plan's P3 list
 ```

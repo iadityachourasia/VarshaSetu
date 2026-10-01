@@ -56,13 +56,15 @@ output grids. The endpoint returns `SCIENCE_PRODUCT_UNAVAILABLE` and the page sa
 
 ## 6. Limitations (keep when quoting)
 
-- No district-level verification: district means/areas are shown against IMD for replay, but no RMSE/CSI/FSS-by-district has been computed or claimed. A district-level verification phase would need an explicit areal event definition first.
+- District-level verification was not part of this phase and has since been done under a frozen protocol (Phase 6C, `docs/112`, `docs/113`); the district product itself is not a skill claim.
 - Area-weighted district *means* smooth extremes; heavy/very-heavy cells are better read from the area fractions, probabilities and cell maximum (which is a single-cell maximum, not an area-weighted extreme).
 - Domain-limited (10–22°N, 68–80°E); geometry is simplified, 735 of 736 advertised ADM2 features, not an official current boundary; ODbL share-alike review is still required before redistributing derived geometry.
 - Only IMD land cells that passed pairing have values, so coastal/partly-covered districts are aggregated over fewer cells (`valid_grid_cells` is shown).
 - Live-API only: there is **no** static-bundle fallback for this view (unlike the Track B grid pages). On a cold Render instance the first request pays the one-time Phase 2C manifest verification (hashing every frozen file).
 - 2025 is a consumed holdout; district views of it are descriptive replay and must not be used to select or re-rank a model. The M1 primary result is unchanged.
 - The regime shown is a forecast-only pseudo-label, not observed meteorological truth.
+
+Update (Phase 6B, `docs/111`): the single-model limitation above has since been lifted (compare-all-models view, per-district error/improvement, error map, descriptive history). The absence of district-level verification and the other limitations stand.
 
 ## 7. Incidental findings
 

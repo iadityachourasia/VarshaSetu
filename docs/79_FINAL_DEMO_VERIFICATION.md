@@ -14,8 +14,8 @@ on the common 2019 test population. The UI computes
 `(Raw - M2) / Raw × 100` = 9.73% at display precision. This is not a
 selected-case result. M2 has the lowest deterministic RMSE, but M3/M4 do
 not beat it on RMSE. Raw retains stronger deterministic Heavy/Very Heavy
-CSI/ETS than every corrected model, and stronger FSS than M2 at every
-reported scale (FSS exists only for Raw vs M2 in 2019). The 2019 Very Heavy categorical FAR is
+CSI/ETS than every corrected model, and stronger FSS than every corrected model at every
+reported scale and threshold (`docs/108`). The 2019 Very Heavy categorical FAR is
 0.8723324316200781. The UI displays the historical/non-operational
 boundary, rare-event reliability caveat, and pseudo-label regime caveat.
 The Methodology path explicitly identifies the primary M2 and regime

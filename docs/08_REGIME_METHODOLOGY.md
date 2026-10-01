@@ -1,5 +1,7 @@
 # Weather-Regime Methodology
 
+> Status update (Phase 6, 2026-10-01): the "Current implementation" section below describes the quarantined legacy prototype. The canonical regime method is the forecast-only pseudo-label design in `docs/54`/`docs/55` (three classes, deterministic labels, logistic classifier, reproduces exactly), used by M3/M4 and shown in the Regime Intelligence page. The hierarchical, multi-label design described here (synoptic, geographic-forcing, western-disturbance heads) is the planned successor, not yet implemented: coastal/orographic and western-disturbance regimes are PLANNED (`docs/22`, `/compliance`).
+
 ## Objective
 
 The regime engine exists to answer:

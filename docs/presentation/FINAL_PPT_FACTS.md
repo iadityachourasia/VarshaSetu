@@ -43,9 +43,11 @@ population — the two tracks are not pooled into one number."*
 - Soft routing (M4) improves on hard routing (M3) for RMSE, but **neither
   beats M2 Global XGBoost**
 - In 2019 Raw GEFS remains **stronger than every corrected model (M1–M4)** on
-  deterministic Heavy/Very-Heavy CSI/ETS; FSS was measured for **Raw vs M2
-  only**, where Raw is stronger at every scale (`docs/64`). Do not say Raw has
-  better FSS than "all corrected models" — M1/M3/M4 have no 2019 FSS.
+  deterministic Heavy/Very-Heavy CSI/ETS **and on FSS at every scale**
+  (`docs/64`, `docs/108`; bootstrap intervals exclude zero). This is a **Track A**
+  result: the Track B heavy-rain pattern (regime-aware CSI/FSS above Raw in the
+  Low/Depression pseudo-regime, `docs/106`) does **not** replicate on Track A,
+  where M3/M4 forecast almost no heavy events.
 
 ## 4. Track B (2025) headline
 
@@ -100,8 +102,11 @@ Limitation" scene. State it in the same breath as the RMSE win, every time.
 - Track B district product (Phase 4N, `docs/107`): **2024 and 2025 only**, as
   a read-only area-weighted aggregation of the frozen grids (same Phase 2C
   overlap weights as 2019), historical replay. **2023 has none**, and there is
-  **no district-level verification** (no RMSE/CSI/FSS by district). It is not
-  a frozen, hash-pinned artifact of its own.
+  It is not a frozen, hash-pinned artifact of its own. District-level
+  verification exists for 2024/2025 under a frozen protocol (`docs/112`, `docs/113`):
+  heavy-rain district-event CSI improves for M3/M4 but district-mean error does
+  not, and very-heavy skill is not improved; it is post-hoc for 2025 and says
+  nothing about warning skill.
 - No five-member-ensemble-vs-ML comparison exists outside the 2025 matched
   subset (not for 2019, 2023, or 2024).
 - No dedicated regime-intelligence UI exists for Track A (2019) — its
@@ -163,7 +168,7 @@ selection reasoning. If asked "why this case," that is the honest answer.
 | "positive Brier Skill Score, with high FAR" | "calibrated" alone, without the FAR caveat |
 | "regime-aware post-processing did not beat global ML on overall RMSE" | "regime awareness improves skill" (unqualified); also not "regime awareness never helps" |
 | "post-hoc, regime-aware heavy-rain CSI/FSS exceeded Raw in the Low/Depression pseudo-regime (2024, 2025)" | presenting that as a tested or selected result, or as a headline |
-| "Raw had better FSS than the selected M1 (2025) / than M2 (2019)" | "Raw has better FSS than every corrected model" |
+| "Raw had better FSS than every corrected model in the 2019 reforecast benchmark, and than the selected M1 in 2025" | "Raw has better FSS than every corrected model" without naming the benchmark; "regime-aware models improve heavy-rain skill" as a general claim |
 | "historical scientific prototype, not operational" | "operational," "production-ready," "live forecasting" |
 
 ## 12. Sources

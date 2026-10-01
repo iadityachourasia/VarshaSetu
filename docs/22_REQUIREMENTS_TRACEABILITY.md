@@ -1,5 +1,45 @@
 # Requirements Traceability Matrix
 
+<!-- GENERATED:PS-COVERAGE:START -->
+## Current status (generated from `backend/app/evidence_data/phase6/ps_coverage.json`)
+
+Status of each official requirement = IMPLEMENTED if every mandatory coverage row for it is IMPLEMENTED, PLANNED if every one is PLANNED, otherwise PARTIAL.
+Live view with evidence-resolved figures: the app's `/compliance` page. Do not edit this block by hand; run `python scripts/build_ps_traceability_doc.py`.
+
+| PS ID | Official requirement | Status | Coverage rows (mandatory) |
+|---|---|---|---|
+| PS-R01 | Ingest / use raw NWP rainfall | IMPLEMENTED | RAW-NWP |
+| PS-R02 | AI/ML post-processing | IMPLEMENTED | ML-POSTPROCESSING |
+| PS-R03 | Weather-regime classification | PARTIAL | REGIME-CLASSIFIER, REGIME-ACTIVE, REGIME-BREAK, REGIME-LOW, REGIME-COASTAL-OROGRAPHIC, REGIME-WESTERN-DISTURBANCE |
+| PS-R04 | Regime-conditioned correction | IMPLEMENTED | REGIME-AWARE-CORRECTION |
+| PS-R05 | Demonstrate improvement vs raw NWP | PARTIAL | BIAS-CORRECTED-RAINFALL, IMPROVEMENT-VS-RAW |
+| PS-R06 | Grid-level rainfall output | IMPLEMENTED | BIAS-CORRECTED-RAINFALL, GRID-PRODUCT |
+| PS-R07 | Heavy-rain exceedance probability | IMPLEMENTED | HEAVY-PROBABILITY, VERY-HEAVY-PROBABILITY |
+| PS-R08 | District-level rainfall table/map | IMPLEMENTED | DISTRICT-PRODUCT, DISTRICT-MAP, DISTRICT-TABLE |
+| PS-R09 | RMSE | IMPLEMENTED | METRIC-RMSE, VERIFICATION-REPORT |
+| PS-R10 | ETS | IMPLEMENTED | METRIC-ETS, VERIFICATION-REPORT |
+| PS-R11 | CSI | IMPLEMENTED | METRIC-CSI, VERIFICATION-REPORT |
+| PS-R12 | POD | IMPLEMENTED | METRIC-POD, VERIFICATION-REPORT |
+| PS-R13 | FAR | IMPLEMENTED | METRIC-FAR, VERIFICATION-REPORT |
+| PS-R14 | FSS | IMPLEMENTED | METRIC-FSS, VERIFICATION-REPORT |
+
+Additional (non-mandatory) rows:
+
+| Row | Requirement | Status |
+|---|---|---|
+| REGIME-INDEPENDENT-VALIDATION | Independent (expert / bulletin) validation of regime labels | PLANNED |
+| REGIME-WISE-VERIFICATION | Regime-wise and lead-wise verification | IMPLEMENTED |
+| DISTRICT-VERIFICATION | District-level verification | PARTIAL |
+| LIVE-INFERENCE | Live / new-cycle forecast post-processing | PLANNED |
+| SYNOPTIC-OVERLAYS | Synoptic meteorology overlays (wind vectors, geopotential contours, pressure isobars) | PLANNED |
+| ALL-INDIA-DOMAIN | All-India domain | PLANNED |
+
+<!-- GENERATED:PS-COVERAGE:END -->
+
+## Historical audit (Phase 0-1, superseded by the table above)
+
+The table and evidence list below record the state at the Phase 0-1 audit (September 2026) and are kept for provenance only.
+
 | PS ID | Official requirement | Current audited state | Target evidence | Priority |
 |---|---|---|---|---|
 | PS-R01 | Raw NWP rainfall | July 2019 official GEFSv12 pilot: 464/465 member/product cases valid; corpus absent | resolve one failed interval, then reviewed corpus acquisition | P0/P1 |

@@ -42,8 +42,8 @@ a nationwide operational service.”
 GEFS, linear MOS, Global XGBoost, hard regime routing and soft mixture of
 experts. Global XGBoost wins overall deterministic RMSE. Soft routing edges
 hard routing, but neither beats Global ML on RMSE. Raw GEFS remains stronger
-on the reported deterministic heavy-event CSI/ETS, and stronger than Global
-XGBoost on every evaluated FSS scale.
+on the reported deterministic heavy-event CSI/ETS, and stronger than every corrected model,
+including Global XGBoost, on every evaluated FSS scale.
 In this **2019 retrospective benchmark**, very-heavy categorical false-alarm
 ratio is about 0.872 at the frozen probability threshold. Lower average error does not guarantee better extreme-event
 spatial skill.”

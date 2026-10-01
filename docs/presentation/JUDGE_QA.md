@@ -39,8 +39,10 @@ single inflated headline.
 forecast?**
 Every dynamic predictor is either the forecast itself (precipitation,
 wind, humidity, pressure, geopotential, TCWV, ensemble statistics) or a
-static field (elevation, coastline distance, calendar date) known at
-forecast issuance time. No observed-at-valid-time value or future
+static or calendar field known at forecast issuance time. (Static
+geography such as elevation and coastline distance is permitted by the project
+rules but is **not used by any current model**; it is the planned basis for the
+coastal/orographic regime and is not in the frozen feature schema.) No observed-at-valid-time value or future
 reanalysis state is used as a predictor — this is an explicit,
 non-negotiable project rule (`AGENTS.md` §3.4).
 
@@ -68,8 +70,11 @@ regime-aware models were ahead of Raw GEFS, and in 2025 ahead of the global
 model too, but only in the predicted Low/Depression pseudo-regime. In the
 Active regime the global model was as good or better, and in the Break/Weak
 regime every corrected model essentially stopped forecasting heavy rain and
-lost to Raw. It is a hypothesis for future work, not a demonstrated benefit —
-these are pseudo-labels, one year each, with optimistic intervals.
+lost to Raw. This was seen on the operational-era track only: on the 2018/2019
+reforecast track the regime-aware models forecast almost no heavy events and
+scored below Raw (`docs/108`). It is a hypothesis for future work, not a
+demonstrated benefit — these are pseudo-labels, one year each, with optimistic
+intervals.
 
 **Q: What is a "pseudo-regime," and why not just call it "the regime"?**
 Because it is a forecast-only classifier output, not an independently
@@ -96,9 +101,10 @@ every neighbourhood scale tested. Lower average error and better extreme-event
 skill are different properties, and improving one did not improve the other
 for that model. We have not shown that *no* corrected model can do better:
 post-hoc diagnostics on the same frozen predictions (`docs/106`) show the
-regime-aware models scoring above Raw on heavy-rain FSS/CSI while still being
-worse on mean error, and none of the corrected models is reliably good at
-very-heavy events. Those post-hoc numbers do not change the declared headline
+regime-aware models scoring above Raw on heavy-rain FSS/CSI on the operational-era
+track while still being worse on mean error; on the 2018/2019 reforecast track every
+corrected model, including M3/M4, scores below Raw (`docs/108`). None of the
+corrected models is reliably good at very-heavy events. Those post-hoc numbers do not change the declared headline
 and were not used to choose a model.
 
 **Q: Then why report the RMSE win at all if it doesn't help on extremes?**
@@ -126,8 +132,11 @@ selectable), calibrated heavy/very-heavy probability and area fraction, next
 to the IMD observed values, area-weighted with the same overlap weights as
 the 2019 track. Limits we state up front: it is a read-only aggregation of
 frozen grids (not a new model or a separately frozen artifact), 2023 has no
-district product, and there is no district-level verification score yet — so
-we do not claim district-level skill.
+district product. District-level verification was run separately under a
+protocol frozen before any result (`docs/112`, `docs/113`): regime-aware models
+detect district heavy-rain events better than Raw, but their district-mean
+error is worse and very-heavy detection is not improved — a trade-off, not a
+general district-level skill claim, and post-hoc for 2025.
 
 **Q: Can I see the ensemble comparison for [some other year]?**
 Only 2025 has the matched five-member-ensemble-vs-calibrated-ML comparison.

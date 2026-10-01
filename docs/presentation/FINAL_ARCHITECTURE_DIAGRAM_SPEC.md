@@ -76,7 +76,7 @@ matters when a judge flips between the slide and the screen.
   spatial FSS did not" — the single most important caveat, placed where it
   cannot be missed, not in a footnote.
 - A label on the district view: "Read-only aggregation of frozen grids, 2024/2025
-  only; no district-level verification."
+  only; district-level verification is a separate protocol-frozen step (docs/112, docs/113)."
 - A small hash-icon annotation on the frozen-artifact-store boxes:
   "SHA-256 pinned; a displayed-value test compares live output against this
   file" (this is literally true — see `docs/91` §3).

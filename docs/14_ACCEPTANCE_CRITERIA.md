@@ -1,5 +1,7 @@
 # Acceptance Criteria
 
+> Status update (Phase 6, 2026-10-01): the checklists below are the original Phase 0-1 gates written for the quarantined legacy CSV path and were intentionally left open (the legacy readiness gate and legacy scientific endpoints stay blocked, `AGENTS.md` section 4). They are **not** a status statement about the canonical research corpora. Current PS-requirement status: `docs/22` and the `/compliance` page. Canonical-track evidence: `docs/60`-`docs/65`, `docs/88`-`docs/90`, `docs/106`-`docs/113`.
+
 ## Release gates
 
 A phase cannot be marked complete unless its mandatory checks pass.

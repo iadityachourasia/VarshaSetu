@@ -1,5 +1,7 @@
 # Current Implementation — As Audited
 
+> Superseded for current status (Phase 6, 2026-10-01): this document records the Phase 0 audit of the legacy prototype. The current system is the frozen two-track research stack served read-only by the evidence-backed APIs: `docs/66` (Track A API), `docs/92`/`docs/93` (Track B API), `docs/68` (frontend), `docs/107`-`docs/113` (districts, evidence, reports). PS coverage: `docs/22` and `/compliance`.
+
 > Phase 0 update (2026-09-19): the saved report/models are quarantined legacy
 > artifacts and are no longer exposed as current results. Training and model
 > inference fail closed because the checked-in dataset has unverified provenance,
