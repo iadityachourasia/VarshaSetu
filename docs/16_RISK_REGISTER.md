@@ -67,3 +67,14 @@ training is authorized.
 | R32 | A regime-aware gain seen on one track is generalised to the other | High | Medium | Mitigated in wording (`docs/108`): the Track B heavy-rain gain does not replicate on Track A | Name the track in every claim (`docs/91` addendum) |
 | R33 | Hash-manifested evidence altered by line-ending conversion on checkout | Medium | Medium | Mitigated: `.gitattributes` marks `backend/app/evidence_data/**` as `-text` | Keep evidence files byte-stable; tests verify hashes |
 | R34 | Many-district testing produces chance 'improved/worsened' districts | Medium | High | Mitigated: counts shown beside the expected-by-chance number (`docs/112`, `docs/113`) | Keep the denominator and chance caveat with every district claim |
+
+## Phase 7F risk updates (2026-10-01, `docs/120`)
+
+| ID | Risk | Status now | Residual |
+|---|---|---|---|
+| R35 | CORS open to every origin with credentials | Mitigated: named origins, no credentials, read-only methods | A directly hosted frontend on a new domain needs `CORS_ALLOW_ORIGINS` |
+| R36 | Unverified or truncated data bundle shipped in the image | Mitigated: pinned SHA-256 (equal to GitHub's published digest) checked before extraction, with retry and resume | The checksum must be updated together with any new bundle |
+| R37 | Static hand-written audit statements served as if executed | Mitigated: `/api/audit` and `/api/jury-defense` return 410 | None known |
+| R38 | No automated checks on push | Mitigated: CI for backend, frontend and Dockerfile | Playwright and the Phase 4 freeze tests remain local |
+| R39 | Hand-typed science numbers in Story Mode | Mitigated: figures derived from verified sources and tested | Other pages were checked by the copy guard, not exhaustively audited |
+

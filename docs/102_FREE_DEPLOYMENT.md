@@ -140,3 +140,12 @@ Both platforms redeploy automatically on push to `master` by default
 (configurable in each dashboard). To roll back the data bundle without
 touching frozen science, revert only `Dockerfile`'s `DATA_BUNDLE_URL` to an
 older release tag — the tarball itself is immutable once published.
+
+## Runtime configuration added in Phase 7F (`docs/120`)
+
+| Variable | Purpose | Default |
+|---|---|---|
+| `CORS_ALLOW_ORIGINS` | Comma-separated browser origins allowed to call the API directly. A wildcard is refused. Not needed when the frontend proxies `/api/science/*` (the Vercel setup in this document) | the production frontend origin and local development origins |
+| `RENDER_GIT_COMMIT` | Set by Render itself; reported by `/api/health` as `commit` | `unknown` outside Render |
+
+`GET /api/health` is liveness only and reports `version` and `commit`; scientific status is `GET /api/science/status` (the Render health check). If you change the bundle, update `DATA_BUNDLE_URL` and `DATA_BUNDLE_SHA256` in both the `Dockerfile` and `.github/workflows/ci.yml` together (a backend test enforces that they match).
