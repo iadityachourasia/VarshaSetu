@@ -262,10 +262,11 @@
       "ps_mandatory": false,
       "status": "PLANNED",
       "summary": "Classifier scores measure agreement with deterministic pseudo-labels only.",
-      "limitation": "No independent regime validation set exists; its sources and licensing are unverified.",
+      "limitation": "No independent regime validation set exists. A source probe (docs/123) found candidate observation-based sources, but the active and break criteria need a longer rainfall climatology than the project holds, the depression record's coverage and terms are unverified, and the project's class definitions only partly match the published ones.",
       "pages": [],
       "docs": [
-        "docs/55_PHASE2A_REGIME_VALIDATION_REPORT.md"
+        "docs/55_PHASE2A_REGIME_VALIDATION_REPORT.md",
+        "docs/123_INDEPENDENT_REGIME_VALIDATION_PROBE.md"
       ],
       "facts": []
     },
