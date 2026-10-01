@@ -133,6 +133,7 @@ This directory is the working technical specification, scientific governance sys
 | `124_GEOGRAPHY_AWARE_MODEL_PROTOCOL_PROPOSAL.md` | Phase 9A: PROPOSED, not frozen — protocol for a geography-aware correction (M5) aimed at the Ghats-coast heavy-rain deficiency; training-year support, the independent-test blocker and its options, design, decision rule and risks; awaiting owner approval; nothing trained | Before any M5 or Stage 3 training |
 | `125_LIVE_INFERENCE_DESIGN.md` | Phase 9B: live and new-cycle inference, design only: what exists, what is missing, worker architecture, phases with acceptance criteria, risks, owner decisions; requirement stays planned | Before building any live inference |
 | `126_GEOGRAPHY_AWARE_MODEL_RESULTS.md` | Phase 9B: frozen-protocol results of the geography-aware correction (M5a): large replicated heavy-rain gain on the Ghats coast but over-forecasting in 2024, pre-registered rule not met, attribution undetermined, contamination notice; development-only | Before quoting any geography-aware model result or designing a follow-up |
+| `127_INDEPENDENT_YEARS_SOURCE_PROBE.md` | Phase 9C: HEAD-only probe showing the NOAA GEFS objects for 2021 and 2022 (candidate independent years) exist in a 19-date sample; no download, existence is not validity | Before deciding whether to acquire independent years |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule
