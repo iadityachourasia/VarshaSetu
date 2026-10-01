@@ -948,10 +948,11 @@
       "ps_mandatory": false,
       "status": "PLANNED",
       "summary": "The system replays frozen historical cases; it does not ingest or correct a current forecast cycle.",
-      "limitation": "Needs cycle-parameterised acquisition, lead handling, runtime model loading, online quality control and a separate worker.",
+      "limitation": "Not built. A design (docs/125) lists what can be reused and what is missing: cycle-parameterised acquisition, a runtime loader for the frozen operational-era models, online quality control, publication and a separate worker. It needs owner decisions, and no skill could be shown for a new cycle until observations exist.",
       "pages": [],
       "docs": [
-        "docs/18_DEPLOYMENT_AND_OPERATIONS.md"
+        "docs/18_DEPLOYMENT_AND_OPERATIONS.md",
+        "docs/125_LIVE_INFERENCE_DESIGN.md"
       ],
       "facts": []
     },

@@ -131,6 +131,7 @@ This directory is the working technical specification, scientific governance sys
 | `122_WESTERN_DISTURBANCE_FEASIBILITY.md` | Phase 8B: western-disturbance feasibility study (investigation only): domains, verified data inventory, label sources, staged path, owner decisions; requirement stays planned | Before any western-disturbance label, download or model |
 | `123_INDEPENDENT_REGIME_VALIDATION_PROBE.md` | Phase 8C: independent regime validation, source and licence probe (no labelling): objective active/break criteria, IMD best tracks, obstacles, staged path, owner decisions; requirement stays planned | Before creating any independent regime label or downloading a regime data source |
 | `124_GEOGRAPHY_AWARE_MODEL_PROTOCOL_PROPOSAL.md` | Phase 9A: PROPOSED, not frozen — protocol for a geography-aware correction (M5) aimed at the Ghats-coast heavy-rain deficiency; training-year support, the independent-test blocker and its options, design, decision rule and risks; awaiting owner approval; nothing trained | Before any M5 or Stage 3 training |
+| `125_LIVE_INFERENCE_DESIGN.md` | Phase 9B: live and new-cycle inference, design only: what exists, what is missing, worker architecture, phases with acceptance criteria, risks, owner decisions; requirement stays planned | Before building any live inference |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule
