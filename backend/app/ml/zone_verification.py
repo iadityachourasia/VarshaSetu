@@ -42,16 +42,16 @@ def zone_masks(zone_labels: list[list[str | None]]) -> dict[str, np.ndarray]:
     return masks
 
 
-def case_stats(observed: np.ndarray, forecasts: dict[str, np.ndarray], masks: dict[str, np.ndarray]) -> np.ndarray:
-    """Statistic array [zone, model, S] for one case. Inputs are flat 2401-cell fields, NaN off the paired cells."""
+def case_stats(observed: np.ndarray, forecasts: dict[str, np.ndarray], masks: dict[str, np.ndarray], names: tuple[str, ...] | list[str] = ZONES) -> np.ndarray:
+    """Statistic array [stratum, model, S] for one case (strata = ``names``, default the zones). Inputs are flat 2401-cell fields, NaN off the paired cells."""
     valid = np.isfinite(observed)
     for name, field in forecasts.items():
         if not np.array_equal(valid, np.isfinite(field)):
             raise ValueError(f"{name}: forecast and observation cells differ")
     if np.any(valid & ~masks["ALL"]):
         raise ValueError("a paired cell lies outside the static geography footprint")
-    out = np.zeros((len(ZONES), len(forecasts), S), dtype=np.float64)
-    for zi, zone in enumerate(ZONES):
+    out = np.zeros((len(names), len(forecasts), S), dtype=np.float64)
+    for zi, zone in enumerate(names):
         cells = valid & masks[zone]
         if not cells.any():
             continue
@@ -116,8 +116,12 @@ def _metric(vector: np.ndarray, which: str) -> float:
         return float(np.sqrt(vector[_idx("sum_sq_error")] / n))
     if which == "bias":
         return float(vector[_idx("sum_error")] / n)
-    name = "heavy" if which == "heavy_csi" else "very_heavy"
+    if which == "mae":
+        return float(vector[_idx("sum_abs_error")] / n)
+    name = "very_heavy" if which == "very_heavy_csi" else "heavy"
     h, m, fa = (vector[_idx(f"{name}_{k}")] for k in ("hits", "misses", "false_alarms"))
+    if which == "heavy_fb":
+        return float((h + fa) / (h + m)) if (h + m) else np.nan
     return float(h / (h + m + fa)) if (h + m + fa) else np.nan
 
 
@@ -147,17 +151,18 @@ def difference_statistics(totals: np.ndarray, models: list[str]) -> dict[tuple, 
     return out
 
 
-def paired_bootstrap(stack: np.ndarray, models: list[str], *, repeats: int = REPEATS, seed: int = SEED, chunk: int = 100) -> dict[tuple, dict]:
+def paired_bootstrap(stack: np.ndarray, models: list[str], *, statistic=None, repeats: int = REPEATS, seed: int = SEED, chunk: int = 100) -> dict[tuple, dict]:
     """Paired whole-case bootstrap of every Q1/Q2 statistic (same resampled cases for every statistic and model).
 
     Cells of a case stay together; consecutive days are serially correlated, so intervals are optimistic.
     """
+    statistic = statistic or difference_statistics
     n = stack.shape[0]
     if n < 2:
         return {}
     flat = stack.reshape(n, -1)
     shape = stack.shape[1:]
-    point = difference_statistics(stack.sum(axis=0), models)
+    point = statistic(stack.sum(axis=0), models)
     rng = np.random.default_rng(seed)
     draws = {key: [] for key in point}
     done = 0
@@ -168,7 +173,7 @@ def paired_bootstrap(stack: np.ndarray, models: list[str], *, repeats: int = REP
             weights[r] = np.bincount(rng.integers(0, n, size=n), minlength=n)
         sums = (weights @ flat).reshape(size, *shape)
         for r in range(size):
-            for key, value in difference_statistics(sums[r], models).items():
+            for key, value in statistic(sums[r], models).items():
                 draws[key].append(value)
         done += size
     result = {}
@@ -184,3 +189,74 @@ def paired_bootstrap(stack: np.ndarray, models: list[str], *, repeats: int = REP
             result[key] = {"status": "ok", "point": float(point[key]), "interval95": [low, high], "valid_draws": int(len(finite)),
                            "excludes_zero": bool(low > 0 or high < 0)}
     return result
+
+
+# ---------------------------------------------------------------------------
+# Stage 2: forecast-time forcing strength (docs/118; spec zone_stage2_spec_v1.json)
+# ---------------------------------------------------------------------------
+
+STRATA = ("weak", "middle", "strong")
+COMPONENTS = {"COASTAL": ("onshore",), "OROGRAPHIC": ("cross_barrier",), "COASTAL_AND_OROGRAPHIC": ("onshore", "cross_barrier")}
+Q3_DECISION = ("heavy_fb", "heavy_csi")
+Q3_DESCRIPTIVE = ("rmse", "bias")
+
+
+def resample_to_target(field: np.ndarray, context_lat: np.ndarray, context_lon: np.ndarray, target_lat: np.ndarray, target_lon: np.ndarray) -> np.ndarray:
+    """Bilinear resampling of one 51x81 context field to the flat 49x49 target-cell centres (no extrapolation)."""
+    from scipy.interpolate import RegularGridInterpolator
+
+    interpolator = RegularGridInterpolator((context_lat, context_lon), np.asarray(field, dtype=np.float64), method="linear", bounds_error=True)
+    lat, lon = np.meshgrid(target_lat, target_lon, indexing="ij")
+    return interpolator(np.stack([lat.ravel(), lon.ravel()], axis=-1))
+
+
+def forcing_fields(u850: np.ndarray, v850: np.ndarray, pwat: np.ndarray, geometry: dict[str, np.ndarray]) -> dict[str, np.ndarray]:
+    """Flat 2401-cell moisture-flux-proxy forcing from FORECAST fields and static geometry only.
+
+    The signature deliberately has no observation argument. ``u850``, ``v850`` and ``pwat`` are already on the target grid (flat);
+    ``geometry`` holds the static unit vectors (coast_landward_east/north, terrain_uphill_east/north).
+    """
+    onshore = np.maximum(0.0, u850 * geometry["coast_landward_east"] + v850 * geometry["coast_landward_north"])
+    cross = np.maximum(0.0, u850 * geometry["terrain_uphill_east"] + v850 * geometry["terrain_uphill_north"])
+    return {"onshore": onshore * pwat, "cross_barrier": cross * pwat}
+
+
+def tercile_cut_points(values: np.ndarray) -> dict:
+    values = np.asarray(values, dtype=np.float64)
+    values = values[np.isfinite(values)]
+    q1, q2 = (float(q) for q in np.quantile(values, [1 / 3, 2 / 3]))
+    return {"q33": q1, "q67": q2, "pairs": int(values.size), "degenerate": bool(q1 >= q2)}
+
+
+def stratum_masks(forcing: np.ndarray, zone_mask: np.ndarray, cuts: dict) -> dict[str, np.ndarray]:
+    """weak <= q33 < middle <= q67 < strong, restricted to the zone; the three strata partition the zone's cells."""
+    finite = np.isfinite(forcing)
+    return {"weak": zone_mask & finite & (forcing <= cuts["q33"]),
+            "middle": zone_mask & finite & (forcing > cuts["q33"]) & (forcing <= cuts["q67"]),
+            "strong": zone_mask & finite & (forcing > cuts["q67"])}
+
+
+def q3_statistics(totals: np.ndarray, models: list[str], keys: list[tuple[str, str]], names: list[str]) -> dict[tuple, float]:
+    """strong minus weak per (zone, component), model and metric; ``totals`` is [stratum, model, S] indexed by ``names``."""
+    index = {name: i for i, name in enumerate(names)}
+    out = {}
+    for zone, component in keys:
+        weak, strong = index[f"{zone}|{component}|weak"], index[f"{zone}|{component}|strong"]
+        for mi, model in enumerate(models):
+            for metric in (*Q3_DECISION, *Q3_DESCRIPTIVE):
+                out[("q3", f"{zone}|{component}", model, metric)] = _metric(totals[strong, mi], metric) - _metric(totals[weak, mi], metric)
+    return out
+
+
+def stratum_support(stack: np.ndarray, names: list[str]) -> dict:
+    """Stage 2 gate: >= 30 cases with a cell, >= 600 cell-case pairs and, for categorical scores, >= 30 observed events."""
+    totals = stack.sum(axis=0)
+    out = {}
+    for i, name in enumerate(names):
+        pairs = int(totals[i, 0, _idx("n")])
+        cases = int(np.count_nonzero(stack[:, i, 0, _idx("n")] > 0))
+        events = int(totals[i, 0, _idx("heavy_hits")] + totals[i, 0, _idx("heavy_misses")])
+        out[name] = {"cell_case_pairs": pairs, "cases": cases, "heavy_observed_event_pairs": events,
+                     "continuous_supported": bool(cases >= MIN_CASES and pairs >= MIN_CELLS * MIN_CASES),
+                     "heavy_supported": bool(cases >= MIN_CASES and pairs >= MIN_CELLS * MIN_CASES and events >= MIN_EVENT_PAIRS)}
+    return out

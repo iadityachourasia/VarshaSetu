@@ -1,0 +1,51 @@
+{
+  "files": {
+    "zone_stage2_A_2018.json": {
+      "cases": 251,
+      "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+      "reproduction": "REPRODUCED",
+      "sha256": "94ad160aa36bc8afe9f88412210a7a1c3551f6288b7423b42c30b685d5791d8f",
+      "track": "A",
+      "year": 2018
+    },
+    "zone_stage2_A_2019.json": {
+      "cases": 255,
+      "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+      "reproduction": "REPRODUCED",
+      "sha256": "2e1dc7206a6ba8195b7fea84da031db842680325c0efa099698c21f05387a18b",
+      "track": "A",
+      "year": 2019
+    },
+    "zone_stage2_B_2024.json": {
+      "cases": 183,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "reproduction": "REPRODUCED",
+      "sha256": "acb3982ffc39f7fdc100709d20d28aeb7dbcd056338ffb3fc817f02b5e98fa64",
+      "track": "B",
+      "year": 2024
+    },
+    "zone_stage2_B_2025.json": {
+      "cases": 232,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "reproduction": "REPRODUCED",
+      "sha256": "efca82822495fea939ef99b04e1cd46761be4b3565e2d86171563dc25fa205b6",
+      "track": "B",
+      "year": 2025
+    },
+    "zone_stage2_summary.json": {
+      "cases": null,
+      "evidence_role": "Q3_RULE_APPLICATION_DEVELOPMENT_PLUS_POST_HOC",
+      "reproduction": "n/a",
+      "sha256": "04459217e1318d9e9b1c66746aed92a167bcf9f3093adbce634cf856db77bdd5"
+    }
+  },
+  "notes": [
+    "Read-only re-aggregation of frozen artifacts; no model was trained, tuned or selected.",
+    "Consumed holdouts (Track A 2019, Track B 2025) are post-hoc descriptive analyses only.",
+    "Forcing uses forecast U850, V850, PWAT and static geometry only; cut-points come from the training year only."
+  ],
+  "protocol_sha256": "a9ff78173ddb6026e6b297c2da2128dde2fdcf825ae8b0c368c5f5fa79d199fd",
+  "schema": "phase7-zone-stage2-manifest-v1",
+  "spec_sha256": "3755e06cc48f04e553ac204ea6534de1c2856ff4e2f7d438186ebc5e11e133ff",
+  "static_geography_sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0"
+}

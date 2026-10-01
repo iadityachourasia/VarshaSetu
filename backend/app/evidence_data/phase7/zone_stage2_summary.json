@@ -1,0 +1,695 @@
+{
+  "rule": "Q3 analogue of the protocol rule: development interval of (strong - weak) excludes zero and the final-test point estimate has the same sign; decision metrics heavy frequency bias and heavy CSI; descriptive only, does not change the Stage 3 recommendation of Q1/Q2",
+  "tracks": {
+    "A": {
+      "caveat": "tests share cases and models and are strongly dependent; intervals are optimistic",
+      "development_significant": 15,
+      "development_year": 2018,
+      "expected_development_significant_by_chance": 1.2,
+      "expected_gaps_by_chance": 0.6,
+      "final_test_year": 2019,
+      "forcing_gaps": 15,
+      "rows": [
+        {
+          "development_interval95": [
+            0.030260316543262954,
+            0.1297342502792639
+          ],
+          "development_point": 0.08069961712495649,
+          "final_interval95": [
+            0.06954678794812907,
+            0.19323447527436924
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.13074574652748933,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.22804034501652953,
+            0.4304321677010883
+          ],
+          "development_point": 0.3242296918767507,
+          "final_interval95": [
+            0.13607008984643107,
+            0.2663060400545007
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.1999209798498617,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.04737120751964691,
+            0.11634104703348926
+          ],
+          "development_point": 0.08118925100057175,
+          "final_interval95": [
+            0.06758210223466163,
+            0.14388802207464996
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.103962195565249,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.0709572855427991,
+            0.16326357096141264
+          ],
+          "development_point": 0.1134453781512605,
+          "final_interval95": [
+            0.027755979506603728,
+            0.09497719514244442
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.05887001185302252,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.017769362243827854,
+            0.07112105818670691
+          ],
+          "development_point": 0.04262295081967213,
+          "final_interval95": [
+            0.007830976250907286,
+            0.035740655489758924
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.02095238095238095,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.06820545483636722,
+            0.16187784030737237
+          ],
+          "development_point": 0.11274509803921569,
+          "final_interval95": [
+            0.024789675595638713,
+            0.08538868614567749
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.05294350059265113,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M4",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.01674919482590405,
+            0.07036536279733824
+          ],
+          "development_point": 0.0419672131147541,
+          "final_interval95": [
+            0.007033468019008354,
+            0.03232528861527614
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.018730886850152905,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            -1.7002964977964976,
+            -0.3282958769780761
+          ],
+          "development_point": -0.8420081210778887,
+          "final_interval95": [
+            -0.6700470234393017,
+            0.04798811138493731
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.2693192753441279,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M0",
+          "same_sign": true,
+          "stratum": "OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.011514192404078862,
+            0.07593737717984397
+          ],
+          "development_point": 0.042679961089494164,
+          "final_interval95": [
+            0.007653467278371253,
+            0.10244858706731573
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.05794565956482321,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "same_sign": true,
+          "stratum": "OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.029583616972997502,
+            0.13069601990049734
+          ],
+          "development_point": 0.07671957671957672,
+          "final_interval95": [
+            0.013840442356905569,
+            0.07040739068062268
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.038910505836575876,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.009257839127471029,
+            0.0830945558739255
+          ],
+          "development_point": 0.04092071611253197,
+          "final_interval95": [
+            0.0,
+            0.025029797377830752
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.01008827238335435,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.0075728792499197,
+            0.09815548028925006
+          ],
+          "development_point": 0.051924281453643445,
+          "final_interval95": [
+            -0.005859089986709984,
+            0.10871181845042724
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.05095360887440095,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M0",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.018127432727060796,
+            0.07892993779331309
+          ],
+          "development_point": 0.04908976372201731,
+          "final_interval95": [
+            0.017422212817644257,
+            0.09077879881538686
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.05362211872339018,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            -0.04936399782144915,
+            -0.00999020812822918
+          ],
+          "development_point": -0.029647685179423997,
+          "final_interval95": [
+            -0.04451896720846763,
+            -0.006268706077764541
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.024092003794974087,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            -0.03417980505776628,
+            -0.0021342962740164904
+          ],
+          "development_point": -0.01807888469775162,
+          "final_interval95": [
+            -0.02401139517244955,
+            0.004400060613276004
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.009094662855622285,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        }
+      ],
+      "tests": 24
+    },
+    "B": {
+      "caveat": "tests share cases and models and are strongly dependent; intervals are optimistic",
+      "development_significant": 22,
+      "development_year": 2024,
+      "expected_development_significant_by_chance": 2.0,
+      "expected_gaps_by_chance": 1.0,
+      "final_test_year": 2025,
+      "forcing_gaps": 19,
+      "rows": [
+        {
+          "development_interval95": [
+            0.02346866621098454,
+            0.15592363945779228
+          ],
+          "development_point": 0.09104646926338103,
+          "final_interval95": [
+            -0.01617201654709748,
+            0.07812111906345458
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.032460092885922553,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.12848592132291317,
+            0.6972362261392302
+          ],
+          "development_point": 0.44628665681297264,
+          "final_interval95": [
+            0.03643230549293062,
+            0.34607598957474733
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.20201520522494384,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.14150670532127826,
+            0.26112037969684443
+          ],
+          "development_point": 0.20045209199986247,
+          "final_interval95": [
+            0.07499885372201028,
+            0.20414418654668726
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.13938786779206436,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.02112932352907418,
+            0.6720092656088581
+          ],
+          "development_point": 0.37229826703510915,
+          "final_interval95": [
+            0.03953398883448723,
+            0.3803883397647977
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.21397193758334954,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.13284809599366496,
+            0.27271395538500315
+          ],
+          "development_point": 0.20234757040862592,
+          "final_interval95": [
+            0.070764844652059,
+            0.1821887832515778
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.12642215640934995,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.1300911149331331,
+            0.26645329039119525
+          ],
+          "development_point": 0.19899688213414715,
+          "final_interval95": [
+            0.08305378665880209,
+            0.20263135575874902
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.14369251781929124,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "same_sign": true,
+          "stratum": "COASTAL|onshore"
+        },
+        {
+          "development_interval95": [
+            0.023235465059846364,
+            0.09664837283510416
+          ],
+          "development_point": 0.0559640522875817,
+          "final_interval95": [
+            0.0,
+            0.04260294761019358
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.016359918200409,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.02790199753968719,
+            0.11675514918014825
+          ],
+          "development_point": 0.06595744680851064,
+          "final_interval95": [
+            -0.002359000463789016,
+            0.05987006658860615
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.024729891956782712,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.02610691906005222,
+            0.10998133873844024
+          ],
+          "development_point": 0.06170212765957447,
+          "final_interval95": [
+            -0.006244051741068248,
+            0.049343446998326865
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.018738977072310405,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "same_sign": true,
+          "stratum": "OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.016410636605172356,
+            0.0780157836768655
+          ],
+          "development_point": 0.04704656300804535,
+          "final_interval95": [
+            -0.042232922890675394,
+            0.005973562436304279
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.01701224421510503,
+          "forcing_gap": false,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "same_sign": false,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.22991857060811444,
+            0.4113140296117759
+          ],
+          "development_point": 0.31866440435051685,
+          "final_interval95": [
+            0.03261146382510578,
+            0.1496196987043231
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.08791226254040899,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.09621933963371576,
+            0.20890206665320896
+          ],
+          "development_point": 0.1523005794737657,
+          "final_interval95": [
+            0.006139805176150588,
+            0.08235364168789444
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.04475201310644348,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.24764890151505045,
+            0.4556963264770528
+          ],
+          "development_point": 0.3472554610949729,
+          "final_interval95": [
+            0.07336445989493309,
+            0.24283269499721918
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.1533339689804221,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.08283908668061346,
+            0.18622406353537038
+          ],
+          "development_point": 0.13372489579386135,
+          "final_interval95": [
+            0.02721500369555851,
+            0.11562742885993764
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.07210203156286513,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.24077104462063464,
+            0.450167729809848
+          ],
+          "development_point": 0.34199054209714336,
+          "final_interval95": [
+            0.06077333655568824,
+            0.20945220854263089
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.13137690240092986,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M4",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.08706539026651049,
+            0.19019333537006952
+          ],
+          "development_point": 0.13779691895956495,
+          "final_interval95": [
+            0.02966997955220288,
+            0.11888345550034574
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.07494310408115593,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|onshore"
+        },
+        {
+          "development_interval95": [
+            0.04019702446774261,
+            0.08589323182140775
+          ],
+          "development_point": 0.06192660550458716,
+          "final_interval95": [
+            -0.10648424045863451,
+            0.029300782733513747
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.03117268678871845,
+          "forcing_gap": false,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "same_sign": false,
+          "stratum": "COASTAL_AND_OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.005935252503463053,
+            0.0261319186598739
+          ],
+          "development_point": 0.015001973943939992,
+          "final_interval95": [
+            -0.10536427358218242,
+            0.022454461098450253
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.023500893962316048,
+          "forcing_gap": false,
+          "metric": "heavy_csi",
+          "model": "M1",
+          "same_sign": false,
+          "stratum": "COASTAL_AND_OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.2026523810026467,
+            0.3160753653827697
+          ],
+          "development_point": 0.26217110689541406,
+          "final_interval95": [
+            0.06262592975351865,
+            0.13512938778196185
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.09810587663914522,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.3766102160750433,
+            0.7504662405104963
+          ],
+          "development_point": 0.5955222166940947,
+          "final_interval95": [
+            0.044445351392922564,
+            0.2841738352217559
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.1737506059280453,
+          "forcing_gap": true,
+          "metric": "heavy_fb",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.25411195269896814,
+            0.3521906713505074
+          ],
+          "development_point": 0.3030686491616577,
+          "final_interval95": [
+            -0.05503081573705828,
+            0.14684131490331262
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.0589819813052017,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|cross_barrier"
+        },
+        {
+          "development_interval95": [
+            0.24556556864426188,
+            0.3427948978591686
+          ],
+          "development_point": 0.29383583519642287,
+          "final_interval95": [
+            -0.035298789750621506,
+            0.14177262106380809
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.062444544249581006,
+          "forcing_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "same_sign": true,
+          "stratum": "COASTAL_AND_OROGRAPHIC|cross_barrier"
+        }
+      ],
+      "tests": 40
+    }
+  }
+}
