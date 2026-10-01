@@ -40,3 +40,16 @@ The single failure is `demo-flow.spec.ts:4`, which predates this work (duplicate
 The page reads only the four frozen populations; the map is an SVG of the 49 by 49 grid (no basemap), so it is independent of any tile service; the terrain attribution travels with the data. Zone-level evidence for 2023 and for other regions does not exist.
 
 Gate: `P0_7_STAGES_0_2_SERVED`.
+
+## Pre-push container verification (2026-10-01)
+
+The committed Dockerfile was built and run as Render would (Linux, Debian 13, Python 3.12, 512 MB memory cap) with the real `serving-data-v1` bundle (200,680,777 bytes, gzip integrity verified).
+
+| Check | Result |
+|---|---|
+| Image build from the committed Dockerfile | Every step before the bundle download succeeded. The download itself failed once from this machine with a connection reset (curl exit 56, slow network); the bundle was then fetched on the host with resume and retries and the image built with only that step replaced by a copy of the local file. The download step is therefore verified as far as the file and extraction go, not as a single uninterrupted network call. The Dockerfile has no retry flags, so a flaky network at deploy time can fail a Render build; adding `--retry` is a recommended, unmade change |
+| Health check `/api/science/status` | healthy about 4 s after start; 135 MiB at start, 169 MiB after the smoke run, no errors in the logs |
+| HTTP smoke test of 21 requests (all five new zone endpoints for all four populations, `ps-coverage`, regime and district verification, manifest, 2025 cases, district list, compare and history for 2024 and 2025, a structured 404) | 21 of 21 passed, each response under 0.15 s |
+| Backend tests inside the container (zone, evidence, operational, phase 2C, district modules) | 175 passed, 3 failed: tests that read the raw boundary source file under `data/static`, which the image does not ship; the runtime never reads it, and one of the three also fails on the deployed commit |
+
+Not covered: the free tier's actual CPU and build-time limits, and Render/Vercel auto-deploy behaviour.
