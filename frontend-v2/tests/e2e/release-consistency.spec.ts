@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { BASEMAP_SKIP_REASON, basemapReachable } from "./helpers/online";
 
 const primary = "20190802T000000Z_day3_24h";
 const casePath = "/api/science/cases/" + primary;
@@ -39,6 +40,7 @@ test("scientific display is consistent with the frozen API", async ({ page, requ
 });
 
 test("online vector geography loads from the official provider", async ({ page }) => {
+  test.skip(!(await basemapReachable()), BASEMAP_SKIP_REASON);
   const tiles: number[] = [];
   const missingSprites: string[] = [];
   page.on("console", (message) => { if (message.text().includes('Image "circle-11" could not be loaded')) missingSprites.push(message.text()); });

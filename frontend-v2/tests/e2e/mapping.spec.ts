@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { BASEMAP_SKIP_REASON, basemapReachable } from "./helpers/online";
 
 test("forecast cartography controls preserve exact scientific inspection", async ({ page }, testInfo) => {
   const errors: string[] = [];
@@ -51,6 +52,7 @@ test("district selection and online-style fallback retain local geometry", async
 });
 
 test("district labels persist across desktop map pages and widths", async ({ page }, testInfo) => {
+  test.skip(!(await basemapReachable()), BASEMAP_SKIP_REASON);
   test.setTimeout(240_000); // Nine tile/glyph-backed screenshots; allow public basemap latency.
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
@@ -74,6 +76,7 @@ test("district labels persist across desktop map pages and widths", async ({ pag
 });
 
 test("scientific map routes fit tablet and mobile viewports", async ({ page }, testInfo) => {
+  test.skip(!(await basemapReachable()), BASEMAP_SKIP_REASON);
   for (const [width, height] of [[834, 1112], [390, 844]]) {
     await page.setViewportSize({ width, height });
     for (const route of ["/forecast", "/extremes", "/districts"]) {
