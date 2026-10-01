@@ -27,7 +27,12 @@ COPY backend/ backend/
 # --retry/--retry-all-errors/-C -: a connection reset mid-download (curl exit 56) otherwise fails the whole build; with these flags curl
 # retries and resumes from the partial file. The bundle is immutable, so resuming cannot mix versions.
 ARG DATA_BUNDLE_URL=https://github.com/iadityachourasia/VarshaSetu/releases/download/serving-data-v1/varshasetu-serving-data-v1.tar.gz
+# The bundle is verified against its pinned SHA-256 (also published by GitHub as the release asset digest) before it is extracted:
+# a truncated, tampered or substituted download fails the build instead of shipping unverified science artifacts.
+# Overriding DATA_BUNDLE_URL requires overriding DATA_BUNDLE_SHA256 together.
+ARG DATA_BUNDLE_SHA256=f5904aa9c8b1b96fb124b96396e854e3df840daa85efe05c20031e55fa22b262
 RUN curl -fL --retry 8 --retry-delay 5 --retry-all-errors -C - "$DATA_BUNDLE_URL" -o /tmp/data.tar.gz \
+    && echo "${DATA_BUNDLE_SHA256}  /tmp/data.tar.gz" | sha256sum -c - \
     && tar --no-same-owner --no-same-permissions -xzf /tmp/data.tar.gz -C /app \
     && rm /tmp/data.tar.gz
 

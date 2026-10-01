@@ -54,7 +54,7 @@ published as an immutable GitHub Release asset:
 https://github.com/iadityachourasia/VarshaSetu/releases/download/serving-data-v1/varshasetu-serving-data-v1.tar.gz
 ```
 
-sha256: `f5904aa9c8b1b96fb124b96396e854e3df840daa85efe05c20031e55fa22b26`
+sha256: `f5904aa9c8b1b96fb124b96396e854e3df840daa85efe05c20031e55fa22b262`
 (recorded in the release notes; re-derive with `sha256sum` on the six
 directories' tarball to confirm nothing was altered before re-publishing).
 The `Dockerfile` downloads and extracts this at **build time** (baked into
