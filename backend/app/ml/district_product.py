@@ -70,3 +70,23 @@ def aggregate_operational_districts(districts: list[dict], weights: np.ndarray, 
                "observed_very_heavy_area_fraction": float(q @ (oa >= VERY_HEAVY_MM))}
         result.append(row)
     return result
+
+
+def district_case_means(weights_row: np.ndarray, *, raw: np.ndarray, corrected: np.ndarray, observed: np.ndarray) -> dict | None:
+    """Area-weighted raw / corrected / observed means for ONE district in ONE case.
+
+    Same validity rule and weighting as :func:`aggregate_operational_districts` (a cell contributes only when its
+    weight is > 0 and raw, corrected and observed are all finite); returns None when the district has no valid cell.
+    """
+    arrays = [np.asarray(x, dtype=float).ravel() for x in (raw, corrected, observed)]
+    if weights_row.shape != (GRID_CELLS,) or any(len(x) != GRID_CELLS for x in arrays):
+        raise ValueError("district aggregation shape mismatch")
+    valid = np.logical_and.reduce([np.isfinite(x) for x in arrays])
+    active = (weights_row > 0) & valid
+    total = float(weights_row[active].sum())
+    if total == 0:
+        return None
+    q = weights_row[active] / total
+    r, c, o = (x[active] for x in arrays)
+    return {"valid_grid_cells": int(active.sum()), "raw_mean_mm": float(q @ r), "corrected_mean_mm": float(q @ c),
+            "observed_mean_mm": float(q @ o)}

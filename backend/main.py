@@ -13,10 +13,12 @@ try:
     from backend.app.api.routes import router as api_router
     from backend.app.api.science import router as science_router
     from backend.app.api.operational import router as operational_router
+    from backend.app.api.evidence import router as evidence_router
 except ModuleNotFoundError:
     from app.api.routes import router as api_router
     from app.api.science import router as science_router
     from app.api.operational import router as operational_router
+    from app.api.evidence import router as evidence_router
 
 app = FastAPI(
     title="VarshaSetu API",
@@ -40,6 +42,7 @@ app.add_middleware(
 app.include_router(api_router, prefix="/api")
 app.include_router(science_router, prefix="/api")
 app.include_router(operational_router, prefix="/api")
+app.include_router(evidence_router, prefix="/api")
 
 
 @app.exception_handler(HTTPException)

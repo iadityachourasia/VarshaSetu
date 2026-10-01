@@ -1,0 +1,5387 @@
+{
+  "bootstrap": {
+    "by_predicted_regime": {
+      "ACTIVE_MONSOON": {
+        "heavy": {
+          "M2_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.975,
+              "interval95": [
+                0.0003537329954144227,
+                0.07182838879744326
+              ],
+              "point": 0.03575738200330854,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.973,
+              "interval95": [
+                -0.0024448549810043986,
+                0.19061960607724557
+              ],
+              "point": 0.103584211224234,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.863,
+              "interval95": [
+                -0.05381796170032366,
+                0.15669614802684131
+              ],
+              "point": 0.061802753326940185,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.6915,
+              "interval95": [
+                -0.01979373284428222,
+                0.03431251557039664
+              ],
+              "point": 0.007625313773978296,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.683,
+              "interval95": [
+                -0.06398017510449283,
+                0.09940669035375052
+              ],
+              "point": 0.022268156719710164,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.369,
+              "interval95": [
+                -0.1364500953676965,
+                0.0788157540634564
+              ],
+              "point": -0.018795342187257535,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.0575,
+              "interval95": [
+                -0.062344542968729266,
+                0.006497324837122441
+              ],
+              "point": -0.028132068229330245,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.058,
+              "interval95": [
+                -0.17570032674307237,
+                0.019108772411381366
+              ],
+              "point": -0.08131605450452384,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.1195,
+              "interval95": [
+                -0.20591891734735163,
+                0.0560562376112252
+              ],
+              "point": -0.08059809551419772,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M4": {
+            "CSI": {
+              "fraction_positive": 0.303,
+              "interval95": [
+                -0.014403424593916593,
+                0.011626813928758832
+              ],
+              "point": -0.002991702250737485,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.2245,
+              "interval95": [
+                -0.046286833243998224,
+                0.025513778004821866
+              ],
+              "point": -0.013617852018260823,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.453,
+              "interval95": [
+                -0.04861078486962941,
+                0.053724704171447986
+              ],
+              "point": -0.0014382113118069917,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.7565,
+              "interval95": [
+                -0.013701195514583186,
+                0.037745578287388115
+              ],
+              "point": 0.010617016024715781,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.7845,
+              "interval95": [
+                -0.03950329601176723,
+                0.11153045335463779
+              ],
+              "point": 0.03588600873797099,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.3435,
+              "interval95": [
+                -0.11207508949791685,
+                0.07372375811538438
+              ],
+              "point": -0.017357130875450544,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.024,
+              "interval95": [
+                -0.05369326754345362,
+                -0.0002576346695254604
+              ],
+              "point": -0.02514036597859276,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.032,
+              "interval95": [
+                -0.14329312175358397,
+                0.005815068169275848
+              ],
+              "point": -0.06769820248626301,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0515,
+              "interval95": [
+                -0.1753004303007241,
+                0.015548800906846436
+              ],
+              "point": -0.07915988420239073,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          }
+        },
+        "very_heavy": {
+          "M2_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.01620980139454377,
+                0.0
+              ],
+              "point": -0.005917159763313609,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.08545768754151908,
+                0.0
+              ],
+              "point": -0.030532049522729587,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.1558925981973243,
+                -3.5486827712122333e-06
+              ],
+              "point": -0.06011034548845573,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.01620980139454377,
+                0.0
+              ],
+              "point": -0.005917159763313609,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.08545768754151908,
+                0.0
+              ],
+              "point": -0.030532049522729587,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.1558925981973243,
+                -3.5486827712122333e-06
+              ],
+              "point": -0.06011034548845573,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M4": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.01620980139454377,
+                0.0
+              ],
+              "point": -0.005917159763313609,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.08545768754151908,
+                0.0
+              ],
+              "point": -0.030532049522729587,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.1558925981973243,
+                -3.5486827712122333e-06
+              ],
+              "point": -0.06011034548845573,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          }
+        }
+      },
+      "BREAK_WEAK_MONSOON": {
+        "heavy": {
+          "M2_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.03737614494974104,
+                -0.0033717670852748335
+              ],
+              "point": -0.020076481835564052,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.14259321386770996,
+                -0.022465182937438013
+              ],
+              "point": -0.08065356177097704,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.22615207754653355,
+                -0.05060458287590788
+              ],
+              "point": -0.1196309812728158,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.03737614494974104,
+                -0.0033717670852748335
+              ],
+              "point": -0.020076481835564052,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.14259321386770996,
+                -0.022465182937438013
+              ],
+              "point": -0.08065356177097704,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.22615207754653355,
+                -0.05060458287590788
+              ],
+              "point": -0.1196309812728158,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M4": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.03737614494974104,
+                -0.0033717670852748335
+              ],
+              "point": -0.020076481835564052,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.14259321386770996,
+                -0.022465182937438013
+              ],
+              "point": -0.08065356177097704,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.22615207754653355,
+                -0.05060458287590788
+              ],
+              "point": -0.1196309812728158,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          }
+        },
+        "very_heavy": {
+          "M2_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M4": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                0.0,
+                0.0
+              ],
+              "point": 0.0,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          }
+        }
+      },
+      "LOW_DEPRESSION_INFLUENCED": {
+        "heavy": {
+          "M2_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.767,
+              "interval95": [
+                -0.04351790436446306,
+                0.08385845262462235
+              ],
+              "point": 0.022339643076792717,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.741,
+              "interval95": [
+                -0.10691381939093528,
+                0.2043286869852621
+              ],
+              "point": 0.05138451209167805,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.322,
+              "interval95": [
+                -0.26118089823012625,
+                0.1613741783883231
+              ],
+              "point": -0.0498695688978269,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M0": {
+            "CSI": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.05181356259985978,
+                0.14354782603492153
+              ],
+              "point": 0.09791962318293447,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.1110811947998536,
+                0.3192284031037157
+              ],
+              "point": 0.213979611818359,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.9815,
+              "interval95": [
+                0.008909684103146314,
+                0.29441938967258696
+              ],
+              "point": 0.14750372708224635,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M2": {
+            "CSI": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.04157946231311285,
+                0.1186022656141523
+              ],
+              "point": 0.07557998010614175,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.08869977616681789,
+                0.25534489538744987
+              ],
+              "point": 0.16259509972668096,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.10293253547478769,
+                0.3109223848993584
+              ],
+              "point": 0.19737329598007325,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M4": {
+            "CSI": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.005438609161465135,
+                0.024218503570530674
+              ],
+              "point": 0.013815674696049995,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.009034970175933766,
+                0.04714698902170909
+              ],
+              "point": 0.025904876873495963,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.012362221671522275,
+                0.0679763714358783
+              ],
+              "point": 0.035106410329888815,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.9995,
+              "interval95": [
+                0.03457973480551958,
+                0.13296006862130383
+              ],
+              "point": 0.08410394848688447,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.9995,
+              "interval95": [
+                0.07365066890076181,
+                0.30080822473223917
+              ],
+              "point": 0.18807473494486304,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.9175,
+              "interval95": [
+                -0.04314704960716721,
+                0.27040670780722803
+              ],
+              "point": 0.11239731675235753,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M2": {
+            "CSI": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.03155158894179338,
+                0.09913023567607077
+              ],
+              "point": 0.06176430541009176,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.06954607501816357,
+                0.2193404485977435
+              ],
+              "point": 0.136690222853185,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 1.0,
+              "interval95": [
+                0.07960859132781599,
+                0.2638631781402971
+              ],
+              "point": 0.16226688565018443,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          }
+        },
+        "very_heavy": {
+          "M2_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.069,
+              "interval95": [
+                -0.10014026063267067,
+                0.0027472527472527475
+              ],
+              "point": -0.04295840746396201,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.035,
+              "interval95": [
+                -0.3210152092601804,
+                0.005058883241844076
+              ],
+              "point": -0.16642876003626406,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.027,
+              "interval95": [
+                -0.5503944514867064,
+                0.0012050296361434372
+              ],
+              "point": -0.3011852404565917,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.7595,
+              "interval95": [
+                -0.026504987953355368,
+                0.061241128610428824
+              ],
+              "point": 0.016469815004542726,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.7965,
+              "interval95": [
+                -0.09019477763365379,
+                0.14896673467433613
+              ],
+              "point": 0.05776645426141691,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.409,
+              "interval95": [
+                -0.18595094505023468,
+                0.08199161352882711
+              ],
+              "point": -0.02138438977842927,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.9855,
+              "interval95": [
+                0.0020199987805621608,
+                0.1563799664500716
+              ],
+              "point": 0.05942822246850474,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.9955,
+              "interval95": [
+                0.01941917133890744,
+                0.44998857392884567
+              ],
+              "point": 0.22419521429768097,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.9985,
+              "interval95": [
+                0.02239122655185026,
+                0.554191825067528
+              ],
+              "point": 0.2798008506781624,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M3_minus_M4": {
+            "CSI": {
+              "fraction_positive": 0.9855,
+              "interval95": [
+                0.0021874748925994015,
+                0.08440937163841072
+              ],
+              "point": 0.03611138336219195,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.9855,
+              "interval95": [
+                0.010525858710301051,
+                0.21433909037872811
+              ],
+              "point": 0.12846656596820227,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.995,
+              "interval95": [
+                0.009083086519710506,
+                0.27421034856855986
+              ],
+              "point": 0.1647453417880992,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M0": {
+            "CSI": {
+              "fraction_positive": 0.0,
+              "interval95": [
+                -0.04183505058125768,
+                0.0
+              ],
+              "point": -0.01964156835764922,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.044,
+              "interval95": [
+                -0.13889946321695518,
+                0.008984421766620981
+              ],
+              "point": -0.07070011170678536,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.042,
+              "interval95": [
+                -0.2916779632400923,
+                0.012494617272287145
+              ],
+              "point": -0.18612973156652846,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          },
+          "M4_minus_M2": {
+            "CSI": {
+              "fraction_positive": 0.645,
+              "interval95": [
+                -0.005604230328495034,
+                0.07344632768361582
+              ],
+              "point": 0.02331683910631279,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_3x3": {
+              "fraction_positive": 0.869,
+              "interval95": [
+                -0.012332130308887787,
+                0.24052518676725504
+              ],
+              "point": 0.0957286483294787,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            },
+            "FSS_9x9": {
+              "fraction_positive": 0.895,
+              "interval95": [
+                -0.012230279801733916,
+                0.28140886013932837
+              ],
+              "point": 0.11505550889006322,
+              "repeats": 2000,
+              "seed": 26080,
+              "status": "ok",
+              "valid_draws": 2000
+            }
+          }
+        }
+      }
+    },
+    "overall": {
+      "heavy": {
+        "M2_minus_M0": {
+          "CSI": {
+            "fraction_positive": 0.9385,
+            "interval95": [
+              -0.006922956195160838,
+              0.05534705518965042
+            ],
+            "point": 0.024962771942593498,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.9235,
+            "interval95": [
+              -0.027247441430013977,
+              0.14690635810901553
+            ],
+            "point": 0.06519176932378234,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.4285,
+            "interval95": [
+              -0.13106817293162415,
+              0.09716637375622168
+            ],
+            "point": -0.010589474772844332,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3_minus_M0": {
+          "CSI": {
+            "fraction_positive": 0.999,
+            "interval95": [
+              0.02011359584480906,
+              0.07063250540971792
+            ],
+            "point": 0.04590700201947236,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.9985,
+            "interval95": [
+              0.05064794893836959,
+              0.18053556688922437
+            ],
+            "point": 0.11772951888772087,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.91,
+            "interval95": [
+              -0.024052024203745116,
+              0.1379994082523308
+            ],
+            "point": 0.05808125389986529,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3_minus_M2": {
+          "CSI": {
+            "fraction_positive": 0.9465,
+            "interval95": [
+              -0.004625270936294719,
+              0.04584448391023543
+            ],
+            "point": 0.02094423007687886,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.9365,
+            "interval95": [
+              -0.013679461086921191,
+              0.11733741350973576
+            ],
+            "point": 0.05253774956393853,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.943,
+            "interval95": [
+              -0.017664022857571092,
+              0.1514711972966826
+            ],
+            "point": 0.06867072867270962,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3_minus_M4": {
+          "CSI": {
+            "fraction_positive": 0.941,
+            "interval95": [
+              -0.0013492378276454646,
+              0.013093139081185798
+            ],
+            "point": 0.005528469437269742,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.8975,
+            "interval95": [
+              -0.006395322951063428,
+              0.02843833554986457
+            ],
+            "point": 0.011010376262615806,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.954,
+            "interval95": [
+              -0.003279963350237522,
+              0.04406804164533484
+            ],
+            "point": 0.01988090323167646,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4_minus_M0": {
+          "CSI": {
+            "fraction_positive": 0.998,
+            "interval95": [
+              0.015419562321250769,
+              0.06571643663056106
+            ],
+            "point": 0.040378532582202614,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.997,
+            "interval95": [
+              0.039894497868705595,
+              0.17013728603113798
+            ],
+            "point": 0.10671914262510507,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.8115,
+            "interval95": [
+              -0.04866913880180355,
+              0.12391579939241126
+            ],
+            "point": 0.03820035066818883,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4_minus_M2": {
+          "CSI": {
+            "fraction_positive": 0.927,
+            "interval95": [
+              -0.006396199026301651,
+              0.0357891543017596
+            ],
+            "point": 0.015415760639609116,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.928,
+            "interval95": [
+              -0.015911497912646923,
+              0.09604035538104208
+            ],
+            "point": 0.04152737330132272,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.908,
+            "interval95": [
+              -0.021841233065113673,
+              0.11933221444405745
+            ],
+            "point": 0.04878982544103316,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "very_heavy": {
+        "M2_minus_M0": {
+          "CSI": {
+            "fraction_positive": 0.015,
+            "interval95": [
+              -0.04411471140955355,
+              -0.0007004682221998489
+            ],
+            "point": -0.019046898907589937,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.007,
+            "interval95": [
+              -0.17204045714555416,
+              -0.008768609998130708
+            ],
+            "point": -0.08321838016545324,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.003,
+            "interval95": [
+              -0.3301676844380077,
+              -0.01965833533338761
+            ],
+            "point": -0.16776455189263195,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3_minus_M0": {
+          "CSI": {
+            "fraction_positive": 0.613,
+            "interval95": [
+              -0.012550715926742636,
+              0.02098613559791807
+            ],
+            "point": 0.0026276584259958997,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.592,
+            "interval95": [
+              -0.053341045009429905,
+              0.0677605907379794
+            ],
+            "point": 0.007274784343275553,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.1025,
+            "interval95": [
+              -0.11807382131848174,
+              0.019100853980073343
+            ],
+            "point": -0.04554733182869297,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3_minus_M2": {
+          "CSI": {
+            "fraction_positive": 0.987,
+            "interval95": [
+              0.0006743154064432342,
+              0.06293108211597416
+            ],
+            "point": 0.021674557333585837,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.9955,
+            "interval95": [
+              0.00622132471740528,
+              0.22579620507829865
+            ],
+            "point": 0.0904931645087288,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.999,
+            "interval95": [
+              0.007659891917480505,
+              0.2989963180159745
+            ],
+            "point": 0.12221722006393898,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3_minus_M4": {
+          "CSI": {
+            "fraction_positive": 0.987,
+            "interval95": [
+              0.00072992700729927,
+              0.03526517272130243
+            ],
+            "point": 0.013413542968613114,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.987,
+            "interval95": [
+              0.003517663645790564,
+              0.12124880897452163
+            ],
+            "point": 0.05449862418604379,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.9975,
+            "interval95": [
+              0.0032180929492343635,
+              0.16650183004256908
+            ],
+            "point": 0.07547192191689955,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4_minus_M0": {
+          "CSI": {
+            "fraction_positive": 0.0,
+            "interval95": [
+              -0.02100631667099752,
+              -0.0016232733593446774
+            ],
+            "point": -0.010785884542617214,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.0095,
+            "interval95": [
+              -0.08561515975226054,
+              -0.005868804149719454
+            ],
+            "point": -0.047223839842768234,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.007,
+            "interval95": [
+              -0.21206332802441105,
+              -0.014379529318824165
+            ],
+            "point": -0.12101925374559253,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4_minus_M2": {
+          "CSI": {
+            "fraction_positive": 0.6435,
+            "interval95": [
+              -0.0018951031988709867,
+              0.027928534279404872
+            ],
+            "point": 0.008261014364972723,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_3x3": {
+            "fraction_positive": 0.8715,
+            "interval95": [
+              -0.004127242653404015,
+              0.10648531486500523
+            ],
+            "point": 0.03599454032268501,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "FSS_9x9": {
+            "fraction_positive": 0.8955,
+            "interval95": [
+              -0.0045070594846022384,
+              0.1346641201900818
+            ],
+            "point": 0.04674529814703943,
+            "repeats": 2000,
+            "seed": 26080,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      }
+    }
+  },
+  "by_lead_day": {
+    "day1": {
+      "case_count": 75,
+      "categorical": {
+        "heavy": {
+          "M0": {
+            "CSI": 0.05046948356807512,
+            "ETS": 0.04648265361581195,
+            "FAR": 0.7261146496815286,
+            "POD": 0.058265582655826556,
+            "false_alarms": 342,
+            "forecast_event_count": 471,
+            "hits": 129,
+            "misses": 2085,
+            "observed_event_count": 2214,
+            "sample_count": 97575
+          },
+          "M1": {
+            "CSI": 0.025283347863993024,
+            "ETS": 0.023951065370566668,
+            "FAR": 0.5797101449275363,
+            "POD": 0.026196928635953028,
+            "false_alarms": 80,
+            "forecast_event_count": 138,
+            "hits": 58,
+            "misses": 2156,
+            "observed_event_count": 2214,
+            "sample_count": 97575
+          },
+          "M2": {
+            "CSI": 0.07801418439716312,
+            "ETS": 0.0747736192720844,
+            "FAR": 0.4945945945945946,
+            "POD": 0.08446251129177959,
+            "false_alarms": 183,
+            "forecast_event_count": 370,
+            "hits": 187,
+            "misses": 2027,
+            "observed_event_count": 2214,
+            "sample_count": 97575
+          },
+          "M3": {
+            "CSI": 0.07849550286181521,
+            "ETS": 0.07485670890934568,
+            "FAR": 0.5471698113207547,
+            "POD": 0.08672086720867209,
+            "false_alarms": 232,
+            "forecast_event_count": 424,
+            "hits": 192,
+            "misses": 2022,
+            "observed_event_count": 2214,
+            "sample_count": 97575
+          },
+          "M4": {
+            "CSI": 0.07337526205450734,
+            "ETS": 0.07031497187214619,
+            "FAR": 0.49421965317919075,
+            "POD": 0.07904245709123758,
+            "false_alarms": 171,
+            "forecast_event_count": 346,
+            "hits": 175,
+            "misses": 2039,
+            "observed_event_count": 2214,
+            "sample_count": 97575
+          }
+        },
+        "very_heavy": {
+          "M0": {
+            "CSI": 0.021825396825396824,
+            "ETS": 0.021282082583086642,
+            "FAR": 0.8166666666666667,
+            "POD": 0.024175824175824177,
+            "false_alarms": 49,
+            "forecast_event_count": 60,
+            "hits": 11,
+            "misses": 444,
+            "observed_event_count": 455,
+            "sample_count": 97575
+          },
+          "M1": {
+            "CSI": 0.004395604395604396,
+            "ETS": 0.004375197020703462,
+            "FAR": 0.0,
+            "POD": 0.004395604395604396,
+            "false_alarms": 0,
+            "forecast_event_count": 2,
+            "hits": 2,
+            "misses": 453,
+            "observed_event_count": 455,
+            "sample_count": 97575
+          },
+          "M2": {
+            "CSI": 0.0,
+            "ETS": -2.0407767375672127e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 2,
+            "forecast_event_count": 2,
+            "hits": 0,
+            "misses": 455,
+            "observed_event_count": 455,
+            "sample_count": 97575
+          },
+          "M3": {
+            "CSI": 0.00425531914893617,
+            "ETS": 0.004087343954851767,
+            "FAR": 0.8823529411764706,
+            "POD": 0.004395604395604396,
+            "false_alarms": 15,
+            "forecast_event_count": 17,
+            "hits": 2,
+            "misses": 453,
+            "observed_event_count": 455,
+            "sample_count": 97575
+          },
+          "M4": {
+            "CSI": 0.0,
+            "ETS": -4.063851139793019e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 4,
+            "forecast_event_count": 4,
+            "hits": 0,
+            "misses": 455,
+            "observed_event_count": 455,
+            "sample_count": 97575
+          }
+        }
+      },
+      "cell_count": 97575,
+      "continuous": {
+        "M0": {
+          "bias_mm": -1.1521911130992726,
+          "mae_mm": 7.537118392860393,
+          "rmse_mm": 15.59509262865482,
+          "sample_count": 97575
+        },
+        "M1": {
+          "bias_mm": -1.4969128272809655,
+          "mae_mm": 7.499179473326388,
+          "rmse_mm": 15.350118400039012,
+          "sample_count": 97575
+        },
+        "M2": {
+          "bias_mm": -0.8698228833188864,
+          "mae_mm": 7.545194151684868,
+          "rmse_mm": 15.000970149410069,
+          "sample_count": 97575
+        },
+        "M3": {
+          "bias_mm": 0.21387934054119778,
+          "mae_mm": 8.27354093274833,
+          "rmse_mm": 15.608382530712197,
+          "sample_count": 97575
+        },
+        "M4": {
+          "bias_mm": 0.21663181870780424,
+          "mae_mm": 8.1469261325689,
+          "rmse_mm": 15.285042612109816,
+          "sample_count": 97575
+        }
+      },
+      "fss": {
+        "heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 70,
+                "fss": 0.09608938547486034,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 70,
+                "fss": 0.04931972789115646,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 70,
+                "fss": 0.14473684210526316,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 70,
+                "fss": 0.1455648218347233,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 70,
+                "fss": 0.13671875,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.09608938547486034,
+              "M1": 0.04931972789115646,
+              "M2": 0.14473684210526316,
+              "M3": 0.1455648218347233,
+              "M4": 0.13671875,
+              "case_count": 70
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 70,
+                "fss": 0.17396109806646476,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 70,
+                "fss": 0.08964492115084322,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 70,
+                "fss": 0.23900802339512406,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 70,
+                "fss": 0.23714462994679986,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 70,
+                "fss": 0.2310414262724899,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.17396109806646476,
+              "M1": 0.08964492115084322,
+              "M2": 0.23900802339512406,
+              "M3": 0.23714462994679986,
+              "M4": 0.2310414262724899,
+              "case_count": 70
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 70,
+                "fss": 0.22760628563371887,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 70,
+                "fss": 0.11937121853635713,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 70,
+                "fss": 0.2663577200543089,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 70,
+                "fss": 0.26906495889068316,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 70,
+                "fss": 0.2564324366179862,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.22760628563371887,
+              "M1": 0.11937121853635713,
+              "M2": 0.2663577200543089,
+              "M3": 0.26906495889068316,
+              "M4": 0.2564324366179862,
+              "case_count": 70
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 70,
+                "fss": 0.31161507883155537,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 70,
+                "fss": 0.16186671084692772,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 70,
+                "fss": 0.2783599814424732,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 70,
+                "fss": 0.28289304111514857,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 70,
+                "fss": 0.2638764594457893,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.31161507883155537,
+              "M1": 0.16186671084692772,
+              "M2": 0.2783599814424732,
+              "M3": 0.28289304111514857,
+              "M4": 0.2638764594457893,
+              "case_count": 70
+            }
+          }
+        },
+        "very_heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 45,
+                "fss": 0.042718446601941795,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 44,
+                "fss": 0.008752735229759279,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 45,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 46,
+                "fss": 0.008474576271186418,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 45,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.04322200392927311,
+              "M1": 0.008752735229759279,
+              "M2": 0.0,
+              "M3": 0.008639308855291628,
+              "M4": 0.0,
+              "case_count": 44
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 45,
+                "fss": 0.10555807308443088,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 44,
+                "fss": 0.011631664202522818,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 45,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 46,
+                "fss": 0.022307422260317455,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 45,
+                "fss": 0.0027201392697352444,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.10661627932572115,
+              "M1": 0.011631664202522818,
+              "M2": 0.0,
+              "M3": 0.02274207808784645,
+              "M4": 0.0027299993768308273,
+              "case_count": 44
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 45,
+                "fss": 0.15058588703729436,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 44,
+                "fss": 0.009715701091237428,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 45,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 46,
+                "fss": 0.027172395496649404,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 45,
+                "fss": 0.004224577377972105,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.15179466667703023,
+              "M1": 0.009715701091237428,
+              "M2": 0.0,
+              "M3": 0.02757144528722477,
+              "M4": 0.004241037291167538,
+              "case_count": 44
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 45,
+                "fss": 0.2075485173446988,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 44,
+                "fss": 0.011347176821160598,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 45,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 46,
+                "fss": 0.022414060971955196,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 45,
+                "fss": 0.005078226193274693,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.2092509530722545,
+              "M1": 0.011347176821160598,
+              "M2": 0.0,
+              "M3": 0.02264241055087468,
+              "M4": 0.00509337209925087,
+              "case_count": 44
+            }
+          }
+        }
+      }
+    },
+    "day2": {
+      "case_count": 75,
+      "categorical": {
+        "heavy": {
+          "M0": {
+            "CSI": 0.055955235811350916,
+            "ETS": 0.05152719836954244,
+            "FAR": 0.7421731123388582,
+            "POD": 0.06669842782277274,
+            "false_alarms": 403,
+            "forecast_event_count": 543,
+            "hits": 140,
+            "misses": 1959,
+            "observed_event_count": 2099,
+            "sample_count": 97575
+          },
+          "M1": {
+            "CSI": 0.027576853526220614,
+            "ETS": 0.025928581817124683,
+            "FAR": 0.6494252873563219,
+            "POD": 0.02906145783706527,
+            "false_alarms": 113,
+            "forecast_event_count": 174,
+            "hits": 61,
+            "misses": 2038,
+            "observed_event_count": 2099,
+            "sample_count": 97575
+          },
+          "M2": {
+            "CSI": 0.05821764442454098,
+            "ETS": 0.0558163491928543,
+            "FAR": 0.5075757575757576,
+            "POD": 0.06193425440686041,
+            "false_alarms": 134,
+            "forecast_event_count": 264,
+            "hits": 130,
+            "misses": 1969,
+            "observed_event_count": 2099,
+            "sample_count": 97575
+          },
+          "M3": {
+            "CSI": 0.10386965376782077,
+            "ETS": 0.09904611074156792,
+            "FAR": 0.5826513911620295,
+            "POD": 0.12148642210576464,
+            "false_alarms": 356,
+            "forecast_event_count": 611,
+            "hits": 255,
+            "misses": 1844,
+            "observed_event_count": 2099,
+            "sample_count": 97575
+          },
+          "M4": {
+            "CSI": 0.0984368398817068,
+            "ETS": 0.09431309838117895,
+            "FAR": 0.5349301397205589,
+            "POD": 0.1110052405907575,
+            "false_alarms": 268,
+            "forecast_event_count": 501,
+            "hits": 233,
+            "misses": 1866,
+            "observed_event_count": 2099,
+            "sample_count": 97575
+          }
+        },
+        "very_heavy": {
+          "M0": {
+            "CSI": 0.042283298097251586,
+            "ETS": 0.04169813835262089,
+            "FAR": 0.696969696969697,
+            "POD": 0.0468384074941452,
+            "false_alarms": 46,
+            "forecast_event_count": 66,
+            "hits": 20,
+            "misses": 407,
+            "observed_event_count": 427,
+            "sample_count": 97575
+          },
+          "M1": {
+            "CSI": 0.027586206896551724,
+            "ETS": 0.02739051693250058,
+            "FAR": 0.4,
+            "POD": 0.02810304449648712,
+            "false_alarms": 8,
+            "forecast_event_count": 20,
+            "hits": 12,
+            "misses": 415,
+            "observed_event_count": 427,
+            "sample_count": 97575
+          },
+          "M2": {
+            "CSI": 0.00234192037470726,
+            "ETS": 0.002331695744379249,
+            "FAR": 0.0,
+            "POD": 0.00234192037470726,
+            "false_alarms": 0,
+            "forecast_event_count": 1,
+            "hits": 1,
+            "misses": 426,
+            "observed_event_count": 427,
+            "sample_count": 97575
+          },
+          "M3": {
+            "CSI": 0.06711409395973154,
+            "ETS": 0.066657223617334,
+            "FAR": 0.4,
+            "POD": 0.0702576112412178,
+            "false_alarms": 20,
+            "forecast_event_count": 50,
+            "hits": 30,
+            "misses": 397,
+            "observed_event_count": 427,
+            "sample_count": 97575
+          },
+          "M4": {
+            "CSI": 0.029748283752860413,
+            "ETS": 0.02952476180525781,
+            "FAR": 0.43478260869565216,
+            "POD": 0.03044496487119438,
+            "false_alarms": 10,
+            "forecast_event_count": 23,
+            "hits": 13,
+            "misses": 414,
+            "observed_event_count": 427,
+            "sample_count": 97575
+          }
+        }
+      },
+      "cell_count": 97575,
+      "continuous": {
+        "M0": {
+          "bias_mm": -0.9249004807059975,
+          "mae_mm": 7.712465605072843,
+          "rmse_mm": 16.015040190018972,
+          "sample_count": 97575
+        },
+        "M1": {
+          "bias_mm": -0.9146409451942762,
+          "mae_mm": 7.543004705996902,
+          "rmse_mm": 15.278970727320178,
+          "sample_count": 97575
+        },
+        "M2": {
+          "bias_mm": -0.8876550666206687,
+          "mae_mm": 7.284062023311937,
+          "rmse_mm": 14.695521778821732,
+          "sample_count": 97575
+        },
+        "M3": {
+          "bias_mm": 0.19954561218200334,
+          "mae_mm": 7.841063452374594,
+          "rmse_mm": 15.016966778402493,
+          "sample_count": 97575
+        },
+        "M4": {
+          "bias_mm": 0.2829243246142834,
+          "mae_mm": 7.825484355552751,
+          "rmse_mm": 14.871081439145836,
+          "sample_count": 97575
+        }
+      },
+      "fss": {
+        "heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 68,
+                "fss": 0.10598031794095386,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 68,
+                "fss": 0.05367355917289929,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 68,
+                "fss": 0.11002962336013544,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 68,
+                "fss": 0.1881918819188192,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 68,
+                "fss": 0.1792307692307692,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.10598031794095386,
+              "M1": 0.05367355917289929,
+              "M2": 0.11002962336013544,
+              "M3": 0.1881918819188192,
+              "M4": 0.1792307692307692,
+              "case_count": 68
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 68,
+                "fss": 0.1799155499880849,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 68,
+                "fss": 0.09154126807309115,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 68,
+                "fss": 0.1836821035816535,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 68,
+                "fss": 0.31005881921869494,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 68,
+                "fss": 0.2940629091008864,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.1799155499880849,
+              "M1": 0.09154126807309115,
+              "M2": 0.1836821035816535,
+              "M3": 0.31005881921869494,
+              "M4": 0.2940629091008864,
+              "case_count": 68
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 68,
+                "fss": 0.21967539184109575,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 68,
+                "fss": 0.11174417958231386,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 68,
+                "fss": 0.20040423690876974,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 68,
+                "fss": 0.34452534960344094,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 68,
+                "fss": 0.3272612888820896,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.21967539184109575,
+              "M1": 0.11174417958231386,
+              "M2": 0.20040423690876974,
+              "M3": 0.34452534960344094,
+              "M4": 0.3272612888820896,
+              "case_count": 68
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 68,
+                "fss": 0.2735160329385038,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 68,
+                "fss": 0.1382342846907414,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 68,
+                "fss": 0.19831894680360662,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 68,
+                "fss": 0.3626545915697641,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 68,
+                "fss": 0.336182378527927,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.2735160329385038,
+              "M1": 0.1382342846907414,
+              "M2": 0.19831894680360662,
+              "M3": 0.3626545915697641,
+              "M4": 0.336182378527927,
+              "case_count": 68
+            }
+          }
+        },
+        "very_heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 36,
+                "fss": 0.08113590263691683,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 35,
+                "fss": 0.05369127516778527,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 35,
+                "fss": 0.004672897196261627,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 37,
+                "fss": 0.12578616352201255,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 36,
+                "fss": 0.05777777777777782,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.08146639511201625,
+              "M1": 0.05369127516778527,
+              "M2": 0.004672897196261627,
+              "M3": 0.128755364806867,
+              "M4": 0.05882352941176472,
+              "case_count": 35
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 36,
+                "fss": 0.16467499483051218,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 35,
+                "fss": 0.10891277186926984,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 35,
+                "fss": 0.007520843321161541,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 37,
+                "fss": 0.24057025331470694,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 36,
+                "fss": 0.10949306009281023,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.1649390535819012,
+              "M1": 0.10891277186926984,
+              "M2": 0.007520843321161541,
+              "M3": 0.2480699602557438,
+              "M4": 0.11290404637878315,
+              "case_count": 35
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 36,
+                "fss": 0.2357617213553591,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 35,
+                "fss": 0.15774189138579553,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 35,
+                "fss": 0.007878098348221951,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 37,
+                "fss": 0.29041082559764075,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 36,
+                "fss": 0.12551533814361027,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.23601283376229942,
+              "M1": 0.15774189138579553,
+              "M2": 0.007878098348221951,
+              "M3": 0.2987639432156075,
+              "M4": 0.1289969437311429,
+              "case_count": 35
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 36,
+                "fss": 0.32254039684947056,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 35,
+                "fss": 0.20654907907094366,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 35,
+                "fss": 0.008986501056460261,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 37,
+                "fss": 0.32105064869531585,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 36,
+                "fss": 0.13495125804757202,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.3228194186148158,
+              "M1": 0.20654907907094366,
+              "M2": 0.008986501056460261,
+              "M3": 0.32532426569144635,
+              "M4": 0.13643323238546057,
+              "case_count": 35
+            }
+          }
+        }
+      }
+    },
+    "day3": {
+      "case_count": 82,
+      "categorical": {
+        "heavy": {
+          "M0": {
+            "CSI": 0.038135593220338986,
+            "ETS": 0.03427949628364864,
+            "FAR": 0.7809330628803245,
+            "POD": 0.044135676338373515,
+            "false_alarms": 385,
+            "forecast_event_count": 493,
+            "hits": 108,
+            "misses": 2339,
+            "observed_event_count": 2447,
+            "sample_count": 106682
+          },
+          "M1": {
+            "CSI": 0.008658008658008658,
+            "ETS": 0.007618867268319579,
+            "FAR": 0.8103448275862069,
+            "POD": 0.008990600735594606,
+            "false_alarms": 94,
+            "forecast_event_count": 116,
+            "hits": 22,
+            "misses": 2425,
+            "observed_event_count": 2447,
+            "sample_count": 106682
+          },
+          "M2": {
+            "CSI": 0.08024224072672217,
+            "ETS": 0.07698075733418444,
+            "FAR": 0.47911547911547914,
+            "POD": 0.08663669799754802,
+            "false_alarms": 195,
+            "forecast_event_count": 407,
+            "hits": 212,
+            "misses": 2235,
+            "observed_event_count": 2447,
+            "sample_count": 106682
+          },
+          "M3": {
+            "CSI": 0.0980603448275862,
+            "ETS": 0.09350449838218344,
+            "FAR": 0.5524590163934426,
+            "POD": 0.11156518185533307,
+            "false_alarms": 337,
+            "forecast_event_count": 610,
+            "hits": 273,
+            "misses": 2174,
+            "observed_event_count": 2447,
+            "sample_count": 106682
+          },
+          "M4": {
+            "CSI": 0.09217774513404334,
+            "ETS": 0.0881297606781132,
+            "FAR": 0.523719165085389,
+            "POD": 0.10257458111973845,
+            "false_alarms": 276,
+            "forecast_event_count": 527,
+            "hits": 251,
+            "misses": 2196,
+            "observed_event_count": 2447,
+            "sample_count": 106682
+          }
+        },
+        "very_heavy": {
+          "M0": {
+            "CSI": 0.0,
+            "ETS": -0.0003899568495193205,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 45,
+            "forecast_event_count": 45,
+            "hits": 0,
+            "misses": 548,
+            "observed_event_count": 548,
+            "sample_count": 106682
+          },
+          "M1": {
+            "CSI": 0.0,
+            "ETS": -9.356666035490108e-06,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 1,
+            "forecast_event_count": 1,
+            "hits": 0,
+            "misses": 548,
+            "observed_event_count": 548,
+            "sample_count": 106682
+          },
+          "M2": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 548,
+            "observed_event_count": 548,
+            "sample_count": 106682
+          },
+          "M3": {
+            "CSI": 0.0017921146953405018,
+            "ETS": 0.0016910236070618505,
+            "FAR": 0.9090909090909091,
+            "POD": 0.0018248175182481751,
+            "false_alarms": 10,
+            "forecast_event_count": 11,
+            "hits": 1,
+            "misses": 547,
+            "observed_event_count": 548,
+            "sample_count": 106682
+          },
+          "M4": {
+            "CSI": 0.0,
+            "ETS": -6.479218177943181e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 7,
+            "forecast_event_count": 7,
+            "hits": 0,
+            "misses": 548,
+            "observed_event_count": 548,
+            "sample_count": 106682
+          }
+        }
+      },
+      "cell_count": 106682,
+      "continuous": {
+        "M0": {
+          "bias_mm": -1.6791531840990972,
+          "mae_mm": 7.706329580048213,
+          "rmse_mm": 16.803049152567937,
+          "sample_count": 106682
+        },
+        "M1": {
+          "bias_mm": -1.195981521432032,
+          "mae_mm": 7.6884340511930445,
+          "rmse_mm": 16.036479130219384,
+          "sample_count": 106682
+        },
+        "M2": {
+          "bias_mm": -1.014158188910848,
+          "mae_mm": 7.369594762319069,
+          "rmse_mm": 15.278502823116957,
+          "sample_count": 106682
+        },
+        "M3": {
+          "bias_mm": 0.09061819723137601,
+          "mae_mm": 8.009627006477148,
+          "rmse_mm": 15.723077963149654,
+          "sample_count": 106682
+        },
+        "M4": {
+          "bias_mm": 0.25418430792776864,
+          "mae_mm": 7.935236467406705,
+          "rmse_mm": 15.460728185835025,
+          "sample_count": 106682
+        }
+      },
+      "fss": {
+        "heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 76,
+                "fss": 0.07346938775510203,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 76,
+                "fss": 0.01716738197424894,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 76,
+                "fss": 0.14856341976173792,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 75,
+                "fss": 0.17860647693817466,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 75,
+                "fss": 0.16879623402824484,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.07409948542024014,
+              "M1": 0.01724813798510383,
+              "M2": 0.1486154924640729,
+              "M3": 0.17860647693817466,
+              "M4": 0.16879623402824484,
+              "case_count": 75
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 76,
+                "fss": 0.11949644662527426,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 76,
+                "fss": 0.025005308033750562,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 76,
+                "fss": 0.2361947803828014,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 75,
+                "fss": 0.2721635793211543,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 75,
+                "fss": 0.26146861958528556,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.1207360794904121,
+              "M1": 0.02509958072097873,
+              "M2": 0.23622082098244168,
+              "M3": 0.2721635793211543,
+              "M4": 0.26146861958528556,
+              "case_count": 75
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 76,
+                "fss": 0.14523531628700115,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 76,
+                "fss": 0.028729524700541575,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 76,
+                "fss": 0.2538703255865775,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 75,
+                "fss": 0.2933609577612776,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 75,
+                "fss": 0.2828753486014691,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.14690677815497122,
+              "M1": 0.028828756376694353,
+              "M2": 0.25387901691353076,
+              "M3": 0.2933609577612776,
+              "M4": 0.2828753486014691,
+              "case_count": 75
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 76,
+                "fss": 0.18471995163469979,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 76,
+                "fss": 0.03231218226761656,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 76,
+                "fss": 0.24550007500044257,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 75,
+                "fss": 0.2884168163442279,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 75,
+                "fss": 0.2729718521778507,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.18704976009330965,
+              "M1": 0.03243349233864157,
+              "M2": 0.24550270283968711,
+              "M3": 0.2884168163442279,
+              "M4": 0.2729718521778507,
+              "case_count": 75
+            }
+          }
+        },
+        "very_heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 43,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 42,
+                "fss": 0.003577817531305927,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.003577817531305927,
+              "M4": 0.0,
+              "case_count": 42
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 43,
+                "fss": 0.002411238181458608,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 42,
+                "fss": 0.015574634367008122,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 42,
+                "fss": 0.0072897284020934094,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0024251192580755365,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.015574634367008122,
+              "M4": 0.0072897284020934094,
+              "case_count": 42
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 43,
+                "fss": 0.004270681386522646,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 42,
+                "fss": 0.01897368224667051,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 42,
+                "fss": 0.011796607784064772,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.004286190451982974,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.01897368224667051,
+              "M4": 0.011796607784064772,
+              "case_count": 42
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 43,
+                "fss": 0.004339850663848233,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 42,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 42,
+                "fss": 0.018900428691223214,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 42,
+                "fss": 0.012185377641550033,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.004358610808698371,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.018900428691223214,
+              "M4": 0.012185377641550033,
+              "case_count": 42
+            }
+          }
+        }
+      }
+    }
+  },
+  "by_predicted_regime": {
+    "ACTIVE_MONSOON": {
+      "case_count": 100,
+      "categorical": {
+        "heavy": {
+          "M0": {
+            "CSI": 0.02822902796271638,
+            "ETS": 0.025327560614307364,
+            "FAR": 0.7494089834515366,
+            "POD": 0.030831878999418267,
+            "false_alarms": 317,
+            "forecast_event_count": 423,
+            "hits": 106,
+            "misses": 3332,
+            "observed_event_count": 3438,
+            "sample_count": 130100
+          },
+          "M1": {
+            "CSI": 0.0068415051311288486,
+            "ETS": 0.006137747623692336,
+            "FAR": 0.7446808510638298,
+            "POD": 0.006980802792321117,
+            "false_alarms": 70,
+            "forecast_event_count": 94,
+            "hits": 24,
+            "misses": 3414,
+            "observed_event_count": 3438,
+            "sample_count": 130100
+          },
+          "M2": {
+            "CSI": 0.06398640996602492,
+            "ETS": 0.06174004125188061,
+            "FAR": 0.29375,
+            "POD": 0.06573589296102385,
+            "false_alarms": 94,
+            "forecast_event_count": 320,
+            "hits": 226,
+            "misses": 3212,
+            "observed_event_count": 3438,
+            "sample_count": 130100
+          },
+          "M3": {
+            "CSI": 0.035854341736694675,
+            "ETS": 0.03399519789236038,
+            "FAR": 0.5076923076923077,
+            "POD": 0.03723094822571262,
+            "false_alarms": 132,
+            "forecast_event_count": 260,
+            "hits": 128,
+            "misses": 3310,
+            "observed_event_count": 3438,
+            "sample_count": 130100
+          },
+          "M4": {
+            "CSI": 0.03884604398743216,
+            "ETS": 0.03740015373664133,
+            "FAR": 0.3165829145728643,
+            "POD": 0.03955788248981966,
+            "false_alarms": 63,
+            "forecast_event_count": 199,
+            "hits": 136,
+            "misses": 3302,
+            "observed_event_count": 3438,
+            "sample_count": 130100
+          }
+        },
+        "very_heavy": {
+          "M0": {
+            "CSI": 0.005917159763313609,
+            "ETS": 0.005589487187128279,
+            "FAR": 0.8888888888888888,
+            "POD": 0.006211180124223602,
+            "false_alarms": 40,
+            "forecast_event_count": 45,
+            "hits": 5,
+            "misses": 800,
+            "observed_event_count": 805,
+            "sample_count": 130100
+          },
+          "M1": {
+            "CSI": 0.0,
+            "ETS": -7.676917544994247e-06,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 1,
+            "forecast_event_count": 1,
+            "hits": 0,
+            "misses": 805,
+            "observed_event_count": 805,
+            "sample_count": 130100
+          },
+          "M2": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 805,
+            "observed_event_count": 805,
+            "sample_count": 130100
+          },
+          "M3": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 805,
+            "observed_event_count": 805,
+            "sample_count": 130100
+          },
+          "M4": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 805,
+            "observed_event_count": 805,
+            "sample_count": 130100
+          }
+        }
+      },
+      "cell_count": 130100,
+      "continuous": {
+        "M0": {
+          "bias_mm": -2.0733341198604838,
+          "mae_mm": 8.189378444916002,
+          "rmse_mm": 17.33970522576651,
+          "sample_count": 130100
+        },
+        "M1": {
+          "bias_mm": -1.7159771048594854,
+          "mae_mm": 8.2567638580243,
+          "rmse_mm": 16.93445636831522,
+          "sample_count": 130100
+        },
+        "M2": {
+          "bias_mm": -1.4400981385935134,
+          "mae_mm": 8.015618457784642,
+          "rmse_mm": 16.17607340319914,
+          "sample_count": 130100
+        },
+        "M3": {
+          "bias_mm": -0.4445781601903345,
+          "mae_mm": 8.716871059083322,
+          "rmse_mm": 16.79217710520367,
+          "sample_count": 130100
+        },
+        "M4": {
+          "bias_mm": -0.3554109184049252,
+          "mae_mm": 8.625917824107596,
+          "rmse_mm": 16.53208397808726,
+          "sample_count": 130100
+        }
+      },
+      "fss": {
+        "heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 97,
+                "fss": 0.05490805490805495,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 97,
+                "fss": 0.013590033975084959,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 97,
+                "fss": 0.12027674294837676,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 97,
+                "fss": 0.06922660897782584,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 97,
+                "fss": 0.07478691229034917,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.05490805490805495,
+              "M1": 0.013590033975084959,
+              "M2": 0.12027674294837676,
+              "M3": 0.06922660897782584,
+              "M4": 0.07478691229034917,
+              "case_count": 97
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 97,
+                "fss": 0.0950379865379044,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 97,
+                "fss": 0.024073857430226275,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 97,
+                "fss": 0.1986221977621384,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 97,
+                "fss": 0.11730614325761457,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 97,
+                "fss": 0.1309239952758754,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0950379865379044,
+              "M1": 0.024073857430226275,
+              "M2": 0.1986221977621384,
+              "M3": 0.11730614325761457,
+              "M4": 0.1309239952758754,
+              "case_count": 97
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 97,
+                "fss": 0.11974752464628513,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 97,
+                "fss": 0.031079653565850074,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 97,
+                "fss": 0.21859302807317893,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 97,
+                "fss": 0.13059251067983157,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 97,
+                "fss": 0.14479292027421475,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.11974752464628513,
+              "M1": 0.031079653565850074,
+              "M2": 0.21859302807317893,
+              "M3": 0.13059251067983157,
+              "M4": 0.14479292027421475,
+              "case_count": 97
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 97,
+                "fss": 0.15975598785378886,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 97,
+                "fss": 0.0367677992324803,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 97,
+                "fss": 0.22155874118072905,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 97,
+                "fss": 0.14096064566653133,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 97,
+                "fss": 0.14239885697833832,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.15975598785378886,
+              "M1": 0.0367677992324803,
+              "M2": 0.22155874118072905,
+              "M3": 0.14096064566653133,
+              "M4": 0.14239885697833832,
+              "case_count": 97
+            }
+          }
+        },
+        "very_heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.0117647058823529,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0117647058823529,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 59
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.030532049522729587,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.030532049522729587,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 59
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.04679417368330574,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.04679417368330574,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 59
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.06011034548845573,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.06011034548845573,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 59
+            }
+          }
+        }
+      }
+    },
+    "BREAK_WEAK_MONSOON": {
+      "case_count": 71,
+      "categorical": {
+        "heavy": {
+          "M0": {
+            "CSI": 0.020076481835564052,
+            "ETS": 0.017932746968555558,
+            "FAR": 0.9198473282442748,
+            "POD": 0.02608695652173913,
+            "false_alarms": 241,
+            "forecast_event_count": 262,
+            "hits": 21,
+            "misses": 784,
+            "observed_event_count": 805,
+            "sample_count": 92371
+          },
+          "M1": {
+            "CSI": 0.0011627906976744186,
+            "ETS": 0.000595649695354736,
+            "FAR": 0.9821428571428571,
+            "POD": 0.0012422360248447205,
+            "false_alarms": 55,
+            "forecast_event_count": 56,
+            "hits": 1,
+            "misses": 804,
+            "observed_event_count": 805,
+            "sample_count": 92371
+          },
+          "M2": {
+            "CSI": 0.0,
+            "ETS": -1.0812593826954524e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 1,
+            "forecast_event_count": 1,
+            "hits": 0,
+            "misses": 805,
+            "observed_event_count": 805,
+            "sample_count": 92371
+          },
+          "M3": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 805,
+            "observed_event_count": 805,
+            "sample_count": 92371
+          },
+          "M4": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 805,
+            "observed_event_count": 805,
+            "sample_count": 92371
+          }
+        },
+        "very_heavy": {
+          "M0": {
+            "CSI": 0.0,
+            "ETS": -0.0001371469818641162,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 14,
+            "forecast_event_count": 14,
+            "hits": 0,
+            "misses": 133,
+            "observed_event_count": 133,
+            "sample_count": 92371
+          },
+          "M1": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 133,
+            "observed_event_count": 133,
+            "sample_count": 92371
+          },
+          "M2": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 133,
+            "observed_event_count": 133,
+            "sample_count": 92371
+          },
+          "M3": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 133,
+            "observed_event_count": 133,
+            "sample_count": 92371
+          },
+          "M4": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "hits": 0,
+            "misses": 133,
+            "observed_event_count": 133,
+            "sample_count": 92371
+          }
+        }
+      },
+      "cell_count": 92371,
+      "continuous": {
+        "M0": {
+          "bias_mm": 0.48243348120510127,
+          "mae_mm": 6.6484594349819,
+          "rmse_mm": 13.194658791682537,
+          "sample_count": 92371
+        },
+        "M1": {
+          "bias_mm": -0.01166850892824384,
+          "mae_mm": 6.168212615133395,
+          "rmse_mm": 12.117792937157983,
+          "sample_count": 92371
+        },
+        "M2": {
+          "bias_mm": -0.19801496049035794,
+          "mae_mm": 6.098572973512577,
+          "rmse_mm": 11.750852078147267,
+          "sample_count": 92371
+        },
+        "M3": {
+          "bias_mm": -0.14294129562513994,
+          "mae_mm": 6.313649632975787,
+          "rmse_mm": 12.136948693462426,
+          "sample_count": 92371
+        },
+        "M4": {
+          "bias_mm": 0.04325900751770164,
+          "mae_mm": 6.26186422746165,
+          "rmse_mm": 11.871462946506105,
+          "sample_count": 92371
+        }
+      },
+      "fss": {
+        "heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 58,
+                "fss": 0.03936269915651358,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 58,
+                "fss": 0.0023228803716608404,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 58,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.040307101727447225,
+              "M1": 0.002355712603062443,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 57
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 58,
+                "fss": 0.08065356177097704,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 58,
+                "fss": 0.005533778937846678,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 58,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.08352081227203434,
+              "M1": 0.005611217667917945,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 57
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 58,
+                "fss": 0.10053917089843267,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 58,
+                "fss": 0.011601738830213537,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 58,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.10478677183708685,
+              "M1": 0.011758480276988892,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 57
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 58,
+                "fss": 0.1196309812728158,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 58,
+                "fss": 0.019179586574045615,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 58,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 57,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.12511330698573675,
+              "M1": 0.019448349867967285,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 57
+            }
+          }
+        },
+        "very_heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 25,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 23
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 25,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 23
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 25,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 23
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 25,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 23,
+                "fss": 0.0,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.0,
+              "M1": 0.0,
+              "M2": 0.0,
+              "M3": 0.0,
+              "M4": 0.0,
+              "case_count": 23
+            }
+          }
+        }
+      }
+    },
+    "LOW_DEPRESSION_INFLUENCED": {
+      "case_count": 61,
+      "categorical": {
+        "heavy": {
+          "M0": {
+            "CSI": 0.08093234056328909,
+            "ETS": 0.07310960999193857,
+            "FAR": 0.6958637469586375,
+            "POD": 0.09932459276916965,
+            "false_alarms": 572,
+            "forecast_event_count": 822,
+            "hits": 250,
+            "misses": 2267,
+            "observed_event_count": 2517,
+            "sample_count": 79361
+          },
+          "M1": {
+            "CSI": 0.04329973870847331,
+            "ETS": 0.04014069419138108,
+            "FAR": 0.5827338129496403,
+            "POD": 0.04608661104489471,
+            "false_alarms": 162,
+            "forecast_event_count": 278,
+            "hits": 116,
+            "misses": 2401,
+            "observed_event_count": 2517,
+            "sample_count": 79361
+          },
+          "M2": {
+            "CSI": 0.1032719836400818,
+            "ETS": 0.09623798051233681,
+            "FAR": 0.5791666666666667,
+            "POD": 0.12038140643623362,
+            "false_alarms": 417,
+            "forecast_event_count": 720,
+            "hits": 303,
+            "misses": 2214,
+            "observed_event_count": 2517,
+            "sample_count": 79361
+          },
+          "M3": {
+            "CSI": 0.17885196374622356,
+            "ETS": 0.16780809206089695,
+            "FAR": 0.5725631768953069,
+            "POD": 0.23520063567739372,
+            "false_alarms": 793,
+            "forecast_event_count": 1385,
+            "hits": 592,
+            "misses": 1925,
+            "observed_event_count": 2517,
+            "sample_count": 79361
+          },
+          "M4": {
+            "CSI": 0.16503628905017356,
+            "ETS": 0.15510062958941243,
+            "FAR": 0.5548936170212766,
+            "POD": 0.2077870480731029,
+            "false_alarms": 652,
+            "forecast_event_count": 1175,
+            "hits": 523,
+            "misses": 1994,
+            "observed_event_count": 2517,
+            "sample_count": 79361
+          }
+        },
+        "very_heavy": {
+          "M0": {
+            "CSI": 0.04498269896193772,
+            "ETS": 0.04383406561012009,
+            "FAR": 0.7678571428571429,
+            "POD": 0.052845528455284556,
+            "false_alarms": 86,
+            "forecast_event_count": 112,
+            "hits": 26,
+            "misses": 466,
+            "observed_event_count": 492,
+            "sample_count": 79361
+          },
+          "M1": {
+            "CSI": 0.028,
+            "ETS": 0.027734786641564705,
+            "FAR": 0.36363636363636365,
+            "POD": 0.028455284552845527,
+            "false_alarms": 8,
+            "forecast_event_count": 22,
+            "hits": 14,
+            "misses": 478,
+            "observed_event_count": 492,
+            "sample_count": 79361
+          },
+          "M2": {
+            "CSI": 0.0020242914979757085,
+            "ETS": 0.001986717396981618,
+            "FAR": 0.6666666666666666,
+            "POD": 0.0020325203252032522,
+            "false_alarms": 2,
+            "forecast_event_count": 3,
+            "hits": 1,
+            "misses": 491,
+            "observed_event_count": 492,
+            "sample_count": 79361
+          },
+          "M3": {
+            "CSI": 0.061452513966480445,
+            "ETS": 0.06060660078503036,
+            "FAR": 0.5769230769230769,
+            "POD": 0.06707317073170732,
+            "false_alarms": 45,
+            "forecast_event_count": 78,
+            "hits": 33,
+            "misses": 459,
+            "observed_event_count": 492,
+            "sample_count": 79361
+          },
+          "M4": {
+            "CSI": 0.025341130604288498,
+            "ETS": 0.024940493983789103,
+            "FAR": 0.6176470588235294,
+            "POD": 0.026422764227642278,
+            "false_alarms": 21,
+            "forecast_event_count": 34,
+            "hits": 13,
+            "misses": 479,
+            "observed_event_count": 492,
+            "sample_count": 79361
+          }
+        }
+      },
+      "cell_count": 79361,
+      "continuous": {
+        "M0": {
+          "bias_mm": -1.973635996902214,
+          "mae_mm": 7.945235426780836,
+          "rmse_mm": 17.273663061859548,
+          "sample_count": 79361
+        },
+        "M1": {
+          "bias_mm": -1.7460793946428834,
+          "mae_mm": 8.114687281478284,
+          "rmse_mm": 16.774798579067593,
+          "sample_count": 79361
+        },
+        "M2": {
+          "bias_mm": -0.93283510954081,
+          "mae_mm": 7.900663225197818,
+          "rmse_mm": 16.31912424972418,
+          "sample_count": 79361
+        },
+        "M3": {
+          "bias_mm": 1.525314944846415,
+          "mae_mm": 8.941451042061187,
+          "rmse_mm": 16.59550041612725,
+          "sample_count": 79361
+        },
+        "M4": {
+          "bias_mm": 1.4881889558355625,
+          "mae_mm": 8.876000563539952,
+          "rmse_mm": 16.382863324914,
+          "sample_count": 79361
+        }
+      },
+      "fss": {
+        "heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.14974543276430063,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.08300536672629699,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.18721037998146428,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.30343413634033833,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.2833152762730228,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.14974543276430063,
+              "M1": 0.08300536672629699,
+              "M2": 0.18721037998146428,
+              "M3": 0.30343413634033833,
+              "M4": 0.2833152762730228,
+              "case_count": 59
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.2368853659893656,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.13051455439554382,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.28826987808104365,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.4508649778077246,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.42496010093422865,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.2368853659893656,
+              "M1": 0.13051455439554382,
+              "M2": 0.28826987808104365,
+              "M3": 0.4508649778077246,
+              "M4": 0.42496010093422865,
+              "case_count": 59
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.2866158101752735,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.15679368066945576,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.31087706408842763,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.49430504312827916,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.4633958734702034,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.2866158101752735,
+              "M1": 0.15679368066945576,
+              "M2": 0.31087706408842763,
+              "M3": 0.49430504312827916,
+              "M4": 0.4633958734702034,
+              "case_count": 59
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 59,
+                "fss": 0.36171152887088276,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 59,
+                "fss": 0.19878102134027376,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 59,
+                "fss": 0.31184195997305586,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 59,
+                "fss": 0.5092152559531291,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 59,
+                "fss": 0.4741088456232403,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.36171152887088276,
+              "M1": 0.19878102134027376,
+              "M2": 0.31184195997305586,
+              "M3": 0.5092152559531291,
+              "M4": 0.4741088456232403,
+              "case_count": 59
+            }
+          }
+        },
+        "very_heavy": {
+          "1": {
+            "all_cases": {
+              "M0": {
+                "case_count": 40,
+                "fss": 0.08609271523178808,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 39,
+                "fss": 0.054474708171206254,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 40,
+                "fss": 0.004040404040404066,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 43,
+                "fss": 0.11578947368421055,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 41,
+                "fss": 0.049429657794676785,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.08695652173913049,
+              "M1": 0.054474708171206254,
+              "M2": 0.0040567951318458695,
+              "M3": 0.12,
+              "M4": 0.05048543689320384,
+              "case_count": 39
+            }
+          },
+          "3": {
+            "all_cases": {
+              "M0": {
+                "case_count": 40,
+                "fss": 0.1728126454315645,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 39,
+                "fss": 0.10250387226354984,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 40,
+                "fss": 0.006383885395300437,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 43,
+                "fss": 0.2305790996929814,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 41,
+                "fss": 0.10211253372477913,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.17412000898080005,
+              "M1": 0.10250387226354984,
+              "M2": 0.006396448009230671,
+              "M3": 0.23987513082756962,
+              "M4": 0.10508489061285153,
+              "case_count": 39
+            }
+          },
+          "5": {
+            "all_cases": {
+              "M0": {
+                "case_count": 40,
+                "fss": 0.2322072208201399,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 39,
+                "fss": 0.13760958541535895,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 40,
+                "fss": 0.006442159675386083,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 43,
+                "fss": 0.27197211046024017,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 41,
+                "fss": 0.11751862690660397,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.23348262204764603,
+              "M1": 0.13760958541535895,
+              "M2": 0.0064487509504573826,
+              "M3": 0.2810375520995939,
+              "M4": 0.12051199267506651,
+              "case_count": 39
+            }
+          },
+          "9": {
+            "all_cases": {
+              "M0": {
+                "case_count": 40,
+                "fss": 0.308285397308528,
+                "reason": null
+              },
+              "M1": {
+                "case_count": 39,
+                "fss": 0.17336155282791765,
+                "reason": null
+              },
+              "M2": {
+                "case_count": 40,
+                "fss": 0.007100156851936323,
+                "reason": null
+              },
+              "M3": {
+                "case_count": 43,
+                "fss": 0.28690100753009873,
+                "reason": null
+              },
+              "M4": {
+                "case_count": 41,
+                "fss": 0.12215566574199954,
+                "reason": null
+              }
+            },
+            "matched_all_models": {
+              "M0": 0.3098557797633317,
+              "M1": 0.17336155282791765,
+              "M2": 0.007104510115684914,
+              "M3": 0.2917846726073148,
+              "M4": 0.12346901980291325,
+              "case_count": 39
+            }
+          }
+        }
+      }
+    }
+  },
+  "case_count": 232,
+  "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+  "lineage_sha256": {
+    "M0.npy": "8d025122b878f8a351640d949a485033163fb080c89017b29adb28d25353debf",
+    "M1.npy": "0180a0e33ef4d0a02138d1a821013f8bcd3a6cdcde5a9b6c7cc80e1bf9bbfa95",
+    "M2.npy": "6080e6bbcd0204f0070ba33c28c66e3822018d5c951ccf6e977a1e1b53e58c55",
+    "M3.npy": "70dc545802aee26f306d2af78a2b8e7d44c92c277cb007b71f2715d2323b5d8a",
+    "M4.npy": "63f033917517d2c992958e16fc2a358720d93c564c09486f161e8784a8069ce9",
+    "observation_mm.npy": "9ff5a01ff0695089f6a835188170c9bf9e57338f3f0c6a4ac5298dc522811378",
+    "pixel_index.npy": "cf2e3f798ee2197ecaa51f0ee112ea57f598cd1dfd7593b12895a656764094b1",
+    "population_manifest": "9e901fb26f2a74f07e1c6cacd2c40bc2aafacd2962b8da27b13138204f302c32",
+    "regime_375x3.npy": "7d8e083213906392d661a8186e85ee1fed28e4b912e1991ca806abaf468c7d0a"
+  },
+  "overall": {
+    "case_count": 232,
+    "categorical": {
+      "heavy": {
+        "M0": {
+          "CSI": 0.04778200253485425,
+          "ETS": 0.043691130947893696,
+          "FAR": 0.7498341074983411,
+          "POD": 0.05576923076923077,
+          "false_alarms": 1130,
+          "forecast_event_count": 1507,
+          "hits": 377,
+          "misses": 6383,
+          "observed_event_count": 6760,
+          "sample_count": 301832
+        },
+        "M1": {
+          "CSI": 0.020008514261387826,
+          "ETS": 0.01867365841267872,
+          "FAR": 0.6705607476635514,
+          "POD": 0.020857988165680474,
+          "false_alarms": 287,
+          "forecast_event_count": 428,
+          "hits": 141,
+          "misses": 6619,
+          "observed_event_count": 6760,
+          "sample_count": 301832
+        },
+        "M2": {
+          "CSI": 0.07274477447744775,
+          "ETS": 0.06976233118021483,
+          "FAR": 0.4918347742555235,
+          "POD": 0.07825443786982249,
+          "false_alarms": 512,
+          "forecast_event_count": 1041,
+          "hits": 529,
+          "misses": 6231,
+          "observed_event_count": 6760,
+          "sample_count": 301832
+        },
+        "M3": {
+          "CSI": 0.0936890045543266,
+          "ETS": 0.08932316537156879,
+          "FAR": 0.5623100303951368,
+          "POD": 0.10650887573964497,
+          "false_alarms": 925,
+          "forecast_event_count": 1645,
+          "hits": 720,
+          "misses": 6040,
+          "observed_event_count": 6760,
+          "sample_count": 301832
+        },
+        "M4": {
+          "CSI": 0.08816053511705686,
+          "ETS": 0.08439118119567406,
+          "FAR": 0.5203784570596798,
+          "POD": 0.09748520710059172,
+          "false_alarms": 715,
+          "forecast_event_count": 1374,
+          "hits": 659,
+          "misses": 6101,
+          "observed_event_count": 6760,
+          "sample_count": 301832
+        }
+      },
+      "very_heavy": {
+        "M0": {
+          "CSI": 0.019745222929936305,
+          "ETS": 0.01923912991383115,
+          "FAR": 0.8187134502923976,
+          "POD": 0.021678321678321677,
+          "false_alarms": 140,
+          "forecast_event_count": 171,
+          "hits": 31,
+          "misses": 1399,
+          "observed_event_count": 1430,
+          "sample_count": 301832
+        },
+        "M1": {
+          "CSI": 0.009728978457261988,
+          "ETS": 0.009653984761499357,
+          "FAR": 0.391304347826087,
+          "POD": 0.009790209790209791,
+          "false_alarms": 9,
+          "forecast_event_count": 23,
+          "hits": 14,
+          "misses": 1416,
+          "observed_event_count": 1430,
+          "sample_count": 301832
+        },
+        "M2": {
+          "CSI": 0.0006983240223463687,
+          "ETS": 0.0006884054327867863,
+          "FAR": 0.6666666666666666,
+          "POD": 0.0006993006993006993,
+          "false_alarms": 2,
+          "forecast_event_count": 3,
+          "hits": 1,
+          "misses": 1429,
+          "observed_event_count": 1430,
+          "sample_count": 301832
+        },
+        "M3": {
+          "CSI": 0.022372881355932205,
+          "ETS": 0.02212788738366247,
+          "FAR": 0.5769230769230769,
+          "POD": 0.023076923076923078,
+          "false_alarms": 45,
+          "forecast_event_count": 78,
+          "hits": 33,
+          "misses": 1397,
+          "observed_event_count": 1430,
+          "sample_count": 301832
+        },
+        "M4": {
+          "CSI": 0.00895933838731909,
+          "ETS": 0.008849305641640038,
+          "FAR": 0.6176470588235294,
+          "POD": 0.00909090909090909,
+          "false_alarms": 21,
+          "forecast_event_count": 34,
+          "hits": 13,
+          "misses": 1417,
+          "observed_event_count": 1430,
+          "sample_count": 301832
+        }
+      }
+    },
+    "cell_count": 301832,
+    "continuous": {
+      "M0": {
+        "bias_mm": -1.2649673734117295,
+        "mae_mm": 7.653611316417871,
+        "rmse_mm": 16.165724938462002,
+        "sample_count": 301832
+      },
+      "M1": {
+        "bias_mm": -1.2023147314356457,
+        "mae_mm": 7.580238817444294,
+        "rmse_mm": 15.573561739774954,
+        "sample_count": 301832
+      },
+      "M2": {
+        "bias_mm": -0.9266026626558456,
+        "mae_mm": 7.398711136357431,
+        "rmse_mm": 15.002232177513372,
+        "sample_count": 301832
+      },
+      "M3": {
+        "bias_mm": 0.16567915356557292,
+        "mae_mm": 8.040451480238557,
+        "rmse_mm": 15.46080445303885,
+        "sample_count": 301832
+      },
+      "M4": {
+        "bias_mm": 0.25133544827255877,
+        "mae_mm": 7.9681904178296294,
+        "rmse_mm": 15.215324742241569,
+        "sample_count": 301832
+      }
+    },
+    "fss": {
+      "heavy": {
+        "1": {
+          "all_cases": {
+            "M0": {
+              "case_count": 214,
+              "fss": 0.09120599975807431,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 214,
+              "fss": 0.03923205342237057,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 214,
+              "fss": 0.13562363799512878,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 213,
+              "fss": 0.17132659131469363,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 213,
+              "fss": 0.1620358986968281,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.09148264984227128,
+            "M1": 0.039297658862876284,
+            "M2": 0.13564102564102565,
+            "M3": 0.17132659131469363,
+            "M4": 0.1620358986968281,
+            "case_count": 213
+          }
+        },
+        "3": {
+          "all_cases": {
+            "M0": {
+              "case_count": 214,
+              "fss": 0.15609644995980265,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 214,
+              "fss": 0.06671325499503189,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 214,
+              "fss": 0.221288219283585,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 213,
+              "fss": 0.2738259688475235,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 213,
+              "fss": 0.2628155925849077,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.15668077100621602,
+            "M1": 0.06680460880774008,
+            "M2": 0.22129734612499186,
+            "M3": 0.2738259688475235,
+            "M4": 0.2628155925849077,
+            "case_count": 213
+          }
+        },
+        "5": {
+          "all_cases": {
+            "M0": {
+              "case_count": 214,
+              "fss": 0.19489193259017568,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 214,
+              "fss": 0.08362991543774634,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 214,
+              "fss": 0.24178207215894965,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 213,
+              "fss": 0.3024872637308451,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 213,
+              "fss": 0.289273347277904,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.1957068601180636,
+            "M1": 0.08373586430967916,
+            "M2": 0.24178518178336916,
+            "M3": 0.3024872637308451,
+            "M4": 0.289273347277904,
+            "case_count": 213
+          }
+        },
+        "9": {
+          "all_cases": {
+            "M0": {
+              "case_count": 214,
+              "fss": 0.2523374563124272,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 214,
+              "fss": 0.10628541861377416,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 214,
+              "fss": 0.24174798153958288,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 213,
+              "fss": 0.3104187102122925,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 213,
+              "fss": 0.29053780698061604,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.2535019452935001,
+            "M1": 0.10643300279064716,
+            "M2": 0.24174896249663025,
+            "M3": 0.3104187102122925,
+            "M4": 0.29053780698061604,
+            "case_count": 213
+          }
+        }
+      },
+      "very_heavy": {
+        "1": {
+          "all_cases": {
+            "M0": {
+              "case_count": 124,
+              "fss": 0.038725796377264254,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 121,
+              "fss": 0.019270474879559574,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 122,
+              "fss": 0.0013956734124215275,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 125,
+              "fss": 0.04376657824933683,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 123,
+              "fss": 0.01775956284153002,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.03901825047199492,
+            "M1": 0.019270474879559574,
+            "M2": 0.0013976240391334604,
+            "M3": 0.04435483870967738,
+            "M4": 0.01789401238816246,
+            "case_count": 121
+          }
+        },
+        "3": {
+          "all_cases": {
+            "M0": {
+              "case_count": 124,
+              "fss": 0.08549688136812816,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 121,
+              "fss": 0.03787798545179266,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 122,
+              "fss": 0.0022785012026749207,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 125,
+              "fss": 0.09277166571140372,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 123,
+              "fss": 0.03827304152535993,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.08598626547798671,
+            "M1": 0.03787798545179266,
+            "M2": 0.0022800995056940776,
+            "M3": 0.09424109291005534,
+            "M4": 0.03868314779445803,
+            "case_count": 121
+          }
+        },
+        "5": {
+          "all_cases": {
+            "M0": {
+              "case_count": 124,
+              "fss": 0.12323457166634544,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 121,
+              "fss": 0.053683635277786745,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 122,
+              "fss": 0.002425616142868292,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 125,
+              "fss": 0.11467608322823619,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 123,
+              "fss": 0.04597410739890462,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.12373622591893241,
+            "M1": 0.053683635277786745,
+            "M2": 0.002426549985427351,
+            "M3": 0.11625730705939052,
+            "M4": 0.046425225380622104,
+            "case_count": 121
+          }
+        },
+        "9": {
+          "all_cases": {
+            "M0": {
+              "case_count": 124,
+              "fss": 0.170574409515997,
+              "reason": null
+            },
+            "M1": {
+              "case_count": 121,
+              "fss": 0.0711337904446464,
+              "reason": null
+            },
+            "M2": {
+              "case_count": 122,
+              "fss": 0.002809857623365053,
+              "reason": null
+            },
+            "M3": {
+              "case_count": 125,
+              "fss": 0.12502707768730403,
+              "reason": null
+            },
+            "M4": {
+              "case_count": 123,
+              "fss": 0.04955515577040448,
+              "reason": null
+            }
+          },
+          "matched_all_models": {
+            "M0": 0.17129874928337419,
+            "M1": 0.0711337904446464,
+            "M2": 0.0028105391563113535,
+            "M3": 0.12594570374821024,
+            "M4": 0.04976992200939001,
+            "case_count": 121
+          }
+        }
+      }
+    }
+  },
+  "regime_assignment": "argmax of frozen forecast-only pseudo-regime classifier probability; pseudo-labels, not observed meteorological truth",
+  "reproduction": {
+    "check_count": 43,
+    "checks": [
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/1/M0",
+        "frozen": 0.09120599975807431,
+        "recomputed": 0.09120599975807431
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/1/M1",
+        "frozen": 0.03923205342237057,
+        "recomputed": 0.03923205342237057
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/3/M0",
+        "frozen": 0.15609644995980265,
+        "recomputed": 0.15609644995980265
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/3/M1",
+        "frozen": 0.06671325499503189,
+        "recomputed": 0.06671325499503189
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/5/M0",
+        "frozen": 0.19489193259017568,
+        "recomputed": 0.19489193259017568
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/5/M1",
+        "frozen": 0.08362991543774634,
+        "recomputed": 0.08362991543774634
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/9/M0",
+        "frozen": 0.2523374563124272,
+        "recomputed": 0.2523374563124272
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/heavy/9/M1",
+        "frozen": 0.10628541861377416,
+        "recomputed": 0.10628541861377416
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/1/M0",
+        "frozen": 0.038725796377264254,
+        "recomputed": 0.038725796377264254
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/1/M1",
+        "frozen": 0.019270474879559574,
+        "recomputed": 0.019270474879559574
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/3/M0",
+        "frozen": 0.08549688136812816,
+        "recomputed": 0.08549688136812816
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/3/M1",
+        "frozen": 0.03787798545179266,
+        "recomputed": 0.03787798545179266
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/5/M0",
+        "frozen": 0.12323457166634544,
+        "recomputed": 0.12323457166634544
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/5/M1",
+        "frozen": 0.053683635277786745,
+        "recomputed": 0.053683635277786745
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/9/M0",
+        "frozen": 0.170574409515997,
+        "recomputed": 0.170574409515997
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "fss/very_heavy/9/M1",
+        "frozen": 0.0711337904446464,
+        "recomputed": 0.0711337904446464
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M2/rmse_mm",
+        "frozen": 16.17607340319914,
+        "recomputed": 16.17607340319914
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M2/mae_mm",
+        "frozen": 8.015618457784642,
+        "recomputed": 8.015618457784642
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M2/bias_mm",
+        "frozen": -1.4400981385935134,
+        "recomputed": -1.4400981385935134
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M3/rmse_mm",
+        "frozen": 16.79217710520367,
+        "recomputed": 16.79217710520367
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M3/mae_mm",
+        "frozen": 8.716871059083322,
+        "recomputed": 8.716871059083322
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M3/bias_mm",
+        "frozen": -0.4445781601903345,
+        "recomputed": -0.4445781601903345
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M4/rmse_mm",
+        "frozen": 16.53208397808726,
+        "recomputed": 16.53208397808726
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M4/mae_mm",
+        "frozen": 8.625917824107596,
+        "recomputed": 8.625917824107596
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/ACTIVE_MONSOON/M4/bias_mm",
+        "frozen": -0.3554109184049252,
+        "recomputed": -0.3554109184049252
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M2/rmse_mm",
+        "frozen": 11.750852078147267,
+        "recomputed": 11.750852078147267
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M2/mae_mm",
+        "frozen": 6.098572973512577,
+        "recomputed": 6.098572973512577
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M2/bias_mm",
+        "frozen": -0.19801496049035794,
+        "recomputed": -0.19801496049035794
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M3/rmse_mm",
+        "frozen": 12.136948693462426,
+        "recomputed": 12.136948693462426
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M3/mae_mm",
+        "frozen": 6.313649632975787,
+        "recomputed": 6.313649632975787
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M3/bias_mm",
+        "frozen": -0.14294129562513994,
+        "recomputed": -0.14294129562513994
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M4/rmse_mm",
+        "frozen": 11.871462946506105,
+        "recomputed": 11.871462946506105
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M4/mae_mm",
+        "frozen": 6.26186422746165,
+        "recomputed": 6.26186422746165
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/BREAK_WEAK_MONSOON/M4/bias_mm",
+        "frozen": 0.04325900751770164,
+        "recomputed": 0.04325900751770164
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M2/rmse_mm",
+        "frozen": 16.31912424972418,
+        "recomputed": 16.31912424972418
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M2/mae_mm",
+        "frozen": 7.900663225197818,
+        "recomputed": 7.900663225197818
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M2/bias_mm",
+        "frozen": -0.93283510954081,
+        "recomputed": -0.93283510954081
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M3/rmse_mm",
+        "frozen": 16.59550041612725,
+        "recomputed": 16.59550041612725
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M3/mae_mm",
+        "frozen": 8.941451042061187,
+        "recomputed": 8.941451042061187
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M3/bias_mm",
+        "frozen": 1.525314944846415,
+        "recomputed": 1.525314944846415
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M4/rmse_mm",
+        "frozen": 16.382863324914,
+        "recomputed": 16.382863324914
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M4/mae_mm",
+        "frozen": 8.876000563539952,
+        "recomputed": 8.876000563539952
+      },
+      {
+        "abs_diff": 0.0,
+        "check": "regime/LOW_DEPRESSION_INFLUENCED/M4/bias_mm",
+        "frozen": 1.4881889558355625,
+        "recomputed": 1.4881889558355625
+      }
+    ],
+    "max_abs_diff": 0.0,
+    "status": "REPRODUCED"
+  },
+  "schema": "phase4m-regime-categorical-fss-v1",
+  "year": 2025
+}

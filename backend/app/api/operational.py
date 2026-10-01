@@ -25,11 +25,11 @@ from pydantic import BaseModel
 try:
     from backend.app.ml.phase2b import ROOT, sha256_file
     from backend.app.api.science import ARTIFACTS as TRACK_A_ARTIFACTS, _grid_metadata, _store as _track_a_store
-    from backend.app.ml.district_product import aggregate_operational_districts, flat_field
+    from backend.app.ml.district_product import aggregate_operational_districts, district_case_means, flat_field
 except ModuleNotFoundError:
     from app.ml.phase2b import ROOT, sha256_file
     from app.api.science import ARTIFACTS as TRACK_A_ARTIFACTS, _grid_metadata, _store as _track_a_store
-    from app.ml.district_product import aggregate_operational_districts, flat_field
+    from app.ml.district_product import aggregate_operational_districts, district_case_means, flat_field
 
 
 class ScienceErrorCode(str, Enum):
@@ -202,6 +202,75 @@ class OperationalDistrictsResponse(BaseModel):
     geometry_sha256: str
     geometry_source: str = "geoBoundaries IND ADM2 2021"
     geometry_license: str = "ODbL 1.0"
+    caveats: list[str]
+
+
+class OperationalDistrictModelCell(BaseModel):
+    mean_mm: float
+    max_mm: float
+    heavy_area_fraction: float
+    very_heavy_area_fraction: float
+    error_mm: float                      # model district mean minus IMD district mean
+    improvement_vs_raw_mm: float         # |raw mean - IMD mean| - |model mean - IMD mean|; > 0 means closer to IMD than Raw
+
+
+class OperationalDistrictCompareRow(BaseModel):
+    district_id: str
+    district_name: str
+    valid_grid_cells: int
+    raw_mean_mm: float
+    raw_max_mm: float
+    raw_error_mm: float                  # Raw district mean minus IMD district mean
+    observed_mean_mm: float
+    observed_max_mm: float
+    observed_heavy_area_fraction: float
+    observed_very_heavy_area_fraction: float
+    heavy_probability: float | None = None
+    very_heavy_probability: float | None = None
+    models: dict[str, OperationalDistrictModelCell]
+
+
+class OperationalDistrictCompareResponse(BaseModel):
+    case_id: str
+    year: int
+    year_role: str
+    models: list[str]
+    model_roles: dict[str, str]
+    units: str = "mm/24h"
+    heavy_threshold_mm: float = HEAVY_THRESHOLD_MM
+    very_heavy_threshold_mm: float = VERY_HEAVY_THRESHOLD_MM
+    predicted_regime: str | None = None
+    improvement_definition: str
+    districts: list[OperationalDistrictCompareRow]
+    source_district_count: int
+    method: str
+    weights_sha256: str
+    geometry_sha256: str
+    caveats: list[str]
+
+
+class OperationalDistrictHistoryPoint(BaseModel):
+    case_id: str
+    initialization_utc: str
+    lead_hours: int
+    valid_grid_cells: int
+    raw_mean_mm: float
+    model_mean_mm: float
+    observed_mean_mm: float
+
+
+class OperationalDistrictHistoryResponse(BaseModel):
+    year: int
+    year_role: str
+    district_id: str
+    district_name: str
+    model: str
+    model_role: str
+    case_count: int
+    points: list[OperationalDistrictHistoryPoint]
+    descriptive_only_note: str
+    method: str
+    weights_sha256: str
     caveats: list[str]
 
 
@@ -1105,6 +1174,122 @@ def case_districts(year: int, case_id: str, model: str = Query("m1", pattern="^(
         predicted_regime=predicted, districts=[OperationalDistrictRow(**row) for row in rows],
         source_district_count=len(districts), method=_DISTRICT_METHOD, weights_sha256=weights_sha,
         geometry_sha256=geometry_sha, caveats=_DISTRICT_CAVEATS)
+
+
+_IMPROVEMENT_DEFINITION = (
+    "improvement_vs_raw_mm = |Raw district mean - IMD district mean| - |model district mean - IMD district mean| for this case. "
+    "Positive: the corrected district mean is closer to IMD than Raw; negative: farther. A single-case, district-mean quantity, "
+    "not a skill score."
+)
+_HISTORY_NOTE = (
+    "Descriptive history only: the district-mean series of Raw, the selected model and IMD across this year's paired cases. "
+    "No district-level skill score is computed or implied; district-level verification is a separate, protocol-gated phase."
+)
+_COMPARE_MODELS = ("m1", "m2", "m3", "m4")
+
+
+def _district_context(year: int, case_id: str) -> dict:
+    _require_year(year)
+    record, record_year = _case_record(case_id)
+    if record_year != year:
+        raise _science_error(404, ScienceErrorCode.CASE_NOT_FOUND, "Case does not belong to the requested year")
+    if year == 2023:
+        raise _science_error(
+            404, ScienceErrorCode.PRODUCT_UNAVAILABLE,
+            "No district product for 2023: it is the train/cross-fit year, so only out-of-fold M2 exists "
+            "and there are no probability or M1/M3/M4 output grids to aggregate.",
+        )
+    return record
+
+
+def _model_role(year: int, model: str) -> str:
+    return _MODEL_ROLE[model] + (" (pre-registered primary 2025 final-test model)" if year == 2025 and model == "m1"
+                                 else " (RMSE-selected 2024 model)" if year == 2024 and model == "m1" else "")
+
+
+@router.get("/{year}/cases/{case_id}/districts/compare", response_model=OperationalDistrictCompareResponse)
+def case_districts_compare(year: int, case_id: str) -> OperationalDistrictCompareResponse:
+    """All four corrected models next to Raw and IMD for every district of one case (same Phase 2C weights)."""
+    record = _district_context(year, case_id)
+    districts, weights, weights_sha, geometry_sha = _district_static()
+    with_probability = bool(record.get("PROBABILITY_SOURCE_ELIGIBLE", False))
+    per_model: dict[str, dict[str, dict]] = {}
+    base_rows: dict[str, dict] = {}
+    order: list[str] = []
+    for model in _COMPARE_MODELS:
+        fields = _district_case_fields(year, case_id, model, with_probability)
+        rows = aggregate_operational_districts(
+            districts, weights, raw=fields["raw"], corrected=fields["corrected"], observed=fields["observed"],
+            heavy_p=fields["heavy"], very_heavy_p=fields["very_heavy"])
+        for row in rows:
+            did = row["district_id"]
+            if model == _COMPARE_MODELS[0]:
+                base_rows[did] = row
+                order.append(did)
+            per_model.setdefault(did, {})[model] = row
+    out = []
+    for did in order:
+        base = base_rows[did]
+        raw_error = base["raw_mean_mm"] - base["observed_mean_mm"]
+        cells = {}
+        for model in _COMPARE_MODELS:
+            row = per_model[did][model]
+            error = row["corrected_mean_mm"] - row["observed_mean_mm"]
+            cells[model] = OperationalDistrictModelCell(
+                mean_mm=row["corrected_mean_mm"], max_mm=row["corrected_max_mm"],
+                heavy_area_fraction=row["heavy_area_fraction"], very_heavy_area_fraction=row["very_heavy_area_fraction"],
+                error_mm=error, improvement_vs_raw_mm=abs(raw_error) - abs(error))
+        out.append(OperationalDistrictCompareRow(
+            district_id=did, district_name=base["district_name"], valid_grid_cells=base["valid_grid_cells"],
+            raw_mean_mm=base["raw_mean_mm"], raw_max_mm=base["raw_max_mm"], raw_error_mm=raw_error,
+            observed_mean_mm=base["observed_mean_mm"], observed_max_mm=base["observed_max_mm"],
+            observed_heavy_area_fraction=base["observed_heavy_area_fraction"],
+            observed_very_heavy_area_fraction=base["observed_very_heavy_area_fraction"],
+            heavy_probability=base["heavy_probability"], very_heavy_probability=base["very_heavy_probability"], models=cells))
+    predicted = None
+    if record.get("REGIME_SOURCE_ELIGIBLE", False):
+        vector = _REGIME_LOADER[year]().get(case_id)
+        if vector is not None:
+            predicted = REGIME_CLASSES[int(np.argmax(vector))]
+    return OperationalDistrictCompareResponse(
+        case_id=case_id, year=year, year_role=YEAR_ROLE[year], models=list(_COMPARE_MODELS),
+        model_roles={m: _model_role(year, m) for m in _COMPARE_MODELS}, predicted_regime=predicted,
+        improvement_definition=_IMPROVEMENT_DEFINITION, districts=out, source_district_count=len(districts),
+        method=_DISTRICT_METHOD, weights_sha256=weights_sha, geometry_sha256=geometry_sha, caveats=_DISTRICT_CAVEATS)
+
+
+@lru_cache(maxsize=64)
+def _district_history_points(year: int, district_index: int, model: str) -> tuple[OperationalDistrictHistoryPoint, ...]:
+    _, weights, _, _ = _district_static()
+    points = []
+    for case_id in sorted(_paired_cases_by_id(year)):
+        fields = _district_case_fields(year, case_id, model, False)
+        means = district_case_means(weights[district_index], raw=fields["raw"], corrected=fields["corrected"], observed=fields["observed"])
+        if means is None:
+            continue
+        date8, _, lead_hours, _ = _parse_case_id(case_id)
+        points.append(OperationalDistrictHistoryPoint(
+            case_id=case_id, initialization_utc=f"{date8[:4]}-{date8[4:6]}-{date8[6:]}T00:00:00Z", lead_hours=lead_hours,
+            valid_grid_cells=means["valid_grid_cells"], raw_mean_mm=means["raw_mean_mm"],
+            model_mean_mm=means["corrected_mean_mm"], observed_mean_mm=means["observed_mean_mm"]))
+    return tuple(points)
+
+
+@router.get("/{year}/districts/{district_id}/history", response_model=OperationalDistrictHistoryResponse)
+def district_history(year: int, district_id: str, model: str = Query("m1", pattern="^(m1|m2|m3|m4)$")) -> OperationalDistrictHistoryResponse:
+    """Descriptive series for one district across the year's paired cases (no skill statistic)."""
+    _require_year(year)
+    if year == 2023:
+        raise _science_error(404, ScienceErrorCode.PRODUCT_UNAVAILABLE, "No district product for 2023 (train/cross-fit year).")
+    districts, _, weights_sha, _ = _district_static()
+    index = next((i for i, d in enumerate(districts) if d["district_id"] == district_id), None)
+    if index is None:
+        raise _science_error(404, ScienceErrorCode.CASE_NOT_FOUND, "Unknown district")
+    points = _district_history_points(year, index, model)
+    return OperationalDistrictHistoryResponse(
+        year=year, year_role=YEAR_ROLE[year], district_id=district_id, district_name=districts[index]["district_name"],
+        model=model, model_role=_model_role(year, model), case_count=len(points), points=list(points),
+        descriptive_only_note=_HISTORY_NOTE, method=_DISTRICT_METHOD, weights_sha256=weights_sha, caveats=_DISTRICT_CAVEATS)
 
 
 @router.get("/{year}/cases/{case_id}/ensemble", response_model=EnsembleResponse)

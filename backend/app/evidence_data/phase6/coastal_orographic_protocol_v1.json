@@ -1,0 +1,203 @@
+{
+  "approval": {
+    "approved_before_any_zone_result": true,
+    "decisions": {
+      "D4_static_source": "S2 public-domain DEM aggregated to 0.25 degrees (primary); GEFS ancillary fields only as an optional cross-check if a probe confirms them",
+      "scope": "Stages 0-2 only; Stage 3 (geography-aware model) needs its own protocol and approval",
+      "zone_rules": "as proposed"
+    },
+    "observation_free_inputs_inspected": "time-invariant IMD valid-cell footprint (1301 cells) and grid coordinates only"
+  },
+  "coverage_status_mapping": {
+    "stage_3_complete_and_beats_non_regime_baseline_on_held_out_data": "IMPLEMENTED",
+    "stages_1_2_complete": "PARTIAL",
+    "today": "PLANNED"
+  },
+  "decision_rule": {
+    "geographic_gap": "paired interval of (zone value minus all-cell value) excludes zero in the development year AND the sign matches in the consumed final-test year (post-hoc)",
+    "otherwise": "report no evidence of a geography-specific deficiency at this resolution; requirement stays PARTIAL",
+    "stage_3_recommended_only_if": "at least one zone shows a gap for RMSE, heavy-event CSI or bias on at least one track"
+  },
+  "design": {
+    "frozen_models_modified": false,
+    "head_A": "synoptic state, per case, existing three pseudo-regimes, unchanged",
+    "head_C": "geographic forcing, per cell: static zone x forecast-time forcing strength",
+    "taxonomy_is_flat": false
+  },
+  "forcing_strength": {
+    "coastal_component": "max(0, wind dot coast_normal)",
+    "forbidden_inputs": [
+      "rainfall",
+      "observation",
+      "target-derived values"
+    ],
+    "forcing": "component x PWAT (declared a moisture-flux proxy)",
+    "inputs": [
+      "u850",
+      "v850",
+      "pwat",
+      "q700",
+      "static_geometry"
+    ],
+    "orographic_component": "max(0, wind dot terrain_gradient_direction)",
+    "resampling": "bilinear from the 0.5 degree context grid to 0.25 degrees",
+    "strata": "terciles of forcing over the training year's cell-case pairs within the zone"
+  },
+  "grid": {
+    "latitude_range": [
+      10.0,
+      22.0
+    ],
+    "longitude_range": [
+      68.0,
+      80.0
+    ],
+    "resolution_degrees": 0.25,
+    "shape": [
+      49,
+      49
+    ],
+    "valid_cells_per_case": 1301
+  },
+  "immutability": "any changed rule requires protocol v2",
+  "leakage": {
+    "feature_registry_v1_edited": false,
+    "only_observation_derived_input": "time-invariant IMD footprint, until the frozen land-sea mask replaces it",
+    "static_fields_are_model_inputs_in_stages_0_to_2": false
+  },
+  "metrics": [
+    "RMSE",
+    "MAE",
+    "bias",
+    "POD",
+    "FAR",
+    "CSI",
+    "ETS",
+    "FSS where the zone is contiguous enough"
+  ],
+  "models_verified": {
+    "A": [
+      "M0",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "B": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ]
+  },
+  "populations": {
+    "2024_note": "already used for selection and calibration; development evidence only",
+    "A": {
+      "consumed_final_test_post_hoc": 2019,
+      "development": 2018,
+      "fit": 2017
+    },
+    "B": {
+      "consumed_final_test_post_hoc": 2025,
+      "development": 2024,
+      "fit": 2023
+    },
+    "pooling_across_tracks": false,
+    "post_hoc_labels": {
+      "2019": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST",
+      "2025": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST"
+    }
+  },
+  "questions": {
+    "Q1": "Do Raw and each model differ in bias or RMSE inside a zone compared with all cells?",
+    "Q2": "Does the improvement over Raw differ in a zone compared with all cells?",
+    "Q3": "Within a zone, does heavy-rain frequency bias or corrected-model skill differ between strong and weak forcing terciles?"
+  },
+  "schema_id": "phase7a-coastal-orographic-protocol-v1",
+  "stages": {
+    "0": {
+      "new_model": false,
+      "training": false,
+      "what": "acquire static geography into a versioned hashed artifact static_geography_v1"
+    },
+    "1": {
+      "new_model": false,
+      "training": false,
+      "what": "static zones and verification of frozen models stratified by zone"
+    },
+    "2": {
+      "new_model": false,
+      "training": false,
+      "what": "forecast-time forcing-strength strata from U850, V850, PWAT, Q700 and static geometry; same stratified verification"
+    },
+    "3": {
+      "authorised": false,
+      "requires": "separate protocol and approval after Stage 1-2 results",
+      "what": "geography-aware correction"
+    }
+  },
+  "static_geography": {
+    "derived_fields": [
+      "mean_elevation_m",
+      "local_relief_m_3x3",
+      "terrain_gradient_vector_after_3x3_mean_smoothing",
+      "coast_normal_from_smoothed_land_fraction",
+      "distance_to_coast_km"
+    ],
+    "distance": "great-circle from cell centre to nearest ocean cell centre of the frozen land-sea mask",
+    "elevation_aggregation": "area-mean to 0.25 degrees",
+    "land_mask_aggregation": "majority",
+    "licence_rule": "record licence text, file, version and SHA-256; stop if redistribution of derived 0.25 degree values is not clearly permitted"
+  },
+  "status": "APPROVED_FOR_STAGES_0_TO_2",
+  "stop_conditions": [
+    "licence does not permit the intended use",
+    "aggregated field misaligns with the 49x49 grid",
+    "land-sea mask disagrees materially with the IMD footprint over the coast",
+    "any zone has fewer than 20 cells",
+    "any step needs a frozen model or threshold to change"
+  ],
+  "support_gate": {
+    "min_cases": 30,
+    "min_cells": 20,
+    "min_observed_event_cell_case_pairs": 30,
+    "otherwise": "insufficient_support with counts, no number"
+  },
+  "thresholds_mm_per_24h": {
+    "heavy": 64.5,
+    "very_heavy": 115.6
+  },
+  "title": "Coastal / orographic geographic-forcing protocol v1",
+  "uncertainty": {
+    "method": "paired whole-case bootstrap",
+    "note": "optimistic; cells in a case are correlated; expected-by-chance share reported beside any count",
+    "seed": 26080
+  },
+  "zones": {
+    "labels": {
+      "COASTAL": {
+        "distance_to_coast_km_max": 100.0
+      },
+      "COASTAL_AND_OROGRAPHIC": "both rules",
+      "OROGRAPHIC": {
+        "mean_elevation_m_min": 400.0,
+        "or_local_relief_m_min": 300.0
+      },
+      "OTHER": "neither rule"
+    },
+    "mutually_exclusive": false,
+    "naming": "rule-based geographic-forcing zone; never a learned, validated or official regime",
+    "primary_zones_reselected_after_results": false,
+    "sensitivity_only_alternatives": {
+      "coastal_km": [
+        50,
+        75,
+        150
+      ],
+      "elevation_m": [
+        300,
+        500
+      ]
+    }
+  }
+}

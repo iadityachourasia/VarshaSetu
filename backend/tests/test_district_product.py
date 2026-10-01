@@ -195,3 +195,105 @@ def test_district_endpoint_errors_and_model_roles(client):
     assert "selected 2024" in client.get(f"{base}/2024/cases/{CASES[2024]}/districts").json()["model_role"]
     m2 = client.get(f"{base}/2025/cases/{CASES[2025]}/districts", params={"model": "m2"}).json()
     assert "pre-registered" not in m2["model_role"]
+
+
+# ---------------------------------------------------------------------------------------------
+# P0-4: compare (all models) and descriptive history
+# ---------------------------------------------------------------------------------------------
+
+from backend.app.ml.district_product import district_case_means  # noqa: E402
+
+
+def test_district_case_means_equals_the_full_aggregation_row():
+    weights, mask, f = _random_inputs(7, n=6)
+    m = _masked(f, mask)
+    rows = aggregate_operational_districts(_districts(len(weights)), weights, raw=m["raw"], corrected=m["corrected"], observed=m["observed"])
+    by_id = {r["district_id"]: r for r in rows}
+    for i, w in enumerate(weights):
+        single = district_case_means(w, raw=m["raw"], corrected=m["corrected"], observed=m["observed"])
+        row = by_id.get(f"D{i}")
+        assert (single is None) == (row is None)
+        if single:
+            assert single["valid_grid_cells"] == row["valid_grid_cells"]
+            for a, b in (("raw_mean_mm", "raw_mean_mm"), ("corrected_mean_mm", "corrected_mean_mm"), ("observed_mean_mm", "observed_mean_mm")):
+                assert single[a] == pytest.approx(row[b], abs=1e-12)
+    with pytest.raises(ValueError):
+        district_case_means(weights[0][:10], raw=m["raw"], corrected=m["corrected"], observed=m["observed"])
+
+
+@needs_data
+@pytest.mark.parametrize("year", [2024, 2025])
+def test_compare_endpoint_equals_the_single_model_endpoint_for_every_model(client, year):
+    case = CASES[year]
+    compare = client.get(f"/api/science/operational/{year}/cases/{case}/districts/compare")
+    assert compare.status_code == 200, compare.text
+    body = compare.json()
+    assert body["models"] == ["m1", "m2", "m3", "m4"] and "closer to IMD than Raw" in body["improvement_definition"]
+    singles = {}
+    for model in body["models"]:
+        single = client.get(f"/api/science/operational/{year}/cases/{case}/districts", params={"model": model}).json()
+        singles[model] = {r["district_id"]: r for r in single["districts"]}
+        assert body["model_roles"][model] == single["model_role"]
+    assert len(body["districts"]) == len(singles["m1"]) and len(body["districts"]) > 150
+    for row in body["districts"]:
+        base = singles["m1"][row["district_id"]]
+        assert row["raw_mean_mm"] == pytest.approx(base["raw_mean_mm"], abs=1e-9)
+        assert row["raw_error_mm"] == pytest.approx(base["raw_mean_mm"] - base["observed_mean_mm"], abs=1e-9)
+        assert row["observed_mean_mm"] == pytest.approx(base["observed_mean_mm"], abs=1e-9)
+        assert row["heavy_probability"] == pytest.approx(base["heavy_probability"], abs=1e-12)
+        for model, cell in row["models"].items():
+            ref = singles[model][row["district_id"]]
+            assert cell["mean_mm"] == pytest.approx(ref["corrected_mean_mm"], abs=1e-9)
+            assert cell["max_mm"] == pytest.approx(ref["corrected_max_mm"], abs=1e-9)
+            assert cell["heavy_area_fraction"] == pytest.approx(ref["heavy_area_fraction"], abs=1e-12)
+            assert cell["error_mm"] == pytest.approx(ref["corrected_mean_mm"] - ref["observed_mean_mm"], abs=1e-9)
+            expected = abs(ref["raw_mean_mm"] - ref["observed_mean_mm"]) - abs(ref["corrected_mean_mm"] - ref["observed_mean_mm"])
+            assert cell["improvement_vs_raw_mm"] == pytest.approx(expected, abs=1e-9)
+
+
+@needs_data
+@pytest.mark.parametrize("year,model", [(2024, "m1"), (2025, "m3")])
+def test_history_points_equal_the_per_case_endpoint_values(client, year, model):
+    base = f"/api/science/operational/{year}"
+    compare = client.get(f"{base}/cases/{CASES[year]}/districts/compare").json()
+    district = max(compare["districts"], key=lambda r: r["observed_mean_mm"])
+    history = client.get(f"{base}/districts/{district['district_id']}/history", params={"model": model})
+    assert history.status_code == 200, history.text
+    body = history.json()
+    assert body["district_id"] == district["district_id"] and body["model"] == model and body["case_count"] == len(body["points"]) > 100
+    ids = [p["case_id"] for p in body["points"]]
+    assert ids == sorted(ids) and len(set(ids)) == len(ids)
+    for point in (body["points"][0], body["points"][len(ids) // 2], body["points"][-1]):
+        single = client.get(f"{base}/cases/{point['case_id']}/districts", params={"model": model}).json()
+        row = next(r for r in single["districts"] if r["district_id"] == district["district_id"])
+        assert point["observed_mean_mm"] == pytest.approx(row["observed_mean_mm"], abs=1e-9)
+        assert point["raw_mean_mm"] == pytest.approx(row["raw_mean_mm"], abs=1e-9)
+        assert point["model_mean_mm"] == pytest.approx(row["corrected_mean_mm"], abs=1e-9)
+        assert point["valid_grid_cells"] == row["valid_grid_cells"]
+    case_point = next(p for p in body["points"] if p["case_id"] == CASES[year])
+    assert case_point["observed_mean_mm"] == pytest.approx(district["observed_mean_mm"], abs=1e-9)
+
+
+@needs_data
+def test_history_is_descriptive_only_and_reports_no_skill_statistic(client):
+    compare = client.get(f"/api/science/operational/2025/cases/{CASES[2025]}/districts/compare").json()
+    district = compare["districts"][0]["district_id"]
+    body = client.get(f"/api/science/operational/2025/districts/{district}/history").json()
+    forbidden = ("rmse", "mae", "bias", "csi", "pod", "far", "ets", "fss", "skill", "improved", "worsened")
+    serialized = json.dumps({k: v for k, v in body.items() if k not in ("descriptive_only_note", "caveats", "method")}).lower()
+    for token in forbidden:
+        assert f'"{token}' not in serialized and f'_{token}"' not in serialized, token
+    assert "no district-level skill score" in body["descriptive_only_note"].lower()
+
+
+@needs_data
+def test_history_and_compare_errors(client):
+    base = "/api/science/operational"
+    assert client.get(f"{base}/2025/districts/not-a-district/history").status_code == 404
+    unavailable = client.get(f"{base}/2023/districts/anything/history")
+    assert unavailable.status_code == 404 and unavailable.json()["code"] == "SCIENCE_PRODUCT_UNAVAILABLE"
+    compare = client.get(f"{base}/2025/cases/{CASES[2025]}/districts/compare").json()
+    district = compare["districts"][0]["district_id"]
+    assert client.get(f"{base}/2025/districts/{district}/history", params={"model": "m9"}).status_code == 422
+    assert client.get(f"{base}/2023/cases/20230714_day2_24h/districts/compare").status_code == 404
+    assert client.get(f"{base}/2024/cases/{CASES[2025]}/districts/compare").status_code == 404

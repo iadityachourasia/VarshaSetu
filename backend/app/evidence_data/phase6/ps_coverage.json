@@ -1,0 +1,929 @@
+{
+  "schema": "phase6-ps-coverage-v1",
+  "title": "SIH26080 requirement coverage",
+  "status_vocabulary": [
+    "IMPLEMENTED",
+    "PARTIAL",
+    "PLANNED"
+  ],
+  "rules": [
+    "A row is IMPLEMENTED only if the capability exists, is reachable in the app, and is backed by hash-verified evidence.",
+    "A row with a material gap is PARTIAL and states the gap. A capability that does not exist yet is PLANNED, never IMPLEMENTED.",
+    "No number is typed into this file: every figure is a pointer into a hash-verified evidence file, resolved by the API at request time."
+  ],
+  "rows": [
+    {
+      "id": "RAW-NWP",
+      "group": "Raw NWP input",
+      "requirement": "Raw NWP rainfall forecast as the input being corrected",
+      "ps_ids": [
+        "PS-R01"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Historical NOAA GEFS rainfall (2019 reforecast track and 2023-2025 operational-archive track) is reconstructed to canonical 24-hour accumulation windows and used as the Raw baseline (M0).",
+      "limitation": "Archival, historical data only: nothing ingests a current forecast cycle. The source is NOAA GEFS, not an NCMRWF model.",
+      "pages": [
+        {
+          "label": "Forecast & Atmosphere",
+          "href": "/forecast"
+        },
+        {
+          "label": "Data Quality & Provenance",
+          "href": "/quality"
+        }
+      ],
+      "docs": [
+        "docs/51_CANONICAL_PRECIPITATION_RECONSTRUCTION.md",
+        "docs/85_OPERATIONAL_CORPUS_PAYLOAD_ACQUISITION.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-CLASSIFIER",
+      "group": "Weather regime classifier",
+      "requirement": "Weather-regime classifier",
+      "ps_ids": [
+        "PS-R03"
+      ],
+      "ps_mandatory": true,
+      "status": "PARTIAL",
+      "summary": "A forecast-only three-class pseudo-regime classifier runs on both tracks; per-case probabilities, regime distributions and regime-stratified verification are shown.",
+      "limitation": "Only three pseudo-label classes exist. Agreement with the labelling rule is not meteorological accuracy, there is no independent expert validation, and the coastal, orographic and western-disturbance regimes named in the problem statement are not classified.",
+      "pages": [
+        {
+          "label": "Regime Intelligence (2019 reforecast)",
+          "href": "/regimes"
+        },
+        {
+          "label": "Regime Intelligence (2025 operational-era)",
+          "href": "/regimes?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/54_PROTOTYPE_REGIME_METHODOLOGY.md",
+        "docs/55_PHASE2A_REGIME_VALIDATION_REPORT.md",
+        "docs/109_REGIME_INTELLIGENCE_UI_COMPLETION.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 cases in the Active pseudo-regime",
+          "source": "regime:B:2025",
+          "pointer": "/by_predicted_regime/ACTIVE_MONSOON/case_count",
+          "format": "int"
+        },
+        {
+          "label": "2025 cases in the Break / Weak pseudo-regime",
+          "source": "regime:B:2025",
+          "pointer": "/by_predicted_regime/BREAK_WEAK_MONSOON/case_count",
+          "format": "int"
+        },
+        {
+          "label": "2025 cases in the Low / Depression pseudo-regime",
+          "source": "regime:B:2025",
+          "pointer": "/by_predicted_regime/LOW_DEPRESSION_INFLUENCED/case_count",
+          "format": "int"
+        }
+      ]
+    },
+    {
+      "id": "REGIME-ACTIVE",
+      "group": "Weather regime classifier",
+      "requirement": "Active monsoon regime",
+      "ps_ids": [
+        "PS-R03"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Represented by the forecast-only Active Monsoon pseudo-regime class.",
+      "limitation": "A pseudo-label derived from forecast fields, not an observed or expert-assigned regime.",
+      "pages": [
+        {
+          "label": "Regime Intelligence",
+          "href": "/regimes?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/54_PROTOTYPE_REGIME_METHODOLOGY.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-BREAK",
+      "group": "Weather regime classifier",
+      "requirement": "Break monsoon regime",
+      "ps_ids": [
+        "PS-R03"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Represented by the forecast-only Break / Weak Monsoon pseudo-regime class.",
+      "limitation": "Break and weak monsoon conditions are merged into one class, and it is a forecast-only pseudo-label.",
+      "pages": [
+        {
+          "label": "Regime Intelligence",
+          "href": "/regimes?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/54_PROTOTYPE_REGIME_METHODOLOGY.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-LOW",
+      "group": "Weather regime classifier",
+      "requirement": "Monsoon low / depression regime",
+      "ps_ids": [
+        "PS-R03"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Represented by the forecast-only Low / Depression Influenced pseudo-regime class.",
+      "limitation": "A pseudo-label from domain-mean forecast diagnostics; tracks of individual systems are not identified.",
+      "pages": [
+        {
+          "label": "Regime Intelligence",
+          "href": "/regimes?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/54_PROTOTYPE_REGIME_METHODOLOGY.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-COASTAL-OROGRAPHIC",
+      "group": "Weather regime classifier",
+      "requirement": "Coastal / orographic rainfall regime",
+      "ps_ids": [
+        "PS-R03"
+      ],
+      "ps_mandatory": true,
+      "status": "PLANNED",
+      "summary": "Not classified yet. A hierarchical design (synoptic regime plus a per-cell geographic-forcing head) is documented; no static terrain or coastline data are in the frozen feature schema.",
+      "limitation": "Missing requirement. A staged protocol (static geography, rule-based zones, stratified verification of the frozen models) is approved and frozen for Stages 0 to 2; nothing is acquired or trained yet, and the status stays planned until its evidence exists.",
+      "pages": [],
+      "docs": [
+        "docs/08_REGIME_METHODOLOGY.md",
+        "docs/34_REGIME_LABEL_STRATEGY.md",
+        "docs/115_COASTAL_OROGRAPHIC_REGIME_PROTOCOL.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-WESTERN-DISTURBANCE",
+      "group": "Weather regime classifier",
+      "requirement": "Western disturbance regime",
+      "ps_ids": [
+        "PS-R03"
+      ],
+      "ps_mandatory": true,
+      "status": "PLANNED",
+      "summary": "Not classified. The current analysis domain clips the latitudes where western disturbances act, and no upper-level fields or labels are available.",
+      "limitation": "Missing requirement and a feasibility question (domain, upper-air fields, label source), not only a modelling task.",
+      "pages": [],
+      "docs": [
+        "docs/08_REGIME_METHODOLOGY.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-INDEPENDENT-VALIDATION",
+      "group": "Weather regime classifier",
+      "requirement": "Independent (expert / bulletin) validation of regime labels",
+      "ps_ids": [
+        "PS-R03"
+      ],
+      "ps_mandatory": false,
+      "status": "PLANNED",
+      "summary": "Classifier scores measure agreement with deterministic pseudo-labels only.",
+      "limitation": "No independent regime validation set exists; its sources and licensing are unverified.",
+      "pages": [],
+      "docs": [
+        "docs/55_PHASE2A_REGIME_VALIDATION_REPORT.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "ML-POSTPROCESSING",
+      "group": "Post-processing",
+      "requirement": "AI/ML post-processing of raw NWP rainfall",
+      "ps_ids": [
+        "PS-R02"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "A frozen ladder of Raw, Ridge MOS, global gradient-boosted trees, hard regime-routed experts and a soft regime mixture is trained on earlier seasons and evaluated on later ones.",
+      "limitation": "Small training seasons; the extreme-rain tail is sparse; the models are frozen historical artifacts, not a live service.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        },
+        {
+          "label": "Data & Methodology",
+          "href": "/methodology"
+        }
+      ],
+      "docs": [
+        "docs/58_AUTHORITATIVE_RAINFALL_MODELING.md",
+        "docs/88_OPERATIONAL_MODEL_DEVELOPMENT_2023_2024.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-AWARE-CORRECTION",
+      "group": "Post-processing",
+      "requirement": "Regime-conditioned (regime-aware) correction",
+      "ps_ids": [
+        "PS-R04"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Hard routing (M3) and a soft probability-weighted mixture (M4) correct rainfall with regime specialists; RMSE against Raw is shown for both tracks.",
+      "limitation": "Regime-aware models do not beat the global model on RMSE, MAE or bias. Their heavy-rain event skill gain appears on the operational-era track only, mainly in the Low / Depression regime, and does not appear on the 2019 reforecast track.",
+      "pages": [
+        {
+          "label": "Verification Lab (regime-aware)",
+          "href": "/verification"
+        },
+        {
+          "label": "Regime Intelligence",
+          "href": "/regimes"
+        }
+      ],
+      "docs": [
+        "docs/61_REGIME_AWARE_BENEFIT_ANALYSIS.md",
+        "docs/106_REGIME_CATEGORICAL_AND_FSS_DIAGNOSTICS.md",
+        "docs/108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md"
+      ],
+      "facts": [
+        {
+          "label": "2019 RMSE, M0 Raw (mm)",
+          "source": "regime:A:2019",
+          "pointer": "/overall/continuous/M0/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2019 RMSE, M3 hard regime (mm)",
+          "source": "regime:A:2019",
+          "pointer": "/overall/continuous/M3/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2019 RMSE, M4 soft regime (mm)",
+          "source": "regime:A:2019",
+          "pointer": "/overall/continuous/M4/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 RMSE, M3 hard regime (mm)",
+          "source": "regime:B:2025",
+          "pointer": "/overall/continuous/M3/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 RMSE, M4 soft regime (mm)",
+          "source": "regime:B:2025",
+          "pointer": "/overall/continuous/M4/rmse_mm",
+          "format": "mm2"
+        }
+      ]
+    },
+    {
+      "id": "BIAS-CORRECTED-RAINFALL",
+      "group": "Post-processing",
+      "requirement": "Bias-corrected rainfall forecast",
+      "ps_ids": [
+        "PS-R05",
+        "PS-R06"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Corrected 24-hour rainfall grids (M1 to M4) are shown next to Raw GEFS and IMD observations on the same grid and scale.",
+      "limitation": "Historical replay on a regional domain; corrected extremes are often suppressed (see the improvement row).",
+      "pages": [
+        {
+          "label": "Forecast & Atmosphere",
+          "href": "/forecast"
+        },
+        {
+          "label": "Forecast & Atmosphere (2025)",
+          "href": "/forecast?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/60_2019_FINAL_TEST_REPORT.md",
+        "docs/89_OPERATIONAL_FINAL_TEST_2025.md"
+      ],
+      "facts": [
+        {
+          "label": "2019 RMSE, M0 Raw (mm)",
+          "source": "regime:A:2019",
+          "pointer": "/overall/continuous/M0/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2019 RMSE, M2 global model (mm)",
+          "source": "regime:A:2019",
+          "pointer": "/overall/continuous/M2/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 RMSE, M0 Raw (mm)",
+          "source": "regime:B:2025",
+          "pointer": "/overall/continuous/M0/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 RMSE, M1 preselected primary (mm)",
+          "source": "regime:B:2025",
+          "pointer": "/overall/continuous/M1/rmse_mm",
+          "format": "mm2"
+        }
+      ]
+    },
+    {
+      "id": "IMPROVEMENT-VS-RAW",
+      "group": "Post-processing",
+      "requirement": "Improved rainfall forecast versus raw NWP, especially heavy and very heavy rain",
+      "ps_ids": [
+        "PS-R05"
+      ],
+      "ps_mandatory": true,
+      "status": "PARTIAL",
+      "summary": "Overall RMSE improves against Raw on both tracks.",
+      "limitation": "Improvement is demonstrated for overall RMSE only. Heavy and very-heavy event skill is mixed: on the 2019 reforecast track every corrected model scores below Raw on heavy-rain CSI, and on the operational-era track only some models, mainly in one regime, score above it. Very-heavy skill is not improved.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        },
+        {
+          "label": "Extreme Rain",
+          "href": "/extremes"
+        }
+      ],
+      "docs": [
+        "docs/90_INDEPENDENT_FINAL_SCIENTIFIC_AUDIT.md",
+        "docs/108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md",
+        "docs/113_DISTRICT_VERIFICATION_RESULTS.md"
+      ],
+      "facts": [
+        {
+          "label": "2019 heavy-rain CSI, M0 Raw",
+          "source": "regime:A:2019",
+          "pointer": "/overall/categorical/heavy/M0/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2019 heavy-rain CSI, M3 hard regime",
+          "source": "regime:A:2019",
+          "pointer": "/overall/categorical/heavy/M3/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2025 heavy-rain CSI, M0 Raw",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M0/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2025 heavy-rain CSI, M3 hard regime",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M3/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2025 very-heavy CSI, M0 Raw",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/very_heavy/M0/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2025 very-heavy CSI, M3 hard regime",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/very_heavy/M3/CSI",
+          "format": "score3"
+        }
+      ]
+    },
+    {
+      "id": "HEAVY-PROBABILITY",
+      "group": "Probabilities and products",
+      "requirement": "Heavy-rainfall exceedance probability",
+      "ps_ids": [
+        "PS-R07"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Calibrated per-cell probabilities of at least the IMD heavy-rain threshold, with reliability, Brier skill and detection scores.",
+      "limitation": "False-alarm ratios at the frozen decision cutoffs are high and the upper reliability bins are sparse; calibration describes the fitting method, not perfect reliability.",
+      "pages": [
+        {
+          "label": "Extreme Rain",
+          "href": "/extremes"
+        },
+        {
+          "label": "Extreme Rain (2025)",
+          "href": "/extremes?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/63_EXTREME_RAIN_PROBABILITY_MODELING.md",
+        "docs/89_OPERATIONAL_FINAL_TEST_2025.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "VERY-HEAVY-PROBABILITY",
+      "group": "Probabilities and products",
+      "requirement": "Very-heavy-rainfall exceedance probability",
+      "ps_ids": [
+        "PS-R07"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Calibrated per-cell probabilities of at least the IMD very-heavy threshold on both tracks.",
+      "limitation": "Skill is modest and false-alarm ratios are high; very-heavy events are rare and results rest on few events.",
+      "pages": [
+        {
+          "label": "Extreme Rain",
+          "href": "/extremes"
+        },
+        {
+          "label": "Extreme Rain (2025)",
+          "href": "/extremes?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/63_EXTREME_RAIN_PROBABILITY_MODELING.md",
+        "docs/89_OPERATIONAL_FINAL_TEST_2025.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "GRID-PRODUCT",
+      "group": "Probabilities and products",
+      "requirement": "Grid-level rainfall product",
+      "ps_ids": [
+        "PS-R06"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Raw, corrected and IMD observed 24-hour rainfall on the common analysis grid, with a cell inspector and probability layers.",
+      "limitation": "Regional domain only (not all-India) and historical replay.",
+      "pages": [
+        {
+          "label": "Forecast & Atmosphere",
+          "href": "/forecast"
+        },
+        {
+          "label": "Extreme Rain",
+          "href": "/extremes"
+        }
+      ],
+      "docs": [
+        "docs/66_PHASE2C_SCIENTIFIC_API.md",
+        "docs/73_PROFESSIONAL_MAPPING_SYSTEM.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "DISTRICT-PRODUCT",
+      "group": "Probabilities and products",
+      "requirement": "District-level rainfall product",
+      "ps_ids": [
+        "PS-R08"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Area-weighted district rainfall, event probabilities and area fractions for the 2019 reforecast, and for 2024 and 2025 with Raw, all four corrected models and IMD side by side plus a descriptive history.",
+      "limitation": "Historical decision-support prototype, not an advisory. Domain-limited, simplified geometry, IMD land cells only; no 2023 product (training year).",
+      "pages": [
+        {
+          "label": "District Intelligence (2019)",
+          "href": "/districts"
+        },
+        {
+          "label": "District Intelligence (2025)",
+          "href": "/districts?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/65_DISTRICT_PRODUCT_METHODOLOGY.md",
+        "docs/107_TRACK_B_DISTRICT_PRODUCT.md",
+        "docs/111_DISTRICT_PRODUCT_COMPLETION.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 districts included in the district verification",
+          "source": "district:B:2025",
+          "pointer": "/inclusion/districts_included",
+          "format": "int"
+        }
+      ]
+    },
+    {
+      "id": "DISTRICT-MAP",
+      "group": "Probabilities and products",
+      "requirement": "District map",
+      "ps_ids": [
+        "PS-R08"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Choropleth of district means, errors against IMD, and per-district improvement over Raw.",
+      "limitation": "Uses the online basemap with a local offline fallback.",
+      "pages": [
+        {
+          "label": "District Intelligence",
+          "href": "/districts?experiment=operational&year=2025"
+        },
+        {
+          "label": "Verification Lab (district-level)",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/111_DISTRICT_PRODUCT_COMPLETION.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "DISTRICT-TABLE",
+      "group": "Probabilities and products",
+      "requirement": "District table",
+      "ps_ids": [
+        "PS-R08"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Sortable per-district tables of rainfall, probabilities, area fractions, errors and model comparison.",
+      "limitation": "Values are area-weighted district aggregates, not point rainfall.",
+      "pages": [
+        {
+          "label": "District Intelligence",
+          "href": "/districts?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/107_TRACK_B_DISTRICT_PRODUCT.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "METRIC-RMSE",
+      "group": "Verification metrics",
+      "requirement": "RMSE",
+      "ps_ids": [
+        "PS-R09"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Reported overall, by regime and by lead for every model on both tracks, and exported in the verification report.",
+      "limitation": "Uncertainty intervals are case-cluster bootstraps and are optimistic.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/10_VERIFICATION_PROTOCOL.md",
+        "docs/110_VERIFICATION_REGIME_AWARE_TAB_AND_REPORT_EXPORT.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 RMSE, M0 Raw (mm)",
+          "source": "regime:B:2025",
+          "pointer": "/overall/continuous/M0/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 RMSE, M2 global model (mm)",
+          "source": "regime:B:2025",
+          "pointer": "/overall/continuous/M2/rmse_mm",
+          "format": "mm2"
+        }
+      ]
+    },
+    {
+      "id": "METRIC-ETS",
+      "group": "Verification metrics",
+      "requirement": "ETS (equitable threat score)",
+      "ps_ids": [
+        "PS-R10"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Computed at the heavy and very-heavy thresholds for every model, by regime and lead, at grid and district level.",
+      "limitation": "Only the two extreme IMD thresholds are scored; undefined values are shown as undefined.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/10_VERIFICATION_PROTOCOL.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 heavy-rain ETS, M0 Raw",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M0/ETS",
+          "format": "score3"
+        },
+        {
+          "label": "2025 heavy-rain ETS, M3 hard regime",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M3/ETS",
+          "format": "score3"
+        }
+      ]
+    },
+    {
+      "id": "METRIC-CSI",
+      "group": "Verification metrics",
+      "requirement": "CSI (critical success index)",
+      "ps_ids": [
+        "PS-R11"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Computed at the heavy and very-heavy thresholds for every model, by regime and lead, at grid and district level.",
+      "limitation": "Event-detection skill is low in absolute terms for all models; read it with FAR and the forecast / observed event ratio.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/10_VERIFICATION_PROTOCOL.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 heavy-rain CSI, M0 Raw",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M0/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2025 heavy-rain CSI, M4 soft regime",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M4/CSI",
+          "format": "score3"
+        }
+      ]
+    },
+    {
+      "id": "METRIC-POD",
+      "group": "Verification metrics",
+      "requirement": "POD (probability of detection)",
+      "ps_ids": [
+        "PS-R12"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Computed at the heavy and very-heavy thresholds for every model, by regime and lead, at grid and district level.",
+      "limitation": "POD alone rewards over-forecasting; it is shown with FAR and CSI.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/10_VERIFICATION_PROTOCOL.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 heavy-rain POD, M0 Raw",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M0/POD",
+          "format": "score3"
+        },
+        {
+          "label": "2025 heavy-rain POD, M3 hard regime",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M3/POD",
+          "format": "score3"
+        }
+      ]
+    },
+    {
+      "id": "METRIC-FAR",
+      "group": "Verification metrics",
+      "requirement": "FAR (false alarm ratio)",
+      "ps_ids": [
+        "PS-R13"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "Computed at the heavy and very-heavy thresholds for every model, by regime and lead, at grid and district level; undefined when a model forecasts no event.",
+      "limitation": "FAR is undefined, not zero, when no event is forecast.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/10_VERIFICATION_PROTOCOL.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 heavy-rain FAR, M0 Raw",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M0/FAR",
+          "format": "score3"
+        },
+        {
+          "label": "2025 heavy-rain FAR, M3 hard regime",
+          "source": "regime:B:2025",
+          "pointer": "/overall/categorical/heavy/M3/FAR",
+          "format": "score3"
+        }
+      ]
+    },
+    {
+      "id": "METRIC-FSS",
+      "group": "Verification metrics",
+      "requirement": "FSS (fractions skill score)",
+      "ps_ids": [
+        "PS-R14"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "True two-dimensional FSS at four neighbourhood scales for all five models on both tracks, by regime and lead.",
+      "limitation": "Grid-cell neighbourhoods, not exact kilometres; undefined for cases with no event in an eligible neighbourhood (counts shown).",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/64_FSS_VERIFICATION.md",
+        "docs/108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 heavy-rain FSS (3x3), M0 Raw",
+          "source": "regime:B:2025",
+          "pointer": "/overall/fss/heavy/3/all_cases/M0/fss",
+          "format": "score3"
+        },
+        {
+          "label": "2025 heavy-rain FSS (3x3), M3 hard regime",
+          "source": "regime:B:2025",
+          "pointer": "/overall/fss/heavy/3/all_cases/M3/fss",
+          "format": "score3"
+        }
+      ]
+    },
+    {
+      "id": "VERIFICATION-REPORT",
+      "group": "Verification metrics",
+      "requirement": "Verification report",
+      "ps_ids": [
+        "PS-R09",
+        "PS-R10",
+        "PS-R11",
+        "PS-R12",
+        "PS-R13",
+        "PS-R14"
+      ],
+      "ps_mandatory": true,
+      "status": "IMPLEMENTED",
+      "summary": "A hash-verified, downloadable report (Markdown, CSV, JSON) of RMSE, ETS, CSI, POD, FAR and FSS by regime and lead, and a separate district-level report.",
+      "limitation": "Reports cover the published populations only (2018 and 2019 reforecast, 2024 and 2025 operational-era); probability skill is not in the report.",
+      "pages": [
+        {
+          "label": "Verification Lab",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/110_VERIFICATION_REGIME_AWARE_TAB_AND_REPORT_EXPORT.md",
+        "docs/113_DISTRICT_VERIFICATION_RESULTS.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "REGIME-WISE-VERIFICATION",
+      "group": "Verification metrics",
+      "requirement": "Regime-wise and lead-wise verification",
+      "ps_ids": [
+        "PS-R05"
+      ],
+      "ps_mandatory": false,
+      "status": "IMPLEMENTED",
+      "summary": "Every model is verified by forecast-only pseudo-regime and by lead day, with paired bootstrap contrasts.",
+      "limitation": "Regimes are pseudo-labels; consumed holdouts are post-hoc descriptive analyses.",
+      "pages": [
+        {
+          "label": "Verification Lab (regime-aware)",
+          "href": "/verification"
+        },
+        {
+          "label": "Regime Intelligence",
+          "href": "/regimes"
+        }
+      ],
+      "docs": [
+        "docs/108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "DISTRICT-VERIFICATION",
+      "group": "Verification metrics",
+      "requirement": "District-level verification",
+      "ps_ids": [
+        "PS-R08"
+      ],
+      "ps_mandatory": false,
+      "status": "PARTIAL",
+      "summary": "District-event and district-mean verification under a protocol frozen before any result, for the operational-era years 2024 and 2025.",
+      "limitation": "Operational-era track only; no district verification for the 2019 reforecast. Aggregate verification of historical replay, not warning skill, with optimistic intervals.",
+      "pages": [
+        {
+          "label": "Verification Lab (district-level)",
+          "href": "/verification"
+        }
+      ],
+      "docs": [
+        "docs/112_DISTRICT_VERIFICATION_PROTOCOL.md",
+        "docs/113_DISTRICT_VERIFICATION_RESULTS.md"
+      ],
+      "facts": [
+        {
+          "label": "2025 observed district heavy-rain events (primary definition)",
+          "source": "district:B:2025",
+          "pointer": "/observed_events_pooled/E1/heavy",
+          "format": "int"
+        },
+        {
+          "label": "2025 districts with per-district heavy-rain scores",
+          "source": "district:B:2025",
+          "pointer": "/supported_district_counts/E1/heavy",
+          "format": "int"
+        }
+      ]
+    },
+    {
+      "id": "LIVE-INFERENCE",
+      "group": "Beyond the minimum",
+      "requirement": "Live / new-cycle forecast post-processing",
+      "ps_ids": [],
+      "ps_mandatory": false,
+      "status": "PLANNED",
+      "summary": "The system replays frozen historical cases; it does not ingest or correct a current forecast cycle.",
+      "limitation": "Needs cycle-parameterised acquisition, lead handling, runtime model loading, online quality control and a separate worker.",
+      "pages": [],
+      "docs": [
+        "docs/18_DEPLOYMENT_AND_OPERATIONS.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "SYNOPTIC-OVERLAYS",
+      "group": "Beyond the minimum",
+      "requirement": "Synoptic meteorology overlays (wind vectors, geopotential contours, pressure isobars)",
+      "ps_ids": [],
+      "ps_mandatory": false,
+      "status": "PLANNED",
+      "summary": "Wide-domain atmosphere fields are served as shaded scalars; vectors and contours are not drawn.",
+      "limitation": "Frontend and geometry work remains; only three snapshots per case exist.",
+      "pages": [
+        {
+          "label": "Forecast & Atmosphere (scalar fields)",
+          "href": "/forecast?experiment=operational&year=2025"
+        }
+      ],
+      "docs": [
+        "docs/98_ADVANCED_METEOROLOGICAL_PRODUCTION_FRONTEND.md"
+      ],
+      "facts": []
+    },
+    {
+      "id": "ALL-INDIA-DOMAIN",
+      "group": "Beyond the minimum",
+      "requirement": "All-India domain",
+      "ps_ids": [],
+      "ps_mandatory": false,
+      "status": "PLANNED",
+      "summary": "Analysis is restricted to a regional window over peninsular and central India.",
+      "limitation": "Each additional region needs its own corpus version, district weights and observation coverage check.",
+      "pages": [],
+      "docs": [
+        "docs/65_DISTRICT_PRODUCT_METHODOLOGY.md"
+      ],
+      "facts": []
+    }
+  ]
+}

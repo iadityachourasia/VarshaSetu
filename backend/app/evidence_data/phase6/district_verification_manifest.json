@@ -1,0 +1,31 @@
+{
+  "files": {
+    "district_verification_B_2024.json": {
+      "cases": 183,
+      "district_case_pairs": 30927,
+      "districts_included": 169,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "reproduction": "REPRODUCED",
+      "sha256": "8a6afef311e94f963cd7a51b03208db2ae81d1e1b81950b203ecaa0414034546",
+      "track": "B",
+      "year": 2024
+    },
+    "district_verification_B_2025.json": {
+      "cases": 232,
+      "district_case_pairs": 39208,
+      "districts_included": 169,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "reproduction": "REPRODUCED",
+      "sha256": "ffc7220276ec6977a4d59261c0b15d70e96d027eff7fd84bb6619c442b2b76a0",
+      "track": "B",
+      "year": 2025
+    }
+  },
+  "notes": [
+    "Read-only re-aggregation of frozen artifacts under protocol v1 (docs/112); no model was trained, tuned or selected.",
+    "2025 is a consumed holdout: post-hoc descriptive analysis only.",
+    "Regimes are forecast-only pseudo-labels, not observed meteorological truth."
+  ],
+  "protocol_sha256": "9b348063a6ac654e88a822694fd199d2f432d5d6b0bebafc19567f6be6e53365",
+  "schema": "phase6-district-verification-manifest-v1"
+}

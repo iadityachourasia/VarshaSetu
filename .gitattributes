@@ -1,0 +1,2 @@
+# Hash-manifested evidence must never be line-ending converted (SHA-256 is computed over the exact bytes).
+backend/app/evidence_data/** -text

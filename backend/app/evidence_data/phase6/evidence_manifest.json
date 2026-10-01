@@ -1,0 +1,50 @@
+{
+  "files": {
+    "regime_verification_A_2018.json": {
+      "cases": 251,
+      "cells": 326551,
+      "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+      "reproduction": "REPRODUCED",
+      "sha256": "b360ef0e39e529911ab17b5ad446f4aa97be6bb8b365a9cd7023fbe4ed565278",
+      "source": "scripts/build_phase6_evidence.py (frozen Phase 2B models + feature cache)",
+      "track": "A",
+      "year": 2018
+    },
+    "regime_verification_A_2019.json": {
+      "cases": 255,
+      "cells": 331755,
+      "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+      "reproduction": "REPRODUCED",
+      "sha256": "ef620066e7e8d69c664c6aa48041e677f891b9ba247199ce564ac82b3eac1ac9",
+      "source": "scripts/build_phase6_evidence.py (frozen Phase 2B models + feature cache)",
+      "track": "A",
+      "year": 2019
+    },
+    "regime_verification_B_2024.json": {
+      "cases": 183,
+      "cells": 238083,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "reproduction": "REPRODUCED",
+      "sha256": "64cb3f0bb365c7b7416420925e2f7d56d8bc2a4fb0a65c5d5a286f71f2275b49",
+      "source": "experiments/recent_historical/phase4m_regime_categorical_fss_v1/results/2024_regime_categorical_fss.json (byte-identical copy)",
+      "track": "B",
+      "year": 2024
+    },
+    "regime_verification_B_2025.json": {
+      "cases": 232,
+      "cells": 301832,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "reproduction": "REPRODUCED",
+      "sha256": "37e49ed692ce8a0327d6f0e43fc9e54a48cdd0a921927df1f9e5fe44a988d298",
+      "source": "experiments/recent_historical/phase4m_regime_categorical_fss_v1/results/2025_regime_categorical_fss.json (byte-identical copy)",
+      "track": "B",
+      "year": 2025
+    }
+  },
+  "notes": [
+    "Read-only re-aggregation of frozen artifacts; no model was trained, tuned or selected.",
+    "Consumed holdouts (Track A 2019, Track B 2025) are post-hoc descriptive analyses only.",
+    "Regimes are forecast-only pseudo-labels, not observed meteorological truth."
+  ],
+  "schema": "phase6-evidence-manifest-v1"
+}
