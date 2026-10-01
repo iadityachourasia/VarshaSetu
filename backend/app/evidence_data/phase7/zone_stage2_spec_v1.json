@@ -1,0 +1,127 @@
+{
+  "components": {
+    "cross_barrier": "max(0, u*terrain_uphill_east + v*terrain_uphill_north)",
+    "forcing": "component * PWAT (a moisture-flux proxy, kg m-1 s-1)",
+    "onshore": "max(0, u*coast_landward_east + v*coast_landward_north)",
+    "unit_vectors": "from static_geography_v1 fields coast_landward_* and terrain_uphill_*; wind u east, v north, direction of motion"
+  },
+  "coverage_mapping": "after Stage 2 evidence is built and served, the coastal/orographic row may move from PLANNED to PARTIAL with the wording in protocol v3; never to IMPLEMENTED",
+  "evaluation_populations": {
+    "A": [
+      2018,
+      2019
+    ],
+    "B": [
+      2024,
+      2025
+    ],
+    "labels": {
+      "2019": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST",
+      "2025": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST"
+    },
+    "pooling_across_tracks": false,
+    "same_cases_as_stage1": true
+  },
+  "gates": {
+    "no_observation_in_forcing": "forcing is computed before any observation is loaded; a test asserts the function signature accepts only forecast fields and static fields",
+    "strata_partition_zone": "for each zone-component the three strata add up exactly to the Stage 1 zone totals, which themselves reproduce the published evidence",
+    "write_once": true
+  },
+  "immutability": "any changed rule requires spec v2",
+  "inputs": {
+    "context_grid": "51 x 81, 0.5 degrees, 5-30N, 55-95E",
+    "fields": [
+      "u850",
+      "v850",
+      "pwat"
+    ],
+    "observations_used": false,
+    "q700": "listed among the protocol's inputs but not used by the forcing formula (wind times PWAT); not read",
+    "snapshot": "case dayK uses the forecast snapshot at lead 24*K hours (24, 48, 72) of the case's own initialization, the same convention as the regime classifier",
+    "track_A_sources": "2017 and 2018: data/processed/phase2a daily atmosphere_context NetCDF3; 2019: Phase 1F zarr store 'atmosphere' array, field order U850, V850, Q700, Z500, MSLP, PWAT",
+    "track_B_sources": "Phase 4F atmospheric_qc grids for 2023, 2024 and 2025"
+  },
+  "nature": "Clarifies points on which protocol v3 section 8 is silent or ambiguous. It changes no protocol rule, threshold, scope or decision rule.",
+  "parent": {
+    "protocol_v3_sha256": "a9ff78173ddb6026e6b297c2da2128dde2fdcf825ae8b0c368c5f5fa79d199fd",
+    "stage1_manifest_sha256": "d967614c1bc9f218d258b7dec78a0858682083c3365a7e13dcd572893f4c89e7",
+    "static_geography_sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0"
+  },
+  "q3": {
+    "decision_metrics": [
+      "heavy_frequency_bias",
+      "heavy_csi"
+    ],
+    "descriptive_metrics": [
+      "rmse",
+      "bias"
+    ],
+    "fss": "not reported (strata are scattered cell sets)",
+    "gap_rule": "analogue of the protocol rule: development interval excludes zero and the final-test point estimate has the same sign; chance counts reported; Q3 does not change the Stage 3 recommendation made by Q1 and Q2",
+    "heavy_frequency_bias": "forecast heavy events / observed heavy events in the stratum",
+    "models": {
+      "A": [
+        "M0",
+        "M2",
+        "M3",
+        "M4"
+      ],
+      "B": [
+        "M0",
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    "statistic": "metric(strong) - metric(weak) per model, paired whole-case bootstrap (2000 resamples, seed 26080, same resamples for every model and statistic)"
+  },
+  "resampling": {
+    "extrapolation": "none; all target cells lie inside the context grid",
+    "method": "bilinear (scipy RegularGridInterpolator, linear), context grid to the 0.25 degree target cell centres"
+  },
+  "schema_id": "phase7-zone-stage2-spec-v1",
+  "status": "FROZEN_BEFORE_ANY_STAGE_2_RESULT",
+  "support_gate_for_strata": {
+    "min_cases_with_a_cell": 30,
+    "min_cell_case_pairs": 600,
+    "min_observed_event_pairs_for_categorical": 30,
+    "otherwise": "insufficient_support, no number"
+  },
+  "terciles": {
+    "cut_points": "numpy quantile (linear) at 1/3 and 2/3 of forcing, fitted per track, zone and component; saved in the evidence",
+    "cut_points_refitted_on_evaluation_years": false,
+    "degenerate": "if the two cut-points coincide the zone-component is reported as undefined, not stratified",
+    "fit_populations": {
+      "A": {
+        "cases": "all 258 cases of the Phase 2B 2017 training cache",
+        "year": 2017
+      },
+      "B": {
+        "cases": "all 200 paired cases of the 2023 training population",
+        "year": 2023
+      }
+    },
+    "pairs": "every zone cell of the footprint in every fit case",
+    "strata": {
+      "middle": "q1/3 < forcing <= q2/3",
+      "strong": "forcing > q2/3",
+      "weak": "forcing <= q1/3"
+    }
+  },
+  "title": "Stage 2 execution specification (forcing-strength strata and Q3) under coastal/orographic protocol v3",
+  "zone_to_component": {
+    "COASTAL": [
+      "onshore"
+    ],
+    "COASTAL_AND_OROGRAPHIC": [
+      "onshore",
+      "cross_barrier"
+    ],
+    "OROGRAPHIC": [
+      "cross_barrier"
+    ],
+    "OTHER": [],
+    "note": "The protocol defines onshore for COASTAL and cross_barrier for OROGRAPHIC cells. For cells that are both, both definitions apply and are reported separately; no combined index is invented. OTHER has no defined component and is not stratified."
+  }
+}
