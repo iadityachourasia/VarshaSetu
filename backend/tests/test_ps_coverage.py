@@ -17,7 +17,7 @@ ROWS = {row["id"]: row for row in RAW["rows"]}
 ROUTES = {"/", "/forecast", "/casebook", "/extremes", "/ensemble", "/regimes", "/districts", "/verification", "/observations", "/quality",
           "/methodology", "/audit", "/compliance", "/zones"}
 MUST_BE_PLANNED = ("REGIME-WESTERN-DISTURBANCE", "REGIME-INDEPENDENT-VALIDATION", "LIVE-INFERENCE",
-                   "SYNOPTIC-OVERLAYS", "ALL-INDIA-DOMAIN")
+                   "ALL-INDIA-DOMAIN")
 FORMATS = {"mm2", "score3", "int"}
 
 
@@ -61,6 +61,8 @@ def test_missing_requirements_are_planned_never_implemented():
     # the classifier row cannot claim full coverage while mandatory regimes are missing
     assert ROWS["REGIME-CLASSIFIER"]["status"] == "PARTIAL"
     assert ROWS["IMPROVEMENT-VS-RAW"]["status"] == "PARTIAL"
+    # synoptic overlays now exist (docs/121); the row stays an extra, never mandatory, and states its scope limits
+    assert ROWS["SYNOPTIC-OVERLAYS"]["status"] == "IMPLEMENTED" and not ROWS["SYNOPTIC-OVERLAYS"]["ps_mandatory"] and "Operational-era track only" in ROWS["SYNOPTIC-OVERLAYS"]["limitation"]
 
 
 def test_partial_and_planned_rows_state_their_gap_and_implemented_rows_are_reachable():

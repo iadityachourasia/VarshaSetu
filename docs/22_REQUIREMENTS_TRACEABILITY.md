@@ -31,7 +31,7 @@ Additional (non-mandatory) rows:
 | REGIME-WISE-VERIFICATION | Regime-wise and lead-wise verification | IMPLEMENTED |
 | DISTRICT-VERIFICATION | District-level verification | PARTIAL |
 | LIVE-INFERENCE | Live / new-cycle forecast post-processing | PLANNED |
-| SYNOPTIC-OVERLAYS | Synoptic meteorology overlays (wind vectors, geopotential contours, pressure isobars) | PLANNED |
+| SYNOPTIC-OVERLAYS | Synoptic meteorology overlays (wind vectors, geopotential contours, pressure isobars) | IMPLEMENTED |
 | ALL-INDIA-DOMAIN | All-India domain | PLANNED |
 
 <!-- GENERATED:PS-COVERAGE:END -->

@@ -26,10 +26,12 @@ try:
     from backend.app.ml.phase2b import ROOT, sha256_file
     from backend.app.api.science import ARTIFACTS as TRACK_A_ARTIFACTS, _grid_metadata, _store as _track_a_store
     from backend.app.ml.district_product import aggregate_operational_districts, district_case_means, flat_field
+    from backend.app.data.monthly_qc import context_coordinates
 except ModuleNotFoundError:
     from app.ml.phase2b import ROOT, sha256_file
     from app.api.science import ARTIFACTS as TRACK_A_ARTIFACTS, _grid_metadata, _store as _track_a_store
     from app.ml.district_product import aggregate_operational_districts, district_case_means, flat_field
+    from app.data.monthly_qc import context_coordinates
 
 
 class ScienceErrorCode(str, Enum):
@@ -298,10 +300,14 @@ class AtmosphericFieldResponse(BaseModel):
     units: str
     shape: list[int]
     values: list[Any]
+    latitude_centers: list[float]
+    longitude_centers: list[float]
+    grid_spacing_degrees: float
     coordinate_note: str = (
-        "Frozen artifact stores index-space grid values only; no per-cell latitude/longitude "
-        "sidecar exists in this corpus. Do not assume native 0.25 degree resolution — the "
-        "source atmosphere grid is an approximately 0.5 degree, 51x81 cropped context."
+        "The frozen artifact stores index-space values only (no per-cell coordinate sidecar). The coordinates returned here are the "
+        "frozen context-grid definition (backend/app/data/monthly_qc.context_coordinates: 5-30N, 55-95E, 0.5 degree, row 0 = 5N, column 0 = 55E), "
+        "whose alignment with the stored 2024 grids was confirmed against the independently stored Track A coordinates by seasonal-mean "
+        "pattern correlation (docs/121). The source grid is approximately 0.5 degree and 51x81; do not assume 0.25 degree resolution."
     )
     source: str = "phase4f_payload_acquisition_v1/atmospheric_qc"
 
@@ -1029,9 +1035,11 @@ def atmosphere(year: int, case_id: str, field: str) -> AtmosphericFieldResponse:
     values = np.where(np.isfinite(grid), grid, None).tolist()
     pressure_level = {"u850": 850.0, "v850": 850.0, "q700": 700.0, "z500": 500.0, "mslp": None, "pwat": None}[field]
     units = {"u850": "m/s", "v850": "m/s", "q700": "kg/kg", "z500": "gpm", "mslp": "Pa", "pwat": "kg/m^2"}[field]
+    latitude, longitude = context_coordinates()
     return AtmosphericFieldResponse(
         case_id=case_id, year=year, field=field, pressure_level_hpa=pressure_level, forecast_hour=lead_hours,
         units=units, shape=[51, 81], values=values,
+        latitude_centers=[float(v) for v in latitude], longitude_centers=[float(v) for v in longitude], grid_spacing_degrees=0.5,
     )
 
 

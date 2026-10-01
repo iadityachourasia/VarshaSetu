@@ -16,6 +16,7 @@ import {
   getOperationalRegime,
   getOperationalStatus,
   operationalGridFieldSchema,
+  operationalAtmosphericFieldSchema,
 } from "./operational";
 
 afterEach(() => { vi.unstubAllGlobals(); vi.restoreAllMocks(); });
@@ -235,12 +236,27 @@ describe("grid, atmosphere, probability, regime, ensemble parsing", () => {
     const payload = {
       case_id: "20250601_day1_24h", year: 2025, field: "u850", pressure_level_hpa: 850, forecast_hour: 24,
       units: "m/s", shape: [51, 81] as [number, number], values: Array.from({ length: 51 }, () => Array(81).fill(1.2)),
-      coordinate_note: "Frozen artifact stores index-space grid values only", source: "phase4f_payload_acquisition_v1/atmospheric_qc",
+      latitude_centers: Array.from({ length: 51 }, (_, i) => 5 + 0.5 * i), longitude_centers: Array.from({ length: 81 }, (_, j) => 55 + 0.5 * j), grid_spacing_degrees: 0.5,
+      coordinate_note: "Frozen context-grid definition", source: "phase4f_payload_acquisition_v1/atmospheric_qc",
     };
     vi.stubGlobal("fetch", okJson(payload));
     const result = await getOperationalAtmosphere(2025, "20250601_day1_24h", "u850");
     expect(result.field).toBe("u850");
     expect(result.pressure_level_hpa).toBe(850);
+    expect(result.latitude_centers[0]).toBe(5);
+    expect(result.longitude_centers[80]).toBe(95);
+  });
+
+  it("rejects an atmospheric field whose coordinates or values do not match its shape", () => {
+    const base = {
+      case_id: "c", year: 2025, field: "u850", pressure_level_hpa: 850, forecast_hour: 24, units: "m/s", shape: [2, 3] as [number, number],
+      values: [[1, 2, 3], [4, 5, 6]], latitude_centers: [5, 5.5], longitude_centers: [55, 55.5, 56], grid_spacing_degrees: 0.5, coordinate_note: "n", source: "s",
+    };
+    expect(operationalAtmosphericFieldSchema.safeParse(base).success).toBe(true);
+    expect(operationalAtmosphericFieldSchema.safeParse({ ...base, latitude_centers: [5] }).success).toBe(false);
+    expect(operationalAtmosphericFieldSchema.safeParse({ ...base, longitude_centers: [55, 55.5] }).success).toBe(false);
+    expect(operationalAtmosphericFieldSchema.safeParse({ ...base, values: [[1, 2, 3]] }).success).toBe(false);
+    expect(operationalAtmosphericFieldSchema.safeParse({ ...base, grid_spacing_degrees: 0 }).success).toBe(false);
   });
 
   it("parses a probability field", async () => {

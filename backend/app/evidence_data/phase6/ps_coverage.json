@@ -959,17 +959,18 @@
       "requirement": "Synoptic meteorology overlays (wind vectors, geopotential contours, pressure isobars)",
       "ps_ids": [],
       "ps_mandatory": false,
-      "status": "PLANNED",
-      "summary": "Wide-domain atmosphere fields are served as shaded scalars; vectors and contours are not drawn.",
-      "limitation": "Frontend and geometry work remains; only three snapshots per case exist.",
+      "status": "IMPLEMENTED",
+      "summary": "A synoptic chart of the wide forecast domain draws 850-hPa wind arrows, 500-hPa geopotential height contours and sea-level pressure isobars over shaded precipitable water or 700-hPa humidity, on a map with a basemap, with a rainfall-domain outline and an exact point reader. Every layer is built from the frozen forecast fields.",
+      "limitation": "Operational-era track only (the 2019 reforecast track has no wide-domain chart in the app). One forecast snapshot per case at the case's own lead, no animation. The fields are the control-member forecast, not an analysis, and the chart is not a causal explanation of any correction.",
       "pages": [
         {
-          "label": "Forecast & Atmosphere (scalar fields)",
+          "label": "Forecast & Atmosphere (synoptic chart)",
           "href": "/forecast?experiment=operational&year=2025"
         }
       ],
       "docs": [
-        "docs/98_ADVANCED_METEOROLOGICAL_PRODUCTION_FRONTEND.md"
+        "docs/98_ADVANCED_METEOROLOGICAL_PRODUCTION_FRONTEND.md",
+        "docs/121_SYNOPTIC_CHART_AND_CONTEXT_GRID.md"
       ],
       "facts": []
     },

@@ -262,8 +262,16 @@ export const operationalAtmosphericFieldSchema = z.object({
   units: z.string(),
   shape: z.tuple([z.number().int().positive(), z.number().int().positive()]),
   values: matrix,
+  latitude_centers: z.array(z.number()),
+  longitude_centers: z.array(z.number()),
+  grid_spacing_degrees: z.number().positive(),
   coordinate_note: z.string(),
   source: z.string(),
+}).superRefine((payload, ctx) => {
+  const [rows, cols] = payload.shape;
+  if (payload.values.length !== rows || payload.values.some((row) => row.length !== cols)) ctx.addIssue({ code: z.ZodIssueCode.custom, message: "values do not match shape" });
+  if (payload.latitude_centers.length !== rows) ctx.addIssue({ code: z.ZodIssueCode.custom, message: "latitude_centers length does not match shape" });
+  if (payload.longitude_centers.length !== cols) ctx.addIssue({ code: z.ZodIssueCode.custom, message: "longitude_centers length does not match shape" });
 });
 export type OperationalAtmosphericField = z.infer<typeof operationalAtmosphericFieldSchema>;
 

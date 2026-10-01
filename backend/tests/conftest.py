@@ -31,6 +31,7 @@ collect_ignore = [] if EXPERIMENT_CODE_MARKER.is_file() else list(EXPERIMENT_COD
 # (module, test name or None for the whole module, required path, what it is)
 SKIP_WITHOUT = (
     ("test_operational.py", None, BUNDLE_MARKER, "the serving-data bundle (release serving-data-v1)"),
+    ("test_atmosphere_api.py", None, BUNDLE_MARKER, "the serving-data bundle (release serving-data-v1)"),
     ("test_phase2c.py", "test_api_readonly_provenance_and_legacy_lock", BUNDLE_MARKER, "the serving-data bundle (release serving-data-v1)"),
     ("test_phase4d_protocol.py", None, CORPUS_PROTOCOL, "the local experiment protocol files under experiments/ (gitignored)"),
 )

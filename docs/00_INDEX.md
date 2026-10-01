@@ -127,6 +127,7 @@ This directory is the working technical specification, scientific governance sys
 | `118_ZONE_FORCING_STAGE2.md` | Phase 7D (Stage 2): forecast-time forcing-strength strata inside the zones (training-year cut-points, frozen spec), heavy rain concentrates in the strong stratum and every frozen model underforecasts it on the Ghats coast; Stage 3 not authorised | Before quoting forcing-stratum results |
 | `119_ZONE_EVIDENCE_API_AND_PAGE.md` | Phase 7E: read-only hash-chain-verified zone evidence API, Geographic Zones page, coverage row moved to PARTIAL (never implemented), verification results | Before changing the zone API, the page or the coastal/orographic coverage status |
 | `120_PRODUCTION_HARDENING.md` | Phase 7F: explicit CORS, single version source, honest health, retired static audit routes, checksum-verified and retried bundle download, CI, explicit skip policy, line-ending independent governance hashes, Story Mode figures derived from evidence | Before changing CORS, health, the Dockerfile, CI or Story Mode figures |
+| `121_SYNOPTIC_CHART_AND_CONTEXT_GRID.md` | Phase 8A: synoptic chart (wind, height, pressure, shading) built from the frozen 51x81 fields; the grid's georeferencing verified against Track A's stored coordinates | Before changing the atmosphere API, the synoptic chart or its coordinates |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule
