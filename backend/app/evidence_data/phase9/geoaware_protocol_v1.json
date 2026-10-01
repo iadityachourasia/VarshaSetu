@@ -1,0 +1,1158 @@
+{
+  "approval": {
+    "approved_before_any_training": true,
+    "option_D1": "(b) development-only: train on 2023, compare on 2024 (already used for selection and calibration) and give a labelled post-hoc comparison on 2025; no independent claim",
+    "record": "project owner reply 'Yes continue' (2026-10-01) to a message that recommended pushing and option (b) and listed decisions D1, D3, D4 and D5; the proposed values were accepted as written",
+    "values_D3_D4_D5": "as proposed in docs/124 sections 3 and 4, unchanged"
+  },
+  "baselines_unchanged": [
+    "M0",
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "decision_rule": {
+    "adds_value_requires_all": [
+      "A3 beats M2 on heavy-rain CSI in the COASTAL_AND_OROGRAPHIC zone with the paired 95 percent interval of (A3 - M2) excluding zero",
+      "overall RMSE of A3 not worse than M2 by more than 0.2 mm",
+      "A3 passes G1, G2 and G3 on the evaluation population",
+      "the sign of the zone heavy-CSI difference is the same in the post-hoc 2025 population as in 2024"
+    ],
+    "geography_attribution": "a gain is attributed to geography only if A3 also beats the internal control A0 on the same zone metric; otherwise it is attributed to the training recipe",
+    "if_met_under_option_b": "report 'a candidate that improves on M2 in development evidence'; never 'implemented' or 'validated'",
+    "if_not_met": "report 'no evidence that geography-aware features improve on M2'; the coverage status stays PARTIAL"
+  },
+  "evaluation": {
+    "cases": "the same paired cases and cells as the zone verification (docs/117)",
+    "comparators": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "fss": "not reported (zones are scattered cell sets)",
+    "metrics": [
+      "RMSE",
+      "MAE",
+      "bias",
+      "POD",
+      "FAR",
+      "CSI",
+      "ETS",
+      "frequency_bias"
+    ],
+    "populations": {
+      "2024": "development evidence (reused year)",
+      "2025": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST (never used for any choice)"
+    },
+    "reproduction_gate": "the recomputed M0 to M4 pooled values must equal the Stage 1 zone evidence exactly before any M5 number is written",
+    "strata": [
+      "all cells",
+      "COASTAL",
+      "OROGRAPHIC",
+      "COASTAL_AND_OROGRAPHIC",
+      "OTHER",
+      "by lead day"
+    ],
+    "support_gate": {
+      "min_cases": 30,
+      "min_cells": 20,
+      "min_observed_event_pairs": 30,
+      "otherwise": "insufficient_support, no number"
+    },
+    "thresholds_mm_per_24h": {
+      "heavy": 64.5,
+      "very_heavy": 115.6
+    },
+    "uncertainty": {
+      "method": "paired whole-case bootstrap",
+      "note": "optimistic: cells in a case are correlated and consecutive days serially correlated",
+      "repeats": 2000,
+      "seed": 26080
+    }
+  },
+  "feature_registry_v2": {
+    "arm_roles": "A0 is the internal control (same pipeline, no new features); A1 and A2 are diagnostic ablations. Only A3 is the declared candidate; the others are reported, never selected as the result",
+    "arms": {
+      "A0": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_z500",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "z500_area_mean",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours"
+      ],
+      "A1": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_z500",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "z500_area_mean",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours",
+        "mean_elevation_m",
+        "local_relief_m",
+        "distance_to_coast_km",
+        "slope_m_per_km",
+        "terrain_uphill_east",
+        "terrain_uphill_north",
+        "coast_landward_east",
+        "coast_landward_north"
+      ],
+      "A2": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_z500",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "z500_area_mean",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours",
+        "onshore_flux",
+        "cross_barrier_flux"
+      ],
+      "A3": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_z500",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "z500_area_mean",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours",
+        "mean_elevation_m",
+        "local_relief_m",
+        "distance_to_coast_km",
+        "slope_m_per_km",
+        "terrain_uphill_east",
+        "terrain_uphill_north",
+        "coast_landward_east",
+        "coast_landward_north",
+        "onshore_flux",
+        "cross_barrier_flux"
+      ]
+    },
+    "base_22": [
+      "raw_c00_rain_mm",
+      "forecast_u850",
+      "forecast_v850",
+      "forecast_q700",
+      "forecast_z500",
+      "forecast_mslp",
+      "forecast_pwat",
+      "pwat_area_mean",
+      "q700_area_mean",
+      "u850_area_mean",
+      "v850_area_mean",
+      "wind_speed_area_mean",
+      "moisture_transport_area_mean",
+      "mslp_area_mean",
+      "mslp_minimum",
+      "mslp_range",
+      "z500_area_mean",
+      "relative_vorticity_area_mean",
+      "relative_vorticity_p90",
+      "latitude_deg",
+      "longitude_deg",
+      "lead_hours"
+    ],
+    "forbidden_inputs": [
+      "rainfall observation",
+      "target-derived value",
+      "valid-time observation"
+    ],
+    "forcing_2": [
+      "onshore_flux",
+      "cross_barrier_flux"
+    ],
+    "forcing_definition": "component x PWAT from forecast U850, V850, PWAT bilinearly resampled to the 0.25 degree cells, snapshot at lead 24*K hours (zone_stage2_spec_v1.json); onshore_flux uses the landward coast unit vector, cross_barrier_flux the uphill terrain unit vector; both are forecast-time only",
+    "primary_candidate": "A3",
+    "static_8": [
+      "mean_elevation_m",
+      "local_relief_m",
+      "distance_to_coast_km",
+      "slope_m_per_km",
+      "terrain_uphill_east",
+      "terrain_uphill_north",
+      "coast_landward_east",
+      "coast_landward_north"
+    ],
+    "static_source": "static_geography_v1 fields by target-grid cell; the elevation of the 11 footprint cells without a land pixel stays missing and is handled by the model's native missing-value path, never imputed as 0",
+    "v1_registry_edited": false
+  },
+  "governance": {
+    "2025_access": "predictions for 2025 are made only after the selection freeze exists and only for the labelled post-hoc comparison",
+    "limits_stated_on_every_output": [
+      "single training year",
+      "2024 is a reused development year",
+      "no independent test",
+      "operational-era track only",
+      "historical replay, not warning skill"
+    ],
+    "never_modified": [
+      "frozen M0-M4 artifacts",
+      "feature registry v1",
+      "zone protocol v3",
+      "any 2019 or 2025 selection"
+    ]
+  },
+  "immutability": "any changed rule requires protocol v2",
+  "model": {
+    "configurations_per_arm": 16,
+    "device": "cpu",
+    "event_weight": {
+      "cap": 10.0,
+      "formula": "w = min(cap, 1 + y / 64.5) on training rows only (never at inference)"
+    },
+    "family": "xgboost",
+    "fixed": {
+      "colsample_bytree": 0.9,
+      "learning_rate": 0.05,
+      "min_child_weight": 5,
+      "reg_lambda": 2.0,
+      "subsample": 0.9
+    },
+    "gpu": "not used (the GPU path failed the project's equivalence gate, docs/87 section 29)",
+    "grid": {
+      "max_depth": [
+        4,
+        6
+      ],
+      "n_estimators": [
+        200,
+        350
+      ],
+      "objective": [
+        "reg:squarederror",
+        "reg:tweedie"
+      ],
+      "tweedie_variance_power": 1.5,
+      "weights": [
+        "none",
+        "capped_event"
+      ]
+    },
+    "n_jobs": 12,
+    "no_new_dependencies": true,
+    "output": "prediction clipped at zero",
+    "seed": 26080,
+    "tree_method": "hist"
+  },
+  "parents": {
+    "crossfit_folds_2023_sha256": "151f574906666648e673d0e3d6e918405156b5bd5a2a2122589a755a2a4a0f95",
+    "docs": [
+      "docs/124_GEOGRAPHY_AWARE_MODEL_PROTOCOL_PROPOSAL.md",
+      "docs/117_ZONE_VERIFICATION_STAGE1.md",
+      "docs/118_ZONE_FORCING_STAGE2.md"
+    ],
+    "stage2_spec_sha256": "3755e06cc48f04e553ac204ea6534de1c2856ff4e2f7d438186ebc5e11e133ff",
+    "static_geography_sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0",
+    "zone_protocol_v3_sha256": "a9ff78173ddb6026e6b297c2da2128dde2fdcf825ae8b0c368c5f5fa79d199fd",
+    "zone_stage1_manifest_sha256": "d967614c1bc9f218d258b7dec78a0858682083c3365a7e13dcd572893f4c89e7"
+  },
+  "primary_comparator": "M2 (frozen global XGBoost, the strongest non-regime baseline)",
+  "schema_id": "phase9-geoaware-protocol-v1",
+  "selection": {
+    "final_fit": "selected configuration refit on all 200 training cases",
+    "freeze": "the selected configurations, their final-model hashes and this protocol's hash are written to a selection freeze before any 2024 or 2025 prediction is made",
+    "guardrails": {
+      "G1": "pooled heavy-rain CSI (64.5 mm per 24 h) at least the Raw (M0) value on the same cases",
+      "G2": "absolute pooled bias at most 1.5 mm",
+      "G3": "very-heavy (115.6 mm per 24 h) forecast frequency bias at least 0.05"
+    },
+    "population": "2023 out-of-fold predictions pooled over all 200 cases",
+    "rule": "per arm, among the 16 configurations that pass G1, G2 and G3, the lowest pooled out-of-fold RMSE; ties resolved in grid order; if none passes the arm has no candidate and that is reported"
+  },
+  "status": "APPROVED_FOR_DEVELOPMENT_ONLY_NO_INDEPENDENT_TEST",
+  "title": "Geography-aware correction (M5a) protocol v1, development-only",
+  "track": {
+    "B": "operational-era GEFS only; Track A is not used and tracks are never pooled"
+  },
+  "training": {
+    "cases": 200,
+    "data_sha256": {
+      "X.npy": "8716ec75c04dce7e8bb432926203e24876e710a3ba6d0a7d8f63da4c0699ff47",
+      "cases.json": "54d2ae6e37beb610b48e467885b3e3803d1d9330d7c7d2d9047621ada0abf253",
+      "pixel_index.npy": "bdb302277c00bc1c402df72395a6dc3e5f47d4f704d00dbc486cca027cd6dfcd",
+      "y_mm.npy": "3e826b161286f53ea69760c5bff3d896a7f89b8be527abdc81eddc4e133a89da"
+    },
+    "evaluation_years_never_used_for_selection": [
+      2024,
+      2025
+    ],
+    "folds": {
+      "case_fold": {
+        "20230601_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-01T00:00:00Z"
+        },
+        "20230602_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-02T00:00:00Z"
+        },
+        "20230603_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-03T00:00:00Z"
+        },
+        "20230603_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-03T00:00:00Z"
+        },
+        "20230604_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-04T00:00:00Z"
+        },
+        "20230604_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-04T00:00:00Z"
+        },
+        "20230605_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-05T00:00:00Z"
+        },
+        "20230605_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-05T00:00:00Z"
+        },
+        "20230606_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-06T00:00:00Z"
+        },
+        "20230606_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-06T00:00:00Z"
+        },
+        "20230607_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-07T00:00:00Z"
+        },
+        "20230608_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-08T00:00:00Z"
+        },
+        "20230608_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-08T00:00:00Z"
+        },
+        "20230609_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-09T00:00:00Z"
+        },
+        "20230609_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-09T00:00:00Z"
+        },
+        "20230610_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-10T00:00:00Z"
+        },
+        "20230610_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-10T00:00:00Z"
+        },
+        "20230610_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-10T00:00:00Z"
+        },
+        "20230611_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-11T00:00:00Z"
+        },
+        "20230611_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-11T00:00:00Z"
+        },
+        "20230612_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-12T00:00:00Z"
+        },
+        "20230612_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-12T00:00:00Z"
+        },
+        "20230612_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-12T00:00:00Z"
+        },
+        "20230613_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-13T00:00:00Z"
+        },
+        "20230613_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-13T00:00:00Z"
+        },
+        "20230614_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-14T00:00:00Z"
+        },
+        "20230614_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-14T00:00:00Z"
+        },
+        "20230615_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-15T00:00:00Z"
+        },
+        "20230615_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-15T00:00:00Z"
+        },
+        "20230616_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-16T00:00:00Z"
+        },
+        "20230616_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-16T00:00:00Z"
+        },
+        "20230617_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-17T00:00:00Z"
+        },
+        "20230618_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-18T00:00:00Z"
+        },
+        "20230620_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-20T00:00:00Z"
+        },
+        "20230621_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-21T00:00:00Z"
+        },
+        "20230622_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-22T00:00:00Z"
+        },
+        "20230622_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-22T00:00:00Z"
+        },
+        "20230623_day2_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-23T00:00:00Z"
+        },
+        "20230625_day1_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-25T00:00:00Z"
+        },
+        "20230625_day3_24h": {
+          "fold": "F1",
+          "initialization_utc": "2023-06-25T00:00:00Z"
+        },
+        "20230626_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-26T00:00:00Z"
+        },
+        "20230626_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-26T00:00:00Z"
+        },
+        "20230626_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-26T00:00:00Z"
+        },
+        "20230627_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-27T00:00:00Z"
+        },
+        "20230628_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-28T00:00:00Z"
+        },
+        "20230628_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-28T00:00:00Z"
+        },
+        "20230629_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-29T00:00:00Z"
+        },
+        "20230629_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-29T00:00:00Z"
+        },
+        "20230630_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-06-30T00:00:00Z"
+        },
+        "20230701_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-01T00:00:00Z"
+        },
+        "20230703_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-03T00:00:00Z"
+        },
+        "20230705_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-05T00:00:00Z"
+        },
+        "20230705_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-05T00:00:00Z"
+        },
+        "20230705_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-05T00:00:00Z"
+        },
+        "20230706_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-06T00:00:00Z"
+        },
+        "20230707_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-07T00:00:00Z"
+        },
+        "20230707_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-07T00:00:00Z"
+        },
+        "20230708_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-08T00:00:00Z"
+        },
+        "20230708_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-08T00:00:00Z"
+        },
+        "20230709_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-09T00:00:00Z"
+        },
+        "20230709_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-09T00:00:00Z"
+        },
+        "20230710_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-10T00:00:00Z"
+        },
+        "20230713_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-13T00:00:00Z"
+        },
+        "20230714_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-14T00:00:00Z"
+        },
+        "20230714_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-14T00:00:00Z"
+        },
+        "20230715_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-15T00:00:00Z"
+        },
+        "20230715_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-15T00:00:00Z"
+        },
+        "20230715_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-15T00:00:00Z"
+        },
+        "20230716_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-16T00:00:00Z"
+        },
+        "20230717_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-17T00:00:00Z"
+        },
+        "20230717_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-17T00:00:00Z"
+        },
+        "20230718_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-18T00:00:00Z"
+        },
+        "20230718_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-18T00:00:00Z"
+        },
+        "20230718_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-18T00:00:00Z"
+        },
+        "20230719_day1_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-19T00:00:00Z"
+        },
+        "20230719_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-19T00:00:00Z"
+        },
+        "20230719_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-19T00:00:00Z"
+        },
+        "20230720_day2_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-20T00:00:00Z"
+        },
+        "20230720_day3_24h": {
+          "fold": "F2",
+          "initialization_utc": "2023-07-20T00:00:00Z"
+        },
+        "20230721_day1_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-21T00:00:00Z"
+        },
+        "20230722_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-22T00:00:00Z"
+        },
+        "20230723_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-23T00:00:00Z"
+        },
+        "20230724_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-24T00:00:00Z"
+        },
+        "20230724_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-24T00:00:00Z"
+        },
+        "20230725_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-25T00:00:00Z"
+        },
+        "20230725_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-25T00:00:00Z"
+        },
+        "20230726_day1_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-26T00:00:00Z"
+        },
+        "20230726_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-26T00:00:00Z"
+        },
+        "20230727_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-27T00:00:00Z"
+        },
+        "20230727_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-27T00:00:00Z"
+        },
+        "20230728_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-28T00:00:00Z"
+        },
+        "20230728_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-28T00:00:00Z"
+        },
+        "20230729_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-29T00:00:00Z"
+        },
+        "20230729_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-29T00:00:00Z"
+        },
+        "20230730_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-30T00:00:00Z"
+        },
+        "20230731_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-31T00:00:00Z"
+        },
+        "20230731_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-07-31T00:00:00Z"
+        },
+        "20230801_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-01T00:00:00Z"
+        },
+        "20230801_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-01T00:00:00Z"
+        },
+        "20230802_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-02T00:00:00Z"
+        },
+        "20230802_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-02T00:00:00Z"
+        },
+        "20230803_day1_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-03T00:00:00Z"
+        },
+        "20230803_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-03T00:00:00Z"
+        },
+        "20230804_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-04T00:00:00Z"
+        },
+        "20230805_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-05T00:00:00Z"
+        },
+        "20230806_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-06T00:00:00Z"
+        },
+        "20230806_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-06T00:00:00Z"
+        },
+        "20230807_day1_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-07T00:00:00Z"
+        },
+        "20230807_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-07T00:00:00Z"
+        },
+        "20230807_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-07T00:00:00Z"
+        },
+        "20230808_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-08T00:00:00Z"
+        },
+        "20230808_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-08T00:00:00Z"
+        },
+        "20230809_day1_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-09T00:00:00Z"
+        },
+        "20230809_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-09T00:00:00Z"
+        },
+        "20230810_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-10T00:00:00Z"
+        },
+        "20230810_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-10T00:00:00Z"
+        },
+        "20230812_day1_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-12T00:00:00Z"
+        },
+        "20230812_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-12T00:00:00Z"
+        },
+        "20230812_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-12T00:00:00Z"
+        },
+        "20230813_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-13T00:00:00Z"
+        },
+        "20230813_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-13T00:00:00Z"
+        },
+        "20230814_day2_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-14T00:00:00Z"
+        },
+        "20230814_day3_24h": {
+          "fold": "F3",
+          "initialization_utc": "2023-08-14T00:00:00Z"
+        },
+        "20230815_day1_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-15T00:00:00Z"
+        },
+        "20230815_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-15T00:00:00Z"
+        },
+        "20230815_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-15T00:00:00Z"
+        },
+        "20230816_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-16T00:00:00Z"
+        },
+        "20230816_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-16T00:00:00Z"
+        },
+        "20230817_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-17T00:00:00Z"
+        },
+        "20230818_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-18T00:00:00Z"
+        },
+        "20230819_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-19T00:00:00Z"
+        },
+        "20230820_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-20T00:00:00Z"
+        },
+        "20230821_day1_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-21T00:00:00Z"
+        },
+        "20230821_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-21T00:00:00Z"
+        },
+        "20230821_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-21T00:00:00Z"
+        },
+        "20230823_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-23T00:00:00Z"
+        },
+        "20230823_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-23T00:00:00Z"
+        },
+        "20230824_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-24T00:00:00Z"
+        },
+        "20230825_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-25T00:00:00Z"
+        },
+        "20230826_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-26T00:00:00Z"
+        },
+        "20230826_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-26T00:00:00Z"
+        },
+        "20230827_day1_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-27T00:00:00Z"
+        },
+        "20230827_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-27T00:00:00Z"
+        },
+        "20230827_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-27T00:00:00Z"
+        },
+        "20230828_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-28T00:00:00Z"
+        },
+        "20230828_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-28T00:00:00Z"
+        },
+        "20230829_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-29T00:00:00Z"
+        },
+        "20230829_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-29T00:00:00Z"
+        },
+        "20230830_day1_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-30T00:00:00Z"
+        },
+        "20230830_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-30T00:00:00Z"
+        },
+        "20230830_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-30T00:00:00Z"
+        },
+        "20230831_day1_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-31T00:00:00Z"
+        },
+        "20230831_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-31T00:00:00Z"
+        },
+        "20230831_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-08-31T00:00:00Z"
+        },
+        "20230901_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-01T00:00:00Z"
+        },
+        "20230901_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-01T00:00:00Z"
+        },
+        "20230902_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-02T00:00:00Z"
+        },
+        "20230902_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-02T00:00:00Z"
+        },
+        "20230903_day1_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-03T00:00:00Z"
+        },
+        "20230903_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-03T00:00:00Z"
+        },
+        "20230905_day1_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-05T00:00:00Z"
+        },
+        "20230905_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-05T00:00:00Z"
+        },
+        "20230906_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-06T00:00:00Z"
+        },
+        "20230907_day2_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-07T00:00:00Z"
+        },
+        "20230907_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-07T00:00:00Z"
+        },
+        "20230908_day3_24h": {
+          "fold": "F4",
+          "initialization_utc": "2023-09-08T00:00:00Z"
+        },
+        "20230909_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-09T00:00:00Z"
+        },
+        "20230910_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-10T00:00:00Z"
+        },
+        "20230913_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-13T00:00:00Z"
+        },
+        "20230914_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-14T00:00:00Z"
+        },
+        "20230916_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-16T00:00:00Z"
+        },
+        "20230916_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-16T00:00:00Z"
+        },
+        "20230919_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-19T00:00:00Z"
+        },
+        "20230919_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-19T00:00:00Z"
+        },
+        "20230922_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-22T00:00:00Z"
+        },
+        "20230922_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-22T00:00:00Z"
+        },
+        "20230923_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-23T00:00:00Z"
+        },
+        "20230923_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-23T00:00:00Z"
+        },
+        "20230924_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-24T00:00:00Z"
+        },
+        "20230925_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-25T00:00:00Z"
+        },
+        "20230925_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-25T00:00:00Z"
+        },
+        "20230926_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-26T00:00:00Z"
+        },
+        "20230926_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-26T00:00:00Z"
+        },
+        "20230926_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-26T00:00:00Z"
+        },
+        "20230927_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-27T00:00:00Z"
+        },
+        "20230927_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-27T00:00:00Z"
+        },
+        "20230928_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-28T00:00:00Z"
+        },
+        "20230928_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-28T00:00:00Z"
+        },
+        "20230929_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-29T00:00:00Z"
+        },
+        "20230930_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-30T00:00:00Z"
+        },
+        "20230930_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-30T00:00:00Z"
+        },
+        "20230930_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-09-30T00:00:00Z"
+        },
+        "20231001_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-01T00:00:00Z"
+        },
+        "20231001_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-01T00:00:00Z"
+        },
+        "20231001_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-01T00:00:00Z"
+        },
+        "20231002_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-02T00:00:00Z"
+        },
+        "20231002_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-02T00:00:00Z"
+        },
+        "20231003_day1_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-03T00:00:00Z"
+        },
+        "20231003_day2_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-03T00:00:00Z"
+        },
+        "20231003_day3_24h": {
+          "fold": "F5",
+          "initialization_utc": "2023-10-03T00:00:00Z"
+        }
+      },
+      "embargo_initialization_days_each_side": 3,
+      "rule": "for a held-out block, train on all other blocks excluding initialization dates within 3 days before the block's first date and after its last date; all leads and cells of an initialization stay together",
+      "scheme": "frozen five date-block folds F1-F5 of 25 initialization dates each"
+    },
+    "rows": 260200,
+    "year": 2023
+  }
+}
