@@ -161,13 +161,14 @@
       ],
       "ps_mandatory": true,
       "status": "PLANNED",
-      "summary": "Not classified yet. A hierarchical design (synoptic regime plus a per-cell geographic-forcing head) is documented; no static terrain or coastline data are in the frozen feature schema.",
+      "summary": "Not classified yet. A hierarchical design (synoptic regime plus a per-cell geographic-forcing head) is documented; a static geography artifact exists but no zone verification or model uses it yet.",
       "limitation": "Missing requirement. A staged protocol (static geography, rule-based zones, stratified verification of the frozen models) is approved and frozen for Stages 0 to 2; nothing is acquired or trained yet, and the status stays planned until its evidence exists.",
       "pages": [],
       "docs": [
         "docs/08_REGIME_METHODOLOGY.md",
         "docs/34_REGIME_LABEL_STRATEGY.md",
-        "docs/115_COASTAL_OROGRAPHIC_REGIME_PROTOCOL.md"
+        "docs/115_COASTAL_OROGRAPHIC_REGIME_PROTOCOL.md",
+      "docs/116_STATIC_GEOGRAPHY_STAGE0.md"
       ],
       "facts": []
     },

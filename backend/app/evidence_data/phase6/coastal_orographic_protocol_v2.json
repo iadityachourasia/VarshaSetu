@@ -1,0 +1,242 @@
+{
+  "amendment": {
+    "approved_by": "project owner instruction 'i want my website to be accurate legit and high end so proceed it accordingly' (2026-10-01), given after being shown the recommended v2 fix",
+    "diagnostics_from_failed_v1_qa": {
+      "footprint_cells": 1301,
+      "footprint_cells_less_than_half_land": 37,
+      "footprint_cells_without_land_pixel": 11,
+      "footprint_majority_land_cells": 1253,
+      "terrain_land_cells_outside_footprint": 2
+    },
+    "evidence_inspected": "terrain land fractions and the time-invariant IMD footprint only; no rainfall value, no model output",
+    "reason": "Stage 0 stop condition triggered. The GMTED2010 file stores ocean as 0 m (not a fill value), so a terrain-only land mask classifies 48 of the 1301 IMD footprint cells (all on the west coast: 11 with no land pixel above 0 m, 37 less than half land) as ocean. Those cells would receive no distance to coast and be placed in OTHER although they are coastal. The disagreement was found by running the builder's QA and was not a model or rainfall result."
+  },
+  "approval": {
+    "approved_before_any_zone_result": true,
+    "decisions": {
+      "D4_static_source": "S2 public-domain DEM aggregated to 0.25 degrees (primary); GEFS ancillary fields only as an optional cross-check if a probe confirms them",
+      "scope": "Stages 0-2 only; Stage 3 (geography-aware model) needs its own protocol and approval",
+      "zone_rules": "as proposed"
+    },
+    "observation_free_inputs_inspected": "time-invariant IMD valid-cell footprint (1301 cells) and grid coordinates only"
+  },
+  "coverage_status_mapping": {
+    "stage_3_complete_and_beats_non_regime_baseline_on_held_out_data": "IMPLEMENTED",
+    "stages_1_2_complete": "PARTIAL",
+    "today": "PLANNED"
+  },
+  "decision_rule": {
+    "geographic_gap": "paired interval of (zone value minus all-cell value) excludes zero in the development year AND the sign matches in the consumed final-test year (post-hoc)",
+    "otherwise": "report no evidence of a geography-specific deficiency at this resolution; requirement stays PARTIAL",
+    "stage_3_recommended_only_if": "at least one zone shows a gap for RMSE, heavy-event CSI or bias on at least one track"
+  },
+  "design": {
+    "frozen_models_modified": false,
+    "head_A": "synoptic state, per case, existing three pseudo-regimes, unchanged",
+    "head_C": "geographic forcing, per cell: static zone x forecast-time forcing strength",
+    "taxonomy_is_flat": false
+  },
+  "forcing_strength": {
+    "coastal_component": "max(0, wind dot coast_normal)",
+    "forbidden_inputs": [
+      "rainfall",
+      "observation",
+      "target-derived values"
+    ],
+    "forcing": "component x PWAT (declared a moisture-flux proxy)",
+    "inputs": [
+      "u850",
+      "v850",
+      "pwat",
+      "q700",
+      "static_geometry"
+    ],
+    "orographic_component": "max(0, wind dot terrain_gradient_direction)",
+    "resampling": "bilinear from the 0.5 degree context grid to 0.25 degrees",
+    "strata": "terciles of forcing over the training year's cell-case pairs within the zone"
+  },
+  "grid": {
+    "latitude_range": [
+      10.0,
+      22.0
+    ],
+    "longitude_range": [
+      68.0,
+      80.0
+    ],
+    "resolution_degrees": 0.25,
+    "shape": [
+      49,
+      49
+    ],
+    "valid_cells_per_case": 1301
+  },
+  "immutability": "v1 remains on file unchanged; any further changed rule requires protocol v3",
+  "leakage": {
+    "feature_registry_v1_edited": false,
+    "only_observation_derived_input": "time-invariant IMD footprint, until the frozen land-sea mask replaces it",
+    "static_fields_are_model_inputs_in_stages_0_to_2": false
+  },
+  "metrics": [
+    "RMSE",
+    "MAE",
+    "bias",
+    "POD",
+    "FAR",
+    "CSI",
+    "ETS",
+    "FSS where the zone is contiguous enough"
+  ],
+  "models_verified": {
+    "A": [
+      "M0",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "B": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ]
+  },
+  "populations": {
+    "2024_note": "already used for selection and calibration; development evidence only",
+    "A": {
+      "consumed_final_test_post_hoc": 2019,
+      "development": 2018,
+      "fit": 2017
+    },
+    "B": {
+      "consumed_final_test_post_hoc": 2025,
+      "development": 2024,
+      "fit": 2023
+    },
+    "pooling_across_tracks": false,
+    "post_hoc_labels": {
+      "2019": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST",
+      "2025": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST"
+    }
+  },
+  "questions": {
+    "Q1": "Do Raw and each model differ in bias or RMSE inside a zone compared with all cells?",
+    "Q2": "Does the improvement over Raw differ in a zone compared with all cells?",
+    "Q3": "Within a zone, does heavy-rain frequency bias or corrected-model skill differ between strong and weak forcing terciles?"
+  },
+  "schema_id": "phase7a-coastal-orographic-protocol-v2",
+  "stages": {
+    "0": {
+      "new_model": false,
+      "training": false,
+      "what": "acquire static geography into a versioned hashed artifact static_geography_v1"
+    },
+    "1": {
+      "new_model": false,
+      "training": false,
+      "what": "static zones and verification of frozen models stratified by zone"
+    },
+    "2": {
+      "new_model": false,
+      "training": false,
+      "what": "forecast-time forcing-strength strata from U850, V850, PWAT, Q700 and static geometry; same stratified verification"
+    },
+    "3": {
+      "authorised": false,
+      "requires": "separate protocol and approval after Stage 1-2 results",
+      "what": "geography-aware correction"
+    }
+  },
+  "static_geography": {
+    "derived_fields": [
+      "mean_elevation_m",
+      "local_relief_m_3x3",
+      "terrain_gradient_vector_after_3x3_mean_smoothing",
+      "coast_normal_from_smoothed_land_fraction",
+      "distance_to_coast_km"
+    ],
+    "distance": "great-circle from cell centre to nearest ocean cell centre of the frozen land-sea mask",
+    "elevation_aggregation": "area-mean to 0.25 degrees",
+    "land_mask_aggregation": "majority",
+    "land_mask_rule": {
+      "distance_to_coast": "great-circle km from the land cell centre to the nearest cell centre that is not a land cell, searched over the extended grid",
+      "elevation_of_footprint_cell_without_land_pixel": "undefined (never imputed as 0 m); such a cell cannot satisfy the elevation test and is never silently dropped",
+      "footprint_role": "the set of cells only; no rainfall value; time-invariant (identical in every 2023 and 2024 case)",
+      "gradient_inputs": "non-land cells and footprint cells without a land pixel at 0 m for smoothing and gradients only",
+      "land_cell": "terrain_land_cell OR member of the IMD valid-cell footprint (a footprint cell is land by IMD's own definition)",
+      "land_pixel": "source elevation above 0 m (the file encodes ocean as 0 m)",
+      "terrain_land_cell": "land fraction >= 0.5 (majority) on the 0.25 degree cell"
+    },
+    "licence_rule": "record licence text, file, version and SHA-256; stop if redistribution of derived 0.25 degree values is not clearly permitted",
+    "qa": {
+      "all_footprint_cells_receive_a_finite_distance_to_coast": true,
+      "builder_refuses_to_write_an_artifact_if_any_criterion_fails": true,
+      "criteria_fixed": "after the v1 diagnostics above were seen, before the v2 artifact was built",
+      "every_zone_has_at_least_min_cells": true,
+      "max_terrain_land_cells_outside_footprint": 5,
+      "min_share_of_footprint_cells_that_are_terrain_land_majority": 0.9
+    }
+  },
+  "status": "APPROVED_FOR_STAGES_0_TO_2",
+  "stop_conditions": [
+    "licence does not permit the intended use",
+    "aggregated field misaligns with the 49x49 grid",
+    "terrain land-sea majority and the IMD footprint disagree beyond the QA criteria in static_geography.qa (v2 resolves the disagreement found in v1 by taking their union)",
+    "any zone has fewer than 20 cells",
+    "any step needs a frozen model or threshold to change"
+  ],
+  "supersedes": {
+    "changed": [
+      "static_geography.land_mask_rule",
+      "static_geography.qa",
+      "stop_conditions[2]"
+    ],
+    "file": "coastal_orographic_protocol_v1.json",
+    "sha256": "76dbf44eddee318cef5975a46b1f8046434f1a61e1e738d91fbc12909de80714",
+    "unchanged": "scope, stages, zone thresholds, support gate, forcing-strength definition, populations, metrics, decision rule, coverage mapping, leakage policy"
+  },
+  "support_gate": {
+    "min_cases": 30,
+    "min_cells": 20,
+    "min_observed_event_cell_case_pairs": 30,
+    "otherwise": "insufficient_support with counts, no number"
+  },
+  "thresholds_mm_per_24h": {
+    "heavy": 64.5,
+    "very_heavy": 115.6
+  },
+  "title": "Coastal / orographic geographic-forcing protocol v2 (land-mask amendment of v1)",
+  "uncertainty": {
+    "method": "paired whole-case bootstrap",
+    "note": "optimistic; cells in a case are correlated; expected-by-chance share reported beside any count",
+    "seed": 26080
+  },
+  "zones": {
+    "labels": {
+      "COASTAL": {
+        "distance_to_coast_km_max": 100.0
+      },
+      "COASTAL_AND_OROGRAPHIC": "both rules",
+      "OROGRAPHIC": {
+        "mean_elevation_m_min": 400.0,
+        "or_local_relief_m_min": 300.0
+      },
+      "OTHER": "neither rule"
+    },
+    "mutually_exclusive": false,
+    "naming": "rule-based geographic-forcing zone; never a learned, validated or official regime",
+    "primary_zones_reselected_after_results": false,
+    "sensitivity_only_alternatives": {
+      "coastal_km": [
+        50,
+        75,
+        150
+      ],
+      "elevation_m": [
+        300,
+        500
+      ]
+    }
+  }
+}

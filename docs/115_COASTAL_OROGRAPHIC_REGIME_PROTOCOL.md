@@ -162,4 +162,16 @@ the land-sea mask disagrees materially with the IMD footprint over the coast; an
 4. Download: approved in principle for Stage 0; the exact DEM file, source, size and licence will be stated and confirmed before any download.
 5. Commit policy: local commits, no push.
 
-Gate: `P0_7_PROTOCOL_APPROVED_FROZEN`. Stage 0 (acquisition) still needs the exact file, source, size and a download confirmation before anything is fetched.
+## 15. Amendments during Stage 0 (v1 stays on file unchanged)
+
+Both amendments were triggered by quality checks on the static geography, before any rainfall value, model output or skill result had been looked at, and both were approved by the project owner.
+
+| Version | SHA-256 | Change | Why |
+|---|---|---|---|
+| v1 | `76dbf44e…0714` | original | — |
+| v2 | `650e5c75d1d07b286a08c27d32596d189cdae7ae04e03398f5ac05e65fae8204` | Land cell = terrain land majority **or** IMD footprint cell; elevation of a footprint cell with no land pixel is undefined, never 0 m | The terrain file stores ocean as 0 m; 48 coastal footprint cells (11 with no land pixel above 0 m) would have been classed as ocean and mis-zoned as OTHER |
+| v3 | `a9ff78173ddb6026e6b297c2da2128dde2fdcf825ae8b0c368c5f5fa79d199fd` | Orographic = local relief ≥ 300 m only (the mean-elevation ≥ 400 m test is dropped from the primary rule and kept as a superseded sensitivity count) | The v2 rule marked 824 of 1,301 land cells as orographic; 471 of them satisfied only the elevation test and were mostly plateau (the Deccan), not a barrier |
+
+Coastal rule, support gate, scope, forcing-strength definition, populations, metrics and the decision rule are unchanged. The Stage 0 record is `docs/116`.
+
+Gate: `P0_7_PROTOCOL_APPROVED_FROZEN` (v1), amended to v3; see `docs/116` for Stage 0 completion.
