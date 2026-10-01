@@ -42,3 +42,13 @@ Date: 2026-10-01. No scientific computation, model, protocol or evidence file wa
 - **`pytest` and `matplotlib` in the production requirements** add image size but are left alone to avoid an unverified runtime change.
 
 Gate: `P3_HARDENING_COMPLETE_PENDING_FIRST_CI_RUN`.
+
+## Addendum: what the first GitHub Actions runs found (2026-10-01)
+
+The first two CI runs failed, and the failures were real findings that only a clean Linux checkout can show. Both are fixed; the third run was green (backend 319 passed and 5 skipped with the real data bundle, frontend 132 passed and 2 skipped, Dockerfile lint clean).
+
+1. **Experiment code is not all-or-nothing.** The data bundle ships some `experiments/` directories, so the first skip rule ("is the experiment code present?") passed while the tests still imported other, absent experiment packages, directly or through a present package. The rule now follows imports transitively and decides per test module, and the report header lists every module that is not collected and why.
+2. **Frozen artifacts were hashed over Windows bytes.** Three hash-pinned 2019 manifests (`artifact_manifest.json` and the two `2019_final_results.json` files) have recorded hashes that equal the hash of their **CRLF** form, while git stores them with LF. The serving-data bundle was tarred from a Windows working copy and so holds the original bytes, which is why the deployed API verifies them; a plain Linux checkout cannot. The unit test now hashes a canonical CRLF form, which gives the recorded value on every checkout. This is also why the Phase 1B tests were normalised earlier.
+3. **Two tests read gitignored local files.** They now skip, visibly, when `experiments/.../FINAL_TEST_RESULT.json` is absent.
+
+Related operational note: a push can hang waiting on an interactive Git Credential Manager prompt. When that happens the GitHub CLI session (`gh auth status`) can supply the credential for one command without changing any configuration.

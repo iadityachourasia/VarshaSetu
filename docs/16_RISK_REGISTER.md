@@ -78,3 +78,7 @@ training is authorized.
 | R38 | No automated checks on push | Mitigated: CI for backend, frontend and Dockerfile | Playwright and the Phase 4 freeze tests remain local |
 | R39 | Hand-typed science numbers in Story Mode | Mitigated: figures derived from verified sources and tested | Other pages were checked by the copy guard, not exhaustively audited |
 
+| ID | Risk | Status | Mitigation |
+|---|---|---|---|
+| R40 | Hash-pinned frozen artifacts were recorded over Windows (CRLF) bytes while git stores LF, so a plain checkout cannot reproduce their recorded hashes | Mitigated: tests hash a canonical form; the serving-data bundle holds the original bytes | Keep new frozen evidence under `backend/app/evidence_data/**` (marked `-text`); never re-save an old frozen file through a text editor or git |
+| R41 | Reused development years: after the geography-aware experiment the 2024 and 2025 results have been seen, so any redesign informed by them cannot be judged on them | Open | Obtain independent years (docs/124 option D1(a)) before testing any follow-up |
