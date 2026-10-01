@@ -210,7 +210,12 @@ def test_phase1b_protected_artifact_history_and_versioned_supersession():
     integrity = json.loads(integrity_path.read_text(encoding="utf-8"))
     assert integrity["status"] == "PASS"
     assert integrity["unchanged_count"] == len(integrity["protected_artifacts"]) == 18
-    supersession_path = integrity_path.with_name("protected_artifact_supersession_v1.json")
+    # Append-only: the newest versioned record is authoritative and must chain, by hash, to every earlier record.
+    records = sorted(integrity_path.parent.glob("protected_artifact_supersession_v*.json"), key=lambda p: int(p.stem.rsplit("_v", 1)[1]))
+    assert [p.name for p in records][0] == "protected_artifact_supersession_v1.json" and len(records) >= 1
+    for earlier, later in zip(records, records[1:]):
+        assert json.loads(later.read_text(encoding="utf-8"))["supersedes_record"]["sha256"] == hashlib.sha256(earlier.read_bytes()).hexdigest()
+    supersession_path = records[-1]
     supersession = json.loads(supersession_path.read_text(encoding="utf-8"))
     assert supersession["record_type"] == "append_only_protected_artifact_supersession"
     assert supersession["historical_lock_is_unchanged"] is True
