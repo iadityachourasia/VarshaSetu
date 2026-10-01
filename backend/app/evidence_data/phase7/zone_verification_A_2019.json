@@ -1,0 +1,3731 @@
+{
+  "bootstrap": {
+    "method": "paired whole-case bootstrap (cells of a case stay together, same resamples for every model and statistic)",
+    "note": "optimistic: cells within a case are spatially correlated and consecutive days are serially correlated",
+    "repeats": 2000,
+    "seed": 26080
+  },
+  "by_pseudo_regime": {
+    "ACTIVE_MONSOON": {
+      "case_count": 92,
+      "zones": {
+        "COASTAL": {
+          "cases": 92,
+          "models": {
+            "M0": {
+              "bias_mm": -0.49216562736611696,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.1947245927075252,
+                  "ETS": 0.17735503828689717,
+                  "FAR": 0.5088062622309197,
+                  "POD": 0.24392614188532555,
+                  "false_alarms": 260,
+                  "forecast_event_count": 511,
+                  "frequency_bias": 0.4965986394557823,
+                  "hits": 251,
+                  "misses": 778,
+                  "observed_event_count": 1029
+                }
+              },
+              "cell_count": 19320,
+              "mae_mm": 11.859414017537231,
+              "rmse_mm": 24.879274573163247
+            },
+            "M2": {
+              "bias_mm": -1.558586743824747,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.06470028544243578,
+                  "ETS": 0.060414956727722305,
+                  "FAR": 0.24444444444444444,
+                  "POD": 0.06608357628765792,
+                  "false_alarms": 22,
+                  "forecast_event_count": 90,
+                  "frequency_bias": 0.08746355685131195,
+                  "hits": 68,
+                  "misses": 961,
+                  "observed_event_count": 1029
+                }
+              },
+              "cell_count": 19320,
+              "mae_mm": 11.374712962884933,
+              "rmse_mm": 23.891030554901622
+            },
+            "M3": {
+              "bias_mm": -3.8377784151248404,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 1029,
+                  "observed_event_count": 1029
+                }
+              },
+              "cell_count": 19320,
+              "mae_mm": 11.838120221260619,
+              "rmse_mm": 26.573840222254365
+            },
+            "M4": {
+              "bias_mm": -3.8469843426804147,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 1029,
+                  "observed_event_count": 1029
+                }
+              },
+              "cell_count": 19320,
+              "mae_mm": 11.713933507613374,
+              "rmse_mm": 26.24784712512289
+            }
+          }
+        },
+        "COASTAL_AND_OROGRAPHIC": {
+          "cases": 92,
+          "models": {
+            "M0": {
+              "bias_mm": -5.316182186006073,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.1417785234899329,
+                  "ETS": 0.1156990883083415,
+                  "FAR": 0.514367816091954,
+                  "POD": 0.16683119447186576,
+                  "false_alarms": 179,
+                  "forecast_event_count": 348,
+                  "frequency_bias": 0.3435340572556762,
+                  "hits": 169,
+                  "misses": 844,
+                  "observed_event_count": 1013
+                }
+              },
+              "cell_count": 10028,
+              "mae_mm": 17.303373216498326,
+              "rmse_mm": 30.56618218051158
+            },
+            "M2": {
+              "bias_mm": -6.577290621968406,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.029836381135707413,
+                  "ETS": 0.024429922314184702,
+                  "FAR": 0.45614035087719296,
+                  "POD": 0.03060217176702863,
+                  "false_alarms": 26,
+                  "forecast_event_count": 57,
+                  "frequency_bias": 0.0562685093780849,
+                  "hits": 31,
+                  "misses": 982,
+                  "observed_event_count": 1013
+                }
+              },
+              "cell_count": 10028,
+              "mae_mm": 16.049239948770833,
+              "rmse_mm": 27.655977626207793
+            },
+            "M3": {
+              "bias_mm": -9.301482568696693,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 1013,
+                  "observed_event_count": 1013
+                }
+              },
+              "cell_count": 10028,
+              "mae_mm": 17.10080114019181,
+              "rmse_mm": 30.587756710102205
+            },
+            "M4": {
+              "bias_mm": -9.415268311230225,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 1013,
+                  "observed_event_count": 1013
+                }
+              },
+              "cell_count": 10028,
+              "mae_mm": 17.015322581099998,
+              "rmse_mm": 30.397410352787347
+            }
+          }
+        },
+        "OROGRAPHIC": {
+          "cases": 92,
+          "models": {
+            "M0": {
+              "bias_mm": 2.308605385879873,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0660377358490566,
+                  "ETS": 0.061286491748301634,
+                  "FAR": 0.8992805755395683,
+                  "POD": 0.16091954022988506,
+                  "false_alarms": 250,
+                  "forecast_event_count": 278,
+                  "frequency_bias": 1.5977011494252873,
+                  "hits": 28,
+                  "misses": 146,
+                  "observed_event_count": 174
+                }
+              },
+              "cell_count": 22540,
+              "mae_mm": 7.8164508774626205,
+              "rmse_mm": 16.471013225861448
+            },
+            "M2": {
+              "bias_mm": 0.3790435211222285,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": -0.0005751952027397804,
+                  "FAR": 1.0,
+                  "POD": 0.0,
+                  "false_alarms": 14,
+                  "forecast_event_count": 14,
+                  "frequency_bias": 0.08045977011494253,
+                  "hits": 0,
+                  "misses": 174,
+                  "observed_event_count": 174
+                }
+              },
+              "cell_count": 22540,
+              "mae_mm": 6.334643464442591,
+              "rmse_mm": 11.922599262012513
+            },
+            "M3": {
+              "bias_mm": -0.1977887157978822,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 174,
+                  "observed_event_count": 174
+                }
+              },
+              "cell_count": 22540,
+              "mae_mm": 6.270535676979593,
+              "rmse_mm": 12.185794284723716
+            },
+            "M4": {
+              "bias_mm": -0.2022838572223655,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 174,
+                  "observed_event_count": 174
+                }
+              },
+              "cell_count": 22540,
+              "mae_mm": 6.243456955901624,
+              "rmse_mm": 12.130593338495474
+            }
+          }
+        },
+        "OTHER": {
+          "cases": 92,
+          "models": {
+            "M0": {
+              "bias_mm": 2.607371188877909,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.017899761336515514,
+                  "ETS": 0.014805105365571591,
+                  "FAR": 0.9690721649484536,
+                  "POD": 0.04076086956521739,
+                  "false_alarms": 470,
+                  "forecast_event_count": 485,
+                  "frequency_bias": 1.3179347826086956,
+                  "hits": 15,
+                  "misses": 353,
+                  "observed_event_count": 368
+                }
+              },
+              "cell_count": 67804,
+              "mae_mm": 7.491442680063216,
+              "rmse_mm": 14.022926805485396
+            },
+            "M2": {
+              "bias_mm": 0.39482926328541074,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 368,
+                  "observed_event_count": 368
+                }
+              },
+              "cell_count": 67804,
+              "mae_mm": 5.963043062809511,
+              "rmse_mm": 10.456818762901879
+            },
+            "M3": {
+              "bias_mm": -0.48917029214755137,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 368,
+                  "observed_event_count": 368
+                }
+              },
+              "cell_count": 67804,
+              "mae_mm": 5.847007466957912,
+              "rmse_mm": 10.71275994498539
+            },
+            "M4": {
+              "bias_mm": -0.3758447923215195,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 368,
+                  "observed_event_count": 368
+                }
+              },
+              "cell_count": 67804,
+              "mae_mm": 5.834830941456575,
+              "rmse_mm": 10.613806201074421
+            }
+          }
+        }
+      }
+    },
+    "BREAK_WEAK_MONSOON": {
+      "case_count": 54,
+      "zones": {
+        "COASTAL": {
+          "cases": 54,
+          "models": {
+            "M0": {
+              "bias_mm": -0.13493376922953013,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0205761316872428,
+                  "ETS": 0.017550296982344865,
+                  "FAR": 0.8780487804878049,
+                  "POD": 0.024154589371980676,
+                  "false_alarms": 36,
+                  "forecast_event_count": 41,
+                  "frequency_bias": 0.19806763285024154,
+                  "hits": 5,
+                  "misses": 202,
+                  "observed_event_count": 207
+                }
+              },
+              "cell_count": 11340,
+              "mae_mm": 8.991843769219713,
+              "rmse_mm": 18.87180374176059
+            },
+            "M2": {
+              "bias_mm": -1.9228968866805116,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 207,
+                  "observed_event_count": 207
+                }
+              },
+              "cell_count": 11340,
+              "mae_mm": 8.114836393122774,
+              "rmse_mm": 17.871471785918494
+            },
+            "M3": {
+              "bias_mm": -2.937864230867357,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 207,
+                  "observed_event_count": 207
+                }
+              },
+              "cell_count": 11340,
+              "mae_mm": 7.915211346566946,
+              "rmse_mm": 18.543798802563877
+            },
+            "M4": {
+              "bias_mm": -2.8402376701621703,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 207,
+                  "observed_event_count": 207
+                }
+              },
+              "cell_count": 11340,
+              "mae_mm": 7.933823114601695,
+              "rmse_mm": 18.41157205881389
+            }
+          }
+        },
+        "COASTAL_AND_OROGRAPHIC": {
+          "cases": 54,
+          "models": {
+            "M0": {
+              "bias_mm": -0.7795446203420945,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.006578947368421052,
+                  "ETS": 0.0015345693769154034,
+                  "FAR": 0.975,
+                  "POD": 0.008849557522123894,
+                  "false_alarms": 39,
+                  "forecast_event_count": 40,
+                  "frequency_bias": 0.35398230088495575,
+                  "hits": 1,
+                  "misses": 112,
+                  "observed_event_count": 113
+                }
+              },
+              "cell_count": 5886,
+              "mae_mm": 8.911980922491173,
+              "rmse_mm": 16.912780587937117
+            },
+            "M2": {
+              "bias_mm": -1.4913065770044138,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.008849557522123894,
+                  "ETS": 0.008681137735806498,
+                  "FAR": 0.0,
+                  "POD": 0.008849557522123894,
+                  "false_alarms": 0,
+                  "forecast_event_count": 1,
+                  "frequency_bias": 0.008849557522123894,
+                  "hits": 1,
+                  "misses": 112,
+                  "observed_event_count": 113
+                }
+              },
+              "cell_count": 5886,
+              "mae_mm": 8.149318492853324,
+              "rmse_mm": 14.531382880070526
+            },
+            "M3": {
+              "bias_mm": -3.0181028158133367,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 113,
+                  "observed_event_count": 113
+                }
+              },
+              "cell_count": 5886,
+              "mae_mm": 8.067167480949932,
+              "rmse_mm": 15.363806041139796
+            },
+            "M4": {
+              "bias_mm": -2.8099358147184255,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 113,
+                  "observed_event_count": 113
+                }
+              },
+              "cell_count": 5886,
+              "mae_mm": 8.058600332951245,
+              "rmse_mm": 15.207736872212294
+            }
+          }
+        },
+        "OROGRAPHIC": {
+          "cases": 54,
+          "models": {
+            "M0": {
+              "bias_mm": 0.9637996707059505,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.006289308176100629,
+                  "ETS": 0.0034283164348941687,
+                  "FAR": 0.9836065573770492,
+                  "POD": 0.010101010101010102,
+                  "false_alarms": 60,
+                  "forecast_event_count": 61,
+                  "frequency_bias": 0.6161616161616161,
+                  "hits": 1,
+                  "misses": 98,
+                  "observed_event_count": 99
+                }
+              },
+              "cell_count": 13230,
+              "mae_mm": 8.148513744332359,
+              "rmse_mm": 14.431036700662402
+            },
+            "M2": {
+              "bias_mm": -2.1480313545651875,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 99,
+                  "observed_event_count": 99
+                }
+              },
+              "cell_count": 13230,
+              "mae_mm": 6.256968061923024,
+              "rmse_mm": 11.777475817377322
+            },
+            "M3": {
+              "bias_mm": -2.638341100562085,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 99,
+                  "observed_event_count": 99
+                }
+              },
+              "cell_count": 13230,
+              "mae_mm": 6.226321851410034,
+              "rmse_mm": 11.96671484819311
+            },
+            "M4": {
+              "bias_mm": -2.6012972487022683,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 99,
+                  "observed_event_count": 99
+                }
+              },
+              "cell_count": 13230,
+              "mae_mm": 6.233468372281289,
+              "rmse_mm": 11.956343900088003
+            }
+          }
+        },
+        "OTHER": {
+          "cases": 54,
+          "models": {
+            "M0": {
+              "bias_mm": 2.750451838694817,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": -0.002544958803339422,
+                  "FAR": 1.0,
+                  "POD": 0.0,
+                  "false_alarms": 193,
+                  "forecast_event_count": 193,
+                  "frequency_bias": 0.910377358490566,
+                  "hits": 0,
+                  "misses": 212,
+                  "observed_event_count": 212
+                }
+              },
+              "cell_count": 39798,
+              "mae_mm": 8.299303854469839,
+              "rmse_mm": 14.339500093552513
+            },
+            "M2": {
+              "bias_mm": -1.2020292801090187,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 212,
+                  "observed_event_count": 212
+                }
+              },
+              "cell_count": 39798,
+              "mae_mm": 5.909690503962338,
+              "rmse_mm": 10.796376776834878
+            },
+            "M3": {
+              "bias_mm": -1.492575911754253,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 212,
+                  "observed_event_count": 212
+                }
+              },
+              "cell_count": 39798,
+              "mae_mm": 5.880375646934771,
+              "rmse_mm": 10.884183375492983
+            },
+            "M4": {
+              "bias_mm": -1.524290960897727,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 212,
+                  "observed_event_count": 212
+                }
+              },
+              "cell_count": 39798,
+              "mae_mm": 5.881154437380689,
+              "rmse_mm": 10.905448112537988
+            }
+          }
+        }
+      }
+    },
+    "LOW_DEPRESSION_INFLUENCED": {
+      "case_count": 109,
+      "zones": {
+        "COASTAL": {
+          "cases": 109,
+          "models": {
+            "M0": {
+              "bias_mm": 0.18006244167667607,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.22494432071269488,
+                  "ETS": 0.19780501424736688,
+                  "FAR": 0.4873096446700508,
+                  "POD": 0.28611898016997167,
+                  "false_alarms": 480,
+                  "forecast_event_count": 985,
+                  "frequency_bias": 0.5580736543909348,
+                  "hits": 505,
+                  "misses": 1260,
+                  "observed_event_count": 1765
+                }
+              },
+              "cell_count": 22890,
+              "mae_mm": 12.686347061819358,
+              "rmse_mm": 26.849734818817176
+            },
+            "M2": {
+              "bias_mm": -0.7618761191028222,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.11105450840550178,
+                  "ETS": 0.09628716416249028,
+                  "FAR": 0.47596153846153844,
+                  "POD": 0.1235127478753541,
+                  "false_alarms": 198,
+                  "forecast_event_count": 416,
+                  "frequency_bias": 0.23569405099150142,
+                  "hits": 218,
+                  "misses": 1547,
+                  "observed_event_count": 1765
+                }
+              },
+              "cell_count": 22890,
+              "mae_mm": 12.829641728753012,
+              "rmse_mm": 26.371190444108098
+            },
+            "M3": {
+              "bias_mm": -2.08081515755174,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.029585798816568046,
+                  "ETS": 0.023551103967235382,
+                  "FAR": 0.6308724832214765,
+                  "POD": 0.031161473087818695,
+                  "false_alarms": 94,
+                  "forecast_event_count": 149,
+                  "frequency_bias": 0.08441926345609065,
+                  "hits": 55,
+                  "misses": 1710,
+                  "observed_event_count": 1765
+                }
+              },
+              "cell_count": 22890,
+              "mae_mm": 12.781603405092119,
+              "rmse_mm": 27.06630809072702
+            },
+            "M4": {
+              "bias_mm": -2.1693450408202035,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.026486486486486487,
+                  "ETS": 0.021018765380851432,
+                  "FAR": 0.6343283582089553,
+                  "POD": 0.027762039660056657,
+                  "false_alarms": 85,
+                  "forecast_event_count": 134,
+                  "frequency_bias": 0.07592067988668555,
+                  "hits": 49,
+                  "misses": 1716,
+                  "observed_event_count": 1765
+                }
+              },
+              "cell_count": 22890,
+              "mae_mm": 12.787461328409147,
+              "rmse_mm": 27.118262867086777
+            }
+          }
+        },
+        "COASTAL_AND_OROGRAPHIC": {
+          "cases": 109,
+          "models": {
+            "M0": {
+              "bias_mm": -18.239435362458316,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.1043728056176189,
+                  "ETS": 0.06658451168171874,
+                  "FAR": 0.36007827788649704,
+                  "POD": 0.11088504577822991,
+                  "false_alarms": 184,
+                  "forecast_event_count": 511,
+                  "frequency_bias": 0.17327907765344183,
+                  "hits": 327,
+                  "misses": 2622,
+                  "observed_event_count": 2949
+                }
+              },
+              "cell_count": 11881,
+              "mae_mm": 27.617158621438765,
+              "rmse_mm": 47.40627981015892
+            },
+            "M2": {
+              "bias_mm": -18.116459632923096,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.05223390275952694,
+                  "ETS": 0.03218912040353372,
+                  "FAR": 0.37401574803149606,
+                  "POD": 0.05391658189216684,
+                  "false_alarms": 95,
+                  "forecast_event_count": 254,
+                  "frequency_bias": 0.08613089182773821,
+                  "hits": 159,
+                  "misses": 2790,
+                  "observed_event_count": 2949
+                }
+              },
+              "cell_count": 11881,
+              "mae_mm": 27.856243202739815,
+              "rmse_mm": 48.04078605073326
+            },
+            "M3": {
+              "bias_mm": -19.6661467278023,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.010423671822461332,
+                  "ETS": 0.005776885576623698,
+                  "FAR": 0.44642857142857145,
+                  "POD": 0.010512037978975925,
+                  "false_alarms": 25,
+                  "forecast_event_count": 56,
+                  "frequency_bias": 0.018989487962021025,
+                  "hits": 31,
+                  "misses": 2918,
+                  "observed_event_count": 2949
+                }
+              },
+              "cell_count": 11881,
+              "mae_mm": 28.148755635687117,
+              "rmse_mm": 49.086639089399114
+            },
+            "M4": {
+              "bias_mm": -19.81515756676546,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.008748317631224764,
+                  "ETS": 0.0046751347920656276,
+                  "FAR": 0.46938775510204084,
+                  "POD": 0.008816547982366904,
+                  "false_alarms": 23,
+                  "forecast_event_count": 49,
+                  "frequency_bias": 0.016615801966768397,
+                  "hits": 26,
+                  "misses": 2923,
+                  "observed_event_count": 2949
+                }
+              },
+              "cell_count": 11881,
+              "mae_mm": 28.219295656490548,
+              "rmse_mm": 49.171142009914135
+            }
+          }
+        },
+        "OROGRAPHIC": {
+          "cases": 109,
+          "models": {
+            "M0": {
+              "bias_mm": -1.1434950254455787,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.09989258861439312,
+                  "ETS": 0.09203888458370693,
+                  "FAR": 0.6847457627118644,
+                  "POD": 0.12757201646090535,
+                  "false_alarms": 202,
+                  "forecast_event_count": 295,
+                  "frequency_bias": 0.4046639231824417,
+                  "hits": 93,
+                  "misses": 636,
+                  "observed_event_count": 729
+                }
+              },
+              "cell_count": 26705,
+              "mae_mm": 7.699661327959742,
+              "rmse_mm": 18.65842850277799
+            },
+            "M2": {
+              "bias_mm": -2.3847748612100945,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.010854816824966078,
+                  "ETS": 0.010268266964569913,
+                  "FAR": 0.5,
+                  "POD": 0.010973936899862825,
+                  "false_alarms": 8,
+                  "forecast_event_count": 16,
+                  "frequency_bias": 0.02194787379972565,
+                  "hits": 8,
+                  "misses": 721,
+                  "observed_event_count": 729
+                }
+              },
+              "cell_count": 26705,
+              "mae_mm": 7.122529806422397,
+              "rmse_mm": 17.626697180336645
+            },
+            "M3": {
+              "bias_mm": -2.6904359223500682,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": -3.739627343313846e-05,
+                  "FAR": 1.0,
+                  "POD": 0.0,
+                  "false_alarms": 1,
+                  "forecast_event_count": 1,
+                  "frequency_bias": 0.0013717421124828531,
+                  "hits": 0,
+                  "misses": 729,
+                  "observed_event_count": 729
+                }
+              },
+              "cell_count": 26705,
+              "mae_mm": 7.0691273468785285,
+              "rmse_mm": 17.855840771144134
+            },
+            "M4": {
+              "bias_mm": -2.6880769142830467,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": -3.739627343313846e-05,
+                  "FAR": 1.0,
+                  "POD": 0.0,
+                  "false_alarms": 1,
+                  "forecast_event_count": 1,
+                  "frequency_bias": 0.0013717421124828531,
+                  "hits": 0,
+                  "misses": 729,
+                  "observed_event_count": 729
+                }
+              },
+              "cell_count": 26705,
+              "mae_mm": 7.075777614476015,
+              "rmse_mm": 17.86182044343269
+            }
+          }
+        },
+        "OTHER": {
+          "cases": 109,
+          "models": {
+            "M0": {
+              "bias_mm": 1.9670584292513429,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0846233230134159,
+                  "ETS": 0.0781166837635639,
+                  "FAR": 0.8544809228039042,
+                  "POD": 0.1682051282051282,
+                  "false_alarms": 963,
+                  "forecast_event_count": 1127,
+                  "frequency_bias": 1.1558974358974359,
+                  "hits": 164,
+                  "misses": 811,
+                  "observed_event_count": 975
+                }
+              },
+              "cell_count": 80333,
+              "mae_mm": 7.357696732497924,
+              "rmse_mm": 15.690305063946138
+            },
+            "M2": {
+              "bias_mm": -0.8155476062276422,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 975,
+                  "observed_event_count": 975
+                }
+              },
+              "cell_count": 80333,
+              "mae_mm": 5.945843405204037,
+              "rmse_mm": 12.914673036409601
+            },
+            "M3": {
+              "bias_mm": -0.7239899586363496,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 975,
+                  "observed_event_count": 975
+                }
+              },
+              "cell_count": 80333,
+              "mae_mm": 6.0227404541164296,
+              "rmse_mm": 12.918127739509089
+            },
+            "M4": {
+              "bias_mm": -0.7413634864891583,
+              "categorical": {
+                "heavy": {
+                  "CSI": 0.0,
+                  "ETS": 0.0,
+                  "FAR": null,
+                  "POD": 0.0,
+                  "false_alarms": 0,
+                  "forecast_event_count": 0,
+                  "frequency_bias": 0.0,
+                  "hits": 0,
+                  "misses": 975,
+                  "observed_event_count": 975
+                }
+              },
+              "cell_count": 80333,
+              "mae_mm": 6.001817460415256,
+              "rmse_mm": 12.898579698330975
+            }
+          }
+        }
+      }
+    }
+  },
+  "case_count": 255,
+  "definitions": {
+    "all_cells": "every paired cell of the case population (zones are subsets of it)",
+    "q1": "metric(zone, model) - metric(all cells, model); bias = forecast - observation",
+    "q2": "[metric(zone, model) - metric(zone, Raw)] - [metric(all cells, model) - metric(all cells, Raw)]; rmse and CSI",
+    "regime_assignment": "argmax of the frozen forecast-only pseudo-regime classifier probability; pseudo-labels, not meteorological truth"
+  },
+  "differences": {
+    "q1": {
+      "COASTAL": {
+        "M0": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -1.4165854301966612,
+              -0.02729366581875885
+            ],
+            "point": -0.7229939815267656,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.05876992164336729,
+              0.10293552373976134
+            ],
+            "point": 0.08108726086635515,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              3.5510602377699643,
+              6.062384710996387
+            ],
+            "point": 4.861655593254152,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0020877514609633843,
+              0.02521123438133505
+            ],
+            "point": 0.010965724668360148,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M2": {
+          "bias": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.3527645282835208,
+              0.9788233469847972
+            ],
+            "point": 0.3008062155021709,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.023634225396520207,
+              0.05882379470951207
+            ],
+            "point": 0.04027289276468116,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              4.698831469365387,
+              7.41474341637154
+            ],
+            "point": 6.043366430078141,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "bias": {
+            "excludes_zero": false,
+            "interval95": [
+              -1.2884376436067844,
+              0.10969509712869656
+            ],
+            "point": -0.6001445366687981,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.003061772056739895,
+              0.01586980899034033
+            ],
+            "point": 0.008952798086898245,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              5.312066231601031,
+              8.330339015851461
+            ],
+            "point": 6.827063822155235,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "bias": {
+            "excludes_zero": false,
+            "interval95": [
+              -1.3061250450786996,
+              0.07065808260831835
+            ],
+            "point": -0.628755973272443,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.003045418856912809,
+              0.014045400734265483
+            ],
+            "point": 0.00817953491726199,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              5.274601903612589,
+              8.221123588374574
+            ],
+            "point": 6.753314555253926,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "COASTAL_AND_OROGRAPHIC": {
+        "M0": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -12.579208015427794,
+              -8.527513767200723
+            ],
+            "point": -10.47336170703919,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.023036436501259822,
+              0.004986504840981068
+            ],
+            "point": -0.00938355904341344,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              14.425079647941006,
+              19.678963052005116
+            ],
+            "point": 17.081453810554,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.014932006757926096,
+              0.005690047218291018
+            ],
+            "point": -0.005074242918423625,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M2": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -10.809772832809239,
+              -6.974957346489625
+            ],
+            "point": -8.83670156125515,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.010043454989680779,
+              0.0034531005894944187
+            ],
+            "point": -0.002999865341751569,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              15.502832299062742,
+              21.100530745116114
+            ],
+            "point": 18.306313911618187,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -12.162455984953755,
+              -8.186423845243521
+            ],
+            "point": -10.105222210680582,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0038304150498398182,
+              0.0008346169681503788
+            ],
+            "point": -0.0012568240416332196,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              16.46611996788816,
+              21.893915095549215
+            ],
+            "point": 19.163709545578364,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -12.211347254559632,
+              -8.239233744623524
+            ],
+            "point": -10.174008484020101,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0031791768651801863,
+              2.6641844433301862e-05
+            ],
+            "point": -0.0013540661912881877,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              16.47264453343628,
+              21.917795731704746
+            ],
+            "point": 19.187718715484884,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "COASTAL_ANY": {
+        "M0": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -4.8593932604039765,
+              -3.2541011270814257
+            ],
+            "point": -4.054624332877406,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.020286784002579987,
+              0.042961035458792374
+            ],
+            "point": 0.03201555493758923,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              8.359003328143444,
+              10.813626123433052
+            ],
+            "point": 9.61421456804047,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0034176654527213568,
+              0.007886935209053429
+            ],
+            "point": 0.0016548330684572551,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M2": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -3.595683151509069,
+              -2.0428055919124635
+            ],
+            "point": -2.8214143100982936,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.010663145754963214,
+              0.021289320365110158
+            ],
+            "point": 0.01579230856425084,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              9.566431682122099,
+              12.0630841549314
+            ],
+            "point": 10.82947565487671,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -4.704998749716036,
+              -2.992356800514582
+            ],
+            "point": -3.8479610459706293,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.0011686447422671125,
+              0.005344143674545751
+            ],
+            "point": 0.0031349453103896967,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              10.217109936379687,
+              12.942432799912151
+            ],
+            "point": 11.616510819515469,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -4.749240943939053,
+              -3.0442242654822147
+            ],
+            "point": -3.8902999346250913,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.0010064698879065407,
+              0.004780875702874471
+            ],
+            "point": 0.0027412418572900204,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              10.209869840171532,
+              12.90562289891542
+            ],
+            "point": 11.586886562807418,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "OROGRAPHIC": {
+        "M0": {
+          "bias": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.4316673189635262,
+              0.3625197940022184
+            ],
+            "point": -0.04560270678629019,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.06548484985572914,
+              -0.014699220606085231
+            ],
+            "point": -0.03981415558425376,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -3.47681240319875,
+              -1.9156672316484578
+            ],
+            "point": -2.720870961465785,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.031936206759965065,
+              0.0041110386872038026
+            ],
+            "point": -0.014021362108499358,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M2": {
+          "bias": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.07700846063656813,
+              0.5919618791744301
+            ],
+            "point": 0.2584876281282751,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.05578010652507002,
+              -0.025816583433020696
+            ],
+            "point": -0.04070690776310524,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -4.055336112531789,
+              -2.407920889167285
+            ],
+            "point": -3.23816183785892,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              0.17420979946982088,
+              0.8686658480584326
+            ],
+            "point": 0.5159520829843276,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.015201593413879513,
+              -0.0032414175316860107
+            ],
+            "point": -0.008817799651389317,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -4.4981257400079,
+              -2.7498438874995927
+            ],
+            "point": -3.6471599391337097,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              0.16850264662115022,
+              0.8653991954909958
+            ],
+            "point": 0.5150614903100095,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.013602279536915219,
+              -0.0027972054161986438
+            ],
+            "point": -0.0076986245124204475,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -4.450454990585681,
+              -2.721655885264579
+            ],
+            "point": -3.6162605180868983,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "OROGRAPHIC_ANY": {
+        "M0": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -3.937029191576387,
+              -2.5867686176496902
+            ],
+            "point": -3.256409856581675,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.029400259392416632,
+              -0.00491655505761632
+            ],
+            "point": -0.017073748187601753,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              4.050569251909857,
+              6.215080274603482
+            ],
+            "point": 5.11594270917989,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.016456587784515572,
+              0.002998196481868945
+            ],
+            "point": -0.006733826089602723,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M2": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -3.1271644198465354,
+              -1.990452562647485
+            ],
+            "point": -2.5420084782072996,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.017984928449566714,
+              -0.0037091359749609476
+            ],
+            "point": -0.010396802399120567,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              4.392854598938433,
+              6.8200934025617395
+            ],
+            "point": 5.608364296485842,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -3.3605350043908087,
+              -2.189655057327699
+            ],
+            "point": -2.754409493313624,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.0054550903401825715,
+              -0.0006627750285965249
+            ],
+            "point": -0.002742941724679538,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              4.591642917428789,
+              6.970235456228622
+            ],
+            "point": 5.78034334990279,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              -3.3822978749921857,
+              -2.21125597338139
+            ],
+            "point": -2.776205818170166,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.004668679185068716,
+              -0.0008666782626464207
+            ],
+            "point": -0.002601584716302039,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              4.627751969563383,
+              6.996571681808485
+            ],
+            "point": 5.809439402249115,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "OTHER": {
+        "M0": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              1.4205978522077107,
+              2.1120226416125356
+            ],
+            "point": 1.7701463030536413,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.08986901761564793,
+              -0.035835134863264194
+            ],
+            "point": -0.06412378462757032,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -5.816138566213724,
+              -4.113121388396456
+            ],
+            "point": -4.950478488374218,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.030849215624000198,
+              0.03183781255736923
+            ],
+            "point": 0.0012571033165936357,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M2": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              0.8230341074106566,
+              1.4380100303787586
+            ],
+            "point": 1.135280455942915,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.06531096172809985,
+              -0.03316692096406113
+            ],
+            "point": -0.04851940776310524,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -7.180433347562218,
+              -5.2487320988552835
+            ],
+            "point": -6.211358578213849,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              1.1589814618672836,
+              1.8275687803796807
+            ],
+            "point": 1.4940180642245187,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.015201593413879513,
+              -0.0032414175316860107
+            ],
+            "point": -0.008817799651389317,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -7.819894057090827,
+              -5.678300698132819
+            ],
+            "point": -6.745921842605746,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "bias": {
+            "excludes_zero": true,
+            "interval95": [
+              1.180604000630524,
+              1.8480042494535536
+            ],
+            "point": 1.5126399104741544,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.013602279536915219,
+              -0.0027972054161986438
+            ],
+            "point": -0.0076986245124204475,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -7.810897773088747,
+              -5.684250090635227
+            ],
+            "point": -6.737498138431674,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "point": 0.0,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      }
+    },
+    "q2": {
+      "COASTAL": {
+        "M2": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.0632115016385712,
+              -0.018076941014169876
+            ],
+            "point": -0.04081436810167398,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              0.4303423904620135,
+              1.9583090552962321
+            ],
+            "point": 1.1817108368239886,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.02521123438133505,
+              0.0020877514609633795
+            ],
+            "point": -0.010965724668360148,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.09447589031611715,
+              -0.04879208853349097
+            ],
+            "point": -0.0721344627794569,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              1.129292372240767,
+              2.835024762322069
+            ],
+            "point": 1.965408228901083,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.02521123438133505,
+              0.0020877514609633795
+            ],
+            "point": -0.010965724668360148,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.09527164813582735,
+              -0.049794067660558425
+            ],
+            "point": -0.07290772594909317,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              1.0818322735528685,
+              2.7489149901972487
+            ],
+            "point": 1.8916589619997737,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.02521123438133505,
+              0.0020877514609633795
+            ],
+            "point": -0.010965724668360148,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "COASTAL_AND_OROGRAPHIC": {
+        "M2": {
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.008970169483790499,
+              0.020884368802005553
+            ],
+            "point": 0.006383693701661877,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              0.45393152594596736,
+              1.8809849063773345
+            ],
+            "point": 1.2248601010641877,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0056900472182910234,
+              0.014932006757926091
+            ],
+            "point": 0.005074242918423625,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.006052140817135573,
+              0.02183193379424091
+            ],
+            "point": 0.008126735001780211,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              1.225242766075041,
+              2.8123028677096116
+            ],
+            "point": 2.082255735024365,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0056900472182910234,
+              0.014932006757926091
+            ],
+            "point": 0.005074242918423625,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.006266210308645277,
+              0.021637076629384692
+            ],
+            "point": 0.008029492852125245,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              1.2689549261287825,
+              2.8263564878037846
+            ],
+            "point": 2.1062649049308853,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0056900472182910234,
+              0.014932006757926091
+            ],
+            "point": 0.005074242918423625,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "COASTAL_ANY": {
+        "M2": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.02636802558400735,
+              -0.004852052161965458
+            ],
+            "point": -0.016223246373338385,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              0.6929997045984493,
+              1.7260827825175231
+            ],
+            "point": 1.2152610868362395,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.007886935209053429,
+              0.003417665452721348
+            ],
+            "point": -0.0016548330684572551,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.04006044041772162,
+              -0.01701134926573192
+            ],
+            "point": -0.028880609627199544,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              1.3705280666331943,
+              2.6846988660022033
+            ],
+            "point": 2.0022962514749985,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.007886935209053429,
+              0.003417665452721348
+            ],
+            "point": -0.0016548330684572551,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              -0.04039592289973029,
+              -0.017461004966296368
+            ],
+            "point": -0.029274313080299208,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              1.3340859857638068,
+              2.628927196966587
+            ],
+            "point": 1.972671994766948,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.007886935209053429,
+              0.003417665452721348
+            ],
+            "point": -0.0016548330684572551,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "OROGRAPHIC": {
+        "M2": {
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.025670970059079673,
+              0.0249929834420117
+            ],
+            "point": -0.000892752178851472,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": false,
+            "interval95": [
+              -1.1063118163332677,
+              0.0478241946671325
+            ],
+            "point": -0.517290876393135,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0041110386872038026,
+              0.031936206759965044
+            ],
+            "point": 0.014021362108499358,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.00410799991025507,
+              0.05745876271212038
+            ],
+            "point": 0.03099635593286444,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -1.5364135733959055,
+              -0.3169343130800542
+            ],
+            "point": -0.9262889776679248,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0041110386872038026,
+              0.031936206759965044
+            ],
+            "point": 0.014021362108499358,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.005328147119373989,
+              0.05849638850633623
+            ],
+            "point": 0.032115531071833306,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -1.4981179856162605,
+              -0.2962136035687233
+            ],
+            "point": -0.8953895566211134,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0041110386872038026,
+              0.031936206759965044
+            ],
+            "point": 0.014021362108499358,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "OROGRAPHIC_ANY": {
+        "M2": {
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.006721676043161598,
+              0.019846877822478157
+            ],
+            "point": 0.006676945788481187,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.01638818868981877,
+              0.9205709567367322
+            ],
+            "point": 0.49242158730595165,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0029981964818689534,
+              0.016456587784515572
+            ],
+            "point": 0.006733826089602723,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.0023207365275281955,
+              0.027038291217541886
+            ],
+            "point": 0.014330806462922216,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              0.14397453171011396,
+              1.103210360778627
+            ],
+            "point": 0.6644006407228993,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0029981964818689534,
+              0.016456587784515572
+            ],
+            "point": 0.006733826089602723,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.0024200053156740223,
+              0.027071853230223507
+            ],
+            "point": 0.014472163471299704,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              0.1702804882602867,
+              1.1363161970835594
+            ],
+            "point": 0.6934966930692248,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.0029981964818689534,
+              0.016456587784515572
+            ],
+            "point": 0.006733826089602723,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      },
+      "OTHER": {
+        "M2": {
+          "heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.013252894589895358,
+              0.04183349059664895
+            ],
+            "point": 0.015604376864465086,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -1.7578552744045346,
+              -0.7546175113331968
+            ],
+            "point": -1.260880089839631,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.03183781255736925,
+              0.030849215624000198
+            ],
+            "point": -0.0012571033165936357,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M3": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.026826863768128824,
+              0.08244998263774751
+            ],
+            "point": 0.055305984976181,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -2.4351569482422777,
+              -1.1766119001013622
+            ],
+            "point": -1.7954433542315282,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.03183781255736925,
+              0.030849215624000198
+            ],
+            "point": -0.0012571033165936357,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        },
+        "M4": {
+          "heavy_csi": {
+            "excludes_zero": true,
+            "interval95": [
+              0.028025498392370916,
+              0.08360281834883163
+            ],
+            "point": 0.056425160115149864,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "rmse": {
+            "excludes_zero": true,
+            "interval95": [
+              -2.42359968762838,
+              -1.1792985198067505
+            ],
+            "point": -1.7870196500574558,
+            "status": "ok",
+            "valid_draws": 2000
+          },
+          "very_heavy_csi": {
+            "excludes_zero": false,
+            "interval95": [
+              -0.03183781255736925,
+              0.030849215624000198
+            ],
+            "point": -0.0012571033165936357,
+            "status": "ok",
+            "valid_draws": 2000
+          }
+        }
+      }
+    }
+  },
+  "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+  "fss": {
+    "reason": "Not reported in Stage 1: the protocol reports FSS only where a zone is spatially contiguous enough; the zones are scattered cell sets (coast strip, escarpment, mixed interior), so a neighbourhood score would mix zone and non-zone cells.",
+    "status": "not_reported"
+  },
+  "lineage": {
+    "cache_manifest_sha256": "c4d10e2403e67dfd4e285eef96ce49b38a4835d156ae98fde72a558356119189",
+    "freeze_manifest_sha256": "b9f0634e4db9de606406f7bfd77d23036740513047be557349aefefdd9ecf08d"
+  },
+  "models": [
+    "M0",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "pooled": {
+    "ALL": {
+      "M0": {
+        "bias_mm": 0.5938220006902178,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.12039539732797899,
+            "ETS": 0.11067366576706704,
+            "FAR": 0.6802051282051282,
+            "POD": 0.16183951001764768,
+            "false_alarms": 3316,
+            "forecast_event_count": 4875,
+            "frequency_bias": 0.5060728744939271,
+            "hits": 1559,
+            "misses": 8074,
+            "observed_event_count": 9633
+          },
+          "very_heavy": {
+            "CSI": 0.03330510866497319,
+            "ETS": 0.031518716916862824,
+            "FAR": 0.8411843876177658,
+            "POD": 0.04043865661411926,
+            "false_alarms": 625,
+            "forecast_event_count": 743,
+            "frequency_bias": 0.2546264564770391,
+            "hits": 118,
+            "misses": 2800,
+            "observed_event_count": 2918
+          }
+        },
+        "cell_count": 331755,
+        "mae_mm": 9.327648115575048,
+        "rmse_mm": 19.773472597952658
+      },
+      "M2": {
+        "bias_mm": -1.5959862519524923,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.04851940776310524,
+            "ETS": 0.04616985755090694,
+            "FAR": 0.42806603773584906,
+            "POD": 0.05034776289837019,
+            "false_alarms": 363,
+            "forecast_event_count": 848,
+            "frequency_bias": 0.08803072770684106,
+            "hits": 485,
+            "misses": 9148,
+            "observed_event_count": 9633
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 2918,
+            "observed_event_count": 2918
+          }
+        },
+        "cell_count": 331755,
+        "mae_mm": 8.07297575941595,
+        "rmse_mm": 17.84869823727102
+      },
+      "M3": {
+        "bias_mm": -2.2960481489447795,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.008817799651389317,
+            "ETS": 0.00820953439810976,
+            "FAR": 0.5825242718446602,
+            "POD": 0.00892764455517492,
+            "false_alarms": 120,
+            "forecast_event_count": 206,
+            "frequency_bias": 0.021384823004256204,
+            "hits": 86,
+            "misses": 9547,
+            "observed_event_count": 9633
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 2918,
+            "observed_event_count": 2918
+          }
+        },
+        "cell_count": 331755,
+        "mae_mm": 8.112140223539123,
+        "rmse_mm": 18.485757761128177
+      },
+      "M4": {
+        "bias_mm": -2.2879263920795476,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0076986245124204475,
+            "ETS": 0.007154127356291162,
+            "FAR": 0.592391304347826,
+            "POD": 0.007785736530675802,
+            "false_alarms": 109,
+            "forecast_event_count": 184,
+            "frequency_bias": 0.019101006955257967,
+            "hits": 75,
+            "misses": 9558,
+            "observed_event_count": 9633
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 2918,
+            "observed_event_count": 2918
+          }
+        },
+        "cell_count": 331755,
+        "mae_mm": 8.097257851241332,
+        "rmse_mm": 18.439838497494797
+      }
+    },
+    "COASTAL": {
+      "M0": {
+        "bias_mm": -0.12917198083654782,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.20148265819433414,
+            "ETS": 0.1828473492630982,
+            "FAR": 0.5048796356538712,
+            "POD": 0.2535821392869044,
+            "false_alarms": 776,
+            "forecast_event_count": 1537,
+            "frequency_bias": 0.5121626124625125,
+            "hits": 761,
+            "misses": 2240,
+            "observed_event_count": 3001
+          },
+          "very_heavy": {
+            "CSI": 0.044270833333333336,
+            "ETS": 0.040756486889229865,
+            "FAR": 0.7811158798283262,
+            "POD": 0.05257731958762887,
+            "false_alarms": 182,
+            "forecast_event_count": 233,
+            "frequency_bias": 0.24020618556701032,
+            "hits": 51,
+            "misses": 919,
+            "observed_event_count": 970
+          }
+        },
+        "cell_count": 53550,
+        "mae_mm": 11.605637187802351,
+        "rmse_mm": 24.63512819120681
+      },
+      "M2": {
+        "bias_mm": -1.2951800364503214,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0887923005277864,
+            "ETS": 0.08069903050456032,
+            "FAR": 0.43478260869565216,
+            "POD": 0.09530156614461846,
+            "false_alarms": 220,
+            "forecast_event_count": 506,
+            "frequency_bias": 0.16861046317894035,
+            "hits": 286,
+            "misses": 2715,
+            "observed_event_count": 3001
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 970,
+            "observed_event_count": 970
+          }
+        },
+        "cell_count": 53550,
+        "mae_mm": 11.306296887247537,
+        "rmse_mm": 23.89206466734916
+      },
+      "M3": {
+        "bias_mm": -2.8961926856135776,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.017770597738287562,
+            "ETS": 0.015113433804484154,
+            "FAR": 0.6308724832214765,
+            "POD": 0.018327224258580473,
+            "false_alarms": 94,
+            "forecast_event_count": 149,
+            "frequency_bias": 0.04965011662779074,
+            "hits": 55,
+            "misses": 2946,
+            "observed_event_count": 3001
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 970,
+            "observed_event_count": 970
+          }
+        },
+        "cell_count": 53550,
+        "mae_mm": 11.41067938912013,
+        "rmse_mm": 25.312821583283412
+      },
+      "M4": {
+        "bias_mm": -2.9166823653519907,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.015878159429682438,
+            "ETS": 0.013477545223486943,
+            "FAR": 0.6343283582089553,
+            "POD": 0.016327890703098966,
+            "false_alarms": 85,
+            "forecast_event_count": 134,
+            "frequency_bias": 0.04465178273908697,
+            "hits": 49,
+            "misses": 2952,
+            "observed_event_count": 3001
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 970,
+            "observed_event_count": 970
+          }
+        },
+        "cell_count": 53550,
+        "mae_mm": 11.37232006151184,
+        "rmse_mm": 25.193153052748723
+      }
+    },
+    "COASTAL_AND_OROGRAPHIC": {
+      "M0": {
+        "bias_mm": -9.879539706348973,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.11101183828456555,
+            "ETS": 0.08404643055061409,
+            "FAR": 0.4471635150166852,
+            "POD": 0.12196319018404908,
+            "false_alarms": 402,
+            "forecast_event_count": 899,
+            "frequency_bias": 0.22061349693251533,
+            "hits": 497,
+            "misses": 3578,
+            "observed_event_count": 4075
+          },
+          "very_heavy": {
+            "CSI": 0.028230865746549563,
+            "ETS": 0.022550236513826295,
+            "FAR": 0.7443181818181818,
+            "POD": 0.030758714969241284,
+            "false_alarms": 131,
+            "forecast_event_count": 176,
+            "frequency_bias": 0.12030075187969924,
+            "hits": 45,
+            "misses": 1418,
+            "observed_event_count": 1463
+          }
+        },
+        "cell_count": 27795,
+        "mae_mm": 19.93501017831057,
+        "rmse_mm": 36.85492640850666
+      },
+      "M2": {
+        "bias_mm": -10.432687813207643,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.04551954242135367,
+            "ETS": 0.03499974253708637,
+            "FAR": 0.38782051282051283,
+            "POD": 0.04687116564417178,
+            "false_alarms": 121,
+            "forecast_event_count": 312,
+            "frequency_bias": 0.07656441717791411,
+            "hits": 191,
+            "misses": 3884,
+            "observed_event_count": 4075
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1463,
+            "observed_event_count": 1463
+          }
+        },
+        "cell_count": 27795,
+        "mae_mm": 19.4232305215672,
+        "rmse_mm": 36.155012148889206
+      },
+      "M3": {
+        "bias_mm": -12.40127035962536,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.007560975609756097,
+            "ETS": 0.005569662880842829,
+            "FAR": 0.44642857142857145,
+            "POD": 0.007607361963190184,
+            "false_alarms": 25,
+            "forecast_event_count": 56,
+            "frequency_bias": 0.013742331288343559,
+            "hits": 31,
+            "misses": 4044,
+            "observed_event_count": 4075
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1463,
+            "observed_event_count": 1463
+          }
+        },
+        "cell_count": 27795,
+        "mae_mm": 19.910255345720934,
+        "rmse_mm": 37.64946730670654
+      },
+      "M4": {
+        "bias_mm": -12.46193487609965,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.00634455832113226,
+            "ETS": 0.004599608800850734,
+            "FAR": 0.46938775510204084,
+            "POD": 0.006380368098159509,
+            "false_alarms": 23,
+            "forecast_event_count": 49,
+            "frequency_bias": 0.012024539877300613,
+            "hits": 26,
+            "misses": 4049,
+            "observed_event_count": 4075
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1463,
+            "observed_event_count": 1463
+          }
+        },
+        "cell_count": 27795,
+        "mae_mm": 19.90775420391387,
+        "rmse_mm": 37.62755721297968
+      }
+    },
+    "COASTAL_ANY": {
+      "M0": {
+        "bias_mm": -3.4608023321871886,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.15241095226556822,
+            "ETS": 0.1300777911743044,
+            "FAR": 0.48357963875205257,
+            "POD": 0.177784058790277,
+            "false_alarms": 1178,
+            "forecast_event_count": 2436,
+            "frequency_bias": 0.3442622950819672,
+            "hits": 1258,
+            "misses": 5818,
+            "observed_event_count": 7076
+          },
+          "very_heavy": {
+            "CSI": 0.03495994173343044,
+            "ETS": 0.030641586104951896,
+            "FAR": 0.7652811735941321,
+            "POD": 0.03945745992601726,
+            "false_alarms": 313,
+            "forecast_event_count": 409,
+            "frequency_bias": 0.16810521989313604,
+            "hits": 96,
+            "misses": 2337,
+            "observed_event_count": 2433
+          }
+        },
+        "cell_count": 81345,
+        "mae_mm": 14.451723883618639,
+        "rmse_mm": 29.38768716599313
+      },
+      "M2": {
+        "bias_mm": -4.417400562050786,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.06431171632735608,
+            "ETS": 0.05524813695332509,
+            "FAR": 0.41687041564792177,
+            "POD": 0.06741096664782363,
+            "false_alarms": 341,
+            "forecast_event_count": 818,
+            "frequency_bias": 0.11560203504804975,
+            "hits": 477,
+            "misses": 6599,
+            "observed_event_count": 7076
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 2433,
+            "observed_event_count": 2433
+          }
+        },
+        "cell_count": 81345,
+        "mae_mm": 14.079794586748612,
+        "rmse_mm": 28.67817389214773
+      },
+      "M3": {
+        "bias_mm": -6.144009194915409,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.011952744961779014,
+            "ETS": 0.009497835654808488,
+            "FAR": 0.5804878048780487,
+            "POD": 0.01215375918598078,
+            "false_alarms": 119,
+            "forecast_event_count": 205,
+            "frequency_bias": 0.028971170152628605,
+            "hits": 86,
+            "misses": 6990,
+            "observed_event_count": 7076
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 2433,
+            "observed_event_count": 2433
+          }
+        },
+        "cell_count": 81345,
+        "mae_mm": 14.314923211281533,
+        "rmse_mm": 30.102268580643646
+      },
+      "M4": {
+        "bias_mm": -6.178226326704639,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.010439866369710468,
+            "ETS": 0.008242273083467469,
+            "FAR": 0.5901639344262295,
+            "POD": 0.0105992085924251,
+            "false_alarms": 108,
+            "forecast_event_count": 183,
+            "frequency_bias": 0.02586206896551724,
+            "hits": 75,
+            "misses": 7001,
+            "observed_event_count": 7076
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 2433,
+            "observed_event_count": 2433
+          }
+        },
+        "cell_count": 81345,
+        "mae_mm": 14.288816367222879,
+        "rmse_mm": 30.026725060302216
+      }
+    },
+    "OROGRAPHIC": {
+      "M0": {
+        "bias_mm": 0.5482192939039277,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.08058124174372523,
+            "ETS": 0.07436447095333333,
+            "FAR": 0.807570977917981,
+            "POD": 0.1217564870259481,
+            "false_alarms": 512,
+            "forecast_event_count": 634,
+            "frequency_bias": 0.6327345309381237,
+            "hits": 122,
+            "misses": 880,
+            "observed_event_count": 1002
+          },
+          "very_heavy": {
+            "CSI": 0.01928374655647383,
+            "ETS": 0.0180262739154407,
+            "FAR": 0.9380530973451328,
+            "POD": 0.027237354085603113,
+            "false_alarms": 106,
+            "forecast_event_count": 113,
+            "frequency_bias": 0.4396887159533074,
+            "hits": 7,
+            "misses": 250,
+            "observed_event_count": 257
+          }
+        },
+        "cell_count": 62475,
+        "mae_mm": 7.836848265365178,
+        "rmse_mm": 17.052601636486873
+      },
+      "M2": {
+        "bias_mm": -1.3374986238242172,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0078125,
+            "ETS": 0.007346076290724089,
+            "FAR": 0.7333333333333333,
+            "POD": 0.007984031936127744,
+            "false_alarms": 22,
+            "forecast_event_count": 30,
+            "frequency_bias": 0.029940119760479042,
+            "hits": 8,
+            "misses": 994,
+            "observed_event_count": 1002
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 257,
+            "observed_event_count": 257
+          }
+        },
+        "cell_count": 62475,
+        "mae_mm": 6.654977344990599,
+        "rmse_mm": 14.6105363994121
+      },
+      "M3": {
+        "bias_mm": -1.780096065960452,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0,
+            "ETS": -1.599069973243346e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 1,
+            "forecast_event_count": 1,
+            "frequency_bias": 0.000998003992015968,
+            "hits": 0,
+            "misses": 1002,
+            "observed_event_count": 1002
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 257,
+            "observed_event_count": 257
+          }
+        },
+        "cell_count": 62475,
+        "mae_mm": 6.6025315414432315,
+        "rmse_mm": 14.838597821994467
+      },
+      "M4": {
+        "bias_mm": -1.7728649017695381,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0,
+            "ETS": -1.599069973243346e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "false_alarms": 1,
+            "forecast_event_count": 1,
+            "frequency_bias": 0.000998003992015968,
+            "hits": 0,
+            "misses": 1002,
+            "observed_event_count": 1002
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 257,
+            "observed_event_count": 257
+          }
+        },
+        "cell_count": 62475,
+        "mae_mm": 6.597118007937351,
+        "rmse_mm": 14.823577979407899
+      }
+    },
+    "OROGRAPHIC_ANY": {
+      "M0": {
+        "bias_mm": -2.662587855891457,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.10332164914037724,
+            "ETS": 0.09022866000224918,
+            "FAR": 0.5962165688193085,
+            "POD": 0.12192239511522553,
+            "false_alarms": 914,
+            "forecast_event_count": 1533,
+            "frequency_bias": 0.3019499704549931,
+            "hits": 619,
+            "misses": 4458,
+            "observed_event_count": 5077
+          },
+          "very_heavy": {
+            "CSI": 0.026571282575370465,
+            "ETS": 0.023824527644577573,
+            "FAR": 0.8200692041522492,
+            "POD": 0.030232558139534883,
+            "false_alarms": 237,
+            "forecast_event_count": 289,
+            "frequency_bias": 0.1680232558139535,
+            "hits": 52,
+            "misses": 1668,
+            "observed_event_count": 1720
+          }
+        },
+        "cell_count": 90270,
+        "mae_mm": 11.561988515396385,
+        "rmse_mm": 24.88941530713255
+      },
+      "M2": {
+        "bias_mm": -4.137994730159792,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.03812260536398467,
+            "ETS": 0.034565126681836096,
+            "FAR": 0.41812865497076024,
+            "POD": 0.03919637581248769,
+            "false_alarms": 143,
+            "forecast_event_count": 342,
+            "frequency_bias": 0.06736261571794366,
+            "hits": 199,
+            "misses": 4878,
+            "observed_event_count": 5077
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1720,
+            "observed_event_count": 1720
+          }
+        },
+        "cell_count": 90270,
+        "mae_mm": 10.586445130998648,
+        "rmse_mm": 23.45706253375686
+      },
+      "M3": {
+        "bias_mm": -5.0504576422584035,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.006074857926709779,
+            "ETS": 0.005450059965341657,
+            "FAR": 0.45614035087719296,
+            "POD": 0.006105968091392555,
+            "false_alarms": 26,
+            "forecast_event_count": 57,
+            "frequency_bias": 0.011227102619657278,
+            "hits": 31,
+            "misses": 5046,
+            "observed_event_count": 5077
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1720,
+            "observed_event_count": 1720
+          }
+        },
+        "cell_count": 90270,
+        "mae_mm": 10.70010751507676,
+        "rmse_mm": 24.266101111030967
+      },
+      "M4": {
+        "bias_mm": -5.0641322102497135,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.005097039796118408,
+            "ETS": 0.004548259370619831,
+            "FAR": 0.48,
+            "POD": 0.005121134528264723,
+            "false_alarms": 24,
+            "forecast_event_count": 50,
+            "frequency_bias": 0.009848335631278314,
+            "hits": 26,
+            "misses": 5051,
+            "observed_event_count": 5077
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1720,
+            "observed_event_count": 1720
+          }
+        },
+        "cell_count": 90270,
+        "mae_mm": 10.69559073494707,
+        "rmse_mm": 24.249277899743912
+      }
+    },
+    "OTHER": {
+      "M0": {
+        "bias_mm": 2.3639683037438592,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.056271612700408674,
+            "ETS": 0.051819900309649614,
+            "FAR": 0.900831024930748,
+            "POD": 0.11511254019292605,
+            "false_alarms": 1626,
+            "forecast_event_count": 1805,
+            "frequency_bias": 1.1607717041800643,
+            "hits": 179,
+            "misses": 1376,
+            "observed_event_count": 1555
+          },
+          "very_heavy": {
+            "CSI": 0.03456221198156682,
+            "ETS": 0.033965420802827,
+            "FAR": 0.9321266968325792,
+            "POD": 0.06578947368421052,
+            "false_alarms": 206,
+            "forecast_event_count": 221,
+            "frequency_bias": 0.9692982456140351,
+            "hits": 15,
+            "misses": 213,
+            "observed_event_count": 228
+          }
+        },
+        "cell_count": 187935,
+        "mae_mm": 7.605349327644945,
+        "rmse_mm": 14.82299410957844
+      },
+      "M2": {
+        "bias_mm": -0.46070579600957734,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1555,
+            "observed_event_count": 1555
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 228,
+            "observed_event_count": 228
+          }
+        },
+        "cell_count": 187935,
+        "mae_mm": 5.9443928633712995,
+        "rmse_mm": 11.63733965905717
+      },
+      "M3": {
+        "bias_mm": -0.8020300847202607,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1555,
+            "observed_event_count": 1555
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 228,
+            "observed_event_count": 228
+          }
+        },
+        "cell_count": 187935,
+        "mae_mm": 5.929190907424692,
+        "rmse_mm": 11.73983591852243
+      },
+      "M4": {
+        "bias_mm": -0.7752864816053934,
+        "categorical": {
+          "heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 1555,
+            "observed_event_count": 1555
+          },
+          "very_heavy": {
+            "CSI": 0.0,
+            "ETS": 0.0,
+            "FAR": null,
+            "POD": 0.0,
+            "false_alarms": 0,
+            "forecast_event_count": 0,
+            "frequency_bias": 0.0,
+            "hits": 0,
+            "misses": 228,
+            "observed_event_count": 228
+          }
+        },
+        "cell_count": 187935,
+        "mae_mm": 5.916019174187549,
+        "rmse_mm": 11.702340359063124
+      }
+    }
+  },
+  "protocol_sha256": "a9ff78173ddb6026e6b297c2da2128dde2fdcf825ae8b0c368c5f5fa79d199fd",
+  "reproduction": {
+    "check_count": 20,
+    "counts_exact": true,
+    "max_abs_diff": 0.0,
+    "reference_file": "regime_verification_A_2019.json",
+    "reference_sha256": "ef620066e7e8d69c664c6aa48041e677f891b9ba247199ce564ac82b3eac1ac9",
+    "status": "REPRODUCED",
+    "tolerance_mm": 1e-06,
+    "zones_partition_all_cells": true
+  },
+  "schema": "phase7-zone-verification-v1",
+  "static_geography_sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0",
+  "support": {
+    "ALL": {
+      "cases": 255,
+      "cells": 1301,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 9633,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 2918,
+        "supported": true
+      }
+    },
+    "COASTAL": {
+      "cases": 255,
+      "cells": 210,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 3001,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 970,
+        "supported": true
+      }
+    },
+    "COASTAL_AND_OROGRAPHIC": {
+      "cases": 255,
+      "cells": 109,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 4075,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 1463,
+        "supported": true
+      }
+    },
+    "COASTAL_ANY": {
+      "cases": 255,
+      "cells": 319,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 7076,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 2433,
+        "supported": true
+      }
+    },
+    "OROGRAPHIC": {
+      "cases": 255,
+      "cells": 245,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 1002,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 257,
+        "supported": true
+      }
+    },
+    "OROGRAPHIC_ANY": {
+      "cases": 255,
+      "cells": 354,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 5077,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 1720,
+        "supported": true
+      }
+    },
+    "OTHER": {
+      "cases": 255,
+      "cells": 737,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 1555,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 228,
+        "supported": true
+      }
+    }
+  },
+  "track": "A",
+  "year": 2019,
+  "zones": {
+    "ALL": {
+      "cells": 1301,
+      "in_decision_rule": false
+    },
+    "COASTAL": {
+      "cells": 210,
+      "in_decision_rule": true
+    },
+    "COASTAL_AND_OROGRAPHIC": {
+      "cells": 109,
+      "in_decision_rule": true
+    },
+    "COASTAL_ANY": {
+      "cells": 319,
+      "in_decision_rule": false
+    },
+    "OROGRAPHIC": {
+      "cells": 245,
+      "in_decision_rule": true
+    },
+    "OROGRAPHIC_ANY": {
+      "cells": 354,
+      "in_decision_rule": false
+    },
+    "OTHER": {
+      "cells": 737,
+      "in_decision_rule": true
+    }
+  }
+}

@@ -1,0 +1,2367 @@
+{
+  "rule": "geographic gap = paired interval of (zone value - all-cell value) excludes zero in the development year and the sign of the consumed final-test year's point estimate is the same (post-hoc); decision metrics: RMSE, heavy-event CSI, bias",
+  "stage_3_recommended": true,
+  "tracks": {
+    "A": {
+      "caveat": "tests share cases and models and are strongly dependent, so the chance counts are only a rough guide; intervals are optimistic",
+      "development_significant": 46,
+      "development_year": 2018,
+      "expected_development_significant_by_chance": 3.6,
+      "expected_gaps_by_chance": 1.8,
+      "final_test_year": 2019,
+      "geographic_gaps": 45,
+      "rows": [
+        {
+          "development_interval95": [
+            2.203994494007992,
+            4.93992693301213
+          ],
+          "development_point": 3.595431138832799,
+          "final_interval95": [
+            3.5510602377699643,
+            6.062384710996387
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 4.861655593254152,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            -1.2469254094542672,
+            -0.11890125451347
+          ],
+          "development_point": -0.6883369534136687,
+          "final_interval95": [
+            -1.4165854301966612,
+            -0.02729366581875885
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.7229939815267656,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.006216857042189113,
+            0.0571364053988973
+          ],
+          "development_point": 0.030741273878815617,
+          "final_interval95": [
+            0.05876992164336729,
+            0.10293552373976134
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.08108726086635515,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            3.393455830946715,
+            5.958868537306763
+          ],
+          "development_point": 4.740824246228144,
+          "final_interval95": [
+            4.698831469365387,
+            7.41474341637154
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 6.043366430078141,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.6062667408221784,
+            1.6700797928325948
+          ],
+          "development_point": 1.128021598092025,
+          "final_interval95": [
+            -0.3527645282835208,
+            0.9788233469847972
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.3008062155021709,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.009330139318139795,
+            0.05079382952091674
+          ],
+          "development_point": 0.029532429740662225,
+          "final_interval95": [
+            0.023634225396520207,
+            0.05882379470951207
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.04027289276468116,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            3.459071781728098,
+            6.033695930065921
+          ],
+          "development_point": 4.800441629719051,
+          "final_interval95": [
+            5.312066231601031,
+            8.330339015851461
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 6.827063822155235,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.00511023731324388,
+            0.03368241167747743
+          ],
+          "development_point": 0.018474076271627667,
+          "final_interval95": [
+            0.003061772056739895,
+            0.01586980899034033
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.008952798086898245,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            3.4590886675841865,
+            6.039262397307643
+          ],
+          "development_point": 4.802067073662446,
+          "final_interval95": [
+            5.274601903612589,
+            8.221123588374574
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 6.753314555253926,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.004739169968918384,
+            0.033289359873908415
+          ],
+          "development_point": 0.01809155991034147,
+          "final_interval95": [
+            0.003045418856912809,
+            0.014045400734265483
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.00817953491726199,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            -4.811561255045882,
+            -3.3189980010215208
+          ],
+          "development_point": -4.051823715118438,
+          "final_interval95": [
+            -3.47681240319875,
+            -1.9156672316484578
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -2.720870961465785,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.20873993210815342,
+            0.872898939786837
+          ],
+          "development_point": 0.5314701400283204,
+          "final_interval95": [
+            -0.4316673189635262,
+            0.3625197940022184
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.04560270678629019,
+          "geographic_gap": false,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": false,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -5.022817917921516,
+            -3.3924431863462132
+          ],
+          "development_point": -4.210061566857121,
+          "final_interval95": [
+            -4.055336112531789,
+            -2.407920889167285
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.23816183785892,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.40237898836067604,
+            1.0091434138916953
+          ],
+          "development_point": 0.6834909451770197,
+          "final_interval95": [
+            -0.07700846063656813,
+            0.5919618791744301
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.2584876281282751,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -5.200075815428857,
+            -3.498669546507284
+          ],
+          "development_point": -4.358626544010573,
+          "final_interval95": [
+            -4.4981257400079,
+            -2.7498438874995927
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.6471599391337097,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.5701491431511847,
+            1.1956335301931988
+          ],
+          "development_point": 0.864701816179087,
+          "final_interval95": [
+            0.17420979946982088,
+            0.8686658480584326
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.5159520829843276,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -5.216721427309886,
+            -3.530979821987801
+          ],
+          "development_point": -4.390127546471049,
+          "final_interval95": [
+            -4.450454990585681,
+            -2.721655885264579
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.6162605180868983,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.5692197932300839,
+            1.1946155094327473
+          ],
+          "development_point": 0.8641000494893031,
+          "final_interval95": [
+            0.16850264662115022,
+            0.8653991954909958
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.5150614903100095,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            9.5408139687291,
+            12.999086018027747
+          ],
+          "development_point": 11.253531581304744,
+          "final_interval95": [
+            14.425079647941006,
+            19.678963052005116
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 17.081453810554,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -9.091738906200757,
+            -6.471042406580712
+          ],
+          "development_point": -7.756351009772198,
+          "final_interval95": [
+            -12.579208015427794,
+            -8.527513767200723
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -10.47336170703919,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            10.426473575064165,
+            13.827539949181142
+          ],
+          "development_point": 12.110256083389192,
+          "final_interval95": [
+            15.502832299062742,
+            21.100530745116114
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 18.306313911618187,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -7.804330352486125,
+            -5.3799570770826195
+          ],
+          "development_point": -6.549566024462249,
+          "final_interval95": [
+            -10.809772832809239,
+            -6.974957346489625
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -8.83670156125515,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            10.949970171472827,
+            14.522994360276028
+          ],
+          "development_point": 12.712919625220815,
+          "final_interval95": [
+            16.46611996788816,
+            21.893915095549215
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 19.163709545578364,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -8.731947069793915,
+            -6.262832876013112
+          ],
+          "development_point": -7.43565957097182,
+          "final_interval95": [
+            -12.162455984953755,
+            -8.186423845243521
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -10.105222210680582,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            10.962398395588645,
+            14.534254547796058
+          ],
+          "development_point": 12.72334144150689,
+          "final_interval95": [
+            16.47264453343628,
+            21.917795731704746
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 19.187718715484884,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -8.781098610192158,
+            -6.299216856226157
+          ],
+          "development_point": -7.472664159226399,
+          "final_interval95": [
+            -12.211347254559632,
+            -8.239233744623524
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -10.174008484020101,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -3.251274060087656,
+            -1.6546954040727133
+          ],
+          "development_point": -2.4255024444683677,
+          "final_interval95": [
+            -5.816138566213724,
+            -4.113121388396456
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -4.950478488374218,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.9088279124279116,
+            1.4386167756639705
+          ],
+          "development_point": 1.1665981492199478,
+          "final_interval95": [
+            1.4205978522077107,
+            2.1120226416125356
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.7701463030536413,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -4.166090318789023,
+            -2.597393067960674
+          ],
+          "development_point": -3.354697020451738,
+          "final_interval95": [
+            -7.180433347562218,
+            -5.2487320988552835
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -6.211358578213849,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.20167885375922862,
+            0.6439115741096697
+          ],
+          "development_point": 0.4200310440959161,
+          "final_interval95": [
+            0.8230341074106566,
+            1.4380100303787586
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.135280455942915,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.054643037574949926,
+            -0.023925561710395327
+          ],
+          "development_point": -0.03857308584686775,
+          "final_interval95": [
+            -0.06531096172809985,
+            -0.03316692096406113
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.04851940776310524,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -4.359463688002134,
+            -2.7484603152074945
+          ],
+          "development_point": -3.5220938776651067,
+          "final_interval95": [
+            -7.819894057090827,
+            -5.678300698132819
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -6.745921842605746,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.43676276755150245,
+            0.900091459883531
+          ],
+          "development_point": 0.6678520534011105,
+          "final_interval95": [
+            1.1589814618672836,
+            1.8275687803796807
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.4940180642245187,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.026362556798801774,
+            -0.007982558911214572
+          ],
+          "development_point": -0.016453382084095063,
+          "final_interval95": [
+            -0.015201593413879513,
+            -0.0032414175316860107
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.008817799651389317,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -4.3650301918928145,
+            -2.7526461755239455
+          ],
+          "development_point": -3.522752121457117,
+          "final_interval95": [
+            -7.810897773088747,
+            -5.684250090635227
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -6.737498138431674,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.4488972265224794,
+            0.9139222286664508
+          ],
+          "development_point": 0.6794261865594753,
+          "final_interval95": [
+            1.180604000630524,
+            1.8480042494535536
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.5126399104741544,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.026263504821830794,
+            -0.007834815975477296
+          ],
+          "development_point": -0.016298552932216298,
+          "final_interval95": [
+            -0.013602279536915219,
+            -0.0027972054161986438
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.0076986245124204475,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.741903072573965,
+            1.5795410678272799
+          ],
+          "development_point": 1.1453931073953445,
+          "final_interval95": [
+            0.4303423904620135,
+            1.9583090552962321
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.1817108368239886,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.7391846685722443,
+            1.7167153303198435
+          ],
+          "development_point": 1.2050104908862522,
+          "final_interval95": [
+            1.129292372240767,
+            2.835024762322069
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.965408228901083,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.7470338739272712,
+            1.7119954449016292
+          ],
+          "development_point": 1.206635934829647,
+          "final_interval95": [
+            1.0818322735528685,
+            2.7489149901972487
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.8916589619997737,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.08597702324073789,
+            1.4983337179808893
+          ],
+          "development_point": 0.8567245020844485,
+          "final_interval95": [
+            0.45393152594596736,
+            1.8809849063773345
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.2248601010641877,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.6288900829013204,
+            2.166915826859602
+          ],
+          "development_point": 1.4593880439160714,
+          "final_interval95": [
+            1.225242766075041,
+            2.8123028677096116
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 2.082255735024365,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.6506078631393946,
+            2.1653359562036716
+          ],
+          "development_point": 1.4698098602021457,
+          "final_interval95": [
+            1.2689549261287825,
+            2.8263564878037846
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 2.1062649049308853,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -1.3708480429294791,
+            -0.5397038421266902
+          ],
+          "development_point": -0.9291945759833702,
+          "final_interval95": [
+            -1.7578552744045346,
+            -0.7546175113331968
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -1.260880089839631,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -1.5505173195187811,
+            -0.6807796476082559
+          ],
+          "development_point": -1.096591433196739,
+          "final_interval95": [
+            -2.4351569482422777,
+            -1.1766119001013622
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -1.7954433542315282,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -1.5450463548586133,
+            -0.6819735940744618
+          ],
+          "development_point": -1.0972496769887492,
+          "final_interval95": [
+            -2.42359968762838,
+            -1.1792985198067505
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -1.7870196500574558,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        }
+      ],
+      "tests": 72
+    },
+    "B": {
+      "caveat": "tests share cases and models and are strongly dependent, so the chance counts are only a rough guide; intervals are optimistic",
+      "development_significant": 77,
+      "development_year": 2024,
+      "expected_development_significant_by_chance": 4.6,
+      "expected_gaps_by_chance": 2.3,
+      "final_test_year": 2025,
+      "geographic_gaps": 72,
+      "rows": [
+        {
+          "development_interval95": [
+            3.407853046810807,
+            7.136852922772763
+          ],
+          "development_point": 5.237728872521785,
+          "final_interval95": [
+            1.6154491617287436,
+            3.883643059209768
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 2.7899529012887108,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            -3.1012811598702434,
+            -1.4660414745275403
+          ],
+          "development_point": -2.2722055568863677,
+          "final_interval95": [
+            -2.1146160250342434,
+            -0.9769870362849992
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -1.537700410530705,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.03178679298272534,
+            0.07946222498874587
+          ],
+          "development_point": 0.054131307881195426,
+          "final_interval95": [
+            -0.011253026800378159,
+            0.022852619277785917
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.006735917707447622,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            4.151380916968678,
+            7.490722686655158
+          ],
+          "development_point": 5.760834972363881,
+          "final_interval95": [
+            2.145062924911709,
+            4.2961705887334585
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 3.248175360484643,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.007703427130242133,
+            0.03646803846245775
+          ],
+          "development_point": 0.021078546006554337,
+          "final_interval95": [
+            -0.010900675026295636,
+            0.009771549524428783
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.00015063693224612665,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            6.21761917481329,
+            8.850781996421533
+          ],
+          "development_point": 7.504500540945152,
+          "final_interval95": [
+            2.4810931288875433,
+            4.5354746498070115
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 3.5163976815789706,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            1.4435057746278996,
+            3.2745082178851463
+          ],
+          "development_point": 2.3891965664568926,
+          "final_interval95": [
+            0.6408083586833064,
+            1.771876877394536
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.2046085327613723,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.03425048970789215,
+            0.08530392417244874
+          ],
+          "development_point": 0.05944975814275491,
+          "final_interval95": [
+            0.03693416177596696,
+            0.09744196395669653
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.06651847799335191,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            6.788798830915332,
+            9.401915804960748
+          ],
+          "development_point": 8.076771962518162,
+          "final_interval95": [
+            3.14883056803131,
+            5.248572283088681
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 4.225356147602923,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            2.1221798812397523,
+            4.110847661161974
+          ],
+          "development_point": 3.1258851714950366,
+          "final_interval95": [
+            0.5063348004200515,
+            1.7308389820165182
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.1450129989589446,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.03304913926419382,
+            0.07890798738644764
+          ],
+          "development_point": 0.0556556176740545,
+          "final_interval95": [
+            0.03256654719930828,
+            0.0813853461121771
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.055956681148049386,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            6.685023258073753,
+            9.2300312851701
+          ],
+          "development_point": 7.9267998929924595,
+          "final_interval95": [
+            2.891227223301367,
+            4.897571740983588
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 3.921312244433567,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            2.1595656888464108,
+            4.070319960233022
+          ],
+          "development_point": 3.130416663376237,
+          "final_interval95": [
+            0.5876100548830722,
+            1.75693259817911
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.1916622021362206,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.03754756005277974,
+            0.08459605941625165
+          ],
+          "development_point": 0.06094334292824022,
+          "final_interval95": [
+            0.035408749322177045,
+            0.08353172805145899
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.05815981120328946,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            -4.170590643344975,
+            -2.0157957595451816
+          ],
+          "development_point": -3.0486145036318817,
+          "final_interval95": [
+            -3.788617580677755,
+            -2.365271661687226
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.059593025150109,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.5258694007694067,
+            1.3736181001768843
+          ],
+          "development_point": 0.9429128000437604,
+          "final_interval95": [
+            0.718711372373707,
+            1.4139244434314475
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.0661908318834696,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -4.224931681362366,
+            -2.0296433105451683
+          ],
+          "development_point": -3.094376461434658,
+          "final_interval95": [
+            -4.059473253369915,
+            -2.6127219557433454
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.3257647318885635,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.06887349432706476,
+            0.8759188898243391
+          ],
+          "development_point": 0.47078604509232647,
+          "final_interval95": [
+            0.3390035127632568,
+            1.0190460891255195
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.6709992911010859,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -4.238247727922518,
+            -2.0690594806066525
+          ],
+          "development_point": -3.165871430968208,
+          "final_interval95": [
+            -3.8075256221903313,
+            -2.382479327538388
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.0958481448857924,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -1.3583538843497922,
+            -0.5251334150843089
+          ],
+          "development_point": -0.9574638504677171,
+          "final_interval95": [
+            0.19956279506842498,
+            0.8308201919071957
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.5134608746652451,
+          "geographic_gap": false,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": false,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.2016779377605186,
+            -0.12512921399971025
+          ],
+          "development_point": -0.16475203698964458,
+          "final_interval95": [
+            -0.08807966440515728,
+            -0.03561032713295836
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.06071469928947782,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -4.630109575575422,
+            -2.533097344116065
+          ],
+          "development_point": -3.5763295031570372,
+          "final_interval95": [
+            -3.9767503049390514,
+            -2.6181049602144566
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.2822456133818037,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -1.6287258002462672,
+            -0.725034086395028
+          ],
+          "development_point": -1.180130184236468,
+          "final_interval95": [
+            0.17210857456402692,
+            0.8573430968112724
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.5113231714950665,
+          "geographic_gap": false,
+          "metric": "bias",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": false,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.21774573864275257,
+            -0.13875439557974012
+          ],
+          "development_point": -0.18062967979841685,
+          "final_interval95": [
+            -0.09675987621033597,
+            -0.04293050589547214
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.06980840753940123,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -4.531741816164788,
+            -2.4393429412384244
+          ],
+          "development_point": -3.483560164985162,
+          "final_interval95": [
+            -3.9117050784485525,
+            -2.534003151406341
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -3.213394193884838,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -1.603831677894388,
+            -0.7185257755716745
+          ],
+          "development_point": -1.1656128255519032,
+          "final_interval95": [
+            0.16543464667220245,
+            0.83843803615411
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.49643431816303807,
+          "geographic_gap": false,
+          "metric": "bias",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": false,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.21952128645238245,
+            -0.13851793426543368
+          ],
+          "development_point": -0.18057028795764818,
+          "final_interval95": [
+            -0.09536367784040631,
+            -0.04192515730082168
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.0685822218640448,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            11.581071462199837,
+            15.71259114686978
+          ],
+          "development_point": 13.684822172907364,
+          "final_interval95": [
+            8.738763921236423,
+            11.450578647926925
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 10.108091667540254,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -11.585151365294783,
+            -8.221910953943825
+          ],
+          "development_point": -9.85230878631201,
+          "final_interval95": [
+            -9.492923212139475,
+            -7.18280811249342
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -8.339528241232411,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.031792866991630885,
+            -0.001360960502523857
+          ],
+          "development_point": -0.015695602531921336,
+          "final_interval95": [
+            -0.029213322439811968,
+            -0.000814672623150377
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.014734266916739194,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            11.923151377606894,
+            16.292272880780192
+          ],
+          "development_point": 14.135735623916819,
+          "final_interval95": [
+            9.925188934125297,
+            12.804115246575813
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 11.383705947897338,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -12.70870679796672,
+            -8.920208682223166
+          ],
+          "development_point": -10.750252473101172,
+          "final_interval95": [
+            -10.084438551895152,
+            -7.494249535356193
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -8.755398952845146,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.021403605380441754,
+            -0.004225713612804672
+          ],
+          "development_point": -0.011612223225765628,
+          "final_interval95": [
+            -0.016494318482639676,
+            0.0009880016050808128
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.007005158556689839,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            8.923966270248078,
+            12.31221555214888
+          ],
+          "development_point": 10.56654573003194,
+          "final_interval95": [
+            8.255694790410452,
+            11.01470619232965
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 9.617260054871872,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -7.607921444960859,
+            -4.455517950048944
+          ],
+          "development_point": -6.004681207018035,
+          "final_interval95": [
+            -7.738551686099646,
+            -5.4104311549949795
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -6.55535110232839,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.023159255754047682,
+            0.07816618108803805
+          ],
+          "development_point": 0.05017434649317823,
+          "final_interval95": [
+            -0.0028315213564578477,
+            0.023488214842874874
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.010044785065782269,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            8.142106689737814,
+            11.479186219425209
+          ],
+          "development_point": 9.771388653075075,
+          "final_interval95": [
+            7.796296527181044,
+            10.450899146589654
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 9.122789010432555,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -7.607640787702634,
+            -4.58702281497557
+          ],
+          "development_point": -6.052586215318933,
+          "final_interval95": [
+            -7.625479424686244,
+            -5.281084125195936
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -6.411568461268466,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.03138310088005478,
+            0.0866096246643843
+          ],
+          "development_point": 0.058801227699717545,
+          "final_interval95": [
+            0.005304943471983308,
+            0.03817540768773635
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.0205745010811184,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            8.18744029996413,
+            11.573370580599658
+          ],
+          "development_point": 9.826016296008223,
+          "final_interval95": [
+            7.662308831502327,
+            10.28098098084517
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 8.986685471711281,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -7.631347259616887,
+            -4.584639355480553
+          ],
+          "development_point": -6.09591457522364,
+          "final_interval95": [
+            -7.523067132072572,
+            -5.231056847116824
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -6.364900797459558,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.02465332166561099,
+            0.08050872172746895
+          ],
+          "development_point": 0.052647637272511205,
+          "final_interval95": [
+            0.003999227463024263,
+            0.033597219049119234
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.017960291592005143,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -5.104798261254585,
+            -3.115419456048826
+          ],
+          "development_point": -4.126859855748158,
+          "final_interval95": [
+            -2.676391308423895,
+            -1.3743317952719518
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -2.03287562178404,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            1.4413068740384727,
+            2.138690128693902
+          ],
+          "development_point": 1.7911142315378903,
+          "final_interval95": [
+            1.0489014378684571,
+            1.572516896180008
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.3171084269936646,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.06744465735728444,
+            -0.01605028823682878
+          ],
+          "development_point": -0.04264300621910484,
+          "final_interval95": [
+            -0.01769626464818256,
+            0.030545057846267296
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.00559199670266005,
+          "geographic_gap": false,
+          "metric": "heavy_csi",
+          "model": "M0",
+          "question": "q1",
+          "same_sign": false,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -5.554237538565695,
+            -3.5654144876028475
+          ],
+          "development_point": -4.5851604028096755,
+          "final_interval95": [
+            -3.2580710739587406,
+            -1.8596992479479402
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -2.540714893982363,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            1.1247299024563582,
+            1.8897151808549615
+          ],
+          "development_point": 1.500380755107274,
+          "final_interval95": [
+            0.6418051509463321,
+            1.1670651180221518
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.9074353840840075,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M1",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -5.044989353256071,
+            -3.438959546410548
+          ],
+          "development_point": -4.250084768607959,
+          "final_interval95": [
+            -2.958287407562362,
+            -1.5864782537492175
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -2.2422571323966576,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.17758452223362647,
+            0.8947004604698877
+          ],
+          "development_point": 0.5255869958936348,
+          "final_interval95": [
+            0.19716488724351272,
+            0.7188279187106102
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.45558692534724743,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.2265152807195097,
+            -0.159740508201418
+          ],
+          "development_point": -0.19232239121887046,
+          "final_interval95": [
+            -0.09704643676109122,
+            -0.041939504004649075
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.06859754793519787,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -4.860606131365501,
+            -3.3370839200903766
+          ],
+          "development_point": -4.1021194820464615,
+          "final_interval95": [
+            -2.981151811055394,
+            -1.6648626922705692
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -2.3135950232603033,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.06890630895071426,
+            0.7477799113494642
+          ],
+          "development_point": 0.3967814200729185,
+          "final_interval95": [
+            0.20185714994294354,
+            0.717882461641033
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.45201364379999076,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.23351139963327694,
+            -0.16297787552517334
+          ],
+          "development_point": -0.1978671688937138,
+          "final_interval95": [
+            -0.09770440874732018,
+            -0.039233470473425736
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.06872571527385671,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -4.839529550471859,
+            -3.344653664772858
+          ],
+          "development_point": -4.086559763442585,
+          "final_interval95": [
+            -2.837709822526077,
+            -1.563466010195269
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -2.1842876155453794,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.06667804988265125,
+            0.7385496600695647
+          ],
+          "development_point": 0.39707236316225547,
+          "final_interval95": [
+            0.19470863484094847,
+            0.6943439213042739
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.4367689505081972,
+          "geographic_gap": true,
+          "metric": "bias",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.23002862833561558,
+            -0.16217677120250543
+          ],
+          "development_point": -0.19639213544119258,
+          "final_interval95": [
+            -0.09467706427870848,
+            -0.040756940038366454
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.06750562327826592,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q1",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.24466699459561392,
+            0.8404821371661159
+          ],
+          "development_point": 0.5231060998420958,
+          "final_interval95": [
+            0.23646110739948814,
+            0.685813677924996
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.4582224591959321,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M1",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            -0.05395615068335582,
+            -0.01584113330664523
+          ],
+          "development_point": -0.03305276187464109,
+          "final_interval95": [
+            -0.016893749540309005,
+            0.0048109716153639775
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.006585280775201492,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M1",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            1.0902552915312897,
+            3.516540624277557
+          ],
+          "development_point": 2.2667716684233667,
+          "final_interval95": [
+            0.20994046093276664,
+            1.2359133130422517
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.7264447802902598,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            1.502235990724205,
+            4.21693931541162
+          ],
+          "development_point": 2.839043089996377,
+          "final_interval95": [
+            0.9545517229573278,
+            1.9430534047614836
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.4354032463142126,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            1.3659137738503202,
+            4.060148404985075
+          ],
+          "development_point": 2.6890710204706743,
+          "final_interval95": [
+            0.6482674154441113,
+            1.6569887868452333
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.1313593431448563,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL"
+        },
+        {
+          "development_interval95": [
+            0.008415084741222918,
+            0.0483094486581812
+          ],
+          "development_point": 0.02776176595668371,
+          "final_interval95": [
+            -0.021705805437253957,
+            0.013807166205143396
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.003624585144914212,
+          "geographic_gap": false,
+          "metric": "heavy_csi",
+          "model": "M1",
+          "question": "q2",
+          "same_sign": false,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.17633194801790475,
+            -0.08095195697211156
+          ],
+          "development_point": -0.12961721987546043,
+          "final_interval95": [
+            -0.101373687062373,
+            -0.04039802057120111
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.07041772669474333,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.19236215296345588,
+            -0.0954638235321905
+          ],
+          "development_point": -0.1454948626842327,
+          "final_interval95": [
+            -0.10868422536686716,
+            -0.04871843039023406
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.07951143494466674,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.19330111611389897,
+            -0.09523455513798412
+          ],
+          "development_point": -0.14543547084346403,
+          "final_interval95": [
+            -0.10716824526686901,
+            -0.04741900115005869
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.07828524926931033,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.13438896934711386,
+            0.7659715635686367
+          ],
+          "development_point": 0.45091345100945546,
+          "final_interval95": [
+            0.9603330386450776,
+            1.5741222323497044
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 1.2756142803570842,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M1",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -4.167642453793708,
+            -2.069847693320495
+          ],
+          "development_point": -3.1182764428754233,
+          "final_interval95": [
+            -1.0709821858838005,
+            0.16456066695214192
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": -0.4908316126683818,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.03979752602131322,
+            0.09382744372991808
+          ],
+          "development_point": 0.06586994902509957,
+          "final_interval95": [
+            0.004708059949579638,
+            0.045721112482399656
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.024779051982521463,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -5.00403235149237,
+            -2.8946814243683785
+          ],
+          "development_point": -3.9134335198322887,
+          "final_interval95": [
+            -1.5761019550946664,
+            -0.41976525857272
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.9853026571076988,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.04845774832617801,
+            0.1026577512967953
+          ],
+          "development_point": 0.07449683023163889,
+          "final_interval95": [
+            0.01562769377989269,
+            0.056951780766314186
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.03530876799785759,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -4.919153903211741,
+            -2.8483710861407423
+          ],
+          "development_point": -3.8588058768991402,
+          "final_interval95": [
+            -1.7097091795754873,
+            -0.5361506028216876
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -1.121406195828973,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            0.04240966765310403,
+            0.09638476373773958
+          ],
+          "development_point": 0.06834323980443252,
+          "final_interval95": [
+            0.01351254546951396,
+            0.05308744438640584
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": 0.03269455850874434,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "COASTAL_AND_OROGRAPHIC"
+        },
+        {
+          "development_interval95": [
+            -0.5933784022832498,
+            -0.3160461497892554
+          ],
+          "development_point": -0.45830054706151735,
+          "final_interval95": [
+            -0.6657225955881657,
+            -0.3573588530927796
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.5078392721983231,
+          "geographic_gap": true,
+          "metric": "rmse",
+          "model": "M1",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            0.01318682812787123,
+            0.05315549449776244
+          ],
+          "development_point": 0.033110624200483565,
+          "final_interval95": [
+            -0.016668769502053107,
+            0.014914083152749101
+          ],
+          "final_interval_excludes_zero": false,
+          "final_point": 0.00026155800146936484,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M1",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.1843288951172092,
+            -0.11680438405460086
+          ],
+          "development_point": -0.14967938499976563,
+          "final_interval95": [
+            -0.10765118610457067,
+            -0.03964165220905727
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.07418954463785793,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M2",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.18859899843377612,
+            -0.12357221496043833
+          ],
+          "development_point": -0.15522416267460895,
+          "final_interval95": [
+            -0.09908266012032269,
+            -0.049038798600966306
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.07431771197651676,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M3",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        },
+        {
+          "development_interval95": [
+            -0.18583205727984614,
+            -0.12437562637742818
+          ],
+          "development_point": -0.15374912922208775,
+          "final_interval95": [
+            -0.09879944067222947,
+            -0.048179943677002714
+          ],
+          "final_interval_excludes_zero": true,
+          "final_point": -0.07309761998092598,
+          "geographic_gap": true,
+          "metric": "heavy_csi",
+          "model": "M4",
+          "question": "q2",
+          "same_sign": true,
+          "zone": "OTHER"
+        }
+      ],
+      "tests": 92
+    }
+  }
+}
