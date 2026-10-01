@@ -85,3 +85,10 @@ real-headless-Chromium runs of the subset that needs no backend at all
 (client-only pages, and specs that mock the live-API route). This gap is
 identical in kind to every earlier phase's documented environment
 constraint and is not a new risk introduced by this freeze phase.
+
+## Addendum (2026-10-01): routes added after the Phase 5B freeze
+
+| Route | Data dependency | Classification |
+|---|---|---|
+| `/compliance` | `/api/science/evidence/ps-coverage` (hash-verified manifest; every figure resolved from frozen evidence) | live API, hard failure on integrity errors; planned items shown as planned |
+| `/zones` | `/api/science/evidence/zones/*` (hash-chain-verified Phase 7 evidence; static SVG map, no tile service) | live API, hard failure on integrity errors; post-hoc years labelled; Stage 3 not authorised |

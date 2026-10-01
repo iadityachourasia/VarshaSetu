@@ -521,6 +521,13 @@ def _resolve_fact(fact: dict) -> PsFact:
         data, digest = _evidence(f"regime_verification_{rest[0]}_{rest[1]}.json")
     elif kind == "district" and rest[:1] == ["B"] and len(rest) == 2:
         data, digest = _district_evidence(int(rest[1]))
+    elif kind in ("zone", "zoneforcing") and len(rest) == 2 and rest[0] in ("A", "B"):
+        try:
+            from backend.app.api import zones
+        except ModuleNotFoundError:
+            from app.api import zones
+        stage, prefix = ("stage1", "zone_verification") if kind == "zone" else ("stage2", "zone_stage2")
+        data, digest = zones._evidence(stage, f"{prefix}_{rest[0]}_{rest[1]}.json")
     else:
         raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"Coverage fact has an unknown source: {fact['source']}")
     node: Any = data

@@ -125,6 +125,7 @@ This directory is the working technical specification, scientific governance sys
 | `116_STATIC_GEOGRAPHY_STAGE0.md` | Phase 7B (Stage 0): `static_geography_v1` built from GMTED2010 under protocol v3 (land-mask and orographic-rule amendments recorded in docs/115 section 15), QA maps, zone counts; no results touched | Before using static geography, zones or quoting zone sizes |
 | `117_ZONE_VERIFICATION_STAGE1.md` | Phase 7C (Stage 1): zone-stratified verification of frozen M0–M4 on both tracks under protocol v3; the Western Ghats coast concentrates heavy rain and is underforecast by every frozen model; the literal decision rule recommends Stage 3 but with stated confounds; Stage 3 not authorised | Before quoting any zone-level result or starting Stage 2 or 3 |
 | `118_ZONE_FORCING_STAGE2.md` | Phase 7D (Stage 2): forecast-time forcing-strength strata inside the zones (training-year cut-points, frozen spec), heavy rain concentrates in the strong stratum and every frozen model underforecasts it on the Ghats coast; Stage 3 not authorised | Before quoting forcing-stratum results |
+| `119_ZONE_EVIDENCE_API_AND_PAGE.md` | Phase 7E: read-only hash-chain-verified zone evidence API, Geographic Zones page, coverage row moved to PARTIAL (never implemented), verification results | Before changing the zone API, the page or the coastal/orographic coverage status |
 | `HARDWARE_OPTIMIZATION.md` | Local bounded-compute benchmark and hardware-aware implementation notes | Before changing concurrency or compute strategy |
 
 ## Golden rule

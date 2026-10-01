@@ -160,17 +160,79 @@
         "PS-R03"
       ],
       "ps_mandatory": true,
-      "status": "PLANNED",
-      "summary": "Not classified yet. A hierarchical design (synoptic regime plus a per-cell geographic-forcing head) is documented; a static geography artifact exists but no zone verification or model uses it yet.",
-      "limitation": "Missing requirement. A staged protocol (static geography, rule-based zones, stratified verification of the frozen models) is approved and frozen for Stages 0 to 2; nothing is acquired or trained yet, and the status stays planned until its evidence exists.",
-      "pages": [],
+      "status": "PARTIAL",
+      "summary": "Rule-based coastal and orographic geographic-forcing zones (distance to coast and local terrain relief) are defined on the verification grid, and the frozen models are verified inside each zone and by forecast-time forcing strength on both tracks. The page shows where heavy rain concentrates and where every frozen model underforecasts it.",
+      "limitation": "There is no coastal or orographic specialist model and the zones are a transparent rule-based convention, not a learned or validated regime. A geography-aware model needs its own frozen protocol and a test period that no frozen data currently provide, so the requirement stays partial.",
+      "pages": [
+        {
+          "label": "Geographic Zones",
+          "href": "/zones"
+        }
+      ],
       "docs": [
         "docs/08_REGIME_METHODOLOGY.md",
         "docs/34_REGIME_LABEL_STRATEGY.md",
         "docs/115_COASTAL_OROGRAPHIC_REGIME_PROTOCOL.md",
-      "docs/116_STATIC_GEOGRAPHY_STAGE0.md"
+        "docs/116_STATIC_GEOGRAPHY_STAGE0.md",
+        "docs/117_ZONE_VERIFICATION_STAGE1.md",
+        "docs/118_ZONE_FORCING_STAGE2.md"
       ],
-      "facts": []
+      "facts": [
+        {
+          "label": "Land cells in the Ghats-coast zone",
+          "source": "zone:B:2025",
+          "pointer": "/zones/COASTAL_AND_OROGRAPHIC/cells",
+          "format": "int"
+        },
+        {
+          "label": "Raw bias on the Ghats-coast zone, Track B 2024 (development) (mm)",
+          "source": "zone:B:2024",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "Raw heavy-rain frequency bias on the Ghats-coast zone, Track B 2024 (development)",
+          "source": "zone:B:2024",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/categorical/heavy/frequency_bias",
+          "format": "score3"
+        },
+        {
+          "label": "Raw bias on the Ghats-coast zone, Track B 2025 (post-hoc) (mm)",
+          "source": "zone:B:2025",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "Raw heavy-rain frequency bias on the Ghats-coast zone, Track B 2025 (post-hoc)",
+          "source": "zone:B:2025",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/categorical/heavy/frequency_bias",
+          "format": "score3"
+        },
+        {
+          "label": "Raw bias on the Ghats-coast zone, Track A 2018 (development) (mm)",
+          "source": "zone:A:2018",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "Raw heavy-rain frequency bias on the Ghats-coast zone, Track A 2018 (development)",
+          "source": "zone:A:2018",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/categorical/heavy/frequency_bias",
+          "format": "score3"
+        },
+        {
+          "label": "Raw bias on the Ghats-coast zone, Track A 2019 (post-hoc) (mm)",
+          "source": "zone:A:2019",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "Raw heavy-rain frequency bias on the Ghats-coast zone, Track A 2019 (post-hoc)",
+          "source": "zone:A:2019",
+          "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/categorical/heavy/frequency_bias",
+          "format": "score3"
+        }
+      ]
     },
     {
       "id": "REGIME-WESTERN-DISTURBANCE",

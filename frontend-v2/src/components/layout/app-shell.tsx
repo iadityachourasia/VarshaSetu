@@ -5,7 +5,7 @@ import { StoryMode } from "@/components/story/story-mode";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { Activity, BookOpenText, ClipboardCheck, ChevronRight, Clock3, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, PanelLeftClose, PanelLeftOpen, Play, RotateCcw, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network } from "lucide-react";
+import { Activity, BookOpenText, ClipboardCheck, Mountain, ChevronRight, Clock3, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, PanelLeftClose, PanelLeftOpen, Play, RotateCcw, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network } from "lucide-react";
 
 const navigation = [
   { group: "ANALYSIS", items: [
@@ -25,6 +25,7 @@ const navigation = [
     { href: "/quality", label: "Data Quality & Provenance", icon: Network },
     { href: "/methodology", label: "Data & Methodology", icon: BookOpenText },
     { href: "/audit", label: "Scientific Audit", icon: Microscope },
+    { href: "/zones", label: "Geographic Zones", icon: Mountain },
     { href: "/compliance", label: "SIH26080 Compliance", icon: ClipboardCheck },
   ] },
 ];

@@ -162,7 +162,8 @@ describe("SIH26080 coverage schema against the real tracked manifest", () => {
     const parsed = psCoverageSchema.parse(coveragePayload());
     expect(parsed.rows.length).toBeGreaterThanOrEqual(25);
     const byId = new Map(parsed.rows.map((r) => [r.id, r]));
-    for (const id of ["REGIME-COASTAL-OROGRAPHIC", "REGIME-WESTERN-DISTURBANCE", "LIVE-INFERENCE"]) expect(byId.get(id)?.status).toBe("PLANNED");
+    for (const id of ["REGIME-WESTERN-DISTURBANCE", "LIVE-INFERENCE"]) expect(byId.get(id)?.status).toBe("PLANNED");
+    expect(byId.get("REGIME-COASTAL-OROGRAPHIC")?.status).toBe("PARTIAL");       // rule-based zones and stratified verification only; never implemented without a validated model
     expect(byId.get("REGIME-CLASSIFIER")?.status).toBe("PARTIAL");
     const covered = new Set(parsed.rows.flatMap((r) => r.ps_ids));
     for (let n = 1; n <= 14; n++) expect(covered.has(`PS-R${String(n).padStart(2, "0")}`)).toBe(true);

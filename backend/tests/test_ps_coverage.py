@@ -15,8 +15,8 @@ ROOT = Path(__file__).resolve().parents[2]
 RAW = json.loads(evidence.COVERAGE_FILE.read_text(encoding="utf-8"))
 ROWS = {row["id"]: row for row in RAW["rows"]}
 ROUTES = {"/", "/forecast", "/casebook", "/extremes", "/ensemble", "/regimes", "/districts", "/verification", "/observations", "/quality",
-          "/methodology", "/audit", "/compliance"}
-MUST_BE_PLANNED = ("REGIME-COASTAL-OROGRAPHIC", "REGIME-WESTERN-DISTURBANCE", "REGIME-INDEPENDENT-VALIDATION", "LIVE-INFERENCE",
+          "/methodology", "/audit", "/compliance", "/zones"}
+MUST_BE_PLANNED = ("REGIME-WESTERN-DISTURBANCE", "REGIME-INDEPENDENT-VALIDATION", "LIVE-INFERENCE",
                    "SYNOPTIC-OVERLAYS", "ALL-INDIA-DOMAIN")
 FORMATS = {"mm2", "score3", "int"}
 
@@ -55,6 +55,9 @@ def test_missing_requirements_are_planned_never_implemented():
         row = ROWS[row_id]
         assert row["status"] == "PLANNED" and row["facts"] == [] and row["limitation"].strip(), row_id
     assert ROWS["REGIME-COASTAL-OROGRAPHIC"]["ps_mandatory"] and ROWS["REGIME-WESTERN-DISTURBANCE"]["ps_mandatory"]
+    # coastal/orographic is PARTIAL (rule-based zones + stratified verification) and can never be IMPLEMENTED without a validated model (docs/115, docs/118)
+    assert ROWS["REGIME-COASTAL-OROGRAPHIC"]["status"] == "PARTIAL" and ROWS["REGIME-COASTAL-OROGRAPHIC"]["ps_mandatory"]
+    assert "specialist model" in ROWS["REGIME-COASTAL-OROGRAPHIC"]["limitation"] and ROWS["REGIME-COASTAL-OROGRAPHIC"]["pages"][0]["href"] == "/zones"
     # the classifier row cannot claim full coverage while mandatory regimes are missing
     assert ROWS["REGIME-CLASSIFIER"]["status"] == "PARTIAL"
     assert ROWS["IMPROVEMENT-VS-RAW"]["status"] == "PARTIAL"
@@ -108,7 +111,7 @@ def test_facts_resolve_to_defined_numbers_from_hash_verified_evidence(client):
 def test_facts_use_only_allowed_sources_and_post_hoc_years_stay_labelled():
     for row in RAW["rows"]:
         for fact in row["facts"]:
-            assert re.fullmatch(r"(regime:(A:(2018|2019)|B:(2024|2025))|district:B:(2024|2025))", fact["source"]), fact
+            assert re.fullmatch(r"(regime:(A:(2018|2019)|B:(2024|2025))|district:B:(2024|2025)|zone:(A:(2018|2019)|B:(2024|2025))|zoneforcing:(A:(2018|2019)|B:(2024|2025)))", fact["source"]), fact
             assert fact["pointer"].startswith("/") and fact["label"].strip()
 
 
@@ -126,7 +129,8 @@ def test_unresolvable_pointer_or_inconsistent_row_is_refused(client, monkeypatch
     bad = json.loads(json.dumps(RAW))
     bad["rows"][1]["facts"][0]["pointer"] = "/overall/continuous/M9/rmse_mm"
     planned_with_fact = json.loads(json.dumps(RAW))
-    planned_with_fact["rows"][5]["facts"] = [dict(RAW["rows"][1]["facts"][0])]
+    planned_index = next(i for i, r in enumerate(planned_with_fact["rows"]) if r["status"] == "PLANNED")
+    planned_with_fact["rows"][planned_index]["facts"] = [dict(RAW["rows"][1]["facts"][0])]
     real = evidence.sha256_file
     for payload in (bad, planned_with_fact):
         monkeypatch.setattr(evidence, "COVERAGE_FILE", FakePath(json.dumps(payload)))

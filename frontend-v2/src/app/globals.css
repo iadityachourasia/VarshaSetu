@@ -1375,3 +1375,18 @@
 .coverage-links { list-style: none; padding-left: 0; }
 .coverage-table th, .coverage-table td { text-align: left; }
 .coverage-table th[scope="row"] .micro-note { display: block; margin-top: 3px; font-weight: 400; }
+:root { --zone-coastal: #1b7f8c; --zone-orographic: #b5651d; --zone-both: #7b3f9e; --zone-other: #9aa3a8; }
+.zone-top { display: grid; grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr); gap: 16px; }
+.zone-map-figure { margin: 0; }
+.zone-map { width: 100%; max-width: 460px; height: auto; display: block; border: 1px solid var(--line); border-radius: 4px; background: var(--surface-2, transparent); }
+.zone-legend { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.zone-legend li { display: grid; grid-template-columns: 16px 1fr; gap: 8px; align-items: start; font-size: 13px; }
+.zone-legend i { width: 14px; height: 14px; border-radius: 3px; margin-top: 3px; border: 1px solid var(--line); }
+.zone-banner { display: grid; gap: 2px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 4px; font-size: 13px; }
+.zone-banner-posthoc { border-color: var(--amber, #b7791f); border-style: dashed; }
+.zone-banner span { color: var(--text-subtle); font-size: 12px; }
+.zone-table { min-width: 760px; }
+.zone-table th[scope="row"] { text-align: left; min-width: 200px; }
+.zone-forcing-block { margin-top: 14px; }
+.zone-forcing-block h3 { margin: 0 0 4px; font-size: 14px; }
+@media (max-width: 860px) { .zone-top { grid-template-columns: 1fr; } }
