@@ -37,3 +37,16 @@ separate consumed 2025 operational-era benchmark is not visualized by these maps
 The automated path is `frontend-v2/tests/e2e/demo-flow.spec.ts`. Its
 screenshots are UI evidence only. No page triggers training, GRIB decoding,
 or Phase 2B/2C artifact mutation.
+
+## Optional closing segment (added 2026-10-01, about 60 to 90 seconds)
+
+Use it when the audience asks what is still missing, or to end on candour rather than on a headline.
+
+9. Open **Geographic Zones**. Point to the Western Ghats coast on the map: about eight percent of the land cells hold roughly 35 to 43 percent of the observed heavy rain, and
+   Raw GEFS forecasts only a small fraction of it. Say plainly: no frozen model fixes this, the zones are a rule-based convention, and there is no coastal or orographic specialist model
+   (`docs/117`, `docs/118`). The banner shows which year is development evidence and which is the post-hoc analysis of a completed test.
+10. Open **SIH26080 Compliance**. Show 12 of the 14 official requirements implemented and 2 partial, and that western disturbances, independent regime validation and live forecasting
+   are listed as planned, not hidden. Every figure on that page is resolved from hash-verified evidence.
+11. (Optional) On the Forecast page choose **Synoptic chart** for an operational-era case: wind arrows, 500-hPa height and sea-level pressure lines from the frozen forecast fields. Say it is forecast
+   data, not an analysis, and not an explanation of any correction (`docs/121`).
+
