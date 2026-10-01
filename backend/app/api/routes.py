@@ -4,10 +4,12 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException, Query
 
 try:
+    from backend.app.version import API_VERSION, deployed_commit
     from backend.app.core.config import REPORTS_DIR
     from backend.app.data.audit import datasetAudit
     from backend.app.services.pipeline import ScientificPipelineService
 except ModuleNotFoundError:
+    from app.version import API_VERSION, deployed_commit
     from app.core.config import REPORTS_DIR
     from app.data.audit import datasetAudit
     from app.services.pipeline import ScientificPipelineService
@@ -17,9 +19,36 @@ router = APIRouter()
 pipeline_service = ScientificPipelineService()
 
 
+def _legacy_unavailable(reason: str) -> HTTPException:
+    return HTTPException(
+        status_code=410,
+        detail={
+            "code": "LEGACY_DATASET_UNAVAILABLE",
+            "detail": "The quarantined legacy prototype dataset is not deployed here, so this legacy endpoint is retired. "
+                      "Scientific output is served only by /api/science/*. " + reason,
+        },
+    )
+
+
 def _load_current_state() -> tuple:
-    pipeline_service.ensure_loaded()
+    """Legacy dataset state. Any load failure (for example the CSV is not part of a deployed image) is a structured 410,
+    never an unhandled 500."""
+    try:
+        pipeline_service.ensure_loaded()
+    except Exception as error:  # noqa: BLE001 - every failure to load the quarantined dataset means the same thing
+        raise _legacy_unavailable(type(error).__name__) from error
     return pipeline_service.df, pipeline_service.file_metadata, pipeline_service.readiness
+
+
+def _retired(endpoint: str, replacement: str) -> HTTPException:
+    return HTTPException(
+        status_code=410,
+        detail={
+            "code": "LEGACY_ENDPOINT_RETIRED",
+            "detail": f"{endpoint} is retired: it returned fixed, hand-written audit statements that were not computed from the "
+                      f"repository, which AGENTS.md forbids presenting as an executed audit. Use {replacement}.",
+        },
+    )
 
 
 def _blocked(operation: str) -> None:
@@ -57,12 +86,15 @@ def _legacy_report_identity() -> dict:
 
 @router.get("/health")
 def health_check():
-    _, _, readiness = _load_current_state()
+    """Liveness of the deployed service. It does not depend on the quarantined legacy dataset, which is not part of the
+    production image; the legacy readiness gate is reported separately and stays blocked."""
     return {
-        "status": "healthy" if readiness.ready else "degraded",
+        "status": "ok",
         "system": "VarshaSetu scientific prototype",
-        "version": "0.1.0-phase0",
-        "scientific_mode": readiness.mode,
+        "version": API_VERSION,
+        "commit": deployed_commit(),
+        "scientific_api": "/api/science/status",
+        "legacy_prototype": "quarantined_blocked_by_scientific_readiness_gate",
     }
 
 
@@ -153,75 +185,12 @@ def get_provenance():
 
 @router.get("/audit")
 def get_scientific_audit():
-    df, _, readiness = _load_current_state()
-    legacy = _legacy_report_identity()
-    return [
-        {
-            "check": "Portable manifest-backed dataset path",
-            "status": "PASS",
-            "detail": "The repository dataset passed checksum, row-count, and schema validation.",
-        },
-        {
-            "check": "Dataset provenance",
-            "status": "FAIL",
-            "detail": "Forecast and observation providers, licenses, acquisition method, and timing metadata remain unverified.",
-        },
-        {
-            "check": "Regime-label reproducibility",
-            "status": "FAIL" if "regime_id" not in df.columns else "WARNING",
-            "detail": (
-                "The checked-in legacy dataset has no regime_id; the separate Phase 2A "
-                "forecast-time pseudo-label artifacts are not connected to this blocked API."
-            ),
-        },
-        {
-            "check": "Forecast-time feature causality",
-            "status": "WARNING",
-            "detail": "Unsafe/unknown contemporaneous fields are excluded in code, but raw_nwp_* provenance is still unverified.",
-        },
-        {
-            "check": "Legacy artifact identity",
-            "status": "FAIL" if legacy.get("present") else "WARNING",
-            "detail": legacy.get("reason", "No legacy report is present."),
-        },
-        {
-            "check": "Rainfall accumulation semantics",
-            "status": "FAIL",
-            "detail": "The target is 6-hour rainfall; 24-hour heavy categories are disabled until a correct 24-hour product exists.",
-        },
-        {
-            "check": "Scientific training/inference fail-closed gate",
-            "status": "PASS",
-            "detail": f"Training and artifact inference are blocked by {len(readiness.blockers)} unresolved scientific conditions.",
-        },
-    ]
+    raise _retired("GET /api/audit", "/api/science/evidence/ps-coverage and the Scientific Audit page")
 
 
 @router.get("/jury-defense")
 def get_jury_defense():
-    _, metadata, readiness = _load_current_state()
-    return [
-        {
-            "q": "Can the saved experiment be reproduced from this repository?",
-            "a": "No. The saved report names a different source file and checksum and expects regime_id, which is absent here.",
-        },
-        {
-            "q": "Is the checked-in raw_nwp_* data verified as genuine archived NWP?",
-            "a": "No. Source model, initialization, lead, version, and acquisition lineage are not documented.",
-        },
-        {
-            "q": "What is currently verified?",
-            "a": (
-                f"The repository contains {metadata['filename']} with {metadata['total_rows']} rows and "
-                f"SHA-256 {metadata['sha256']}; its structure is manifest-verified but scientific provenance is not."
-            ),
-        },
-        {
-            "q": "Why are model outputs disabled?",
-            "a": "They are disabled to prevent mismatched legacy artifacts and unresolved feature timing from being presented as valid science. "
-            + " ".join(readiness.blockers),
-        },
-    ]
+    raise _retired("GET /api/jury-defense", "docs/presentation/JUDGE_QA.md and /api/science/evidence/ps-coverage")
 
 
 @router.get("/forecast")
