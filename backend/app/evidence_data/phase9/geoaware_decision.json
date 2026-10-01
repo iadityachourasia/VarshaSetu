@@ -1,0 +1,87 @@
+{
+  "adds_value": false,
+  "candidate": "A3",
+  "candidate_selected": true,
+  "coverage_status_consequence": "stays PARTIAL; no evidence that geography-aware features improve on M2",
+  "geography_attribution": null,
+  "per_year": {
+    "2024": {
+      "beats_control_A0": false,
+      "csi_beats_M2": true,
+      "guardrails_G1_G2_G3": {
+        "G1": true,
+        "G2": false,
+        "G3": true
+      },
+      "guardrails_pass": false,
+      "heavy_csi_zone_A3_minus_A0": null,
+      "heavy_csi_zone_A3_minus_M2": {
+        "excludes_zero": true,
+        "interval95": [
+          0.08492180467702282,
+          0.1528220456270932
+        ],
+        "point": 0.11996349254639488,
+        "status": "ok",
+        "valid_draws": 2000
+      },
+      "overall_rmse_A3_minus_M2": {
+        "excludes_zero": true,
+        "interval95": [
+          1.0853208401218455,
+          2.3396617604632017
+        ],
+        "point": 1.6833660644822785,
+        "status": "ok",
+        "valid_draws": 2000
+      },
+      "rmse_within_tolerance": false
+    },
+    "2025": {
+      "beats_control_A0": false,
+      "csi_beats_M2": true,
+      "guardrails_G1_G2_G3": {
+        "G1": true,
+        "G2": true,
+        "G3": true
+      },
+      "guardrails_pass": true,
+      "heavy_csi_zone_A3_minus_A0": null,
+      "heavy_csi_zone_A3_minus_M2": {
+        "excludes_zero": true,
+        "interval95": [
+          0.10073243273253833,
+          0.16212515187445295
+        ],
+        "point": 0.13322467533221483,
+        "status": "ok",
+        "valid_draws": 2000
+      },
+      "overall_rmse_A3_minus_M2": {
+        "excludes_zero": false,
+        "interval95": [
+          -0.325775491120152,
+          0.0007882864779149499
+        ],
+        "point": -0.16088757447202973,
+        "status": "ok",
+        "valid_draws": 2000
+      },
+      "rmse_within_tolerance": true
+    }
+  },
+  "protocol_gap": "The protocol attributes a gain to geography only if A3 beats the internal control A0, but it did not anticipate that A0 could have no configuration passing the guardrails; the comparison then cannot be made and attribution is recorded as undetermined rather than forced.",
+  "rule": {
+    "adds_value_requires_all": [
+      "A3 beats M2 on heavy-rain CSI in the COASTAL_AND_OROGRAPHIC zone with the paired 95 percent interval of (A3 - M2) excluding zero",
+      "overall RMSE of A3 not worse than M2 by more than 0.2 mm",
+      "A3 passes G1, G2 and G3 on the evaluation population",
+      "the sign of the zone heavy-CSI difference is the same in the post-hoc 2025 population as in 2024"
+    ],
+    "geography_attribution": "a gain is attributed to geography only if A3 also beats the internal control A0 on the same zone metric; otherwise it is attributed to the training recipe",
+    "if_met_under_option_b": "report 'a candidate that improves on M2 in development evidence'; never 'implemented' or 'validated'",
+    "if_not_met": "report 'no evidence that geography-aware features improve on M2'; the coverage status stays PARTIAL"
+  },
+  "sign_agrees_2024_2025": true,
+  "wording": "no evidence that geography-aware features improve on M2"
+}

@@ -107,3 +107,8 @@ regime labels, and scientific endpoint activation remain blocked.
 - [ ] Live or new-cycle inference: separate worker; not started.
 - [ ] Story Mode 2.0 and demo polish.
 
+## Status after Phase 9 (2026-10-01)
+
+- [x] Geography-aware correction (M5a) protocol frozen before training, trained on 2023, selection frozen, evaluated on 2024 and the post-hoc 2025 (`docs/124`, `docs/126`). Result: pre-registered rule **not met** (heavy-rain gain on the Ghats coast replicated, but 2024 over-forecasting).
+- [ ] A follow-up (protocol v2, for example a bias-controlled recipe) needs independent years: option D1(a) of `docs/124`, a new corpus for 2021 and 2022, or waiting for 2026. Not started; needs owner decision.
+- [x] First green CI run on GitHub Actions (backend with the checksum-verified bundle, frontend, Dockerfile lint) after fixing line-ending and missing-local-code issues that only a clean Linux checkout exposes.

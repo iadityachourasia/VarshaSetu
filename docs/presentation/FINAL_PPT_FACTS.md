@@ -122,6 +122,7 @@ Limitation" scene. State it in the same breath as the RMSE win, every time.
 - **The main finding.** The Western Ghats coast (109 of the 1,301 land cells) holds roughly 35 to 43 % of all observed heavy-rain cell-case pairs in every population, and Raw GEFS forecasts
   only about 7 to 22 % as many heavy events as were observed there. No frozen model fixes it; the corrected models help on the operational-era track (differently in 2024 and 2025) and
   not on the 2019 reforecast track. This is the evidence-based target for the next model; it is a finding about frozen models, not a new skill claim.
+- **Geography-aware model experiment** (`docs/126`): a model given static geography improved heavy-rain detection on the Ghats coast in both evaluation years, but over-forecast in 2024, so the pre-registered rule was **not met** and it is not presented as an improvement. Development-only evidence; the 2024 and 2025 results have been seen, so any redesign needs new years of data.
 - **Western disturbances** are not implemented. A feasibility study (`docs/122`) found no label source, no upper-tropospheric fields and an evaluation domain (10–22° N) that excludes the region where they act.
 - **Independent regime validation** does not exist; a source probe (`docs/123`) lists candidate sources and obstacles. Do not call the 0.9424 (2018) or 0.8806 (2023 out-of-fold) figures accuracy.
 - **Live or new-cycle forecasting** is not built; only a design exists (`docs/125`). The app is a historical replay.

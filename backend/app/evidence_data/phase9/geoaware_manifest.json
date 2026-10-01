@@ -1,0 +1,33 @@
+{
+  "files": {
+    "geoaware_decision.json": {
+      "cases": null,
+      "evidence_role": "PRE_REGISTERED_RULE_DEVELOPMENT_PLUS_POST_HOC",
+      "reproduction": "n/a",
+      "sha256": "e2875960fa89089df0b52f5ef66cf292b67ce6e24c71d8f1604fdca6aa8c4432",
+      "year": null
+    },
+    "geoaware_evaluation_B_2024.json": {
+      "cases": 183,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "reproduction": "REPRODUCED",
+      "sha256": "e1b818777a0f5454237ad0bb2c5f18a75489b368a121b4a3014af73eac689d8c",
+      "year": 2024
+    },
+    "geoaware_evaluation_B_2025.json": {
+      "cases": 232,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "reproduction": "REPRODUCED",
+      "sha256": "bf243d7368794f49e086d397ab31730b87961b221be554b61cbf869ca68fa0a5",
+      "year": 2025
+    }
+  },
+  "notes": [
+    "Development-only (option D1(b)): no independent test exists; 2024 is a reused development year; 2025 is a post-hoc analysis of a completed final test.",
+    "No frozen M0-M4 artifact, feature registry v1 or earlier protocol was modified.",
+    "Operational-era track only; historical replay, not warning skill."
+  ],
+  "protocol_sha256": "e04c0504dfc7a8f68f020241010b82344d89ab8270eef816e6fd5f43359f393c",
+  "schema": "phase9-geoaware-manifest-v1",
+  "selection_freeze_sha256": "dd63aec4f53866f34932a10dad3eb9869fd3a92926a425319bd7ca87c5438f22"
+}

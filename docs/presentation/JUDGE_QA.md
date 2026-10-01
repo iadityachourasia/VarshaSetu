@@ -213,3 +213,13 @@ data, not an analysis, and it does not explain why any correction was made. The 
 It is a read-only API that serves hash-verified frozen artifacts and fails closed on any integrity mismatch. Production hardening (`docs/120`): explicit CORS origins without credentials, a
 liveness endpoint that reports version and commit, retired static audit routes, a checksum-verified and retried data-bundle download, CI on every push, and an explicit policy for tests that need the
 data bundle. It is a historical research prototype, not an official warning service.
+
+**Q: Did you try to fix the Western Ghats heavy-rain deficiency you found?**
+Yes, as a pre-registered experiment (`docs/124`, `docs/126`), and the honest answer is "partly, and it does not yet pass our own rule". We froze the protocol before training, trained a model that is given static
+geography (terrain relief, elevation, distance to coast, slope) and forecast-time forcing on 2023 only, selected it by a rule with guardrails, froze the selection, and only then looked at 2024 and 2025. Heavy-rain
+detection on the Ghats coast improved a lot in both years (heavy CSI roughly 0.38 in 2024 and 0.22 in 2025 against 0.26 and 0.08 for the global ML model). But in 2024 the model over-forecast, which made overall error
+worse than the global model's, so the rule was not met and we do not call it an improvement. The gain comes mostly from the static geography features, not from the forcing. It is development-only evidence: 2024 was
+already used and no independent test period exists, so a fair next test needs new years of data.
+
+**Q: Why not just keep tuning until it passes?**
+Because after seeing 2024 and 2025 any tuning would be fitted to the very years we would then use to judge it. We stop, report the result, and say a redesign needs new, untouched data.
