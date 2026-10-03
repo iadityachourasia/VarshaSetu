@@ -30,9 +30,15 @@ Every route (15) was captured in light, dark and phone layouts from the producti
 
 The 2019 casebook was one 255-row list with no way to narrow it. It now has filters (observed event, lead, case outcome), sorting (date, largest RMSE reduction, most Heavy cells), a live summary (cases shown, cases with lower corrected RMSE, cases with an observed Heavy cell), and richer rows: the case's dominant pseudo-regime, event chips that light up when Heavy or Very Heavy cells were observed, and the RMSE change coloured and scaled. Every value is read from the frozen case records; "lower corrected RMSE" means only that the case's corrected RMSE is below its Raw RMSE.
 
+## Round 2
+
+- **Forest plots on phones.** Each plot now lays itself out at its rendered width, and when the plots stack (900 px and below) every plot carries its own row labels, so all three stay readable.
+- **Forecast Explorer.** The cell inspector, regime and case-verification panels under the maps are cards, matching the rest of the workspace.
+- **Scientific Audit.** Lineage details are label / value pairs; the lineage column is joined by connectors and the detail panel stays in view while scrolling; the one-time final-test steps are a stepper ending on the completed state; known limitations are a readable list.
+- **Number formatting.** Five places formatted counts with the machine locale, so the server rendered "3,01,832" (Indian grouping) where the rest of the site shows "331,755". All counts now use one format (en-GB). The values are unchanged.
+
 ## Not changed (noted for later)
 
-- On phones, the first forest plot of a group (the one with row labels) is drawn at a fixed width and scales down to small text.
 - The live-cycle field preview is a low-resolution raster by design (the stored field is coarse).
 
 ## Checks

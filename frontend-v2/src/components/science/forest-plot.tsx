@@ -1,4 +1,6 @@
-import { useId } from "react";
+"use client";
+
+import { useEffect, useId, useRef, useState } from "react";
 
 export type ForestRow = { label: string; point: number | null; low: number | null; high: number | null };
 
@@ -6,6 +8,7 @@ const finite = (value: number | null): value is number => value != null && Numbe
 const ROW = 30;
 const TOP = 26;
 const LABEL_WIDTH = 132;
+const STACKED = "(max-width: 900px)";   // the forest grid becomes one column here (see .forest-grid)
 const RIGHT = 70;
 
 /** Decimal places that keep the axis ticks distinct for the span being drawn. */
@@ -18,8 +21,22 @@ export function tickDigits(span: number): number {
  * It restates numbers the page already prints in a table (the table stays, for exact values and for assistive technology); the plot is for seeing at a
  * glance which contrasts clear zero and which do not. A row without a reported interval is drawn as an empty slot, never as a guess.
  */
-export function ForestPlot({ title, rows, showLabels = true, width = 520 }: { title: string; rows: ForestRow[]; showLabels?: boolean; width?: number }) {
-  const WIDTH = width;     // the drawing is laid out at roughly its rendered width so its text stays at a readable size
+export function ForestPlot({ title, rows, showLabels: labelsWanted = true, width = 520 }: { title: string; rows: ForestRow[]; showLabels?: boolean; width?: number }) {
+  const figure = useRef<HTMLElement>(null);
+  const [measured, setMeasured] = useState<{ width: number; stacked: boolean } | null>(null);
+  useEffect(() => {
+    const node = figure.current;
+    if (!node || typeof ResizeObserver === "undefined") return;
+    const update = () => setMeasured({ width: Math.round(node.clientWidth), stacked: window.matchMedia(STACKED).matches });
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+  // The drawing is laid out at its rendered width, so its text stays at a readable size on any screen. When the plots stack (phones),
+  // each one carries its own row labels, because the labelled neighbour is no longer beside it.
+  const WIDTH = measured && measured.width > 0 ? Math.max(280, measured.width) : width;
+  const showLabels = labelsWanted || Boolean(measured?.stacked);
   const id = useId();
   const drawn = rows.filter((row) => finite(row.point) && finite(row.low) && finite(row.high));
   const lows = drawn.map((row) => row.low as number);
@@ -29,7 +46,7 @@ export function ForestPlot({ title, rows, showLabels = true, width = 520 }: { ti
   const pad = (max - min || 1) * 0.08;
   const lo = min - pad;
   const hi = max + pad;
-  const left = showLabels ? LABEL_WIDTH : 12;
+  const left = showLabels ? (WIDTH < 420 ? 92 : LABEL_WIDTH) : 12;
   const plotWidth = WIDTH - left - RIGHT;
   const x = (value: number) => left + ((value - lo) / (hi - lo)) * plotWidth;
   const height = TOP + rows.length * ROW + 24;
@@ -37,7 +54,7 @@ export function ForestPlot({ title, rows, showLabels = true, width = 520 }: { ti
   // Label the ends of the data and the zero line, and drop an end label that would sit on top of zero.
   const ticks = [0, ...[lo + pad, hi - pad].filter((value) => Math.abs(value) > (hi - lo) * 0.12)];
   const summary = `${title}: ${drawn.filter((row) => (row.low as number) > 0 || (row.high as number) < 0).length} of ${drawn.length} intervals exclude zero`;
-  return <figure className="forest-plot">
+  return <figure className="forest-plot" ref={figure}>
     <svg viewBox={`0 0 ${WIDTH} ${height}`} role="img" aria-labelledby={`${id}-t`} focusable="false">
       <title id={`${id}-t`}>{summary}</title>
       <text className="forest-title" x={left} y={14}>{title}</text>

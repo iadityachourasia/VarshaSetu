@@ -117,14 +117,14 @@ export function ProbabilityQualityCards({ metric }: { metric: ProbabilityEventMe
     <span><small><MetricTerm term="BSS" /> ↑</small><strong>{metric.bss >= 0 ? "+" : ""}{metric.bss.toFixed(4)}</strong></span>
     <span><small><MetricTerm term="PR-AUC" /> ↑</small><strong>{metric.pr_auc.toFixed(3)}</strong></span>
     <span><small><MetricTerm term="ROC-AUC" /> ↑</small><strong>{metric.roc_auc.toFixed(3)}</strong></span>
-    <span><small>Observed event cells</small><strong>{metric.observed_event_count.toLocaleString()}</strong></span>
+    <span><small>Observed event cells</small><strong>{metric.observed_event_count.toLocaleString("en-GB")}</strong></span>
   </div>;
 }
 
 /** Live denominator-context badge -- replaces a hardcoded case/cell count
  * literal in JSX with whatever the fetched artifact actually reports. */
 export function PopulationBadge({ cases, cells, label }: { cases: number; cells: number; label?: string }) {
-  return <span className="phase5-population-badge">{label ? `${label} · ` : ""}{cases.toLocaleString()} cases · {cells.toLocaleString()} cells</span>;
+  return <span className="phase5-population-badge">{label ? `${label} · ` : ""}{cases.toLocaleString("en-GB")} cases · {cells.toLocaleString("en-GB")} cells</span>;
 }
 
 /** Canonical Raw/M1-M4 model-ladder rail: one consistent color per model,

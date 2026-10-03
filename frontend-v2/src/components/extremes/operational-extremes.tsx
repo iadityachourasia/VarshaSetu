@@ -155,7 +155,7 @@ export function OperationalExtremes({ initialCase, initialYear }: { initialCase?
       <p>Mean predicted probability versus observed frequency. Sparse upper bins are not evidence of stable calibration.</p>
       {!metric ? <ErrorState message="Reliability bins are unavailable." /> : <>
         <OperationalReliabilityChart metric={metric} />
-        <table className="phase5-table"><thead><tr><th>Forecast bin</th><th>Mean predicted</th><th>Observed frequency</th><th>Cells</th></tr></thead><tbody>{metric.reliability.map((bin) => <tr key={bin.bin_lower}><th>{Math.round(bin.bin_lower * 100)}–{Math.round(bin.bin_upper * 100)}%</th><td>{bin.mean_predicted_probability == null ? "Undefined" : `${(100 * bin.mean_predicted_probability).toFixed(1)}%`}</td><td>{bin.observed_event_frequency == null ? "Undefined" : `${(100 * bin.observed_event_frequency).toFixed(1)}%`}</td><td>{bin.sample_count.toLocaleString()}</td></tr>)}</tbody></table>
+        <table className="phase5-table"><thead><tr><th>Forecast bin</th><th>Mean predicted</th><th>Observed frequency</th><th>Cells</th></tr></thead><tbody>{metric.reliability.map((bin) => <tr key={bin.bin_lower}><th>{Math.round(bin.bin_lower * 100)}–{Math.round(bin.bin_upper * 100)}%</th><td>{bin.mean_predicted_probability == null ? "Undefined" : `${(100 * bin.mean_predicted_probability).toFixed(1)}%`}</td><td>{bin.observed_event_frequency == null ? "Undefined" : `${(100 * bin.observed_event_frequency).toFixed(1)}%`}</td><td>{bin.sample_count.toLocaleString("en-GB")}</td></tr>)}</tbody></table>
       </>}
     </div>) : null}
 
