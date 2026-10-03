@@ -9,8 +9,13 @@ export function PageHeading({ title, subtitle, action }: { title: string; subtit
   return <div className="page-heading"><div><h1>{title}</h1><p>{subtitle}</p></div>{action}</div>;
 }
 
-export function SectionHeading({ title, note }: { title: string; note?: string }) {
-  return <div className="section-heading"><h2>{title}</h2>{note ? <p>{note}</p> : null}</div>;
+export function SectionHeading({ title, note, id }: { title: string; note?: string; id?: string }) {
+  return <div className="section-heading" id={id}><h2>{title}</h2>{note ? <p>{note}</p> : null}</div>;
+}
+
+/** In-page navigation for the long evidence pages; every target is an element with the matching id. */
+export function PageToc({ items }: { items: { id: string; label: string }[] }) {
+  return <nav className="page-toc" aria-label="On this page" data-testid="page-toc"><span className="page-toc-label">On this page</span>{items.map((item) => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</nav>;
 }
 
 export function Metric({ label, value, detail, tone }: { label: string; value: string; detail?: string; tone?: "teal" | "amber" | "muted" }) {
