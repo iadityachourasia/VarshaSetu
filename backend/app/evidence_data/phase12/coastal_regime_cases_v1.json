@@ -1,0 +1,6479 @@
+{
+  "cut_points": {
+    "A": {
+      "cases_listed": 258,
+      "degenerate": false,
+      "q33": 282.0366009516896,
+      "q67": 408.1067005025567,
+      "training_cases": 258,
+      "training_year": 2017
+    },
+    "B": {
+      "cases_listed": 200,
+      "degenerate": false,
+      "q33": 247.1601031867593,
+      "q67": 392.1856428746358,
+      "training_cases": 200,
+      "training_year": 2023
+    }
+  },
+  "note": "forecast-only index, class and percentile per case; no observation was read",
+  "populations": {
+    "A2018": [
+      {
+        "case_id": "2018-06-01T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 103.15727615508641,
+        "lead_day": 1,
+        "percentile_vs_training": 0.13565891472868216
+      },
+      {
+        "case_id": "2018-06-01T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 205.12940632976913,
+        "lead_day": 3,
+        "percentile_vs_training": 0.22093023255813954
+      },
+      {
+        "case_id": "2018-06-02T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 109.8457792512194,
+        "lead_day": 1,
+        "percentile_vs_training": 0.1434108527131783
+      },
+      {
+        "case_id": "2018-06-03T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 219.32854782966572,
+        "lead_day": 1,
+        "percentile_vs_training": 0.24031007751937986
+      },
+      {
+        "case_id": "2018-06-03T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 224.97340463153364,
+        "lead_day": 2,
+        "percentile_vs_training": 0.2441860465116279
+      },
+      {
+        "case_id": "2018-06-04T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 161.20959409144416,
+        "lead_day": 1,
+        "percentile_vs_training": 0.17829457364341086
+      },
+      {
+        "case_id": "2018-06-05T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 288.18778413237004,
+        "lead_day": 1,
+        "percentile_vs_training": 0.3488372093023256
+      },
+      {
+        "case_id": "2018-06-05T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 486.3848646276276,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2018-06-06T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 330.26082780907024,
+        "lead_day": 1,
+        "percentile_vs_training": 0.49224806201550386
+      },
+      {
+        "case_id": "2018-06-06T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 676.5270947413077,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9767441860465116
+      },
+      {
+        "case_id": "2018-06-07T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 480.57270573727044,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7984496124031008
+      },
+      {
+        "case_id": "2018-06-07T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 768.7946328883687,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-06-08T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 687.6882616644356,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9844961240310077
+      },
+      {
+        "case_id": "2018-06-08T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 683.57717078908,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2018-06-08T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 738.3433970975946,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-06-09T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 660.4284460385715,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-06-10T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 646.6473164684278,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-06-11T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 482.6770031212834,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2018-06-11T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 481.5270118704388,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7984496124031008
+      },
+      {
+        "case_id": "2018-06-12T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 446.62732293067745,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7403100775193798
+      },
+      {
+        "case_id": "2018-06-13T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 416.8358718388563,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6821705426356589
+      },
+      {
+        "case_id": "2018-06-13T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 416.1603397374415,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6821705426356589
+      },
+      {
+        "case_id": "2018-06-14T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 363.2316736112536,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5697674418604651
+      },
+      {
+        "case_id": "2018-06-15T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 399.7552211428283,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6550387596899225
+      },
+      {
+        "case_id": "2018-06-15T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 457.9261140464065,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7558139534883721
+      },
+      {
+        "case_id": "2018-06-16T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 408.84178540088317,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6705426356589147
+      },
+      {
+        "case_id": "2018-06-16T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 468.98347523951765,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7790697674418605
+      },
+      {
+        "case_id": "2018-06-17T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 431.72824165729446,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7093023255813954
+      },
+      {
+        "case_id": "2018-06-18T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 459.4828505624938,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7596899224806202
+      },
+      {
+        "case_id": "2018-06-19T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 316.86303378796975,
+        "lead_day": 1,
+        "percentile_vs_training": 0.43023255813953487
+      },
+      {
+        "case_id": "2018-06-20T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 356.98095505530813,
+        "lead_day": 1,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2018-06-20T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 350.76133420017567,
+        "lead_day": 2,
+        "percentile_vs_training": 0.5465116279069767
+      },
+      {
+        "case_id": "2018-06-21T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 260.0115413530466,
+        "lead_day": 1,
+        "percentile_vs_training": 0.29069767441860467
+      },
+      {
+        "case_id": "2018-06-22T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 330.5319262818781,
+        "lead_day": 1,
+        "percentile_vs_training": 0.49224806201550386
+      },
+      {
+        "case_id": "2018-06-23T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 416.14085354506835,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6821705426356589
+      },
+      {
+        "case_id": "2018-06-23T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 452.20172211157285,
+        "lead_day": 2,
+        "percentile_vs_training": 0.751937984496124
+      },
+      {
+        "case_id": "2018-06-24T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 474.59118231279535,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7868217054263565
+      },
+      {
+        "case_id": "2018-06-24T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 501.8629860552697,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2018-06-24T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 591.3088816157352,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9341085271317829
+      },
+      {
+        "case_id": "2018-06-25T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 555.9047136657714,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2018-06-25T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 581.8214961197642,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9069767441860465
+      },
+      {
+        "case_id": "2018-06-25T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 517.1176902672677,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2018-06-26T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 585.45174516034,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9186046511627907
+      },
+      {
+        "case_id": "2018-06-27T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 505.7846608745098,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2018-06-27T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 364.8633364400248,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5697674418604651
+      },
+      {
+        "case_id": "2018-06-28T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 424.905767941646,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6976744186046512
+      },
+      {
+        "case_id": "2018-06-28T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 363.3365726123963,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5697674418604651
+      },
+      {
+        "case_id": "2018-06-29T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 328.8938345918343,
+        "lead_day": 1,
+        "percentile_vs_training": 0.49224806201550386
+      },
+      {
+        "case_id": "2018-06-29T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 282.7976544886785,
+        "lead_day": 2,
+        "percentile_vs_training": 0.3333333333333333
+      },
+      {
+        "case_id": "2018-06-29T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 327.45840957710146,
+        "lead_day": 3,
+        "percentile_vs_training": 0.49224806201550386
+      },
+      {
+        "case_id": "2018-06-30T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 264.7619378054339,
+        "lead_day": 1,
+        "percentile_vs_training": 0.31007751937984496
+      },
+      {
+        "case_id": "2018-06-30T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 355.0659510796166,
+        "lead_day": 2,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2018-06-30T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 474.558486910127,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7868217054263565
+      },
+      {
+        "case_id": "2018-07-01T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 343.2994557994549,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5232558139534884
+      },
+      {
+        "case_id": "2018-07-01T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 423.2063625618015,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6976744186046512
+      },
+      {
+        "case_id": "2018-07-02T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 434.1197239202796,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7131782945736435
+      },
+      {
+        "case_id": "2018-07-02T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 467.84008412689417,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7751937984496124
+      },
+      {
+        "case_id": "2018-07-03T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 480.48343804774737,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7984496124031008
+      },
+      {
+        "case_id": "2018-07-03T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 645.8106309121438,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-07-04T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 509.0049730162658,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8255813953488372
+      },
+      {
+        "case_id": "2018-07-04T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 536.5553698913639,
+        "lead_day": 2,
+        "percentile_vs_training": 0.872093023255814
+      },
+      {
+        "case_id": "2018-07-04T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 512.8556383212016,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8372093023255814
+      },
+      {
+        "case_id": "2018-07-05T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 450.47752990039487,
+        "lead_day": 1,
+        "percentile_vs_training": 0.748062015503876
+      },
+      {
+        "case_id": "2018-07-05T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 472.28094507905183,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7829457364341085
+      },
+      {
+        "case_id": "2018-07-06T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 436.45498886640996,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7131782945736435
+      },
+      {
+        "case_id": "2018-07-06T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 522.8912857084916,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2018-07-07T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 466.12495508812106,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7713178294573644
+      },
+      {
+        "case_id": "2018-07-07T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 542.7272055682462,
+        "lead_day": 3,
+        "percentile_vs_training": 0.875968992248062
+      },
+      {
+        "case_id": "2018-07-08T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 510.68598399553673,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8333333333333334
+      },
+      {
+        "case_id": "2018-07-09T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 588.6029161461162,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9224806201550387
+      },
+      {
+        "case_id": "2018-07-09T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 669.6795061747424,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9767441860465116
+      },
+      {
+        "case_id": "2018-07-10T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 652.2228693656751,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-07-10T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 682.72066575672,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2018-07-10T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 673.9402276818413,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9767441860465116
+      },
+      {
+        "case_id": "2018-07-11T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 662.1148984777432,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-07-11T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 738.1139190296061,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-12T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 693.1811935699898,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-07-12T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 714.0000240164569,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-07-13T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 713.1954493170372,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-07-13T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 768.489690214481,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-13T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 731.2976462006254,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-07-14T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 760.7661013037464,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-14T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 850.9341188222678,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2018-07-14T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 789.7371140000291,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2018-07-15T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 831.6338729684647,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2018-07-15T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 880.4702043797281,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2018-07-15T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 754.7809395218861,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-16T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 755.0813850277625,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-16T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 751.633393244762,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-16T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 651.6867049969065,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-07-17T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 684.4425955746304,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2018-07-18T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 634.1059049733373,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9573643410852714
+      },
+      {
+        "case_id": "2018-07-18T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 688.8501389352612,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9844961240310077
+      },
+      {
+        "case_id": "2018-07-18T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 740.3881877316355,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-19T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 673.851360230854,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9767441860465116
+      },
+      {
+        "case_id": "2018-07-20T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 703.1159962522639,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-07-20T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 708.8336393880137,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-07-20T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 750.1975922661629,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-21T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 661.4924163865467,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-07-21T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 754.4734460005152,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2018-07-21T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 540.7902311569168,
+        "lead_day": 3,
+        "percentile_vs_training": 0.875968992248062
+      },
+      {
+        "case_id": "2018-07-22T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 662.2637256242207,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-07-22T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 547.7588109691076,
+        "lead_day": 2,
+        "percentile_vs_training": 0.875968992248062
+      },
+      {
+        "case_id": "2018-07-22T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 480.880097231496,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7984496124031008
+      },
+      {
+        "case_id": "2018-07-23T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 506.48102732296104,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2018-07-23T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 426.14597577612955,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6976744186046512
+      },
+      {
+        "case_id": "2018-07-23T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 465.3590832886931,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7674418604651163
+      },
+      {
+        "case_id": "2018-07-24T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 442.20667577633407,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7325581395348837
+      },
+      {
+        "case_id": "2018-07-24T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 539.0469621191734,
+        "lead_day": 2,
+        "percentile_vs_training": 0.872093023255814
+      },
+      {
+        "case_id": "2018-07-24T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 600.7996868084061,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9457364341085271
+      },
+      {
+        "case_id": "2018-07-25T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 508.3465526704442,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2018-07-26T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 506.0022007148981,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2018-07-27T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 421.9006389933501,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6937984496124031
+      },
+      {
+        "case_id": "2018-07-27T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 401.3605839478575,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6550387596899225
+      },
+      {
+        "case_id": "2018-07-27T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 380.80056768906354,
+        "lead_day": 3,
+        "percentile_vs_training": 0.627906976744186
+      },
+      {
+        "case_id": "2018-07-28T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 371.4097643446091,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5930232558139535
+      },
+      {
+        "case_id": "2018-07-28T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 380.9512501085003,
+        "lead_day": 2,
+        "percentile_vs_training": 0.627906976744186
+      },
+      {
+        "case_id": "2018-07-28T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 407.36603726763025,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6627906976744186
+      },
+      {
+        "case_id": "2018-07-29T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 308.11795955907496,
+        "lead_day": 1,
+        "percentile_vs_training": 0.40310077519379844
+      },
+      {
+        "case_id": "2018-07-30T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 382.4268908581005,
+        "lead_day": 1,
+        "percentile_vs_training": 0.627906976744186
+      },
+      {
+        "case_id": "2018-07-30T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 387.7145618556395,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6317829457364341
+      },
+      {
+        "case_id": "2018-07-30T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 355.80351633209006,
+        "lead_day": 3,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2018-07-31T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 370.77980126507435,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5930232558139535
+      },
+      {
+        "case_id": "2018-07-31T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 317.40838088157943,
+        "lead_day": 3,
+        "percentile_vs_training": 0.43023255813953487
+      },
+      {
+        "case_id": "2018-08-01T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 357.7502492519765,
+        "lead_day": 1,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2018-08-01T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 354.2537229984288,
+        "lead_day": 2,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2018-08-02T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 358.30064809379115,
+        "lead_day": 1,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2018-08-02T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 398.0462575545758,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6511627906976745
+      },
+      {
+        "case_id": "2018-08-02T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 405.42718041277294,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6627906976744186
+      },
+      {
+        "case_id": "2018-08-03T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 381.90870181636757,
+        "lead_day": 1,
+        "percentile_vs_training": 0.627906976744186
+      },
+      {
+        "case_id": "2018-08-04T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 408.05112606560436,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6666666666666666
+      },
+      {
+        "case_id": "2018-08-04T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 453.823075349339,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7558139534883721
+      },
+      {
+        "case_id": "2018-08-04T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 491.41917241558406,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2018-08-05T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 465.07487734831324,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7674418604651163
+      },
+      {
+        "case_id": "2018-08-05T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 495.1333675679381,
+        "lead_day": 2,
+        "percentile_vs_training": 0.813953488372093
+      },
+      {
+        "case_id": "2018-08-05T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 472.5489310860483,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7829457364341085
+      },
+      {
+        "case_id": "2018-08-06T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 478.28981636804406,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7906976744186046
+      },
+      {
+        "case_id": "2018-08-06T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 481.7257494210625,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7984496124031008
+      },
+      {
+        "case_id": "2018-08-06T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 408.594573696263,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6705426356589147
+      },
+      {
+        "case_id": "2018-08-07T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 560.6897281999276,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2018-08-07T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 476.1122547909821,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7906976744186046
+      },
+      {
+        "case_id": "2018-08-07T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 413.9497225698752,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6782945736434108
+      },
+      {
+        "case_id": "2018-08-08T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 492.3787144986752,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8062015503875969
+      },
+      {
+        "case_id": "2018-08-08T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 414.9531413387476,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6782945736434108
+      },
+      {
+        "case_id": "2018-08-08T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 462.16205009230015,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7596899224806202
+      },
+      {
+        "case_id": "2018-08-09T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 400.68473468382354,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6550387596899225
+      },
+      {
+        "case_id": "2018-08-09T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 449.9709449184244,
+        "lead_day": 2,
+        "percentile_vs_training": 0.748062015503876
+      },
+      {
+        "case_id": "2018-08-10T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 463.23879042780777,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7635658914728682
+      },
+      {
+        "case_id": "2018-08-10T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 586.1051313384729,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9186046511627907
+      },
+      {
+        "case_id": "2018-08-11T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 616.0294853792898,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2018-08-11T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 729.438617328083,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-08-11T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 697.9413002596569,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-08-12T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 727.2382377833426,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-08-12T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 683.2168964652892,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2018-08-13T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 693.31519947048,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-08-13T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 601.5947855281503,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9457364341085271
+      },
+      {
+        "case_id": "2018-08-14T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 638.9857020220273,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9612403100775194
+      },
+      {
+        "case_id": "2018-08-14T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 677.2478203057008,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2018-08-14T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 705.2081097889759,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2018-08-15T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 677.6610502779024,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2018-08-15T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 687.3908662747847,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9844961240310077
+      },
+      {
+        "case_id": "2018-08-16T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 770.0366247463938,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9961240310077519
+      },
+      {
+        "case_id": "2018-08-16T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 656.5492776092883,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2018-08-16T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 570.354234038232,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8875968992248062
+      },
+      {
+        "case_id": "2018-08-17T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 579.536273147447,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9031007751937985
+      },
+      {
+        "case_id": "2018-08-17T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 556.4020389628829,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2018-08-18T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 513.9991890730648,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8410852713178295
+      },
+      {
+        "case_id": "2018-08-18T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 424.5344425578035,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6976744186046512
+      },
+      {
+        "case_id": "2018-08-19T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 517.064153266486,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2018-08-19T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 568.4596893750584,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8837209302325582
+      },
+      {
+        "case_id": "2018-08-20T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 525.6629020747013,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2018-08-20T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 464.24781596146676,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7635658914728682
+      },
+      {
+        "case_id": "2018-08-21T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 488.8014799189464,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2018-08-21T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 397.05729813431304,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6472868217054264
+      },
+      {
+        "case_id": "2018-08-22T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 379.2595167992905,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6201550387596899
+      },
+      {
+        "case_id": "2018-08-22T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 415.73653034236725,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6821705426356589
+      },
+      {
+        "case_id": "2018-08-23T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 340.34198985578024,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5116279069767442
+      },
+      {
+        "case_id": "2018-08-23T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 411.26591786668456,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6744186046511628
+      },
+      {
+        "case_id": "2018-08-24T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 354.25186782755424,
+        "lead_day": 1,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2018-08-25T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 447.81621295096414,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7441860465116279
+      },
+      {
+        "case_id": "2018-08-26T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 462.5688097025774,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7635658914728682
+      },
+      {
+        "case_id": "2018-08-26T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 384.14351426016015,
+        "lead_day": 2,
+        "percentile_vs_training": 0.627906976744186
+      },
+      {
+        "case_id": "2018-08-27T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 374.6297061029954,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6085271317829457
+      },
+      {
+        "case_id": "2018-08-28T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 376.11774808078036,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6162790697674418
+      },
+      {
+        "case_id": "2018-08-28T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 343.2967435373085,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5232558139534884
+      },
+      {
+        "case_id": "2018-08-29T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 289.6081633986823,
+        "lead_day": 1,
+        "percentile_vs_training": 0.35271317829457366
+      },
+      {
+        "case_id": "2018-08-29T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 270.05970712895726,
+        "lead_day": 2,
+        "percentile_vs_training": 0.313953488372093
+      },
+      {
+        "case_id": "2018-08-29T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 342.0760768350061,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5232558139534884
+      },
+      {
+        "case_id": "2018-08-30T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 258.40574081746297,
+        "lead_day": 1,
+        "percentile_vs_training": 0.29069767441860467
+      },
+      {
+        "case_id": "2018-08-30T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 298.14302284567106,
+        "lead_day": 2,
+        "percentile_vs_training": 0.375968992248062
+      },
+      {
+        "case_id": "2018-08-30T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 304.8585676608839,
+        "lead_day": 3,
+        "percentile_vs_training": 0.3992248062015504
+      },
+      {
+        "case_id": "2018-08-31T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 293.34809738105827,
+        "lead_day": 1,
+        "percentile_vs_training": 0.3682170542635659
+      },
+      {
+        "case_id": "2018-08-31T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 302.08074750090907,
+        "lead_day": 2,
+        "percentile_vs_training": 0.3875968992248062
+      },
+      {
+        "case_id": "2018-09-01T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 271.27443074372127,
+        "lead_day": 1,
+        "percentile_vs_training": 0.313953488372093
+      },
+      {
+        "case_id": "2018-09-01T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 243.30875233851577,
+        "lead_day": 3,
+        "percentile_vs_training": 0.2596899224806202
+      },
+      {
+        "case_id": "2018-09-02T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 275.5829597180503,
+        "lead_day": 1,
+        "percentile_vs_training": 0.32170542635658916
+      },
+      {
+        "case_id": "2018-09-02T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 235.55301692182127,
+        "lead_day": 2,
+        "percentile_vs_training": 0.2558139534883721
+      },
+      {
+        "case_id": "2018-09-02T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 263.04602910823525,
+        "lead_day": 3,
+        "percentile_vs_training": 0.3062015503875969
+      },
+      {
+        "case_id": "2018-09-03T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 215.1969408528088,
+        "lead_day": 1,
+        "percentile_vs_training": 0.24031007751937986
+      },
+      {
+        "case_id": "2018-09-03T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 260.356633134003,
+        "lead_day": 2,
+        "percentile_vs_training": 0.29069767441860467
+      },
+      {
+        "case_id": "2018-09-03T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 268.26900677754463,
+        "lead_day": 3,
+        "percentile_vs_training": 0.31007751937984496
+      },
+      {
+        "case_id": "2018-09-04T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 237.50299766923513,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2558139534883721
+      },
+      {
+        "case_id": "2018-09-04T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 292.9029452296772,
+        "lead_day": 3,
+        "percentile_vs_training": 0.36046511627906974
+      },
+      {
+        "case_id": "2018-09-05T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 242.55260913540042,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2596899224806202
+      },
+      {
+        "case_id": "2018-09-05T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 277.534844591639,
+        "lead_day": 2,
+        "percentile_vs_training": 0.32558139534883723
+      },
+      {
+        "case_id": "2018-09-06T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 287.89179192423643,
+        "lead_day": 1,
+        "percentile_vs_training": 0.3488372093023256
+      },
+      {
+        "case_id": "2018-09-06T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 244.5854595355738,
+        "lead_day": 2,
+        "percentile_vs_training": 0.2596899224806202
+      },
+      {
+        "case_id": "2018-09-06T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 157.59870244943374,
+        "lead_day": 3,
+        "percentile_vs_training": 0.1744186046511628
+      },
+      {
+        "case_id": "2018-09-07T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 208.06404129421412,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2248062015503876
+      },
+      {
+        "case_id": "2018-09-08T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 116.56020247139091,
+        "lead_day": 1,
+        "percentile_vs_training": 0.14728682170542637
+      },
+      {
+        "case_id": "2018-09-08T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 50.98472046103899,
+        "lead_day": 3,
+        "percentile_vs_training": 0.07751937984496124
+      },
+      {
+        "case_id": "2018-09-09T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 56.88483241854886,
+        "lead_day": 1,
+        "percentile_vs_training": 0.08914728682170543
+      },
+      {
+        "case_id": "2018-09-09T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 41.669466662877966,
+        "lead_day": 2,
+        "percentile_vs_training": 0.06589147286821706
+      },
+      {
+        "case_id": "2018-09-10T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 39.505012637368445,
+        "lead_day": 1,
+        "percentile_vs_training": 0.06201550387596899
+      },
+      {
+        "case_id": "2018-09-10T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 107.8090808898077,
+        "lead_day": 3,
+        "percentile_vs_training": 0.1434108527131783
+      },
+      {
+        "case_id": "2018-09-11T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 81.54748043172407,
+        "lead_day": 1,
+        "percentile_vs_training": 0.12790697674418605
+      },
+      {
+        "case_id": "2018-09-11T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 101.95890126466043,
+        "lead_day": 3,
+        "percentile_vs_training": 0.13565891472868216
+      },
+      {
+        "case_id": "2018-09-12T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 90.35389179446733,
+        "lead_day": 1,
+        "percentile_vs_training": 0.13178294573643412
+      },
+      {
+        "case_id": "2018-09-12T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 96.46453528896058,
+        "lead_day": 3,
+        "percentile_vs_training": 0.13565891472868216
+      },
+      {
+        "case_id": "2018-09-13T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 54.23271045807294,
+        "lead_day": 1,
+        "percentile_vs_training": 0.08527131782945736
+      },
+      {
+        "case_id": "2018-09-13T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 89.92483610213154,
+        "lead_day": 2,
+        "percentile_vs_training": 0.13178294573643412
+      },
+      {
+        "case_id": "2018-09-13T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 93.38122528451133,
+        "lead_day": 3,
+        "percentile_vs_training": 0.13178294573643412
+      },
+      {
+        "case_id": "2018-09-14T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 72.52623387224618,
+        "lead_day": 1,
+        "percentile_vs_training": 0.11627906976744186
+      },
+      {
+        "case_id": "2018-09-14T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 125.34131131534116,
+        "lead_day": 2,
+        "percentile_vs_training": 0.15891472868217055
+      },
+      {
+        "case_id": "2018-09-15T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 82.8437850184002,
+        "lead_day": 1,
+        "percentile_vs_training": 0.12790697674418605
+      },
+      {
+        "case_id": "2018-09-16T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 120.89771621331187,
+        "lead_day": 1,
+        "percentile_vs_training": 0.15503875968992248
+      },
+      {
+        "case_id": "2018-09-17T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 124.91052307229468,
+        "lead_day": 1,
+        "percentile_vs_training": 0.15891472868217055
+      },
+      {
+        "case_id": "2018-09-17T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 145.85003131610532,
+        "lead_day": 2,
+        "percentile_vs_training": 0.16666666666666666
+      },
+      {
+        "case_id": "2018-09-18T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 120.60292996890772,
+        "lead_day": 1,
+        "percentile_vs_training": 0.15503875968992248
+      },
+      {
+        "case_id": "2018-09-19T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 57.94804800369241,
+        "lead_day": 1,
+        "percentile_vs_training": 0.09302325581395349
+      },
+      {
+        "case_id": "2018-09-19T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 121.44797755260397,
+        "lead_day": 2,
+        "percentile_vs_training": 0.15503875968992248
+      },
+      {
+        "case_id": "2018-09-20T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 103.66925340389861,
+        "lead_day": 1,
+        "percentile_vs_training": 0.13953488372093023
+      },
+      {
+        "case_id": "2018-09-21T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 242.09446642787069,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2596899224806202
+      },
+      {
+        "case_id": "2018-09-22T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 94.53355895187521,
+        "lead_day": 1,
+        "percentile_vs_training": 0.13178294573643412
+      },
+      {
+        "case_id": "2018-09-22T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 83.96886510987929,
+        "lead_day": 2,
+        "percentile_vs_training": 0.12790697674418605
+      },
+      {
+        "case_id": "2018-09-23T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 25.38639205366108,
+        "lead_day": 1,
+        "percentile_vs_training": 0.046511627906976744
+      },
+      {
+        "case_id": "2018-09-23T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 6.345652287809786,
+        "lead_day": 3,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "2018-09-24T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 2.803443712780099,
+        "lead_day": 1,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "2018-09-24T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 4.5228049073667185,
+        "lead_day": 2,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "2018-09-25T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 4.718595399835424,
+        "lead_day": 1,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "2018-09-25T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 5.042342530322046,
+        "lead_day": 2,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "2018-09-26T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 2.069559997669177,
+        "lead_day": 1,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "2018-09-27T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 13.36987025450342,
+        "lead_day": 1,
+        "percentile_vs_training": 0.015503875968992248
+      },
+      {
+        "case_id": "2018-09-27T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 13.246146568313861,
+        "lead_day": 2,
+        "percentile_vs_training": 0.015503875968992248
+      },
+      {
+        "case_id": "2018-09-27T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 8.232776172813134,
+        "lead_day": 3,
+        "percentile_vs_training": 0.003875968992248062
+      },
+      {
+        "case_id": "2018-09-28T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 14.482861145858276,
+        "lead_day": 1,
+        "percentile_vs_training": 0.015503875968992248
+      },
+      {
+        "case_id": "2018-09-28T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 7.452759267486851,
+        "lead_day": 3,
+        "percentile_vs_training": 0.003875968992248062
+      },
+      {
+        "case_id": "2018-09-29T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 8.951436295808712,
+        "lead_day": 1,
+        "percentile_vs_training": 0.003875968992248062
+      },
+      {
+        "case_id": "2018-09-29T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 6.752879437846751,
+        "lead_day": 2,
+        "percentile_vs_training": 0.003875968992248062
+      },
+      {
+        "case_id": "2018-09-30T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 8.651447159554172,
+        "lead_day": 1,
+        "percentile_vs_training": 0.003875968992248062
+      },
+      {
+        "case_id": "2018-09-30T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 6.465630238238136,
+        "lead_day": 3,
+        "percentile_vs_training": 0.0
+      }
+    ],
+    "A2019": [
+      {
+        "case_id": "2019-06-01T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 133.95734347006032,
+        "lead_day": 1,
+        "percentile_vs_training": 0.16279069767441862
+      },
+      {
+        "case_id": "2019-06-02T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 192.58684374540633,
+        "lead_day": 1,
+        "percentile_vs_training": 0.20155038759689922
+      },
+      {
+        "case_id": "2019-06-03T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 57.97754813199054,
+        "lead_day": 1,
+        "percentile_vs_training": 0.09302325581395349
+      },
+      {
+        "case_id": "2019-06-04T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 75.31048216305537,
+        "lead_day": 1,
+        "percentile_vs_training": 0.12790697674418605
+      },
+      {
+        "case_id": "2019-06-05T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 152.09271408002988,
+        "lead_day": 1,
+        "percentile_vs_training": 0.16666666666666666
+      },
+      {
+        "case_id": "2019-06-05T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 59.95214472987155,
+        "lead_day": 2,
+        "percentile_vs_training": 0.09302325581395349
+      },
+      {
+        "case_id": "2019-06-05T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 226.59766899083468,
+        "lead_day": 3,
+        "percentile_vs_training": 0.24806201550387597
+      },
+      {
+        "case_id": "2019-06-06T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 158.57109556209417,
+        "lead_day": 1,
+        "percentile_vs_training": 0.1744186046511628
+      },
+      {
+        "case_id": "2019-06-06T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 174.78605866200846,
+        "lead_day": 2,
+        "percentile_vs_training": 0.18992248062015504
+      },
+      {
+        "case_id": "2019-06-06T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 252.84554191070453,
+        "lead_day": 3,
+        "percentile_vs_training": 0.28294573643410853
+      },
+      {
+        "case_id": "2019-06-07T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 127.5355209268242,
+        "lead_day": 1,
+        "percentile_vs_training": 0.15891472868217055
+      },
+      {
+        "case_id": "2019-06-07T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 214.14940041481765,
+        "lead_day": 3,
+        "percentile_vs_training": 0.2364341085271318
+      },
+      {
+        "case_id": "2019-06-08T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 231.89339769796322,
+        "lead_day": 1,
+        "percentile_vs_training": 0.24806201550387597
+      },
+      {
+        "case_id": "2019-06-09T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 247.80903246963655,
+        "lead_day": 1,
+        "percentile_vs_training": 0.26744186046511625
+      },
+      {
+        "case_id": "2019-06-09T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 402.7166254883042,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6589147286821705
+      },
+      {
+        "case_id": "2019-06-09T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 531.1496445199983,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8604651162790697
+      },
+      {
+        "case_id": "2019-06-10T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 440.49267201349437,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7209302325581395
+      },
+      {
+        "case_id": "2019-06-10T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 578.4830033657347,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9031007751937985
+      },
+      {
+        "case_id": "2019-06-10T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 502.8111941766119,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2019-06-11T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 554.3979948947634,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2019-06-11T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 578.3295631767644,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9031007751937985
+      },
+      {
+        "case_id": "2019-06-11T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 463.39760019474534,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7635658914728682
+      },
+      {
+        "case_id": "2019-06-12T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 543.2257982452851,
+        "lead_day": 1,
+        "percentile_vs_training": 0.875968992248062
+      },
+      {
+        "case_id": "2019-06-12T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 548.2858841486675,
+        "lead_day": 2,
+        "percentile_vs_training": 0.875968992248062
+      },
+      {
+        "case_id": "2019-06-13T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 570.3384280131831,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8875968992248062
+      },
+      {
+        "case_id": "2019-06-13T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 465.7189121292762,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7713178294573644
+      },
+      {
+        "case_id": "2019-06-13T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 509.2410883606874,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8255813953488372
+      },
+      {
+        "case_id": "2019-06-14T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 456.73012770727075,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7558139534883721
+      },
+      {
+        "case_id": "2019-06-14T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 485.3505601141274,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2019-06-15T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 411.23537547240124,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6744186046511628
+      },
+      {
+        "case_id": "2019-06-15T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 404.31237646540126,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6627906976744186
+      },
+      {
+        "case_id": "2019-06-16T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 387.9704022498519,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6317829457364341
+      },
+      {
+        "case_id": "2019-06-16T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 489.9677609584117,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2019-06-17T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 406.58975417787997,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6627906976744186
+      },
+      {
+        "case_id": "2019-06-17T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 518.7264932792575,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2019-06-18T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 434.0259401011748,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7131782945736435
+      },
+      {
+        "case_id": "2019-06-18T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 356.7597185977204,
+        "lead_day": 3,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2019-06-19T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 390.71533018134386,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6356589147286822
+      },
+      {
+        "case_id": "2019-06-19T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 364.3341621382255,
+        "lead_day": 2,
+        "percentile_vs_training": 0.5697674418604651
+      },
+      {
+        "case_id": "2019-06-19T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 422.9530324581448,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6937984496124031
+      },
+      {
+        "case_id": "2019-06-20T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 393.3724009729014,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6395348837209303
+      },
+      {
+        "case_id": "2019-06-20T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 399.9832871989899,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6550387596899225
+      },
+      {
+        "case_id": "2019-06-21T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 366.1570747339966,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5775193798449613
+      },
+      {
+        "case_id": "2019-06-21T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 375.0260701902663,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6085271317829457
+      },
+      {
+        "case_id": "2019-06-21T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 402.0684172338433,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6589147286821705
+      },
+      {
+        "case_id": "2019-06-22T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 357.360123873036,
+        "lead_day": 1,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2019-06-23T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 292.8686174007724,
+        "lead_day": 1,
+        "percentile_vs_training": 0.36046511627906974
+      },
+      {
+        "case_id": "2019-06-23T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 374.3762654539995,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6085271317829457
+      },
+      {
+        "case_id": "2019-06-24T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 259.8082684698108,
+        "lead_day": 1,
+        "percentile_vs_training": 0.29069767441860467
+      },
+      {
+        "case_id": "2019-06-24T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 433.9955668194476,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7131782945736435
+      },
+      {
+        "case_id": "2019-06-25T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 366.570397980515,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5775193798449613
+      },
+      {
+        "case_id": "2019-06-26T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 406.5683154803264,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6627906976744186
+      },
+      {
+        "case_id": "2019-06-27T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 502.65838323723597,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2019-06-27T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 567.4971966125995,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8837209302325582
+      },
+      {
+        "case_id": "2019-06-27T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 564.2983429747467,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8837209302325582
+      },
+      {
+        "case_id": "2019-06-28T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 575.5593688909601,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8953488372093024
+      },
+      {
+        "case_id": "2019-06-28T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 616.2117719258357,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-06-29T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 600.4580595132152,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9457364341085271
+      },
+      {
+        "case_id": "2019-06-29T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 465.76410248642134,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7713178294573644
+      },
+      {
+        "case_id": "2019-06-30T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 434.20219195435607,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7131782945736435
+      },
+      {
+        "case_id": "2019-06-30T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 506.6702424860866,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2019-06-30T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 591.5291167536916,
+        "lead_day": 3,
+        "percentile_vs_training": 0.937984496124031
+      },
+      {
+        "case_id": "2019-07-01T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 490.63019048570965,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2019-07-01T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 550.3662117635724,
+        "lead_day": 2,
+        "percentile_vs_training": 0.875968992248062
+      },
+      {
+        "case_id": "2019-07-02T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 527.1602612849362,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8565891472868217
+      },
+      {
+        "case_id": "2019-07-02T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 603.9440934248013,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9457364341085271
+      },
+      {
+        "case_id": "2019-07-02T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 616.9557613882691,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-07-03T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 593.2947013853068,
+        "lead_day": 1,
+        "percentile_vs_training": 0.937984496124031
+      },
+      {
+        "case_id": "2019-07-03T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 616.59144102043,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-07-04T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 598.4634102886071,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9418604651162791
+      },
+      {
+        "case_id": "2019-07-04T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 683.8892329046848,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2019-07-05T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 663.4687027724084,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-07-05T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 717.1613720075362,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-07-05T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 649.0538661221963,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-07-06T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 711.9033858990234,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-07-06T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 683.0433055789795,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2019-07-07T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 637.9566145003098,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9612403100775194
+      },
+      {
+        "case_id": "2019-07-07T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 652.8824638970714,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-07-07T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 694.4628284588676,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-07-08T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 625.8569435877927,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-07-08T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 661.8636835562019,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-07-08T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 575.8292153809199,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8953488372093024
+      },
+      {
+        "case_id": "2019-07-09T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 637.2565830808662,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9573643410852714
+      },
+      {
+        "case_id": "2019-07-09T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 591.112026610486,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9341085271317829
+      },
+      {
+        "case_id": "2019-07-10T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 622.9311841187896,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-07-11T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 468.8991301528138,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7790697674418605
+      },
+      {
+        "case_id": "2019-07-11T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 454.90545168305744,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7558139534883721
+      },
+      {
+        "case_id": "2019-07-12T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 421.417531786197,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6937984496124031
+      },
+      {
+        "case_id": "2019-07-13T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 433.77009528042714,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7131782945736435
+      },
+      {
+        "case_id": "2019-07-14T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 468.50189611889806,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7790697674418605
+      },
+      {
+        "case_id": "2019-07-14T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 476.430705968743,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7906976744186046
+      },
+      {
+        "case_id": "2019-07-14T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 400.6200397610583,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6550387596899225
+      },
+      {
+        "case_id": "2019-07-15T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 398.7968403650445,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6550387596899225
+      },
+      {
+        "case_id": "2019-07-15T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 352.79726477143464,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5581395348837209
+      },
+      {
+        "case_id": "2019-07-16T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 343.2321493794038,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5232558139534884
+      },
+      {
+        "case_id": "2019-07-16T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 339.82019773616196,
+        "lead_day": 2,
+        "percentile_vs_training": 0.5077519379844961
+      },
+      {
+        "case_id": "2019-07-16T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 300.66637768746523,
+        "lead_day": 3,
+        "percentile_vs_training": 0.38372093023255816
+      },
+      {
+        "case_id": "2019-07-17T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 346.78984614810605,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5387596899224806
+      },
+      {
+        "case_id": "2019-07-17T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 253.42990119429967,
+        "lead_day": 2,
+        "percentile_vs_training": 0.28294573643410853
+      },
+      {
+        "case_id": "2019-07-17T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 315.5364928429852,
+        "lead_day": 3,
+        "percentile_vs_training": 0.4263565891472868
+      },
+      {
+        "case_id": "2019-07-18T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 219.32322496009985,
+        "lead_day": 1,
+        "percentile_vs_training": 0.24031007751937986
+      },
+      {
+        "case_id": "2019-07-19T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 335.77646651237006,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5038759689922481
+      },
+      {
+        "case_id": "2019-07-20T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 388.6601171991176,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6317829457364341
+      },
+      {
+        "case_id": "2019-07-21T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 416.97119914507425,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6821705426356589
+      },
+      {
+        "case_id": "2019-07-22T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 412.98246169974476,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6744186046511628
+      },
+      {
+        "case_id": "2019-07-22T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 391.55456856552973,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6395348837209303
+      },
+      {
+        "case_id": "2019-07-23T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 519.5079313241606,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2019-07-23T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 481.6526882811583,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7984496124031008
+      },
+      {
+        "case_id": "2019-07-23T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 503.56308127011863,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2019-07-24T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 403.9483330370644,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6627906976744186
+      },
+      {
+        "case_id": "2019-07-24T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 493.76698913892284,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8062015503875969
+      },
+      {
+        "case_id": "2019-07-25T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 467.88860355550383,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7751937984496124
+      },
+      {
+        "case_id": "2019-07-25T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 649.8702909978066,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-07-26T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 561.9510691329849,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2019-07-27T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 557.5926128231953,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2019-07-27T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 570.3678834482743,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8875968992248062
+      },
+      {
+        "case_id": "2019-07-28T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 622.9468736691903,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-07-29T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 630.9816438070745,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9573643410852714
+      },
+      {
+        "case_id": "2019-07-29T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 593.6135293372286,
+        "lead_day": 2,
+        "percentile_vs_training": 0.937984496124031
+      },
+      {
+        "case_id": "2019-07-30T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 553.9489325860094,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2019-07-30T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 592.1548814701546,
+        "lead_day": 2,
+        "percentile_vs_training": 0.937984496124031
+      },
+      {
+        "case_id": "2019-07-30T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 609.2883994776228,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9457364341085271
+      },
+      {
+        "case_id": "2019-07-31T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 510.70991752032944,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8333333333333334
+      },
+      {
+        "case_id": "2019-07-31T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 570.1694175814416,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8875968992248062
+      },
+      {
+        "case_id": "2019-07-31T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 654.1793262287007,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-08-01T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 626.9980124693235,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-08-01T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 677.7839071868675,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2019-08-01T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 730.3543050404145,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-08-02T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 745.6803565727354,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2019-08-02T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 824.323453479434,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-02T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 805.2829094610604,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-03T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 822.4402517143521,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-03T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 811.0000865493081,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-03T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 800.0205239873833,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-04T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 809.7828255001214,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-04T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 816.0236836672769,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-04T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 812.0009003061177,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-05T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 782.3492417176835,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-05T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 874.0979393121391,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-05T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 902.0647506282286,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-06T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 867.132897357882,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-06T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 967.1853865191523,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-07T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 928.7724031035511,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-07T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 925.763001758468,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-07T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 786.8862513138981,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-08T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 861.1112684576069,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-08T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 795.4553329119468,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-09T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 798.8802512670236,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "2019-08-09T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 576.7395849469237,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9031007751937985
+      },
+      {
+        "case_id": "2019-08-09T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 522.8099721754745,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2019-08-10T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 638.6261104331707,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9612403100775194
+      },
+      {
+        "case_id": "2019-08-10T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 513.1507231341595,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8372093023255814
+      },
+      {
+        "case_id": "2019-08-11T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 478.651950864508,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7945736434108527
+      },
+      {
+        "case_id": "2019-08-12T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 485.53441143459503,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8023255813953488
+      },
+      {
+        "case_id": "2019-08-12T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 560.0909853705783,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2019-08-13T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 560.3320069049026,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2019-08-13T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 604.3051650244337,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9457364341085271
+      },
+      {
+        "case_id": "2019-08-13T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 508.20445389641515,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2019-08-14T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 535.6795513978861,
+        "lead_day": 1,
+        "percentile_vs_training": 0.872093023255814
+      },
+      {
+        "case_id": "2019-08-14T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 438.5340364050453,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7170542635658915
+      },
+      {
+        "case_id": "2019-08-15T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 387.81100841354396,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6317829457364341
+      },
+      {
+        "case_id": "2019-08-16T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 372.2444643052972,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6007751937984496
+      },
+      {
+        "case_id": "2019-08-17T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 310.5142285425456,
+        "lead_day": 1,
+        "percentile_vs_training": 0.4069767441860465
+      },
+      {
+        "case_id": "2019-08-18T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 176.82212982813587,
+        "lead_day": 1,
+        "percentile_vs_training": 0.1937984496124031
+      },
+      {
+        "case_id": "2019-08-19T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 197.22843398519194,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2131782945736434
+      },
+      {
+        "case_id": "2019-08-20T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 261.7258296097444,
+        "lead_day": 1,
+        "percentile_vs_training": 0.3023255813953488
+      },
+      {
+        "case_id": "2019-08-20T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 393.37829493774177,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6395348837209303
+      },
+      {
+        "case_id": "2019-08-21T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 256.31730581487244,
+        "lead_day": 1,
+        "percentile_vs_training": 0.29069767441860467
+      },
+      {
+        "case_id": "2019-08-21T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 389.3439245617153,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6317829457364341
+      },
+      {
+        "case_id": "2019-08-22T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 286.1611562960893,
+        "lead_day": 1,
+        "percentile_vs_training": 0.34108527131782945
+      },
+      {
+        "case_id": "2019-08-22T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 353.30992283587915,
+        "lead_day": 2,
+        "percentile_vs_training": 0.5581395348837209
+      },
+      {
+        "case_id": "2019-08-22T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 429.1874188248434,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7054263565891473
+      },
+      {
+        "case_id": "2019-08-23T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 348.6575005835733,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5387596899224806
+      },
+      {
+        "case_id": "2019-08-23T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 385.46820907223014,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6317829457364341
+      },
+      {
+        "case_id": "2019-08-24T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 316.0562654467177,
+        "lead_day": 1,
+        "percentile_vs_training": 0.4263565891472868
+      },
+      {
+        "case_id": "2019-08-24T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 450.7716714706151,
+        "lead_day": 3,
+        "percentile_vs_training": 0.748062015503876
+      },
+      {
+        "case_id": "2019-08-25T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 371.6579195306361,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5968992248062015
+      },
+      {
+        "case_id": "2019-08-26T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 428.76801470905195,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7054263565891473
+      },
+      {
+        "case_id": "2019-08-26T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 460.89405016204614,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7596899224806202
+      },
+      {
+        "case_id": "2019-08-27T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 435.7101388297589,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7131782945736435
+      },
+      {
+        "case_id": "2019-08-27T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 453.07123823261793,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7558139534883721
+      },
+      {
+        "case_id": "2019-08-27T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 502.48984024492785,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2019-08-28T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 421.4122658706257,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6937984496124031
+      },
+      {
+        "case_id": "2019-08-28T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 474.03103814854126,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7829457364341085
+      },
+      {
+        "case_id": "2019-08-29T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 419.27322920531367,
+        "lead_day": 1,
+        "percentile_vs_training": 0.686046511627907
+      },
+      {
+        "case_id": "2019-08-29T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 464.15711165533037,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7635658914728682
+      },
+      {
+        "case_id": "2019-08-29T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 439.4086242853495,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7170542635658915
+      },
+      {
+        "case_id": "2019-08-30T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 474.75635484540135,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7868217054263565
+      },
+      {
+        "case_id": "2019-08-31T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 522.28594616425,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8449612403100775
+      },
+      {
+        "case_id": "2019-08-31T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 551.611858871068,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8798449612403101
+      },
+      {
+        "case_id": "2019-09-01T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 501.6690153656034,
+        "lead_day": 1,
+        "percentile_vs_training": 0.8217054263565892
+      },
+      {
+        "case_id": "2019-09-01T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 535.1914142651246,
+        "lead_day": 2,
+        "percentile_vs_training": 0.8682170542635659
+      },
+      {
+        "case_id": "2019-09-02T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 539.4003462176488,
+        "lead_day": 1,
+        "percentile_vs_training": 0.875968992248062
+      },
+      {
+        "case_id": "2019-09-02T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 614.5121187634426,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-09-02T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 594.4152968033069,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9418604651162791
+      },
+      {
+        "case_id": "2019-09-03T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 615.8792406648286,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9534883720930233
+      },
+      {
+        "case_id": "2019-09-03T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 613.2748822955057,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9496124031007752
+      },
+      {
+        "case_id": "2019-09-03T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 653.9229165332524,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-09-04T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 667.0824902984667,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9728682170542635
+      },
+      {
+        "case_id": "2019-09-04T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 717.795189841131,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-09-04T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 692.6401901503145,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9844961240310077
+      },
+      {
+        "case_id": "2019-09-05T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 709.8170888560986,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-09-05T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 744.6153171072956,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2019-09-05T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 677.5246893788924,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9806201550387597
+      },
+      {
+        "case_id": "2019-09-06T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 710.4249520850695,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-09-06T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 703.4390288794277,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9883720930232558
+      },
+      {
+        "case_id": "2019-09-06T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 585.4117599345248,
+        "lead_day": 3,
+        "percentile_vs_training": 0.9186046511627907
+      },
+      {
+        "case_id": "2019-09-07T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 754.147669997185,
+        "lead_day": 1,
+        "percentile_vs_training": 0.9922480620155039
+      },
+      {
+        "case_id": "2019-09-07T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 645.194997366631,
+        "lead_day": 2,
+        "percentile_vs_training": 0.9689922480620154
+      },
+      {
+        "case_id": "2019-09-08T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 592.7983350019035,
+        "lead_day": 1,
+        "percentile_vs_training": 0.937984496124031
+      },
+      {
+        "case_id": "2019-09-08T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 409.13326562845185,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6744186046511628
+      },
+      {
+        "case_id": "2019-09-09T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 420.73099553196334,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6937984496124031
+      },
+      {
+        "case_id": "2019-09-09T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 346.7781812021113,
+        "lead_day": 2,
+        "percentile_vs_training": 0.5387596899224806
+      },
+      {
+        "case_id": "2019-09-09T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 417.8065123390679,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6821705426356589
+      },
+      {
+        "case_id": "2019-09-10T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 356.3693270561205,
+        "lead_day": 1,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2019-09-10T00:00:00Z|day3_24h",
+        "class": "STRONG",
+        "index": 421.3909652747615,
+        "lead_day": 3,
+        "percentile_vs_training": 0.6937984496124031
+      },
+      {
+        "case_id": "2019-09-11T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 395.18053199916835,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6434108527131783
+      },
+      {
+        "case_id": "2019-09-11T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 418.7466697122876,
+        "lead_day": 2,
+        "percentile_vs_training": 0.686046511627907
+      },
+      {
+        "case_id": "2019-09-11T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 340.14645178297604,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5116279069767442
+      },
+      {
+        "case_id": "2019-09-12T00:00:00Z|day1_24h",
+        "class": "STRONG",
+        "index": 416.03149251082993,
+        "lead_day": 1,
+        "percentile_vs_training": 0.6821705426356589
+      },
+      {
+        "case_id": "2019-09-13T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 324.6305675457375,
+        "lead_day": 1,
+        "percentile_vs_training": 0.4806201550387597
+      },
+      {
+        "case_id": "2019-09-13T00:00:00Z|day2_24h",
+        "class": "MODERATE",
+        "index": 301.64766579389084,
+        "lead_day": 2,
+        "percentile_vs_training": 0.3875968992248062
+      },
+      {
+        "case_id": "2019-09-13T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 313.78387630199046,
+        "lead_day": 3,
+        "percentile_vs_training": 0.42248062015503873
+      },
+      {
+        "case_id": "2019-09-14T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 285.78376695990863,
+        "lead_day": 1,
+        "percentile_vs_training": 0.34108527131782945
+      },
+      {
+        "case_id": "2019-09-14T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 279.8893313970177,
+        "lead_day": 2,
+        "percentile_vs_training": 0.32945736434108525
+      },
+      {
+        "case_id": "2019-09-14T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 291.61553945245,
+        "lead_day": 3,
+        "percentile_vs_training": 0.35658914728682173
+      },
+      {
+        "case_id": "2019-09-15T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 250.94263457817266,
+        "lead_day": 1,
+        "percentile_vs_training": 0.27906976744186046
+      },
+      {
+        "case_id": "2019-09-15T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 259.19731190727714,
+        "lead_day": 2,
+        "percentile_vs_training": 0.29069767441860467
+      },
+      {
+        "case_id": "2019-09-16T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 238.78773056823204,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2558139534883721
+      },
+      {
+        "case_id": "2019-09-16T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 183.15512884855522,
+        "lead_day": 2,
+        "percentile_vs_training": 0.1937984496124031
+      },
+      {
+        "case_id": "2019-09-16T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 207.22302409016612,
+        "lead_day": 3,
+        "percentile_vs_training": 0.2248062015503876
+      },
+      {
+        "case_id": "2019-09-17T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 178.46178529574388,
+        "lead_day": 1,
+        "percentile_vs_training": 0.1937984496124031
+      },
+      {
+        "case_id": "2019-09-17T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 244.25587292209886,
+        "lead_day": 2,
+        "percentile_vs_training": 0.2596899224806202
+      },
+      {
+        "case_id": "2019-09-17T00:00:00Z|day3_24h",
+        "class": "MODERATE",
+        "index": 358.4736339699744,
+        "lead_day": 3,
+        "percentile_vs_training": 0.562015503875969
+      },
+      {
+        "case_id": "2019-09-18T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 270.59571187614137,
+        "lead_day": 1,
+        "percentile_vs_training": 0.313953488372093
+      },
+      {
+        "case_id": "2019-09-18T00:00:00Z|day2_24h",
+        "class": "STRONG",
+        "index": 425.7096792453482,
+        "lead_day": 2,
+        "percentile_vs_training": 0.6976744186046512
+      },
+      {
+        "case_id": "2019-09-19T00:00:00Z|day1_24h",
+        "class": "MODERATE",
+        "index": 361.2788431930887,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5658914728682171
+      },
+      {
+        "case_id": "2019-09-20T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 278.00926547516804,
+        "lead_day": 1,
+        "percentile_vs_training": 0.32558139534883723
+      },
+      {
+        "case_id": "2019-09-21T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 193.17795043463693,
+        "lead_day": 1,
+        "percentile_vs_training": 0.20155038759689922
+      },
+      {
+        "case_id": "2019-09-21T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 190.73526368915637,
+        "lead_day": 2,
+        "percentile_vs_training": 0.20155038759689922
+      },
+      {
+        "case_id": "2019-09-22T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 155.19768317125252,
+        "lead_day": 1,
+        "percentile_vs_training": 0.1744186046511628
+      },
+      {
+        "case_id": "2019-09-23T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 59.31206832018368,
+        "lead_day": 1,
+        "percentile_vs_training": 0.09302325581395349
+      },
+      {
+        "case_id": "2019-09-23T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 107.7370411611394,
+        "lead_day": 2,
+        "percentile_vs_training": 0.1434108527131783
+      },
+      {
+        "case_id": "2019-09-23T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 110.98670711191724,
+        "lead_day": 3,
+        "percentile_vs_training": 0.1434108527131783
+      },
+      {
+        "case_id": "2019-09-24T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 30.54582994657618,
+        "lead_day": 1,
+        "percentile_vs_training": 0.050387596899224806
+      },
+      {
+        "case_id": "2019-09-25T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 83.50803650264518,
+        "lead_day": 1,
+        "percentile_vs_training": 0.12790697674418605
+      },
+      {
+        "case_id": "2019-09-25T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 176.5772247437294,
+        "lead_day": 3,
+        "percentile_vs_training": 0.1937984496124031
+      },
+      {
+        "case_id": "2019-09-26T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 219.69339819753137,
+        "lead_day": 1,
+        "percentile_vs_training": 0.24031007751937986
+      },
+      {
+        "case_id": "2019-09-27T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 174.92437673108708,
+        "lead_day": 1,
+        "percentile_vs_training": 0.18992248062015504
+      },
+      {
+        "case_id": "2019-09-27T00:00:00Z|day2_24h",
+        "class": "WEAK",
+        "index": 96.35676407790476,
+        "lead_day": 2,
+        "percentile_vs_training": 0.13565891472868216
+      },
+      {
+        "case_id": "2019-09-27T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 105.1215278523406,
+        "lead_day": 3,
+        "percentile_vs_training": 0.13953488372093023
+      },
+      {
+        "case_id": "2019-09-28T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 124.09120538705396,
+        "lead_day": 1,
+        "percentile_vs_training": 0.15891472868217055
+      },
+      {
+        "case_id": "2019-09-28T00:00:00Z|day3_24h",
+        "class": "WEAK",
+        "index": 140.91437992349043,
+        "lead_day": 3,
+        "percentile_vs_training": 0.16666666666666666
+      },
+      {
+        "case_id": "2019-09-29T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 104.69766787543574,
+        "lead_day": 1,
+        "percentile_vs_training": 0.13953488372093023
+      },
+      {
+        "case_id": "2019-09-30T00:00:00Z|day1_24h",
+        "class": "WEAK",
+        "index": 159.9525084276911,
+        "lead_day": 1,
+        "percentile_vs_training": 0.1744186046511628
+      }
+    ],
+    "B2024": [
+      {
+        "case_id": "20240601_day2_24h",
+        "class": "WEAK",
+        "index": 140.01636205789669,
+        "lead_day": 2,
+        "percentile_vs_training": 0.08
+      },
+      {
+        "case_id": "20240601_day3_24h",
+        "class": "WEAK",
+        "index": 239.38894098174032,
+        "lead_day": 3,
+        "percentile_vs_training": 0.31
+      },
+      {
+        "case_id": "20240602_day2_24h",
+        "class": "WEAK",
+        "index": 185.38394893418823,
+        "lead_day": 2,
+        "percentile_vs_training": 0.165
+      },
+      {
+        "case_id": "20240603_day1_24h",
+        "class": "WEAK",
+        "index": 221.58931550593095,
+        "lead_day": 1,
+        "percentile_vs_training": 0.29
+      },
+      {
+        "case_id": "20240604_day1_24h",
+        "class": "WEAK",
+        "index": 202.06561029331945,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2
+      },
+      {
+        "case_id": "20240604_day3_24h",
+        "class": "WEAK",
+        "index": 157.75281638715842,
+        "lead_day": 3,
+        "percentile_vs_training": 0.11
+      },
+      {
+        "case_id": "20240605_day2_24h",
+        "class": "WEAK",
+        "index": 157.4021411532979,
+        "lead_day": 2,
+        "percentile_vs_training": 0.11
+      },
+      {
+        "case_id": "20240606_day1_24h",
+        "class": "WEAK",
+        "index": 164.93217757373125,
+        "lead_day": 1,
+        "percentile_vs_training": 0.125
+      },
+      {
+        "case_id": "20240608_day1_24h",
+        "class": "STRONG",
+        "index": 403.7775952556757,
+        "lead_day": 1,
+        "percentile_vs_training": 0.68
+      },
+      {
+        "case_id": "20240609_day1_24h",
+        "class": "MODERATE",
+        "index": 355.26848116716616,
+        "lead_day": 1,
+        "percentile_vs_training": 0.565
+      },
+      {
+        "case_id": "20240613_day1_24h",
+        "class": "MODERATE",
+        "index": 337.188797222254,
+        "lead_day": 1,
+        "percentile_vs_training": 0.525
+      },
+      {
+        "case_id": "20240613_day3_24h",
+        "class": "MODERATE",
+        "index": 310.3713736526506,
+        "lead_day": 3,
+        "percentile_vs_training": 0.485
+      },
+      {
+        "case_id": "20240614_day3_24h",
+        "class": "MODERATE",
+        "index": 254.29079374591777,
+        "lead_day": 3,
+        "percentile_vs_training": 0.365
+      },
+      {
+        "case_id": "20240615_day1_24h",
+        "class": "MODERATE",
+        "index": 290.5662600582564,
+        "lead_day": 1,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20240617_day1_24h",
+        "class": "MODERATE",
+        "index": 266.83908342494215,
+        "lead_day": 1,
+        "percentile_vs_training": 0.39
+      },
+      {
+        "case_id": "20240618_day2_24h",
+        "class": "STRONG",
+        "index": 436.83018027238927,
+        "lead_day": 2,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20240618_day3_24h",
+        "class": "STRONG",
+        "index": 418.0970339358434,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20240619_day2_24h",
+        "class": "STRONG",
+        "index": 479.5507503856151,
+        "lead_day": 2,
+        "percentile_vs_training": 0.795
+      },
+      {
+        "case_id": "20240619_day3_24h",
+        "class": "STRONG",
+        "index": 480.2141573192872,
+        "lead_day": 3,
+        "percentile_vs_training": 0.8
+      },
+      {
+        "case_id": "20240620_day1_24h",
+        "class": "STRONG",
+        "index": 500.0680068343247,
+        "lead_day": 1,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20240620_day2_24h",
+        "class": "STRONG",
+        "index": 466.5057415854761,
+        "lead_day": 2,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20240621_day1_24h",
+        "class": "STRONG",
+        "index": 416.69251423990676,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20240621_day2_24h",
+        "class": "STRONG",
+        "index": 396.4318872486419,
+        "lead_day": 2,
+        "percentile_vs_training": 0.67
+      },
+      {
+        "case_id": "20240621_day3_24h",
+        "class": "STRONG",
+        "index": 458.683417470915,
+        "lead_day": 3,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20240622_day1_24h",
+        "class": "MODERATE",
+        "index": 372.5277195603685,
+        "lead_day": 1,
+        "percentile_vs_training": 0.615
+      },
+      {
+        "case_id": "20240623_day2_24h",
+        "class": "STRONG",
+        "index": 476.61537562748606,
+        "lead_day": 2,
+        "percentile_vs_training": 0.785
+      },
+      {
+        "case_id": "20240623_day3_24h",
+        "class": "STRONG",
+        "index": 602.4583799882223,
+        "lead_day": 3,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240624_day2_24h",
+        "class": "STRONG",
+        "index": 595.4670686569661,
+        "lead_day": 2,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240625_day2_24h",
+        "class": "STRONG",
+        "index": 574.9092982064815,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240625_day3_24h",
+        "class": "STRONG",
+        "index": 529.2885128417809,
+        "lead_day": 3,
+        "percentile_vs_training": 0.865
+      },
+      {
+        "case_id": "20240626_day1_24h",
+        "class": "STRONG",
+        "index": 666.2432751778159,
+        "lead_day": 1,
+        "percentile_vs_training": 0.97
+      },
+      {
+        "case_id": "20240627_day3_24h",
+        "class": "STRONG",
+        "index": 446.4325036022922,
+        "lead_day": 3,
+        "percentile_vs_training": 0.75
+      },
+      {
+        "case_id": "20240628_day3_24h",
+        "class": "STRONG",
+        "index": 512.0466823474328,
+        "lead_day": 3,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20240629_day1_24h",
+        "class": "STRONG",
+        "index": 468.8636992500102,
+        "lead_day": 1,
+        "percentile_vs_training": 0.77
+      },
+      {
+        "case_id": "20240629_day3_24h",
+        "class": "STRONG",
+        "index": 595.8431926982212,
+        "lead_day": 3,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240701_day3_24h",
+        "class": "STRONG",
+        "index": 533.6476414609997,
+        "lead_day": 3,
+        "percentile_vs_training": 0.87
+      },
+      {
+        "case_id": "20240702_day1_24h",
+        "class": "STRONG",
+        "index": 534.1833547649637,
+        "lead_day": 1,
+        "percentile_vs_training": 0.87
+      },
+      {
+        "case_id": "20240702_day2_24h",
+        "class": "STRONG",
+        "index": 482.5390425647998,
+        "lead_day": 2,
+        "percentile_vs_training": 0.815
+      },
+      {
+        "case_id": "20240702_day3_24h",
+        "class": "STRONG",
+        "index": 562.9689659005791,
+        "lead_day": 3,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240703_day1_24h",
+        "class": "STRONG",
+        "index": 527.2940426535555,
+        "lead_day": 1,
+        "percentile_vs_training": 0.865
+      },
+      {
+        "case_id": "20240703_day2_24h",
+        "class": "STRONG",
+        "index": 583.2920407516549,
+        "lead_day": 2,
+        "percentile_vs_training": 0.92
+      },
+      {
+        "case_id": "20240704_day1_24h",
+        "class": "STRONG",
+        "index": 585.6430181420852,
+        "lead_day": 1,
+        "percentile_vs_training": 0.925
+      },
+      {
+        "case_id": "20240704_day2_24h",
+        "class": "STRONG",
+        "index": 596.0925062450403,
+        "lead_day": 2,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240705_day2_24h",
+        "class": "STRONG",
+        "index": 555.410454739027,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240706_day1_24h",
+        "class": "STRONG",
+        "index": 558.0614023078887,
+        "lead_day": 1,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240706_day2_24h",
+        "class": "STRONG",
+        "index": 460.49260515999674,
+        "lead_day": 2,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20240706_day3_24h",
+        "class": "STRONG",
+        "index": 398.3106258245765,
+        "lead_day": 3,
+        "percentile_vs_training": 0.675
+      },
+      {
+        "case_id": "20240708_day3_24h",
+        "class": "STRONG",
+        "index": 412.83321329565894,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20240709_day1_24h",
+        "class": "STRONG",
+        "index": 435.2845580539369,
+        "lead_day": 1,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20240709_day2_24h",
+        "class": "STRONG",
+        "index": 426.6862520303348,
+        "lead_day": 2,
+        "percentile_vs_training": 0.72
+      },
+      {
+        "case_id": "20240709_day3_24h",
+        "class": "STRONG",
+        "index": 469.6100382794278,
+        "lead_day": 3,
+        "percentile_vs_training": 0.775
+      },
+      {
+        "case_id": "20240710_day1_24h",
+        "class": "STRONG",
+        "index": 401.8454241463526,
+        "lead_day": 1,
+        "percentile_vs_training": 0.675
+      },
+      {
+        "case_id": "20240710_day3_24h",
+        "class": "STRONG",
+        "index": 542.6945770762474,
+        "lead_day": 3,
+        "percentile_vs_training": 0.885
+      },
+      {
+        "case_id": "20240711_day2_24h",
+        "class": "STRONG",
+        "index": 570.7571244320551,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240711_day3_24h",
+        "class": "STRONG",
+        "index": 583.3430171023323,
+        "lead_day": 3,
+        "percentile_vs_training": 0.92
+      },
+      {
+        "case_id": "20240712_day2_24h",
+        "class": "STRONG",
+        "index": 627.150595531091,
+        "lead_day": 2,
+        "percentile_vs_training": 0.945
+      },
+      {
+        "case_id": "20240712_day3_24h",
+        "class": "STRONG",
+        "index": 597.9085084621897,
+        "lead_day": 3,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240713_day2_24h",
+        "class": "STRONG",
+        "index": 625.9646082224458,
+        "lead_day": 2,
+        "percentile_vs_training": 0.945
+      },
+      {
+        "case_id": "20240714_day1_24h",
+        "class": "STRONG",
+        "index": 701.5063406123706,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240714_day2_24h",
+        "class": "STRONG",
+        "index": 636.4269674288666,
+        "lead_day": 2,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20240714_day3_24h",
+        "class": "STRONG",
+        "index": 640.1353645400796,
+        "lead_day": 3,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20240715_day3_24h",
+        "class": "STRONG",
+        "index": 651.8736973201907,
+        "lead_day": 3,
+        "percentile_vs_training": 0.965
+      },
+      {
+        "case_id": "20240716_day1_24h",
+        "class": "STRONG",
+        "index": 743.8994825136995,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240716_day2_24h",
+        "class": "STRONG",
+        "index": 692.0572875672356,
+        "lead_day": 2,
+        "percentile_vs_training": 0.99
+      },
+      {
+        "case_id": "20240716_day3_24h",
+        "class": "STRONG",
+        "index": 652.2931752106749,
+        "lead_day": 3,
+        "percentile_vs_training": 0.965
+      },
+      {
+        "case_id": "20240717_day3_24h",
+        "class": "STRONG",
+        "index": 653.3837321731407,
+        "lead_day": 3,
+        "percentile_vs_training": 0.965
+      },
+      {
+        "case_id": "20240718_day1_24h",
+        "class": "STRONG",
+        "index": 816.6719054985589,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240718_day2_24h",
+        "class": "STRONG",
+        "index": 735.6475919876277,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240718_day3_24h",
+        "class": "STRONG",
+        "index": 618.1701227568609,
+        "lead_day": 3,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240719_day2_24h",
+        "class": "STRONG",
+        "index": 701.23587452799,
+        "lead_day": 2,
+        "percentile_vs_training": 0.995
+      },
+      {
+        "case_id": "20240719_day3_24h",
+        "class": "STRONG",
+        "index": 639.2810076496455,
+        "lead_day": 3,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20240720_day1_24h",
+        "class": "STRONG",
+        "index": 713.9347837024933,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240720_day3_24h",
+        "class": "STRONG",
+        "index": 675.8028184615463,
+        "lead_day": 3,
+        "percentile_vs_training": 0.975
+      },
+      {
+        "case_id": "20240721_day2_24h",
+        "class": "STRONG",
+        "index": 669.7480450389352,
+        "lead_day": 2,
+        "percentile_vs_training": 0.97
+      },
+      {
+        "case_id": "20240721_day3_24h",
+        "class": "STRONG",
+        "index": 748.4696362367572,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240722_day1_24h",
+        "class": "STRONG",
+        "index": 752.867579857291,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240722_day3_24h",
+        "class": "STRONG",
+        "index": 761.4412997522081,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240723_day1_24h",
+        "class": "STRONG",
+        "index": 807.038516947018,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240723_day2_24h",
+        "class": "STRONG",
+        "index": 808.7370507529763,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240723_day3_24h",
+        "class": "STRONG",
+        "index": 690.6932608163753,
+        "lead_day": 3,
+        "percentile_vs_training": 0.99
+      },
+      {
+        "case_id": "20240724_day2_24h",
+        "class": "STRONG",
+        "index": 751.641868065013,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240725_day1_24h",
+        "class": "STRONG",
+        "index": 787.6282921230015,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240725_day2_24h",
+        "class": "STRONG",
+        "index": 729.4048956106641,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20240725_day3_24h",
+        "class": "STRONG",
+        "index": 548.239537671,
+        "lead_day": 3,
+        "percentile_vs_training": 0.885
+      },
+      {
+        "case_id": "20240726_day2_24h",
+        "class": "STRONG",
+        "index": 640.3260764928021,
+        "lead_day": 2,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20240726_day3_24h",
+        "class": "STRONG",
+        "index": 514.4490584118422,
+        "lead_day": 3,
+        "percentile_vs_training": 0.85
+      },
+      {
+        "case_id": "20240727_day2_24h",
+        "class": "STRONG",
+        "index": 589.3277630275746,
+        "lead_day": 2,
+        "percentile_vs_training": 0.93
+      },
+      {
+        "case_id": "20240728_day1_24h",
+        "class": "STRONG",
+        "index": 681.2608125341355,
+        "lead_day": 1,
+        "percentile_vs_training": 0.985
+      },
+      {
+        "case_id": "20240728_day3_24h",
+        "class": "STRONG",
+        "index": 515.8457634210945,
+        "lead_day": 3,
+        "percentile_vs_training": 0.855
+      },
+      {
+        "case_id": "20240729_day1_24h",
+        "class": "STRONG",
+        "index": 628.2792963050928,
+        "lead_day": 1,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20240730_day3_24h",
+        "class": "STRONG",
+        "index": 574.7581761388574,
+        "lead_day": 3,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240731_day2_24h",
+        "class": "STRONG",
+        "index": 576.2054824511761,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240801_day1_24h",
+        "class": "STRONG",
+        "index": 613.3428863394201,
+        "lead_day": 1,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240802_day1_24h",
+        "class": "STRONG",
+        "index": 616.3768526137599,
+        "lead_day": 1,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240802_day2_24h",
+        "class": "STRONG",
+        "index": 588.255705649068,
+        "lead_day": 2,
+        "percentile_vs_training": 0.93
+      },
+      {
+        "case_id": "20240802_day3_24h",
+        "class": "STRONG",
+        "index": 506.47152663385856,
+        "lead_day": 3,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20240803_day3_24h",
+        "class": "MODERATE",
+        "index": 330.5929251819707,
+        "lead_day": 3,
+        "percentile_vs_training": 0.51
+      },
+      {
+        "case_id": "20240804_day1_24h",
+        "class": "STRONG",
+        "index": 396.03107862459757,
+        "lead_day": 1,
+        "percentile_vs_training": 0.67
+      },
+      {
+        "case_id": "20240805_day1_24h",
+        "class": "STRONG",
+        "index": 395.4344464420465,
+        "lead_day": 1,
+        "percentile_vs_training": 0.67
+      },
+      {
+        "case_id": "20240806_day2_24h",
+        "class": "MODERATE",
+        "index": 379.59619364349237,
+        "lead_day": 2,
+        "percentile_vs_training": 0.635
+      },
+      {
+        "case_id": "20240807_day1_24h",
+        "class": "MODERATE",
+        "index": 374.03893864031573,
+        "lead_day": 1,
+        "percentile_vs_training": 0.62
+      },
+      {
+        "case_id": "20240807_day3_24h",
+        "class": "MODERATE",
+        "index": 286.74824451907386,
+        "lead_day": 3,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20240808_day2_24h",
+        "class": "WEAK",
+        "index": 237.45516187635647,
+        "lead_day": 2,
+        "percentile_vs_training": 0.31
+      },
+      {
+        "case_id": "20240809_day2_24h",
+        "class": "MODERATE",
+        "index": 277.4689164881358,
+        "lead_day": 2,
+        "percentile_vs_training": 0.41
+      },
+      {
+        "case_id": "20240809_day3_24h",
+        "class": "MODERATE",
+        "index": 248.79481697066163,
+        "lead_day": 3,
+        "percentile_vs_training": 0.345
+      },
+      {
+        "case_id": "20240810_day1_24h",
+        "class": "WEAK",
+        "index": 246.48061572888437,
+        "lead_day": 1,
+        "percentile_vs_training": 0.33
+      },
+      {
+        "case_id": "20240810_day3_24h",
+        "class": "WEAK",
+        "index": 194.79682578838748,
+        "lead_day": 3,
+        "percentile_vs_training": 0.185
+      },
+      {
+        "case_id": "20240811_day1_24h",
+        "class": "WEAK",
+        "index": 159.41998701625363,
+        "lead_day": 1,
+        "percentile_vs_training": 0.11
+      },
+      {
+        "case_id": "20240812_day3_24h",
+        "class": "WEAK",
+        "index": 93.97226566508327,
+        "lead_day": 3,
+        "percentile_vs_training": 0.045
+      },
+      {
+        "case_id": "20240813_day2_24h",
+        "class": "WEAK",
+        "index": 63.816519109550605,
+        "lead_day": 2,
+        "percentile_vs_training": 0.015
+      },
+      {
+        "case_id": "20240814_day3_24h",
+        "class": "WEAK",
+        "index": 73.15160185483698,
+        "lead_day": 3,
+        "percentile_vs_training": 0.02
+      },
+      {
+        "case_id": "20240815_day2_24h",
+        "class": "WEAK",
+        "index": 128.15389273547692,
+        "lead_day": 2,
+        "percentile_vs_training": 0.065
+      },
+      {
+        "case_id": "20240816_day2_24h",
+        "class": "WEAK",
+        "index": 37.288744620466765,
+        "lead_day": 2,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20240817_day1_24h",
+        "class": "WEAK",
+        "index": 26.12162471814503,
+        "lead_day": 1,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20240817_day3_24h",
+        "class": "WEAK",
+        "index": 61.55463495615108,
+        "lead_day": 3,
+        "percentile_vs_training": 0.015
+      },
+      {
+        "case_id": "20240818_day3_24h",
+        "class": "WEAK",
+        "index": 82.15990683130957,
+        "lead_day": 3,
+        "percentile_vs_training": 0.03
+      },
+      {
+        "case_id": "20240819_day2_24h",
+        "class": "WEAK",
+        "index": 68.35988021522901,
+        "lead_day": 2,
+        "percentile_vs_training": 0.015
+      },
+      {
+        "case_id": "20240819_day3_24h",
+        "class": "WEAK",
+        "index": 223.0816101212281,
+        "lead_day": 3,
+        "percentile_vs_training": 0.29
+      },
+      {
+        "case_id": "20240821_day3_24h",
+        "class": "MODERATE",
+        "index": 355.8574374336304,
+        "lead_day": 3,
+        "percentile_vs_training": 0.565
+      },
+      {
+        "case_id": "20240822_day1_24h",
+        "class": "MODERATE",
+        "index": 343.79639103991457,
+        "lead_day": 1,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20240822_day2_24h",
+        "class": "MODERATE",
+        "index": 387.7559418014995,
+        "lead_day": 2,
+        "percentile_vs_training": 0.66
+      },
+      {
+        "case_id": "20240822_day3_24h",
+        "class": "STRONG",
+        "index": 566.0587183711178,
+        "lead_day": 3,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240823_day3_24h",
+        "class": "STRONG",
+        "index": 552.5096467656721,
+        "lead_day": 3,
+        "percentile_vs_training": 0.895
+      },
+      {
+        "case_id": "20240824_day2_24h",
+        "class": "STRONG",
+        "index": 574.5602477415811,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240824_day3_24h",
+        "class": "STRONG",
+        "index": 545.8901548200981,
+        "lead_day": 3,
+        "percentile_vs_training": 0.885
+      },
+      {
+        "case_id": "20240825_day1_24h",
+        "class": "STRONG",
+        "index": 598.8887016422142,
+        "lead_day": 1,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20240825_day2_24h",
+        "class": "STRONG",
+        "index": 585.8156096561738,
+        "lead_day": 2,
+        "percentile_vs_training": 0.925
+      },
+      {
+        "case_id": "20240825_day3_24h",
+        "class": "STRONG",
+        "index": 521.9541581730003,
+        "lead_day": 3,
+        "percentile_vs_training": 0.86
+      },
+      {
+        "case_id": "20240826_day2_24h",
+        "class": "STRONG",
+        "index": 535.7057955908006,
+        "lead_day": 2,
+        "percentile_vs_training": 0.875
+      },
+      {
+        "case_id": "20240826_day3_24h",
+        "class": "STRONG",
+        "index": 564.8360138221334,
+        "lead_day": 3,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20240827_day1_24h",
+        "class": "STRONG",
+        "index": 517.1641414978318,
+        "lead_day": 1,
+        "percentile_vs_training": 0.855
+      },
+      {
+        "case_id": "20240827_day2_24h",
+        "class": "STRONG",
+        "index": 498.32373551376384,
+        "lead_day": 2,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20240828_day2_24h",
+        "class": "MODERATE",
+        "index": 359.9886223800724,
+        "lead_day": 2,
+        "percentile_vs_training": 0.59
+      },
+      {
+        "case_id": "20240830_day3_24h",
+        "class": "MODERATE",
+        "index": 318.91275265361213,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5
+      },
+      {
+        "case_id": "20240901_day3_24h",
+        "class": "STRONG",
+        "index": 411.32277354591497,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20240902_day2_24h",
+        "class": "STRONG",
+        "index": 405.5757699644838,
+        "lead_day": 2,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20240902_day3_24h",
+        "class": "MODERATE",
+        "index": 371.8450369356342,
+        "lead_day": 3,
+        "percentile_vs_training": 0.615
+      },
+      {
+        "case_id": "20240903_day2_24h",
+        "class": "MODERATE",
+        "index": 378.3110161929266,
+        "lead_day": 2,
+        "percentile_vs_training": 0.635
+      },
+      {
+        "case_id": "20240903_day3_24h",
+        "class": "MODERATE",
+        "index": 336.17020068025397,
+        "lead_day": 3,
+        "percentile_vs_training": 0.52
+      },
+      {
+        "case_id": "20240904_day3_24h",
+        "class": "MODERATE",
+        "index": 343.6998995151238,
+        "lead_day": 3,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20240906_day2_24h",
+        "class": "MODERATE",
+        "index": 355.5718025064446,
+        "lead_day": 2,
+        "percentile_vs_training": 0.565
+      },
+      {
+        "case_id": "20240906_day3_24h",
+        "class": "MODERATE",
+        "index": 383.20217329981705,
+        "lead_day": 3,
+        "percentile_vs_training": 0.645
+      },
+      {
+        "case_id": "20240907_day1_24h",
+        "class": "MODERATE",
+        "index": 376.92221854686835,
+        "lead_day": 1,
+        "percentile_vs_training": 0.625
+      },
+      {
+        "case_id": "20240908_day2_24h",
+        "class": "STRONG",
+        "index": 392.6127777510115,
+        "lead_day": 2,
+        "percentile_vs_training": 0.665
+      },
+      {
+        "case_id": "20240908_day3_24h",
+        "class": "MODERATE",
+        "index": 391.249420460873,
+        "lead_day": 3,
+        "percentile_vs_training": 0.665
+      },
+      {
+        "case_id": "20240909_day2_24h",
+        "class": "STRONG",
+        "index": 407.83581769872814,
+        "lead_day": 2,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20240909_day3_24h",
+        "class": "STRONG",
+        "index": 411.6194971522743,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20240910_day2_24h",
+        "class": "MODERATE",
+        "index": 369.1579300327253,
+        "lead_day": 2,
+        "percentile_vs_training": 0.615
+      },
+      {
+        "case_id": "20240910_day3_24h",
+        "class": "MODERATE",
+        "index": 315.4512247896261,
+        "lead_day": 3,
+        "percentile_vs_training": 0.49
+      },
+      {
+        "case_id": "20240911_day1_24h",
+        "class": "MODERATE",
+        "index": 344.1249609118792,
+        "lead_day": 1,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20240911_day2_24h",
+        "class": "MODERATE",
+        "index": 314.2986649529886,
+        "lead_day": 2,
+        "percentile_vs_training": 0.49
+      },
+      {
+        "case_id": "20240911_day3_24h",
+        "class": "MODERATE",
+        "index": 274.33716904900047,
+        "lead_day": 3,
+        "percentile_vs_training": 0.41
+      },
+      {
+        "case_id": "20240912_day2_24h",
+        "class": "MODERATE",
+        "index": 284.5643899311653,
+        "lead_day": 2,
+        "percentile_vs_training": 0.435
+      },
+      {
+        "case_id": "20240913_day1_24h",
+        "class": "WEAK",
+        "index": 244.42791484147426,
+        "lead_day": 1,
+        "percentile_vs_training": 0.325
+      },
+      {
+        "case_id": "20240913_day2_24h",
+        "class": "MODERATE",
+        "index": 286.48509985804253,
+        "lead_day": 2,
+        "percentile_vs_training": 0.435
+      },
+      {
+        "case_id": "20240914_day1_24h",
+        "class": "MODERATE",
+        "index": 288.63404897188684,
+        "lead_day": 1,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20240914_day2_24h",
+        "class": "WEAK",
+        "index": 233.44674671519115,
+        "lead_day": 2,
+        "percentile_vs_training": 0.3
+      },
+      {
+        "case_id": "20240916_day3_24h",
+        "class": "WEAK",
+        "index": 98.08530033163579,
+        "lead_day": 3,
+        "percentile_vs_training": 0.045
+      },
+      {
+        "case_id": "20240917_day1_24h",
+        "class": "WEAK",
+        "index": 88.92906580041992,
+        "lead_day": 1,
+        "percentile_vs_training": 0.045
+      },
+      {
+        "case_id": "20240917_day3_24h",
+        "class": "WEAK",
+        "index": 126.96615093766079,
+        "lead_day": 3,
+        "percentile_vs_training": 0.065
+      },
+      {
+        "case_id": "20240918_day1_24h",
+        "class": "WEAK",
+        "index": 98.14484732619427,
+        "lead_day": 1,
+        "percentile_vs_training": 0.045
+      },
+      {
+        "case_id": "20240918_day2_24h",
+        "class": "WEAK",
+        "index": 104.0636360124042,
+        "lead_day": 2,
+        "percentile_vs_training": 0.05
+      },
+      {
+        "case_id": "20240919_day1_24h",
+        "class": "WEAK",
+        "index": 100.48317218486926,
+        "lead_day": 1,
+        "percentile_vs_training": 0.045
+      },
+      {
+        "case_id": "20240919_day3_24h",
+        "class": "WEAK",
+        "index": 126.80192752342104,
+        "lead_day": 3,
+        "percentile_vs_training": 0.06
+      },
+      {
+        "case_id": "20240920_day2_24h",
+        "class": "WEAK",
+        "index": 128.06010710937971,
+        "lead_day": 2,
+        "percentile_vs_training": 0.065
+      },
+      {
+        "case_id": "20240920_day3_24h",
+        "class": "WEAK",
+        "index": 156.03299789512585,
+        "lead_day": 3,
+        "percentile_vs_training": 0.105
+      },
+      {
+        "case_id": "20240921_day2_24h",
+        "class": "WEAK",
+        "index": 184.95888624721178,
+        "lead_day": 2,
+        "percentile_vs_training": 0.16
+      },
+      {
+        "case_id": "20240921_day3_24h",
+        "class": "WEAK",
+        "index": 234.44681831384068,
+        "lead_day": 3,
+        "percentile_vs_training": 0.3
+      },
+      {
+        "case_id": "20240922_day1_24h",
+        "class": "WEAK",
+        "index": 136.20031341305466,
+        "lead_day": 1,
+        "percentile_vs_training": 0.08
+      },
+      {
+        "case_id": "20240922_day2_24h",
+        "class": "MODERATE",
+        "index": 263.4555468927275,
+        "lead_day": 2,
+        "percentile_vs_training": 0.38
+      },
+      {
+        "case_id": "20240923_day2_24h",
+        "class": "MODERATE",
+        "index": 334.7160728386515,
+        "lead_day": 2,
+        "percentile_vs_training": 0.52
+      },
+      {
+        "case_id": "20240923_day3_24h",
+        "class": "MODERATE",
+        "index": 386.6647029460835,
+        "lead_day": 3,
+        "percentile_vs_training": 0.655
+      },
+      {
+        "case_id": "20240924_day2_24h",
+        "class": "MODERATE",
+        "index": 373.25391185042247,
+        "lead_day": 2,
+        "percentile_vs_training": 0.62
+      },
+      {
+        "case_id": "20240924_day3_24h",
+        "class": "MODERATE",
+        "index": 387.3749093126378,
+        "lead_day": 3,
+        "percentile_vs_training": 0.655
+      },
+      {
+        "case_id": "20240927_day1_24h",
+        "class": "MODERATE",
+        "index": 281.7443984003628,
+        "lead_day": 1,
+        "percentile_vs_training": 0.43
+      },
+      {
+        "case_id": "20240928_day1_24h",
+        "class": "WEAK",
+        "index": 92.33826806102468,
+        "lead_day": 1,
+        "percentile_vs_training": 0.045
+      },
+      {
+        "case_id": "20240928_day3_24h",
+        "class": "WEAK",
+        "index": 5.955057874742629,
+        "lead_day": 3,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20240929_day3_24h",
+        "class": "WEAK",
+        "index": 46.42453778821665,
+        "lead_day": 3,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20240930_day1_24h",
+        "class": "WEAK",
+        "index": 7.613033508537514,
+        "lead_day": 1,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20240930_day2_24h",
+        "class": "WEAK",
+        "index": 22.96433576378678,
+        "lead_day": 2,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20240930_day3_24h",
+        "class": "WEAK",
+        "index": 175.01548632080838,
+        "lead_day": 3,
+        "percentile_vs_training": 0.145
+      },
+      {
+        "case_id": "20241001_day1_24h",
+        "class": "WEAK",
+        "index": 44.77485869258983,
+        "lead_day": 1,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20241001_day3_24h",
+        "class": "WEAK",
+        "index": 83.67508249882772,
+        "lead_day": 3,
+        "percentile_vs_training": 0.035
+      }
+    ],
+    "B2025": [
+      {
+        "case_id": "20250601_day1_24h",
+        "class": "MODERATE",
+        "index": 377.7646900926845,
+        "lead_day": 1,
+        "percentile_vs_training": 0.635
+      },
+      {
+        "case_id": "20250601_day2_24h",
+        "class": "STRONG",
+        "index": 439.27629509594715,
+        "lead_day": 2,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20250601_day3_24h",
+        "class": "MODERATE",
+        "index": 375.35736802239296,
+        "lead_day": 3,
+        "percentile_vs_training": 0.62
+      },
+      {
+        "case_id": "20250602_day1_24h",
+        "class": "STRONG",
+        "index": 407.27027316272626,
+        "lead_day": 1,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20250602_day2_24h",
+        "class": "MODERATE",
+        "index": 363.09491183864645,
+        "lead_day": 2,
+        "percentile_vs_training": 0.605
+      },
+      {
+        "case_id": "20250602_day3_24h",
+        "class": "WEAK",
+        "index": 207.01394155699106,
+        "lead_day": 3,
+        "percentile_vs_training": 0.235
+      },
+      {
+        "case_id": "20250603_day2_24h",
+        "class": "WEAK",
+        "index": 170.6323417873177,
+        "lead_day": 2,
+        "percentile_vs_training": 0.145
+      },
+      {
+        "case_id": "20250604_day2_24h",
+        "class": "WEAK",
+        "index": 36.42817604334134,
+        "lead_day": 2,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20250605_day3_24h",
+        "class": "WEAK",
+        "index": 148.98752070631116,
+        "lead_day": 3,
+        "percentile_vs_training": 0.095
+      },
+      {
+        "case_id": "20250606_day1_24h",
+        "class": "WEAK",
+        "index": 112.47157674991583,
+        "lead_day": 1,
+        "percentile_vs_training": 0.055
+      },
+      {
+        "case_id": "20250607_day1_24h",
+        "class": "WEAK",
+        "index": 166.076011739308,
+        "lead_day": 1,
+        "percentile_vs_training": 0.13
+      },
+      {
+        "case_id": "20250607_day3_24h",
+        "class": "WEAK",
+        "index": 175.0066228643997,
+        "lead_day": 3,
+        "percentile_vs_training": 0.145
+      },
+      {
+        "case_id": "20250608_day1_24h",
+        "class": "WEAK",
+        "index": 159.91211966203232,
+        "lead_day": 1,
+        "percentile_vs_training": 0.11
+      },
+      {
+        "case_id": "20250608_day2_24h",
+        "class": "WEAK",
+        "index": 117.25780662830104,
+        "lead_day": 2,
+        "percentile_vs_training": 0.055
+      },
+      {
+        "case_id": "20250608_day3_24h",
+        "class": "WEAK",
+        "index": 202.33291312027077,
+        "lead_day": 3,
+        "percentile_vs_training": 0.2
+      },
+      {
+        "case_id": "20250609_day2_24h",
+        "class": "MODERATE",
+        "index": 249.78379060270888,
+        "lead_day": 2,
+        "percentile_vs_training": 0.345
+      },
+      {
+        "case_id": "20250609_day3_24h",
+        "class": "MODERATE",
+        "index": 292.07027839719996,
+        "lead_day": 3,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20250610_day2_24h",
+        "class": "MODERATE",
+        "index": 278.6432481645245,
+        "lead_day": 2,
+        "percentile_vs_training": 0.42
+      },
+      {
+        "case_id": "20250610_day3_24h",
+        "class": "MODERATE",
+        "index": 325.8647833066427,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5
+      },
+      {
+        "case_id": "20250611_day1_24h",
+        "class": "MODERATE",
+        "index": 293.8117125991459,
+        "lead_day": 1,
+        "percentile_vs_training": 0.445
+      },
+      {
+        "case_id": "20250611_day2_24h",
+        "class": "MODERATE",
+        "index": 330.38440959688825,
+        "lead_day": 2,
+        "percentile_vs_training": 0.505
+      },
+      {
+        "case_id": "20250612_day1_24h",
+        "class": "WEAK",
+        "index": 244.97095810888757,
+        "lead_day": 1,
+        "percentile_vs_training": 0.325
+      },
+      {
+        "case_id": "20250613_day2_24h",
+        "class": "STRONG",
+        "index": 560.0148130065643,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250614_day3_24h",
+        "class": "STRONG",
+        "index": 635.9832135332201,
+        "lead_day": 3,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20250616_day1_24h",
+        "class": "STRONG",
+        "index": 712.4159682694778,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250616_day2_24h",
+        "class": "STRONG",
+        "index": 553.1494736706998,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250616_day3_24h",
+        "class": "STRONG",
+        "index": 541.7965767106958,
+        "lead_day": 3,
+        "percentile_vs_training": 0.885
+      },
+      {
+        "case_id": "20250617_day2_24h",
+        "class": "STRONG",
+        "index": 527.4686200089267,
+        "lead_day": 2,
+        "percentile_vs_training": 0.865
+      },
+      {
+        "case_id": "20250617_day3_24h",
+        "class": "STRONG",
+        "index": 509.9069540047513,
+        "lead_day": 3,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20250618_day1_24h",
+        "class": "STRONG",
+        "index": 579.1701336673551,
+        "lead_day": 1,
+        "percentile_vs_training": 0.915
+      },
+      {
+        "case_id": "20250618_day2_24h",
+        "class": "STRONG",
+        "index": 476.60401939200756,
+        "lead_day": 2,
+        "percentile_vs_training": 0.785
+      },
+      {
+        "case_id": "20250619_day1_24h",
+        "class": "STRONG",
+        "index": 465.7270919602879,
+        "lead_day": 1,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250620_day1_24h",
+        "class": "STRONG",
+        "index": 458.22695988526226,
+        "lead_day": 1,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250620_day2_24h",
+        "class": "STRONG",
+        "index": 431.1581218041852,
+        "lead_day": 2,
+        "percentile_vs_training": 0.725
+      },
+      {
+        "case_id": "20250621_day1_24h",
+        "class": "STRONG",
+        "index": 455.8373096533978,
+        "lead_day": 1,
+        "percentile_vs_training": 0.75
+      },
+      {
+        "case_id": "20250621_day3_24h",
+        "class": "STRONG",
+        "index": 627.2934886989616,
+        "lead_day": 3,
+        "percentile_vs_training": 0.945
+      },
+      {
+        "case_id": "20250622_day1_24h",
+        "class": "STRONG",
+        "index": 602.4854046152084,
+        "lead_day": 1,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20250622_day2_24h",
+        "class": "STRONG",
+        "index": 585.3868547518483,
+        "lead_day": 2,
+        "percentile_vs_training": 0.925
+      },
+      {
+        "case_id": "20250622_day3_24h",
+        "class": "STRONG",
+        "index": 602.9677645503176,
+        "lead_day": 3,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20250623_day1_24h",
+        "class": "STRONG",
+        "index": 631.8453713633492,
+        "lead_day": 1,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20250623_day2_24h",
+        "class": "STRONG",
+        "index": 551.6012191704762,
+        "lead_day": 2,
+        "percentile_vs_training": 0.895
+      },
+      {
+        "case_id": "20250623_day3_24h",
+        "class": "STRONG",
+        "index": 516.4532464170547,
+        "lead_day": 3,
+        "percentile_vs_training": 0.855
+      },
+      {
+        "case_id": "20250624_day1_24h",
+        "class": "STRONG",
+        "index": 621.5924679568916,
+        "lead_day": 1,
+        "percentile_vs_training": 0.945
+      },
+      {
+        "case_id": "20250624_day3_24h",
+        "class": "STRONG",
+        "index": 485.05690972524144,
+        "lead_day": 3,
+        "percentile_vs_training": 0.82
+      },
+      {
+        "case_id": "20250625_day1_24h",
+        "class": "STRONG",
+        "index": 604.2744155616634,
+        "lead_day": 1,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20250625_day3_24h",
+        "class": "STRONG",
+        "index": 512.182277418481,
+        "lead_day": 3,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20250626_day1_24h",
+        "class": "STRONG",
+        "index": 570.2513949161156,
+        "lead_day": 1,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250626_day3_24h",
+        "class": "STRONG",
+        "index": 485.9377395959771,
+        "lead_day": 3,
+        "percentile_vs_training": 0.825
+      },
+      {
+        "case_id": "20250627_day1_24h",
+        "class": "STRONG",
+        "index": 479.7284528879562,
+        "lead_day": 1,
+        "percentile_vs_training": 0.795
+      },
+      {
+        "case_id": "20250627_day3_24h",
+        "class": "STRONG",
+        "index": 459.0654438433232,
+        "lead_day": 3,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250629_day1_24h",
+        "class": "STRONG",
+        "index": 543.7716597598676,
+        "lead_day": 1,
+        "percentile_vs_training": 0.885
+      },
+      {
+        "case_id": "20250629_day3_24h",
+        "class": "STRONG",
+        "index": 514.6974618779035,
+        "lead_day": 3,
+        "percentile_vs_training": 0.85
+      },
+      {
+        "case_id": "20250630_day1_24h",
+        "class": "STRONG",
+        "index": 531.644021321299,
+        "lead_day": 1,
+        "percentile_vs_training": 0.87
+      },
+      {
+        "case_id": "20250630_day2_24h",
+        "class": "STRONG",
+        "index": 564.1793852181524,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250630_day3_24h",
+        "class": "STRONG",
+        "index": 536.1608402611256,
+        "lead_day": 3,
+        "percentile_vs_training": 0.875
+      },
+      {
+        "case_id": "20250701_day2_24h",
+        "class": "STRONG",
+        "index": 518.7965682426533,
+        "lead_day": 2,
+        "percentile_vs_training": 0.855
+      },
+      {
+        "case_id": "20250701_day3_24h",
+        "class": "STRONG",
+        "index": 587.4879486334538,
+        "lead_day": 3,
+        "percentile_vs_training": 0.925
+      },
+      {
+        "case_id": "20250702_day1_24h",
+        "class": "STRONG",
+        "index": 590.9928959155493,
+        "lead_day": 1,
+        "percentile_vs_training": 0.93
+      },
+      {
+        "case_id": "20250702_day2_24h",
+        "class": "STRONG",
+        "index": 619.4929337058005,
+        "lead_day": 2,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20250702_day3_24h",
+        "class": "STRONG",
+        "index": 599.2277740220549,
+        "lead_day": 3,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20250703_day1_24h",
+        "class": "STRONG",
+        "index": 627.7032206319861,
+        "lead_day": 1,
+        "percentile_vs_training": 0.945
+      },
+      {
+        "case_id": "20250703_day2_24h",
+        "class": "STRONG",
+        "index": 638.6596742839351,
+        "lead_day": 2,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20250703_day3_24h",
+        "class": "STRONG",
+        "index": 660.9429088428013,
+        "lead_day": 3,
+        "percentile_vs_training": 0.97
+      },
+      {
+        "case_id": "20250704_day2_24h",
+        "class": "STRONG",
+        "index": 636.2377931439947,
+        "lead_day": 2,
+        "percentile_vs_training": 0.95
+      },
+      {
+        "case_id": "20250704_day3_24h",
+        "class": "STRONG",
+        "index": 582.9909193651184,
+        "lead_day": 3,
+        "percentile_vs_training": 0.92
+      },
+      {
+        "case_id": "20250705_day2_24h",
+        "class": "STRONG",
+        "index": 570.7949742133513,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250705_day3_24h",
+        "class": "STRONG",
+        "index": 507.9997592246761,
+        "lead_day": 3,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20250706_day1_24h",
+        "class": "STRONG",
+        "index": 579.7362124585528,
+        "lead_day": 1,
+        "percentile_vs_training": 0.915
+      },
+      {
+        "case_id": "20250706_day3_24h",
+        "class": "STRONG",
+        "index": 469.1351692427894,
+        "lead_day": 3,
+        "percentile_vs_training": 0.77
+      },
+      {
+        "case_id": "20250707_day1_24h",
+        "class": "STRONG",
+        "index": 540.2502360042627,
+        "lead_day": 1,
+        "percentile_vs_training": 0.88
+      },
+      {
+        "case_id": "20250707_day2_24h",
+        "class": "STRONG",
+        "index": 491.54907501014543,
+        "lead_day": 2,
+        "percentile_vs_training": 0.835
+      },
+      {
+        "case_id": "20250708_day1_24h",
+        "class": "STRONG",
+        "index": 473.52185664030424,
+        "lead_day": 1,
+        "percentile_vs_training": 0.785
+      },
+      {
+        "case_id": "20250708_day3_24h",
+        "class": "STRONG",
+        "index": 440.36128580107936,
+        "lead_day": 3,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20250709_day1_24h",
+        "class": "MODERATE",
+        "index": 373.81615722349756,
+        "lead_day": 1,
+        "percentile_vs_training": 0.62
+      },
+      {
+        "case_id": "20250709_day2_24h",
+        "class": "MODERATE",
+        "index": 371.58886711476276,
+        "lead_day": 2,
+        "percentile_vs_training": 0.615
+      },
+      {
+        "case_id": "20250709_day3_24h",
+        "class": "STRONG",
+        "index": 444.46415471469356,
+        "lead_day": 3,
+        "percentile_vs_training": 0.75
+      },
+      {
+        "case_id": "20250710_day3_24h",
+        "class": "STRONG",
+        "index": 448.516514184793,
+        "lead_day": 3,
+        "percentile_vs_training": 0.75
+      },
+      {
+        "case_id": "20250711_day1_24h",
+        "class": "MODERATE",
+        "index": 389.71668063642335,
+        "lead_day": 1,
+        "percentile_vs_training": 0.665
+      },
+      {
+        "case_id": "20250711_day2_24h",
+        "class": "STRONG",
+        "index": 419.701942170536,
+        "lead_day": 2,
+        "percentile_vs_training": 0.705
+      },
+      {
+        "case_id": "20250711_day3_24h",
+        "class": "STRONG",
+        "index": 520.9979985274724,
+        "lead_day": 3,
+        "percentile_vs_training": 0.86
+      },
+      {
+        "case_id": "20250712_day1_24h",
+        "class": "MODERATE",
+        "index": 384.13457014028273,
+        "lead_day": 1,
+        "percentile_vs_training": 0.65
+      },
+      {
+        "case_id": "20250712_day3_24h",
+        "class": "STRONG",
+        "index": 506.73750113509266,
+        "lead_day": 3,
+        "percentile_vs_training": 0.845
+      },
+      {
+        "case_id": "20250713_day2_24h",
+        "class": "STRONG",
+        "index": 531.0409291269091,
+        "lead_day": 2,
+        "percentile_vs_training": 0.87
+      },
+      {
+        "case_id": "20250713_day3_24h",
+        "class": "MODERATE",
+        "index": 382.9900672636036,
+        "lead_day": 3,
+        "percentile_vs_training": 0.645
+      },
+      {
+        "case_id": "20250714_day1_24h",
+        "class": "STRONG",
+        "index": 530.4398695657603,
+        "lead_day": 1,
+        "percentile_vs_training": 0.87
+      },
+      {
+        "case_id": "20250714_day2_24h",
+        "class": "MODERATE",
+        "index": 376.93178071862917,
+        "lead_day": 2,
+        "percentile_vs_training": 0.625
+      },
+      {
+        "case_id": "20250714_day3_24h",
+        "class": "MODERATE",
+        "index": 297.0805519127506,
+        "lead_day": 3,
+        "percentile_vs_training": 0.46
+      },
+      {
+        "case_id": "20250715_day3_24h",
+        "class": "MODERATE",
+        "index": 330.3498036319236,
+        "lead_day": 3,
+        "percentile_vs_training": 0.505
+      },
+      {
+        "case_id": "20250716_day1_24h",
+        "class": "MODERATE",
+        "index": 307.95563259173304,
+        "lead_day": 1,
+        "percentile_vs_training": 0.48
+      },
+      {
+        "case_id": "20250716_day2_24h",
+        "class": "MODERATE",
+        "index": 307.2696257362763,
+        "lead_day": 2,
+        "percentile_vs_training": 0.48
+      },
+      {
+        "case_id": "20250717_day1_24h",
+        "class": "MODERATE",
+        "index": 325.72610489664135,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5
+      },
+      {
+        "case_id": "20250718_day2_24h",
+        "class": "STRONG",
+        "index": 411.3101114568613,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20250718_day3_24h",
+        "class": "STRONG",
+        "index": 398.22385902963026,
+        "lead_day": 3,
+        "percentile_vs_training": 0.675
+      },
+      {
+        "case_id": "20250719_day2_24h",
+        "class": "STRONG",
+        "index": 424.67607300047183,
+        "lead_day": 2,
+        "percentile_vs_training": 0.72
+      },
+      {
+        "case_id": "20250719_day3_24h",
+        "class": "STRONG",
+        "index": 468.66049973104145,
+        "lead_day": 3,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250720_day1_24h",
+        "class": "STRONG",
+        "index": 436.9847991223426,
+        "lead_day": 1,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20250720_day2_24h",
+        "class": "STRONG",
+        "index": 458.400736863899,
+        "lead_day": 2,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250721_day3_24h",
+        "class": "STRONG",
+        "index": 653.2902374604146,
+        "lead_day": 3,
+        "percentile_vs_training": 0.965
+      },
+      {
+        "case_id": "20250722_day3_24h",
+        "class": "STRONG",
+        "index": 757.4430619016686,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250723_day1_24h",
+        "class": "STRONG",
+        "index": 661.7926901694225,
+        "lead_day": 1,
+        "percentile_vs_training": 0.97
+      },
+      {
+        "case_id": "20250723_day3_24h",
+        "class": "STRONG",
+        "index": 825.0886544546397,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250724_day2_24h",
+        "class": "STRONG",
+        "index": 801.882056272623,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250724_day3_24h",
+        "class": "STRONG",
+        "index": 769.7109048944641,
+        "lead_day": 3,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250725_day1_24h",
+        "class": "STRONG",
+        "index": 838.343047074645,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250725_day2_24h",
+        "class": "STRONG",
+        "index": 808.5375191581351,
+        "lead_day": 2,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250725_day3_24h",
+        "class": "STRONG",
+        "index": 694.0945823986171,
+        "lead_day": 3,
+        "percentile_vs_training": 0.99
+      },
+      {
+        "case_id": "20250726_day1_24h",
+        "class": "STRONG",
+        "index": 771.0273998926177,
+        "lead_day": 1,
+        "percentile_vs_training": 1.0
+      },
+      {
+        "case_id": "20250726_day2_24h",
+        "class": "STRONG",
+        "index": 680.0450150839866,
+        "lead_day": 2,
+        "percentile_vs_training": 0.985
+      },
+      {
+        "case_id": "20250726_day3_24h",
+        "class": "STRONG",
+        "index": 644.8726280191108,
+        "lead_day": 3,
+        "percentile_vs_training": 0.955
+      },
+      {
+        "case_id": "20250727_day1_24h",
+        "class": "STRONG",
+        "index": 643.3407557175959,
+        "lead_day": 1,
+        "percentile_vs_training": 0.955
+      },
+      {
+        "case_id": "20250727_day3_24h",
+        "class": "STRONG",
+        "index": 558.2488067730984,
+        "lead_day": 3,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250728_day1_24h",
+        "class": "STRONG",
+        "index": 621.7630283246818,
+        "lead_day": 1,
+        "percentile_vs_training": 0.945
+      },
+      {
+        "case_id": "20250728_day2_24h",
+        "class": "STRONG",
+        "index": 575.417211219482,
+        "lead_day": 2,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250728_day3_24h",
+        "class": "STRONG",
+        "index": 459.1885815788567,
+        "lead_day": 3,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250729_day2_24h",
+        "class": "STRONG",
+        "index": 479.82320139923877,
+        "lead_day": 2,
+        "percentile_vs_training": 0.795
+      },
+      {
+        "case_id": "20250729_day3_24h",
+        "class": "STRONG",
+        "index": 396.8401064634717,
+        "lead_day": 3,
+        "percentile_vs_training": 0.675
+      },
+      {
+        "case_id": "20250730_day1_24h",
+        "class": "STRONG",
+        "index": 489.109646944879,
+        "lead_day": 1,
+        "percentile_vs_training": 0.835
+      },
+      {
+        "case_id": "20250730_day2_24h",
+        "class": "MODERATE",
+        "index": 333.97544394008895,
+        "lead_day": 2,
+        "percentile_vs_training": 0.52
+      },
+      {
+        "case_id": "20250730_day3_24h",
+        "class": "MODERATE",
+        "index": 286.56281312682967,
+        "lead_day": 3,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20250731_day3_24h",
+        "class": "MODERATE",
+        "index": 309.3855578766371,
+        "lead_day": 3,
+        "percentile_vs_training": 0.485
+      },
+      {
+        "case_id": "20250801_day1_24h",
+        "class": "MODERATE",
+        "index": 289.2091607629325,
+        "lead_day": 1,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20250801_day2_24h",
+        "class": "MODERATE",
+        "index": 272.123820084957,
+        "lead_day": 2,
+        "percentile_vs_training": 0.405
+      },
+      {
+        "case_id": "20250802_day3_24h",
+        "class": "WEAK",
+        "index": 230.42446869782407,
+        "lead_day": 3,
+        "percentile_vs_training": 0.3
+      },
+      {
+        "case_id": "20250804_day3_24h",
+        "class": "WEAK",
+        "index": 206.2086496374482,
+        "lead_day": 3,
+        "percentile_vs_training": 0.235
+      },
+      {
+        "case_id": "20250805_day1_24h",
+        "class": "WEAK",
+        "index": 208.43757008231006,
+        "lead_day": 1,
+        "percentile_vs_training": 0.235
+      },
+      {
+        "case_id": "20250807_day1_24h",
+        "class": "WEAK",
+        "index": 163.2940223863961,
+        "lead_day": 1,
+        "percentile_vs_training": 0.12
+      },
+      {
+        "case_id": "20250807_day2_24h",
+        "class": "WEAK",
+        "index": 205.7737560202339,
+        "lead_day": 2,
+        "percentile_vs_training": 0.235
+      },
+      {
+        "case_id": "20250809_day1_24h",
+        "class": "WEAK",
+        "index": 143.55396367084828,
+        "lead_day": 1,
+        "percentile_vs_training": 0.08
+      },
+      {
+        "case_id": "20250810_day1_24h",
+        "class": "MODERATE",
+        "index": 278.03529128895684,
+        "lead_day": 1,
+        "percentile_vs_training": 0.415
+      },
+      {
+        "case_id": "20250810_day2_24h",
+        "class": "MODERATE",
+        "index": 289.85362045201276,
+        "lead_day": 2,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20250811_day3_24h",
+        "class": "MODERATE",
+        "index": 370.2244777620328,
+        "lead_day": 3,
+        "percentile_vs_training": 0.615
+      },
+      {
+        "case_id": "20250812_day1_24h",
+        "class": "MODERATE",
+        "index": 329.22903795320985,
+        "lead_day": 1,
+        "percentile_vs_training": 0.505
+      },
+      {
+        "case_id": "20250812_day2_24h",
+        "class": "STRONG",
+        "index": 402.654747155207,
+        "lead_day": 2,
+        "percentile_vs_training": 0.68
+      },
+      {
+        "case_id": "20250812_day3_24h",
+        "class": "STRONG",
+        "index": 417.2610345531844,
+        "lead_day": 3,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20250813_day2_24h",
+        "class": "STRONG",
+        "index": 441.26252062507893,
+        "lead_day": 2,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20250814_day1_24h",
+        "class": "STRONG",
+        "index": 436.6197538267336,
+        "lead_day": 1,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20250814_day2_24h",
+        "class": "STRONG",
+        "index": 404.51514624249035,
+        "lead_day": 2,
+        "percentile_vs_training": 0.68
+      },
+      {
+        "case_id": "20250814_day3_24h",
+        "class": "MODERATE",
+        "index": 389.0977275075167,
+        "lead_day": 3,
+        "percentile_vs_training": 0.66
+      },
+      {
+        "case_id": "20250815_day1_24h",
+        "class": "STRONG",
+        "index": 491.541823785967,
+        "lead_day": 1,
+        "percentile_vs_training": 0.835
+      },
+      {
+        "case_id": "20250815_day3_24h",
+        "class": "STRONG",
+        "index": 553.1631338702705,
+        "lead_day": 3,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250816_day1_24h",
+        "class": "STRONG",
+        "index": 481.51334274562214,
+        "lead_day": 1,
+        "percentile_vs_training": 0.81
+      },
+      {
+        "case_id": "20250816_day3_24h",
+        "class": "STRONG",
+        "index": 560.9460188332492,
+        "lead_day": 3,
+        "percentile_vs_training": 0.91
+      },
+      {
+        "case_id": "20250817_day1_24h",
+        "class": "STRONG",
+        "index": 626.2677075712753,
+        "lead_day": 1,
+        "percentile_vs_training": 0.945
+      },
+      {
+        "case_id": "20250817_day2_24h",
+        "class": "STRONG",
+        "index": 610.8656698430564,
+        "lead_day": 2,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20250817_day3_24h",
+        "class": "STRONG",
+        "index": 540.126850592724,
+        "lead_day": 3,
+        "percentile_vs_training": 0.88
+      },
+      {
+        "case_id": "20250818_day2_24h",
+        "class": "STRONG",
+        "index": 601.0271327805261,
+        "lead_day": 2,
+        "percentile_vs_training": 0.935
+      },
+      {
+        "case_id": "20250818_day3_24h",
+        "class": "STRONG",
+        "index": 489.39663541797074,
+        "lead_day": 3,
+        "percentile_vs_training": 0.835
+      },
+      {
+        "case_id": "20250820_day1_24h",
+        "class": "STRONG",
+        "index": 436.1679591377535,
+        "lead_day": 1,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20250820_day2_24h",
+        "class": "MODERATE",
+        "index": 297.0892126190544,
+        "lead_day": 2,
+        "percentile_vs_training": 0.46
+      },
+      {
+        "case_id": "20250822_day1_24h",
+        "class": "MODERATE",
+        "index": 363.84266077330494,
+        "lead_day": 1,
+        "percentile_vs_training": 0.615
+      },
+      {
+        "case_id": "20250822_day2_24h",
+        "class": "MODERATE",
+        "index": 391.35793097774257,
+        "lead_day": 2,
+        "percentile_vs_training": 0.665
+      },
+      {
+        "case_id": "20250823_day1_24h",
+        "class": "MODERATE",
+        "index": 389.402545563417,
+        "lead_day": 1,
+        "percentile_vs_training": 0.665
+      },
+      {
+        "case_id": "20250823_day3_24h",
+        "class": "STRONG",
+        "index": 432.6975859940307,
+        "lead_day": 3,
+        "percentile_vs_training": 0.73
+      },
+      {
+        "case_id": "20250824_day1_24h",
+        "class": "MODERATE",
+        "index": 345.2779192692572,
+        "lead_day": 1,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20250824_day2_24h",
+        "class": "MODERATE",
+        "index": 350.6719565652997,
+        "lead_day": 2,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20250824_day3_24h",
+        "class": "STRONG",
+        "index": 431.69786624909875,
+        "lead_day": 3,
+        "percentile_vs_training": 0.725
+      },
+      {
+        "case_id": "20250825_day1_24h",
+        "class": "MODERATE",
+        "index": 331.7487147989327,
+        "lead_day": 1,
+        "percentile_vs_training": 0.51
+      },
+      {
+        "case_id": "20250825_day2_24h",
+        "class": "STRONG",
+        "index": 410.1717094750982,
+        "lead_day": 2,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20250825_day3_24h",
+        "class": "STRONG",
+        "index": 435.2999874633326,
+        "lead_day": 3,
+        "percentile_vs_training": 0.74
+      },
+      {
+        "case_id": "20250826_day1_24h",
+        "class": "STRONG",
+        "index": 416.08551892661495,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20250826_day2_24h",
+        "class": "STRONG",
+        "index": 429.60467335321545,
+        "lead_day": 2,
+        "percentile_vs_training": 0.72
+      },
+      {
+        "case_id": "20250826_day3_24h",
+        "class": "MODERATE",
+        "index": 387.3795418853273,
+        "lead_day": 3,
+        "percentile_vs_training": 0.655
+      },
+      {
+        "case_id": "20250827_day1_24h",
+        "class": "STRONG",
+        "index": 462.4128525608766,
+        "lead_day": 1,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250827_day2_24h",
+        "class": "STRONG",
+        "index": 404.7279366183581,
+        "lead_day": 2,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20250828_day1_24h",
+        "class": "STRONG",
+        "index": 478.82737507068026,
+        "lead_day": 1,
+        "percentile_vs_training": 0.79
+      },
+      {
+        "case_id": "20250828_day2_24h",
+        "class": "MODERATE",
+        "index": 384.8386850814976,
+        "lead_day": 2,
+        "percentile_vs_training": 0.65
+      },
+      {
+        "case_id": "20250829_day1_24h",
+        "class": "STRONG",
+        "index": 407.22657247413696,
+        "lead_day": 1,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20250829_day2_24h",
+        "class": "MODERATE",
+        "index": 381.1007094281779,
+        "lead_day": 2,
+        "percentile_vs_training": 0.64
+      },
+      {
+        "case_id": "20250829_day3_24h",
+        "class": "STRONG",
+        "index": 406.8890947548051,
+        "lead_day": 3,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20250830_day1_24h",
+        "class": "MODERATE",
+        "index": 380.6045636013701,
+        "lead_day": 1,
+        "percentile_vs_training": 0.64
+      },
+      {
+        "case_id": "20250830_day2_24h",
+        "class": "STRONG",
+        "index": 414.6828672866806,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20250830_day3_24h",
+        "class": "STRONG",
+        "index": 409.4387337316887,
+        "lead_day": 3,
+        "percentile_vs_training": 0.685
+      },
+      {
+        "case_id": "20250831_day1_24h",
+        "class": "STRONG",
+        "index": 403.1114703912395,
+        "lead_day": 1,
+        "percentile_vs_training": 0.68
+      },
+      {
+        "case_id": "20250831_day2_24h",
+        "class": "STRONG",
+        "index": 410.93952260082114,
+        "lead_day": 2,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20250831_day3_24h",
+        "class": "MODERATE",
+        "index": 384.2944591358586,
+        "lead_day": 3,
+        "percentile_vs_training": 0.65
+      },
+      {
+        "case_id": "20250901_day1_24h",
+        "class": "STRONG",
+        "index": 414.56607559169413,
+        "lead_day": 1,
+        "percentile_vs_training": 0.7
+      },
+      {
+        "case_id": "20250901_day3_24h",
+        "class": "MODERATE",
+        "index": 375.2876293350735,
+        "lead_day": 3,
+        "percentile_vs_training": 0.62
+      },
+      {
+        "case_id": "20250902_day1_24h",
+        "class": "MODERATE",
+        "index": 348.47851790652334,
+        "lead_day": 1,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20250902_day2_24h",
+        "class": "MODERATE",
+        "index": 329.0703906051113,
+        "lead_day": 2,
+        "percentile_vs_training": 0.505
+      },
+      {
+        "case_id": "20250902_day3_24h",
+        "class": "MODERATE",
+        "index": 349.451390256178,
+        "lead_day": 3,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20250903_day2_24h",
+        "class": "MODERATE",
+        "index": 329.3422200055444,
+        "lead_day": 2,
+        "percentile_vs_training": 0.505
+      },
+      {
+        "case_id": "20250903_day3_24h",
+        "class": "MODERATE",
+        "index": 355.67675574586565,
+        "lead_day": 3,
+        "percentile_vs_training": 0.565
+      },
+      {
+        "case_id": "20250904_day1_24h",
+        "class": "MODERATE",
+        "index": 327.0408172628423,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5
+      },
+      {
+        "case_id": "20250904_day2_24h",
+        "class": "MODERATE",
+        "index": 330.3542240674373,
+        "lead_day": 2,
+        "percentile_vs_training": 0.505
+      },
+      {
+        "case_id": "20250904_day3_24h",
+        "class": "MODERATE",
+        "index": 319.9634712403206,
+        "lead_day": 3,
+        "percentile_vs_training": 0.5
+      },
+      {
+        "case_id": "20250905_day2_24h",
+        "class": "MODERATE",
+        "index": 301.31072345994966,
+        "lead_day": 2,
+        "percentile_vs_training": 0.47
+      },
+      {
+        "case_id": "20250905_day3_24h",
+        "class": "WEAK",
+        "index": 230.49163411710524,
+        "lead_day": 3,
+        "percentile_vs_training": 0.3
+      },
+      {
+        "case_id": "20250906_day1_24h",
+        "class": "MODERATE",
+        "index": 303.1442462523415,
+        "lead_day": 1,
+        "percentile_vs_training": 0.47
+      },
+      {
+        "case_id": "20250906_day3_24h",
+        "class": "WEAK",
+        "index": 124.27122835164859,
+        "lead_day": 3,
+        "percentile_vs_training": 0.06
+      },
+      {
+        "case_id": "20250907_day1_24h",
+        "class": "WEAK",
+        "index": 243.46467766810812,
+        "lead_day": 1,
+        "percentile_vs_training": 0.315
+      },
+      {
+        "case_id": "20250907_day2_24h",
+        "class": "WEAK",
+        "index": 111.79901626693714,
+        "lead_day": 2,
+        "percentile_vs_training": 0.055
+      },
+      {
+        "case_id": "20250907_day3_24h",
+        "class": "WEAK",
+        "index": 81.59671991490623,
+        "lead_day": 3,
+        "percentile_vs_training": 0.03
+      },
+      {
+        "case_id": "20250909_day3_24h",
+        "class": "WEAK",
+        "index": 113.5118786943275,
+        "lead_day": 3,
+        "percentile_vs_training": 0.055
+      },
+      {
+        "case_id": "20250911_day1_24h",
+        "class": "WEAK",
+        "index": 99.56567938518889,
+        "lead_day": 1,
+        "percentile_vs_training": 0.045
+      },
+      {
+        "case_id": "20250911_day2_24h",
+        "class": "WEAK",
+        "index": 38.22641728268555,
+        "lead_day": 2,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20250911_day3_24h",
+        "class": "WEAK",
+        "index": 183.13931178751835,
+        "lead_day": 3,
+        "percentile_vs_training": 0.155
+      },
+      {
+        "case_id": "20250912_day1_24h",
+        "class": "WEAK",
+        "index": 30.827563116527827,
+        "lead_day": 1,
+        "percentile_vs_training": 0.0
+      },
+      {
+        "case_id": "20250914_day1_24h",
+        "class": "WEAK",
+        "index": 202.12104105473117,
+        "lead_day": 1,
+        "percentile_vs_training": 0.2
+      },
+      {
+        "case_id": "20250914_day2_24h",
+        "class": "WEAK",
+        "index": 172.82449687758591,
+        "lead_day": 2,
+        "percentile_vs_training": 0.145
+      },
+      {
+        "case_id": "20250914_day3_24h",
+        "class": "WEAK",
+        "index": 240.7433100544827,
+        "lead_day": 3,
+        "percentile_vs_training": 0.31
+      },
+      {
+        "case_id": "20250915_day2_24h",
+        "class": "WEAK",
+        "index": 193.6203139868979,
+        "lead_day": 2,
+        "percentile_vs_training": 0.185
+      },
+      {
+        "case_id": "20250916_day1_24h",
+        "class": "WEAK",
+        "index": 158.79666750463275,
+        "lead_day": 1,
+        "percentile_vs_training": 0.11
+      },
+      {
+        "case_id": "20250916_day2_24h",
+        "class": "WEAK",
+        "index": 190.42657512671403,
+        "lead_day": 2,
+        "percentile_vs_training": 0.17
+      },
+      {
+        "case_id": "20250917_day1_24h",
+        "class": "WEAK",
+        "index": 144.9683275907665,
+        "lead_day": 1,
+        "percentile_vs_training": 0.09
+      },
+      {
+        "case_id": "20250918_day1_24h",
+        "class": "WEAK",
+        "index": 215.49514968491528,
+        "lead_day": 1,
+        "percentile_vs_training": 0.245
+      },
+      {
+        "case_id": "20250918_day2_24h",
+        "class": "WEAK",
+        "index": 200.82287893730526,
+        "lead_day": 2,
+        "percentile_vs_training": 0.2
+      },
+      {
+        "case_id": "20250918_day3_24h",
+        "class": "WEAK",
+        "index": 194.44076502455542,
+        "lead_day": 3,
+        "percentile_vs_training": 0.185
+      },
+      {
+        "case_id": "20250919_day2_24h",
+        "class": "WEAK",
+        "index": 158.0258185160979,
+        "lead_day": 2,
+        "percentile_vs_training": 0.11
+      },
+      {
+        "case_id": "20250920_day2_24h",
+        "class": "WEAK",
+        "index": 127.08531131492805,
+        "lead_day": 2,
+        "percentile_vs_training": 0.065
+      },
+      {
+        "case_id": "20250920_day3_24h",
+        "class": "WEAK",
+        "index": 204.18973600756175,
+        "lead_day": 3,
+        "percentile_vs_training": 0.215
+      },
+      {
+        "case_id": "20250921_day2_24h",
+        "class": "WEAK",
+        "index": 209.00117598582634,
+        "lead_day": 2,
+        "percentile_vs_training": 0.235
+      },
+      {
+        "case_id": "20250921_day3_24h",
+        "class": "MODERATE",
+        "index": 300.54687698553903,
+        "lead_day": 3,
+        "percentile_vs_training": 0.47
+      },
+      {
+        "case_id": "20250922_day1_24h",
+        "class": "MODERATE",
+        "index": 288.7187360408836,
+        "lead_day": 1,
+        "percentile_vs_training": 0.44
+      },
+      {
+        "case_id": "20250922_day2_24h",
+        "class": "MODERATE",
+        "index": 285.8062516848212,
+        "lead_day": 2,
+        "percentile_vs_training": 0.435
+      },
+      {
+        "case_id": "20250922_day3_24h",
+        "class": "MODERATE",
+        "index": 263.69774928331555,
+        "lead_day": 3,
+        "percentile_vs_training": 0.38
+      },
+      {
+        "case_id": "20250923_day1_24h",
+        "class": "MODERATE",
+        "index": 299.4236670007801,
+        "lead_day": 1,
+        "percentile_vs_training": 0.47
+      },
+      {
+        "case_id": "20250923_day2_24h",
+        "class": "MODERATE",
+        "index": 261.77924178675056,
+        "lead_day": 2,
+        "percentile_vs_training": 0.37
+      },
+      {
+        "case_id": "20250923_day3_24h",
+        "class": "WEAK",
+        "index": 180.1069605409547,
+        "lead_day": 3,
+        "percentile_vs_training": 0.155
+      },
+      {
+        "case_id": "20250924_day2_24h",
+        "class": "WEAK",
+        "index": 233.80919237285144,
+        "lead_day": 2,
+        "percentile_vs_training": 0.3
+      },
+      {
+        "case_id": "20250925_day2_24h",
+        "class": "MODERATE",
+        "index": 281.33438922318425,
+        "lead_day": 2,
+        "percentile_vs_training": 0.425
+      },
+      {
+        "case_id": "20250925_day3_24h",
+        "class": "MODERATE",
+        "index": 329.52755752753444,
+        "lead_day": 3,
+        "percentile_vs_training": 0.505
+      },
+      {
+        "case_id": "20250926_day1_24h",
+        "class": "MODERATE",
+        "index": 318.4632747278704,
+        "lead_day": 1,
+        "percentile_vs_training": 0.5
+      },
+      {
+        "case_id": "20250926_day2_24h",
+        "class": "MODERATE",
+        "index": 335.2458033689621,
+        "lead_day": 2,
+        "percentile_vs_training": 0.52
+      },
+      {
+        "case_id": "20250926_day3_24h",
+        "class": "STRONG",
+        "index": 459.29105736133624,
+        "lead_day": 3,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250927_day2_24h",
+        "class": "STRONG",
+        "index": 464.72635061309603,
+        "lead_day": 2,
+        "percentile_vs_training": 0.765
+      },
+      {
+        "case_id": "20250927_day3_24h",
+        "class": "MODERATE",
+        "index": 349.00355174677037,
+        "lead_day": 3,
+        "percentile_vs_training": 0.545
+      },
+      {
+        "case_id": "20250928_day1_24h",
+        "class": "STRONG",
+        "index": 469.34127823116705,
+        "lead_day": 1,
+        "percentile_vs_training": 0.775
+      },
+      {
+        "case_id": "20250928_day3_24h",
+        "class": "MODERATE",
+        "index": 369.393961517128,
+        "lead_day": 3,
+        "percentile_vs_training": 0.615
+      },
+      {
+        "case_id": "20250929_day2_24h",
+        "class": "MODERATE",
+        "index": 335.0214515602137,
+        "lead_day": 2,
+        "percentile_vs_training": 0.52
+      },
+      {
+        "case_id": "20250929_day3_24h",
+        "class": "MODERATE",
+        "index": 334.7492581674354,
+        "lead_day": 3,
+        "percentile_vs_training": 0.52
+      },
+      {
+        "case_id": "20250930_day2_24h",
+        "class": "MODERATE",
+        "index": 340.7825904318793,
+        "lead_day": 2,
+        "percentile_vs_training": 0.53
+      },
+      {
+        "case_id": "20251003_day1_24h",
+        "class": "WEAK",
+        "index": 185.47087806031072,
+        "lead_day": 1,
+        "percentile_vs_training": 0.165
+      }
+    ]
+  },
+  "schema": "coastal-regime-cases-v1"
+}

@@ -1,0 +1,70 @@
+{
+  "cases": 251,
+  "development": true,
+  "discrimination": {
+    "repeats": 2000,
+    "seed": 26080,
+    "spearman": {
+      "excludes_zero": true,
+      "interval95": [
+        0.7392545363116211,
+        0.832025859302728
+      ],
+      "point": 0.7910573705643765,
+      "status": "ok",
+      "valid_draws": 2000
+    },
+    "strong_minus_weak_heavy_fraction": {
+      "excludes_zero": true,
+      "interval95": [
+        0.15649271928639796,
+        0.20974611402213902
+      ],
+      "point": 0.18201896642263612,
+      "status": "ok",
+      "valid_draws": 2000
+    }
+  },
+  "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+  "groups": {
+    "MODERATE": {
+      "cases": 50,
+      "heavy_event_pairs": 71,
+      "mean_heavy_fraction": 0.013027522935779818,
+      "share_of_all_heavy_event_pairs": 0.02545715310147006,
+      "share_of_cases_with_a_heavy_cell": 0.44
+    },
+    "STRONG": {
+      "cases": 135,
+      "heavy_event_pairs": 2705,
+      "mean_heavy_fraction": 0.1838260278627251,
+      "share_of_all_heavy_event_pairs": 0.969881678020796,
+      "share_of_cases_with_a_heavy_cell": 0.8814814814814815
+    },
+    "WEAK": {
+      "cases": 66,
+      "heavy_event_pairs": 13,
+      "mean_heavy_fraction": 0.001807061440088963,
+      "share_of_all_heavy_event_pairs": 0.004661168877733955,
+      "share_of_cases_with_a_heavy_cell": 0.16666666666666666
+    }
+  },
+  "label": "Track A 2018 validation year: development evidence",
+  "observed_heavy_event_pairs": 2789,
+  "population": "A2018",
+  "protocol_sha256": "f55beb112943dc586e64441bd9c447bbf032fdb10ebeb35d94b960078676e8f9",
+  "regime_nature": "rule-based forecast-time heuristic of the physical forcing; not a learned or validated regime and not a probability",
+  "reproduction": {
+    "checks": [
+      "observed zone heavy pairs equal the Stage 1 zone evidence",
+      "class counts equal the frozen forecast-only counts",
+      "group totals equal an independent sum"
+    ],
+    "status": "REPRODUCED"
+  },
+  "schema": "coastal-regime-evidence-v1",
+  "stage1_heavy_event_pairs": 2789,
+  "supported": true,
+  "track": "A",
+  "year": 2018
+}

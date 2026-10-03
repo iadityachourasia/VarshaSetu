@@ -1,0 +1,70 @@
+{
+  "cases": 255,
+  "development": false,
+  "discrimination": {
+    "repeats": 2000,
+    "seed": 26080,
+    "spearman": {
+      "excludes_zero": true,
+      "interval95": [
+        0.7315069303073464,
+        0.8477531190101791
+      ],
+      "point": 0.797302872868459,
+      "status": "ok",
+      "valid_draws": 2000
+    },
+    "strong_minus_weak_heavy_fraction": {
+      "excludes_zero": true,
+      "interval95": [
+        0.17412411073648365,
+        0.24466106172149515
+      ],
+      "point": 0.2094948247471183,
+      "status": "ok",
+      "valid_draws": 2000
+    }
+  },
+  "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+  "groups": {
+    "MODERATE": {
+      "cases": 51,
+      "heavy_event_pairs": 228,
+      "mean_heavy_fraction": 0.04101457096600109,
+      "share_of_all_heavy_event_pairs": 0.05595092024539877,
+      "share_of_cases_with_a_heavy_cell": 0.7843137254901961
+    },
+    "STRONG": {
+      "cases": 156,
+      "heavy_event_pairs": 3780,
+      "mean_heavy_fraction": 0.22230063514467183,
+      "share_of_all_heavy_event_pairs": 0.9276073619631902,
+      "share_of_cases_with_a_heavy_cell": 0.9166666666666666
+    },
+    "WEAK": {
+      "cases": 48,
+      "heavy_event_pairs": 67,
+      "mean_heavy_fraction": 0.012805810397553519,
+      "share_of_all_heavy_event_pairs": 0.016441717791411042,
+      "share_of_cases_with_a_heavy_cell": 0.2916666666666667
+    }
+  },
+  "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST",
+  "observed_heavy_event_pairs": 4075,
+  "population": "A2019",
+  "protocol_sha256": "f55beb112943dc586e64441bd9c447bbf032fdb10ebeb35d94b960078676e8f9",
+  "regime_nature": "rule-based forecast-time heuristic of the physical forcing; not a learned or validated regime and not a probability",
+  "reproduction": {
+    "checks": [
+      "observed zone heavy pairs equal the Stage 1 zone evidence",
+      "class counts equal the frozen forecast-only counts",
+      "group totals equal an independent sum"
+    ],
+    "status": "REPRODUCED"
+  },
+  "schema": "coastal-regime-evidence-v1",
+  "stage1_heavy_event_pairs": 4075,
+  "supported": true,
+  "track": "A",
+  "year": 2019
+}

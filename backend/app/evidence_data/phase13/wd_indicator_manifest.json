@@ -1,0 +1,44 @@
+{
+  "cases_file_sha256": "bcb6b516f11577f75d2bfddbf7e2ecc0c9414a33d7f3b7364a66bf9686bbd260",
+  "decision": {
+    "associated": false,
+    "rule": "in BOTH development populations (2021 and 2024) the flagged-minus-not-flagged mean rainfall is positive with the 95 percent interval excluding zero and the population meets the support gate",
+    "wording": "no association with observed rainfall in the north-west India rain box on the development evidence; the indicator is shown without a claim"
+  },
+  "files": {
+    "wd_indicator_2021.json": {
+      "development": true,
+      "evidence_role": "WD_2021_DEVELOPMENT_YEAR_NEVER_USED_FOR_ANY_SELECTION",
+      "sha256": "4b7cfead27c1f4175fb67d42aaee4a337e148a9563e6e2df982137a7803347b2",
+      "supported": true,
+      "year": 2021
+    },
+    "wd_indicator_2022.json": {
+      "development": false,
+      "evidence_role": "WD_2022_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2022_FINAL_TEST",
+      "sha256": "a1ad966b0761fd11d3d68f9ae839e404601c7c62cf5b03de087fa230f6f3e5ae",
+      "supported": true,
+      "year": 2022
+    },
+    "wd_indicator_2024.json": {
+      "development": true,
+      "evidence_role": "WD_2024_DEVELOPMENT_YEAR_REUSED_FOR_MODEL_SELECTION",
+      "sha256": "e0828f7216765c69af4e3e8b383e6f9b40fe3196b0d6216d2b334d7ee3a9880f",
+      "supported": true,
+      "year": 2024
+    },
+    "wd_indicator_2025.json": {
+      "development": false,
+      "evidence_role": "WD_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST",
+      "sha256": "c44104254e4db11b671ffa8c2b774f3035de0749895190ca5b10ff9c0620e3fa",
+      "supported": true,
+      "year": 2025
+    }
+  },
+  "notes": [
+    "A rule-based forecast-time trough heuristic; not a validated detection of western disturbances.",
+    "2022 and 2025 are consumed holdouts: post-hoc descriptive analyses only."
+  ],
+  "protocol_sha256": "cce1d4240b51821981a1ec20b0d88f96de652c0b83436b4e8409e0d956ace18f",
+  "schema": "wd-indicator-manifest-v1"
+}

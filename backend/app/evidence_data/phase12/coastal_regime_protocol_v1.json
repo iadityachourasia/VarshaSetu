@@ -1,0 +1,130 @@
+{
+  "approval": {
+    "approved_by": "project owner",
+    "note": "Interpretation of a general instruction; the owner may withdraw it.",
+    "record": "owner instruction of 2026-10-03: 'make a full plan to implement everything left partial or not completely and implement'; work package WP-C of docs/134"
+  },
+  "decision_rule": {
+    "discriminates_only_if": "in BOTH development populations (Track A 2018 and Track B 2024) the strong-minus-weak difference is positive with the 95 percent interval excluding zero and the population meets the support gate",
+    "post_hoc_populations": "2019 and 2025 are reported descriptively and cannot change the decision",
+    "wording_if_met": "a rule-based forecast-time heuristic whose STRONG class concentrates observed Ghats-coast heavy rain; not a validated or learned regime",
+    "wording_if_not_met": "the heuristic does not discriminate on the development evidence and is shown without a claim"
+  },
+  "definition": {
+    "cases_file_sha256": "c1d945dcb65eb55d6e59f6c8c2b98346133749b650b00554e6071b2ae8134341",
+    "classes": "WEAK below the lower tercile of the training-year index, STRONG at or above the upper tercile, MODERATE between",
+    "cut_points": {
+      "A": {
+        "cases_listed": 258,
+        "degenerate": false,
+        "q33": 282.0366009516896,
+        "q67": 408.1067005025567,
+        "training_cases": 258,
+        "training_year": 2017
+      },
+      "B": {
+        "cases_listed": 200,
+        "degenerate": false,
+        "q33": 247.1601031867593,
+        "q67": 392.1856428746358,
+        "training_cases": 200,
+        "training_year": 2023
+      }
+    },
+    "index": "mean over the land cells of the Ghats-coast zone (coastal and orographic, docs/115) of the forecast cross-barrier forcing of docs/118 (850 hPa wind component along the local terrain gradient, positive upslope, times precipitable water)",
+    "inputs": "forecast U850, V850 and PWAT on the 0.5 degree context grid resampled to the 49 by 49 target grid, plus static terrain geometry; no observation and no model output",
+    "percentile": "rank of the index within the training-year distribution (not a probability)",
+    "static_geography_sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0"
+  },
+  "evaluation": {
+    "observed_quantity": "per case, the number of heavy-rain cells (at least 64.5 mm per 24 h) among the valid IMD land cells of the zone, and their fraction",
+    "statistics": [
+      "per class: cases, heavy event pairs, share of all heavy zone event pairs, mean heavy fraction, share of cases with a heavy cell",
+      "strong-minus-weak mean heavy fraction and the Spearman rank correlation of the index with the heavy fraction, each with a 95 percent whole-case bootstrap interval"
+    ],
+    "support_gate": {
+      "min_cases_per_class": 30,
+      "min_heavy_event_pairs": 30,
+      "otherwise": "insufficient_support, no number"
+    },
+    "uncertainty": {
+      "note": "optimistic: consecutive days are correlated",
+      "repeats": 2000,
+      "seed": 26080
+    }
+  },
+  "forbidden": [
+    "fitting a threshold on any validation or test year",
+    "changing the index, classes, rule or gate after any observation is compared",
+    "calling the heuristic a validated or learned regime",
+    "reading the percentile as a probability",
+    "pooling Track A and Track B"
+  ],
+  "no_observation_read": true,
+  "populations": {
+    "A2018": {
+      "development": true,
+      "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+      "forecast_only_counts": {
+        "MODERATE": 50,
+        "STRONG": 135,
+        "WEAK": 66,
+        "cases": 251,
+        "undefined_index": 0
+      },
+      "label": "Track A 2018 validation year: development evidence",
+      "track": "A",
+      "year": 2018
+    },
+    "A2019": {
+      "development": false,
+      "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+      "forecast_only_counts": {
+        "MODERATE": 51,
+        "STRONG": 156,
+        "WEAK": 48,
+        "cases": 255,
+        "undefined_index": 0
+      },
+      "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST",
+      "track": "A",
+      "year": 2019
+    },
+    "B2024": {
+      "development": true,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "forecast_only_counts": {
+        "MODERATE": 40,
+        "STRONG": 99,
+        "WEAK": 44,
+        "cases": 183,
+        "undefined_index": 0
+      },
+      "label": "Track B 2024 validation/selection year: development evidence",
+      "track": "B",
+      "year": 2024
+    },
+    "B2025": {
+      "development": false,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "forecast_only_counts": {
+        "MODERATE": 68,
+        "STRONG": 120,
+        "WEAK": 44,
+        "cases": 232,
+        "undefined_index": 0
+      },
+      "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+      "track": "B",
+      "year": 2025
+    }
+  },
+  "purpose": "Define a forecast-time coastal and orographic forcing regime and the test of whether it discriminates observed Ghats-coast heavy rain, BEFORE any observation is compared. A rule-based heuristic of the physical forcing, not a learned or validated regime and not a probability.",
+  "reproduction_gate": [
+    "the observed heavy event pairs of every population must equal the Stage 1 zone evidence for the same cases exactly",
+    "class counts must equal the frozen forecast-only counts",
+    "the group event totals must equal an independent sum"
+  ],
+  "schema": "coastal-regime-protocol-v1",
+  "status": "APPROVED_FOR_EXECUTION"
+}

@@ -1,0 +1,129 @@
+{
+  "approval": {
+    "approved_by": "project owner",
+    "note": "Interpretation of a general instruction (label source option C, monsoon season only, no new download, the evaluation domain left unchanged); the owner may withdraw it.",
+    "record": "owner instruction of 2026-10-03: 'make a full plan to implement everything left partial or not completely and implement'; work package WP-D of docs/134, option C of docs/122"
+  },
+  "decision_rule": {
+    "associated_only_if": "in BOTH development populations (2021 and 2024) the flagged-minus-not-flagged mean rainfall is positive with the 95 percent interval excluding zero and the population meets the support gate",
+    "post_hoc_populations": "2022 and 2025 are reported descriptively and cannot change the decision",
+    "wording_if_met": "the heuristic indicator is associated with higher observed rainfall in the western Himalaya and Punjab region; this is not a validation that it detects western disturbances",
+    "wording_if_not_met": "no association with observed rainfall in the north-west India rain box on the development evidence; the indicator is shown without a claim"
+  },
+  "definition": {
+    "boxes": {
+      "indicator": [
+        25.0,
+        38.0,
+        62.0,
+        78.0
+      ],
+      "rain": [
+        28.0,
+        36.0,
+        70.0,
+        80.0
+      ]
+    },
+    "cases_file_sha256": "bcb6b516f11577f75d2bfddbf7e2ecc0c9414a33d7f3b7364a66bf9686bbd260",
+    "flag": "indicator at or above the upper tercile of the 2023 training-year distribution",
+    "indicator": "mean geostrophic relative vorticity at 500 hPa over the box 25-38 N, 62-78 E, from the forecast 500 hPa geopotential height alone (spherical centred differences), in units of 1e-5 per second; positive is cyclonic",
+    "inputs": "the stored global 0.5 degree forecast HGT 500 mb message of the control member at the lead hour (24, 48, 72); no observation, model output or other field",
+    "lineage": "every raw message's hash is checked against its HASH_VERIFIED receipt before decoding",
+    "threshold": {
+      "threshold": -0.039431974900667646,
+      "training_cases": 375,
+      "training_mean": -0.31210224791473246,
+      "training_std": 0.6270086833220054
+    },
+    "training_year": 2023
+  },
+  "evaluation": {
+    "observed_quantity": "IMD area-mean daily rainfall over the valid cells of the rain box 28-36 N, 70-80 E (western Himalaya and Punjab plains), on the day initialization date + lead day",
+    "statistics": [
+      "flagged versus not flagged: cases and mean observed rainfall",
+      "flagged-minus-not-flagged mean rainfall and the Spearman correlation of the indicator with the rainfall, each with a 95 percent bootstrap interval over initialization dates"
+    ],
+    "support_gate": {
+      "min_flagged_cases": 30,
+      "min_not_flagged_cases": 30,
+      "otherwise": "insufficient_support, no number"
+    },
+    "uncertainty": {
+      "note": "optimistic: consecutive dates are correlated",
+      "repeats": 2000,
+      "seed": 26080,
+      "unit": "initialization date"
+    }
+  },
+  "forbidden": [
+    "fitting the threshold on any development or post-hoc year",
+    "changing the boxes, the flag or the rule after any observation is compared",
+    "calling the flag a validated detection of western disturbances",
+    "using the indicator as an input to any correction model"
+  ],
+  "no_observation_read": true,
+  "not_established_whatever_the_result": [
+    "that a flagged case contains a western disturbance (no label source exists)",
+    "any skill of a western-disturbance-aware correction (none exists)",
+    "behaviour in winter, when these systems mainly act (the corpus is June to early October)"
+  ],
+  "populations": {
+    "2021": {
+      "evidence_role": "WD_2021_DEVELOPMENT_YEAR_NEVER_USED_FOR_ANY_SELECTION",
+      "forecast_only_counts": {
+        "cases": 375,
+        "flagged": 151,
+        "not_flagged": 224,
+        "undefined_index": 0
+      },
+      "label": "Track B-style 2021: development year (never used for any selection)",
+      "role": "development",
+      "year": 2021
+    },
+    "2022": {
+      "evidence_role": "WD_2022_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2022_FINAL_TEST",
+      "forecast_only_counts": {
+        "cases": 375,
+        "flagged": 126,
+        "not_flagged": 249,
+        "undefined_index": 0
+      },
+      "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2022 FINAL TEST",
+      "role": "post_hoc",
+      "year": 2022
+    },
+    "2024": {
+      "evidence_role": "WD_2024_DEVELOPMENT_YEAR_REUSED_FOR_MODEL_SELECTION",
+      "forecast_only_counts": {
+        "cases": 375,
+        "flagged": 99,
+        "not_flagged": 276,
+        "undefined_index": 0
+      },
+      "label": "2024 validation/selection year: development evidence",
+      "role": "development",
+      "year": 2024
+    },
+    "2025": {
+      "evidence_role": "WD_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST",
+      "forecast_only_counts": {
+        "cases": 375,
+        "flagged": 81,
+        "not_flagged": 294,
+        "undefined_index": 0
+      },
+      "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+      "role": "post_hoc",
+      "year": 2025
+    }
+  },
+  "purpose": "Define a forecast-time western-disturbance indicator and the descriptive test of whether it relates to observed north-west India rainfall, BEFORE any observation is compared. A rule-based trough heuristic (docs/122 option C); not a validated detection of western disturbances.",
+  "reproduction_gate": [
+    "flag counts must equal the frozen forecast-only counts",
+    "the group case counts must sum to the cases with a defined index and a rainfall value",
+    "one group mean must equal an independent loop"
+  ],
+  "schema": "wd-indicator-protocol-v1",
+  "status": "APPROVED_FOR_EXECUTION"
+}

@@ -1,0 +1,45 @@
+{
+  "cases_file_sha256": "c1d945dcb65eb55d6e59f6c8c2b98346133749b650b00554e6071b2ae8134341",
+  "decision": {
+    "discriminates": true,
+    "rule": "in BOTH development populations (Track A 2018 and Track B 2024) the strong-minus-weak difference is positive with the 95 percent interval excluding zero and the population meets the support gate",
+    "wording": "a rule-based forecast-time heuristic whose STRONG class concentrates observed Ghats-coast heavy rain; not a validated or learned regime"
+  },
+  "files": {
+    "coastal_regime_A_2018.json": {
+      "development": true,
+      "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+      "population": "A2018",
+      "sha256": "0fa0a8fcf6fc0f8b53ac83afce9991b7931f5af60836647ecd64f8982fdf1b42",
+      "supported": true
+    },
+    "coastal_regime_A_2019.json": {
+      "development": false,
+      "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+      "population": "A2019",
+      "sha256": "f862f57e9347ed37448ed1ec1c232e4526b6253e2ff82a9d39df434191ad044f",
+      "supported": true
+    },
+    "coastal_regime_B_2024.json": {
+      "development": true,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "population": "B2024",
+      "sha256": "0716eecf0ed3a84515aaa5bf179819dc75eca9593484220e51de0f8d0350de95",
+      "supported": true
+    },
+    "coastal_regime_B_2025.json": {
+      "development": false,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "population": "B2025",
+      "sha256": "faea3a1d357985baa6bff90a59dbaa4e4f440fc6c0252e3b989e5b6c17cff9b4",
+      "supported": true
+    }
+  },
+  "notes": [
+    "A rule-based heuristic of the physical forcing, not a learned or validated regime.",
+    "2019 and 2025 are consumed holdouts: post-hoc descriptive analyses only.",
+    "Tracks are never pooled."
+  ],
+  "protocol_sha256": "f55beb112943dc586e64441bd9c447bbf032fdb10ebeb35d94b960078676e8f9",
+  "schema": "coastal-regime-manifest-v1"
+}

@@ -1,0 +1,70 @@
+{
+  "cases": 232,
+  "development": false,
+  "discrimination": {
+    "repeats": 2000,
+    "seed": 26080,
+    "spearman": {
+      "excludes_zero": true,
+      "interval95": [
+        0.4955879527740142,
+        0.6927253277215504
+      ],
+      "point": 0.5948335912384578,
+      "status": "ok",
+      "valid_draws": 2000
+    },
+    "strong_minus_weak_heavy_fraction": {
+      "excludes_zero": true,
+      "interval95": [
+        0.11648477406934647,
+        0.1680335623143491
+      ],
+      "point": 0.14203502919099248,
+      "status": "ok",
+      "valid_draws": 2000
+    }
+  },
+  "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+  "groups": {
+    "MODERATE": {
+      "cases": 68,
+      "heavy_event_pairs": 325,
+      "mean_heavy_fraction": 0.043847814355099844,
+      "share_of_all_heavy_event_pairs": 0.13782866836301952,
+      "share_of_cases_with_a_heavy_cell": 0.6176470588235294
+    },
+    "STRONG": {
+      "cases": 120,
+      "heavy_event_pairs": 1986,
+      "mean_heavy_fraction": 0.1518348623853211,
+      "share_of_all_heavy_event_pairs": 0.8422391857506362,
+      "share_of_cases_with_a_heavy_cell": 0.8416666666666667
+    },
+    "WEAK": {
+      "cases": 44,
+      "heavy_event_pairs": 47,
+      "mean_heavy_fraction": 0.009799833194328608,
+      "share_of_all_heavy_event_pairs": 0.01993214588634436,
+      "share_of_cases_with_a_heavy_cell": 0.3181818181818182
+    }
+  },
+  "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+  "observed_heavy_event_pairs": 2358,
+  "population": "B2025",
+  "protocol_sha256": "f55beb112943dc586e64441bd9c447bbf032fdb10ebeb35d94b960078676e8f9",
+  "regime_nature": "rule-based forecast-time heuristic of the physical forcing; not a learned or validated regime and not a probability",
+  "reproduction": {
+    "checks": [
+      "observed zone heavy pairs equal the Stage 1 zone evidence",
+      "class counts equal the frozen forecast-only counts",
+      "group totals equal an independent sum"
+    ],
+    "status": "REPRODUCED"
+  },
+  "schema": "coastal-regime-evidence-v1",
+  "stage1_heavy_event_pairs": 2358,
+  "supported": true,
+  "track": "B",
+  "year": 2025
+}

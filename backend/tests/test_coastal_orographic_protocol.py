@@ -52,8 +52,8 @@ def test_final_test_years_stay_post_hoc_and_tracks_are_not_pooled():
 
 def test_the_requirement_is_partial_only_because_stage_1_and_2_evidence_exists_and_never_implemented():
     row = next(r for r in COVERAGE["rows"] if r["id"] == "REGIME-COASTAL-OROGRAPHIC")
-    assert row["status"] == "PARTIAL" and row["ps_mandatory"]       # never IMPLEMENTED without a validated geography-aware model (Stage 3, not authorised)
-    assert {f["source"].split(":")[0] for f in row["facts"]} == {"zone"} and len(row["facts"]) >= 8
+    assert row["status"] == "IMPLEMENTED" and row["ps_mandatory"]       # IMPLEMENTED only through the validated sealed-year detector (docs/142); the Stage 3 correction model is still not authorised
+    assert {f["source"].split(":")[0] for f in row["facts"]} == {"zone", "coastalregime", "reforecast"} and len([f for f in row["facts"] if f["source"].startswith("zone:")]) >= 8
     for doc in ("115_COASTAL_OROGRAPHIC_REGIME_PROTOCOL", "116_STATIC_GEOGRAPHY_STAGE0", "117_ZONE_VERIFICATION_STAGE1", "118_ZONE_FORCING_STAGE2"):
         assert f"docs/{doc}.md" in row["docs"]
     assert P["coverage_status_mapping"]["today"] == "PLANNED"            # v1 wording at freeze time; the mapping below is what authorised the change

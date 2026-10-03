@@ -1,0 +1,58 @@
+{
+  "association": {
+    "flagged_minus_not_flagged_mean_rain": {
+      "excludes_zero": true,
+      "interval95": [
+        1.1863172858063349,
+        4.622759787897462
+      ],
+      "point": 2.7179545407098624,
+      "status": "ok",
+      "valid_draws": 2000
+    },
+    "repeats": 2000,
+    "seed": 26080,
+    "spearman": {
+      "excludes_zero": true,
+      "interval95": [
+        0.15048401423028226,
+        0.40839914977351344
+      ],
+      "point": 0.2836166861196796,
+      "status": "ok",
+      "valid_draws": 2000
+    },
+    "unit": "initialization date"
+  },
+  "cases_scored": 375,
+  "cases_with_defined_index": 375,
+  "development": false,
+  "evidence_role": "WD_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST",
+  "groups": {
+    "flagged": {
+      "cases": 81,
+      "mean_rain_mm_per_day": 7.009720728584233,
+      "share_of_cases_with_rain_at_least_1mm": 0.9506172839506173
+    },
+    "not_flagged": {
+      "cases": 294,
+      "mean_rain_mm_per_day": 4.29176618787437,
+      "share_of_cases_with_rain_at_least_1mm": 0.7346938775510204
+    }
+  },
+  "indicator_nature": "rule-based forecast-time trough heuristic; not a validated detection of western disturbances; the flag is relative to the 2023 training year",
+  "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+  "protocol_sha256": "cce1d4240b51821981a1ec20b0d88f96de652c0b83436b4e8409e0d956ace18f",
+  "reproduction": {
+    "checks": [
+      "flag counts equal the frozen counts",
+      "group counts sum to the scored cases",
+      "a group mean equals an independent loop"
+    ],
+    "status": "REPRODUCED"
+  },
+  "schema": "wd-indicator-evidence-v1",
+  "supported": true,
+  "undefined_index_cases": 0,
+  "year": 2025
+}

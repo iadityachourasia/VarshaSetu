@@ -1,0 +1,58 @@
+{
+  "association": {
+    "flagged_minus_not_flagged_mean_rain": {
+      "excludes_zero": true,
+      "interval95": [
+        -2.2035161965460928,
+        -0.4527321360938424
+      ],
+      "point": -1.3488148550113244,
+      "status": "ok",
+      "valid_draws": 2000
+    },
+    "repeats": 2000,
+    "seed": 26080,
+    "spearman": {
+      "excludes_zero": false,
+      "interval95": [
+        -0.25964462703586244,
+        0.015960000032421644
+      ],
+      "point": -0.128073231827601,
+      "status": "ok",
+      "valid_draws": 2000
+    },
+    "unit": "initialization date"
+  },
+  "cases_scored": 375,
+  "cases_with_defined_index": 375,
+  "development": true,
+  "evidence_role": "WD_2021_DEVELOPMENT_YEAR_NEVER_USED_FOR_ANY_SELECTION",
+  "groups": {
+    "flagged": {
+      "cases": 151,
+      "mean_rain_mm_per_day": 2.784197181511502,
+      "share_of_cases_with_rain_at_least_1mm": 0.6887417218543046
+    },
+    "not_flagged": {
+      "cases": 224,
+      "mean_rain_mm_per_day": 4.1330120365228264,
+      "share_of_cases_with_rain_at_least_1mm": 0.8303571428571429
+    }
+  },
+  "indicator_nature": "rule-based forecast-time trough heuristic; not a validated detection of western disturbances; the flag is relative to the 2023 training year",
+  "label": "Track B-style 2021: development year (never used for any selection)",
+  "protocol_sha256": "cce1d4240b51821981a1ec20b0d88f96de652c0b83436b4e8409e0d956ace18f",
+  "reproduction": {
+    "checks": [
+      "flag counts equal the frozen counts",
+      "group counts sum to the scored cases",
+      "a group mean equals an independent loop"
+    ],
+    "status": "REPRODUCED"
+  },
+  "schema": "wd-indicator-evidence-v1",
+  "supported": true,
+  "undefined_index_cases": 0,
+  "year": 2021
+}
