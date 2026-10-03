@@ -80,7 +80,7 @@ export function DistrictVerificationPanel({ year }: { year: number }) {
   }]), [data, model]);
   const selected = data?.districts.find((entry) => entry.district_id === (selectedId ?? ordered[0]?.district_id)) ?? null;
 
-  if (query.isPending) return <LoadingState label="Loading district-level verification evidence" />;
+  if (query.isPending) return <LoadingState compact label="Loading district-level verification evidence" />;
   if (query.isError || !data) {
     const error = query.error;
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";

@@ -51,7 +51,7 @@ function Detail({ kind, date }: { kind: string; date: string }) {
   const chosen = cycle.data ? (cycle.data.summary.products.includes(product) ? product : cycle.data.summary.products[0]) : "";
   const field = useQuery({ queryKey: ["live-field", kind, date, chosen, fieldName], queryFn: () => getLiveField(kind, date, chosen, fieldName), enabled: Boolean(chosen) });
   if (cycle.isError) return <ErrorState message={cycle.error instanceof EvidenceApiError && cycle.error.code === "SCIENCE_INTEGRITY_FAILURE" ? `Live bundle integrity check failed: ${cycle.error.message}. This is a hard failure.` : (cycle.error as Error).message} />;
-  if (!cycle.data) return <LoadingState label="Loading the cycle" />;
+  if (!cycle.data) return <LoadingState compact label="Loading the cycle" />;
   const c: LiveCycle = cycle.data;
   const replayWorst = c.replay_comparison ? Math.max(...Object.values(c.replay_comparison.products).flatMap((p) => Object.entries(p).filter(([k]) => k.endsWith("difference")).map(([, v]) => v))) : null;
   return <div data-testid="live-detail">
@@ -62,7 +62,7 @@ function Detail({ kind, date }: { kind: string; date: string }) {
     {Object.entries(c.summary.withheld_products).length ? <div className="zone-banner zone-banner-posthoc" role="note" data-testid="live-withheld"><strong>Withheld leads (canonical rainfall quality control failed, as in the study corpus)</strong>
       {Object.entries(c.summary.withheld_products).map(([p, why]) => <span key={p}>{PRODUCT_LABEL[p] ?? p}: {why}</span>)}</div> : null}
     <div className="live-grid">
-    {field.isError ? <ErrorState message={(field.error as Error).message} /> : field.data ? <Heatmap field={field.data} /> : <LoadingState label="Loading the field" />}
+    {field.isError ? <ErrorState message={(field.error as Error).message} /> : field.data ? <Heatmap field={field.data} /> : <LoadingState compact label="Loading the field" />}
     <div className="live-side">
     <div className="district-table-wrap"><table className="phase5-table zone-table" data-testid="live-stats">
       <caption className="sr-only">Domain minimum, mean and maximum of each field for the selected lead</caption>
@@ -82,7 +82,7 @@ export function LiveCyclePage() {
   const status = useQuery({ queryKey: ["live-status"], queryFn: () => getLiveStatus() });
   const [selected, setSelected] = useState<string>("");
   if (status.isError) return <div className="page-content"><PageHeading title="Experimental Live Cycle" subtitle="Frozen models applied to a new forecast cycle" /><ErrorState message={status.error instanceof EvidenceApiError && status.error.code === "SCIENCE_INTEGRITY_FAILURE" ? `Live bundle integrity check failed: ${status.error.message}. This is a hard failure.` : (status.error as Error).message} /></div>;
-  if (!status.data) return <div className="page-content"><PageHeading title="Experimental Live Cycle" subtitle="Frozen models applied to a new forecast cycle" /><LoadingState label="Loading the experimental cycles" /></div>;
+  if (!status.data) return <div className="page-content"><PageHeading title="Experimental Live Cycle" subtitle="Frozen models applied to a new forecast cycle" /><LoadingState compact label="Loading the experimental cycles" /></div>;
   const s = status.data;
   const keyOf = (c: { kind: string; cycle: string }) => `${c.kind}:${c.cycle}`;
   const current = s.cycles.find((c) => keyOf(c) === selected) ?? s.latest_live ?? s.cycles[0];

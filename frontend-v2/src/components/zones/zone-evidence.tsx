@@ -162,7 +162,7 @@ export function ZoneEvidence() {
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <div className="page-content"><ErrorState message={integrity ? `Zone evidence integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "Zone evidence is unavailable."} /></div>;
   }
-  if (!overview.data || !geography.data || !verification.data || !forcing.data) return <div className="page-content"><LoadingState label="Loading zone evidence" /></div>;
+  if (!overview.data || !geography.data || !verification.data || !forcing.data) return <div className="page-content"><LoadingState compact label="Loading zone evidence" /></div>;
   const ov = overview.data;
   const geo = geography.data;
   const ver = verification.data;

@@ -59,7 +59,7 @@ export function ReforecastStudy() {
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <section className="phase5-analysis-block"><ErrorState message={integrity ? `Reforecast study integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "The reforecast study evidence is unavailable."} /></section>;
   }
-  if (!overview.data || !result.data || !confirmation.data) return <section className="phase5-analysis-block"><LoadingState label="Loading the reforecast study" /></section>;
+  if (!overview.data || !result.data || !confirmation.data) return <section className="phase5-analysis-block"><LoadingState compact label="Loading the reforecast study" /></section>;
   const ov = overview.data;
   const r = result.data;
   const p = r.payload;

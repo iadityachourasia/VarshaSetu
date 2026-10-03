@@ -1,5 +1,6 @@
 "use client";
 
+import { EvidenceChip } from "@/components/science/evidence-chip";
 import { useQueries, useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { ErrorState, LoadingState } from "@/components/science/common";
@@ -30,7 +31,7 @@ export function IndependentRegimeValidation() {
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <section className="phase5-analysis-block"><ErrorState message={integrity ? `Independent regime validation integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "Independent regime validation is unavailable."} /></section>;
   }
-  if (!overview.data || results.some((q) => !q.data)) return <section className="phase5-analysis-block"><LoadingState label="Loading independent regime validation" /></section>;
+  if (!overview.data || results.some((q) => !q.data)) return <section className="phase5-analysis-block"><LoadingState compact label="Loading independent regime validation" /></section>;
   const ov = overview.data;
   const all = results.map((q) => q.data!);
   const scored = all.filter((r) => r.payload.tasks.active_vs_not_active.status === "scored");
@@ -54,7 +55,7 @@ export function IndependentRegimeValidation() {
     <div className="district-table-wrap"><table className="phase5-table zone-table">
       <caption className="sr-only">Observed-state counts and the pre-registered tasks by population</caption>
       <thead><tr><th scope="col">Population</th><th scope="col">Labelled cases</th><th scope="col">Observed active / break / neutral</th><th scope="col">Active versus not active: balanced accuracy [95 % interval]</th><th scope="col">Break versus not break</th></tr></thead>
-      <tbody>{all.map((r) => <tr key={r.year} data-testid={`validation-row-${r.year}`}><th scope="row">{r.evidence_label}<br /><span className="micro-note">Track {r.track} · {r.year}</span></th><td>{r.payload.cases_labelled}</td>
+      <tbody>{all.map((r) => <tr key={r.year} data-testid={`validation-row-${r.year}`}><th scope="row"><EvidenceChip label={r.evidence_label} /><br /><span className="micro-note">Track {r.track} · {r.year}</span></th><td>{r.payload.cases_labelled}</td>
         <td>{r.payload.observed_state_counts.ACTIVE} / {r.payload.observed_state_counts.BREAK} / {r.payload.observed_state_counts.NEUTRAL}</td><td>{taskCell(r, "active_vs_not_active")}</td><td>{taskCell(r, "break_vs_not_break")}</td></tr>)}</tbody></table></div>
     <p className="micro-note">The support gate needs at least {ov.support_gate.min_cases_per_side} cases on both sides of a task; below it no score is shown. A balanced accuracy of 0.5 is no skill; the intervals resample whole initialization dates and are optimistic.</p>
     <div className="phase5-controls"><label>Population for the confusion table<select value={selected.year} onChange={(event) => setYear(Number(event.target.value))}>{all.map((r) => <option key={r.year} value={r.year}>{r.evidence_label}</option>)}</select></label></div>

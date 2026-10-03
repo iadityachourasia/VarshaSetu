@@ -9,6 +9,7 @@ import { firstLabelLayer } from "@/lib/maps/basemap";
 import { installDistrictLabels, updateDistrictLabels } from "@/lib/maps/label-layers";
 import type { DistrictGeometry } from "@/lib/maps/district-labels";
 import { MapAttribution } from "./map-attribution";
+import { LocatorInset } from "./locator-inset";
 import { mm, percent } from "@/lib/format";
 import { useMapSettings } from "./map-settings";
 import { useWeatherMap } from "./use-weather-map";
@@ -113,6 +114,7 @@ export default function GridMap({ id, title, subtitle, values, mask, grid, palet
     <div className="map-panel-heading"><div><strong>{title}</strong><span>{subtitle}</span></div><span className={`model-dot model-${id}`} aria-hidden="true" /></div>
     <div className="map-surface">
       <div ref={container} className="map-canvas" role="img" aria-label={`${title} 49 by 49 historical ${palette === "rainfall" ? "rainfall" : palette === "probability" ? "probability" : "forecast-field"} grid. Display interpolation does not change original values; use the coordinate inspector for keyboard access.`} />
+      <LocatorInset bounds={grid.bounds_west_south_east_north} theme={settings.geographicStyle} />
       <MapAttribution status={status} />
       {status === "offline" ? <span className="map-offline-badge">Offline geography</span> : null}
       {status === "loading" ? <span className="map-offline-badge">Loading geography…</span> : null}

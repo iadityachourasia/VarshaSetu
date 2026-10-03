@@ -150,7 +150,7 @@ export function GeoawareExperiment() {
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <div className="page-content"><ErrorState message={integrity ? `Geography-aware evidence integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "Geography-aware evidence is unavailable."} /></div>;
   }
-  if (!overview.data || !e2024.data || !e2025.data || !followup.data) return <div className="page-content"><LoadingState label="Loading geography-aware experiment" /></div>;
+  if (!overview.data || !e2024.data || !e2025.data || !followup.data) return <div className="page-content"><LoadingState compact label="Loading geography-aware experiment" /></div>;
   const ov = overview.data;
   const arms = Object.keys(ov.selection);
   const years = Object.entries(ov.decision.per_year);

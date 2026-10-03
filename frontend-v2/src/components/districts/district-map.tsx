@@ -8,6 +8,7 @@ import { firstLabelLayer } from "@/lib/maps/basemap";
 import { installDistrictLabels, updateSelectedDistrictLabel } from "@/lib/maps/label-layers";
 import type { DistrictGeometry } from "@/lib/maps/district-labels";
 import { MapAttribution } from "@/components/maps/map-attribution";
+import { LocatorInset } from "@/components/maps/locator-inset";
 import { rainfallColor } from "@/lib/maps/grid";
 import { useMapSettings } from "@/components/maps/map-settings";
 import { useWeatherMap } from "@/components/maps/use-weather-map";
@@ -74,5 +75,5 @@ export default function DistrictMap({ geometry, districts, selectedId, onSelect,
   useEffect(() => { const map = mapRef.current; if (map?.getLayer("district-selected")) map.setFilter("district-selected", ["==", ["get", "district_id"], selectedId ?? ""]); }, [selectedId, mapRef]);
   useEffect(() => { const map = mapRef.current; if (map) updateSelectedDistrictLabel(map, geometry as DistrictGeometry, selectedId, settings.geographicStyle); }, [selectedId, geometry, mapRef, settings.geographicStyle]);
   useEffect(() => { const map = mapRef.current; if (map?.getLayer("district-line")) map.setLayoutProperty("district-line", "visibility", settings.boundaries ? "visible" : "none"); }, [settings.boundaries, mapRef]);
-  return <div className="district-map-frame"><div className="district-map" ref={element} role="img" aria-label="District polygons colored by case-specific corrected mean rainfall. Use the district table for keyboard selection." /><MapAttribution status={status} />{hoveredName ? <span className="district-map-hover">{hoveredName}</span> : null}{status === "offline" ? <span className="map-offline-badge">Offline geography</span> : null}{status === "loading" ? <span className="map-offline-badge">Loading geography…</span> : null}</div>;
+  return <div className="district-map-frame"><div className="district-map" ref={element} role="img" aria-label="District polygons colored by case-specific corrected mean rainfall. Use the district table for keyboard selection." /><LocatorInset bounds={DOMAIN} theme={settings.geographicStyle} /><MapAttribution status={status} />{hoveredName ? <span className="district-map-hover">{hoveredName}</span> : null}{status === "offline" ? <span className="map-offline-badge">Offline geography</span> : null}{status === "loading" ? <span className="map-offline-badge">Loading geography…</span> : null}</div>;
 }

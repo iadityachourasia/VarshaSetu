@@ -33,7 +33,7 @@ export function AllIndiaRawVerification() {
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <section className="phase5-analysis-block"><ErrorState message={integrity ? `All-India Raw verification integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "The all-India Raw verification evidence is unavailable."} /></section>;
   }
-  if (!overview.data || results.some((q) => !q.data)) return <section className="phase5-analysis-block"><LoadingState label="Loading the all-India Raw verification" /></section>;
+  if (!overview.data || results.some((q) => !q.data)) return <section className="phase5-analysis-block"><LoadingState compact label="Loading the all-India Raw verification" /></section>;
   const ov = overview.data;
   const all = results.map((q) => q.data!);
   const chosen = all.find((r) => r.year === year) ?? all[all.length - 1];

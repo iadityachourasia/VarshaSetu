@@ -1,5 +1,6 @@
 "use client";
 
+import { EvidenceChip } from "@/components/science/evidence-chip";
 import { useQueries, useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { ErrorState, LoadingState } from "@/components/science/common";
@@ -20,7 +21,7 @@ function CaseLookup({ year }: { year: number }) {
   const cases = useQuery({ queryKey: ["coastal-regime-cases", year], queryFn: () => getCoastalCases(year), staleTime: 5 * 60_000 });
   const [caseId, setCaseId] = useState<string>("");
   if (cases.isError) return <ErrorState message={cases.error instanceof Error ? cases.error.message : "Case classes are unavailable."} />;
-  if (!cases.data) return <LoadingState label="Loading case classes" />;
+  if (!cases.data) return <LoadingState compact label="Loading case classes" />;
   const chosen = cases.data.cases.find((c) => c.case_id === caseId) ?? cases.data.cases[Math.floor(cases.data.cases.length / 2)];
   const training = cases.data.cut_points;
   return <div data-testid="coastal-case-lookup">
@@ -39,7 +40,7 @@ export function CoastalRegimePanel() {
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <section className="phase5-analysis-block"><ErrorState message={integrity ? `Coastal regime integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "The coastal regime evidence is unavailable."} /></section>;
   }
-  if (!overview.data || results.some((q) => !q.data)) return <section className="phase5-analysis-block"><LoadingState label="Loading the coastal and orographic regime" /></section>;
+  if (!overview.data || results.some((q) => !q.data)) return <section className="phase5-analysis-block"><LoadingState compact label="Loading the coastal and orographic regime" /></section>;
   const ov = overview.data;
   const all = results.map((q) => q.data!);
   return <section className="phase5-analysis-block" aria-labelledby="coastal-regime-heading" data-testid="coastal-regime">
@@ -50,7 +51,7 @@ export function CoastalRegimePanel() {
     <div className="district-table-wrap"><table className="phase5-table zone-table">
       <caption className="sr-only">Cases, share of observed Ghats-coast heavy-rain pairs and mean heavy fraction by forcing class and population</caption>
       <thead><tr><th scope="col">Population</th><th scope="col">Cases weak / moderate / strong</th><th scope="col">Share of observed heavy pairs weak / moderate / strong</th><th scope="col">Mean heavy fraction of the zone weak / moderate / strong</th><th scope="col">Strong minus weak [95 % interval]</th><th scope="col">Spearman [95 % interval]</th></tr></thead>
-      <tbody>{all.map((r) => { const d = discrimination(r); const g = r.payload.groups; return <tr key={r.year} data-testid={`coastal-row-${r.year}`}><th scope="row">{r.evidence_label}<br /><span className="micro-note">Track {r.track} · {r.year}</span></th>
+      <tbody>{all.map((r) => { const d = discrimination(r); const g = r.payload.groups; return <tr key={r.year} data-testid={`coastal-row-${r.year}`}><th scope="row"><EvidenceChip label={r.evidence_label} /><br /><span className="micro-note">Track {r.track} · {r.year}</span></th>
         <td>{COASTAL_CLASSES.map((c) => g[c].cases).join(" / ")}</td><td>{COASTAL_CLASSES.map((c) => pct(g[c].share_of_all_heavy_event_pairs)).join(" / ")}</td><td>{COASTAL_CLASSES.map((c) => fixed(g[c].mean_heavy_fraction, 3)).join(" / ")}</td>
         <td>{d ? `${fixed(d.strong_minus_weak_heavy_fraction.point, 3)} [${fixed(d.strong_minus_weak_heavy_fraction.interval95?.[0], 3)}, ${fixed(d.strong_minus_weak_heavy_fraction.interval95?.[1], 3)}]` : "insufficient support"}</td>
         <td>{d ? `${fixed(d.spearman.point, 2)} [${fixed(d.spearman.interval95?.[0], 2)}, ${fixed(d.spearman.interval95?.[1], 2)}]` : "insufficient support"}</td></tr>; })}</tbody></table></div>

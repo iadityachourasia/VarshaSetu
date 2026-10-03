@@ -23,7 +23,7 @@ export function RegimeTaskValidation() {
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <section className="phase5-analysis-block"><ErrorState message={integrity ? `Regime-task evidence integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "The regime-task evidence is unavailable."} /></section>;
   }
-  if (!overview.data || !result.data) return <section className="phase5-analysis-block"><LoadingState label="Loading the regime-detection validation" /></section>;
+  if (!overview.data || !result.data) return <section className="phase5-analysis-block"><LoadingState compact label="Loading the regime-detection validation" /></section>;
   const ov = overview.data;
   const r = result.data;
   return <section className="phase5-analysis-block" aria-labelledby="regime-task-heading" data-testid="regime-task-validation">

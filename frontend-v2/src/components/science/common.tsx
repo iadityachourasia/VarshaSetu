@@ -4,6 +4,7 @@ import { DATA_SOURCE_LABEL } from "@/lib/data-source";
 import { METRIC_DEFINITION } from "@/lib/metric-definitions";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { AlertTriangle, Inbox } from "lucide-react";
+import { RetryButton } from "@/components/science/retry-button";
 
 export function PageHeading({ title, subtitle, action }: { title: string; subtitle: string; action?: ReactNode }) {
   return <div className="page-heading"><div><h1>{title}</h1><p>{subtitle}</p></div>{action}</div>;
@@ -22,16 +23,17 @@ export function Metric({ label, value, detail, tone }: { label: string; value: s
   return <div className={`metric ${tone ? `metric-${tone}` : ""}`}><span className="metric-label">{label}</span><strong className="metric-value">{value}</strong>{detail ? <span className="metric-detail">{detail}</span> : null}</div>;
 }
 
-export function ErrorState({ message = "Scientific artifacts are unavailable. Start the verified historical API and try again." }: { message?: string }) {
-  return <div className="state-message" role="alert"><span className="state-icon" aria-hidden="true"><AlertTriangle size={18} /></span><strong>Data unavailable</strong><p>{message}</p></div>;
+export function ErrorState({ message = "Scientific artifacts are unavailable. Start the verified historical API and try again.", retry = true }: { message?: string; retry?: boolean }) {
+  return <div className="state-message state-message-error" role="alert"><span className="state-icon" aria-hidden="true"><AlertTriangle size={18} /></span><strong>Data unavailable</strong><p>{message}</p>{retry ? <RetryButton /> : null}</div>;
 }
 
-export function EmptyState({ message }: { message: string }) {
-  return <div className="state-message"><span className="state-icon" aria-hidden="true"><Inbox size={18} /></span><strong>Nothing to display</strong><p>{message}</p></div>;
+/** `action` is the next step a person can take (a link or a control); an empty state without one is a dead end. */
+export function EmptyState({ message, action }: { message: string; action?: ReactNode }) {
+  return <div className="state-message"><span className="state-icon" aria-hidden="true"><Inbox size={18} /></span><strong>Nothing to display</strong><p>{message}</p>{action ?? null}</div>;
 }
 
-export function LoadingState({ label = "Loading verified case" }: { label?: string }) {
-  return <div className="loading-state" role="status" aria-label={label}><span className="skeleton-block" /><span className="skeleton-block" /><span className="skeleton-block" /><span className="sr-only">{label}</span></div>;
+export function LoadingState({ label = "Loading verified case", compact = false }: { label?: string; compact?: boolean }) {
+  return <div className={compact ? "loading-state loading-state-compact" : "loading-state"} role="status" aria-label={label}><span className="skeleton-block" /><span className="skeleton-block" /><span className="skeleton-block" /><span className="sr-only">{label}</span></div>;
 }
 
 export function PrototypeNote() {

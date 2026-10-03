@@ -1,5 +1,6 @@
 "use client";
 
+import { ForestPlot } from "@/components/science/forest-plot";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { ErrorState, LoadingState } from "@/components/science/common";
@@ -87,7 +88,7 @@ export function RegimeEvidencePanel({ track, year }: { track: "A" | "B"; year: n
     return <section className="phase5-analysis-block" aria-labelledby="regime-evidence-title"><h2 id="regime-evidence-title">Regime-aware verification</h2>
       <p>No regime-stratified verification is published for {track === "A" ? "Track A" : "Track B"} {year}: it is {year === 2017 || year === 2023 ? "a training / cross-fit year, so models were fitted on it and were not scored against it" : "outside the evidence set"}. Published populations: {EVIDENCE_YEARS[track].join(" and ")}.</p></section>;
   }
-  if (query.isPending) return <LoadingState label="Loading regime-aware verification evidence" />;
+  if (query.isPending) return <LoadingState compact label="Loading regime-aware verification evidence" />;
   if (query.isError || !query.data) {
     const error = query.error;
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
@@ -128,6 +129,10 @@ export function RegimeEvidencePanel({ track, year }: { track: "A" | "B"; year: n
     {metric === "freq" ? <p className="micro-note">Values near 0 mean the model forecasts almost no events at this threshold (event suppression); 1 is an unbiased event frequency.</p> : null}
 
     <h3>Paired differences over all cases (case-cluster bootstrap)</h3>
+    <div className="forest-grid" data-testid="regime-forest">
+      {([["CSI", "Δ CSI"], ["FSS_3x3", "Δ FSS 3×3"], ["FSS_9x9", "Δ FSS 9×9"]] as const).map(([key, title], index) => <ForestPlot key={key} title={title} showLabels={index === 0} width={index === 0 ? 520 : 350}
+        rows={BOOTSTRAP_PAIRS.map((pair) => { const stat = data.bootstrap.overall[threshold][pair]?.[key]; const ok = stat?.status === "ok" && stat.point !== undefined && stat.interval95; return { label: PAIR_LABEL[pair], point: ok ? stat.point ?? null : null, low: ok ? stat.interval95![0] : null, high: ok ? stat.interval95![1] : null }; })} />)}
+    </div>
     <div className="district-table-wrap"><table className="phase5-table regime-evidence-table"><caption className="sr-only">Paired bootstrap differences in CSI and FSS for {threshold === "heavy" ? "heavy" : "very heavy"} rain</caption>
       <thead><tr><th scope="col">Contrast</th><th scope="col">Δ CSI [95 % interval]</th><th scope="col">Δ FSS 3×3 [95 % interval]</th><th scope="col">Δ FSS 9×9 [95 % interval]</th></tr></thead>
       <tbody>{BOOTSTRAP_PAIRS.map((pair) => { const row = data.bootstrap.overall[threshold][pair]; return <tr key={pair}><th scope="row">{PAIR_LABEL[pair]}</th><td>{ciText(row?.CSI)}</td><td>{ciText(row?.FSS_3x3)}</td><td>{ciText(row?.FSS_9x9)}</td></tr>; })}</tbody></table></div>
