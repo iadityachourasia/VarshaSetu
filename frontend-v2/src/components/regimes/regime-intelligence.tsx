@@ -20,7 +20,7 @@ const PREDICTION_ROLE_NOTE: Record<string, string> = {
 
 // Phase 5A.2C: live-API-primary for per-case regime probability, the
 // aggregate distribution, and (2025 only) the regime-conditioned RMSE table.
-export function RegimeIntelligence({ initialYear }: { initialYear: number }) {
+export function RegimeIntelligence({ initialYear, toc }: { initialYear: number; toc?: React.ReactNode }) {
   const [year, setYear] = useState(initialYear);
   const [caseId, setCaseId] = useState("");
   const caseListResult = useQuery({
@@ -68,7 +68,7 @@ export function RegimeIntelligence({ initialYear }: { initialYear: number }) {
   const pairedTotal = pairedCounts ? Object.values(pairedCounts).reduce((sum, v) => sum + v, 0) : 0;
   const det = deterministicResult.data?.data?.metrics as Record<string, { continuous: { rmse_mm: number } }> | undefined;
 
-  return <div className="page-content"><PageHeading title="Regime Intelligence" subtitle="Forecast-only pseudo-regime classifier output · not observed meteorological truth" action={<span style={{ display: "flex", gap: 8, alignItems: "center" }}>{regimeResult.data ? <DataSourceIndicator mode={regimeResult.data.mode} /> : null}<PrototypeNote /></span>} />
+  return <div className="page-content"><PageHeading title="Regime Intelligence" subtitle="Forecast-only pseudo-regime classifier output · not observed meteorological truth" action={<span style={{ display: "flex", gap: 8, alignItems: "center" }}>{regimeResult.data ? <DataSourceIndicator mode={regimeResult.data.mode} /> : null}<PrototypeNote /></span>} />{toc}
     <div className="phase5-context-strip"><strong>{year} {year === 2023 ? "CROSS-FIT / OOF" : year === 2024 ? "VALIDATION" : "FINAL TEST COMPLETED"}</strong><span>Three mutually exclusive pseudo-label classes</span><span>Forecast-time atmosphere only</span></div>
     <div className="phase5-controls"><label>Year<select value={year} onChange={(event) => { setYear(Number(event.target.value)); setCaseId(""); }}><option value={2023}>2023 cross-fit</option><option value={2024}>2024 validation</option><option value={2025}>2025 final</option></select></label><label>Historical case<select value={selectedCase?.case_id ?? ""} onChange={(event) => setCaseId(event.target.value)}>{cases.map((item) => <option value={item.case_id} key={item.case_id}>{item.initialization_utc.slice(0, 10)} · {item.lead_label}</option>)}</select></label></div>
     <div className="phase5-regime-layout"><section className="phase5-analysis-block"><h2>Selected case · classifier probabilities</h2>

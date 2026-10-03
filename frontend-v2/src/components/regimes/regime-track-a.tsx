@@ -15,7 +15,7 @@ const ROLE: Record<number, string> = { 2017: "TRAINING YEAR", 2018: "VALIDATION 
 
 // Track A (GEFSv12 reforecast 2017-2019): per-case forecast-only regime probabilities exist for 2019 only
 // (the published case API); regime-stratified verification evidence exists for 2018 and 2019 (docs/108).
-export function RegimeTrackA({ initialYear }: { initialYear: number }) {
+export function RegimeTrackA({ initialYear, toc }: { initialYear: number; toc?: React.ReactNode }) {
   const [year, setYear] = useState<number>(initialYear);
   const [caseId, setCaseId] = useState("");
   const cases = useQuery({ queryKey: ["track-a-cases"], queryFn: () => getScience("/cases", casesSchema), staleTime: 5 * 60_000 });
@@ -27,7 +27,7 @@ export function RegimeTrackA({ initialYear }: { initialYear: number }) {
     return tally;
   }, [list]);
 
-  return <div className="page-content"><PageHeading title="Regime Intelligence" subtitle="Forecast-only pseudo-regime classifier output · not observed meteorological truth" action={<PrototypeNote />} />
+  return <div className="page-content"><PageHeading title="Regime Intelligence" subtitle="Forecast-only pseudo-regime classifier output · not observed meteorological truth" action={<PrototypeNote />} />{toc}
     <div className="phase5-context-strip"><strong>{year} · {ROLE[year]}</strong><span>GEFSv12 reforecast (Track A)</span><span>Three mutually exclusive pseudo-label classes</span><span>Coastal, orographic and western-disturbance regimes are not yet part of the classifier</span></div>
     <div className="phase5-controls"><label>Year<select value={year} onChange={(event) => setYear(Number(event.target.value))}>{YEARS.map((item) => <option key={item} value={item}>{item} · {ROLE[item].toLowerCase()}</option>)}</select></label></div>
 
