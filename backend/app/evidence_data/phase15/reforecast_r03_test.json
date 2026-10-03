@@ -1,0 +1,356 @@
+{
+  "bootstrap": {
+    "note": "optimistic",
+    "repeats": 2000,
+    "seed": 26080,
+    "unit": "initialization date"
+  },
+  "evidence_role": "REFORECAST_SEALED_TEST_2014_2016_FIRST_USE",
+  "label": "POST-UNSEAL SEALED TEST 2014-2016: first use of these years",
+  "label_nature": "objective rule-based labels (IMD and ERA5-derived), relative by construction; not expert analyses; the western-disturbance label compares a forecast trough with a reanalysis trough",
+  "protocol_sha256": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7",
+  "schema": "reforecast-r03-evidence-v1",
+  "tasks": {
+    "ACTIVE": {
+      "auc": {
+        "excludes_zero": true,
+        "interval95": [
+          0.8985593457327962,
+          0.9601426435576913
+        ],
+        "point": 0.9321008403361345,
+        "status": "ok"
+      },
+      "auc_over_baseline": {
+        "excludes_zero": true,
+        "interval95": [
+          0.18358069719369852,
+          0.3322907961713144
+        ],
+        "point": 0.2566176470588236,
+        "status": "ok"
+      },
+      "balanced_accuracy": {
+        "excludes_zero": true,
+        "interval95": [
+          0.7592003447109081,
+          0.8684687895667365
+        ],
+        "point": 0.8155882352941176,
+        "status": "ok"
+      },
+      "baseline_auc": 0.6754831932773109,
+      "by_lead": {
+        "day1_24h": {
+          "auc": 0.9455304195036239,
+          "cases": 186
+        },
+        "day2_24h": {
+          "auc": 0.912828947368421,
+          "cases": 115
+        },
+        "day3_24h": {
+          "auc": 0.9329896907216495,
+          "cases": 117
+        }
+      },
+      "cases": 418,
+      "chance_balanced_accuracy": 0.5,
+      "confusion": {
+        "balanced_accuracy": 0.8155882352941176,
+        "fn": 21,
+        "fp": 21,
+        "precision": 0.6911764705882353,
+        "recall": 0.6911764705882353,
+        "specificity": 0.94,
+        "tn": 329,
+        "tp": 47
+      },
+      "negatives": 350,
+      "positives": 68,
+      "tier": "USEFUL",
+      "useful": true,
+      "validated": true,
+      "validation": {
+        "C": 0.1,
+        "operating_threshold": 0.1011220194965432,
+        "validation_auc": 0.9431216931216931,
+        "validation_balanced_accuracy": 0.8928571428571428
+      }
+    },
+    "BREAK": {
+      "auc": {
+        "excludes_zero": true,
+        "interval95": [
+          0.8055200470742253,
+          0.9275014367158164
+        ],
+        "point": 0.869930598177612,
+        "status": "ok"
+      },
+      "auc_over_baseline": {
+        "excludes_zero": true,
+        "interval95": [
+          0.34583762886597935,
+          0.543182706766917
+        ],
+        "point": 0.44610736037014304,
+        "status": "ok"
+      },
+      "balanced_accuracy": {
+        "excludes_zero": true,
+        "interval95": [
+          0.6805183795655922,
+          0.8279373255124367
+        ],
+        "point": 0.7548274396865116,
+        "status": "ok"
+      },
+      "baseline_auc": 0.42382323780746894,
+      "by_lead": {
+        "day1_24h": {
+          "auc": 0.9030980666200792,
+          "cases": 186
+        },
+        "day2_24h": {
+          "auc": 0.8338048090523338,
+          "cases": 115
+        },
+        "day3_24h": {
+          "auc": 0.8512906846240179,
+          "cases": 117
+        }
+      },
+      "cases": 418,
+      "chance_balanced_accuracy": 0.5,
+      "confusion": {
+        "balanced_accuracy": 0.7548274396865116,
+        "fn": 24,
+        "fp": 30,
+        "precision": 0.5384615384615384,
+        "recall": 0.5932203389830508,
+        "specificity": 0.9164345403899722,
+        "tn": 329,
+        "tp": 35
+      },
+      "negatives": 359,
+      "positives": 59,
+      "tier": "USEFUL",
+      "useful": true,
+      "validated": true,
+      "validation": {
+        "C": 10.0,
+        "operating_threshold": 0.21882010696725424,
+        "validation_auc": 0.21428571428571427,
+        "validation_balanced_accuracy": 0.47297297297297297
+      }
+    },
+    "COASTAL_OROGRAPHIC": {
+      "auc": {
+        "excludes_zero": true,
+        "interval95": [
+          0.9653175010623862,
+          0.984832913219529
+        ],
+        "point": 0.9763496630063346,
+        "status": "ok"
+      },
+      "auc_over_baseline": {
+        "excludes_zero": true,
+        "interval95": [
+          0.15094666308605997,
+          0.24081459431412625
+        ],
+        "point": 0.19541580561070815,
+        "status": "ok"
+      },
+      "balanced_accuracy": {
+        "excludes_zero": true,
+        "interval95": [
+          0.921617594339961,
+          0.9610564334754879
+        ],
+        "point": 0.942258600429515,
+        "status": "ok"
+      },
+      "baseline_auc": 0.7809338573956265,
+      "by_lead": {
+        "day1_24h": {
+          "auc": 0.9815251572327044,
+          "cases": 366
+        },
+        "day2_24h": {
+          "auc": 0.9718486641563565,
+          "cases": 202
+        },
+        "day3_24h": {
+          "auc": 0.9737037037037037,
+          "cases": 210
+        }
+      },
+      "cases": 778,
+      "chance_balanced_accuracy": 0.5,
+      "confusion": {
+        "balanced_accuracy": 0.942258600429515,
+        "fn": 3,
+        "fp": 59,
+        "precision": 0.6467065868263473,
+        "recall": 0.972972972972973,
+        "specificity": 0.9115442278860569,
+        "tn": 608,
+        "tp": 108
+      },
+      "negatives": 667,
+      "positives": 111,
+      "tier": "USEFUL",
+      "useful": true,
+      "validated": true,
+      "validation": {
+        "C": 0.1,
+        "operating_threshold": 0.15002978204298462,
+        "validation_auc": 0.9164550027391802,
+        "validation_balanced_accuracy": 0.8483614721848698
+      }
+    },
+    "LOW_DEPRESSION": {
+      "auc": {
+        "excludes_zero": true,
+        "interval95": [
+          0.7485179941925446,
+          0.85075853223951
+        ],
+        "point": 0.8017766399006944,
+        "status": "ok"
+      },
+      "auc_over_baseline": {
+        "excludes_zero": true,
+        "interval95": [
+          0.3317297458285781,
+          0.4659449714419542
+        ],
+        "point": 0.400823667843335,
+        "status": "ok"
+      },
+      "balanced_accuracy": {
+        "excludes_zero": true,
+        "interval95": [
+          0.6653540902412604,
+          0.7785675583154195
+        ],
+        "point": 0.7227071130248135,
+        "status": "ok"
+      },
+      "baseline_auc": 0.40095297205735936,
+      "by_lead": {
+        "day1_24h": {
+          "auc": 0.8198568316215376,
+          "cases": 366
+        },
+        "day2_24h": {
+          "auc": 0.8256932654216186,
+          "cases": 202
+        },
+        "day3_24h": {
+          "auc": 0.7480816326530613,
+          "cases": 210
+        }
+      },
+      "cases": 778,
+      "chance_balanced_accuracy": 0.5,
+      "confusion": {
+        "balanced_accuracy": 0.7227071130248135,
+        "fn": 44,
+        "fp": 118,
+        "precision": 0.38219895287958117,
+        "recall": 0.6239316239316239,
+        "specificity": 0.8214826021180031,
+        "tn": 543,
+        "tp": 73
+      },
+      "negatives": 661,
+      "positives": 117,
+      "tier": "USEFUL",
+      "useful": true,
+      "validated": true,
+      "validation": {
+        "C": 1.0,
+        "operating_threshold": 0.1394358808075349,
+        "validation_auc": 0.7871101871101871,
+        "validation_balanced_accuracy": 0.7242203742203742
+      }
+    },
+    "WESTERN_DISTURBANCE": {
+      "auc": {
+        "excludes_zero": true,
+        "interval95": [
+          0.6528487728524919,
+          0.7826690858009082
+        ],
+        "point": 0.7208995941180385,
+        "status": "ok"
+      },
+      "auc_over_baseline": {
+        "excludes_zero": true,
+        "interval95": [
+          0.08474920488765415,
+          0.2491641412177303
+        ],
+        "point": 0.1702841173730788,
+        "status": "ok"
+      },
+      "balanced_accuracy": {
+        "excludes_zero": true,
+        "interval95": [
+          0.6040797808478234,
+          0.709893161609792
+        ],
+        "point": 0.6584336948566105,
+        "status": "ok"
+      },
+      "baseline_auc": 0.5506154767449597,
+      "by_lead": {
+        "day1_24h": {
+          "auc": 0.7478449575019591,
+          "cases": 366
+        },
+        "day2_24h": {
+          "auc": 0.687015503875969,
+          "cases": 202
+        },
+        "day3_24h": {
+          "auc": 0.702037037037037,
+          "cases": 210
+        }
+      },
+      "cases": 778,
+      "chance_balanced_accuracy": 0.5,
+      "confusion": {
+        "balanced_accuracy": 0.6584336948566105,
+        "fn": 41,
+        "fp": 213,
+        "precision": 0.25263157894736843,
+        "recall": 0.6371681415929203,
+        "specificity": 0.6796992481203008,
+        "tn": 452,
+        "tp": 72
+      },
+      "negatives": 665,
+      "positives": 113,
+      "tier": "USEFUL",
+      "useful": true,
+      "validated": true,
+      "validation": {
+        "C": 1.0,
+        "operating_threshold": 0.08382915574762201,
+        "validation_auc": 0.8566181566181567,
+        "validation_balanced_accuracy": 0.7920997920997921
+      }
+    }
+  },
+  "unseal_record_sha256": "280a9720ae88bd239ca8ccfe6cf2472c4a70b1796e463a94a2168955752f9fd9",
+  "years": [
+    2014,
+    2015,
+    2016
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "reforecast-protocol-amendment-v1",
+  "amends_protocol_sha256": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7",
+  "written_before": "the 2017-2019 forecast-side corpus was built and before any 2017-2019 IMD observation was paired or read for this study",
+  "observed_before_amending": "the sealed-year result of round 1 (docs/142): RMSE, heavy-rain CSI and (through the exceedance classifiers) very-heavy CSI each improve on Raw with an interval excluding zero, but the regression mean error exceeded the frozen 1.5 mm guardrail, so the frozen tier was none.",
+  "problem": "Round 1 did not meet the pre-registered rule for PS-R05 only because of the mean-error guardrail. The sealed years 2014-2016 are now consumed and cannot be re-tested.",
+  "change": "Round 2, a confirmatory test on 2017-2019 (reforecast control member, the same lineage). No model is refit and no configuration, threshold or tau changes. One parameter is added: delta, the pooled mean error of the selected B1 regression model on 2014-2016 (read from reforecast_r05_test.json, whose hash is pinned in the unseal record of round 2), and the corrected rainfall is max(0, prediction minus delta). The exceedance classifiers of B1 and their frozen probability thresholds are unchanged. Tiers, BIAS_OK limits (1.5 mm for the corrected regression, 2.0 and 3.0 for the frequency biases), the support gate, the paired whole-date bootstrap (95 percent for RMSE, 97.5 percent for the two CSI differences) and the improvement definitions are those of round 1, applied to the bundle of the shifted B1 regression and the B1 exceedance classifiers against Raw.",
+  "years_status": "2017-2019 were used by earlier Track A experiments of this project, so they are not untouched by the project, but no model, selection, threshold or rule of this study was ever fitted or chosen with them. They are labelled CONFIRMATORY TEST 2017-2019 and never described as an untouched holdout.",
+  "coverage_mapping": "IMPROVEMENT-VS-RAW becomes IMPLEMENTED only if the bundle reaches tier FULL on 2017-2019; otherwise the row stays PARTIAL and states which improvements and which guardrail failed in both rounds.",
+  "unchanged": ["round 1 and its verdict", "the regression and exceedance models and their selections", "the regime arms and the regime-detection tasks", "the sealed years 2014-2016 (already opened once)"],
+  "owner_note": "Recorded as a disclosed second round under the owner's general instruction to complete the mandatory requirements; the owner may withdraw it."
+}

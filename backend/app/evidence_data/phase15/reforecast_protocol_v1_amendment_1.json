@@ -1,0 +1,9 @@
+{
+  "schema": "reforecast-protocol-amendment-v1",
+  "amends_protocol_sha256": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7",
+  "written_before": "any regime classifier was fitted and before any validation or sealed score was computed",
+  "observed_before_amending": "only the label counts of the validation years 2012-2013: ACTIVE 9 positive cases, BREAK 2 positive cases (of 129 and 132 cases with a label). No score of any kind had been computed.",
+  "problem": "The frozen rule selects C and the operating threshold on the validation years. For ACTIVE and BREAK those years hold too few positive cases for an AUC or a threshold to mean anything.",
+  "change": "A task whose validation years hold fewer than 20 positive or fewer than 20 negative cases selects C by the mean leave-one-year-out AUC over the training years 2000-2011 and fixes its operating threshold on the pooled out-of-fold training scores. Tasks with enough validation cases are unchanged. Everything else in the protocol, including the sealed years, the verdict rule and the support gate, is unchanged.",
+  "owner_note": "Recorded as a disclosed clarification under the owner's general instruction; the owner may withdraw it."
+}

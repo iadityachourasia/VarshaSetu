@@ -1,0 +1,522 @@
+{
+  "approval": {
+    "approved_by": "project owner",
+    "note": "Interpretation of a general instruction: the sealing, the decision rules and the unseal of 2014-2016 are recorded as the owner's authorised plan; the owner may withdraw it. The measured reforecast download (about 40 GB) was larger than the 20-25 GB estimate given when the scope was confirmed.",
+    "record": "owner instruction of 2026-10-03: 'now try to close those two requirements download search data that is needed and proceed and implement both requirement properly', with the data scope confirmed in chat: GEFSv12 reforecast control 2000-2016 with 2014-2016 sealed, and ERA5 1.5 degree geopotential 2000-2023"
+  },
+  "code_hashes": {
+    "backend/app/ml/reforecast_study.py": "6cfac7c728f1a00ed0f435cb71bc03ac82e4d842fded4f10fd0dd6f60e29a731",
+    "backend/app/ml/regime_labels_reanalysis.py": "ad5e8816bf2ac6a4d370efd8f2fbbae6446d13e4d7abf9b816f737d5adbad8af",
+    "backend/app/ml/regime_tasks.py": "aa5988202b64f316632dd9713e951376defa4b738af58bb48764ce19265c0503",
+    "backend/app/ml/regime_validation.py": "4cc9bb9cfe03c0625d2247b11f1b5f5d881523206b54bb89fedda79f32c52ce6",
+    "backend/app/ml/wd_indicator.py": "52eab3b9f3019cd2efe71b75579d3ddccc6f2f1a56ad411022146c6c29bd661e",
+    "scripts/build_reforecast_forecast_side.py": "ae8268f9d107d1c0ed519ed362a960fb28f265b2cd04216223a660ec4dc59dd6",
+    "scripts/build_reforecast_pairs.py": "a5afbe5c91e53c2b169302b2719d38c080248525bff68f08b763a54d161b8503",
+    "scripts/build_regime_task_data.py": "36a2296f3d1fd000754fd03b6e09a34f84ab900f99df3d32f9f2a1e04d4c028c"
+  },
+  "data": {
+    "forecast": "GEFSv12 reforecast control member c00, 00 UTC, Days 1-3 rainfall (canonical 24 h reconstruction on the 49x49 target grid) and six atmospheric fields, built by scripts/build_reforecast_forecast_side.py",
+    "forecast_side_files": {
+      "2000": {
+        "X_full_sha256": "0978d2cd0371d3d8a196e367bee22d289a34e0ebbbff6c0aa50f3043de2a8652",
+        "cases_json_sha256": "45fd47462f057128601d89b0b52ac95220fa441f461064f5bfe4acfb7940afdb",
+        "excluded_cases": 129,
+        "included_cases": 237,
+        "regime_X_sha256": "12e8fbb5935ec0b9147d3970184f5794744e7830121806b0c7a9cdf0227a13cb"
+      },
+      "2001": {
+        "X_full_sha256": "d887456fcdee3a0eab6448fd9ebad65b9f50e08db04003cbe12cc766cf5f203a",
+        "cases_json_sha256": "9bb456938b323d92ca272458f4cdd3986c7d1c88cf846532d47f91faae1f0115",
+        "excluded_cases": 123,
+        "included_cases": 243,
+        "regime_X_sha256": "31bc2195f82323fe19693e541f523142fb07d76c6ebc88688958b8d017ffb240"
+      },
+      "2002": {
+        "X_full_sha256": "20cafe5f4289ab7f91a600b327c236c52dade9deefd4edbcddb5d8054efa9b42",
+        "cases_json_sha256": "0e1f9d36ee26308e093383f7c545f287e3b40b16da4833add0741ea5dbca041f",
+        "excluded_cases": 102,
+        "included_cases": 264,
+        "regime_X_sha256": "724227527df264778af4b0c748a6b0fc3a0a3ac9f04abcbcfaa132c4e075ebdf"
+      },
+      "2003": {
+        "X_full_sha256": "4ae980c05e139b20a8a2599d3c426828d2df579661d0352dc26ab941a1091d27",
+        "cases_json_sha256": "69e68b5c7ed3274033f99a90689c98d3d944d737f532c9110705d30dc1e2b29d",
+        "excluded_cases": 122,
+        "included_cases": 244,
+        "regime_X_sha256": "0e5d2303c50ef06737d9f73e1daf44572957128b971be74031fd8d14bc0d60e2"
+      },
+      "2004": {
+        "X_full_sha256": "299f3d229348edcc3f574a87024cf418ddfa0eb76873d9609108e23d0df70d51",
+        "cases_json_sha256": "b56c113ac209b60a668266b0564e63bab1dcba9f9bfe067d4ad772607786964a",
+        "excluded_cases": 112,
+        "included_cases": 254,
+        "regime_X_sha256": "92959053e41df54e0eeb2c383eee1c2600254f5833dde50e6c3282db1ae71f08"
+      },
+      "2005": {
+        "X_full_sha256": "493f8468b53506006ea2bd39351fe57aef1838be7a468bd6d31b0d0172080645",
+        "cases_json_sha256": "b41bddb0f643435a08481e80f57b32f5b2b013612ed138dbf4e2017358d527e0",
+        "excluded_cases": 104,
+        "included_cases": 262,
+        "regime_X_sha256": "619d84e484934857e966739a2200333fb3c0b2b53ff4868f87e3eefb44304ca3"
+      },
+      "2006": {
+        "X_full_sha256": "ac6dae25a546310fcdb80693da568b32765fc3677ac9475568dde0eaffdaa448",
+        "cases_json_sha256": "f2af268f6d290c5a201f203c105297f96e490089cfb5a3f83c72fa67504b3318",
+        "excluded_cases": 107,
+        "included_cases": 259,
+        "regime_X_sha256": "26c6c661b0f68f75a88a83500f6bbe162ba6c93690f7cc04007d9cc582e06cec"
+      },
+      "2007": {
+        "X_full_sha256": "0699de1f370b4647ef2f040269977094fd797a3f29646d9f85db11bc76b12ebc",
+        "cases_json_sha256": "11b816e8343f8cbc1f97d2837242a63612ec3b964e14de915fad00ff0b47db94",
+        "excluded_cases": 112,
+        "included_cases": 254,
+        "regime_X_sha256": "1642bea23bd4082f6078361d880a1f40861a510f468c3b1ab101811441edaf24"
+      },
+      "2008": {
+        "X_full_sha256": "65852b39ca73c19c0b6689859948f4726388c4c83339ce2947749b5b42803afe",
+        "cases_json_sha256": "7d5e0040337157bd3202ba2adc5abbde367843afabcae7b25091c2a68050be02",
+        "excluded_cases": 113,
+        "included_cases": 253,
+        "regime_X_sha256": "6b8a87f784b016c713ff5dc6c408e0fd7aa12c8ef6650138cab42c3c97aec1dc"
+      },
+      "2009": {
+        "X_full_sha256": "2b304caf167c800124ff2e9a33ae9b0d73c630aec2a3531b6fcc2695ac7002e7",
+        "cases_json_sha256": "98628a53855615219b68e5d00b700721c9833a1b54e7b8fd6db7a1385a86386a",
+        "excluded_cases": 108,
+        "included_cases": 258,
+        "regime_X_sha256": "07b96ecb0d9bb4b87188c92a3d4309d675ab66c0d32d5bd4703ec127ef9a028b"
+      },
+      "2010": {
+        "X_full_sha256": "052fb3041b363ba5c0b9fcdff780dd5332a79c52fd25b0665a9fba3d905b0b1c",
+        "cases_json_sha256": "62a9dbe702c6973485c72b6af9cd55d9346abaa541db783a53a3caee1b1a656a",
+        "excluded_cases": 133,
+        "included_cases": 233,
+        "regime_X_sha256": "e010dfb3c3d2fb46bbc8b31290d029e11b985b10e639b534e8d41830ff2ff79a"
+      },
+      "2011": {
+        "X_full_sha256": "a500136b21d61ff3fa8bdff9738b88131003398f86c107420cf0e93cdba62d00",
+        "cases_json_sha256": "a6ae4aaa2e28d39413d21d43067456ed5652765187a530a8b55b823e093202ab",
+        "excluded_cases": 117,
+        "included_cases": 249,
+        "regime_X_sha256": "2ba94da6a6e863107782345354db53620b807494de782d30104d0bdf6c3aaa74"
+      },
+      "2012": {
+        "X_full_sha256": "a961db10e3752237f31b3b5d7424c9411fde32018770c2bd3dbae69fbc2c4d3e",
+        "cases_json_sha256": "422ff86e938ce07bed1eb6d1d6e0c1e2c4d0863df2c8fc26dfdc988f80b4e33b",
+        "excluded_cases": 107,
+        "included_cases": 259,
+        "regime_X_sha256": "d802424776162170632aae3e5c9812df7a232d0b63bdd8b6caa9241378971ada"
+      },
+      "2013": {
+        "X_full_sha256": "b0ef9824702a6be77155532b3da841dfba9503036a1310eaf7228e2dbcccd9eb",
+        "cases_json_sha256": "b41e9d4de3455f4275fab572660c0e204262775cfa3533c46a52703ba196be34",
+        "excluded_cases": 114,
+        "included_cases": 252,
+        "regime_X_sha256": "42fc286de424b6fb086d947044773feae4352cda7f36a34d255eaa3a02c96664"
+      },
+      "2014": {
+        "X_full_sha256": "9ea2d2d68e23d0e98a203e8caed3e8be091f42c2f3df75bdfa5bc4689ec8c60e",
+        "cases_json_sha256": "ddb77559481d1a49f1fc0070c292d3c6a084e949beb19a520796d4abb365af14",
+        "excluded_cases": 125,
+        "included_cases": 241,
+        "regime_X_sha256": "f8db34cb60a37cd3507f60305fcd2eb62112108d83521ff87db7720837babc27"
+      },
+      "2015": {
+        "X_full_sha256": "7376a1a9a0f9758bd9a739493c50d708f71d68799091b5224afaf090be010dc0",
+        "cases_json_sha256": "7fb1cf4885619dd3b19ce690df861a598b372d7493c3ba9681b8ef80f133c15b",
+        "excluded_cases": 96,
+        "included_cases": 270,
+        "regime_X_sha256": "f167fa710b7892f05adda254df944aba092e69544fd2013019520db7320a1df3"
+      },
+      "2016": {
+        "X_full_sha256": "4e0e2a73a4a90c014ed2051f60402760ae71674238af0241a876b2926162e5ca",
+        "cases_json_sha256": "acc3f36d79c8ef6606e8069e5865dab255ff651b6fd4136e17235842ba325b04",
+        "excluded_cases": 99,
+        "included_cases": 267,
+        "regime_X_sha256": "8ff5847c03d4b928f768aaf803b7a86ed82d88f287e007ee0c3fdab6044d24d7"
+      }
+    },
+    "forecast_side_totals": {
+      "excluded": 1923,
+      "included": 4299
+    },
+    "observation": "IMD RF25 daily rainfall, official 0.25 degree files, hash-pinned (regime_validation_protocol_v1 climatology file hashes); IMD files stay local, only aggregates are tracked",
+    "reanalysis": "ERA5 geopotential from the public WeatherBench2 store (1.5 degree, 6-hourly, 13 levels), used ONLY to label past days; never a forecast input (AGENTS.md section 3.5)",
+    "static_geography_sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0"
+  },
+  "forbidden": [
+    "reading any sealed-year observation, label or reanalysis value before the unseal record exists",
+    "using 2014-2016 for fitting, tuning, threshold choice, feature choice or selection",
+    "changing the grid, rules, thresholds or tiers after any validation result is seen without a new protocol version",
+    "pooling with the 2017-2019 reforecast years or the operational years",
+    "using ERA5 or any observation as a model input",
+    "claiming skill from the validation years as final evidence"
+  ],
+  "frozen_at_utc": "2026-10-03T10:05:56+00:00",
+  "no_observation_read": true,
+  "populations": {
+    "labels": {
+      "sealed": "POST-UNSEAL SEALED TEST 2014-2016: first use of these years",
+      "train": "training years 2000-2011",
+      "validation": "validation years 2012-2013: development evidence, used for selection"
+    },
+    "note": "The sealed years 2014-2016 are untouched: no earlier model, selection or experiment of this project used them. 2017-2019 (Track A) and 2021-2025 (Track B) are NOT used here. The reforecast lineage (GEFSv12 retrospective) is never pooled with the operational track.",
+    "sealed_test_years": [
+      2014,
+      2015,
+      2016
+    ],
+    "train_years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011
+    ],
+    "validation_years": [
+      2012,
+      2013
+    ]
+  },
+  "purpose": "Two pre-registered questions on an independent, much longer GEFSv12 reforecast corpus (control member, June to September, 2000-2016): (R05) does a corrected forecast improve on Raw GEFS for rainfall error, heavy rain and very-heavy rain on years no earlier model or experiment has seen, and does regime-awareness add value over the best non-regime model; (R03) can regime states (active, break, low/depression, western disturbance, coastal/orographic rain) be detected from the forecast alone against labels that are independent of the forecast-time rules.",
+  "r03": {
+    "classifier": {
+      "C_grid": [
+        0.01,
+        0.1,
+        1.0,
+        10.0
+      ],
+      "baseline": "the same model on lead hours, day-of-year sine and cosine only (a climatology)",
+      "family": "standardised logistic regression, one per task",
+      "operating_point": "the validation-year threshold that maximises balanced accuracy",
+      "refit": "training plus validation years",
+      "selection": "validation-year AUC (training years only for fitting)"
+    },
+    "coverage_mapping": {
+      "REGIME-CLASSIFIER": "IMPLEMENTED only if ACTIVE, BREAK and LOW_DEPRESSION are all VALIDATED",
+      "REGIME-COASTAL-OROGRAPHIC": "IMPLEMENTED only if COASTAL_OROGRAPHIC is VALIDATED",
+      "REGIME-WESTERN-DISTURBANCE": "IMPLEMENTED only if WESTERN_DISTURBANCE is VALIDATED",
+      "otherwise": "the row stays PARTIAL and says which tasks were not validated",
+      "wording": "validated against objective labels, never against an expert analysis; the western-disturbance label compares a forecast trough with a reanalysis trough, so it largely verifies the forecast height field"
+    },
+    "features": [
+      "the 12 forecast regime features",
+      "forecast western-disturbance indicator (500 hPa geostrophic vorticity over 25-38 N, 62-78 E from the forecast height)",
+      "coastal cross-barrier forcing index (docs/137)",
+      "lead hours",
+      "day-of-year sine and cosine"
+    ],
+    "label_nature": "objective, rule-based, reanalysis- or IMD-derived labels in the style of the published trackers; NOT the published classifications and NOT an expert analysis; the percentile labels are relative by construction",
+    "label_time": "the valid day of the case: initialization date plus the lead day",
+    "sealed_test": {
+      "intervals": "95 percent",
+      "metrics": [
+        "AUC",
+        "balanced accuracy",
+        "recall",
+        "precision"
+      ],
+      "support_gate": "at least 30 positive and 30 negative cases in the sealed test per task, otherwise insufficient support and no verdict",
+      "tiers": {
+        "NOT_VALIDATED": "otherwise",
+        "USEFUL": "VALIDATED and AUC at least 0.70",
+        "VALIDATED": "AUC lower bound above 0.5 and the AUC difference over the climatology baseline has a lower bound above zero"
+      },
+      "unit": "initialization date (2000 resamples, seed 26080)"
+    },
+    "tasks": {
+      "ACTIVE": "IMD core-zone rainfall active spell (July and August; 1981-2011 climatology; +1 standard deviation; three days)",
+      "BREAK": "same, -1 standard deviation",
+      "COASTAL_OROGRAPHIC": "IMD mean rainfall over the Ghats-coast zone cells at or above the training-years 85th percentile (June to September days)",
+      "LOW_DEPRESSION": "ERA5 850 hPa geostrophic vorticity box maximum, 15-25 N, 70-95 E, at or above the training-years 85th percentile, on at least two consecutive days",
+      "WESTERN_DISTURBANCE": "ERA5 500 hPa geostrophic vorticity box maximum, 20-36.5 N, 60-80 E, same rule"
+    }
+  },
+  "r05": {
+    "coverage_mapping": {
+      "IMPROVEMENT-VS-RAW_becomes_IMPLEMENTED_only_if": "a selected arm reaches tier FULL on the sealed test; otherwise the row stays PARTIAL and states which of the three improvements were and were not shown",
+      "regime_wording": "regime-awareness is claimed to add skill only if regime_adds_value is true"
+    },
+    "grid": {
+      "configurations": [
+        {
+          "cap": null,
+          "max_depth": 4,
+          "n_estimators": 200,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": null,
+          "max_depth": 4,
+          "n_estimators": 350,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": null,
+          "max_depth": 6,
+          "n_estimators": 200,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": null,
+          "max_depth": 6,
+          "n_estimators": 350,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 4,
+          "n_estimators": 200,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 4,
+          "n_estimators": 350,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 6,
+          "n_estimators": 200,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 6,
+          "n_estimators": 350,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 4,
+          "n_estimators": 200,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 4,
+          "n_estimators": 350,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 6,
+          "n_estimators": 200,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 6,
+          "n_estimators": 350,
+          "objective": "reg:squarederror"
+        },
+        {
+          "cap": null,
+          "max_depth": 4,
+          "n_estimators": 200,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": null,
+          "max_depth": 4,
+          "n_estimators": 350,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": null,
+          "max_depth": 6,
+          "n_estimators": 200,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": null,
+          "max_depth": 6,
+          "n_estimators": 350,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 4,
+          "n_estimators": 200,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 4,
+          "n_estimators": 350,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 6,
+          "n_estimators": 200,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 4.0,
+          "max_depth": 6,
+          "n_estimators": 350,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 4,
+          "n_estimators": 200,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 4,
+          "n_estimators": 350,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 6,
+          "n_estimators": 200,
+          "objective": "reg:tweedie"
+        },
+        {
+          "cap": 8.0,
+          "max_depth": 6,
+          "n_estimators": 350,
+          "objective": "reg:tweedie"
+        }
+      ],
+      "event_weight": "w = min(cap, 1 + y / 64.5) from the observed rainfall of a training row; cap None means no weighting",
+      "sample_weights_at_inference": "never",
+      "size": 24
+    },
+    "model_spec": {
+      "device": "cpu",
+      "family": "xgboost",
+      "fixed": {
+        "colsample_bytree": 0.9,
+        "learning_rate": 0.05,
+        "min_child_weight": 5,
+        "reg_lambda": 2.0,
+        "subsample": 0.9
+      },
+      "gpu": "not used (the earlier equivalence gate was not met)",
+      "n_jobs": 12,
+      "note": "the same fixed settings as the geography-aware follow-up protocol",
+      "output": "prediction clipped at zero",
+      "seed": 26080,
+      "tree_method": "hist",
+      "tweedie_variance_power": 1.5
+    },
+    "models": {
+      "M0": "Raw GEFS control",
+      "global_arms": {
+        "B0": {
+          "features": [
+            "raw_c00_rain_mm",
+            "forecast_u850",
+            "forecast_v850",
+            "forecast_q700",
+            "forecast_z500",
+            "forecast_mslp",
+            "forecast_pwat",
+            "pwat_area_mean",
+            "q700_area_mean",
+            "u850_area_mean",
+            "v850_area_mean",
+            "wind_speed_area_mean",
+            "moisture_transport_area_mean",
+            "mslp_area_mean",
+            "mslp_minimum",
+            "mslp_range",
+            "z500_area_mean",
+            "relative_vorticity_area_mean",
+            "relative_vorticity_p90",
+            "latitude_deg",
+            "longitude_deg",
+            "lead_hours"
+          ],
+          "role": "non-regime event-weighted/global control"
+        },
+        "B1": {
+          "features": [
+            "raw_c00_rain_mm",
+            "forecast_u850",
+            "forecast_v850",
+            "forecast_q700",
+            "forecast_z500",
+            "forecast_mslp",
+            "forecast_pwat",
+            "pwat_area_mean",
+            "q700_area_mean",
+            "u850_area_mean",
+            "v850_area_mean",
+            "wind_speed_area_mean",
+            "moisture_transport_area_mean",
+            "mslp_area_mean",
+            "mslp_minimum",
+            "mslp_range",
+            "z500_area_mean",
+            "relative_vorticity_area_mean",
+            "relative_vorticity_p90",
+            "latitude_deg",
+            "longitude_deg",
+            "lead_hours",
+            "mean_elevation_m",
+            "local_relief_m",
+            "distance_to_coast_km",
+            "slope_m_per_km",
+            "terrain_uphill_east",
+            "terrain_uphill_north",
+            "coast_landward_east",
+            "coast_landward_north"
+          ],
+          "role": "adds the eight static geography columns"
+        }
+      },
+      "regime_arms": {
+        "R_hard": "M3-style hard routing to three regime experts",
+        "R_soft": "M4-style probability-weighted mixture",
+        "construction": "pseudo-labelling rule fitted on the training cases (Phase 2A method), logistic classifier on the 12 regime features fitted on the training cases, three experts trained with the SELECTED B0 configuration, an expert with fewer than 100000 training rows falls back to the global B0 model"
+      }
+    },
+    "sealed_test": {
+      "also_reported": [
+        "by lead day",
+        "by sealed year",
+        "by pseudo-regime",
+        "FSS is not part of this study"
+      ],
+      "comparisons": [
+        "each selected global arm (B0, B1) against Raw",
+        "R_soft and R_hard against B0 (does regime-awareness add value)"
+      ],
+      "decision": {
+        "BIAS_OK": "|bias| <= 1.5 mm and heavy and very-heavy frequency bias within the selection limits",
+        "IMPROVES_HEAVY": "heavy-rain CSI difference positive with the 97.5 percent interval excluding zero",
+        "IMPROVES_RMSE": "RMSE difference against Raw negative with the 95 percent interval excluding zero",
+        "IMPROVES_VERY_HEAVY": "very-heavy CSI difference positive with the 97.5 percent interval excluding zero",
+        "regime_adds_value": "heavy CSI improves over B0 with the 97.5 percent interval excluding zero and the RMSE difference interval upper bound is at most 0.2 mm",
+        "tiers": "FULL = all three improvements and BIAS_OK; RMSE_AND_HEAVY; PARTIAL; NONE"
+      },
+      "intervals": "95 percent for RMSE, 97.5 percent (Bonferroni over the two thresholds) for heavy and very-heavy CSI differences",
+      "support_gate": "at least 30 observed event pairs per threshold in the sealed test, otherwise that threshold is reported as insufficient support and cannot count as an improvement",
+      "unit": "initialization date (whole dates resampled, 2000 resamples, seed 26080)"
+    },
+    "selection": {
+      "choice": "highest mean of heavy and very-heavy CSI; ties go to the lower RMSE, then the earlier grid position; none eligible means no candidate and the study reports that",
+      "data": "validation years only, models trained on the training years only",
+      "eligible": "RMSE no worse than Raw, heavy CSI at least Raw's, |bias| <= 1.5 mm, heavy frequency bias <= 2.0, very-heavy frequency bias <= 3.0",
+      "refit": "the selected configuration of each arm is refit on training plus validation years (2000-2013) before the sealed test; nothing else changes"
+    }
+  },
+  "schema": "reforecast-study-protocol-v1",
+  "status": "APPROVED_FOR_EXECUTION"
+}

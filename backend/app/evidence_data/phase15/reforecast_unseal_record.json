@@ -1,0 +1,51 @@
+{
+  "amendments_sha256": {
+    "reforecast_protocol_v1_amendment_1.json": "4797dcca2cabcfc627c6883cebe7ec60b73701fa98ff43314f22a64285a44c6d",
+    "reforecast_protocol_v1_amendment_2.json": "00b8ade3e3c5a9ba54eadb96bcbd492f8d5645249721e7118a0cd6a356b4f26b"
+  },
+  "disclosed_before_opening": [
+    "the validation results (2012-2013) were seen and used only for selection",
+    "the selection freezes and models were written before this record",
+    "the download was larger than estimated (measured about 40 GB against 20-25 GB)"
+  ],
+  "exceedance_freeze_sha256": "13de7102aa82d1ed680709c1e597cab5506a38340003f8a5b4a7c30e0c50dc6d",
+  "model_files_sha256": {
+    "B0.json": "0a6d55db8b16176ebfdb0e0faaeabbb1f44205c67cf326b99c5cbf5387cac706",
+    "B1.json": "6e6482777e1e02365fa7ceb9b3d30abe2583cd6b02220d74dca3dd42a676f454",
+    "exceed_B0_heavy.json": "42fbd0e1d37bebfb0a2b8e3be4efef5e120a6fdcd008f855969834b9e87e5df0",
+    "exceed_B0_very_heavy.json": "d9406d32ccca5eb59204fd91177e2d8b657bd37173e4a9dc46f15a1e24967103",
+    "exceed_B1_heavy.json": "6069f25e95af2c5273cd3430ff1909bf71b87f466d5dcc8610a1edf1a3b0139e",
+    "exceed_B1_very_heavy.json": "11fe9e999a44f42a4a809bcb096fb65c44be203e272d09516cf16d30457165ab",
+    "expert_regime_0.json": "6c445178e7c3047ba34ef7cdd8f03320862e2d4a57e195d02cffc97f8268ba30",
+    "expert_regime_1.json": "11b65b38b63a738516c076f88be45776384002f9a5bb9c6dc9e6e2208c9831b8",
+    "expert_regime_2.json": "03cc4a4bc09f0a084b84b933eedcf8f008788f4cca04cc4da5d31040860d2511",
+    "regime_arms.json": "2d40d870c78bdec66f2bb96c7a2dd10dfb8db58781ed1514ccd826127d589cbc"
+  },
+  "owner_message": {
+    "date": "2026-10-03",
+    "interpretation": "A general instruction to close the two partial requirements; the owner confirmed the data scope (reforecast 2000-2016 with 2014-2016 sealed) in chat. The decision to open the sealed years once, after the selections were frozen, is recorded as the owner's authorised plan and may be withdrawn.",
+    "verbatim": "now try to close those two requirements download search data that is needed and proceed and implement both requirement properly (2026-10-03); later: implement complete and finish all mandatory requirements mentioned in ps professionally and industry prodiction based. complete everything and then report to me."
+  },
+  "protocol_sha256": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7",
+  "regime_tasks_freeze_sha256": "09abd75453462b5cc9a374d5cb9e7ef6b89ff9ce5a8c21f99c1b58aeb9958cbb",
+  "schema": "reforecast-unseal-record-v1",
+  "selection_freeze_sha256": "9511fec1786c45191312759979c1cc538dd4e2d0b7340e565015570a79b31c30",
+  "what_is_authorised": [
+    "pairing the 2014-2016 forecast-side corpus with IMD",
+    "labelling 2014-2016 days (IMD and ERA5) with the frozen thresholds",
+    "scoring the frozen models and classifiers once",
+    "writing the evidence files"
+  ],
+  "what_is_not_authorised": [
+    "retraining, re-selecting or changing any threshold, configuration or rule",
+    "a second scoring run with different settings",
+    "using 2014-2016 for any fitting"
+  ],
+  "written_at_utc": "2026-10-03T10:54:46+00:00",
+  "written_before_any_sealed_observation_was_read": true,
+  "years": [
+    2014,
+    2015,
+    2016
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "bootstrap": {
+    "note": "optimistic: consecutive dates are correlated",
+    "repeats": 2000,
+    "seed": 26080,
+    "unit": "initialization date"
+  },
+  "bundle_decision": {
+    "components": "RMSE and bias from the shifted B1 regression; heavy and very-heavy CSI from the B1 exceedance classifiers (amendment 3)",
+    "decision": {
+      "BIAS_OK": true,
+      "IMPROVES_HEAVY": true,
+      "IMPROVES_RMSE": true,
+      "IMPROVES_VERY_HEAVY": true,
+      "improvements": [
+        "IMPROVES_RMSE",
+        "IMPROVES_HEAVY",
+        "IMPROVES_VERY_HEAVY"
+      ],
+      "tier": "FULL"
+    },
+    "vs_raw": {
+      "heavy_csi": {
+        "excludes_zero": true,
+        "interval95": [
+          0.14340835697993787,
+          0.1872826631205262
+        ],
+        "level": 0.975,
+        "point": 0.16543024723962002,
+        "status": "ok",
+        "valid_draws": 2000
+      },
+      "rmse": {
+        "excludes_zero": true,
+        "interval95": [
+          -2.0402376590450024,
+          -1.4695081319080616
+        ],
+        "point": -1.7594879386238684,
+        "status": "ok",
+        "valid_draws": 2000
+      },
+      "very_heavy_csi": {
+        "excludes_zero": true,
+        "interval95": [
+          0.10563404698780278,
+          0.17570163120013224
+        ],
+        "level": 0.975,
+        "point": 0.1405478680414391,
+        "status": "ok",
+        "valid_draws": 2000
+      }
+    }
+  },
+  "by_year": {
+    "2017": {
+      "B1_shifted": {
+        "bias_mm": 0.2074486081327719,
+        "cells": 335658,
+        "heavy": {
+          "csi": 0.1742537935634484,
+          "false_alarms": 1247,
+          "frequency_bias": 0.4825263157894737,
+          "hits": 1045,
+          "misses": 3705,
+          "observed_events": 4750
+        },
+        "mae_mm": 6.542156807574618,
+        "rmse_mm": 12.830384684027678,
+        "very_heavy": {
+          "csi": 0.04106776180698152,
+          "false_alarms": 109,
+          "frequency_bias": 0.1722543352601156,
+          "hits": 40,
+          "misses": 825,
+          "observed_events": 865
+        }
+      },
+      "B1_uncorrected": {
+        "bias_mm": 1.8012219490742538,
+        "cells": 335658,
+        "heavy": {
+          "csi": 0.18249715862964766,
+          "false_alarms": 1409,
+          "frequency_bias": 0.5332631578947369,
+          "hits": 1124,
+          "misses": 3626,
+          "observed_events": 4750
+        },
+        "mae_mm": 7.313577875683707,
+        "rmse_mm": 12.973132875312613,
+        "very_heavy": {
+          "csi": 0.04060913705583756,
+          "false_alarms": 120,
+          "frequency_bias": 0.18497109826589594,
+          "hits": 40,
+          "misses": 825,
+          "observed_events": 865
+        }
+      },
+      "M0": {
+        "bias_mm": 0.0031677141081101856,
+        "cells": 335658,
+        "heavy": {
+          "csi": 0.07160321341250436,
+          "false_alarms": 976,
+          "frequency_bias": 0.29178947368421054,
+          "hits": 410,
+          "misses": 4340,
+          "observed_events": 4750
+        },
+        "mae_mm": 7.0592961232002756,
+        "rmse_mm": 14.118096500640661,
+        "very_heavy": {
+          "csi": 0.018682399213372666,
+          "false_alarms": 152,
+          "frequency_bias": 0.1976878612716763,
+          "hits": 19,
+          "misses": 846,
+          "observed_events": 865
+        }
+      }
+    },
+    "2018": {
+      "B1_shifted": {
+        "bias_mm": 0.5876970927306954,
+        "cells": 326551,
+        "heavy": {
+          "csi": 0.2077990330039941,
+          "false_alarms": 3085,
+          "frequency_bias": 0.7873697309068284,
+          "hits": 1977,
+          "misses": 4452,
+          "observed_events": 6429
+        },
+        "mae_mm": 6.133225091058236,
+        "rmse_mm": 14.073446012048366,
+        "very_heavy": {
+          "csi": 0.026673640167364017,
+          "false_alarms": 272,
+          "frequency_bias": 0.19695121951219513,
+          "hits": 51,
+          "misses": 1589,
+          "observed_events": 1640
+        }
+      },
+      "B1_uncorrected": {
+        "bias_mm": 2.0130019860054404,
+        "cells": 326551,
+        "heavy": {
+          "csi": 0.214227309893704,
+          "false_alarms": 3355,
+          "frequency_bias": 0.8478768082127858,
+          "hits": 2096,
+          "misses": 4333,
+          "observed_events": 6429
+        },
+        "mae_mm": 6.875079437139475,
+        "rmse_mm": 14.24509076358141,
+        "very_heavy": {
+          "csi": 0.028836251287332648,
+          "false_alarms": 302,
+          "frequency_bias": 0.21829268292682927,
+          "hits": 56,
+          "misses": 1584,
+          "observed_events": 1640
+        }
+      },
+      "M0": {
+        "bias_mm": 0.4208482093351796,
+        "cells": 326551,
+        "heavy": {
+          "csi": 0.07566219265946074,
+          "false_alarms": 1990,
+          "frequency_bias": 0.40861720329755796,
+          "hits": 637,
+          "misses": 5792,
+          "observed_events": 6429
+        },
+        "mae_mm": 6.734870254564943,
+        "rmse_mm": 15.574882638779094,
+        "very_heavy": {
+          "csi": 0.025967143614202437,
+          "false_alarms": 247,
+          "frequency_bias": 0.18048780487804877,
+          "hits": 49,
+          "misses": 1591,
+          "observed_events": 1640
+        }
+      }
+    },
+    "2019": {
+      "B1_shifted": {
+        "bias_mm": 1.9342385492973095,
+        "cells": 331755,
+        "heavy": {
+          "csi": 0.30955457327439645,
+          "false_alarms": 5072,
+          "frequency_bias": 0.9990657116163189,
+          "hits": 4552,
+          "misses": 5081,
+          "observed_events": 9633
+        },
+        "mae_mm": 8.837235868650076,
+        "rmse_mm": 17.422968311197636,
+        "very_heavy": {
+          "csi": 0.10801186943620178,
+          "false_alarms": 452,
+          "frequency_bias": 0.2796435915010281,
+          "hits": 364,
+          "misses": 2554,
+          "observed_events": 2918
+        }
+      },
+      "B1_uncorrected": {
+        "bias_mm": 3.5359717600022433,
+        "cells": 331755,
+        "heavy": {
+          "csi": 0.3128462147190715,
+          "false_alarms": 5531,
+          "frequency_bias": 1.066645904702585,
+          "hits": 4744,
+          "misses": 4889,
+          "observed_events": 9633
+        },
+        "mae_mm": 9.675772208446563,
+        "rmse_mm": 17.70016614782342,
+        "very_heavy": {
+          "csi": 0.11451942740286299,
+          "false_alarms": 505,
+          "frequency_bias": 0.30740233036326253,
+          "hits": 392,
+          "misses": 2526,
+          "observed_events": 2918
+        }
+      },
+      "M0": {
+        "bias_mm": 0.5938220006902178,
+        "cells": 331755,
+        "heavy": {
+          "csi": 0.12039539732797899,
+          "false_alarms": 3316,
+          "frequency_bias": 0.5060728744939271,
+          "hits": 1559,
+          "misses": 8074,
+          "observed_events": 9633
+        },
+        "mae_mm": 9.327648115575048,
+        "rmse_mm": 19.773472597952658,
+        "very_heavy": {
+          "csi": 0.03330510866497319,
+          "false_alarms": 625,
+          "frequency_bias": 0.2546264564770391,
+          "hits": 118,
+          "misses": 2800,
+          "observed_events": 2918
+        }
+      }
+    }
+  },
+  "cases": 764,
+  "confirmation_record_sha256": "1d22c6d8349261471d2485f25b7d4462557c91e849c090c46f02056877d3ffbd",
+  "delta_mm": 1.761342284267306,
+  "delta_source": "pooled mean error of the selected B1 regression on 2014-2016 (reforecast_r05_test.json)",
+  "evidence_role": "REFORECAST_CONFIRMATORY_TEST_2017_2019",
+  "exceedance": {
+    "B1:heavy": {
+      "base_rate": 0.02093838408634518,
+      "tau": 0.5450971896052383,
+      "test": {
+        "csi": 0.26161390413782626,
+        "false_alarms": 25275,
+        "frequency_bias": 1.793772823371132,
+        "hits": 12057,
+        "misses": 8755,
+        "observed_events": 20812,
+        "tau": 0.5450971896052383
+      }
+    },
+    "B1:very_heavy": {
+      "base_rate": 0.005455932005585715,
+      "tau": 0.5986391619625566,
+      "test": {
+        "csi": 0.1693984962406015,
+        "false_alarms": 7877,
+        "frequency_bias": 1.86796975843629,
+        "hits": 2253,
+        "misses": 3170,
+        "observed_events": 5423,
+        "tau": 0.5986391619625566
+      }
+    }
+  },
+  "initialization_dates": 366,
+  "label": "CONFIRMATORY TEST 2017-2019: no model of this study used these years (earlier Track A experiments did)",
+  "pooled": {
+    "B1_shifted": {
+      "bias_mm": 0.9087232215241802,
+      "cells": 993964,
+      "heavy": {
+        "csi": 0.25066190097961344,
+        "false_alarms": 9404,
+        "frequency_bias": 0.8157793580626561,
+        "hits": 7574,
+        "misses": 13238,
+        "observed_events": 20812
+      },
+      "mae_mm": 7.1738365192613065,
+      "rmse_mm": 14.899002514901712,
+      "very_heavy": {
+        "csi": 0.07273017902813299,
+        "false_alarms": 833,
+        "frequency_bias": 0.237506914991702,
+        "hits": 455,
+        "misses": 4968,
+        "observed_events": 5423
+      }
+    },
+    "B1_uncorrected": {
+      "bias_mm": 2.4498057070014334,
+      "cells": 993964,
+      "heavy": {
+        "csi": 0.25601954543993316,
+        "false_alarms": 10295,
+        "frequency_bias": 0.8773303863155871,
+        "hits": 7964,
+        "misses": 12848,
+        "observed_events": 20812
+      },
+      "mae_mm": 7.957944952620783,
+      "rmse_mm": 15.102008582860334,
+      "very_heavy": {
+        "csi": 0.0768503937007874,
+        "false_alarms": 927,
+        "frequency_bias": 0.2609256868891757,
+        "hits": 488,
+        "misses": 4935,
+        "observed_events": 5423
+      }
+    },
+    "M0": {
+      "bias_mm": 0.33753243581024617,
+      "cells": 993964,
+      "heavy": {
+        "csi": 0.09618365689820625,
+        "false_alarms": 6282,
+        "frequency_bias": 0.427061310782241,
+        "hits": 2606,
+        "misses": 18206,
+        "observed_events": 20812
+      },
+      "mae_mm": 7.709818197844384,
+      "rmse_mm": 16.65849045352558,
+      "very_heavy": {
+        "csi": 0.0288506281991624,
+        "false_alarms": 1024,
+        "frequency_bias": 0.2231237322515213,
+        "hits": 186,
+        "misses": 5237,
+        "observed_events": 5423
+      }
+    }
+  },
+  "protocol_sha256": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7",
+  "raw_categorical": {
+    "heavy": {
+      "csi": 0.09618365689820625,
+      "false_alarms": 6282,
+      "frequency_bias": 0.427061310782241,
+      "hits": 2606,
+      "misses": 18206
+    },
+    "very_heavy": {
+      "csi": 0.0288506281991624,
+      "false_alarms": 1024,
+      "frequency_bias": 0.2231237322515213,
+      "hits": 186,
+      "misses": 5237
+    }
+  },
+  "reproduction": {
+    "checks": [
+      "every model, amendment and round-1 evidence hash matched the confirmation record",
+      "M0 equals the raw forecast column"
+    ],
+    "status": "REPRODUCED"
+  },
+  "rows": 993964,
+  "schema": "reforecast-r05-confirmation-v1",
+  "support": {
+    "observed_event_pairs": {
+      "heavy": 20812,
+      "very_heavy": 5423
+    },
+    "supported": {
+      "heavy": true,
+      "very_heavy": true
+    }
+  },
+  "uncorrected_rmse_difference": {
+    "excludes_zero": true,
+    "interval95": [
+      -1.8573022016296046,
+      -1.249327099098177
+    ],
+    "point": -1.5564818706652428,
+    "status": "ok",
+    "valid_draws": 2000
+  },
+  "unseal_record_sha256": "1d22c6d8349261471d2485f25b7d4462557c91e849c090c46f02056877d3ffbd",
+  "years": [
+    2017,
+    2018,
+    2019
+  ]
+}

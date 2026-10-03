@@ -1,0 +1,42 @@
+{
+  "disclosed_before_opening": [
+    "round 1 failed only the mean-error guardrail (docs/142)",
+    "delta is read from the round-1 evidence file, not tuned on these years"
+  ],
+  "hashes": {
+    "reforecast_exceedance_freeze.json": "13de7102aa82d1ed680709c1e597cab5506a38340003f8a5b4a7c30e0c50dc6d",
+    "reforecast_manifest.json": "a72327c7bddf4c85c2f9a73699716973e75750d85bbd87a84813aab83cb8a5bc",
+    "reforecast_protocol_v1_amendment_3.json": "c77226eaf48d1e19712ad63e171f6999c7a0e78ba4217c66dc2c59a5ae5b2926",
+    "reforecast_r05_test.json": "7cb0bcd3dc58cf83fa028a6c4f94cd35d6f57a762caf0def497d88868f639f2b",
+    "reforecast_selection_freeze.json": "9511fec1786c45191312759979c1cc538dd4e2d0b7340e565015570a79b31c30",
+    "reforecast_study_protocol_v1.json": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7"
+  },
+  "label": "CONFIRMATORY TEST 2017-2019: no model of this study used these years (earlier Track A experiments did)",
+  "model_files_sha256": {
+    "B1.json": "6e6482777e1e02365fa7ceb9b3d30abe2583cd6b02220d74dca3dd42a676f454",
+    "exceed_B1_heavy.json": "6069f25e95af2c5273cd3430ff1909bf71b87f466d5dcc8610a1edf1a3b0139e",
+    "exceed_B1_very_heavy.json": "11fe9e999a44f42a4a809bcb096fb65c44be203e272d09516cf16d30457165ab"
+  },
+  "owner_message": {
+    "date": "2026-10-03",
+    "verbatim": "implement complete and finish all mandatory requirements mentioned in ps professionally and industry prodiction based. complete everything and then report to me. (2026-10-03)"
+  },
+  "schema": "reforecast-confirmation-record-v1",
+  "what_is_authorised": [
+    "pairing the 2017-2019 forecast-side corpus with IMD in memory",
+    "scoring the frozen B1 bundle once with the one added parameter delta",
+    "writing the evidence file"
+  ],
+  "what_is_not_authorised": [
+    "any refit, re-selection or change of a threshold, tau or rule",
+    "a second scoring run with different settings",
+    "using 2017-2019 for any fitting"
+  ],
+  "written_at_utc": "2026-10-03T11:24:08+00:00",
+  "written_before_any_2017_2019_observation_was_read_for_this_study": true,
+  "years": [
+    2017,
+    2018,
+    2019
+  ]
+}
