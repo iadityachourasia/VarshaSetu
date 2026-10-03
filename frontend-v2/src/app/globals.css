@@ -1449,3 +1449,9 @@ html { scroll-behavior: smooth; }
 @media (max-width: 900px) { .live-grid { grid-template-columns: 1fr; } .live-regime-bars li { grid-template-columns: 1fr 48px; } .live-regime-bars i { grid-column: 1 / -1; grid-row: 2; } }
 
 .zone-top > * { align-self: start; }
+
+/* ---- maps: quieter attribution, readable scale bar */
+.map-attribution { left: auto; right: 6px; bottom: 4px; transform: none; max-width: min(78%, 560px); padding: 2px 7px; border-radius: 4px; background: rgba(8, 22, 31, .66); font-size: 10px; line-height: 1.3; text-align: right; backdrop-filter: blur(3px); }
+.map-attribution:hover, .map-attribution:focus-within { background: rgba(8, 22, 31, .92); }
+.district-map-frame .map-attribution { bottom: 4px; }
+.maplibregl-ctrl-bottom-left .maplibregl-ctrl-scale { margin: 0 0 6px 6px; padding: 0 5px; border-width: 0 2px 2px; border-color: #1b3640; background: rgba(255, 255, 255, .82); color: #1b3640; font: 600 10px var(--font-geist-mono), monospace; }

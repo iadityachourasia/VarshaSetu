@@ -297,7 +297,7 @@ backend, frontend and Dockerfile checks on every push, but not the end-to-end su
 | Suite | Result |
 |---|---|
 | Backend (`pytest backend/tests`) | 670 passed, 0 skipped (run with a writable `--basetemp` on Windows; a bare clone without the data bundle was 235 passed, 76 skipped with reasons when last measured, before the geography-aware tests were added) |
-| Frontend unit (`npm run test`) | 180 passed |
+| Frontend unit (`npm run test`) | 183 passed |
 | Frontend E2E (`npm run e2e`, single worker) | 131 passed |
 | TypeScript / ESLint | clean |
 | Production build | clean, all 16 routes |

@@ -61,8 +61,8 @@ export function readableGeographyStyle(style: StyleSpecification, theme: Geograp
     if (dark && layer.type === "line" && layer.id === "boundary_state") {
       layer.paint = { ...layer.paint, "line-color": "#78929c", "line-opacity": 0.52, "line-width": 0.8 };
     }
-    if (dark && layer.type === "line" && /^highway_/.test(layer.id)) {
-      layer.paint = { ...layer.paint, "line-opacity": 0.35 };
+    if (dark && layer.type === "line" && /^(highway_|tunnel_|bridge_|railway)/.test(layer.id)) {
+      layer.paint = { ...layer.paint, "line-opacity": 0.2 };
     }
   }
   return style;
@@ -72,6 +72,7 @@ export function installDistrictLabels(map: MapLibreMap, geometry: DistrictGeomet
   const labels = geometry ? districtLabelPoints(geometry) : EMPTY;
   const offline = !map.getStyle().glyphs;
   const dark = theme === "dark";
+  const compact = map.getContainer().clientWidth < 520;       // the three-panel layouts: fewer, smaller names so they do not bury the field
   map.getContainer().dataset.districtLabelCount = String(labels.features.length);
   map.getContainer().dataset.districtLabelMode = offline ? "offline-icons" : "online-text";
   map.addSource("district-label-points", { type: "geojson", data: labels });
@@ -89,15 +90,15 @@ export function installDistrictLabels(map: MapLibreMap, geometry: DistrictGeomet
   for (const tier of [0, 1, 2]) {
     map.addLayer({
       id: `district-label-tier-${tier}`, type: "symbol", source: "district-label-points", filter: ["==", ["get", "tier"], tier],
-      minzoom: tier === 0 ? 0 : tier === 1 ? 5.7 : 7.2,
+      minzoom: tier === 0 ? 0 : tier === 1 ? (compact ? 6.4 : 5.7) : (compact ? 7.8 : 7.2),
       layout: offline ? {
         "icon-image": ["concat", "district-name-", ["get", "district_id"]],
         "icon-allow-overlap": tier === 0, "icon-ignore-placement": false, "icon-padding": tier === 0 ? 7 : 4,
       } : {
         "text-field": ["get", "district_name"], "text-font": ["Noto Sans Regular"],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 4, 11, 8, 13],
+        "text-size": compact ? ["interpolate", ["linear"], ["zoom"], 4, 9.5, 8, 12] : ["interpolate", ["linear"], ["zoom"], 4, 11, 8, 13],
         "text-max-width": 12, "text-allow-overlap": tier === 0, "text-ignore-placement": false,
-        "text-padding": tier === 0 ? 7 : 4,
+        "text-padding": tier === 0 ? (compact ? 10 : 7) : 4,
       },
       paint: offline ? {} : {
         "text-color": dark ? "#f3f9f8" : "#17313a",

@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Map as MapLibreMap, setWorkerUrl, type GeoJSONSource, type LngLatBoundsLike } from "maplibre-gl";
+import { Map as MapLibreMap, ScaleControl, setWorkerUrl, type GeoJSONSource, type LngLatBoundsLike } from "maplibre-gl";
 import type { FeatureCollection } from "geojson";
 import { offlineStyle, onlineStyle, type BasemapState, type GeographicStyle } from "@/lib/maps/basemap";
 import { readableGeographyStyle } from "@/lib/maps/label-layers";
+import { installMapChrome } from "@/lib/maps/chrome";
 
 type Options = {
   element: React.RefObject<HTMLDivElement | null>;
@@ -21,10 +22,10 @@ export function mapBounds(bounds: [number, number, number, number]): LngLatBound
 
 export function useWeatherMap({ element, bounds, geometry, geographicStyle, onStyleReady, onReady }: Options) {
   const mapRef = useRef<MapLibreMap | null>(null);
-  const latest = useRef({ geometry, onStyleReady, onReady });
+  const latest = useRef({ geometry, onStyleReady, onReady, dark: geographicStyle === "dark" });
   const [status, setStatus] = useState<BasemapState>("loading");
   const boundsRef = useRef(bounds);
-  useEffect(() => { latest.current = { geometry, onStyleReady, onReady }; }, [geometry, onStyleReady, onReady]);
+  useEffect(() => { latest.current = { geometry, onStyleReady, onReady, dark: geographicStyle === "dark" }; }, [geometry, onStyleReady, onReady, geographicStyle]);
 
   useEffect(() => {
     if (!element.current) return;
@@ -54,7 +55,11 @@ export function useWeatherMap({ element, bounds, geometry, geographicStyle, onSt
     });
     mapRef.current = map;
     latest.current.onReady?.(map);
-    map.on("style.load", () => latest.current.onStyleReady(map));
+    map.addControl(new ScaleControl({ maxWidth: 88, unit: "metric" }), "bottom-left");
+    map.on("style.load", () => {
+      latest.current.onStyleReady(map);
+      try { installMapChrome(map, boundsRef.current, latest.current.dark); } catch { /* furniture only: a failure must never block the science layers */ }
+    });
     return () => { latest.current.onReady?.(null); map.remove(); mapRef.current = null; };
     // The map instance intentionally survives case and setting changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
