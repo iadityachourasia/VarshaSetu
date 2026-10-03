@@ -1,0 +1,29 @@
+{
+  "files": {
+    "all_india_raw_2023.json": {
+      "development": false,
+      "evidence_role": "ALLINDIA_2023_TRAINING_YEAR_OF_THE_DOWNSTREAM_MODELS_RAW_ONLY",
+      "sha256": "7ef295c99fa30cd569008289035a2ea754993c7d7240d05f8a47a3ad4a9a1c1d",
+      "year": 2023
+    },
+    "all_india_raw_2024.json": {
+      "development": true,
+      "evidence_role": "ALLINDIA_2024_DEVELOPMENT_YEAR_REUSED_FOR_MODEL_SELECTION",
+      "sha256": "f8121e02c807a8f17395f0ce29302a229b6e24391fba793e74a4bd675eb76423",
+      "year": 2024
+    },
+    "all_india_raw_2025.json": {
+      "development": false,
+      "evidence_role": "ALLINDIA_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST",
+      "sha256": "5fcbcaacf61983adb8687ea3a0ed08cc5404ec5d8647e965b01d3fd8f61d1c37",
+      "year": 2025
+    }
+  },
+  "ledger_file_sha256": "fe58393174c3d528c61fa8471712288156a06e52782c216afe4072f5913ea3bd",
+  "notes": [
+    "Raw control-member rainfall only; no model was applied anywhere.",
+    "2023 is the training year of the downstream models and carries no independent role; 2025 is a consumed holdout (post-hoc)."
+  ],
+  "protocol_sha256": "46a62e7f31bc87a10abff594bb6fdf5731782576738db4bc172bb22ec7e21f8c",
+  "schema": "all-india-raw-manifest-v1"
+}

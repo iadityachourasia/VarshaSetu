@@ -1,0 +1,112 @@
+{
+  "approval": {
+    "approved_by": "project owner",
+    "note": "Interpretation of a general instruction (Raw only, no model applied outside the regional domain, no new download); the owner may withdraw it.",
+    "record": "owner instruction of 2026-10-03: 'make a full plan to implement everything left partial or not completely and implement'; work package WP-D(2) of docs/134"
+  },
+  "decision_rule": "none: the analysis is descriptive. No region is declared better or worse than another by a rule; the numbers are reported with their support and the consumed years carry their labels.",
+  "definition": {
+    "forecast": "the stored control-member (c00) GEFS 24 h rainfall, cropped to the IMD land grid, reconstructed with the canonical accumulation rule; only leads that passed the regional canonical reconstruction in the study corpus are used",
+    "grid": "IMD 0.25 degree grid, 6.5 to 38.5 N, 66.5 to 100 E (129 by 135), the same grid points as GEFS",
+    "imd_files_sha256": {
+      "2023": "1fa0cbcb56769fd3cd2702e36dc3ee1b81b74755b77c7f058c70dfc3afb82831",
+      "2024": "1ef02aeba5694dbb57a6cca23a3c2cc11740affb185137c1eacbeab59893228a",
+      "2025": "7d03cd397ebb1d7209ffae947d3965113643e1f30023cca657f0aa2c800af035"
+    },
+    "ledger_file_sha256": "fe58393174c3d528c61fa8471712288156a06e52782c216afe4072f5913ea3bd",
+    "observation": "IMD RF25 daily rainfall on the day initialization date + lead day (valid cells only; fill values excluded, never zero-filled)",
+    "regions": {
+      "EAST_AND_NORTH_EAST": "east of 88 E",
+      "EAST_COAST_PENINSULA": "at or south of 22 N and east of 80 E up to 88 E",
+      "INSIDE_MODEL_DOMAIN": "10 to 22 N and 68 to 80 E (the regional modelling box)",
+      "NORTH_OF_DOMAIN": "north of 22 N and at or west of 88 E",
+      "SOUTH_OF_DOMAIN": "south of 10 N and at or west of 80 E",
+      "all_scored_cells": 17121,
+      "cell_counts": {
+        "EAST_AND_NORTH_EAST": 6192,
+        "EAST_COAST_PENINSULA": 2016,
+        "INSIDE_MODEL_DOMAIN": 2401,
+        "NORTH_OF_DOMAIN": 5742,
+        "SOUTH_OF_DOMAIN": 770
+      },
+      "note": "a fixed latitude-longitude rule, a description of where the forecast is checked and not a meteorological regime",
+      "order": "first match wins"
+    },
+    "thresholds_mm_per_24h": {
+      "heavy": 64.5,
+      "very_heavy": 115.6
+    }
+  },
+  "evaluation": {
+    "statistics": [
+      "RMSE, bias and MAE of Raw against IMD per region",
+      "heavy and very-heavy POD, FAR, CSI, ETS and frequency bias per region",
+      "the same by lead day",
+      "95 percent bootstrap intervals (whole initialization dates, 2000 resamples, seed 26080) for RMSE, bias and the CSIs"
+    ],
+    "support_gate": {
+      "min_cases": 30,
+      "min_cells": 20,
+      "min_observed_event_pairs": 30,
+      "otherwise": "insufficient_support, no number"
+    },
+    "uncertainty_note": "optimistic: consecutive dates are correlated"
+  },
+  "forbidden": [
+    "applying or training any model on the all-India fields",
+    "changing the regions, thresholds or gate after any observation is compared",
+    "describing the 2023 row as independent evidence for any model",
+    "reading an IMD cell of a case excluded in the ledger"
+  ],
+  "no_observation_read": true,
+  "not_established_whatever_the_result": [
+    "any skill or error of a corrected forecast outside the 10 to 22 N and 68 to 80 E box (no model was applied there)",
+    "that the errors are caused by a regime or by geography",
+    "behaviour of a post-processing model if one were trained for these regions",
+    "Raw behaviour outside June to early October"
+  ],
+  "populations": {
+    "2023": {
+      "evidence_role": "ALLINDIA_2023_TRAINING_YEAR_OF_THE_DOWNSTREAM_MODELS_RAW_ONLY",
+      "forecast_only_status_counts": {
+        "EXCLUDED_REGIONAL_QC": 175,
+        "EXCLUDED_WIDE_RECONSTRUCTION": 28,
+        "INCLUDED": 172
+      },
+      "label": "2023: training year of the downstream models (this analysis fits nothing; Raw only)",
+      "role": "training_year_of_downstream_models",
+      "year": 2023
+    },
+    "2024": {
+      "evidence_role": "ALLINDIA_2024_DEVELOPMENT_YEAR_REUSED_FOR_MODEL_SELECTION",
+      "forecast_only_status_counts": {
+        "EXCLUDED_REGIONAL_QC": 192,
+        "EXCLUDED_WIDE_RECONSTRUCTION": 27,
+        "INCLUDED": 156
+      },
+      "label": "2024 validation/selection year: development evidence",
+      "role": "development",
+      "year": 2024
+    },
+    "2025": {
+      "evidence_role": "ALLINDIA_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST",
+      "forecast_only_status_counts": {
+        "EXCLUDED_REGIONAL_QC": 143,
+        "EXCLUDED_WIDE_RECONSTRUCTION": 65,
+        "INCLUDED": 167
+      },
+      "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+      "role": "post_hoc",
+      "year": 2025
+    }
+  },
+  "purpose": "Describe how large the errors of the unmodified (Raw) GEFS control rainfall are over the whole IMD grid, by region, BEFORE any observation is compared. Nothing is fitted or corrected: this says nothing about post-processing outside the regional modelling domain.",
+  "reproduction_gate": [
+    "every included all-India field restricted to the regional box equals the stored regional QC field exactly (checked at freeze)",
+    "region cell counts equal the frozen counts",
+    "region statistics add up to the all-India statistics",
+    "where no case was excluded by the wider reconstruction, the INSIDE_MODEL_DOMAIN Raw statistics equal the Stage 1 evidence exactly"
+  ],
+  "schema": "all-india-raw-protocol-v1",
+  "status": "APPROVED_FOR_EXECUTION"
+}

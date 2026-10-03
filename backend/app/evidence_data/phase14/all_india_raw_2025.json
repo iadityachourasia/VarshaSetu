@@ -1,0 +1,796 @@
+{
+  "bootstrap": {
+    "intervals": {
+      "ALL_INDIA": {
+        "bias": {
+          "excludes_zero": false,
+          "interval95": [
+            -0.19087726703134006,
+            0.17018704466079038
+          ],
+          "point": -0.01906064433531501,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.029885892138757333,
+            0.05115674443738398
+          ],
+          "point": 0.04020284719252154,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_fb": {
+          "excludes_zero": true,
+          "interval95": [
+            0.2697476570223694,
+            0.391593658523419
+          ],
+          "point": 0.3292473454091193,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "mae": {
+          "excludes_zero": true,
+          "interval95": [
+            7.393114718321486,
+            8.389232729447203
+          ],
+          "point": 7.905617953647004,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "rmse": {
+          "excludes_zero": true,
+          "interval95": [
+            15.037326574772411,
+            16.43982030183498
+          ],
+          "point": 15.765674255872584,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "very_heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.004530275200614083,
+            0.029508888471556558
+          ],
+          "point": 0.014583333333333334,
+          "status": "ok",
+          "valid_draws": 2000
+        }
+      },
+      "EAST_AND_NORTH_EAST": {
+        "bias": {
+          "excludes_zero": true,
+          "interval95": [
+            2.6447280873429078,
+            3.845017102446185
+          ],
+          "point": 3.236956202153464,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.02151196829834111,
+            0.07127655435852663
+          ],
+          "point": 0.04608788853161844,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_fb": {
+          "excludes_zero": true,
+          "interval95": [
+            0.4236365656032009,
+            0.8155565749235474
+          ],
+          "point": 0.6105610561056105,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "mae": {
+          "excludes_zero": true,
+          "interval95": [
+            10.328921861707807,
+            11.863470558624865
+          ],
+          "point": 11.096705769624355,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "rmse": {
+          "excludes_zero": true,
+          "interval95": [
+            16.25171902725444,
+            18.738888446210197
+          ],
+          "point": 17.485723849255606,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "very_heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.0037432604848335223,
+            0.0410979049153908
+          ],
+          "point": 0.020338983050847456,
+          "status": "ok",
+          "valid_draws": 2000
+        }
+      },
+      "EAST_COAST_PENINSULA": {
+        "bias": {
+          "excludes_zero": false,
+          "interval95": [
+            -1.8642902533593906,
+            0.20096625644408064
+          ],
+          "point": -0.81745075066088,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.003496442411536751,
+            0.04927909098937327
+          ],
+          "point": 0.022808267997148968,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_fb": {
+          "excludes_zero": true,
+          "interval95": [
+            0.11994884411121527,
+            0.6936546467761664
+          ],
+          "point": 0.35890151515151514,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "mae": {
+          "excludes_zero": true,
+          "interval95": [
+            8.760871177777341,
+            10.557397728531166
+          ],
+          "point": 9.634365660476844,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "rmse": {
+          "excludes_zero": true,
+          "interval95": [
+            14.932379655131067,
+            17.71612542395634
+          ],
+          "point": 16.29422655927328,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "very_heavy_csi": {
+          "excludes_zero": false,
+          "interval95": [
+            0.0,
+            0.02247402213398664
+          ],
+          "point": 0.007042253521126761,
+          "status": "ok",
+          "valid_draws": 2000
+        }
+      },
+      "INSIDE_MODEL_DOMAIN": {
+        "bias": {
+          "excludes_zero": true,
+          "interval95": [
+            -1.7733113650765946,
+            -0.6135329172145184
+          ],
+          "point": -1.1943857799078514,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.025117851933540533,
+            0.06588512401168999
+          ],
+          "point": 0.04398533822059313,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_fb": {
+          "excludes_zero": true,
+          "interval95": [
+            0.14770668030717204,
+            0.30934362157896844
+          ],
+          "point": 0.2228727556596409,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "mae": {
+          "excludes_zero": true,
+          "interval95": [
+            7.34383987488064,
+            8.868098010020077
+          ],
+          "point": 8.094808082400114,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "rmse": {
+          "excludes_zero": true,
+          "interval95": [
+            15.38404598363493,
+            18.143853725925347
+          ],
+          "point": 16.75618144166773,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "very_heavy_csi": {
+          "excludes_zero": false,
+          "interval95": [
+            0.0,
+            0.05003597145566702
+          ],
+          "point": 0.01764705882352941,
+          "status": "ok",
+          "valid_draws": 2000
+        }
+      },
+      "NORTH_OF_DOMAIN": {
+        "bias": {
+          "excludes_zero": false,
+          "interval95": [
+            -0.22133213820489564,
+            0.3127119192878275
+          ],
+          "point": 0.05106573785636313,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.02479048426077517,
+            0.05460013258598638
+          ],
+          "point": 0.03896103896103896,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_fb": {
+          "excludes_zero": true,
+          "interval95": [
+            0.27564564464434554,
+            0.4517157371012801
+          ],
+          "point": 0.3599850551092845,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "mae": {
+          "excludes_zero": true,
+          "interval95": [
+            6.139439098455335,
+            7.708404050594706
+          ],
+          "point": 6.954524127367696,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "rmse": {
+          "excludes_zero": true,
+          "interval95": [
+            13.744380317020699,
+            15.90044580744557
+          ],
+          "point": 14.876569250919264,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "very_heavy_csi": {
+          "excludes_zero": true,
+          "interval95": [
+            0.001794002840002755,
+            0.02297669370128437
+          ],
+          "point": 0.011336032388663968,
+          "status": "ok",
+          "valid_draws": 2000
+        }
+      },
+      "SOUTH_OF_DOMAIN": {
+        "bias": {
+          "excludes_zero": false,
+          "interval95": [
+            -0.28942824439914994,
+            1.315988634701901
+          ],
+          "point": 0.442342339366258,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_csi": {
+          "excludes_zero": false,
+          "interval95": [
+            0.0,
+            0.08823529411764706
+          ],
+          "point": 0.033707865168539325,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "heavy_fb": {
+          "excludes_zero": false,
+          "interval95": [
+            0.0,
+            1.3409389952153108
+          ],
+          "point": 0.4603174603174603,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "mae": {
+          "excludes_zero": true,
+          "interval95": [
+            3.613401345552319,
+            5.033338547859153
+          ],
+          "point": 4.273222483921314,
+          "status": "ok",
+          "valid_draws": 2000
+        },
+        "rmse": {
+          "excludes_zero": true,
+          "interval95": [
+            7.806598214477787,
+            14.046192622737344
+          ],
+          "point": 10.605900376412729,
+          "status": "ok",
+          "valid_draws": 2000
+        }
+      }
+    },
+    "repeats": 2000,
+    "seed": 26080,
+    "unit": "initialization date"
+  },
+  "by_lead": {
+    "ALL_INDIA": {
+      "day1_24h": {
+        "bias_mm": -0.293346079338149,
+        "cell_count": 258128,
+        "rmse_mm": 15.102453877016469
+      },
+      "day2_24h": {
+        "bias_mm": 0.04895053197158079,
+        "cell_count": 273020,
+        "rmse_mm": 15.352025590078918
+      },
+      "day3_24h": {
+        "bias_mm": 0.15630982105248664,
+        "cell_count": 297840,
+        "rmse_mm": 16.676281128128238
+      }
+    },
+    "EAST_AND_NORTH_EAST": {
+      "day1_24h": {
+        "bias_mm": 1.9801832928553147,
+        "cell_count": 26988,
+        "rmse_mm": 16.901533101465382
+      },
+      "day2_24h": {
+        "bias_mm": 3.870502831338395,
+        "cell_count": 28545,
+        "rmse_mm": 17.54397278133177
+      },
+      "day3_24h": {
+        "bias_mm": 3.745408313459007,
+        "cell_count": 31140,
+        "rmse_mm": 17.924574044772882
+      }
+    },
+    "EAST_COAST_PENINSULA": {
+      "day1_24h": {
+        "bias_mm": -0.34951738489601714,
+        "cell_count": 24232,
+        "rmse_mm": 14.440108883333615
+      },
+      "day2_24h": {
+        "bias_mm": -1.68912847827315,
+        "cell_count": 25630,
+        "rmse_mm": 16.000968045398775
+      },
+      "day3_24h": {
+        "bias_mm": -0.42395508401251436,
+        "cell_count": 27960,
+        "rmse_mm": 17.988065150652986
+      }
+    },
+    "INSIDE_MODEL_DOMAIN": {
+      "day1_24h": {
+        "bias_mm": -1.195500426773938,
+        "cell_count": 67652,
+        "rmse_mm": 16.060241339211945
+      },
+      "day2_24h": {
+        "bias_mm": -0.6141580847015701,
+        "cell_count": 71555,
+        "rmse_mm": 16.572484418692024
+      },
+      "day3_24h": {
+        "bias_mm": -1.7252951398963363,
+        "cell_count": 78060,
+        "rmse_mm": 17.497855806571703
+      }
+    },
+    "NORTH_OF_DOMAIN": {
+      "day1_24h": {
+        "bias_mm": -0.33404187148406345,
+        "cell_count": 136136,
+        "rmse_mm": 14.363516417824211
+      },
+      "day2_24h": {
+        "bias_mm": -0.05622126362281546,
+        "cell_count": 143990,
+        "rmse_mm": 14.224349093774144
+      },
+      "day3_24h": {
+        "bias_mm": 0.4831720839739797,
+        "cell_count": 157080,
+        "rmse_mm": 15.865444064756108
+      }
+    },
+    "SOUTH_OF_DOMAIN": {
+      "day1_24h": {
+        "bias_mm": 1.814295155220593,
+        "cell_count": 3120,
+        "rmse_mm": 13.59681307496162
+      },
+      "day2_24h": {
+        "bias_mm": -0.5409953586856523,
+        "cell_count": 3300,
+        "rmse_mm": 8.02426448548326
+      },
+      "day3_24h": {
+        "bias_mm": 0.15470945550675225,
+        "cell_count": 3600,
+        "rmse_mm": 9.686947778657128
+      }
+    }
+  },
+  "cases_scored": 167,
+  "development": false,
+  "evidence_role": "ALLINDIA_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST",
+  "excluded_cases": {
+    "EXCLUDED_REGIONAL_QC": 143,
+    "EXCLUDED_WIDE_RECONSTRUCTION": 65
+  },
+  "forecast_nature": "the unmodified control-member Raw GEFS rainfall; no model was applied; descriptive only",
+  "initialization_dates": 104,
+  "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+  "metrics": {
+    "ALL_INDIA": {
+      "bias_mm": -0.019060644335315093,
+      "cases": 167,
+      "categorical": {
+        "heavy": {
+          "CSI": 0.04020284719252154,
+          "ETS": 0.036366840735917984,
+          "FAR": 0.8439649039601612,
+          "POD": 0.05137414116177389,
+          "false_alarms": 3559,
+          "forecast_event_count": 4217,
+          "frequency_bias": 0.3292473454091193,
+          "hits": 658,
+          "misses": 12150,
+          "observed_event_count": 12808
+        },
+        "very_heavy": {
+          "CSI": 0.014583333333333334,
+          "ETS": 0.014083248530290589,
+          "FAR": 0.916,
+          "POD": 0.017341040462427744,
+          "false_alarms": 458,
+          "forecast_event_count": 500,
+          "frequency_bias": 0.20644095788604458,
+          "hits": 42,
+          "misses": 2380,
+          "observed_event_count": 2422
+        }
+      },
+      "cell_count": 828988,
+      "continuous_supported": true,
+      "mae_mm": 7.905617953647001,
+      "rmse_mm": 15.765674255872582
+    },
+    "EAST_AND_NORTH_EAST": {
+      "bias_mm": 3.236956202153463,
+      "cases": 167,
+      "categorical": {
+        "heavy": {
+          "CSI": 0.04608788853161844,
+          "ETS": 0.04076849272637516,
+          "FAR": 0.8837837837837837,
+          "POD": 0.07095709570957096,
+          "false_alarms": 654,
+          "forecast_event_count": 740,
+          "frequency_bias": 0.6105610561056105,
+          "hits": 86,
+          "misses": 1126,
+          "observed_event_count": 1212
+        },
+        "very_heavy": {
+          "CSI": 0.020338983050847456,
+          "ETS": 0.019601705831003558,
+          "FAR": 0.9347826086956522,
+          "POD": 0.028708133971291867,
+          "false_alarms": 86,
+          "forecast_event_count": 92,
+          "frequency_bias": 0.44019138755980863,
+          "hits": 6,
+          "misses": 203,
+          "observed_event_count": 209
+        }
+      },
+      "cell_count": 86673,
+      "continuous_supported": true,
+      "mae_mm": 11.096705769624357,
+      "rmse_mm": 17.4857238492556
+    },
+    "EAST_COAST_PENINSULA": {
+      "bias_mm": -0.81745075066088,
+      "cases": 167,
+      "categorical": {
+        "heavy": {
+          "CSI": 0.022808267997148968,
+          "ETS": 0.019213112158491037,
+          "FAR": 0.9155672823218998,
+          "POD": 0.030303030303030304,
+          "false_alarms": 347,
+          "forecast_event_count": 379,
+          "frequency_bias": 0.35890151515151514,
+          "hits": 32,
+          "misses": 1024,
+          "observed_event_count": 1056
+        },
+        "very_heavy": {
+          "CSI": 0.007042253521126761,
+          "ETS": 0.006745105507911442,
+          "FAR": 0.9655172413793104,
+          "POD": 0.008771929824561403,
+          "false_alarms": 28,
+          "forecast_event_count": 29,
+          "frequency_bias": 0.2543859649122807,
+          "hits": 1,
+          "misses": 113,
+          "observed_event_count": 114
+        }
+      },
+      "cell_count": 77822,
+      "continuous_supported": true,
+      "mae_mm": 9.634365660476842,
+      "rmse_mm": 16.294226559273277
+    },
+    "INSIDE_MODEL_DOMAIN": {
+      "bias_mm": -1.194385779907852,
+      "cases": 167,
+      "categorical": {
+        "heavy": {
+          "CSI": 0.04398533822059313,
+          "ETS": 0.03967607308359703,
+          "FAR": 0.7688266199649737,
+          "POD": 0.05152224824355972,
+          "false_alarms": 878,
+          "forecast_event_count": 1142,
+          "frequency_bias": 0.2228727556596409,
+          "hits": 264,
+          "misses": 4860,
+          "observed_event_count": 5124
+        },
+        "very_heavy": {
+          "CSI": 0.01764705882352941,
+          "ETS": 0.017186685334506173,
+          "FAR": 0.8090909090909091,
+          "POD": 0.01907356948228883,
+          "false_alarms": 89,
+          "forecast_event_count": 110,
+          "frequency_bias": 0.09990917347865577,
+          "hits": 21,
+          "misses": 1080,
+          "observed_event_count": 1101
+        }
+      },
+      "cell_count": 217267,
+      "continuous_supported": true,
+      "mae_mm": 8.094808082400112,
+      "rmse_mm": 16.756181441667724
+    },
+    "NORTH_OF_DOMAIN": {
+      "bias_mm": 0.05106573785636309,
+      "cases": 167,
+      "categorical": {
+        "heavy": {
+          "CSI": 0.03896103896103896,
+          "ETS": 0.035714156867664146,
+          "FAR": 0.8583290088220031,
+          "POD": 0.05099943956659817,
+          "false_alarms": 1654,
+          "forecast_event_count": 1927,
+          "frequency_bias": 0.3599850551092845,
+          "hits": 273,
+          "misses": 5080,
+          "observed_event_count": 5353
+        },
+        "very_heavy": {
+          "CSI": 0.011336032388663968,
+          "ETS": 0.010869001573197529,
+          "FAR": 0.9455252918287937,
+          "POD": 0.014112903225806451,
+          "false_alarms": 243,
+          "forecast_event_count": 257,
+          "frequency_bias": 0.2590725806451613,
+          "hits": 14,
+          "misses": 978,
+          "observed_event_count": 992
+        }
+      },
+      "cell_count": 437206,
+      "continuous_supported": true,
+      "mae_mm": 6.9545241273677,
+      "rmse_mm": 14.876569250919264
+    },
+    "SOUTH_OF_DOMAIN": {
+      "bias_mm": 0.44234233936625805,
+      "cases": 167,
+      "categorical": {
+        "heavy": {
+          "CSI": 0.033707865168539325,
+          "ETS": 0.03172414723024699,
+          "FAR": 0.896551724137931,
+          "POD": 0.047619047619047616,
+          "false_alarms": 26,
+          "forecast_event_count": 29,
+          "frequency_bias": 0.4603174603174603,
+          "hits": 3,
+          "misses": 60,
+          "observed_event_count": 63
+        },
+        "very_heavy": {
+          "observed_event_pairs": 6,
+          "status": "insufficient_support"
+        }
+      },
+      "cell_count": 10020,
+      "continuous_supported": true,
+      "mae_mm": 4.273222483921314,
+      "rmse_mm": 10.605900376412727
+    }
+  },
+  "paired_cells_outside_every_region": 0,
+  "protocol_sha256": "46a62e7f31bc87a10abff594bb6fdf5731782576738db4bc172bb22ec7e21f8c",
+  "region_cells_with_observation": {
+    "ALL_INDIA": 4964,
+    "EAST_AND_NORTH_EAST": 519,
+    "EAST_COAST_PENINSULA": 466,
+    "INSIDE_MODEL_DOMAIN": 1301,
+    "NORTH_OF_DOMAIN": 2618,
+    "SOUTH_OF_DOMAIN": 60
+  },
+  "region_grid_points": {
+    "ALL_INDIA": 17121,
+    "EAST_AND_NORTH_EAST": 6192,
+    "EAST_COAST_PENINSULA": 2016,
+    "INSIDE_MODEL_DOMAIN": 2401,
+    "NORTH_OF_DOMAIN": 5742,
+    "SOUTH_OF_DOMAIN": 770
+  },
+  "reproduction": {
+    "checks": [
+      "every included all-India field restricted to the regional box equals the stored regional QC field exactly (checked at freeze)",
+      "region cell counts equal the frozen counts",
+      "region statistics add up to the all-India statistics"
+    ],
+    "stage1_comparison": {
+      "compared": false,
+      "reason": "no Stage 1 evidence for this year, or cases were excluded by the wider reconstruction so the populations differ"
+    },
+    "status": "REPRODUCED"
+  },
+  "schema": "all-india-raw-evidence-v1",
+  "support": {
+    "ALL_INDIA": {
+      "cases": 167,
+      "cells": 4964,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 12808,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 2422,
+        "supported": true
+      }
+    },
+    "EAST_AND_NORTH_EAST": {
+      "cases": 167,
+      "cells": 519,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 1212,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 209,
+        "supported": true
+      }
+    },
+    "EAST_COAST_PENINSULA": {
+      "cases": 167,
+      "cells": 466,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 1056,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 114,
+        "supported": true
+      }
+    },
+    "INSIDE_MODEL_DOMAIN": {
+      "cases": 167,
+      "cells": 1301,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 5124,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 1101,
+        "supported": true
+      }
+    },
+    "NORTH_OF_DOMAIN": {
+      "cases": 167,
+      "cells": 2618,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 5353,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 992,
+        "supported": true
+      }
+    },
+    "SOUTH_OF_DOMAIN": {
+      "cases": 167,
+      "cells": 60,
+      "continuous_supported": true,
+      "heavy": {
+        "observed_event_pairs": 63,
+        "supported": true
+      },
+      "very_heavy": {
+        "observed_event_pairs": 6,
+        "supported": false
+      }
+    }
+  },
+  "valid_observation_cells": 828988,
+  "year": 2025
+}
