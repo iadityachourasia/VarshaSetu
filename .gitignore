@@ -82,3 +82,10 @@ scripts/demo/.runtime/
 Thumbs.db
 .idea/
 .vscode/
+# experimental live-cycle bundles are runtime output of the worker (docs/139)
+data/live/
+# IMD-derived pair caches and the 1.6 GB reforecast cache stay local (IMD redistribution rights unresolved, docs/80; reproducible by the scripts)
+data/processed/reforecast_control_v1/
+data/processed/regime_tasks_v1/
+# local assistant/editor session config
+.claude/
