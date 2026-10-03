@@ -1,0 +1,414 @@
+{
+  "approval": {
+    "approved_by": "project owner",
+    "note": "Interpretation of a general instruction: the climatology download (36 IMD files, about 0.9 GB, local only) and a partial validation (active versus not active, break versus not break) were taken as approved. The owner may withdraw this.",
+    "record": "owner instruction of 2026-10-03: 'make a full plan to implement everything left partial or not completely and implement'; work package WP-B of docs/134, source decisions of docs/123 section 5"
+  },
+  "classifier_output": "argmax of the frozen forecast-only classifier probability of each case (the class M3 hard-routes on)",
+  "criteria": {
+    "area_mean": "cosine-latitude weighted mean over valid (non-fill, non-negative) IMD 0.25 degree cells of the box",
+    "climatology": {
+      "file_sha256": {
+        "1981": "554a4aea83b1c50344ef7b90d058fd63f390542045f32774633facb7bd639a04",
+        "1982": "e6a21b89c097af05219d8cc9eeb345d792ecbc7f521b087aeb183e39db94c5c8",
+        "1983": "9f943927a346a09ecba08d2bd3faa9bf20eaeee3a10520ea436a1ddee0e03438",
+        "1984": "236b7e747e06553b058b038be381e3d0cf9f9c640e0ce6832ccba08b728cd4ce",
+        "1985": "d89fee68898501abe1f943caefeb29297466419826304fccd4cfe6f7b9f315f3",
+        "1986": "8aceeab94d1ea259e9088747c27e4616c2567a3cbf949cc769b7b0502435f949",
+        "1987": "9930656c8f4c6b6623dc29342dcbf4afdbc0ab04ed311fa7ddb659b8d1423f82",
+        "1988": "54a18b3d93ac466cfe1a7208080698fe12c63306e4a359228273e9d428e3e290",
+        "1989": "e4804b5f5c44c463688f7bf2680e50d78b04ddbd53f9ffac7ff77a542f237540",
+        "1990": "ba93db1499b6de8a079ea3ece83cdd2ea3b3c4b27842a18c0ed3caa1d113f2cf",
+        "1991": "fd5f8309d02f0875fbb5b43663d7d7f38a5d1e7911ac4b72dc80897f82895377",
+        "1992": "e5d0c389573e7d006923b9ef16bc67f631061a10da03b25949551a03dff7da61",
+        "1993": "2fedcb184f08989672037d06485666b18165f244aead36c46e8a6a8df58b8f3c",
+        "1994": "153f742dc9596d413af259e114d83aa415c0ba3ef7f22ed3f60d8854d71a92f3",
+        "1995": "ee769ab54c2d02e7f6db23fd440ceef107f4a3d79308ee34d5ad1015df813e0c",
+        "1996": "606d5eaa75bf96cf698330ae137a42f244b1e0850178f14460c3f8d3a47ec589",
+        "1997": "0edb75fb4fb6f215811e34480d09e1d8d6487d7a0166cedb3d05b38f2e439724",
+        "1998": "dbcc01ec2d44f22f94d74009da38c7f936920534bf6d7206ea73fc1bf5c0fd7d",
+        "1999": "636961db4399dbb3c51caba7c815ccfecb361cd271cce767825862e2e6920884",
+        "2000": "eee32b28de22dee336d1b414a8b6a3f420e3dfcfb7ca6186d56a3a02dd344782",
+        "2001": "f3e0536f688908cfbcd5bc8272362c4bf238aac198e607220071867899b7f175",
+        "2002": "4c61fdae1ea69b733cdfe2a27ebadbfa79f11aea2ae5ef4cf2e99624f7f1efdb",
+        "2003": "f215e6182fb15f1e2b59da09e408fa10d23cca6c3041aea54adb878d784b64d2",
+        "2004": "1ab45a65b10277e415dc06965008156637777a79b86367cf45329b2718545935",
+        "2005": "c6de4f7b35238f6c9fca22950934390ac8f08f630fe0bfb3c90cc62849f9cc50",
+        "2006": "8caf5b4fa2900a2be070f87b760a84297d686e74ee0dacded6c2944451e1d9f1",
+        "2007": "f4430feb443d8f8e8d8882e8c52ebe738f20aefea269bd7a10aa14e5da799ef8",
+        "2008": "345079a1a4c84a3d0ca198f46693384767e9639c05f131e40de4d5a649931279",
+        "2009": "109c02519016c3e12e248d8032f6baebc4a3635a163dbf13d374b582f43e0486",
+        "2010": "fe7ea2aba9dab02865684040e9c1abfd1402481feac214c78b5bd94cf881b84b",
+        "2011": "925e06db22b6797afd393b781e834ee8016cf8850b2501f73dbb13e6c2c936de",
+        "2012": "7708a4846e8ef0664962c7042e886f3a5f055af365d536782eff63760dc3f666",
+        "2013": "2042932a2aea8288bbf45482272f65b9225e8aafa9a44cf06c65962007f8bc79",
+        "2014": "9ecca0e9049f0e6cf366a44420e2e7361bff67bf97ae43c6502999b25da76457",
+        "2015": "c276ce7ebff1d74d79123a7c777d9ef61c3c5765aa3b6db464ff6224b30a3926",
+        "2016": "e5b0ba1feb2bf10a3347091867237b1c480a71cbd8087037ef846e4346cbcdef"
+      },
+      "info": {
+        "sigma_mm_per_day": 3.9289645428277056,
+        "smooth_days": 15,
+        "window_days": 62,
+        "years": [
+          1981,
+          1982,
+          1983,
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016
+        ]
+      },
+      "mean_mm_per_day_by_season_day": [
+        1.6496910889756826,
+        1.744008985567867,
+        1.853426910396449,
+        1.9855629099864638,
+        2.1443560832831636,
+        2.3678265464455213,
+        2.6288134457416805,
+        2.9176679816157947,
+        3.1979796210382228,
+        3.4840459426085424,
+        3.7933421534957676,
+        4.05858818624417,
+        4.2913139995024245,
+        4.53910312412605,
+        4.796504261591767,
+        5.050732887200523,
+        5.290496245250048,
+        5.533028227508119,
+        5.76230754584018,
+        5.980607740589643,
+        6.209319731436665,
+        6.384248157359575,
+        6.505700900325341,
+        6.611143284109717,
+        6.7672035210281924,
+        6.908938816460158,
+        7.080208271640037,
+        7.242022085720123,
+        7.368789497378957,
+        7.458294279884534,
+        7.593771869230157,
+        7.744081887532662,
+        7.8833929473214335,
+        8.040494565085128,
+        8.179901298788325,
+        8.2122685164659,
+        8.279555257432353,
+        8.398076368670088,
+        8.597366424725802,
+        8.710842230802243,
+        8.804163662842377,
+        8.889326319713984,
+        9.030034658748527,
+        9.183651556424444,
+        9.37297386750702,
+        9.457693540400461,
+        9.540523305288042,
+        9.613537138924896,
+        9.68253270272778,
+        9.816196303621036,
+        9.98117689468099,
+        10.036780476660189,
+        10.037715876463006,
+        9.97250300162769,
+        9.972894389878652,
+        9.959526219231135,
+        9.96047176113358,
+        9.982345242140541,
+        9.967694803396261,
+        9.954710667686118,
+        9.978830503381651,
+        9.929555193792742,
+        9.86324140634445,
+        9.791879449315605,
+        9.636383352805051,
+        9.510405504641646,
+        9.494157452752832,
+        9.48471633367875,
+        9.447667328412246,
+        9.418099156649157,
+        9.326904317139885,
+        9.202657525746854,
+        9.097743955033977,
+        9.006535172706357,
+        8.835396674285532,
+        8.710234642128071,
+        8.650331221512682,
+        8.579213541993557,
+        8.453271023701179,
+        8.292409294020626,
+        8.137113295992945,
+        7.981394757832422,
+        7.84872543914663,
+        7.758462974305469,
+        7.614325901476912,
+        7.548319193910758,
+        7.495148179753605,
+        7.36740035170655,
+        7.246162509216646,
+        7.175929390921768,
+        7.111661773580736,
+        7.047978862038746,
+        6.976537548648014,
+        6.922159869694381,
+        6.924713388097927,
+        6.894442169059739,
+        6.8389083512654,
+        6.735600055523337,
+        6.629744313306296,
+        6.567245937367444,
+        6.477158423560556,
+        6.36373336854104,
+        6.2622747681296005,
+        6.138681056096174,
+        5.981661421394841,
+        5.830118337174843,
+        5.6709429511199225,
+        5.535123922215288,
+        5.430400658859906,
+        5.320267128437771,
+        5.1616072291280775,
+        4.967403087445953,
+        4.802048283387009,
+        4.622018086481429,
+        4.387788158297744,
+        4.178636600932303,
+        3.9900990295144165,
+        3.806499118045923,
+        3.640942476219689,
+        3.517930169933381,
+        3.3557114501826524,
+        3.2030037495701893
+      ],
+      "sigma": "one pooled sample standard deviation of the July-August anomalies of the climatology years",
+      "sigma_mm_per_day": 3.9289645428277056,
+      "smoothing": "centred 15-day moving average of the daily mean, nearest-value edges",
+      "years": [
+        1981,
+        2016
+      ]
+    },
+    "core_zone_box": {
+      "lat": [
+        18.0,
+        28.0
+      ],
+      "lon": [
+        65.0,
+        88.0
+      ]
+    },
+    "deviations_from_the_published_work": [
+      "a latitude-longitude box approximates the core-zone polygon",
+      "the IMD grid starts at 66.5 E, east of the box edge at 65 E",
+      "a moving-average climatology and one pooled sigma replace the published smoothing and normalisation",
+      "the criteria were read from summaries (docs/123) and not verified against the paper's text",
+      "the climatology is 36 years (1981-2016), not the published record"
+    ],
+    "label_window_months": [
+      7,
+      8
+    ],
+    "min_spell_days": 3,
+    "not_the_published_classification": true,
+    "style": "Rajeevan, Gadgil and Bhate (2010) as described in docs/123: normalised core-zone rainfall anomaly at or beyond +1 (active) or -1 (break) for at least three consecutive days",
+    "threshold_sd": 1.0
+  },
+  "forbidden": [
+    "changing a threshold, box, window, climatology or support rule after any score is computed",
+    "calling these labels the published active/break classification",
+    "claiming that depression is validated",
+    "merging this result with the pseudo-label agreement figures",
+    "uploading or republishing the IMD files or the daily series"
+  ],
+  "label_pairing": "a case is paired with the IMD day initialization date + lead day (Day 1 pairs with the next calendar day); only cases whose paired day is in July or August are scored",
+  "labels": {
+    "A2018": "Track A 2018 validation year: development evidence",
+    "A2019": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST",
+    "B2024": "Track B 2024 validation/selection year: development evidence",
+    "B2025": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST"
+  },
+  "metrics": [
+    "3x3 confusion (predicted class by observed ACTIVE, BREAK, NEUTRAL)",
+    "recall (POD)",
+    "specificity",
+    "precision",
+    "balanced accuracy",
+    "F1",
+    "base rate"
+  ],
+  "no_classifier_prediction_read": true,
+  "observation_only_counts": {
+    "A2018": {
+      "cases_by_observed_state": {
+        "ACTIVE": 0,
+        "BREAK": 13,
+        "NEUTRAL": 128
+      },
+      "cases_with_labelled_valid_day": 141,
+      "labelled_days": {
+        "ACTIVE": 0,
+        "BREAK": 6,
+        "NEUTRAL": 56
+      },
+      "spells_in_season": {
+        "active_spells": 0,
+        "break_spells": 3
+      },
+      "supported": {
+        "ACTIVE": false,
+        "BREAK": false
+      }
+    },
+    "A2019": {
+      "cases_by_observed_state": {
+        "ACTIVE": 30,
+        "BREAK": 15,
+        "NEUTRAL": 84
+      },
+      "cases_with_labelled_valid_day": 129,
+      "labelled_days": {
+        "ACTIVE": 13,
+        "BREAK": 7,
+        "NEUTRAL": 42
+      },
+      "spells_in_season": {
+        "active_spells": 6,
+        "break_spells": 1
+      },
+      "supported": {
+        "ACTIVE": true,
+        "BREAK": false
+      }
+    },
+    "B2024": {
+      "cases_by_observed_state": {
+        "ACTIVE": 48,
+        "BREAK": 0,
+        "NEUTRAL": 138
+      },
+      "cases_with_labelled_valid_day": 186,
+      "labelled_days": {
+        "ACTIVE": 16,
+        "BREAK": 0,
+        "NEUTRAL": 46
+      },
+      "spells_in_season": {
+        "active_spells": 6,
+        "break_spells": 0
+      },
+      "supported": {
+        "ACTIVE": true,
+        "BREAK": false
+      }
+    },
+    "B2025": {
+      "cases_by_observed_state": {
+        "ACTIVE": 9,
+        "BREAK": 18,
+        "NEUTRAL": 159
+      },
+      "cases_with_labelled_valid_day": 186,
+      "labelled_days": {
+        "ACTIVE": 3,
+        "BREAK": 6,
+        "NEUTRAL": 53
+      },
+      "spells_in_season": {
+        "active_spells": 2,
+        "break_spells": 2
+      },
+      "supported": {
+        "ACTIVE": false,
+        "BREAK": false
+      }
+    }
+  },
+  "populations": {
+    "A2018": {
+      "cases_listed": 251,
+      "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+      "imd_file_sha256": "26bd53aeb2d6f3f7d39516c41606db005dede474906b33462d1a0caef69cd6ec",
+      "track": "A",
+      "year": 2018
+    },
+    "A2019": {
+      "cases_listed": 255,
+      "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+      "imd_file_sha256": "c551c563b3514d492a2de94c706c1c254d5826656738b4a8e7dbd83841344a5b",
+      "track": "A",
+      "year": 2019
+    },
+    "B2024": {
+      "cases_listed": 375,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "imd_file_sha256": "1ef02aeba5694dbb57a6cca23a3c2cc11740affb185137c1eacbeab59893228a",
+      "track": "B",
+      "year": 2024
+    },
+    "B2025": {
+      "cases_listed": 375,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "imd_file_sha256": "7d03cd397ebb1d7209ffae947d3965113643e1f30023cca657f0aa2c800af035",
+      "track": "B",
+      "year": 2025
+    }
+  },
+  "purpose": "Check the forecast-only regime classifier against observation-based rainfall criteria that are independent of the pseudo-labelling rule, BEFORE any agreement is computed. Separate from, and never merged with, the agreement with the pseudo-labels.",
+  "reproduction_gate": [
+    "the labels recomputed in the score stage must reproduce the protocol's observation-only counts exactly",
+    "the confusion table must sum to the number of labelled cases",
+    "the predicted class counts must equal an independent count from the frozen probabilities",
+    "one binary metric must equal an independent loop"
+  ],
+  "schema": "regime-validation-protocol-v1",
+  "status": "APPROVED_FOR_EXECUTION",
+  "support_gate": {
+    "min_cases_per_side": 30,
+    "otherwise": "insufficient_support, no score"
+  },
+  "tasks": {
+    "active_vs_not_active": "predicted ACTIVE_MONSOON versus observed ACTIVE",
+    "break_vs_not_break": "predicted BREAK_WEAK_MONSOON versus observed BREAK",
+    "not_scored": "LOW_DEPRESSION_INFLUENCED: no observation-based depression label exists in this protocol; depression is NOT validated; the weak part of Break/Weak has no published criterion"
+  },
+  "uncertainty": {
+    "method": "bootstrap of whole initialization dates (all leads of a date together)",
+    "note": "optimistic: consecutive dates are correlated",
+    "repeats": 2000,
+    "seed": 26080
+  }
+}

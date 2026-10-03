@@ -1,0 +1,129 @@
+{
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 26080,
+    "unit": "initialization date"
+  },
+  "cases_labelled": 186,
+  "cases_listed": 375,
+  "confusion_predicted_class_by_observed_state": {
+    "ACTIVE_MONSOON": {
+      "ACTIVE": 12,
+      "BREAK": 0,
+      "NEUTRAL": 66
+    },
+    "BREAK_WEAK_MONSOON": {
+      "ACTIVE": 0,
+      "BREAK": 0,
+      "NEUTRAL": 0
+    },
+    "LOW_DEPRESSION_INFLUENCED": {
+      "ACTIVE": 36,
+      "BREAK": 0,
+      "NEUTRAL": 72
+    }
+  },
+  "depression": "NOT VALIDATED: no observation-based depression label in this protocol",
+  "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+  "label": "Track B 2024 validation/selection year: development evidence",
+  "macro": {
+    "macro_balanced_accuracy": 0.3858695652173913,
+    "macro_f1": 0.1904761904761905,
+    "tasks_scored": 1
+  },
+  "observed_state_counts": {
+    "ACTIVE": 48,
+    "BREAK": 0,
+    "NEUTRAL": 138
+  },
+  "population": "B2024",
+  "protocol_sha256": "f10aee6fb10db828141dd9ca3f3f7df8eceb87c3dada03185bcf296c49fa9261",
+  "pseudo_label_agreement_is_separate": true,
+  "reproduction": {
+    "checks": [
+      "labels equal the frozen counts",
+      "confusion sums to the labelled cases",
+      "predicted counts equal the stored probabilities",
+      "hits equal an independent loop"
+    ],
+    "status": "REPRODUCED"
+  },
+  "schema": "regime-validation-v1",
+  "tasks": {
+    "active_vs_not_active": {
+      "balanced_accuracy": 0.3858695652173913,
+      "balanced_accuracy_bootstrap": {
+        "interval95": [
+          0.28327999001927545,
+          0.486234040632214
+        ],
+        "repeats": 2000,
+        "seed": 26080,
+        "valid_draws": 2000
+      },
+      "base_rate": 0.25806451612903225,
+      "by_lead": {
+        "day1": {
+          "balanced_accuracy": 0.38722826086956524,
+          "base_rate": 0.25806451612903225,
+          "correct_negatives": 27,
+          "f1": 0.15789473684210525,
+          "false_alarms": 19,
+          "hits": 3,
+          "misses": 13,
+          "observed_positive": 16,
+          "precision": 0.13636363636363635,
+          "predicted_positive": 22,
+          "recall": 0.1875,
+          "specificity": 0.5869565217391305
+        },
+        "day2": {
+          "balanced_accuracy": 0.375,
+          "base_rate": 0.25806451612903225,
+          "correct_negatives": 23,
+          "f1": 0.18604651162790697,
+          "false_alarms": 23,
+          "hits": 4,
+          "misses": 12,
+          "observed_positive": 16,
+          "precision": 0.14814814814814814,
+          "predicted_positive": 27,
+          "recall": 0.25,
+          "specificity": 0.5
+        },
+        "day3": {
+          "balanced_accuracy": 0.3953804347826087,
+          "base_rate": 0.25806451612903225,
+          "correct_negatives": 22,
+          "f1": 0.22222222222222224,
+          "false_alarms": 24,
+          "hits": 5,
+          "misses": 11,
+          "observed_positive": 16,
+          "precision": 0.1724137931034483,
+          "predicted_positive": 29,
+          "recall": 0.3125,
+          "specificity": 0.4782608695652174
+        }
+      },
+      "correct_negatives": 72,
+      "f1": 0.1904761904761905,
+      "false_alarms": 66,
+      "hits": 12,
+      "misses": 36,
+      "observed_positive": 48,
+      "precision": 0.15384615384615385,
+      "predicted_positive": 78,
+      "recall": 0.25,
+      "specificity": 0.5217391304347826,
+      "status": "scored"
+    },
+    "break_vs_not_break": {
+      "note": "fewer than the support gate on one side; no score",
+      "observed_cases": 0,
+      "status": "insufficient_support"
+    }
+  },
+  "track": "B",
+  "year": 2024
+}

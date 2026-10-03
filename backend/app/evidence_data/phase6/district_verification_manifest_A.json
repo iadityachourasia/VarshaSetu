@@ -1,0 +1,32 @@
+{
+  "files": {
+    "district_verification_A_2018.json": {
+      "cases": 251,
+      "district_case_pairs": 42419,
+      "districts_included": 169,
+      "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+      "reproduction": "REPRODUCED",
+      "sha256": "1eaeb145e89a4a5136d6355a8822c78158494e6eb48a603a58be7ac63358cd63",
+      "track": "A",
+      "year": 2018
+    },
+    "district_verification_A_2019.json": {
+      "cases": 255,
+      "district_case_pairs": 43095,
+      "districts_included": 169,
+      "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+      "reproduction": "REPRODUCED",
+      "sha256": "941e0f90d8eaab3a76552a86706dc3e4bf0b8d519da2c0d01cc535073cff99af",
+      "track": "A",
+      "year": 2019
+    }
+  },
+  "notes": [
+    "Read-only re-aggregation of frozen Track A artifacts under protocol A v1 (docs/135); no model was trained, tuned or selected.",
+    "2019 is a consumed holdout: post-hoc descriptive analysis only.",
+    "Regimes are forecast-only pseudo-labels, not observed meteorological truth.",
+    "Track A and Track B are never pooled."
+  ],
+  "protocol_sha256": "a55569a1c3763a8618ef605ac27e4d57e79696bbd491c6339d7492553340cc2e",
+  "schema": "phase6-district-verification-manifest-A-v1"
+}

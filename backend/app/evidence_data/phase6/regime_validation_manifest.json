@@ -1,0 +1,40 @@
+{
+  "files": {
+    "regime_validation_A_2018.json": {
+      "cases_labelled": 141,
+      "evidence_role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE",
+      "population": "A2018",
+      "reproduction": "REPRODUCED",
+      "sha256": "454026532eb1dd07a81c47e2d9e4ce4c64f0ed52adf714a83138ea7919dd826e"
+    },
+    "regime_validation_A_2019.json": {
+      "cases_labelled": 129,
+      "evidence_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+      "population": "A2019",
+      "reproduction": "REPRODUCED",
+      "sha256": "c2903b7f5c14fa74129f0dfbf44bf58afd182e32488f0716a5c55465ce1cfb2b"
+    },
+    "regime_validation_B_2024.json": {
+      "cases_labelled": 186,
+      "evidence_role": "PHASE4I_VALIDATION_SELECTION_YEAR_DEVELOPMENT_EVIDENCE",
+      "population": "B2024",
+      "reproduction": "REPRODUCED",
+      "sha256": "8aa8d4c5ab65ee09d50f7b6afd0428c125bcbf74ab4ee2a573e39f288b03d946"
+    },
+    "regime_validation_B_2025.json": {
+      "cases_labelled": 186,
+      "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+      "population": "B2025",
+      "reproduction": "REPRODUCED",
+      "sha256": "843152122c1e6efdc77fe1b007213142b47499a9adf811d9f36236475d1ad14d"
+    }
+  },
+  "notes": [
+    "Observation-based check of active and break only; depression is not validated.",
+    "Labels follow the style of Rajeevan et al. (2010) with documented deviations; not the published classification.",
+    "2019 and 2025 are consumed holdouts: post-hoc descriptive analyses only.",
+    "Separate from the pseudo-label agreement figures."
+  ],
+  "protocol_sha256": "f10aee6fb10db828141dd9ca3f3f7df8eceb87c3dada03185bcf296c49fa9261",
+  "schema": "regime-validation-manifest-v1"
+}

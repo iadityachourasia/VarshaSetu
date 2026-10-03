@@ -6,7 +6,7 @@ import { expect, test, type Page } from "@playwright/test";
 async function openTab(page: Page) {
   await page.goto("/verification");
   await page.getByRole("tab", { name: "District-level" }).click();
-  const panel = page.locator(".district-verification");
+  const panel = page.getByRole("tabpanel").locator(".district-verification");      // the operational-era tab; Track A has its own panel on the same page
   await expect(panel).toBeVisible();
   return panel;
 }

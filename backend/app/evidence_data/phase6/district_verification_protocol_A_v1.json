@@ -1,0 +1,213 @@
+{
+  "approval": {
+    "approved_by": "project owner",
+    "decisions": {
+      "commit_policy": "keep working; do not commit yet",
+      "coverage_rule": ">= 5 valid cells per district-case (stricter than the proposed 3)",
+      "min_observed_events_per_district": 30,
+      "primary_event_definition": "E1_any_cell",
+      "regional_grouping": "three latitude bands 10-14N, 14-18N, 18-22N of the district centroid (as proposed)"
+    },
+    "note": "All decisions are the owner's earlier approvals for Track B protocol v1 (primary event definition E1, at least 30 observed events per district, at least 5 valid cells, three latitude bands), carried over unchanged. The wording of this approval is an interpretation of a general instruction and the owner may withdraw it.",
+    "record": "owner instruction of 2026-10-03: 'make a full plan to implement everything left partial or not completely and implement'; the work package is WP-A of docs/134"
+  },
+  "categorical_metrics": {
+    "metrics": [
+      "POD",
+      "FAR",
+      "CSI",
+      "ETS",
+      "hits",
+      "misses",
+      "false_alarms",
+      "forecast/observed event ratio"
+    ],
+    "per_district": "reported only for districts with at least 30 OBSERVED events under the definition (support from IMD alone, fixed before looking at any model)",
+    "pooled_over": "included district-case pairs; undefined values stay undefined with counts, never 0",
+    "very_heavy": "pooled metrics reported; per-district metrics reported only where the same support rule is met, otherwise 'insufficient support'"
+  },
+  "continuous_metrics": {
+    "metrics": [
+      "RMSE",
+      "MAE",
+      "bias (model - IMD)"
+    ],
+    "per_district": "reported only for districts with at least 30 included cases",
+    "pooled_over": "all included district-case pairs",
+    "quantity": "area-weighted district mean (mm/24h) for Raw, M1-M4 and IMD"
+  },
+  "coverage_rule": {
+    "district_excluded_if_median_valid_cells_below": 5,
+    "min_valid_cells_per_district_case": 5,
+    "observed_support_note": "19 of 188 districts have a median below 5 valid cells in both 2024 and 2025 and are excluded (169 kept). Every paired case has the same 1,301 valid cells, so each district's valid-cell count is constant across cases and the pair rule equals the district rule.",
+    "reason": "districts covered by few valid IMD land cells make area-based quantities and 'any cell' events dominated by one or two cells"
+  },
+  "derived_from": {
+    "protocol_v1_sha256": "9b348063a6ac654e88a822694fd199d2f432d5d6b0bebafc19567f6be6e53365",
+    "what_changes": "only the populations, the frozen inputs and the observation-only support counts; no definition, threshold, support or coverage rule is changed"
+  },
+  "event_definitions": {
+    "E1_any_cell": "district event if at least one valid cell of the district is >= threshold (applied identically to the forecast field and to IMD)",
+    "E2_area_25pct": "district event if the area-weighted share of valid cells >= threshold is >= 0.25 (applied identically to forecast and IMD)",
+    "E3_district_mean": "district event if the district area-weighted mean >= threshold (sensitivity only; support is too thin for very heavy rain)",
+    "alternative_considered": "E2 as primary: more spatially meaningful but only 10-12 districts reach 30 heavy events and none reach 30 very-heavy events (observation-only counts); E2 is reported as secondary",
+    "forecast_and_observed_symmetry": "the identical rule is applied to the model's district cells and to IMD on the same valid cells",
+    "primary": "E1_any_cell",
+    "primary_rationale": "E1 keeps the most observed events (after the 5-cell rule: heavy 3,227 / 3,845 district-case events in 2024 / 2025; very heavy 1,106 / 1,117) and is closest to point-event warning language; its dependence on the number of valid cells is controlled by the 5-cell coverage rule and by pairing every model with Raw inside the same district-case pair",
+    "secondary": [
+      "E2_area_25pct"
+    ],
+    "sensitivity": [
+      "E3_district_mean"
+    ],
+    "thresholds_mm_24h": {
+      "heavy": 64.5,
+      "inclusive": true,
+      "very_heavy": 115.6
+    }
+  },
+  "forbidden": [
+    "changing an event definition, threshold, support rule or coverage rule after results are computed",
+    "reporting a district-level skill figure computed before this protocol is approved",
+    "pooling Track A and Track B"
+  ],
+  "frozen_inputs": {
+    "fields": "frozen Track A M0-M4 predictions (reconstructed from the frozen Phase 2B models and cached features, hash-verified) and IMD observations on the paired valid cells (cache roles VALIDATION and FINAL_TEST)",
+    "geometry": "data/manifests/phase2c/districts.geojson (geoBoundaries ADM2 2021, 188 domain districts)",
+    "geometry_sha256": "ba5fde191bcfa74a1ad6baee31a647c115c9cc1c0943b8bc8df3bf7a3e5dab77",
+    "valid_cell_rule": "a cell contributes only if raw, model and IMD are all finite and its district weight is > 0 (identical to docs/107)",
+    "weights": "Phase 2C overlap weights (sha256 6766c2a05f566e6be1c7418d7490b3d7d056c7245b2296fccd29a734b9fc971c), shared with Track B"
+  },
+  "models": [
+    "M0 raw",
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+  ],
+  "no_results_computed": true,
+  "observation_only_support_counts": {
+    "2018": {
+      "cases": 251,
+      "district_case_pairs": 42419,
+      "heavy": {
+        "E1": {
+          "districts_ge_30": 38,
+          "event_pairs": 3357
+        },
+        "E2": {
+          "districts_ge_30": 14,
+          "event_pairs": 1267
+        },
+        "E3": {
+          "districts_ge_30": 6,
+          "event_pairs": 734
+        }
+      },
+      "median_valid_cells": 14,
+      "very_heavy": {
+        "E1": {
+          "districts_ge_30": 9,
+          "event_pairs": 1102
+        },
+        "E2": {
+          "districts_ge_30": 0,
+          "event_pairs": 331
+        },
+        "E3": {
+          "districts_ge_30": 0,
+          "event_pairs": 144
+        }
+      }
+    },
+    "2019": {
+      "cases": 255,
+      "district_case_pairs": 43095,
+      "heavy": {
+        "E1": {
+          "districts_ge_30": 44,
+          "event_pairs": 4569
+        },
+        "E2": {
+          "districts_ge_30": 16,
+          "event_pairs": 1645
+        },
+        "E3": {
+          "districts_ge_30": 10,
+          "event_pairs": 1016
+        }
+      },
+      "median_valid_cells": 14,
+      "very_heavy": {
+        "E1": {
+          "districts_ge_30": 17,
+          "event_pairs": 1539
+        },
+        "E2": {
+          "districts_ge_30": 2,
+          "event_pairs": 505
+        },
+        "E3": {
+          "districts_ge_30": 0,
+          "event_pairs": 308
+        }
+      }
+    },
+    "districts_excluded": 19,
+    "districts_kept": 169,
+    "districts_total": 188,
+    "note": "Computed from IMD observations and the frozen valid-cell mask only; no model value was read. Counts after the >= 5 valid-cell rule."
+  },
+  "paired_comparison": {
+    "continuous": "improvement_vs_raw per district-case pair = |Raw mean - IMD mean| - |model mean - IMD mean| (positive = closer to IMD); summarised per district as the mean over its cases",
+    "contrasts": [
+      "M1-Raw",
+      "M2-Raw",
+      "M3-Raw",
+      "M4-Raw",
+      "M3-M2",
+      "M4-M2",
+      "M3-M4"
+    ],
+    "districts_improved_worsened": "a district is 'improved' if its mean improvement > 0 and the 95 % paired case-cluster bootstrap interval of that mean excludes 0, 'worsened' if < 0 and the interval excludes 0, otherwise 'indeterminate'; with a two-sided 95 % interval about 5 % of tested districts in total (about 2.5 % per direction) would be classified improved or worsened by chance even with no true effect, so counts are reported next to that expected-by-chance number",
+    "uncertainty": "paired bootstrap resampling WHOLE CASES (all districts of a case together), 2000 draws, seed 26080; optimistic because consecutive days are correlated and neighbouring districts within a case are correlated"
+  },
+  "per_district_outputs": {
+    "categorical": "for E1 and E2 (E3 pooled only): hits, misses, false alarms, POD, FAR, CSI, ETS per model for districts with at least 30 OBSERVED events under that definition and threshold; otherwise 'insufficient_support'",
+    "continuous": "RMSE, MAE, bias of the district mean for Raw and M1-M4, for districts with at least 30 included cases",
+    "improvement": "mean of (|Raw err| - |model err|) with the 95 % paired case-cluster bootstrap interval and status improved/worsened/indeterminate"
+  },
+  "populations": {
+    "2018": {
+      "label": "Track A 2018 validation year: development evidence (used for early stopping and model selection; not a holdout)",
+      "role": "TRACK_A_2018_VALIDATION_YEAR_DEVELOPMENT_EVIDENCE"
+    },
+    "2019": {
+      "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST",
+      "role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST"
+    }
+  },
+  "purpose": "Define district-level verification of the frozen Track A (2017-2019 reforecast) models BEFORE any district-level skill score is computed for that track. Every definition, threshold and rule is carried over unchanged from the approved Track B protocol v1 (docs/112).",
+  "region_rule": "district centroid = centroid of the district polygon clipped to the 10-22N, 68-80E domain box; band edges 14N and 18N (a centroid exactly on an edge belongs to the northern band)",
+  "reporting_rules": [
+    "No metric is reported without its denominator (cases / district-case pairs / observed events).",
+    "No per-district score is reported below the support thresholds above; it is shown as 'insufficient support'.",
+    "2019 is a consumed holdout: results are POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2019 FINAL TEST and must not select, tune or re-rank any model.",
+    "Pseudo-regimes are forecast-only classifier labels, not observed meteorological truth.",
+    "These are district-aggregate verification statistics of historical replay, not warning skill."
+  ],
+  "reproduction_gate": [
+    "builder recomputes the observation-only support counts and must match the protocol's counts exactly",
+    "district means for Raw, IMD and the served corrected field of the 2019 cases the API serves must equal the means recomputed from the already-served 49x49 grids (2018 is not served by the API)",
+    "pooled district-mean RMSE for Raw computed by the vectorised path must equal an independent per-district loop",
+    "sum over districts of observed events equals the pooled observed event count"
+  ],
+  "schema": "phase6-district-verification-protocol-A-v1",
+  "secondary_breakdowns": [
+    "by lead day (1/2/3)",
+    "by forecast-only pseudo-regime (argmax of the frozen classifier)",
+    "by region: latitude band 10-14N, 14-18N, 18-22N of the district centroid (declared lookup)"
+  ],
+  "status": "APPROVED_FOR_EXECUTION",
+  "unit_of_analysis": "district-case pair: one district in one paired case (initialization date x lead)"
+}

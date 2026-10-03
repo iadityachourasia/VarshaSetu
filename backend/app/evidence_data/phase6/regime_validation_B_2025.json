@@ -1,0 +1,66 @@
+{
+  "bootstrap": {
+    "repeats": 2000,
+    "seed": 26080,
+    "unit": "initialization date"
+  },
+  "cases_labelled": 186,
+  "cases_listed": 375,
+  "confusion_predicted_class_by_observed_state": {
+    "ACTIVE_MONSOON": {
+      "ACTIVE": 0,
+      "BREAK": 9,
+      "NEUTRAL": 96
+    },
+    "BREAK_WEAK_MONSOON": {
+      "ACTIVE": 0,
+      "BREAK": 9,
+      "NEUTRAL": 7
+    },
+    "LOW_DEPRESSION_INFLUENCED": {
+      "ACTIVE": 9,
+      "BREAK": 0,
+      "NEUTRAL": 56
+    }
+  },
+  "depression": "NOT VALIDATED: no observation-based depression label in this protocol",
+  "evidence_role": "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY",
+  "label": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+  "macro": {
+    "macro_balanced_accuracy": null,
+    "macro_f1": null,
+    "tasks_scored": 0
+  },
+  "observed_state_counts": {
+    "ACTIVE": 9,
+    "BREAK": 18,
+    "NEUTRAL": 159
+  },
+  "population": "B2025",
+  "protocol_sha256": "f10aee6fb10db828141dd9ca3f3f7df8eceb87c3dada03185bcf296c49fa9261",
+  "pseudo_label_agreement_is_separate": true,
+  "reproduction": {
+    "checks": [
+      "labels equal the frozen counts",
+      "confusion sums to the labelled cases",
+      "predicted counts equal the stored probabilities",
+      "hits equal an independent loop"
+    ],
+    "status": "REPRODUCED"
+  },
+  "schema": "regime-validation-v1",
+  "tasks": {
+    "active_vs_not_active": {
+      "note": "fewer than the support gate on one side; no score",
+      "observed_cases": 9,
+      "status": "insufficient_support"
+    },
+    "break_vs_not_break": {
+      "note": "fewer than the support gate on one side; no score",
+      "observed_cases": 18,
+      "status": "insufficient_support"
+    }
+  },
+  "track": "B",
+  "year": 2025
+}
