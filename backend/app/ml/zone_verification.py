@@ -151,11 +151,16 @@ def difference_statistics(totals: np.ndarray, models: list[str]) -> dict[tuple, 
     return out
 
 
-def paired_bootstrap(stack: np.ndarray, models: list[str], *, statistic=None, repeats: int = REPEATS, seed: int = SEED, chunk: int = 100) -> dict[tuple, dict]:
+def paired_bootstrap(stack: np.ndarray, models: list[str], *, statistic=None, repeats: int = REPEATS, seed: int = SEED, chunk: int = 100,
+                     level: float = 0.95) -> dict[tuple, dict]:
     """Paired whole-case bootstrap of every Q1/Q2 statistic (same resampled cases for every statistic and model).
 
     Cells of a case stay together; consecutive days are serially correlated, so intervals are optimistic.
+    ``level`` is the two-sided interval level. At the default 0.95 the output is exactly the historical one (key ``interval95``); at any other level the
+    interval is stored under ``interval`` together with ``level`` so a 97.5 percent interval can never be mistaken for a 95 percent one.
     """
+    if not 0.5 < level < 1:
+        raise ValueError("level must lie in (0.5, 1)")
     statistic = statistic or difference_statistics
     n = stack.shape[0]
     if n < 2:
@@ -185,9 +190,12 @@ def paired_bootstrap(stack: np.ndarray, models: list[str], *, statistic=None, re
         elif len(finite) < repeats * 0.9:
             result[key] = {"status": "unstable", "point": float(point[key]), "valid_draws": int(len(finite))}
         else:
-            low, high = (float(np.quantile(finite, q)) for q in (0.025, 0.975))
-            result[key] = {"status": "ok", "point": float(point[key]), "interval95": [low, high], "valid_draws": int(len(finite)),
-                           "excludes_zero": bool(low > 0 or high < 0)}
+            tail = (1 - level) / 2
+            low, high = (float(np.quantile(finite, q)) for q in (tail, 1 - tail))
+            name = "interval95" if level == 0.95 else "interval"
+            result[key] = {"status": "ok", "point": float(point[key]), name: [low, high], "valid_draws": int(len(finite)), "excludes_zero": bool(low > 0 or high < 0)}
+            if level != 0.95:
+                result[key]["level"] = level
     return result
 
 

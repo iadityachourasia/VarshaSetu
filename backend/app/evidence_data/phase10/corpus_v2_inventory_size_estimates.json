@@ -1,0 +1,20 @@
+{
+  "cached_index_content_bytes": 79558962,
+  "disk_stop_if": "free < 40 GB or free < remaining planned transfer + 20 GB; stop also for unknown selected-range lengths",
+  "estimated_4k_cluster_slack_bytes": 113905788,
+  "filesystem_overhead_note": "4 KiB cluster-slack planning estimate only; actual NTFS metadata/allocation may differ",
+  "free_disk_bytes": 268352147456,
+  "inventory_file_count": 43250,
+  "inventory_logical_bytes": 133902212,
+  "protocol_minimum_free_bytes": 40000000000,
+  "remaining_after_payload_only_bytes": 261241405471,
+  "selected_message_lengths_unknown": 0,
+  "selected_payload_bytes_by_year_type": {
+    "2021_atmosphere": 519498564,
+    "2021_rainfall": 3023124905,
+    "2022_atmosphere": 521202647,
+    "2022_rainfall": 3046915869
+  },
+  "selected_payload_bytes_known": 7110741985,
+  "staging_planning_bytes_conservative": 35000000000
+}

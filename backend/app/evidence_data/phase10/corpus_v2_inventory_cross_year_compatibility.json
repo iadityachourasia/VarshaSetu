@@ -1,0 +1,1041 @@
+{
+  "all_cases_index_complete": true,
+  "decision": "AUTHORIZED_FOR_PAYLOAD_ACQUISITION",
+  "first_affected_date": null,
+  "index_message_signatures_comparable": true,
+  "last_unaffected_date": "2022-10-03T00:00:00Z",
+  "material_anomalies": [],
+  "metadata_limitations": [
+    ".idx does not expose GRIB grid/product/representation templates, packing quanta or decoded units",
+    "index intervals and member strings are provisional until payload metadata validation",
+    "index HTTP 200 does not prove GRIB payload object integrity or rainfall QC"
+  ],
+  "ordering_differences_not_automatically_material": true,
+  "ordering_or_multiplicity_differences": [
+    {
+      "field_key": "pgrb2sp25/rain/f003/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f003/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f003/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f003/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f003/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f006/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f006/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f006/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f006/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f006/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f012/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f012/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f012/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f012/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f012/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f018/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f018/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f018/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f018/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f018/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f024/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f024/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f024/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f024/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f024/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f027/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 250
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f027/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f027/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f027/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f027/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f030/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f030/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f030/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f030/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f030/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f036/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f036/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f036/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f036/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f036/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f042/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f042/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f042/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f042/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f042/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f048/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f048/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f048/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f048/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f048/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f051/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 250
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f051/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f051/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f051/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f051/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 100,
+          "16/35": 150
+        },
+        "2022": {
+          "16/35": 248,
+          "16/36": 2
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f054/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f054/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f054/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f054/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f054/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f060/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f060/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f060/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f060/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f060/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f066/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f066/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f066/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f066/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f066/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f072/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f072/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f072/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f072/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f072/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f075/c00",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 125
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f075/p01",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f075/p02",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f075/p03",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    },
+    {
+      "field_key": "pgrb2sp25/rain/f075/p04",
+      "positions_and_index_sizes_by_year": {
+        "2021": {
+          "15/34": 50,
+          "16/35": 75
+        },
+        "2022": {
+          "16/35": 124,
+          "16/36": 1
+        }
+      }
+    }
+  ],
+  "signature_differences": []
+}

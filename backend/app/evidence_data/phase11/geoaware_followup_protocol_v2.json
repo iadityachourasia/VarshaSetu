@@ -1,0 +1,306 @@
+{
+  "approval": {
+    "approved_before_any_v2_selection": true,
+    "interpretation": "treated as approval of option 2 in the form described in docs/130, which is change C1 only. It does not name the change item by item, and the owner may revise or withdraw it before 2022 is unsealed. Decisions 1 to 4 of docs/129 carry over from v1 as already recorded.",
+    "not_approved": {
+      "D2_imd_redistribution": "unresolved; everything stays local and nothing derived from IMD values may leave this machine",
+      "scoring_of_frozen_M1_to_M4_on_2022": "decision 5 was not answered and defaults to NO; nothing in this protocol authorises it"
+    },
+    "record": "project owner message 'try to correct and make it as accurate as possible' (2026-10-03), sent after docs/130 listed options 1 to 3, with option 2 (protocol v2 with revised guardrails, G3 as a reported diagnostic) as the stated way to proceed",
+    "unseal": "opening the 2022 IMD values requires a separate signed unseal record from the owner after the v2 selection freeze exists; this protocol authorises development selection only"
+  },
+  "changes": [
+    {
+      "g3_still_reported": "G3 per held-out year for every configuration and for the selected model, and on 2022 at unseal; a selected model that forecasts almost no very-heavy rain is labelled as such",
+      "id": "C1",
+      "what": "G3 (very-heavy forecast frequency bias at least 0.05) is computed and reported for every held-out year and for 2022, but is no longer an eligibility gate",
+      "what_does_not_change": [
+        "the arms",
+        "the grid and the event-weight cap of 4",
+        "G1, G2 and G4 and their values",
+        "leave-one-year-out cross-validation",
+        "the decision rule P1 to P4",
+        "the support gate",
+        "the sealing of 2022",
+        "the seeds and libraries"
+      ],
+      "why": "As a gate, G3 is failed by construction by every configuration that does not give heavy cases extra weight (they almost never reach 115.6 mm), while the configurations that do pass G3 over-forecast in held-out 2024 and fail G2. A gate that selects for over-forecasting and is then punished by G2 does not discriminate between good and bad models. Eligibility keeps G1 (heavy CSI at least Raw), G2 (absolute bias) and G4 (zone over-forecast floor)."
+    }
+  ],
+  "contamination_disclosure": "The design uses the 2024 and 2025 results of docs/126 (forcing arms dropped, cap lowered, G4 added). Only the sealed 2022 may be called independent; results on 2021, 2023 and 2024 are development evidence.",
+  "decision_rule": {
+    "adds_value_requires_all": [
+      "P1: B1 beats the comparator on heavy-rain CSI in the coastal-and-orographic zone on 2022, paired whole-case 95 percent interval of (B1 minus comparator) excluding zero in the positive direction",
+      "P2: overall RMSE of B1 not worse than the comparator's by more than 0.2 mm",
+      "P3: B1 passes the gating guardrails G1, G2 and G4 on 2022; G3 is reported and, if B1 forecasts almost no very-heavy rain, that is stated in the result",
+      "P4: the comparator rule above is applied and stated"
+    ],
+    "if_not_met": "no independent evidence that geography-aware features improve on the pipeline without them, reported with the same prominence as a success",
+    "multiplicity": "one primary question; no adjustment needed",
+    "primary_comparator": "B0 selected under the same rule; if B0 has no candidate, the frozen M2 is the comparator and attribution to geography is recorded as undetermined (P4)",
+    "reported_not_decisive": [
+      "B1Z against B1 (sensitivity to the 500 hPa height offset)",
+      "frozen M0 to M4 on 2022 only if the owner approves decision 5",
+      "by lead and by zone",
+      "very-heavy skill"
+    ]
+  },
+  "development_data_sha256": {
+    "2021": {
+      "X.npy": "a7501c90eb3d6b1799c03e628cf3004a5eba2ada65ca069a1980257a6250733d",
+      "cases.json": "71ae8a6f1a2430cc02aba21abdaac2f88b741c1e35aaf870fd27563bf901e84a",
+      "pixel_index.npy": "ab54532507387dab38fac24b07e4d357ac02dd14e6d9fef6cd86261fa80e7c01",
+      "y_mm.npy": "475d649b2c755267fa6706a557294e062e14175586a10aae2d0943840a5b1377"
+    },
+    "2023": {
+      "X.npy": "8716ec75c04dce7e8bb432926203e24876e710a3ba6d0a7d8f63da4c0699ff47",
+      "cases.json": "54d2ae6e37beb610b48e467885b3e3803d1d9330d7c7d2d9047621ada0abf253",
+      "pixel_index.npy": "bdb302277c00bc1c402df72395a6dc3e5f47d4f704d00dbc486cca027cd6dfcd",
+      "y_mm.npy": "3e826b161286f53ea69760c5bff3d896a7f89b8be527abdc81eddc4e133a89da"
+    },
+    "2024": {
+      "X.npy": "04195f8f87bb9ca38cb8b0286918d23c712b1b39675727f1df46529f771fdb53",
+      "cases.json": "6465230b6a1ad5a6ae8ced447ae0cb89f67af1231aa935e8927c3ec9828b4dba",
+      "pixel_index.npy": "63bcb3ea2fc2d481b793f780400018f8d4c4ca32c1abdf1a450c82e52613bbab",
+      "y_mm.npy": "d11568e5cf17277c0edcf9d96df731faa2465a216321d9b74973a813a1aeab40"
+    }
+  },
+  "evaluation": {
+    "label_for_2022": "INDEPENDENT TEST: first use of this year",
+    "mask": "finite forecast cells intersected with IMD non-fill cells, applied only at unseal for 2022",
+    "reproduction_gate": "recomputed frozen M0 to M4 pooled values must reproduce the published values on the paired cells exactly where they apply, before any new number is written",
+    "support_gate": {
+      "min_cases": 30,
+      "min_cells": 20,
+      "min_observed_event_pairs": 30,
+      "otherwise": "insufficient_support, no number; if the zone fails it the primary test is unevaluable, not a pass or fail"
+    },
+    "thresholds_mm_per_24h": {
+      "heavy": 64.5,
+      "very_heavy": 115.6
+    },
+    "uncertainty": {
+      "method": "paired whole-case bootstrap",
+      "note": "optimistic: cells within a case and consecutive days are correlated",
+      "repeats": 2000,
+      "seed": 26080
+    }
+  },
+  "feature_registry": {
+    "arm_roles": {
+      "B0": "control",
+      "B0Z": "sensitivity of the control to the 500 hPa height offset",
+      "B1": "declared candidate",
+      "B1Z": "sensitivity of the candidate to the 500 hPa height offset"
+    },
+    "arms": {
+      "B0": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_z500",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "z500_area_mean",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours"
+      ],
+      "B0Z": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours"
+      ],
+      "B1": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_z500",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "z500_area_mean",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours",
+        "mean_elevation_m",
+        "local_relief_m",
+        "distance_to_coast_km",
+        "slope_m_per_km",
+        "terrain_uphill_east",
+        "terrain_uphill_north",
+        "coast_landward_east",
+        "coast_landward_north"
+      ],
+      "B1Z": [
+        "raw_c00_rain_mm",
+        "forecast_u850",
+        "forecast_v850",
+        "forecast_q700",
+        "forecast_mslp",
+        "forecast_pwat",
+        "pwat_area_mean",
+        "q700_area_mean",
+        "u850_area_mean",
+        "v850_area_mean",
+        "wind_speed_area_mean",
+        "moisture_transport_area_mean",
+        "mslp_area_mean",
+        "mslp_minimum",
+        "mslp_range",
+        "relative_vorticity_area_mean",
+        "relative_vorticity_p90",
+        "latitude_deg",
+        "longitude_deg",
+        "lead_hours",
+        "mean_elevation_m",
+        "local_relief_m",
+        "distance_to_coast_km",
+        "slope_m_per_km",
+        "terrain_uphill_east",
+        "terrain_uphill_north",
+        "coast_landward_east",
+        "coast_landward_north"
+      ]
+    },
+    "forecast_time_forcing": "not carried over (added nothing in docs/126)",
+    "static_geography": "allowed at forecast time (AGENTS.md section 3.4)"
+  },
+  "immutability": "selection outputs are write-once; any change to this protocol needs a new version and a new record",
+  "model": {
+    "configurations_per_arm": 16,
+    "device": "cpu",
+    "event_weight": {
+      "cap": 4.0,
+      "change_from_v1": "cap 10 -> 4; the only recipe change",
+      "formula": "w = min(cap, 1 + y / 64.5) on training rows only (never at inference)"
+    },
+    "family": "xgboost",
+    "fixed": {
+      "colsample_bytree": 0.9,
+      "learning_rate": 0.05,
+      "min_child_weight": 5,
+      "reg_lambda": 2.0,
+      "subsample": 0.9
+    },
+    "gpu": "not used",
+    "grid": {
+      "max_depth": [
+        4,
+        6
+      ],
+      "n_estimators": [
+        200,
+        350
+      ],
+      "objective": [
+        "reg:squarederror",
+        "reg:tweedie"
+      ],
+      "tweedie_variance_power": 1.5,
+      "weights": [
+        "none",
+        "capped_event"
+      ]
+    },
+    "n_jobs": 12,
+    "output": "prediction clipped at zero",
+    "seed": 26080,
+    "tree_method": "hist"
+  },
+  "parents": {
+    "corpus_v2_evidence_manifest_sha256": "85215f433aab860963d52c8a265f9f15179fd7c5fb8d0e4265e0e018f9856870",
+    "corpus_v2_protocol_sha256": "a3b1561618b1f41da2cb8fcd3cc7b6284c9c02773169d645a3f41c54612f0464",
+    "design": "docs/129_GEOGRAPHY_AWARE_FOLLOWUP_PROTOCOL_PROPOSAL.md",
+    "feature_generation_manifest_v2_sha256": "c65892ec952e84224c805c3e396d24b1a9bfa587cf0fc268f6df2602985ddd8e",
+    "geoaware_protocol_v1_sha256": "e04c0504dfc7a8f68f020241010b82344d89ab8270eef816e6fd5f43359f393c",
+    "protocol_v1_sha256": "2244e0c75abbafb216adaeca4c16be342ca3210ed58ca2b4a695b67863700e10",
+    "static_geography_sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0",
+    "v1_experiment": "docs/126_GEOGRAPHY_AWARE_MODEL_RESULTS.md (pre-registered rule not met)"
+  },
+  "post_hoc_disclosure": {
+    "consequence": "The v2 selection is therefore a deterministic re-application of an already known table, not an unbiased selection, and the development comparison is development evidence only. Only the sealed 2022, which no choice has touched, can be called independent.",
+    "decided_after": "the v1 development selection and its table (docs/130) had been seen, including which configurations would become eligible once G3 stops gating",
+    "no_threshold_was_tuned": "no numeric threshold was changed; one guardrail was demoted from a gate to a reported diagnostic, for the structural reason in C1",
+    "v1_remains_the_pre_registered_outcome": "the v1 outcome (no candidate) stays on record and is not rewritten"
+  },
+  "schema_id": "geoaware_followup_protocol_v2",
+  "selection": {
+    "cross_validation_reuse": {
+      "checkpoint_sha256": "56a23291e74d53c9ba83e3444bffc7890d97130baf5e306ad32f93d759f8ef92",
+      "reused_from": "geoaware_followup_development_summary.json",
+      "why_valid": "the out-of-fold predictions do not depend on which guardrails gate; only the selection and the final fit are new"
+    },
+    "final_fit": "the selected configuration refit on all 562 development cases; model hashes written to the selection freeze before any 2022 value is opened",
+    "folds": "leave-one-year-out over 2021, 2023 and 2024: fit on the other two years, predict the held-out year; the sealed year can never enter",
+    "gating_guardrails": [
+      "G1",
+      "G2",
+      "G4"
+    ],
+    "guardrails": {
+      "G1": "heavy-rain CSI (64.5 mm per 24 h) at least the Raw value on the same held-out year (all cells)",
+      "G2": "absolute bias at most 1.5 mm on the held-out year (all cells)",
+      "G3": "very-heavy (115.6 mm per 24 h) forecast frequency bias at least 0.05: REPORTED for every held-out year and on 2022, NOT an eligibility gate (change C1)",
+      "G4": "heavy-rain forecast frequency bias in the coastal-and-orographic zone at most 1.5 on the held-out year (a loose floor; it would not have flagged 1.28)"
+    },
+    "rule": "per arm, among the configurations that pass G1, G2 and G4 in EVERY held-out year, the lowest pooled out-of-fold RMSE (all three held-out years together); ties in grid order; none passing means the arm has no candidate and that is reported; G3 is reported alongside"
+  },
+  "status": "APPROVED_FOR_DEVELOPMENT_SELECTION_ONLY_TEST_SEALED",
+  "supersedes": {
+    "protocol_v1_sha256": "2244e0c75abbafb216adaeca4c16be342ca3210ed58ca2b4a695b67863700e10",
+    "reason": "v1 found no candidate in any arm because G2 and G3 cannot both be satisfied by any of the 64 configurations (docs/130)",
+    "v1_development_summary_sha256": "6c9a1abc100301cf9e2a9b9abaadf9951f2ea4f3d1de7ec067927575f0049e7a",
+    "v1_selection_freeze_sha256": "40dfb3ed169315560189a7ae1f7a7e89a11565f6279d1f2730bf5c62fd46ab63"
+  },
+  "title": "Geography-aware correction, follow-up with an independent test, protocol v2 (G3 reported, not gating)",
+  "track": "operational-era (Track B) only; never pooled with the reforecast track",
+  "years": {
+    "development": [
+      2021,
+      2023,
+      2024
+    ],
+    "sealed_test": 2022
+  }
+}

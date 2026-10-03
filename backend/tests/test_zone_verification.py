@@ -114,3 +114,21 @@ def test_identical_zone_and_all_gives_zero_difference():
     stack[:, :, :, 3] = 12
     d = zv.difference_statistics(stack.sum(axis=0), ["M0", "M2"])
     assert d[("q1", "COASTAL", "M2", "rmse")] == 0.0 and d[("q2", "COASTAL", "M2", "rmse")] == 0.0
+
+
+def test_paired_bootstrap_level_is_additive_and_labelled():
+    rng = np.random.default_rng(7)
+    stack = rng.random((40, 7, 3, zv.S)) * 5 + 5
+    stack[..., zv._idx("n")] = 50
+    models = ["M0", "A", "B"]
+    base = zv.paired_bootstrap(stack, models, repeats=200, seed=1)
+    explicit = zv.paired_bootstrap(stack, models, repeats=200, seed=1, level=0.95)
+    assert base == explicit and all("interval95" in v for v in base.values() if v["status"] == "ok")
+    wide = zv.paired_bootstrap(stack, models, repeats=200, seed=1, level=0.99)
+    for key, value in base.items():
+        if value["status"] != "ok":
+            continue
+        assert "interval95" not in wide[key] and wide[key]["level"] == 0.99 and wide[key]["point"] == value["point"]
+        assert wide[key]["interval"][0] <= value["interval95"][0] and wide[key]["interval"][1] >= value["interval95"][1]
+    with pytest.raises(ValueError):
+        zv.paired_bootstrap(stack, models, repeats=10, level=0.4)

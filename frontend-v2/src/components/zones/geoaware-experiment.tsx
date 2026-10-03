@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { EvidenceApiError } from "@/lib/api/evidence";
-import { getGeoawareEvaluation, getGeoawareOverview, type GeoawareEvaluation, type GeoawareOverview } from "@/lib/api/geoaware";
+import { getGeoawareEvaluation, getGeoawareFollowup, getGeoawareOverview, type GeoawareEvaluation, type GeoawareFollowup, type GeoawareOverview } from "@/lib/api/geoaware";
 import { ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/components/science/common";
 
 const ZONE = "COASTAL_AND_OROGRAPHIC";
@@ -59,18 +59,98 @@ function YearSection({ ev, ov }: { ev: GeoawareEvaluation; ov: GeoawareOverview 
   </section>;
 }
 
+const FOLLOWUP_YEARS = ["2021", "2023", "2024"] as const;
+const ARM_LABEL_V2: Record<string, string> = { B0: "B0 control (no geography)", B1: "B1 geography (candidate)", B0Z: "B0Z control without 500 hPa height", B1Z: "B1Z geography without 500 hPa height" };
+const DECISION_ORDER = ["v3_primary", "v2_secondary"];
+const SET_LABEL: Record<string, string> = { v3_primary: "Primary (protocol v3 selection)", v2_secondary: "Secondary (protocol v2 selection)" };
+const configLabel = (c: { objective: string; weights: string; max_depth: number; n_estimators: number }) =>
+  `${c.objective === "reg:tweedie" ? "Tweedie" : "squared error"}, ${c.weights === "capped_event" ? "capped event weights" : "no weights"}, depth ${c.max_depth}, ${c.n_estimators} rounds`;
+const interval = (s: { point?: number | null; interval?: [number, number] } | undefined, digits: number) =>
+  s?.point == null || !s.interval ? "undefined" : `${signed(s.point, digits)} [${signed(s.interval[0], digits)}, ${signed(s.interval[1], digits)}]`;
+
+function IndependentTest({ data }: { data: GeoawareFollowup }) {
+  const t = data.test_2022;
+  const labels = ["M0", ...Object.keys(t.models).filter((label) => label in t.pooled_summary).sort()];
+  const roleOf = (label: string) => {
+    const primary = t.candidate_sets.v3_primary, secondary = t.candidate_sets.v2_secondary;
+    if (label === "M0") return "Raw forecast";
+    const parts = [];
+    if (label === primary.candidate) parts.push("primary candidate");
+    if (label === secondary.candidate) parts.push("secondary candidate");
+    if (label === primary.comparator) parts.push("control");
+    return parts.join(", ") || "other";
+  };
+  return <div data-testid="geoaware-test-2022">
+    <div className="zone-banner zone-banner-posthoc" role="note" data-testid="geoaware-sealed">
+      <strong>{data.sealed_test.year} was opened once, under the owner&apos;s unseal record · {t.label}</strong>
+      <span>{t.cases} cases · one test, never re-run · the owner message was &quot;{data.unseal_record.owner_message.verbatim}&quot; · {data.unseal_record.hashes_listed} hashes were frozen and checked before any {data.sealed_test.year} observation was read.</span></div>
+    <h3>Result on the independent year</h3>
+    <p data-testid="geoaware-claim"><strong>{t.claim_wording}.</strong> Multiplicity: {t.multiplicity}. The test scored two pre-registered candidate sets together, so each decision interval is 97.5 percent, not 95 percent.</p>
+    <div className="district-table-wrap"><table className="phase5-table zone-table">
+      <caption className="sr-only">Pre-registered decision for each candidate set on the independent year</caption>
+      <thead><tr><th scope="col">Candidate set</th><th scope="col">Candidate against control</th><th scope="col">P1 Ghats-coast heavy CSI difference (97.5 % interval)</th><th scope="col">P2 overall RMSE difference, mm (97.5 % interval)</th><th scope="col">P3 guardrails G1, G2, G4 (G3 reported)</th><th scope="col">Adds value</th></tr></thead>
+      <tbody>{DECISION_ORDER.filter((key) => key in t.decisions).map((key) => [key, t.decisions[key]] as const).map(([key, d]) => <tr key={key} data-testid={`decision-${key}`}><th scope="row">{SET_LABEL[key] ?? key}</th><td>{d.candidate} against {d.comparator}</td>
+        <td>{interval(d.zone_heavy_csi_difference, 3)} · {d.P1_zone_heavy_csi_beats_comparator_975 ? "passes" : "does not pass"}</td><td>{interval(d.overall_rmse_difference, 2)} · {d.P2_overall_rmse_within_tolerance ? "within the 0.2 mm tolerance" : "outside the tolerance"}</td>
+        <td>{d.guardrails ? `G1 ${yesNo(d.guardrails.G1)} · G2 ${yesNo(d.guardrails.G2)} · G4 ${yesNo(d.guardrails.G4)} · G3 ${d.guardrails.G3 ? "met" : "not met"}` : "undefined"} · {d.P3_gating_guardrails_G1_G2_G4 ? "passes" : "does not pass"}</td><td>{d.adds_value == null ? "unevaluable" : d.adds_value ? "yes" : "no"}</td></tr>)}</tbody></table></div>
+    <div className="district-table-wrap"><table className="phase5-table zone-table">
+      <caption className="sr-only">Pooled scores of Raw and the scored models on the independent year</caption>
+      <thead><tr><th scope="col">Model</th><th scope="col">Role</th><th scope="col">RMSE (mm)</th><th scope="col">Bias (mm)</th><th scope="col">Heavy CSI, all cells</th><th scope="col">Very-heavy frequency bias</th><th scope="col">Ghats-coast heavy CSI</th><th scope="col">Ghats-coast heavy frequency bias</th></tr></thead>
+      <tbody>{labels.map((label) => { const m = t.pooled_summary[label]; return <tr key={label}><th scope="row">{label}</th><td>{roleOf(label)}</td><td>{fixed(m.rmse_mm, 2)}</td><td>{signed(m.bias_mm, 2)}</td><td>{fixed(m.heavy_csi, 3)}</td><td>{fixed(m.very_heavy_frequency_bias, 3)}</td><td>{fixed(m.zone_heavy_csi, 3)}</td><td>{fixed(m.zone_heavy_frequency_bias, 2)}</td></tr>; })}</tbody></table></div>
+    <p data-testid="geoaware-test-reading">{(() => {
+      const prim = t.decisions.v3_primary, sec = t.decisions.v2_secondary;
+      const mp = t.pooled_summary[prim.candidate], mc = t.pooled_summary[prim.comparator];
+      return `The primary candidate ${prim.candidate} ${prim.adds_value ? "satisfied" : "did not satisfy"} the pre-registered rule against its control ${prim.comparator}. Its Ghats-coast heavy-rain frequency bias is ${fixed(mp.zone_heavy_frequency_bias, 2)} against ${fixed(mc.zone_heavy_frequency_bias, 2)} for the control, so part of its higher CSI comes with mild over-forecasting of heavy rain in the zone. The secondary candidate ${sec.candidate} ${sec.adds_value ? "also satisfied" : "did not satisfy"} the rule: its Ghats-coast heavy CSI difference against the same control is ${interval(sec.zone_heavy_csi_difference, 3)}.`;
+    })()}</p>
+    <div className="district-table-wrap"><table className="phase5-table zone-table">
+      <caption className="sr-only">Ghats-coast heavy-rain CSI by lead day</caption>
+      <thead><tr><th scope="col">Lead</th><th scope="col">Cases</th>{[t.candidate_sets.v3_primary.candidate, t.candidate_sets.v3_primary.comparator, t.candidate_sets.v2_secondary.candidate, "M0"].map((l) => <th scope="col" key={l}>{l}</th>)}</tr></thead>
+      <tbody>{Object.entries(t.by_lead).map(([lead, block]) => <tr key={lead}><th scope="row">{lead.replace("_24h", "").replace("day", "Day ")}</th><td>{block.cases}</td>
+        {[t.candidate_sets.v3_primary.candidate, t.candidate_sets.v3_primary.comparator, t.candidate_sets.v2_secondary.candidate, "M0"].map((l) => <td key={l}>{fixed(block.models[l]?.zone_heavy_csi, 3)}</td>)}</tr>)}</tbody></table></div>
+    <p className="micro-note">Sensitivity to the 500 hPa height features, models without those features minus the matching models with them (descriptive, 97.5 percent intervals): {t.sensitivity.map((s) => `${s.a} minus ${s.b}: Ghats-coast heavy CSI ${interval(s.zone_heavy_csi_difference ?? undefined, 3)}`).join("; ")}. A pair whose interval excludes zero differs; a pair whose interval includes zero shows no evidence of a difference.</p>
+    <details><summary>The owner message, its interpretation and what was disclosed before opening</summary>
+      <p>{data.unseal_record.owner_message.interpretation}</p>
+      <ul className="phase5-caveats">{data.unseal_record.disclosed_before_opening.map((line) => <li className="phase5-caveat" key={line}>{line}</li>)}</ul>
+      <p>Not authorised: {data.unseal_record.what_is_not_authorised.join("; ")}.</p></details>
+  </div>;
+}
+
+function FollowupSection({ data }: { data: GeoawareFollowup }) {
+  const b0 = data.v2_selection.B0, b1 = data.v2_selection.B1;
+  const csiGap = b0 && b1 ? FOLLOWUP_YEARS.map((y) => ({ year: y, gap: (b1.by_year[y].zone_heavy_csi ?? NaN) - (b0.by_year[y].zone_heavy_csi ?? NaN) })) : [];
+  const b1Wins = csiGap.filter((g) => g.gap > 0).map((g) => g.year);
+  const b0Wins = csiGap.filter((g) => g.gap < 0).map((g) => g.year);
+  const arms = Object.keys(data.v2_selection);
+  return <section className="phase5-analysis-block" aria-labelledby="geo-followup-heading" data-testid="geoaware-followup">
+    <h2 id="geo-followup-heading">Follow-up with an independent year</h2>
+    <IndependentTest data={data} />
+    <h3>How the candidates were chosen (development years only)</h3>
+    <p>{data.v1_outcome.all_arms_without_candidate ? "Under the first frozen protocol (v1) no arm had an eligible candidate: no configuration passed every guardrail in every held-out year." : "Under the first frozen protocol (v1) at least one arm had a candidate."} {data.changes.map((c) => `${c.id}: ${c.what}`).join(" ")} The second change was decided after {data.post_hoc_disclosure.decided_after}. {data.post_hoc_disclosure.consequence}</p>
+    <div className="district-table-wrap"><table className="phase5-table zone-table">
+      <caption className="sr-only">Selected configuration per arm under protocols v2 and v3</caption>
+      <thead><tr><th scope="col">Arm</th><th scope="col">Eligible configurations</th><th scope="col">Protocol v2 selection (lowest RMSE)</th><th scope="col">Protocol v3 selection (aligned with the test)</th></tr></thead>
+      <tbody>{arms.map((arm) => { const m2 = data.v2_selection[arm], m3 = data.v3_selection[arm]; return <tr key={arm}><th scope="row">{ARM_LABEL_V2[arm] ?? arm}</th><td>{data.eligible_v2_by_arm[arm]} of 16</td>
+        <td>{m2 ? `#${m2.grid_index}: ${configLabel(m2.config)}; pooled RMSE ${fixed(m2.pooled_rmse_mm, 2)}` : "none"}</td><td>{m3 ? `#${m3.grid_index}: ${configLabel(m3.config)}; pooled RMSE ${fixed(m3.pooled_rmse_mm, 2)}` : "none"}</td></tr>; })}</tbody></table></div>
+    {b0 && b1 ? <p data-testid="geoaware-followup-reading">On the development years, as selected under protocol v2 the geography model (B1) had the higher Ghats-coast heavy-rain CSI in {b1Wins.length ? b1Wins.join(", ") : "no held-out year"} and the control (B0) in {b0Wins.length ? b0Wins.join(", ") : "no held-out year"}, which is why the aligned selection of protocol v3 was introduced. At matched configurations geography had the higher Ghats-coast heavy CSI in every held-out year in {data.matched_configuration_comparison.zone_heavy_csi_higher_in_every_held_out_year} of {data.matched_configuration_comparison.configurations} configurations.</p> : null}
+    <p>The pre-registered rule required all of:</p>
+    <ol className="phase5-caveats">{data.decision_rule.adds_value_requires_all.map((rule) => <li className="phase5-caveat" key={rule}>{rule}</li>)}</ol>
+    <ul className="phase5-caveats">{data.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
+    <p className="micro-note">Protocol v3 {data.protocol_v3_sha256.slice(0, 12)}… · selection freeze v3 {data.freeze_v3_sha256.slice(0, 12)}… · unseal record {data.unseal_record_sha256.slice(0, 12)}… · test result {data.test_result_sha256.slice(0, 12)}… · protocol v2 {data.protocol_v2_sha256.slice(0, 12)}… · protocol v1 {data.protocol_v1_sha256.slice(0, 12)}….</p>
+  </section>;
+}
+
 export function GeoawareExperiment() {
   const overview = useQuery({ queryKey: ["geoaware-overview"], queryFn: () => getGeoawareOverview(), staleTime: 5 * 60_000 });
   const e2024 = useQuery({ queryKey: ["geoaware-evaluation", 2024], queryFn: () => getGeoawareEvaluation(2024), staleTime: 5 * 60_000 });
   const e2025 = useQuery({ queryKey: ["geoaware-evaluation", 2025], queryFn: () => getGeoawareEvaluation(2025), staleTime: 5 * 60_000 });
+  const followup = useQuery({ queryKey: ["geoaware-followup"], queryFn: () => getGeoawareFollowup(), staleTime: 5 * 60_000 });
 
-  const failed = [overview, e2024, e2025].find((q) => q.isError);
+  const failed = [overview, e2024, e2025, followup].find((q) => q.isError);
   if (failed) {
     const error = failed.error;
     const integrity = error instanceof EvidenceApiError && error.code === "SCIENCE_INTEGRITY_FAILURE";
     return <div className="page-content"><ErrorState message={integrity ? `Geography-aware evidence integrity check failed: ${error.message}. This is a hard failure.` : error instanceof Error ? error.message : "Geography-aware evidence is unavailable."} /></div>;
   }
-  if (!overview.data || !e2024.data || !e2025.data) return <div className="page-content"><LoadingState label="Loading geography-aware experiment" /></div>;
+  if (!overview.data || !e2024.data || !e2025.data || !followup.data) return <div className="page-content"><LoadingState label="Loading geography-aware experiment" /></div>;
   const ov = overview.data;
   const arms = Object.keys(ov.selection);
   const years = Object.entries(ov.decision.per_year);
@@ -105,6 +185,8 @@ export function GeoawareExperiment() {
           <td>{passing(arm)} of {total(arm)}</td>
           <td>{ov.selection[arm].selected ? `configuration ${ov.selection[arm].selected!.grid_index}` : `none: ${ov.selection[arm].reason ?? "no eligible configuration"}`}</td></tr>)}</tbody></table></div>
     </section>
+
+    <FollowupSection data={followup.data} />
 
     <section className="phase5-analysis-block" aria-labelledby="geo-gap-heading">
       <h2 id="geo-gap-heading">What we cannot conclude, and the next step</h2>

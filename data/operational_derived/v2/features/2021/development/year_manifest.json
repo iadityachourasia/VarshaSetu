@@ -1,0 +1,97 @@
+{
+  "attrition": {
+    "day1_24h|06": {
+      "control_qc_pass": 9,
+      "scheduled": 30
+    },
+    "day1_24h|07": {
+      "control_qc_pass": 13,
+      "scheduled": 31
+    },
+    "day1_24h|08": {
+      "control_qc_pass": 8,
+      "scheduled": 31
+    },
+    "day1_24h|09": {
+      "control_qc_pass": 16,
+      "scheduled": 30
+    },
+    "day1_24h|10": {
+      "control_qc_pass": 1,
+      "scheduled": 3
+    },
+    "day2_24h|06": {
+      "control_qc_pass": 12,
+      "scheduled": 30
+    },
+    "day2_24h|07": {
+      "control_qc_pass": 18,
+      "scheduled": 31
+    },
+    "day2_24h|08": {
+      "control_qc_pass": 11,
+      "scheduled": 31
+    },
+    "day2_24h|09": {
+      "control_qc_pass": 19,
+      "scheduled": 30
+    },
+    "day2_24h|10": {
+      "control_qc_pass": 0,
+      "scheduled": 3
+    },
+    "day3_24h|06": {
+      "control_qc_pass": 13,
+      "scheduled": 30
+    },
+    "day3_24h|07": {
+      "control_qc_pass": 19,
+      "scheduled": 31
+    },
+    "day3_24h|08": {
+      "control_qc_pass": 19,
+      "scheduled": 31
+    },
+    "day3_24h|09": {
+      "control_qc_pass": 18,
+      "scheduled": 30
+    },
+    "day3_24h|10": {
+      "control_qc_pass": 3,
+      "scheduled": 3
+    }
+  },
+  "cell_mask": "finite forecast AND IMD non-fill nonnegative",
+  "deterministic_cases": 179,
+  "deterministic_cells": 232879,
+  "ensemble_cases": 59,
+  "lead_counts": {
+    "day1_24h": 47,
+    "day2_24h": 60,
+    "day3_24h": 72
+  },
+  "observations_paired": true,
+  "outputs_sha256": {
+    "deterministic": {
+      "cases": "71ae8a6f1a2430cc02aba21abdaac2f88b741c1e35aaf870fd27563bf901e84a",
+      "features": "a7501c90eb3d6b1799c03e628cf3004a5eba2ada65ca069a1980257a6250733d",
+      "heavy_label": "3e58b338a3a184e6c412985e0623f293afcb7d3f08ab4412b3c421a57972904b",
+      "pixel_index": "ab54532507387dab38fac24b07e4d357ac02dd14e6d9fef6cd86261fa80e7c01",
+      "target_mm": "475d649b2c755267fa6706a557294e062e14175586a10aae2d0943840a5b1377",
+      "very_heavy_label": "c864b36bf1db4fcd38fc2b2ae188e30e2bc911797005f33b2e726ab293bfa0b6"
+    },
+    "ensemble_baseline": {
+      "cases": "6b4cc6ba7e0ef7f5c81df79c6ec22c33b806cbad704e39dc3fd7dda9a7b6c9c0",
+      "members": "8d8e80e9be5e9b32478b00df720209f15f117d3439c14fdf82c4ce579cdcd53b"
+    },
+    "regime": {
+      "cases": "bc37c02665a96488122847f8d374b6831ac2e638ce25b32fc1bbe7597ef361d7",
+      "features": "2e154cb46db8854f585c0434e8096f7708ff5158ae858096836a41efd097647f"
+    }
+  },
+  "regime_cases": 375,
+  "role": "development",
+  "scheduled_cases": 375,
+  "schema": "corpus2-features-year-v1",
+  "year": 2021
+}

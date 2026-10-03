@@ -1,0 +1,48 @@
+{
+  "byte_size": 25431832,
+  "download_endpoint": "https://www.imdpune.gov.in/cmpg/Griddata/RF25.php",
+  "elapsed_seconds": 115.58,
+  "header_validation": {
+    "annual_daily_contiguous": true,
+    "annual_record_count": 365,
+    "coordinate_bounds": {
+      "latitude": [
+        6.5,
+        38.5
+      ],
+      "longitude": [
+        66.5,
+        100.0
+      ]
+    },
+    "grid_points": [
+      129,
+      135
+    ],
+    "rainfall_units": "mm",
+    "rainfall_values_read": false,
+    "required_dates_complete": true,
+    "required_period": "2021-06-01/2021-10-03",
+    "required_record_count": 125,
+    "time_units": "days since 1900-12-31 00:00:00",
+    "variable_shape": [
+      365,
+      129,
+      135
+    ]
+  },
+  "path": "experiments/recent_historical/imd_v2/RF25_ind2021_rfp25.nc",
+  "request_form": {
+    "RF25": 2021
+  },
+  "request_method": "POST",
+  "response_headers": {
+    "content-disposition": "attachment; filename=RF25/ind2021_rfp25.nc",
+    "content-type": "application/octet-stream",
+    "date": "Fri, 02 Oct 2026 16:10:20 GMT",
+    "server": "Apache"
+  },
+  "retrieved_at_utc": "2026-10-02T15:16:33+00:00",
+  "sha256": "fb0f291fa7e214a7811023a9309cead67233b6b4e0bfcc5b277643f976f68374",
+  "year": 2021
+}

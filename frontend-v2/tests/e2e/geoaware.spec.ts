@@ -27,3 +27,38 @@ test("the page is reachable from the navigation and usable on a narrow screen", 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(1);
 });
+
+test("the follow-up section shows the independent 2022 test, its disclosures and numbers equal to the API", async ({ page }) => {
+  const api = await (await page.request.get(`${API}/followup`)).json();
+  expect(api.sealed_test.opened).toBe(true);
+  expect(api.test_2022.label).toBe("INDEPENDENT TEST: first use of this year");
+  await page.goto("/geoaware");
+  const section = page.getByTestId("geoaware-followup");
+  await expect(section).toBeVisible();
+  await expect(page.getByTestId("geoaware-sealed")).toContainText("2022 was opened once");
+  await expect(page.getByTestId("geoaware-sealed")).toContainText("INDEPENDENT TEST: first use of this year");
+  await expect(page.getByTestId("geoaware-claim")).toContainText(api.test_2022.claim_wording);
+  await expect(page.getByTestId("geoaware-claim")).toContainText("97.5 percent, not 95 percent");
+  await expect(section).toContainText("not an unbiased selection");
+  for (const [key, d] of Object.entries<{ adds_value: boolean | null; zone_heavy_csi_difference: { point: number } }>(api.test_2022.decisions)) {
+    const row = page.getByTestId(`decision-${key}`);
+    await expect(row).toContainText(`${d.zone_heavy_csi_difference.point >= 0 ? "+" : ""}${d.zone_heavy_csi_difference.point.toFixed(3)}`);
+    await expect(row.locator("td").last()).toHaveText(d.adds_value == null ? "unevaluable" : d.adds_value ? "yes" : "no");
+  }
+  const primary = api.test_2022.candidate_sets.v3_primary;
+  const frequencyBias = api.test_2022.pooled_summary[primary.candidate].zone_heavy_frequency_bias.toFixed(2);
+  await expect(page.getByTestId("geoaware-test-reading")).toContainText(`frequency bias is ${frequencyBias}`);
+  await expect(page.getByTestId("geoaware-test-reading")).toContainText("mild over-forecasting");
+  const b1 = api.v3_selection.B1;
+  await expect(section.getByRole("row", { name: /^B1 geography/ })).toContainText(`#${b1.grid_index}`);
+  await expect(section.getByRole("row", { name: /^M0 Raw forecast/ })).toBeVisible();
+});
+
+test("the follow-up section never claims 2022 is sealed and states the secondary candidate did not pass", async ({ page }) => {
+  await page.goto("/geoaware");
+  const section = page.getByTestId("geoaware-followup");
+  await expect(section).toBeVisible();
+  await expect(section).not.toContainText("is sealed and has not been opened");
+  await expect(page.getByTestId("decision-v2_secondary").locator("td").last()).toHaveText("no");
+  await expect(section).toContainText("secondary (v2) candidate set did not pass");
+});

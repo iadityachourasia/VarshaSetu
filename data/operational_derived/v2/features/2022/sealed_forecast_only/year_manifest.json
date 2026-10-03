@@ -1,0 +1,94 @@
+{
+  "attrition": {
+    "day1_24h|06": {
+      "control_qc_pass": 12,
+      "scheduled": 30
+    },
+    "day1_24h|07": {
+      "control_qc_pass": 18,
+      "scheduled": 31
+    },
+    "day1_24h|08": {
+      "control_qc_pass": 14,
+      "scheduled": 31
+    },
+    "day1_24h|09": {
+      "control_qc_pass": 8,
+      "scheduled": 30
+    },
+    "day1_24h|10": {
+      "control_qc_pass": 2,
+      "scheduled": 3
+    },
+    "day2_24h|06": {
+      "control_qc_pass": 9,
+      "scheduled": 30
+    },
+    "day2_24h|07": {
+      "control_qc_pass": 8,
+      "scheduled": 31
+    },
+    "day2_24h|08": {
+      "control_qc_pass": 13,
+      "scheduled": 31
+    },
+    "day2_24h|09": {
+      "control_qc_pass": 17,
+      "scheduled": 30
+    },
+    "day2_24h|10": {
+      "control_qc_pass": 1,
+      "scheduled": 3
+    },
+    "day3_24h|06": {
+      "control_qc_pass": 12,
+      "scheduled": 30
+    },
+    "day3_24h|07": {
+      "control_qc_pass": 23,
+      "scheduled": 31
+    },
+    "day3_24h|08": {
+      "control_qc_pass": 18,
+      "scheduled": 31
+    },
+    "day3_24h|09": {
+      "control_qc_pass": 17,
+      "scheduled": 30
+    },
+    "day3_24h|10": {
+      "control_qc_pass": 1,
+      "scheduled": 3
+    }
+  },
+  "cell_mask": "finite forecast only; the observation-derived mask is applied only at unseal",
+  "deterministic_cases": 173,
+  "deterministic_cells": 415373,
+  "ensemble_cases": 51,
+  "lead_counts": {
+    "day1_24h": 54,
+    "day2_24h": 48,
+    "day3_24h": 71
+  },
+  "observations_paired": false,
+  "outputs_sha256": {
+    "deterministic": {
+      "cases": "6e7738d2e5485714528b9560dada60db110ef369b7b2af8a798f3381257dc4a3",
+      "features": "152a0f4aad95ea3fd86078e175b31428511d91e0aeb88dc0e1b14641093e21dc",
+      "pixel_index": "d81fb942481e5539d9df2a5f5a145b4021c1559eee0db16f19ce28d8aa054650"
+    },
+    "ensemble_baseline": {
+      "cases": "9abf44d36dcc6c45170a6b6d1f6d4a57b1fe44f26bf4e9cdc3982acde1783512",
+      "members": "440c377367ba9d673fb66346eba05889384604aca7bd7fa714bfdb3a5538a491"
+    },
+    "regime": {
+      "cases": "7b3bdbbec8c63b04b5bf790aa61ce575b3499247d349eb705402d166d7b697a4",
+      "features": "0546a10ffbd19df140baa981f6427326379e4a72dfb7679d223b8961928352d1"
+    }
+  },
+  "regime_cases": 375,
+  "role": "sealed_forecast_only",
+  "scheduled_cases": 375,
+  "schema": "corpus2-features-year-v1",
+  "year": 2022
+}

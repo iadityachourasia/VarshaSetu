@@ -1,0 +1,350 @@
+{
+  "protocol_version": "operational-corpus-protocol-v2",
+  "creation_timestamp": "2026-10-02T15:18:04Z",
+  "status": "protocol-only; conditional acquisition authorization for independent years 2021-2022, not training authorization, no test scoring authorized",
+  "planned_dataset_identifier": "operational_gefs_imd_2021_2022_v2",
+  "separation": "Independent operational-era corpus for 2021-2022; never merge with the 2023-2025 corpus v1 (operational_gefs_imd_2023_2025_v1), the 2017-2019 GEFSv12 reforecast benchmark or any Phase 4A-4M experiment",
+  "source_families": {
+    "forecast_provider": "NOAA/NCEP public GEFS operational archive, noaa-gefs-pds",
+    "rainfall": "pgrb2sp25; APCP surface; GRIB2",
+    "atmosphere_a": "pgrb2ap5; UGRD 850 mb, VGRD 850 mb, HGT 500 mb, PWAT entire atmosphere",
+    "atmosphere_b": "pgrb2bp5; SPFH 700 mb, PRES mean sea level",
+    "excluded": "NAEFS bias-corrected, reforecast, 06/12/18 UTC cycles, members p05-p30"
+  },
+  "source_version_assumptions": {
+    "known_adjacent_change": "NAEFS v7 implemented 2023-12-05 for downstream bias-corrected products; those products excluded",
+    "mandatory_gate": "Before payload acquisition, inventory every scheduled date/member/hour/field and compare raw-product family, grid, parameter, level, statistical interval, cycle, ensemble identity and templates across all years; any material mismatch stops acquisition for protocol revision",
+    "2021": "NO DOCUMENTED CHANGE FOUND in selected raw GEFS families (GEFSv12 operational lineage since 2020-09-23); exact executable and GRIB metadata continuity UNKNOWN until payload validation; HEAD-only sample of 152/152 required objects present (docs/127)",
+    "2022": "NO DOCUMENTED CHANGE FOUND in selected raw GEFS families (GEFSv12 operational lineage since 2020-09-23); exact executable and GRIB metadata continuity UNKNOWN until payload validation; HEAD-only sample of 152/152 required objects present (docs/127)"
+  },
+  "years": [
+    2021,
+    2022
+  ],
+  "date_ranges_utc_inclusive": {
+    "2021": [
+      "2021-06-01",
+      "2021-10-03"
+    ],
+    "2022": [
+      "2022-06-01",
+      "2022-10-03"
+    ]
+  },
+  "schedule_rule": "Every calendar date in each inclusive range, no performance- or QC-based replacement or date removal; leap day lies outside all ranges",
+  "scheduled_initializations_per_year": 125,
+  "scheduled_initializations_total": 250,
+  "scheduled_date_lead_cases_total": 750,
+  "initialization_cycle_utc_hour": 0,
+  "forecast_leads": {
+    "day1_24h": {
+      "window_hours": [
+        3,
+        27
+      ],
+      "observation_offset_days": 1,
+      "rainfall_source_hours": [
+        3,
+        6,
+        12,
+        18,
+        24,
+        27
+      ],
+      "atmosphere_source_hour": 24
+    },
+    "day2_24h": {
+      "window_hours": [
+        27,
+        51
+      ],
+      "observation_offset_days": 2,
+      "rainfall_source_hours": [
+        27,
+        30,
+        36,
+        42,
+        48,
+        51
+      ],
+      "atmosphere_source_hour": 48
+    },
+    "day3_24h": {
+      "window_hours": [
+        51,
+        75
+      ],
+      "observation_offset_days": 3,
+      "rainfall_source_hours": [
+        51,
+        54,
+        60,
+        66,
+        72,
+        75
+      ],
+      "atmosphere_source_hour": 72
+    }
+  },
+  "rainfall_source_hours_union": [
+    3,
+    6,
+    12,
+    18,
+    24,
+    27,
+    30,
+    36,
+    42,
+    48,
+    51,
+    54,
+    60,
+    66,
+    72,
+    75
+  ],
+  "rainfall_members": [
+    "c00",
+    "p01",
+    "p02",
+    "p03",
+    "p04"
+  ],
+  "required_atmospheric_variables": {
+    "u850": [
+      "pgrb2ap5",
+      "UGRD",
+      "850 mb"
+    ],
+    "v850": [
+      "pgrb2ap5",
+      "VGRD",
+      "850 mb"
+    ],
+    "q700": [
+      "pgrb2bp5",
+      "SPFH",
+      "700 mb"
+    ],
+    "z500": [
+      "pgrb2ap5",
+      "HGT",
+      "500 mb"
+    ],
+    "mslp": [
+      "pgrb2bp5",
+      "PRES",
+      "mean sea level"
+    ],
+    "pwat": [
+      "pgrb2ap5",
+      "PWAT",
+      "entire atmosphere (considered as a single layer)"
+    ]
+  },
+  "selected_messages_per_initialization": {
+    "rainfall": 80,
+    "atmosphere": 18,
+    "total": 98
+  },
+  "spatial_domains": {
+    "rainfall_target": {
+      "latitude_n": [
+        10,
+        22
+      ],
+      "longitude_e": [
+        68,
+        80
+      ],
+      "spacing_degree": 0.25,
+      "shape": [
+        49,
+        49
+      ]
+    },
+    "atmospheric_context": {
+      "latitude_n": [
+        5,
+        30
+      ],
+      "longitude_e": [
+        55,
+        95
+      ],
+      "spacing_degree": 0.5,
+      "shape": [
+        51,
+        81
+      ]
+    },
+    "source_grid_policy": "record actual native grid per message; observed operational rainfall 0.25 degree and atmosphere 0.5 degree; normalize source north-to-south latitude and 0-360 longitude; deterministic bilinear atmosphere to target; no resolution gain claim",
+    "land_mask": "IMD finite/non-fill target-cell mask per date; record mask hash and valid-cell count, do not infer constant mask across dates"
+  },
+  "observation_source": {
+    "provider": "India Meteorological Department",
+    "product": "official RF25 annual 0.25 degree daily rainfall NetCDF",
+    "files": {
+      "2021": "RF25_ind2021_rfp25.nc",
+      "2022": "RF25_ind2022_rfp25.nc"
+    },
+    "sha256": {
+      "2021": "fb0f291fa7e214a7811023a9309cead67233b6b4e0bfcc5b277643f976f68374",
+      "2022": "83ae0d4e48f3a408eec3b54844476d406faf70928dc13c79f0bd085e3b0224b8"
+    },
+    "variable": "RAINFALL(TIME,LATITUDE,LONGITUDE)",
+    "units": "mm/day",
+    "missing": "_FillValue -999 and nonfinite excluded, not zero-filled",
+    "date_mapping": "day1 init+1 calendar day; day2 init+2; day3 init+3; valid calendar date must exist in annual file",
+    "timing_limitation": "Annual NetCDF dates have no explicit accumulation bounds; external IMD 08:30 IST-to-08:30 IST convention is not independently encoded by these files",
+    "test_access": "2022 file hash and header/date availability only until a later model-selection freeze and an explicit unseal; no observed rainfall values, event counts or scores. The 2021 and 2022 files were fetched with header-level validation only; the RAINFALL array was not read for either",
+    "retrieved_from": {
+      "endpoint": "https://www.imdpune.gov.in/cmpg/Griddata/RF25.php",
+      "method": "POST form RF25=<year>",
+      "stored_under": "experiments/recent_historical/imd_v2/",
+      "retrieved_at_utc": {
+        "2021": "2026-10-02T15:16:33+00:00",
+        "2022": "2026-10-02T15:17:02+00:00"
+      }
+    },
+    "redistribution": "local research use only; IMD redistribution rights unresolved (docs/80); the files must not be uploaded to any third party"
+  },
+  "qc_version": "canonical-precipitation-reconstruction-v2; backend.app.data.accumulation.reconstruct_minimal_accumulation_window unchanged",
+  "qc_policy": {
+    "selection": "exact-cover dynamic programming minimizing (subtractions, segments) from decoded interval metadata; no hard-coded fallback",
+    "precision_quantum_mm": "2^binaryScaleFactor * 10^(-decimalScaleFactor)",
+    "difference_bound_mm": "(q_total + q_prefix)/2 for each subtraction",
+    "negative_intermediate": "reject any cell below -(bound+1e-12); only within-bound negative roundoff normalized to zero inside frozen canonical implementation",
+    "final": "finite and nonnegative required",
+    "missing_message": "reject affected member-product if no exact interval cover; never substitute zero or relax bounds",
+    "case_policy": "each member separately valid/rejected; c00 need not await p01-p04"
+  },
+  "eligibility_definitions": {
+    "SOURCE_AVAILABLE": "all index objects and required selected message byte ranges for this date and product accessible and identity-verified; record member-level gaps separately",
+    "CONTROL_RAINFALL_VALID": "c00 24h window passes frozen canonical QC",
+    "ATMOSPHERIC_INPUTS_VALID": "all six c00 variables at product atmospheric hour decode on accepted native grids, cover context and are finite on required cells",
+    "DETERMINISTIC_ELIGIBLE": "CONTROL_RAINFALL_VALID and ATMOSPHERIC_INPUTS_VALID and complete 22-feature forecast-only construction; observation not required for forecast eligibility",
+    "P01_VALID": "p01 window passes same frozen rainfall QC",
+    "P02_VALID": "p02 window passes same frozen rainfall QC",
+    "P03_VALID": "p03 window passes same frozen rainfall QC",
+    "P04_VALID": "p04 window passes same frozen rainfall QC",
+    "FULL_5_MEMBER_ENSEMBLE_ELIGIBLE": "CONTROL_RAINFALL_VALID and P01_VALID and P02_VALID and P03_VALID and P04_VALID",
+    "REGIME_ELIGIBLE": "ATMOSPHERIC_INPUTS_VALID and all 12 forecast-only regime diagnostics finite; not an observed regime truth label",
+    "PROBABILITY_MODEL_ELIGIBLE": "DETERMINISTIC_ELIGIBLE and REGIME_ELIGIBLE and valid frozen/cross-fit deterministic correction plus all 26 probability features; future models only, not authorized in Phase4D",
+    "OBSERVATION_AVAILABLE": "mapped IMD date present with at least one finite non-fill aligned target cell; sealed 2022 checks limited to metadata until future unseal",
+    "FINAL_PAIRED_EVALUATION_ELIGIBLE": "DETERMINISTIC_ELIGIBLE and OBSERVATION_AVAILABLE and nonempty identical valid-cell comparison mask; for probability evaluation also PROBABILITY_MODEL_ELIGIBLE; 2022 evaluation forbidden before unseal"
+  },
+  "feature_contract": {
+    "path": "feature_contract.json",
+    "sha256": "100894f11b677b1de20869d7a741ed16d770d2f4dbff415084fe9888a393842f",
+    "deterministic_count": 22,
+    "probability_count": 26,
+    "regime_count": 12
+  },
+  "split_policy": {
+    "2021": "DEVELOPMENT: unused by any earlier protocol; may be used for training or validation under a later frozen protocol",
+    "2022": "SEALED INDEPENDENT TEST: forecast-side acquisition and forecast-only QC permitted; IMD values, events and scores forbidden until unseal",
+    "decision_record": "Year roles were proposed in docs/124 and docs/127 (2022 sealed as the only independent test) and the project owner instructed 'continue Acquire 2021-2022 data' on 2026-10-02 without changing them. The owner may revise the roles, but only before any 2022 IMD value is read; after that the roles are fixed.",
+    "relation_to_v1": "2023 (train), 2024 (validation/selection, reused) and 2025 (consumed final test) belong to corpus v1 and are not re-labelled by this protocol",
+    "status": "conditional on the all-year raw-source compatibility inventory; any material discontinuity requires a versioned protocol revision before payloads/training"
+  },
+  "test_sealing_policy": {
+    "before_unseal": "2022 source index, forecast-only QC, metadata and hashes permitted; 2022 IMD values/events/performance forbidden; the 2022 observation file stays in imd_v2/ and is opened for header and dates only",
+    "prerequisites": "freeze and hash features, QC version, model families, hyperparameters, regime construction, calibration, thresholds, the model-selection manifest and the test-unseal manifest before any 2022 value is read",
+    "after_unseal": "one-time prespecified 2022 scoring, immutable audit log, no retuning",
+    "scoring_authorized_by_this_protocol": false
+  },
+  "source_inventory_schema": {
+    "key": [
+      "year",
+      "init_date_utc",
+      "cycle_utc_hour",
+      "product",
+      "member",
+      "variable",
+      "forecast_hour",
+      "source_family"
+    ],
+    "required_columns": [
+      "source_url",
+      "index_url",
+      "index_sha256",
+      "message_parameter",
+      "message_level",
+      "interval_start_hour",
+      "interval_end_hour",
+      "grid_template",
+      "product_template",
+      "data_representation_template",
+      "native_grid_shape",
+      "units",
+      "byte_start",
+      "byte_end",
+      "status",
+      "checked_at_utc",
+      "error_code"
+    ],
+    "statuses": [
+      "INDEX_PRESENT",
+      "MESSAGE_PRESENT",
+      "MESSAGE_MISSING",
+      "SOURCE_UNAVAILABLE",
+      "SOURCE_FORMAT_CHANGED"
+    ],
+    "denominator": "all 750 scheduled date-product cases, with per-member/message rows including failure rows"
+  },
+  "acquisition_policy": {
+    "phase4d": "no bulk retrieval",
+    "phase4e_order": [
+      "complete all-year index and metadata inventory",
+      "acquire 2021 selected byte ranges, hash and QC",
+      "acquire 2022 forecast selected byte ranges, hash and forecast-only QC while test observations remain sealed"
+    ],
+    "transfer": "official NOAA cloud index + bounded byte-range requests; immutable content hashes and receipts; retry bounded transient failures with backoff; resume by valid hash, no duplicate downloads",
+    "concurrency": "retain frozen worker settings until a separately logged representative benchmark proves safe improvement; no nested oversubscription",
+    "storage_minimum_free_bytes": 40000000000
+  },
+  "raw_layout": "data/operational_gefs/v2/{year}/{init_date}/... immutable, disjoint from v1, reforecast and Phase4A-C",
+  "derived_layout": "data/operational_derived/v2/{inventory,decoded,qc,features}; data/operational_models/v2; data/operational_evaluation/v2; 2022 observation holdout access segregated",
+  "provenance_required": [
+    "provider",
+    "source_url_or_object_key",
+    "index_url",
+    "initialization_utc",
+    "member",
+    "forecast_hour",
+    "variable",
+    "level",
+    "byte_range",
+    "retrieved_at_utc",
+    "source_metadata",
+    "source_sha256",
+    "local_relative_path",
+    "protocol_sha256"
+  ],
+  "stop_conditions": [
+    "material raw-source configuration/product or GRIB-interval discontinuity",
+    "required predictor or member unavailable beyond documented status",
+    "accumulation convention inconsistent with frozen windows",
+    "persistent corrupt byte ranges or hash mismatch",
+    "free disk below 40 GB or less than estimated remaining bytes plus 20 GB",
+    "2022 observation/test sealing cannot be enforced",
+    "IMD date alignment or coordinate semantics change",
+    "licensing/access restriction",
+    "need to alter canonical QC, feature contract or split"
+  ],
+  "forbidden": [
+    "2017-2019 artifact mutation",
+    "Phase4A-C artifact mutation",
+    "bulk retrieval in Phase4D",
+    "model fitting/inference/calibration in Phase4D",
+    "2022 outcome analysis before freeze",
+    "observations as forecast predictors",
+    "post-hoc date replacement",
+    "silent protocol mutation",
+    "2023-2025 corpus v1 artifact mutation"
+  ],
+  "supersedes_nothing": "v1 remains frozen and authoritative for 2023-2025; v2 adds years and changes no v1 artifact",
+  "purpose": "Provide years that no earlier protocol, model selection, calibration or analysis has used, so that a follow-up model (for example the geography-aware correction of docs/124 and docs/126, risk R41) can be judged on data that were not seen when it was designed"
+}

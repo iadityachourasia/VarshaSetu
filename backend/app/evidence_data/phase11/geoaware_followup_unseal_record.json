@@ -1,0 +1,146 @@
+{
+  "disclosed_before_opening": [
+    "both protocol changes C1 and C2 were made after earlier tables were seen (docs/131, docs/132)",
+    "on development evidence the v2 candidate does not clearly beat its control on the primary quantity; the v3 candidate was selected by the aligned rule",
+    "the scoring code was rehearsed on the development year 2021 (in-sample, writing outside the repository); the rehearsal reproduced an independent 2021 Raw verification exactly and found one bug before this record was written"
+  ],
+  "hashes": {
+    "code_geoaware_followup": {
+      "path": "backend/app/ml/geoaware_followup.py",
+      "sha256": "3282f55b800295981bf596fd8e895eb5ddd182554a46b262205b1d98ee41300f"
+    },
+    "code_geoaware_followup_scoring": {
+      "path": "backend/app/ml/geoaware_followup_scoring.py",
+      "sha256": "3a088c261881ee59f437c4c6984b738a68e02cdb361984175c0c3bc49e3f0cf0"
+    },
+    "code_geoaware_v1_helpers": {
+      "path": "backend/app/ml/geoaware.py",
+      "sha256": "ea7dd8e02dc78a68c9266d2693d2536954ea051ec4148a4bb0a565ad3f4b6c0c"
+    },
+    "code_zone_verification": {
+      "path": "backend/app/ml/zone_verification.py",
+      "sha256": "2a6c3cc3a845d529da6cb94ed8e4a0da2100d2d4e71549b7da2629b22cb7a258"
+    },
+    "corpus_v2_evidence_manifest": {
+      "path": "backend/app/evidence_data/phase10/corpus_v2_manifest.json",
+      "sha256": "85215f433aab860963d52c8a265f9f15179fd7c5fb8d0e4265e0e018f9856870"
+    },
+    "corpus_v2_protocol": {
+      "path": "backend/app/evidence_data/phase10/corpus_v2_protocol.json",
+      "sha256": "a3b1561618b1f41da2cb8fcd3cc7b6284c9c02773169d645a3f41c54612f0464"
+    },
+    "development_summary": {
+      "path": "backend/app/evidence_data/phase11/geoaware_followup_development_summary.json",
+      "sha256": "6c9a1abc100301cf9e2a9b9abaadf9951f2ea4f3d1de7ec067927575f0049e7a"
+    },
+    "features_2022_X": {
+      "path": "data/operational_derived/v2/features/2022/sealed_forecast_only/deterministic/X.npy",
+      "sha256": "152a0f4aad95ea3fd86078e175b31428511d91e0aeb88dc0e1b14641093e21dc"
+    },
+    "features_2022_cases": {
+      "path": "data/operational_derived/v2/features/2022/sealed_forecast_only/deterministic/cases.json",
+      "sha256": "6e7738d2e5485714528b9560dada60db110ef369b7b2af8a798f3381257dc4a3"
+    },
+    "features_2022_pixel_index": {
+      "path": "data/operational_derived/v2/features/2022/sealed_forecast_only/deterministic/pixel_index.npy",
+      "sha256": "d81fb942481e5539d9df2a5f5a145b4021c1559eee0db16f19ce28d8aa054650"
+    },
+    "features_2022_year_manifest": {
+      "path": "data/operational_derived/v2/features/2022/sealed_forecast_only/year_manifest.json",
+      "sha256": "d3a9df7848c01b1b3495df883c00c614d7004918bcdd7601bdb464ed37299de9"
+    },
+    "features_generation_manifest": {
+      "path": "data/operational_derived/v2/features/feature_generation_manifest_v1.json",
+      "sha256": "c65892ec952e84224c805c3e396d24b1a9bfa587cf0fc268f6df2602985ddd8e"
+    },
+    "imd_2022_file": {
+      "path": "experiments/recent_historical/imd_v2/RF25_ind2022_rfp25.nc",
+      "sha256": "83ae0d4e48f3a408eec3b54844476d406faf70928dc13c79f0bd085e3b0224b8"
+    },
+    "model_v2_B0": {
+      "path": "experiments/geoaware_followup_v2/models/B0.json",
+      "sha256": "138785c286f3b4b8ef8f0801dd6b604f164c2091e8a9cdd73dfd7dd13b2ec15b"
+    },
+    "model_v2_B0Z": {
+      "path": "experiments/geoaware_followup_v2/models/B0Z.json",
+      "sha256": "031edc177986aade36763127db1c1772e2f4b99d9f740e51fd3d451ae245f8c3"
+    },
+    "model_v2_B1": {
+      "path": "experiments/geoaware_followup_v2/models/B1.json",
+      "sha256": "25f0f85f86caf8354808756d80b9ecc099696e14315d9727106c15b643dbb80e"
+    },
+    "model_v2_B1Z": {
+      "path": "experiments/geoaware_followup_v2/models/B1Z.json",
+      "sha256": "615bf1c3d1e6682146bebdb037d18f24bc386abef7465b96ab944f9850de19f0"
+    },
+    "model_v3_B0": {
+      "path": "experiments/geoaware_followup_v3/models/B0.json",
+      "sha256": "138785c286f3b4b8ef8f0801dd6b604f164c2091e8a9cdd73dfd7dd13b2ec15b"
+    },
+    "model_v3_B0Z": {
+      "path": "experiments/geoaware_followup_v3/models/B0Z.json",
+      "sha256": "7f08e3b79fae03967a933a460d677a14acab77b0d79e88d7cf13ea55e63da6a7"
+    },
+    "model_v3_B1": {
+      "path": "experiments/geoaware_followup_v3/models/B1.json",
+      "sha256": "c6f22feaf0e9636ecb5328cf69cbfc8bdc36865cd128ab2a6196840be22b5500"
+    },
+    "model_v3_B1Z": {
+      "path": "experiments/geoaware_followup_v3/models/B1Z.json",
+      "sha256": "eaaed56887ca03fd18cd0703b5e48432798dc5ed6a2212996942989ea4d0fe3d"
+    },
+    "protocol_v1": {
+      "path": "backend/app/evidence_data/phase11/geoaware_followup_protocol_v1.json",
+      "sha256": "2244e0c75abbafb216adaeca4c16be342ca3210ed58ca2b4a695b67863700e10"
+    },
+    "protocol_v2": {
+      "path": "backend/app/evidence_data/phase11/geoaware_followup_protocol_v2.json",
+      "sha256": "f7af77deb3db8278a83df7480f60f53a881d73b461cb9498cec33d23697697f1"
+    },
+    "protocol_v3": {
+      "path": "backend/app/evidence_data/phase11/geoaware_followup_protocol_v3.json",
+      "sha256": "252cbf4b3fafdbe52e9c8ee9a9c6b4a3c1d6f9a57e0d22485569d935cd366191"
+    },
+    "scoring_script": {
+      "path": "scripts/score_geoaware_followup_2022.py",
+      "sha256": "d9cda175bebb5f36a54d19cc8ea32327f945aa23a3de44a192357632a8e72055"
+    },
+    "selection_freeze_v1": {
+      "path": "backend/app/evidence_data/phase11/geoaware_followup_selection_freeze.json",
+      "sha256": "40dfb3ed169315560189a7ae1f7a7e89a11565f6279d1f2730bf5c62fd46ab63"
+    },
+    "selection_freeze_v2": {
+      "path": "backend/app/evidence_data/phase11/geoaware_followup_selection_freeze_v2.json",
+      "sha256": "18f0d04a58338ab41df5a8c6b2827efaee2d223aac916f4967ab0bfcc5946cb9"
+    },
+    "selection_freeze_v3": {
+      "path": "backend/app/evidence_data/phase11/geoaware_followup_selection_freeze_v3.json",
+      "sha256": "ce9b5addab9e6be5eca8baa34a339271fa6808ddb5c96cb9e50ce093991748a6"
+    },
+    "static_geography": {
+      "path": "backend/app/evidence_data/phase7/static_geography_v1.json",
+      "sha256": "cb546e192fe24a53b991653acf0a7960393a234e9a6eddcd34b56c6b0b8151d0"
+    }
+  },
+  "owner_message": {
+    "date": "2026-10-03",
+    "in_reply_to": "docs/131 section 'Decisions for the project owner': (1) run the one-shot 2022 test as frozen, (2) draft protocol v3 aligning the selection criterion, (3) stop and report",
+    "interpretation": "treated as authorising all three in the only coherent order, because 2022 can be opened once: freeze v3 including its selection, open 2022 once and score both frozen candidate sets together under the Bonferroni rule of protocol v3, then report every result. This record is the signed form of the second step.",
+    "verbatim": "do all of three perfectly"
+  },
+  "rule": "scripts/score_geoaware_followup_2022.py refuses to run unless every hash above matches, including the scoring script's own",
+  "schema": "geoaware-followup-unseal-record-v1",
+  "what_is_authorised": [
+    "one scoring of Raw and every unique selected model of selection freezes v2 and v3 on 2022",
+    "the pre-registered decision rule P1 to P4 with 97.5 percent intervals",
+    "a written-once result file labelled 'INDEPENDENT TEST: first use of this year'"
+  ],
+  "what_is_not_authorised": [
+    "scoring the frozen M1 to M4 (decision 5 stays no)",
+    "any retuning, reselection or second scoring after the result",
+    "publication of IMD values or anything that can reconstruct them (rights unresolved, D2)"
+  ],
+  "written_at_utc": "2026-10-02T20:18:02+00:00",
+  "written_before_any_2022_observation_value_was_read": true,
+  "year": 2022
+}

@@ -1,0 +1,307 @@
+{
+  "raw_gefs_by_zone": {
+    "2021": {
+      "ALL": {
+        "cells": 232879,
+        "rmse_mm": 15.429,
+        "bias_mm": -0.692,
+        "observed_heavy": 4094,
+        "forecast_heavy": 880,
+        "heavy_frequency_bias": 0.215,
+        "heavy_csi": 0.055
+      },
+      "COASTAL": {
+        "cells": 37590,
+        "rmse_mm": 19.941,
+        "bias_mm": -2.274,
+        "observed_heavy": 1337,
+        "forecast_heavy": 266,
+        "heavy_frequency_bias": 0.199,
+        "heavy_csi": 0.085
+      },
+      "OROGRAPHIC": {
+        "cells": 43855,
+        "rmse_mm": 13.321,
+        "bias_mm": 0.1,
+        "observed_heavy": 387,
+        "forecast_heavy": 158,
+        "heavy_frequency_bias": 0.408,
+        "heavy_csi": 0.034
+      },
+      "COASTAL_AND_OROGRAPHIC": {
+        "cells": 19511,
+        "rmse_mm": 25.974,
+        "bias_mm": -7.501,
+        "observed_heavy": 1331,
+        "forecast_heavy": 145,
+        "heavy_frequency_bias": 0.109,
+        "heavy_csi": 0.034
+      },
+      "OTHER": {
+        "cells": 131923,
+        "rmse_mm": 12.171,
+        "bias_mm": 0.503,
+        "observed_heavy": 1039,
+        "forecast_heavy": 311,
+        "heavy_frequency_bias": 0.299,
+        "heavy_csi": 0.051
+      }
+    },
+    "2023": {
+      "ALL": {
+        "cells": 260200,
+        "rmse_mm": 15.088,
+        "bias_mm": -0.736,
+        "observed_heavy": 4851,
+        "forecast_heavy": 1315,
+        "heavy_frequency_bias": 0.271,
+        "heavy_csi": 0.068
+      },
+      "COASTAL": {
+        "cells": 42000,
+        "rmse_mm": 19.872,
+        "bias_mm": -2.918,
+        "observed_heavy": 1626,
+        "forecast_heavy": 226,
+        "heavy_frequency_bias": 0.139,
+        "heavy_csi": 0.082
+      },
+      "OROGRAPHIC": {
+        "cells": 49000,
+        "rmse_mm": 11.328,
+        "bias_mm": 0.362,
+        "observed_heavy": 314,
+        "forecast_heavy": 202,
+        "heavy_frequency_bias": 0.643,
+        "heavy_csi": 0.066
+      },
+      "COASTAL_AND_OROGRAPHIC": {
+        "cells": 21800,
+        "rmse_mm": 23.115,
+        "bias_mm": -6.695,
+        "observed_heavy": 1554,
+        "forecast_heavy": 173,
+        "heavy_frequency_bias": 0.111,
+        "heavy_csi": 0.07
+      },
+      "OTHER": {
+        "cells": 147400,
+        "rmse_mm": 12.948,
+        "bias_mm": 0.402,
+        "observed_heavy": 1357,
+        "forecast_heavy": 714,
+        "heavy_frequency_bias": 0.526,
+        "heavy_csi": 0.056
+      }
+    },
+    "2024": {
+      "ALL": {
+        "cells": 238083,
+        "rmse_mm": 17.13,
+        "bias_mm": -0.854,
+        "observed_heavy": 6366,
+        "forecast_heavy": 1363,
+        "heavy_frequency_bias": 0.214,
+        "heavy_csi": 0.075
+      },
+      "COASTAL": {
+        "cells": 38430,
+        "rmse_mm": 22.367,
+        "bias_mm": -3.126,
+        "observed_heavy": 2143,
+        "forecast_heavy": 495,
+        "heavy_frequency_bias": 0.231,
+        "heavy_csi": 0.129
+      },
+      "OROGRAPHIC": {
+        "cells": 44835,
+        "rmse_mm": 14.081,
+        "bias_mm": 0.089,
+        "observed_heavy": 568,
+        "forecast_heavy": 142,
+        "heavy_frequency_bias": 0.25,
+        "heavy_csi": 0.04
+      },
+      "COASTAL_AND_OROGRAPHIC": {
+        "cells": 19947,
+        "rmse_mm": 30.814,
+        "bias_mm": -10.707,
+        "observed_heavy": 2627,
+        "forecast_heavy": 336,
+        "heavy_frequency_bias": 0.128,
+        "heavy_csi": 0.059
+      },
+      "OTHER": {
+        "cells": 134871,
+        "rmse_mm": 13.003,
+        "bias_mm": 0.937,
+        "observed_heavy": 1028,
+        "forecast_heavy": 390,
+        "heavy_frequency_bias": 0.379,
+        "heavy_csi": 0.032
+      }
+    }
+  },
+  "feature_drift_standardised_mean_difference": {
+    "2022_vs_2021": {
+      "raw_c00_rain_mm": 0.116,
+      "forecast_u850": -0.249,
+      "forecast_v850": -0.104,
+      "forecast_q700": 0.122,
+      "forecast_z500": -0.382,
+      "forecast_mslp": -0.204,
+      "forecast_pwat": -0.024,
+      "pwat_area_mean": 0.152,
+      "q700_area_mean": 0.254,
+      "u850_area_mean": -0.239,
+      "v850_area_mean": 0.106,
+      "wind_speed_area_mean": -0.118,
+      "moisture_transport_area_mean": -0.029,
+      "mslp_area_mean": -0.269,
+      "mslp_minimum": 0.126,
+      "mslp_range": -0.095,
+      "z500_area_mean": -0.649,
+      "relative_vorticity_area_mean": 0.236,
+      "relative_vorticity_p90": 0.467
+    },
+    "2022_vs_2023_2024": {
+      "raw_c00_rain_mm": 0.125,
+      "forecast_u850": -0.316,
+      "forecast_v850": -0.032,
+      "forecast_q700": 0.071,
+      "forecast_z500": -0.999,
+      "forecast_mslp": -0.313,
+      "forecast_pwat": -0.018,
+      "pwat_area_mean": -0.057,
+      "q700_area_mean": 0.048,
+      "u850_area_mean": -0.414,
+      "v850_area_mean": -0.143,
+      "wind_speed_area_mean": -0.227,
+      "moisture_transport_area_mean": -0.223,
+      "mslp_area_mean": -0.198,
+      "mslp_minimum": 0.248,
+      "mslp_range": -0.21,
+      "z500_area_mean": -1.54,
+      "relative_vorticity_area_mean": 0.592,
+      "relative_vorticity_p90": 0.18
+    },
+    "2025_vs_2023_2024": {
+      "raw_c00_rain_mm": 0.03,
+      "forecast_u850": 0.151,
+      "forecast_v850": -0.041,
+      "forecast_q700": 0.013,
+      "forecast_z500": -0.721,
+      "forecast_mslp": -0.107,
+      "forecast_pwat": -0.005,
+      "pwat_area_mean": -0.177,
+      "q700_area_mean": -0.213,
+      "u850_area_mean": 0.199,
+      "v850_area_mean": -0.206,
+      "wind_speed_area_mean": 0.176,
+      "moisture_transport_area_mean": 0.04,
+      "mslp_area_mean": -0.094,
+      "mslp_minimum": 0.163,
+      "mslp_range": -0.208,
+      "z500_area_mean": -0.726,
+      "relative_vorticity_area_mean": 0.602,
+      "relative_vorticity_p90": 0.001
+    },
+    "2021_vs_2023_2024": {
+      "raw_c00_rain_mm": 0.016,
+      "forecast_u850": -0.076,
+      "forecast_v850": 0.059,
+      "forecast_q700": -0.038,
+      "forecast_z500": -0.626,
+      "forecast_mslp": -0.122,
+      "forecast_pwat": 0.001,
+      "pwat_area_mean": -0.166,
+      "q700_area_mean": -0.159,
+      "u850_area_mean": -0.146,
+      "v850_area_mean": -0.212,
+      "wind_speed_area_mean": -0.106,
+      "moisture_transport_area_mean": -0.196,
+      "mslp_area_mean": 0.01,
+      "mslp_minimum": 0.197,
+      "mslp_range": -0.178,
+      "z500_area_mean": -0.945,
+      "relative_vorticity_area_mean": 0.362,
+      "relative_vorticity_p90": -0.241
+    },
+    "largest_abs_smd": {
+      "2022_vs_2021": [
+        [
+          "z500_area_mean",
+          -0.649
+        ],
+        [
+          "relative_vorticity_p90",
+          0.467
+        ],
+        [
+          "forecast_z500",
+          -0.382
+        ],
+        [
+          "mslp_area_mean",
+          -0.269
+        ]
+      ],
+      "2022_vs_2023_2024": [
+        [
+          "z500_area_mean",
+          -1.54
+        ],
+        [
+          "forecast_z500",
+          -0.999
+        ],
+        [
+          "relative_vorticity_area_mean",
+          0.592
+        ],
+        [
+          "u850_area_mean",
+          -0.414
+        ]
+      ],
+      "2025_vs_2023_2024": [
+        [
+          "z500_area_mean",
+          -0.726
+        ],
+        [
+          "forecast_z500",
+          -0.721
+        ],
+        [
+          "relative_vorticity_area_mean",
+          0.602
+        ],
+        [
+          "q700_area_mean",
+          -0.213
+        ]
+      ],
+      "2021_vs_2023_2024": [
+        [
+          "z500_area_mean",
+          -0.945
+        ],
+        [
+          "forecast_z500",
+          -0.626
+        ],
+        [
+          "relative_vorticity_area_mean",
+          0.362
+        ],
+        [
+          "relative_vorticity_p90",
+          -0.241
+        ]
+      ]
+    }
+  },
+  "scope": "descriptive; observations read only for development years 2021, 2023 and 2024; no 2022 target exists and 2025 targets were not loaded; forecast-side feature means only for 2022 and 2025; no model, selection or skill claim",
+  "caveat": "cases are not equally eligible across years (about half pass control rainfall QC), so differences mix weather, eligibility and data effects"
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "varshasetu-operational-feature-contract-v1",
+  "status": "design-only; no fitted operational models",
+  "source_grid": {"rainfall": "GEFS pgrb2sp25 0.25 degree; sampled 1440x721", "atmosphere": "GEFS pgrb2ap5/pgrb2bp5 0.5 degree; sampled 720x361"},
+  "target_grid": "10-22 N, 68-80 E; 49x49 cells at 0.25 degree, ascending latitude",
+  "context_grid": "5-30 N, 55-95 E; 51x81 cells at 0.5 degree, ascending latitude",
+  "interpolation": "deterministic bilinear context-grid to target-cell centers; does not increase source meteorological resolution",
+  "dtype": "float64 during extraction/interpolation and feature construction; persisted model-matrix dtype must be frozen before training",
+  "missing_policy": "no imputation in v1; nonfinite required predictor excludes the affected case/cell under the frozen eligibility rule; retain missing counters",
+  "lead_mapping": {"day1_24h": {"rain_window_hours": [3, 27], "atmosphere_hour": 24, "model_lead_hours": 24}, "day2_24h": {"rain_window_hours": [27, 51], "atmosphere_hour": 48, "model_lead_hours": 48}, "day3_24h": {"rain_window_hours": [51, 75], "atmosphere_hour": 72, "model_lead_hours": 72}},
+  "base_field_definitions": {
+    "raw_c00_rain_mm": {"source": "c00 APCP surface", "grid": "rainfall", "hour": "product rain_window_hours", "formula": "canonical exact-cover 24h accumulation", "units": "mm/24h"},
+    "forecast_u850": {"source": "ap5 UGRD 850 mb", "grid": "atmosphere", "hour": "product atmosphere_hour", "formula": "bilinear to target", "units": "m/s"},
+    "forecast_v850": {"source": "ap5 VGRD 850 mb", "grid": "atmosphere", "hour": "product atmosphere_hour", "formula": "bilinear to target", "units": "m/s"},
+    "forecast_q700": {"source": "bp5 SPFH 700 mb", "grid": "atmosphere", "hour": "product atmosphere_hour", "formula": "bilinear to target", "units": "kg/kg"},
+    "forecast_z500": {"source": "ap5 HGT 500 mb", "grid": "atmosphere", "hour": "product atmosphere_hour", "formula": "bilinear to target", "units": "gpm"},
+    "forecast_mslp": {"source": "bp5 PRES mean sea level", "grid": "atmosphere", "hour": "product atmosphere_hour", "formula": "bilinear to target", "units": "Pa"},
+    "forecast_pwat": {"source": "ap5 PWAT entire atmosphere", "grid": "atmosphere", "hour": "product atmosphere_hour", "formula": "bilinear to target", "units": "kg/m2"},
+    "latitude_deg": {"source": "target cell static coordinate", "grid": "target", "hour": "static", "formula": "identity", "units": "degrees north"},
+    "longitude_deg": {"source": "target cell static coordinate", "grid": "target", "hour": "static", "formula": "identity", "units": "degrees east"},
+    "lead_hours": {"source": "product metadata", "grid": "case scalar", "hour": "forecast-time known", "formula": "24, 48 or 72", "units": "h"}
+  },
+  "regime_derived_definitions": {
+    "pwat_area_mean": {"source": "PWAT", "formula": "cos(latitude)-weighted context-area mean", "units": "kg/m2"},
+    "q700_area_mean": {"source": "Q700", "formula": "cos(latitude)-weighted context-area mean", "units": "kg/kg"},
+    "u850_area_mean": {"source": "U850", "formula": "cos(latitude)-weighted context-area mean", "units": "m/s"},
+    "v850_area_mean": {"source": "V850", "formula": "cos(latitude)-weighted context-area mean", "units": "m/s"},
+    "wind_speed_area_mean": {"source": "U850,V850", "formula": "cos(latitude)-weighted mean of hypot(U850,V850)", "units": "m/s"},
+    "moisture_transport_area_mean": {"source": "PWAT,U850,V850", "formula": "cos(latitude)-weighted mean of PWAT*hypot(U850,V850)", "units": "kg/m/s"},
+    "mslp_area_mean": {"source": "MSLP", "formula": "cos(latitude)-weighted context-area mean", "units": "Pa"},
+    "mslp_minimum": {"source": "MSLP", "formula": "context minimum", "units": "Pa"},
+    "mslp_range": {"source": "MSLP", "formula": "context maximum minus minimum", "units": "Pa"},
+    "z500_area_mean": {"source": "Z500", "formula": "cos(latitude)-weighted context-area mean", "units": "gpm"},
+    "relative_vorticity_area_mean": {"source": "U850,V850", "formula": "cos(latitude)-weighted mean of spherical dv/dx-du/dy", "units": "s^-1"},
+    "relative_vorticity_p90": {"source": "U850,V850", "formula": "context 90th percentile of spherical dv/dx-du/dy", "units": "s^-1"}
+  },
+  "ordered_regime_features": ["pwat_area_mean", "q700_area_mean", "u850_area_mean", "v850_area_mean", "wind_speed_area_mean", "moisture_transport_area_mean", "mslp_area_mean", "mslp_minimum", "mslp_range", "z500_area_mean", "relative_vorticity_area_mean", "relative_vorticity_p90"],
+  "ordered_deterministic_features": ["raw_c00_rain_mm", "forecast_u850", "forecast_v850", "forecast_q700", "forecast_z500", "forecast_mslp", "forecast_pwat", "pwat_area_mean", "q700_area_mean", "u850_area_mean", "v850_area_mean", "wind_speed_area_mean", "moisture_transport_area_mean", "mslp_area_mean", "mslp_minimum", "mslp_range", "z500_area_mean", "relative_vorticity_area_mean", "relative_vorticity_p90", "latitude_deg", "longitude_deg", "lead_hours"],
+  "probability_only_definitions": {
+    "frozen_m2_corrected_mm": {"source": "future operational M2 out-of-fold or frozen prior model prediction", "hour": "forecast-time", "formula": "deterministic correction from model frozen before target-year evaluation; training leakage prevented by cross-fit", "units": "mm/24h"},
+    "regime_p_active": {"source": "forecast-only regime classifier", "hour": "forecast-time", "formula": "P(ACTIVE_MONSOON)", "units": "probability [0,1]"},
+    "regime_p_break_weak": {"source": "forecast-only regime classifier", "hour": "forecast-time", "formula": "P(BREAK_WEAK_MONSOON)", "units": "probability [0,1]"},
+    "regime_p_low_depression": {"source": "forecast-only regime classifier", "hour": "forecast-time", "formula": "P(LOW_DEPRESSION_INFLUENCED)", "units": "probability [0,1]"}
+  },
+  "ordered_probability_features": ["raw_c00_rain_mm", "forecast_u850", "forecast_v850", "forecast_q700", "forecast_z500", "forecast_mslp", "forecast_pwat", "pwat_area_mean", "q700_area_mean", "u850_area_mean", "v850_area_mean", "wind_speed_area_mean", "moisture_transport_area_mean", "mslp_area_mean", "mslp_minimum", "mslp_range", "z500_area_mean", "relative_vorticity_area_mean", "relative_vorticity_p90", "latitude_deg", "longitude_deg", "lead_hours", "frozen_m2_corrected_mm", "regime_p_active", "regime_p_break_weak", "regime_p_low_depression"],
+  "leakage_warning": "M2 predictions used as 2023 probability-training features require an out-of-fold temporal/spatial cross-fit plan frozen before future training; in-sample M2 predictions are prohibited. No operational probability model is authorized for fit by this protocol alone."
+}

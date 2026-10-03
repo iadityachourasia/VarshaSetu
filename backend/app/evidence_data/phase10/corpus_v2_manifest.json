@@ -1,0 +1,102 @@
+{
+  "counts": {
+    "by_year": {
+      "2021": {
+        "atmospheric_qc_pass": 375,
+        "control_rainfall_qc_pass": 179,
+        "deterministic_source_eligible": 179,
+        "full_five_member_rainfall_qc_pass": 59,
+        "scheduled_cases": 375,
+        "status": "COMPLETE"
+      },
+      "2022": {
+        "atmospheric_qc_pass": 375,
+        "control_rainfall_qc_pass": 173,
+        "deterministic_source_eligible": 173,
+        "full_five_member_rainfall_qc_pass": 51,
+        "scheduled_cases": 375,
+        "status": "COMPLETE"
+      }
+    },
+    "hash_verified_messages": 24500,
+    "metadata_valid_messages": 24500,
+    "planned_messages": 24500,
+    "scheduled_cases": 750,
+    "scheduled_initializations": 250,
+    "verified_payload_bytes": 7110741985
+  },
+  "dataset_identifier": "operational_gefs_imd_2021_2022_v2",
+  "files": {
+    "corpus_v2_feature_contract.json": {
+      "bytes": 6664,
+      "sha256": "100894f11b677b1de20869d7a741ed16d770d2f4dbff415084fe9888a393842f"
+    },
+    "corpus_v2_holdout_seal_audit.json": {
+      "bytes": 242,
+      "sha256": "4add8a682c2dd8da126e28753fc16ac8a1937e993c759bc2d39f98e907f2c706"
+    },
+    "corpus_v2_imd_2021_manifest.json": {
+      "bytes": 1278,
+      "sha256": "a3a729f84251b161edebb0b4b5f0658e8515dbb85fbc7d5531b6501c0b450699"
+    },
+    "corpus_v2_imd_2022_manifest.json": {
+      "bytes": 1277,
+      "sha256": "61cb01e2970d9e5238a995a565cd6ba3f1bf92f0d1ba00f2ec12a860e5770704"
+    },
+    "corpus_v2_inventory_cross_year_compatibility.json": {
+      "bytes": 21083,
+      "sha256": "64e55d1ec21c69222e39e6f6d9ad0e40a1e459f94076643514b937b670a3021b"
+    },
+    "corpus_v2_inventory_size_estimates.json": {
+      "bytes": 869,
+      "sha256": "d15a0ceac23c6dbb5d57cd09e3494904bdbebc78549b8847a22c27fb62ef4841"
+    },
+    "corpus_v2_payload_corpus_summary.json": {
+      "bytes": 6404,
+      "sha256": "080c712b47ac2c905f2b849e2e182f0875eb1e5b1656ce55191cce3eb2afda19"
+    },
+    "corpus_v2_payload_cross_year_compatibility.json": {
+      "bytes": 368,
+      "sha256": "7d98f91f18b99593574d5f38d52e5f856ff4878d4567027b6a1efcb2e1b00479"
+    },
+    "corpus_v2_payload_pinned_constants.json": {
+      "bytes": 588,
+      "sha256": "f4edfec12b98a94cd7a03aa5e7dcdff7efa7e614ba1b2fb70d978881c62eaf0e"
+    },
+    "corpus_v2_payload_year_report_2021.json": {
+      "bytes": 55233,
+      "sha256": "72830993adaaaab4f3fcd5b66f79a91ec443231c9a2228ba7744ee0e91f8e9e7"
+    },
+    "corpus_v2_payload_year_report_2022.json": {
+      "bytes": 57345,
+      "sha256": "b06851c8da387ec990592d6c2e63a193b46061c460c088973f0fa963ad58cb2d"
+    },
+    "corpus_v2_protocol.json": {
+      "bytes": 14806,
+      "sha256": "a3b1561618b1f41da2cb8fcd3cc7b6284c9c02773169d645a3f41c54612f0464"
+    }
+  },
+  "heavy_artifact_hashes": {
+    "acquisition_manifest_sha256": "eb81e78f7b08e7194cef0795b5eabf1821a0cb247bc60b938a9a970838d560db",
+    "experiment_manifest_sha256": "5e304668fde57931da54e31b81853e80d79ecde1cae77d2ff5d0270f553d48d6",
+    "inventory_closed_set_manifest_sha256": "a8fc1300bf3f3cc7d2651458977c2594a3010cace30dd551117dce46ed0647b4",
+    "source_manifest_2021_sha256": "25907de3604bca1cb22e0b358371d736423fcbc5cce6381cf60b50ce79cf4436",
+    "source_manifest_2022_sha256": "27301da0a0ac1869d7331e520ad9501ec92f232a3d16d147c4fb7ba85b10d3d8"
+  },
+  "protocol_sha256": "a3b1561618b1f41da2cb8fcd3cc7b6284c9c02773169d645a3f41c54612f0464",
+  "protocol_sidecar_sha256": "a3b1561618b1f41da2cb8fcd3cc7b6284c9c02773169d645a3f41c54612f0464",
+  "schema": "corpus-v2-evidence-manifest-v1",
+  "scope": "governing records only; the heavy raw GRIB messages, indexes and QC arrays stay local (gitignored) and are covered by the hashes above",
+  "sealing": {
+    "2022_imd_rainfall_values_read": false,
+    "note": "Only forecast-side source and QC records exist for 2022; the observation file's header and dates were checked, its values were not read.",
+    "scoring_authorized": false
+  },
+  "year_roles": {
+    "2021": "DEVELOPMENT: unused by any earlier protocol; may be used for training or validation under a later frozen protocol",
+    "2022": "SEALED INDEPENDENT TEST: forecast-side acquisition and forecast-only QC permitted; IMD values, events and scores forbidden until unseal",
+    "decision_record": "Year roles were proposed in docs/124 and docs/127 (2022 sealed as the only independent test) and the project owner instructed 'continue Acquire 2021-2022 data' on 2026-10-02 without changing them. The owner may revise the roles, but only before any 2022 IMD value is read; after that the roles are fixed.",
+    "relation_to_v1": "2023 (train), 2024 (validation/selection, reused) and 2025 (consumed final test) belong to corpus v1 and are not re-labelled by this protocol",
+    "status": "conditional on the all-year raw-source compatibility inventory; any material discontinuity requires a versioned protocol revision before payloads/training"
+  }
+}

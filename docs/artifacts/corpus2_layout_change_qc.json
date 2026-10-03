@@ -1,0 +1,178 @@
+{
+  "boundary_date": "20210721",
+  "before": {
+    "cases": 150,
+    "pass": {
+      "c00": 61,
+      "p01": 87,
+      "p02": 85,
+      "p03": 90,
+      "p04": 90
+    },
+    "top_failure_reasons": [
+      [
+        "negative difference exceeds pa",
+        337
+      ]
+    ]
+  },
+  "on_or_after": {
+    "cases": 225,
+    "pass": {
+      "c00": 118,
+      "p01": 149,
+      "p02": 158,
+      "p03": 157,
+      "p04": 161
+    },
+    "top_failure_reasons": [
+      [
+        "negative difference exceeds pa",
+        382
+      ]
+    ]
+  },
+  "fisher_exact": {
+    "c00": {
+      "table_pass_fail_before_after": [
+        [
+          61,
+          89
+        ],
+        [
+          118,
+          107
+        ]
+      ],
+      "pass_rate_before": 0.407,
+      "pass_rate_after": 0.524,
+      "p_value": 0.0271
+    },
+    "p01": {
+      "table_pass_fail_before_after": [
+        [
+          87,
+          63
+        ],
+        [
+          149,
+          76
+        ]
+      ],
+      "pass_rate_before": 0.58,
+      "pass_rate_after": 0.662,
+      "p_value": 0.1265
+    },
+    "p02": {
+      "table_pass_fail_before_after": [
+        [
+          85,
+          65
+        ],
+        [
+          158,
+          67
+        ]
+      ],
+      "pass_rate_before": 0.567,
+      "pass_rate_after": 0.702,
+      "p_value": 0.0081
+    },
+    "p03": {
+      "table_pass_fail_before_after": [
+        [
+          90,
+          60
+        ],
+        [
+          157,
+          68
+        ]
+      ],
+      "pass_rate_before": 0.6,
+      "pass_rate_after": 0.698,
+      "p_value": 0.0588
+    },
+    "p04": {
+      "table_pass_fail_before_after": [
+        [
+          90,
+          60
+        ],
+        [
+          161,
+          64
+        ]
+      ],
+      "pass_rate_before": 0.6,
+      "pass_rate_after": 0.716,
+      "p_value": 0.0249
+    }
+  },
+  "seasonal_control_2022_same_calendar_split": {
+    "before_jul21": {
+      "cases": 150,
+      "pass": {
+        "c00": 69,
+        "p01": 83,
+        "p02": 89,
+        "p03": 89,
+        "p04": 102
+      },
+      "top_failure_reasons": [
+        [
+          "negative difference exceeds pa",
+          318
+        ]
+      ]
+    },
+    "on_or_after_jul21": {
+      "cases": 225,
+      "pass": {
+        "c00": 104,
+        "p01": 162,
+        "p02": 148,
+        "p03": 146,
+        "p04": 144
+      },
+      "top_failure_reasons": [
+        [
+          "negative difference exceeds pa",
+          421
+        ]
+      ]
+    },
+    "pass_rate_c00": {
+      "before": 0.46,
+      "after": 0.462
+    },
+    "fisher_exact_by_member": {
+      "c00": {
+        "pass_rate_before": 0.46,
+        "pass_rate_after": 0.462,
+        "p_value": 1.0
+      },
+      "p01": {
+        "pass_rate_before": 0.553,
+        "pass_rate_after": 0.72,
+        "p_value": 0.0013
+      },
+      "p02": {
+        "pass_rate_before": 0.593,
+        "pass_rate_after": 0.658,
+        "p_value": 0.2296
+      },
+      "p03": {
+        "pass_rate_before": 0.593,
+        "pass_rate_after": 0.649,
+        "p_value": 0.2785
+      },
+      "p04": {
+        "pass_rate_before": 0.68,
+        "pass_rate_after": 0.64,
+        "p_value": 0.4395
+      }
+    }
+  },
+  "scope": "forecast-side QC flags only; 2021 is a development year and 2022 is the sealed test year (only forecast-side QC flags are read, no observation, model or score); correlation in time, not a cause"
+}

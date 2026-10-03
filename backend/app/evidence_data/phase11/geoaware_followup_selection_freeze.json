@@ -1,0 +1,1996 @@
+{
+  "all_configurations": [
+    {
+      "arm": "B0",
+      "grid_index": 0,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.902751388272847,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 1,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.907685837759791,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 2,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.943943636093962,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 3,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.060485894745664,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 4,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.745014458995254,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 5,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.965644036707248,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 6,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.439117496453155,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 7,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.473934983916703,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 8,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.780734133971954,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 9,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.829689693502562,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 10,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.753097126675208,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 11,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.864034995942461,
+      "weights": "none"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 12,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.943997967764549,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 13,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.964143412595234,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 14,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.773929478307135,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0",
+      "grid_index": 15,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.900882911561297,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 0,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.682345515772598,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 1,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.738449541956186,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 2,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.634043019995634,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 3,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.727555225171393,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 4,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.406463185230256,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 5,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.49157453587572,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 6,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.23323649845591,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 7,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.311133865802132,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 8,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.559494407692213,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 9,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.58151012681187,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 10,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.495495344284862,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 11,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.622574565573577,
+      "weights": "none"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 12,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.848183494320365,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 13,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.8390244378396,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 14,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.574604293041409,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1",
+      "grid_index": 15,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.587952342790325,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 0,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.989723169180603,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 1,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.193352014976332,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 2,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.090980062948912,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 3,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.321522063908198,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 4,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 16.06822159746809,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 5,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 16.26510162130039,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 6,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.901804438950396,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 7,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 16.078480700008495,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 8,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.89591179301083,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 9,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.920567490674621,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 10,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.831079905194864,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 11,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": false,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.971713713468327,
+      "weights": "none"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 12,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.183626350022545,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 13,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.17881933909104,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 14,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.901832659605338,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B0Z",
+      "grid_index": 15,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.979382840092374,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 0,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.739310058955697,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 1,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.843090561358636,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 2,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.850887025531028,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 3,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.045778862256835,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 4,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.687429333486556,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 5,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.831824360518123,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 6,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.545842887938234,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 7,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:squarederror",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.70035110592279,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 8,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.620241264492007,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 9,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.652960923050271,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 10,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.577281907756591,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 11,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": false,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.650773605468622,
+      "weights": "none"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 12,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 15.010991551464373,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 13,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 4,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.99260444388446,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 14,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": false,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 200,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.671529364788539,
+      "weights": "capped_event"
+    },
+    {
+      "arm": "B1Z",
+      "grid_index": 15,
+      "guardrails_by_year": {
+        "2021": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2023": {
+          "G1": true,
+          "G2": true,
+          "G3": false,
+          "G4": true
+        },
+        "2024": {
+          "G1": true,
+          "G2": true,
+          "G3": true,
+          "G4": true
+        }
+      },
+      "max_depth": 6,
+      "n_estimators": 350,
+      "objective": "reg:tweedie",
+      "passes_in_every_year": false,
+      "pooled_rmse_mm": 14.675416254914678,
+      "weights": "capped_event"
+    }
+  ],
+  "builder_sha256": {
+    "pure_functions": "761901d2775f375b9c480ec1ba8294f128e595cf218a1c6cca1d1fafb3c64199",
+    "train_script": "b35fadfdf1410c923f72bd57a7d64ca7e59dd2040d0cd080c7ee14c81a479198"
+  },
+  "development": {
+    "cases": {
+      "2021": 179,
+      "2023": 200,
+      "2024": 183
+    },
+    "input_sha256": {
+      "2021": {
+        "X.npy": "a7501c90eb3d6b1799c03e628cf3004a5eba2ada65ca069a1980257a6250733d",
+        "cases.json": "71ae8a6f1a2430cc02aba21abdaac2f88b741c1e35aaf870fd27563bf901e84a",
+        "pixel_index.npy": "ab54532507387dab38fac24b07e4d357ac02dd14e6d9fef6cd86261fa80e7c01",
+        "y_mm.npy": "475d649b2c755267fa6706a557294e062e14175586a10aae2d0943840a5b1377"
+      },
+      "2023": {
+        "X.npy": "8716ec75c04dce7e8bb432926203e24876e710a3ba6d0a7d8f63da4c0699ff47",
+        "cases.json": "54d2ae6e37beb610b48e467885b3e3803d1d9330d7c7d2d9047621ada0abf253",
+        "pixel_index.npy": "bdb302277c00bc1c402df72395a6dc3e5f47d4f704d00dbc486cca027cd6dfcd",
+        "y_mm.npy": "3e826b161286f53ea69760c5bff3d896a7f89b8be527abdc81eddc4e133a89da"
+      },
+      "2024": {
+        "X.npy": "04195f8f87bb9ca38cb8b0286918d23c712b1b39675727f1df46529f771fdb53",
+        "cases.json": "6465230b6a1ad5a6ae8ced447ae0cb89f67af1231aa935e8927c3ec9828b4dba",
+        "pixel_index.npy": "63bcb3ea2fc2d481b793f780400018f8d4c4ca32c1abdf1a450c82e52613bbab",
+        "y_mm.npy": "d11568e5cf17277c0edcf9d96df731faa2465a216321d9b74973a813a1aeab40"
+      }
+    },
+    "raw_heavy_csi_by_year": {
+      "2021": 0.054931071049840935,
+      "2023": 0.06844567665915786,
+      "2024": 0.0746662958843159
+    },
+    "rows": 731162,
+    "years": [
+      2021,
+      2023,
+      2024
+    ]
+  },
+  "libraries": {
+    "numpy": "2.2.6",
+    "xgboost": "3.0.4"
+  },
+  "note": "Written before any 2022 value is opened. A change to anything here needs a new protocol version.",
+  "protocol_sha256": "2244e0c75abbafb216adaeca4c16be342ca3210ed58ca2b4a695b67863700e10",
+  "schema": "geoaware-followup-selection-freeze-v1",
+  "sealed_test": {
+    "note": "no 2022 feature, target or observation was read; unsealing needs a separate signed owner record",
+    "opened": false,
+    "year": 2022
+  },
+  "selection": {
+    "B0": {
+      "reason": "no configuration passed G1 to G4 in every held-out year",
+      "selected": null
+    },
+    "B0Z": {
+      "reason": "no configuration passed G1 to G4 in every held-out year",
+      "selected": null
+    },
+    "B1": {
+      "reason": "no configuration passed G1 to G4 in every held-out year",
+      "selected": null
+    },
+    "B1Z": {
+      "reason": "no configuration passed G1 to G4 in every held-out year",
+      "selected": null
+    }
+  }
+}

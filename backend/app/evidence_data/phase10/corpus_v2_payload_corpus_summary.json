@@ -1,0 +1,235 @@
+{
+  "acquisition_manifest_sha256": "eb81e78f7b08e7194cef0795b5eabf1821a0cb247bc60b938a9a970838d560db",
+  "hash_verified_messages": 24500,
+  "holdout_status": "2022 forecast-only source/QC; no IMD values, models or performance",
+  "metadata_valid_messages": 24500,
+  "payload_structure_compatible": true,
+  "planned_bytes": 7110741985,
+  "planned_messages": 24500,
+  "protocol_sha256": "a3b1561618b1f41da2cb8fcd3cc7b6284c9c02773169d645a3f41c54612f0464",
+  "scheduled_cases": 750,
+  "scheduled_initializations": 250,
+  "source_qc_by_year": {
+    "2021": {
+      "atmospheric_qc_pass": 375,
+      "by_lead": {
+        "day1_24h": {
+          "atmospheric_qc_pass": 125,
+          "deterministic_source_eligible": 47,
+          "ensemble_source_eligible": 7,
+          "full_five_member_rainfall_qc_pass": 7,
+          "probability_source_eligible": 47,
+          "rainfall_by_member": {
+            "c00": {
+              "fail": 78,
+              "pass": 47
+            },
+            "p01": {
+              "fail": 67,
+              "pass": 58
+            },
+            "p02": {
+              "fail": 61,
+              "pass": 64
+            },
+            "p03": {
+              "fail": 61,
+              "pass": 64
+            },
+            "p04": {
+              "fail": 61,
+              "pass": 64
+            }
+          },
+          "regime_source_eligible": 125,
+          "scheduled": 125,
+          "source_complete": 125
+        },
+        "day2_24h": {
+          "atmospheric_qc_pass": 125,
+          "deterministic_source_eligible": 60,
+          "ensemble_source_eligible": 21,
+          "full_five_member_rainfall_qc_pass": 21,
+          "probability_source_eligible": 60,
+          "rainfall_by_member": {
+            "c00": {
+              "fail": 65,
+              "pass": 60
+            },
+            "p01": {
+              "fail": 42,
+              "pass": 83
+            },
+            "p02": {
+              "fail": 37,
+              "pass": 88
+            },
+            "p03": {
+              "fail": 35,
+              "pass": 90
+            },
+            "p04": {
+              "fail": 33,
+              "pass": 92
+            }
+          },
+          "regime_source_eligible": 125,
+          "scheduled": 125,
+          "source_complete": 125
+        },
+        "day3_24h": {
+          "atmospheric_qc_pass": 125,
+          "deterministic_source_eligible": 72,
+          "ensemble_source_eligible": 31,
+          "full_five_member_rainfall_qc_pass": 31,
+          "probability_source_eligible": 72,
+          "rainfall_by_member": {
+            "c00": {
+              "fail": 53,
+              "pass": 72
+            },
+            "p01": {
+              "fail": 30,
+              "pass": 95
+            },
+            "p02": {
+              "fail": 34,
+              "pass": 91
+            },
+            "p03": {
+              "fail": 32,
+              "pass": 93
+            },
+            "p04": {
+              "fail": 30,
+              "pass": 95
+            }
+          },
+          "regime_source_eligible": 125,
+          "scheduled": 125,
+          "source_complete": 125
+        }
+      },
+      "control_rainfall_qc_pass": 179,
+      "deterministic_source_eligible": 179,
+      "ensemble_source_eligible": 59,
+      "full_five_member_rainfall_qc_pass": 59,
+      "probability_source_eligible": 179,
+      "regime_source_eligible": 375,
+      "scheduled_cases": 375
+    },
+    "2022": {
+      "atmospheric_qc_pass": 375,
+      "by_lead": {
+        "day1_24h": {
+          "atmospheric_qc_pass": 125,
+          "deterministic_source_eligible": 54,
+          "ensemble_source_eligible": 2,
+          "full_five_member_rainfall_qc_pass": 2,
+          "probability_source_eligible": 54,
+          "rainfall_by_member": {
+            "c00": {
+              "fail": 71,
+              "pass": 54
+            },
+            "p01": {
+              "fail": 61,
+              "pass": 64
+            },
+            "p02": {
+              "fail": 66,
+              "pass": 59
+            },
+            "p03": {
+              "fail": 62,
+              "pass": 63
+            },
+            "p04": {
+              "fail": 59,
+              "pass": 66
+            }
+          },
+          "regime_source_eligible": 125,
+          "scheduled": 125,
+          "source_complete": 125
+        },
+        "day2_24h": {
+          "atmospheric_qc_pass": 125,
+          "deterministic_source_eligible": 48,
+          "ensemble_source_eligible": 19,
+          "full_five_member_rainfall_qc_pass": 19,
+          "probability_source_eligible": 48,
+          "rainfall_by_member": {
+            "c00": {
+              "fail": 77,
+              "pass": 48
+            },
+            "p01": {
+              "fail": 32,
+              "pass": 93
+            },
+            "p02": {
+              "fail": 40,
+              "pass": 85
+            },
+            "p03": {
+              "fail": 44,
+              "pass": 81
+            },
+            "p04": {
+              "fail": 36,
+              "pass": 89
+            }
+          },
+          "regime_source_eligible": 125,
+          "scheduled": 125,
+          "source_complete": 125
+        },
+        "day3_24h": {
+          "atmospheric_qc_pass": 125,
+          "deterministic_source_eligible": 71,
+          "ensemble_source_eligible": 30,
+          "full_five_member_rainfall_qc_pass": 30,
+          "probability_source_eligible": 71,
+          "rainfall_by_member": {
+            "c00": {
+              "fail": 54,
+              "pass": 71
+            },
+            "p01": {
+              "fail": 37,
+              "pass": 88
+            },
+            "p02": {
+              "fail": 32,
+              "pass": 93
+            },
+            "p03": {
+              "fail": 34,
+              "pass": 91
+            },
+            "p04": {
+              "fail": 34,
+              "pass": 91
+            }
+          },
+          "regime_source_eligible": 125,
+          "scheduled": 125,
+          "source_complete": 125
+        }
+      },
+      "control_rainfall_qc_pass": 173,
+      "deterministic_source_eligible": 173,
+      "ensemble_source_eligible": 51,
+      "full_five_member_rainfall_qc_pass": 51,
+      "probability_source_eligible": 173,
+      "regime_source_eligible": 375,
+      "scheduled_cases": 375
+    }
+  },
+  "verified_payload_bytes": 7110741985,
+  "year_statuses": {
+    "2021": "COMPLETE",
+    "2022": "COMPLETE"
+  }
+}
