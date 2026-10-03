@@ -1,4 +1,8 @@
 import { expect, test } from "@playwright/test";
+import { COMPLIANCE_PAGE } from "./helpers/features";
+
+// The presentation has one scene fewer while the requirement-coverage page (and its summary scene) is hidden.
+const SCENES = COMPLIANCE_PAGE ? 15 : 14;
 
 // Phase 5A.3, sections 39-53 (Story Mode) and 34-38 (Provenance DAG,
 // Holdout Governance, Limitations panel); scene order/titles updated in
@@ -20,7 +24,7 @@ test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
   expect(geometry).toMatchObject({ left: 0, top: 0, width: geometry.viewportWidth, height: geometry.viewportHeight });
   await expect(dialog.locator(".story-identity")).toContainText("VarshaSetu");
   await expect(page.locator(".app-shell")).toHaveAttribute("inert", "");
-  await expect(page.getByText("Scene 1 of 15")).toBeVisible();
+  await expect(page.getByText(`Scene 1 of ${SCENES}`)).toBeVisible();
   await expect(page.getByRole("heading", { name: "The Problem" })).toBeVisible();
 
   await page.getByRole("button", { name: "Next →" }).click();
@@ -43,11 +47,11 @@ test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
 
   // Re-enter: must start fresh at scene 1, not resume where it left off.
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();
-  await expect(page.getByText("Scene 1 of 15")).toBeVisible();
+  await expect(page.getByText(`Scene 1 of ${SCENES}`)).toBeVisible();
 
   // Walk to the last scene and confirm the closing content + Exit control.
-  for (let i = 0; i < 14; i++) await page.keyboard.press("ArrowRight");
-  await expect(page.getByText("Scene 15 of 15")).toBeVisible();
+  for (let i = 0; i < SCENES - 1; i++) await page.keyboard.press("ArrowRight");
+  await expect(page.getByText(`Scene ${SCENES} of ${SCENES}`)).toBeVisible();
   await expect(page.getByRole("heading", { name: "Reproducibility" })).toBeVisible();
   await expect(page.getByText("Research prototype for scientifically transparent")).toBeVisible();
   await page.getByRole("button", { name: "Exit", exact: true }).last().click();
@@ -151,17 +155,31 @@ test("Story Mode: the coverage, regime and reforecast scenes show the values of 
   await goTo("Sealed Reforecast Years");
   await expect(dialog).toContainText(`${(confirmation.payload.pooled.M0.rmse_mm as number).toFixed(2)} → ${(confirmation.payload.pooled.B1_shifted.rmse_mm as number).toFixed(2)}`);
   await expect(dialog).toContainText(confirmation.payload.bundle_decision.decision.tier);
-  await goTo("Requirement Coverage");
-  await expect(dialog).toContainText(`${coverage.counts.IMPLEMENTED} of ${total}`);
-  await expect(dialog).toContainText(`${coverage.mandatory_counts.IMPLEMENTED} of ${mandatory}`);
+  if (COMPLIANCE_PAGE) {
+    await goTo("Requirement Coverage");
+    await expect(dialog).toContainText(`${coverage.counts.IMPLEMENTED} of ${total}`);
+    await expect(dialog).toContainText(`${coverage.mandatory_counts.IMPLEMENTED} of ${mandatory}`);
+  }
 });
 
 test("Story Mode: the scene list jumps to a scene and marks the current one", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();
   const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
-  await dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Requirement Coverage/ }).click();
-  await expect(dialog.getByRole("heading", { name: "Requirement Coverage" })).toBeVisible();
-  await expect(dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Requirement Coverage/ })).toHaveAttribute("aria-current", "step");
-  await expect(dialog.getByText("Scene 13 of 15")).toBeVisible();
+  await dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Sealed Reforecast Years/ }).click();
+  await expect(dialog.getByRole("heading", { name: "Sealed Reforecast Years" })).toBeVisible();
+  await expect(dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Sealed Reforecast Years/ })).toHaveAttribute("aria-current", "step");
+  await expect(dialog.getByText(`Scene 11 of ${SCENES}`)).toBeVisible();
+});
+
+test("while hidden, the requirement-coverage page is not linked, not served and not in the presentation", async ({ page }) => {
+  test.skip(COMPLIANCE_PAGE, "the page is shown in this build");
+  await page.goto("/live");
+  await expect(page.getByRole("navigation", { name: "Primary" }).getByRole("link", { name: "SIH26080 Compliance" })).toHaveCount(0);
+  expect((await page.goto("/compliance"))?.status()).toBe(404);
+  await page.goto("/");
+  await page.getByRole("button", { name: "Present VarshaSetu" }).click();
+  const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
+  await expect(dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Requirement Coverage/ })).toHaveCount(0);
+  await expect(dialog.getByText(`Scene 1 of ${SCENES}`)).toBeVisible();
 });

@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getScience, modelComparisonSchema } from "@/lib/api/science";
 import { getPsCoverage } from "@/lib/api/evidence";
+import { SHOW_COMPLIANCE_PAGE } from "@/lib/features";
 import { getR03Result, getR05Confirmation, getR05Result } from "@/lib/api/reforecast";
 import { buildStoryFacts, count, mm, rmseChange, score3, signedScore, type ReforecastRound, type StoryFacts } from "@/lib/story-facts";
 import { final2025 } from "@/science/frozen/results";
@@ -33,7 +34,7 @@ function Round({ title, round }: { title: string; round: ReforecastRound }) {
 }
 
 function buildScenes(facts: StoryFacts): Scene[] {
-  return [
+  const scenes: Scene[] = [
     { chapter: "Context", title: "The Problem", lead: "Raw numerical forecasts of monsoon rain carry systematic errors.", body: <>
       <p>VarshaSetu studies whether regime-aware, forecast-time post-processing can reduce that error without inventing new observations, and reports honestly where it does not.</p>
       <Caveat>A research prototype on historical data, not an operational service and not an official warning.</Caveat>
@@ -103,6 +104,7 @@ function buildScenes(facts: StoryFacts): Scene[] {
       <p className="story-closing"><strong>VarshaSetu</strong><br />Research prototype for scientifically transparent monsoon forecast post-processing.</p>
     </> },
   ];
+  return SHOW_COMPLIANCE_PAGE ? scenes : scenes.filter((scene) => scene.title !== "Requirement Coverage");
 }
 
 const EMPTY_FACTS: StoryFacts = { benchmark2019: null, final2025: null, probability2025: null, quality: null, coverage: null, regimeTasks: null, reforecast: null };
@@ -116,7 +118,7 @@ export function StoryMode({ onClose }: { onClose: () => void }) {
   const stale = { staleTime: 5 * 60_000, retry: 1 } as const;
   // 2019 comes from the verified API; 2025 and data quality come from the generated frozen presentation bundle; the newer scenes read their own verified endpoints.
   const comparison = useQuery({ queryKey: ["story-model-comparison"], queryFn: () => getScience("/model-comparison", modelComparisonSchema), ...stale });
-  const coverage = useQuery({ queryKey: ["story-coverage"], queryFn: () => getPsCoverage(), ...stale });
+  const coverage = useQuery({ queryKey: ["story-coverage"], queryFn: () => getPsCoverage(), enabled: SHOW_COMPLIANCE_PAGE, ...stale });
   const r03 = useQuery({ queryKey: ["story-r03"], queryFn: () => getR03Result(), ...stale });
   const r05 = useQuery({ queryKey: ["story-r05"], queryFn: () => getR05Result(), ...stale });
   const confirmation = useQuery({ queryKey: ["story-r05-confirmation"], queryFn: () => getR05Confirmation(), ...stale });

@@ -16,7 +16,7 @@ for (const path of ["/verification", "/regimes"]) {
 }
 
 test("the evidence tables are not trapped in a nested scroll box (only the district product table scrolls inside itself)", async ({ page }) => {
-  await page.goto("/compliance");
+  await page.goto("/regimes");
   await expect(page.getByRole("table").first()).toBeVisible();
   const clipped = await page.locator(".district-table-wrap").evaluateAll((boxes) => boxes.filter((box) => box.scrollHeight > box.clientHeight + 1).length);
   expect(clipped).toBe(0);

@@ -39,6 +39,10 @@ Final state after the reforecast study, the decision to keep the maps on the val
 - Stale assertions from earlier work packages were corrected (a coastal protocol test that expected only zone facts, a Vitest test that expected two planned rows); a copy-guard test that pins the Verification subtitle was respected, not edited.
 - Standing rules held: IMD files stayed local with only aggregates tracked (the IMD-derived pair caches and the 1.6 GB reforecast cache are gitignored); consumed holdouts (2019, 2022, 2025) carry their post-hoc labels; Track A and Track B were never pooled; no manifest text contains a typed number.
 
+## Hidden for now
+
+The requirement-coverage page (`/compliance`) and the presentation scene that summarises it are not shown on the site. Nothing was deleted: the page, its API endpoint (`/api/science/evidence/ps-coverage`), the coverage manifest and its tests remain, and the end-to-end specs for the page are skipped while it is hidden. To show it again, build the frontend with `NEXT_PUBLIC_SHOW_COMPLIANCE_PAGE=1` (a build-time variable, so a rebuild or redeploy is needed) and run the tests with the same variable set.
+
 ## Open owner items
 
 IMD redistribution rights (D2); whether the frozen M1-M4 may be run on 2022 (default no); confirmation to fetch a current NOAA cycle for the live worker (about 9 MB; `plan` shows the exact ranges first); push.

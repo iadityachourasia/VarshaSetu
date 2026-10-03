@@ -1,5 +1,6 @@
 "use client";
 
+import { SHOW_COMPLIANCE_PAGE } from "@/lib/features";
 import { ApiHealth } from "@/components/layout/api-health";
 import Link from "next/link";
 import { StoryMode } from "@/components/story/story-mode";
@@ -29,7 +30,7 @@ const navigation = [
     { href: "/zones", label: "Geographic Zones", icon: Mountain },
     { href: "/geoaware", label: "Geography-Aware Experiment", icon: FlaskConical },
     { href: "/live", label: "Experimental Live Cycle", icon: Radio },
-    { href: "/compliance", label: "SIH26080 Compliance", icon: ClipboardCheck },
+    ...(SHOW_COMPLIANCE_PAGE ? [{ href: "/compliance", label: "SIH26080 Compliance", icon: ClipboardCheck }] : []),
   ] },
 ];
 

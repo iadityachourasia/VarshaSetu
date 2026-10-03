@@ -1,4 +1,7 @@
 import { expect, test } from "@playwright/test";
+import { COMPLIANCE_HIDDEN_REASON, COMPLIANCE_PAGE } from "./helpers/features";
+
+test.skip(!COMPLIANCE_PAGE, COMPLIANCE_HIDDEN_REASON);
 
 // SIH26080 requirement-coverage page against the REAL backend: honest statuses, evidence-resolved values,
 // and every link on the page must lead to a working page (2-3 click reachability for each requirement).

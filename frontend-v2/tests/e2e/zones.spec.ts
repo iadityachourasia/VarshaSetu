@@ -62,7 +62,7 @@ test("the zones page has no horizontal overflow on phone and tablet widths", asy
 });
 
 test("the navigation reaches the zones page", async ({ page }) => {
-  await page.goto("/compliance");
+  await page.goto("/live");
   await page.getByRole("link", { name: "Geographic Zones" }).first().click();
   await expect(page).toHaveURL(/\/zones$/);
 });

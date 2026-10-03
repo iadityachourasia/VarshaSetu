@@ -101,6 +101,7 @@ reproducible.
 2. **Root Directory**: set to `frontend-v2` (this repo has two frontends;
    Vercel must build the Next.js one, not the legacy Vite `frontend/`).
    Framework preset should auto-detect as Next.js.
+<!-- Optional build-time switch: NEXT_PUBLIC_SHOW_COMPLIANCE_PAGE=1 shows the requirement-coverage page (/compliance); it is hidden by default. -->
 3. **Environment Variable**: add `SCIENCE_API_URL` =
    `https://<your-render-url>` (no trailing slash, no `/api` suffix —
    `next.config.ts`'s existing `rewrites()` appends `/api/science/:path*`
