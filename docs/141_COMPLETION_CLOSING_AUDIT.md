@@ -41,7 +41,7 @@ Final state after the reforecast study, the decision to keep the maps on the val
 
 ## Hidden for now
 
-The requirement-coverage page (`/compliance`) and the presentation scene that summarises it are not shown on the site. Nothing was deleted: the page, its API endpoint (`/api/science/evidence/ps-coverage`), the coverage manifest and its tests remain, and the end-to-end specs for the page are skipped while it is hidden. To show it again, build the frontend with `NEXT_PUBLIC_SHOW_COMPLIANCE_PAGE=1` (a build-time variable, so a rebuild or redeploy is needed) and run the tests with the same variable set.
+The requirement-coverage page (`/compliance`) and the presentation scene that summarises it are not shown on the site. Nothing was deleted: the page, the coverage manifest and its tests remain, and the end-to-end specs for the page are skipped while it is hidden. The API endpoint that feeds it (`/api/science/evidence/ps-coverage`) is closed too: unless the backend is started with `SHOW_COVERAGE_API=1` it answers 404 exactly like an unknown path, and it is left out of the API schema. To show everything again, build the frontend with `NEXT_PUBLIC_SHOW_COMPLIANCE_PAGE=1` (a build-time variable, so a redeploy is needed), start the backend with `SHOW_COVERAGE_API=1`, and run the tests with both set. The manifest file itself (`backend/app/evidence_data/phase6/ps_coverage.json`) and `docs/22` stay in the repository, which is public.
 
 ## Open owner items
 

@@ -138,11 +138,12 @@ test("Story Mode shows no number for the 2019 scene when the verified API is unr
 });
 
 test("Story Mode: the coverage, regime and reforecast scenes show the values of their own verified endpoints", async ({ page }) => {
-  const coverage = await (await page.request.get("/api/science/evidence/ps-coverage")).json();
+  // The coverage endpoint is closed unless the page is shown (the backend answers 404), so it is read only in that configuration.
+  const coverage = COMPLIANCE_PAGE ? await (await page.request.get("/api/science/evidence/ps-coverage")).json() : null;
   const r03 = await (await page.request.get("/api/science/evidence/reforecast/r03")).json();
   const confirmation = await (await page.request.get("/api/science/evidence/reforecast/r05-confirmation")).json();
-  const total = Object.values(coverage.counts as Record<string, number>).reduce((a, b) => a + b, 0);
-  const mandatory = Object.values(coverage.mandatory_counts as Record<string, number>).reduce((a, b) => a + b, 0);
+  const total = coverage ? Object.values(coverage.counts as Record<string, number>).reduce((a, b) => a + b, 0) : 0;
+  const mandatory = coverage ? Object.values(coverage.mandatory_counts as Record<string, number>).reduce((a, b) => a + b, 0) : 0;
 
   await page.goto("/");
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();
@@ -155,7 +156,7 @@ test("Story Mode: the coverage, regime and reforecast scenes show the values of 
   await goTo("Sealed Reforecast Years");
   await expect(dialog).toContainText(`${(confirmation.payload.pooled.M0.rmse_mm as number).toFixed(2)} → ${(confirmation.payload.pooled.B1_shifted.rmse_mm as number).toFixed(2)}`);
   await expect(dialog).toContainText(confirmation.payload.bundle_decision.decision.tier);
-  if (COMPLIANCE_PAGE) {
+  if (coverage) {
     await goTo("Requirement Coverage");
     await expect(dialog).toContainText(`${coverage.counts.IMPLEMENTED} of ${total}`);
     await expect(dialog).toContainText(`${coverage.mandatory_counts.IMPLEMENTED} of ${mandatory}`);
@@ -182,4 +183,12 @@ test("while hidden, the requirement-coverage page is not linked, not served and 
   const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
   await expect(dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Requirement Coverage/ })).toHaveCount(0);
   await expect(dialog.getByText(`Scene 1 of ${SCENES}`)).toBeVisible();
+});
+
+test("while hidden, the coverage endpoint answers exactly like an unknown path", async ({ page }) => {
+  test.skip(COMPLIANCE_PAGE, "the coverage endpoint is open in this configuration");
+  const closed = await page.request.get("/api/science/evidence/ps-coverage");
+  const unknown = await page.request.get("/api/science/evidence/no-such-endpoint");
+  expect(closed.status()).toBe(404);
+  expect(await closed.json()).toEqual(await unknown.json());
 });

@@ -27,6 +27,12 @@ def client() -> TestClient:
 
 
 @pytest.fixture(autouse=True)
+def _coverage_api_on(monkeypatch):
+    """These tests exercise the manifest and its resolution; the endpoint is closed by default, and the tests below that cover the closed state switch it off again."""
+    monkeypatch.setenv(evidence.COVERAGE_API_FLAG, "1")
+
+
+@pytest.fixture(autouse=True)
 def _fresh():
     for cache in (evidence._coverage, evidence._manifest, evidence._evidence, evidence._district_manifest, evidence._district_evidence):
         cache.cache_clear()
@@ -234,3 +240,26 @@ def test_official_requirement_statuses_follow_the_mandatory_rows_only():
     assert set(table) == {f"PS-R{n:02d}" for n in range(1, 15)}
     assert all(table[p] == "IMPLEMENTED" for p in table)                                 # PS-R03 through the sealed-year regime verdicts, PS-R05 through the confirmatory test (docs/142)
     assert module.aggregate(["IMPLEMENTED", "PLANNED"]) == "PARTIAL" and module.aggregate(["PLANNED", "PLANNED"]) == "PLANNED"
+
+
+# ---------------------------------------------------------------- the endpoint is closed unless it is switched on
+def test_the_coverage_endpoint_answers_as_an_unknown_path_when_not_switched_on(client, monkeypatch):
+    monkeypatch.delenv(evidence.COVERAGE_API_FLAG, raising=False)
+    closed = client.get("/api/science/evidence/ps-coverage")
+    unknown = client.get("/api/science/evidence/no-such-endpoint")
+    assert closed.status_code == 404 and closed.json() == unknown.json()
+    assert "rows" not in closed.text and "IMPLEMENTED" not in closed.text
+
+
+def test_only_the_exact_value_one_switches_the_endpoint_on(client, monkeypatch):
+    for value in ("", "0", "true", "yes", " 1"):
+        monkeypatch.setenv(evidence.COVERAGE_API_FLAG, value)
+        assert client.get("/api/science/evidence/ps-coverage").status_code == 404, value
+    monkeypatch.setenv(evidence.COVERAGE_API_FLAG, "1")
+    assert client.get("/api/science/evidence/ps-coverage").status_code == 200
+
+
+def test_the_other_evidence_endpoints_are_unaffected_when_it_is_closed(client, monkeypatch):
+    monkeypatch.delenv(evidence.COVERAGE_API_FLAG, raising=False)
+    assert client.get("/api/science/evidence/manifest").status_code == 200
+    assert client.get("/api/science/evidence/reforecast/overview").status_code == 200

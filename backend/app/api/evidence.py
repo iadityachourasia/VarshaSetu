@@ -9,11 +9,12 @@ is refused, so a consumed holdout can never be shown without its post-hoc label.
 from __future__ import annotations
 
 import json
+import os
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, HTTPException, Query
 from fastapi.responses import Response
 from pydantic import BaseModel
 
@@ -630,6 +631,17 @@ def _coverage() -> PsCoverageResponse:
                               counts=counts, mandatory_counts=mandatory, coverage_sha256=sha256_file(COVERAGE_FILE), rows=rows)
 
 
-@router.get("/ps-coverage", response_model=PsCoverageResponse)
+# The requirement-coverage view is not shown for now. The endpoint, its manifest and its tests are kept, but it answers as if it did not exist unless
+# the service is started with SHOW_COVERAGE_API=1 (read on every request, so a test or an operator can switch it without a restart of the process model).
+COVERAGE_API_FLAG = "SHOW_COVERAGE_API"
+
+
+def coverage_api_enabled() -> bool:
+    return os.environ.get(COVERAGE_API_FLAG) == "1"
+
+
+@router.get("/ps-coverage", response_model=PsCoverageResponse, include_in_schema=coverage_api_enabled())
 def ps_coverage() -> PsCoverageResponse:
+    if not coverage_api_enabled():
+        raise HTTPException(status_code=404, detail="Not Found")      # byte-for-byte what an unknown path answers
     return _coverage()

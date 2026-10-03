@@ -65,7 +65,7 @@ def test_legacy_blocked_gate_and_scientific_api_are_unchanged(client):
     if client.get("/api/metrics/overall").status_code == 409:
         assert client.get("/api/metrics/overall").json()["detail"]["status"] == "blocked_by_scientific_readiness_gate"
     assert client.get("/api/health").status_code == 200
-    assert client.get("/api/science/evidence/ps-coverage").status_code == 200
+    assert client.get("/api/science/evidence/manifest").status_code == 200
 
 
 # ------------------------------------------------------------------ CORS

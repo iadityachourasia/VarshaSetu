@@ -90,7 +90,7 @@ constraint and is not a new risk introduced by this freeze phase.
 
 | Route | Data dependency | Classification |
 |---|---|---|
-| `/compliance` | `/api/science/evidence/ps-coverage` (hash-verified manifest; every figure resolved from frozen evidence) | live API, hard failure on integrity errors; planned items shown as planned **Hidden by default** (no navigation link, the route returns 404, and the presentation omits its coverage scene); build with `NEXT_PUBLIC_SHOW_COMPLIANCE_PAGE=1` to show it. |
+| `/compliance` | `/api/science/evidence/ps-coverage` (hash-verified manifest; every figure resolved from frozen evidence) | live API, hard failure on integrity errors; planned items shown as planned **Hidden by default** (no navigation link, the route returns 404, and the presentation omits its coverage scene); build with `NEXT_PUBLIC_SHOW_COMPLIANCE_PAGE=1` and start the backend with `SHOW_COVERAGE_API=1` to show it; until then the endpoint answers 404. |
 | `/zones` | `/api/science/evidence/zones/*` (hash-chain-verified Phase 7 evidence; static SVG map, no tile service) | live API, hard failure on integrity errors; post-hoc years labelled; Stage 3 not authorised |
 | `/geoaware` | `/api/science/evidence/geoaware/{overview,evaluation,followup}` (hash-chain-verified Phase 9 and Phase 11 evidence) | live API, hard failure on integrity errors (a tampered file, a freeze that claims 2022 was already open, a result not labelled as the first-use test, or a record without the owner authorisation); shows the negative first result, the post-hoc-disclosed follow-up and the single independent 2022 test result with its decision intervals (97.5 percent), post-hoc 2025 labelled |
 
