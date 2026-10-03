@@ -22,6 +22,12 @@ try:
     from backend.app.api.evidence import router as evidence_router
     from backend.app.api.zones import router as zones_router
     from backend.app.api.geoaware import router as geoaware_router
+    from backend.app.api.regime_validation import router as regime_validation_router
+    from backend.app.api.coastal_regime import router as coastal_regime_router
+    from backend.app.api.wd_indicator import router as wd_indicator_router
+    from backend.app.api.live import router as live_router
+    from backend.app.api.all_india_raw import router as all_india_raw_router
+    from backend.app.api.reforecast import router as reforecast_router
 except ModuleNotFoundError:
     from app.core.cors import ALLOWED_HEADERS, ALLOWED_METHODS, allowed_origins
     from app.version import API_VERSION, deployed_commit
@@ -31,6 +37,12 @@ except ModuleNotFoundError:
     from app.api.evidence import router as evidence_router
     from app.api.zones import router as zones_router
     from app.api.geoaware import router as geoaware_router
+    from app.api.regime_validation import router as regime_validation_router
+    from app.api.coastal_regime import router as coastal_regime_router
+    from app.api.wd_indicator import router as wd_indicator_router
+    from app.api.live import router as live_router
+    from app.api.all_india_raw import router as all_india_raw_router
+    from app.api.reforecast import router as reforecast_router
 
 def warm_evidence_caches() -> dict[str, str]:
     """Pre-verify and cache the small hash-chained evidence files so the first visitor does not pay for it.
@@ -87,6 +99,12 @@ app.include_router(operational_router, prefix="/api")
 app.include_router(evidence_router, prefix="/api")
 app.include_router(zones_router, prefix="/api")
 app.include_router(geoaware_router, prefix="/api")
+app.include_router(regime_validation_router, prefix="/api")
+app.include_router(coastal_regime_router, prefix="/api")
+app.include_router(wd_indicator_router, prefix="/api")
+app.include_router(live_router, prefix="/api")
+app.include_router(all_india_raw_router, prefix="/api")
+app.include_router(reforecast_router, prefix="/api")
 
 
 @app.exception_handler(HTTPException)

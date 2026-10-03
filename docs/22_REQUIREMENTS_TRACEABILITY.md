@@ -10,9 +10,9 @@ Live view with evidence-resolved figures: the app's `/compliance` page. Do not e
 |---|---|---|---|
 | PS-R01 | Ingest / use raw NWP rainfall | IMPLEMENTED | RAW-NWP |
 | PS-R02 | AI/ML post-processing | IMPLEMENTED | ML-POSTPROCESSING |
-| PS-R03 | Weather-regime classification | PARTIAL | REGIME-CLASSIFIER, REGIME-ACTIVE, REGIME-BREAK, REGIME-LOW, REGIME-COASTAL-OROGRAPHIC, REGIME-WESTERN-DISTURBANCE |
+| PS-R03 | Weather-regime classification | IMPLEMENTED | REGIME-CLASSIFIER, REGIME-ACTIVE, REGIME-BREAK, REGIME-LOW, REGIME-COASTAL-OROGRAPHIC, REGIME-WESTERN-DISTURBANCE |
 | PS-R04 | Regime-conditioned correction | IMPLEMENTED | REGIME-AWARE-CORRECTION |
-| PS-R05 | Demonstrate improvement vs raw NWP | PARTIAL | BIAS-CORRECTED-RAINFALL, IMPROVEMENT-VS-RAW |
+| PS-R05 | Demonstrate improvement vs raw NWP | IMPLEMENTED | BIAS-CORRECTED-RAINFALL, IMPROVEMENT-VS-RAW |
 | PS-R06 | Grid-level rainfall output | IMPLEMENTED | BIAS-CORRECTED-RAINFALL, GRID-PRODUCT |
 | PS-R07 | Heavy-rain exceedance probability | IMPLEMENTED | HEAVY-PROBABILITY, VERY-HEAVY-PROBABILITY |
 | PS-R08 | District-level rainfall table/map | IMPLEMENTED | DISTRICT-PRODUCT, DISTRICT-MAP, DISTRICT-TABLE |
@@ -27,12 +27,12 @@ Additional (non-mandatory) rows:
 
 | Row | Requirement | Status |
 |---|---|---|
-| REGIME-INDEPENDENT-VALIDATION | Independent (expert / bulletin) validation of regime labels | PLANNED |
+| REGIME-INDEPENDENT-VALIDATION | Independent (expert / bulletin) validation of regime labels | PARTIAL |
 | REGIME-WISE-VERIFICATION | Regime-wise and lead-wise verification | IMPLEMENTED |
-| DISTRICT-VERIFICATION | District-level verification | PARTIAL |
-| LIVE-INFERENCE | Live / new-cycle forecast post-processing | PLANNED |
+| DISTRICT-VERIFICATION | District-level verification | IMPLEMENTED |
+| LIVE-INFERENCE | Live / new-cycle forecast post-processing | PARTIAL |
 | SYNOPTIC-OVERLAYS | Synoptic meteorology overlays (wind vectors, geopotential contours, pressure isobars) | IMPLEMENTED |
-| ALL-INDIA-DOMAIN | All-India domain | PLANNED |
+| ALL-INDIA-DOMAIN | All-India domain | PARTIAL |
 
 <!-- GENERATED:PS-COVERAGE:END -->
 

@@ -47,9 +47,9 @@
         "PS-R03"
       ],
       "ps_mandatory": true,
-      "status": "PARTIAL",
-      "summary": "A forecast-only three-class pseudo-regime classifier runs on both tracks; per-case probabilities, regime distributions and regime-stratified verification are shown.",
-      "limitation": "Only three pseudo-label classes exist. Agreement with the labelling rule is not meteorological accuracy, there is no independent expert validation, and the coastal, orographic and western-disturbance regimes named in the problem statement are not classified.",
+      "status": "IMPLEMENTED",
+      "summary": "Forecast-time detection of the active monsoon, break and low/depression states was fitted on the 2000-2011 reforecast control forecasts, selected under a frozen protocol and tested once on the sealed years 2014-2016 against objective labels (IMD core-zone rainfall spells; ERA5 850 hPa vorticity). Each state reached the frozen verdict validated and useful: an area under the ROC curve above the frozen usefulness bar and above a climatology baseline, with intervals. Per-case probabilities and regime-stratified verification remain shown for the three pseudo-regimes that drive the correction models.",
+      "limitation": "The labels are objective, rule-based and in the style of published methods; they are not the published classifications and not an expert analysis, and the percentile-based labels are relative by construction. Skill was shown on three held-out reforecast seasons of control-member forecasts, not on other operational years and not on a new cycle. The correction models still route on the earlier forecast-only pseudo-regimes, whose class named Active was found not to match observed active spells (docs/136); this detection model is a separate classifier. Regime-awareness was not shown to improve the heavy-rain correction on the sealed years.",
       "pages": [
         {
           "label": "Regime Intelligence (2019 reforecast)",
@@ -58,12 +58,18 @@
         {
           "label": "Regime Intelligence (2025 operational-era)",
           "href": "/regimes?experiment=operational&year=2025"
+        },
+        {
+          "label": "Regime Intelligence (sealed-year regime detection)",
+          "href": "/regimes"
         }
       ],
       "docs": [
         "docs/54_PROTOTYPE_REGIME_METHODOLOGY.md",
         "docs/55_PHASE2A_REGIME_VALIDATION_REPORT.md",
-        "docs/109_REGIME_INTELLIGENCE_UI_COMPLETION.md"
+        "docs/109_REGIME_INTELLIGENCE_UI_COMPLETION.md",
+        "docs/136_INDEPENDENT_REGIME_VALIDATION_RESULTS.md",
+        "docs/142_REFORECAST_STUDY_RESULTS.md"
       ],
       "facts": [
         {
@@ -83,6 +89,60 @@
           "source": "regime:B:2025",
           "pointer": "/by_predicted_regime/LOW_DEPRESSION_INFLUENCED/case_count",
           "format": "int"
+        },
+        {
+          "label": "Active monsoon: AUC on the sealed years 2014-2016",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/ACTIVE/auc/point",
+          "format": "score3"
+        },
+        {
+          "label": "Active monsoon: lower end of the 95 percent interval of that AUC",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/ACTIVE/auc/interval95/0",
+          "format": "score3"
+        },
+        {
+          "label": "Active monsoon: AUC of the climatology baseline on the sealed years",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/ACTIVE/baseline_auc",
+          "format": "score3"
+        },
+        {
+          "label": "Break monsoon: AUC on the sealed years 2014-2016",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/BREAK/auc/point",
+          "format": "score3"
+        },
+        {
+          "label": "Break monsoon: lower end of the 95 percent interval of that AUC",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/BREAK/auc/interval95/0",
+          "format": "score3"
+        },
+        {
+          "label": "Break monsoon: AUC of the climatology baseline on the sealed years",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/BREAK/baseline_auc",
+          "format": "score3"
+        },
+        {
+          "label": "Low / depression: AUC on the sealed years 2014-2016",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/LOW_DEPRESSION/auc/point",
+          "format": "score3"
+        },
+        {
+          "label": "Low / depression: lower end of the 95 percent interval of that AUC",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/LOW_DEPRESSION/auc/interval95/0",
+          "format": "score3"
+        },
+        {
+          "label": "Low / depression: AUC of the climatology baseline on the sealed years",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/LOW_DEPRESSION/baseline_auc",
+          "format": "score3"
         }
       ]
     },
@@ -160,13 +220,25 @@
         "PS-R03"
       ],
       "ps_mandatory": true,
-      "status": "PARTIAL",
-      "summary": "Rule-based coastal and orographic geographic-forcing zones (distance to coast and local terrain relief) are defined on the verification grid, and the frozen models are verified inside each zone and by forecast-time forcing strength on both tracks. The page shows where heavy rain concentrates and where every frozen model underforecasts it.",
-      "limitation": "There is no coastal or orographic specialist model and the zones are a transparent rule-based convention, not a learned or validated regime. A geography-aware model needs its own frozen protocol and a test period that no frozen data currently provide, so the requirement stays partial.",
+      "status": "IMPLEMENTED",
+      "summary": "Rule-based coastal and orographic geographic-forcing zones are defined, the frozen models are verified inside each zone, and a forecast-time forcing regime concentrates the observed Ghats-coast heavy rain on the development years. A forecast-time detector of Ghats-coast rain days (forcing index, regime features, lead and season) was fitted on 2000-2011 and tested once on the sealed years 2014-2016 against an IMD rain-day label: it reached the frozen verdict validated and useful.",
+      "limitation": "The label is an IMD rule (zone-mean rainfall in the upper range of the training years), relative by construction, not an expert analysis. The detector says whether a coastal or orographic rain day is likely, not how much rain falls: there is no specialist rainfall model for the zone, and the geography-aware correction experiments showed only a modest, one-year gain in Ghats-coast heavy-rain detection. Skill was shown on three held-out reforecast seasons, not on other operational years.",
       "pages": [
         {
           "label": "Geographic Zones",
           "href": "/zones"
+        },
+        {
+          "label": "Geography-Aware Experiment",
+          "href": "/geoaware"
+        },
+        {
+          "label": "Regime Intelligence (forcing regime)",
+          "href": "/regimes"
+        },
+        {
+          "label": "Regime Intelligence (sealed-year regime detection)",
+          "href": "/regimes"
         }
       ],
       "docs": [
@@ -177,7 +249,13 @@
         "docs/117_ZONE_VERIFICATION_STAGE1.md",
         "docs/118_ZONE_FORCING_STAGE2.md",
         "docs/124_GEOGRAPHY_AWARE_MODEL_PROTOCOL_PROPOSAL.md",
-        "docs/126_GEOGRAPHY_AWARE_MODEL_RESULTS.md"
+        "docs/126_GEOGRAPHY_AWARE_MODEL_RESULTS.md",
+        "docs/129_GEOGRAPHY_AWARE_FOLLOWUP_PROTOCOL_PROPOSAL.md",
+        "docs/131_GEOGRAPHY_AWARE_FOLLOWUP_PROTOCOL_V2.md",
+        "docs/132_GEOGRAPHY_AWARE_FOLLOWUP_PROTOCOL_V3_AND_UNSEAL.md",
+        "docs/133_GEOGRAPHY_AWARE_FOLLOWUP_2022_TEST_RESULT.md",
+        "docs/137_COASTAL_OROGRAPHIC_FORCING_REGIME.md",
+        "docs/142_REFORECAST_STUDY_RESULTS.md"
       ],
       "facts": [
         {
@@ -233,6 +311,42 @@
           "source": "zone:A:2019",
           "pointer": "/pooled/COASTAL_AND_OROGRAPHIC/M0/categorical/heavy/frequency_bias",
           "format": "score3"
+        },
+        {
+          "label": "2018 share of observed Ghats-coast heavy-rain pairs that fall in the strong forcing class, Track A (development; fraction)",
+          "source": "coastalregime:A:2018",
+          "pointer": "/groups/STRONG/share_of_all_heavy_event_pairs",
+          "format": "score3"
+        },
+        {
+          "label": "2024 share of observed Ghats-coast heavy-rain pairs that fall in the strong forcing class, Track B (development; fraction)",
+          "source": "coastalregime:B:2024",
+          "pointer": "/groups/STRONG/share_of_all_heavy_event_pairs",
+          "format": "score3"
+        },
+        {
+          "label": "2024 rank correlation of the forcing index with the observed heavy fraction of the zone, Track B (development)",
+          "source": "coastalregime:B:2024",
+          "pointer": "/discrimination/spearman/point",
+          "format": "score3"
+        },
+        {
+          "label": "Coastal / orographic rain day: AUC on the sealed years 2014-2016",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/COASTAL_OROGRAPHIC/auc/point",
+          "format": "score3"
+        },
+        {
+          "label": "Coastal / orographic rain day: lower end of the 95 percent interval of that AUC",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/COASTAL_OROGRAPHIC/auc/interval95/0",
+          "format": "score3"
+        },
+        {
+          "label": "Coastal / orographic rain day: AUC of the climatology baseline on the sealed years",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/COASTAL_OROGRAPHIC/baseline_auc",
+          "format": "score3"
         }
       ]
     },
@@ -244,15 +358,93 @@
         "PS-R03"
       ],
       "ps_mandatory": true,
-      "status": "PLANNED",
-      "summary": "Not classified. The current analysis domain clips the latitudes where western disturbances act, and no upper-level fields or labels are available.",
-      "limitation": "Missing requirement, and a feasibility question rather than only a modelling task: a feasibility study (docs/122) found no label source, no upper-tropospheric fields and an evaluation domain that excludes the region where these systems act, so it needs owner decisions before any work can start.",
-      "pages": [],
+      "status": "IMPLEMENTED",
+      "summary": "A forecast-time detector of western-disturbance presence (the forecast 500 hPa trough indicator, the other forecast regime features, lead and season) was fitted on 2000-2011, selected under a frozen protocol and tested once on the sealed years 2014-2016 against an objective ERA5 500 hPa vorticity label: it reached the frozen verdict validated and useful. The earlier indicator-only check on the operational years, which found no consistent association with rainfall, is kept and shown.",
+      "limitation": "The label is a rule on ERA5 geopotential in the style of published feature tracking, not the published tracker and not an expert analysis, and it is relative by construction. The task compares a forecast trough with a reanalysis trough, so it largely verifies the forecast height field; it is not a measure of rainfall skill, and the earlier operational-year check found no consistent link between the indicator and north-west India rainfall. The corpus covers June to early October, when these systems seldom act. No western-disturbance-aware correction model exists and the rainfall verification domain still stops where these systems act.",
+      "pages": [
+        {
+          "label": "Regime Intelligence (sealed-year regime detection)",
+          "href": "/regimes"
+        },
+        {
+          "label": "Regime Intelligence (western-disturbance indicator)",
+          "href": "/regimes"
+        }
+      ],
       "docs": [
         "docs/08_REGIME_METHODOLOGY.md",
-        "docs/122_WESTERN_DISTURBANCE_FEASIBILITY.md"
+        "docs/122_WESTERN_DISTURBANCE_FEASIBILITY.md",
+        "docs/138_WESTERN_DISTURBANCE_INDICATOR.md",
+        "docs/142_REFORECAST_STUDY_RESULTS.md"
       ],
-      "facts": []
+      "facts": [
+        {
+          "label": "2021 flagged minus not-flagged mean observed rainfall in the north-west India rain box (development; mm per day)",
+          "source": "wdindicator:2021",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/point",
+          "format": "mm2"
+        },
+        {
+          "label": "2024 flagged minus not-flagged mean observed rainfall in the north-west India rain box (development; mm per day)",
+          "source": "wdindicator:2024",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/point",
+          "format": "mm2"
+        },
+        {
+          "label": "2022 flagged minus not-flagged mean observed rainfall in the north-west India rain box (post-hoc; mm per day)",
+          "source": "wdindicator:2022",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/point",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 flagged minus not-flagged mean observed rainfall in the north-west India rain box (post-hoc; mm per day)",
+          "source": "wdindicator:2025",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/point",
+          "format": "mm2"
+        },
+        {
+          "label": "2021 lower end of the 95 percent interval of that difference (development; mm per day)",
+          "source": "wdindicator:2021",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/interval95/0",
+          "format": "mm2"
+        },
+        {
+          "label": "2021 upper end of the 95 percent interval of that difference (development; mm per day)",
+          "source": "wdindicator:2021",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/interval95/1",
+          "format": "mm2"
+        },
+        {
+          "label": "2024 lower end of the 95 percent interval of that difference (development; mm per day)",
+          "source": "wdindicator:2024",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/interval95/0",
+          "format": "mm2"
+        },
+        {
+          "label": "2024 upper end of the 95 percent interval of that difference (development; mm per day)",
+          "source": "wdindicator:2024",
+          "pointer": "/association/flagged_minus_not_flagged_mean_rain/interval95/1",
+          "format": "mm2"
+        },
+        {
+          "label": "Western disturbance: AUC on the sealed years 2014-2016",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/WESTERN_DISTURBANCE/auc/point",
+          "format": "score3"
+        },
+        {
+          "label": "Western disturbance: lower end of the 95 percent interval of that AUC",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/WESTERN_DISTURBANCE/auc/interval95/0",
+          "format": "score3"
+        },
+        {
+          "label": "Western disturbance: AUC of the climatology baseline on the sealed years",
+          "source": "reforecast:r03",
+          "pointer": "/tasks/WESTERN_DISTURBANCE/baseline_auc",
+          "format": "score3"
+        }
+      ]
     },
     {
       "id": "REGIME-INDEPENDENT-VALIDATION",
@@ -262,15 +454,52 @@
         "PS-R03"
       ],
       "ps_mandatory": false,
-      "status": "PLANNED",
-      "summary": "Classifier scores measure agreement with deterministic pseudo-labels only.",
-      "limitation": "No independent regime validation set exists. A source probe (docs/123) found candidate observation-based sources, but the active and break criteria need a longer rainfall climatology than the project holds, the depression record's coverage and terms are unverified, and the project's class definitions only partly match the published ones.",
-      "pages": [],
+      "status": "PARTIAL",
+      "summary": "The forecast-only pseudo-regimes are checked against observation-based rainfall criteria for active and break spells (IMD data, the style of Rajeevan et al. 2010, a 36-year climatology that shares no year with any evaluated population), under a protocol frozen before any score. Only the active task met the support gate, in two populations; the check found that the pseudo-class named Active does not correspond to observed active spells. A second check on a much longer independent record (2000-2016 reforecast, objective IMD and ERA5 labels, sealed years 2014-2016) found the detection tasks for active, break, low/depression, western disturbance and coastal rain days validated and useful.",
+      "limitation": "Partial by construction: active versus not active could be scored in two populations only, break versus not break in none, and depression is not validated. The labels are an implementation of rainfall criteria with documented deviations, not the published classification and not an expert review. In both scored populations the balanced accuracy is below the chance level, and most observed active days fall in the low/depression pseudo-class. The second check also uses objective rule-based labels and never an expert or bulletin analysis, so the row stays partial: expert-assigned regime labels remain unavailable.",
+      "pages": [
+        {
+          "label": "Regime Intelligence (independent check)",
+          "href": "/regimes"
+        },
+        {
+          "label": "Regime Intelligence (sealed-year regime detection)",
+          "href": "/regimes"
+        }
+      ],
       "docs": [
         "docs/55_PHASE2A_REGIME_VALIDATION_REPORT.md",
-        "docs/123_INDEPENDENT_REGIME_VALIDATION_PROBE.md"
+        "docs/123_INDEPENDENT_REGIME_VALIDATION_PROBE.md",
+        "docs/134_COMPLETION_PLAN.md",
+        "docs/136_INDEPENDENT_REGIME_VALIDATION_RESULTS.md",
+        "docs/142_REFORECAST_STUDY_RESULTS.md"
       ],
-      "facts": []
+      "facts": [
+        {
+          "label": "2019 active-versus-not-active balanced accuracy against observed active spells (post-hoc; 0.5 is no skill)",
+          "source": "regimeval:A:2019",
+          "pointer": "/tasks/active_vs_not_active/balanced_accuracy",
+          "format": "score3"
+        },
+        {
+          "label": "2024 active-versus-not-active balanced accuracy against observed active spells (development; 0.5 is no skill)",
+          "source": "regimeval:B:2024",
+          "pointer": "/tasks/active_vs_not_active/balanced_accuracy",
+          "format": "score3"
+        },
+        {
+          "label": "2019 cases with an observed active spell day",
+          "source": "regimeval:A:2019",
+          "pointer": "/observed_state_counts/ACTIVE",
+          "format": "int"
+        },
+        {
+          "label": "2024 cases with an observed active spell day",
+          "source": "regimeval:B:2024",
+          "pointer": "/observed_state_counts/ACTIVE",
+          "format": "int"
+        }
+      ]
     },
     {
       "id": "ML-POSTPROCESSING",
@@ -309,7 +538,7 @@
       "ps_mandatory": true,
       "status": "IMPLEMENTED",
       "summary": "Hard routing (M3) and a soft probability-weighted mixture (M4) correct rainfall with regime specialists; RMSE against Raw is shown for both tracks.",
-      "limitation": "Regime-aware models do not beat the global model on RMSE, MAE or bias. Their heavy-rain event skill gain appears on the operational-era track only, mainly in the Low / Depression regime, and does not appear on the 2019 reforecast track.",
+      "limitation": "Regime-aware models do not beat the global model on RMSE, MAE or bias. Their heavy-rain event skill gain appears on the operational-era track only, mainly in the Low / Depression regime, and does not appear on the 2019 reforecast track. On the sealed 2014-2016 reforecast years the regime-aware routing did not beat the non-regime model on heavy-rain skill or error, so regime-awareness is not shown to add value there.",
       "pages": [
         {
           "label": "Verification Lab (regime-aware)",
@@ -323,7 +552,8 @@
       "docs": [
         "docs/61_REGIME_AWARE_BENEFIT_ANALYSIS.md",
         "docs/106_REGIME_CATEGORICAL_AND_FSS_DIAGNOSTICS.md",
-        "docs/108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md"
+        "docs/108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md",
+        "docs/142_REFORECAST_STUDY_RESULTS.md"
       ],
       "facts": [
         {
@@ -355,6 +585,18 @@
           "source": "regime:B:2025",
           "pointer": "/overall/continuous/M4/rmse_mm",
           "format": "mm2"
+        },
+        {
+          "label": "2014-2016 sealed years: heavy-rain CSI of the non-regime model B0",
+          "source": "reforecast:r05",
+          "pointer": "/pooled/B0/heavy/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2014-2016 sealed years: heavy-rain CSI of the soft regime mixture",
+          "source": "reforecast:r05",
+          "pointer": "/pooled/R_soft/heavy/csi",
+          "format": "score3"
         }
       ]
     },
@@ -419,9 +661,9 @@
         "PS-R05"
       ],
       "ps_mandatory": true,
-      "status": "PARTIAL",
-      "summary": "Overall RMSE improves against Raw on both tracks.",
-      "limitation": "Improvement is demonstrated for overall RMSE only. Heavy and very-heavy event skill is mixed: on the 2019 reforecast track every corrected model scores below Raw on heavy-rain CSI, and on the operational-era track only some models, mainly in one regime, score above it. Very-heavy skill is not improved.",
+      "status": "IMPLEMENTED",
+      "summary": "The correction improves RMSE, heavy-rain CSI and very-heavy CSI over Raw, each with an interval excluding zero, in two independent reforecast tests: the sealed years 2014-2016 and a confirmatory test on 2017-2019 in which the frozen bundle (the event-weighted regression with a one-parameter mean-error correction, plus exceedance classifiers) meets the frozen verdict. On the operational-era track earlier corrections also improved heavy-rain detection on an independent year.",
+      "limitation": "In the first test the frozen mean-error guardrail failed (the correction over-forecast by roughly twice the limit) and the confirmatory pass depends on a mean-error shift read from that first test; the 2017-2019 years were used by earlier Track A experiments, so they are confirmatory and not untouched. The gain is for the reforecast control member (a different model version from the operational years, never pooled with them), not for operational forecasts of other years or a new cycle. Very-heavy detection comes from exceedance classifiers (yes/no forecasts at a fixed probability threshold, not shown to be calibrated), not from the corrected rainfall field. Regime-awareness was not shown to add value over the non-regime model, and the frozen regime-aware models of the operational years still have mixed heavy-rain skill.",
       "pages": [
         {
           "label": "Verification Lab",
@@ -430,6 +672,14 @@
         {
           "label": "Extreme Rain",
           "href": "/extremes"
+        },
+        {
+          "label": "Geography-Aware Experiment",
+          "href": "/geoaware"
+        },
+        {
+          "label": "Verification Lab (reforecast heavy-rain study)",
+          "href": "/verification"
         }
       ],
       "docs": [
@@ -437,7 +687,9 @@
         "docs/108_EVIDENCE_PACKAGING_AND_TRACK_A_REGIME_DIAGNOSTICS.md",
         "docs/113_DISTRICT_VERIFICATION_RESULTS.md",
         "docs/124_GEOGRAPHY_AWARE_MODEL_PROTOCOL_PROPOSAL.md",
-        "docs/126_GEOGRAPHY_AWARE_MODEL_RESULTS.md"
+        "docs/126_GEOGRAPHY_AWARE_MODEL_RESULTS.md",
+        "docs/133_GEOGRAPHY_AWARE_FOLLOWUP_2022_TEST_RESULT.md",
+        "docs/142_REFORECAST_STUDY_RESULTS.md"
       ],
       "facts": [
         {
@@ -474,6 +726,168 @@
           "label": "2025 very-heavy CSI, M3 hard regime",
           "source": "regime:B:2025",
           "pointer": "/overall/categorical/very_heavy/M3/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: heavy-rain CSI over the whole grid, M0 Raw",
+          "source": "geofollow:2022",
+          "pointer": "/pooled/M0/ALL/categorical/heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: heavy-rain CSI over the whole grid, event-weighted correction without geography (B0)",
+          "source": "geofollow:2022",
+          "pointer": "/pooled/B0#14/ALL/categorical/heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: heavy-rain CSI over the whole grid, geography-aware correction (B1, primary candidate)",
+          "source": "geofollow:2022",
+          "pointer": "/pooled/B1#15/ALL/categorical/heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: very-heavy CSI over the whole grid, M0 Raw",
+          "source": "geofollow:2022",
+          "pointer": "/pooled/M0/ALL/categorical/very_heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: very-heavy CSI over the whole grid, event-weighted correction without geography (B0)",
+          "source": "geofollow:2022",
+          "pointer": "/pooled/B0#14/ALL/categorical/very_heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: very-heavy CSI over the whole grid, geography-aware correction (B1, primary candidate)",
+          "source": "geofollow:2022",
+          "pointer": "/pooled/B1#15/ALL/categorical/very_heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: lower end of the 97.5 percent interval of the B0 minus Raw very-heavy CSI difference",
+          "source": "geofollow:2022",
+          "pointer": "/bootstrap/decision_level_0975/diff|ALL|B0#14|M0|very_heavy_csi/interval/0",
+          "format": "score3"
+        },
+        {
+          "label": "2022 independent test: lower end of the 97.5 percent interval of the B1 (primary) minus Raw very-heavy CSI difference",
+          "source": "geofollow:2022",
+          "pointer": "/bootstrap/decision_level_0975/diff|ALL|B1#15|M0|very_heavy_csi/interval/0",
+          "format": "score3"
+        },
+        {
+          "label": "2014-2016 sealed years: RMSE of Raw (mm per 24 h)",
+          "source": "reforecast:r05",
+          "pointer": "/pooled/M0/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2014-2016 sealed years: RMSE of the event-weighted model with static geography (mm per 24 h)",
+          "source": "reforecast:r05",
+          "pointer": "/pooled/B1/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2014-2016 sealed years: mean error of Raw (mm)",
+          "source": "reforecast:r05",
+          "pointer": "/pooled/M0/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2014-2016 sealed years: mean error of the event-weighted model with static geography (mm)",
+          "source": "reforecast:r05",
+          "pointer": "/pooled/B1/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2014-2016 sealed years: heavy-rain CSI of Raw",
+          "source": "reforecast:r05",
+          "pointer": "/raw_categorical/heavy/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2014-2016 sealed years: heavy-rain CSI of the exceedance classifier with static geography",
+          "source": "reforecast:r05",
+          "pointer": "/exceedance/B1:heavy/test/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2014-2016 sealed years: very-heavy CSI of Raw",
+          "source": "reforecast:r05",
+          "pointer": "/raw_categorical/very_heavy/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2014-2016 sealed years: very-heavy CSI of the exceedance classifier with static geography",
+          "source": "reforecast:r05",
+          "pointer": "/exceedance/B1:very_heavy/test/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2014-2016 sealed years: lower end of the 97.5 percent interval of the very-heavy CSI gain over Raw",
+          "source": "reforecast:r05",
+          "pointer": "/bundle_decisions/B1/vs_raw/very_heavy_csi/interval95/0",
+          "format": "score3"
+        },
+        {
+          "label": "2017-2019 confirmatory test: RMSE of Raw (mm per 24 h)",
+          "source": "reforecast:r05c",
+          "pointer": "/pooled/M0/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2017-2019 confirmatory test: RMSE of the corrected regression (mm per 24 h)",
+          "source": "reforecast:r05c",
+          "pointer": "/pooled/B1_shifted/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2017-2019 confirmatory test: mean error of Raw (mm)",
+          "source": "reforecast:r05c",
+          "pointer": "/pooled/M0/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2017-2019 confirmatory test: mean error of the regression before the mean-error correction (mm)",
+          "source": "reforecast:r05c",
+          "pointer": "/pooled/B1_uncorrected/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2017-2019 confirmatory test: mean error of the regression after the mean-error correction (mm)",
+          "source": "reforecast:r05c",
+          "pointer": "/pooled/B1_shifted/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2017-2019 confirmatory test: heavy-rain CSI of Raw",
+          "source": "reforecast:r05c",
+          "pointer": "/raw_categorical/heavy/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2017-2019 confirmatory test: heavy-rain CSI of the exceedance classifier",
+          "source": "reforecast:r05c",
+          "pointer": "/exceedance/B1:heavy/test/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2017-2019 confirmatory test: very-heavy CSI of Raw",
+          "source": "reforecast:r05c",
+          "pointer": "/raw_categorical/very_heavy/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2017-2019 confirmatory test: very-heavy CSI of the exceedance classifier",
+          "source": "reforecast:r05c",
+          "pointer": "/exceedance/B1:very_heavy/test/csi",
+          "format": "score3"
+        },
+        {
+          "label": "2017-2019 confirmatory test: lower end of the 97.5 percent interval of the very-heavy CSI gain over Raw",
+          "source": "reforecast:r05c",
+          "pointer": "/bundle_decision/vs_raw/very_heavy_csi/interval95/0",
           "format": "score3"
         }
       ]
@@ -916,9 +1330,9 @@
         "PS-R08"
       ],
       "ps_mandatory": false,
-      "status": "PARTIAL",
-      "summary": "District-event and district-mean verification under a protocol frozen before any result, for the operational-era years 2024 and 2025.",
-      "limitation": "Operational-era track only; no district verification for the 2019 reforecast. Aggregate verification of historical replay, not warning skill, with optimistic intervals.",
+      "status": "IMPLEMENTED",
+      "summary": "District-event and district-mean verification under protocols frozen before any result, for both tracks: the 2017-2019 reforecast track (2018 development, 2019 post-hoc) and the operational-era track (2024 development, 2025 post-hoc). Track A carries every definition over unchanged from the Track B protocol.",
+      "limitation": "Aggregate verification of historical replay, not warning skill, with optimistic intervals; the two tracks are never pooled. District-mean error against Raw improves for every corrected model on the 2017-2019 reforecast track in both years and on the operational-era track in 2025, but in 2024 it improves only slightly for the Ridge and global models and is worse than Raw for the two regime-aware models. District heavy-rain event detection of the corrected models on the 2019 reforecast track is below Raw's.",
       "pages": [
         {
           "label": "Verification Lab (district-level)",
@@ -927,7 +1341,8 @@
       ],
       "docs": [
         "docs/112_DISTRICT_VERIFICATION_PROTOCOL.md",
-        "docs/113_DISTRICT_VERIFICATION_RESULTS.md"
+        "docs/113_DISTRICT_VERIFICATION_RESULTS.md",
+        "docs/135_DISTRICT_VERIFICATION_TRACK_A.md"
       ],
       "facts": [
         {
@@ -941,6 +1356,18 @@
           "source": "district:B:2025",
           "pointer": "/supported_district_counts/E1/heavy",
           "format": "int"
+        },
+        {
+          "label": "2019 observed district heavy-rain events, Track A (primary definition)",
+          "source": "district:A:2019",
+          "pointer": "/observed_events_pooled/E1/heavy",
+          "format": "int"
+        },
+        {
+          "label": "2019 districts with per-district heavy-rain scores, Track A",
+          "source": "district:A:2019",
+          "pointer": "/supported_district_counts/E1/heavy",
+          "format": "int"
         }
       ]
     },
@@ -950,13 +1377,19 @@
       "requirement": "Live / new-cycle forecast post-processing",
       "ps_ids": [],
       "ps_mandatory": false,
-      "status": "PLANNED",
-      "summary": "The system replays frozen historical cases; it does not ingest or correct a current forecast cycle.",
-      "limitation": "Not built. A design (docs/125) lists what can be reused and what is missing: cycle-parameterised acquisition, a runtime loader for the frozen operational-era models, online quality control, publication and a separate worker. It needs owner decisions, and no skill could be shown for a new cycle until observations exist.",
-      "pages": [],
+      "status": "PARTIAL",
+      "summary": "A separate worker takes one NOAA GEFS 00 UTC cycle, applies the canonical rainfall quality control and the frozen operational-era models without retraining, and publishes an immutable, hash-manifested bundle that a read-only API and an Experimental Live Cycle page serve with an experimental, unverified label. The worker path reproduces the frozen 2025 outputs exactly on stored cycles, and refuses broken inputs.",
+      "limitation": "No skill can be shown for a new cycle until observations exist, so every live product is labelled experimental and unverified and is not an official warning. The repository carries no live bundle: whether one has been fetched and published is shown on the page, not assumed here. There is no scheduler, retry, alerting or hosted worker, and the input is NOAA GEFS, not an NCMRWF model. The frozen models may extrapolate if the GEFS configuration drifts, which the applicability check only flags as a range heuristic. Only the control member is used and no district table is produced for a live cycle.",
+      "pages": [
+        {
+          "label": "Experimental Live Cycle",
+          "href": "/live"
+        }
+      ],
       "docs": [
         "docs/18_DEPLOYMENT_AND_OPERATIONS.md",
-        "docs/125_LIVE_INFERENCE_DESIGN.md"
+        "docs/125_LIVE_INFERENCE_DESIGN.md",
+        "docs/139_LIVE_CYCLE_WORKER.md"
       ],
       "facts": []
     },
@@ -987,14 +1420,93 @@
       "requirement": "All-India domain",
       "ps_ids": [],
       "ps_mandatory": false,
-      "status": "PLANNED",
-      "summary": "Analysis is restricted to a regional window over peninsular and central India.",
-      "limitation": "Each additional region needs its own corpus version, district weights and observation coverage check.",
-      "pages": [],
-      "docs": [
-        "docs/65_DISTRICT_PRODUCT_METHODOLOGY.md"
+      "status": "PARTIAL",
+      "summary": "The unmodified Raw GEFS control rainfall is verified against IMD over the whole IMD grid, by region, with the error, bias and heavy-rain skill of each region and confidence intervals. The correction models themselves are still restricted to the regional window over peninsular and central India.",
+      "limitation": "Raw only: no model was applied or trained outside the regional window, so there is no corrected all-India forecast and nothing is known about how a correction would behave in the north, the east or the north-east. The wider reconstruction excluded further cases, so the populations are smaller than the regional study. Raw has little heavy-rain skill in every region and a wet bias in the east and north-east, so a correction trained in the window would not simply transfer. Each additional region needs its own corpus version, district weights and observation coverage check.",
+      "pages": [
+        {
+          "label": "Verification Lab (all-India Raw verification)",
+          "href": "/verification"
+        }
       ],
-      "facts": []
+      "docs": [
+        "docs/65_DISTRICT_PRODUCT_METHODOLOGY.md",
+        "docs/140_ALL_INDIA_RAW_VERIFICATION.md"
+      ],
+      "facts": [
+        {
+          "label": "2024 Raw RMSE over all India (development; mm per 24 h)",
+          "source": "allindia:2024",
+          "pointer": "/metrics/ALL_INDIA/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2024 Raw RMSE inside the regional modelling box (development; mm per 24 h)",
+          "source": "allindia:2024",
+          "pointer": "/metrics/INSIDE_MODEL_DOMAIN/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2024 Raw RMSE in east and north-east India (development; mm per 24 h)",
+          "source": "allindia:2024",
+          "pointer": "/metrics/EAST_AND_NORTH_EAST/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2024 Raw bias in east and north-east India (development; mm per 24 h)",
+          "source": "allindia:2024",
+          "pointer": "/metrics/EAST_AND_NORTH_EAST/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2024 Raw heavy-rain CSI over all India (development)",
+          "source": "allindia:2024",
+          "pointer": "/metrics/ALL_INDIA/categorical/heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2024 Raw heavy-rain frequency bias over all India (development)",
+          "source": "allindia:2024",
+          "pointer": "/metrics/ALL_INDIA/categorical/heavy/frequency_bias",
+          "format": "score3"
+        },
+        {
+          "label": "2025 Raw RMSE over all India (post-hoc; mm per 24 h)",
+          "source": "allindia:2025",
+          "pointer": "/metrics/ALL_INDIA/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 Raw RMSE inside the regional modelling box (post-hoc; mm per 24 h)",
+          "source": "allindia:2025",
+          "pointer": "/metrics/INSIDE_MODEL_DOMAIN/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 Raw RMSE in east and north-east India (post-hoc; mm per 24 h)",
+          "source": "allindia:2025",
+          "pointer": "/metrics/EAST_AND_NORTH_EAST/rmse_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 Raw bias in east and north-east India (post-hoc; mm per 24 h)",
+          "source": "allindia:2025",
+          "pointer": "/metrics/EAST_AND_NORTH_EAST/bias_mm",
+          "format": "mm2"
+        },
+        {
+          "label": "2025 Raw heavy-rain CSI over all India (post-hoc)",
+          "source": "allindia:2025",
+          "pointer": "/metrics/ALL_INDIA/categorical/heavy/CSI",
+          "format": "score3"
+        },
+        {
+          "label": "2025 Raw heavy-rain frequency bias over all India (post-hoc)",
+          "source": "allindia:2025",
+          "pointer": "/metrics/ALL_INDIA/categorical/heavy/frequency_bias",
+          "format": "score3"
+        }
+      ]
     }
   ]
 }

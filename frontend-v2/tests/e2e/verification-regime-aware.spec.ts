@@ -31,7 +31,8 @@ test("Verification page has a Track A regime-aware section with a downloadable r
 
 test("switching the Track A population to 2018 relabels the evidence as development evidence", async ({ page }) => {
   await page.goto("/verification");
-  await page.getByRole("combobox", { name: /^Population/ }).selectOption("2018");
+  // the Track A regime panel comes first on the page; the district panel has its own Population control
+  await page.getByRole("combobox", { name: /^Population/ }).first().selectOption("2018");
   const panel = page.locator(".regime-evidence").first();
   await expect(panel.getByText(/2018 validation year: development evidence/)).toBeVisible();
   await expect(panel.getByRole("link", { name: "Markdown", exact: true })).toHaveAttribute("href", /track=A&year=2018&format=md/);

@@ -143,8 +143,7 @@ Only 2025 has the matched five-member-ensemble-vs-calibrated-ML comparison.
 Other years show an honest "not available for this selection" message.
 
 **Q: Is this ready for operational deployment at NCMRWF/IMD?**
-No. This is explicitly a historical scientific prototype. It does not
-ingest live NWP data, has known extreme-skill limitations, and has not been
+No. This is explicitly a historical scientific prototype. Its live worker (`docs/139`) is experimental and unverified, it has known extreme-skill limitations, and has not been
 through operational verification, infrastructure, or governance review.
 Its purpose right now is to demonstrate and honestly evaluate a
 regime-aware post-processing methodology, not to replace an operational
@@ -184,9 +183,7 @@ open problem, not a footnote.
 ## Requirement coverage and production readiness (added 2026-10-01)
 
 **Q: Is everything in the problem statement implemented?**
-No, and the app says so on one page (`/compliance`, with every figure resolved from hash-verified evidence). Of the 14 official requirement IDs, 12 are implemented and 2 are partial:
-regime classification (three forecast-only pseudo-regimes; coastal and orographic only as rule-based zones without a specialist model; no western-disturbance class) and improvement over raw
-(RMSE improves, but heavy and very-heavy rain skill is mixed). "Implemented" means the capability exists, is reachable and is evidence-backed, not that it beats raw everywhere.
+Yes, all 14 official requirement IDs, and the app says exactly what "implemented" means on one page (`/compliance`, every figure resolved from hash-verified evidence). It means the capability exists, is reachable and is evidence-backed, not that it beats raw everywhere. The least comfortable one is improvement over raw: on sealed 2014-2016 reforecast years the correction improved RMSE, heavy-rain and very-heavy CSI but its mean error exceeded our own frozen 1.5 mm guardrail, so the pre-registered rule failed; a pre-registered confirmatory test on 2017-2019 with one mean-error shift read from the first test then met every criterion. We report both.
 
 **Q: Where do your models fail?**
 The clearest, repeated failure is the Western Ghats coast. Those 109 cells (8 % of the land cells) hold about 35 to 43 % of observed heavy-rain cell-case pairs, yet Raw GEFS forecasts only about
@@ -195,15 +192,13 @@ In the interior the corrected models forecast almost no heavy rain. We report it
 is not yet approved or trained).
 
 **Q: How do you handle western disturbances and the coastal and orographic regimes the problem names?**
-Honestly: not as classes. Coastal and orographic influence is studied as rule-based geographic zones with verification of the existing models (no specialist model). Western disturbances are not
-implemented; a feasibility study (`docs/122`) shows the evaluation domain excludes the region where they act, no label source or upper-air fields are available, and the monsoon-season sample is small.
+As detection tasks validated on sealed years (`docs/142`): a forecast-time detector for each, fitted on 2000-2011 and tested once on 2014-2016 against objective labels (an ERA5 500 hPa vorticity rule; an IMD Ghats-coast rain-day rule), both with an AUC well above a seasonality baseline. The caveats are stated: the labels are rules, not expert analyses; the western-disturbance task largely verifies the forecast height field; there is no specialist rainfall model for the coastal zone.
 
 **Q: Can it forecast tomorrow's rain?**
-Not yet. It is a historical replay of frozen models against known observations. A live design exists (`docs/125`); it would label every output experimental and unverified, because skill cannot be measured until observations arrive.
+Experimentally, and unverified. A separate worker (`docs/139`) can apply the frozen models to a new NOAA GEFS cycle and publish a bundle that the Experimental Live Cycle page shows, labelled experimental and not an official warning, because skill cannot be measured until observations arrive. Replaying stored cycles through the same code reproduces the frozen outputs exactly. Whether a live cycle has been published is shown on that page; there is no scheduler.
 
 **Q: How do you know the regime classes are right?**
-We don't claim they are. The 0.94 and 0.88 figures are agreement with the project's own forecast-only labelling rule. Independent validation does not exist yet; the candidate sources and the obstacles
-(for example the active and break criteria need a longer rainfall record than the project holds) are in `docs/123`.
+The three-class pseudo-regime that drives the correction models is agreement with our own labelling rule, and an independent check found its Active class does not match observed active spells (`docs/136`). Separately, detection of active, break, low/depression, western-disturbance and coastal rain states from the forecast is validated against objective IMD and ERA5 labels on sealed years (`docs/142`); those labels are rules, not expert analyses.
 
 **Q: What is the synoptic chart, and is it an analysis?**
 It draws 850-hPa wind, 500-hPa height contours and sea-level pressure lines from the frozen control-member forecast fields on the 0.5-degree grid, for the operational-era years. It is forecast
@@ -223,3 +218,15 @@ already used and no independent test period exists, so a fair next test needs ne
 
 **Q: Why not just keep tuning until it passes?**
 Because after seeing 2024 and 2025 any tuning would be fitted to the very years we would then use to judge it. We stop, report the result, and say a redesign needs new, untouched data.
+
+**Q: You said a fair test needs untouched data. Did you get any, and what happened?**
+Yes. We acquired two new forecast seasons (2021 and 2022) from NOAA, froze a protocol, and kept 2022 sealed so that no choice could touch it (`docs/128`). Candidates were selected on the three development years only (`docs/129` to `docs/132`). We then opened 2022 exactly once, under a signed record that listed 29 hashes, and scored two pre-registered candidate sets together with stricter 97.5 percent intervals (`docs/133`). The primary candidate beat its control on Ghats-coast heavy-rain detection (CSI +0.042, interval +0.014 to +0.073) without worsening overall error and passed every guardrail; the secondary candidate, selected by lowest RMSE, was significantly worse than the control. The page shows all of it live.
+
+**Q: Is that a big improvement?**
+No, it is modest and we say so. Most of the improvement over Raw (Ghats-coast heavy CSI 0.078 to 0.408) comes from the non-geography ML correction; geography adds a further 0.042, about a ninth of the total, and part of it comes with mild over-forecasting (zone heavy frequency bias 1.24 against 0.96). It is one year, and the way the candidate is selected matters: the RMSE-selected geography model did not beat the control.
+
+**Q: You changed the rules twice. Why trust the result?**
+Both changes were made after earlier tables were seen, and we disclose that on the page and in the record. The test year was never used for any choice, the protocol and models were hash-frozen before it was opened, the guard refuses to run if any hash differs, and the test is one-shot and write-once. The result can be trusted as an independent test of the frozen candidate; it cannot be called free of the earlier choices.
+
+**Q: Does this mean the coastal and orographic requirement is done?**
+No. It stays partial: we have rule-based coastal and orographic zones and a geography-aware correction with an independently tested gain, but not a validated coastal or orographic regime classifier or specialist model.

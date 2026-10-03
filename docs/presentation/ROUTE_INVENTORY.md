@@ -92,5 +92,14 @@ constraint and is not a new risk introduced by this freeze phase.
 |---|---|---|
 | `/compliance` | `/api/science/evidence/ps-coverage` (hash-verified manifest; every figure resolved from frozen evidence) | live API, hard failure on integrity errors; planned items shown as planned |
 | `/zones` | `/api/science/evidence/zones/*` (hash-chain-verified Phase 7 evidence; static SVG map, no tile service) | live API, hard failure on integrity errors; post-hoc years labelled; Stage 3 not authorised |
+| `/geoaware` | `/api/science/evidence/geoaware/{overview,evaluation,followup}` (hash-chain-verified Phase 9 and Phase 11 evidence) | live API, hard failure on integrity errors (a tampered file, a freeze that claims 2022 was already open, a result not labelled as the first-use test, or a record without the owner authorisation); shows the negative first result, the post-hoc-disclosed follow-up and the single independent 2022 test result with its decision intervals (97.5 percent), post-hoc 2025 labelled |
+
+| `/live` | `/api/science/live/{status,cycle,field}` (immutable, hash-verified worker bundles under `data/live/`, untracked; `docs/139`) | live API, hard failure on integrity errors; states honestly when no bundle exists; a replay is never shown as a live cycle |
+| `/regimes` (added panels) | `/api/science/evidence/{coastal-regime,wd-indicator,regime-validation}/*` (`docs/136` to `docs/138`) | live API, hard failure on integrity errors; heuristics labelled, post-hoc years labelled |
+| `/verification` (added sections) | `/api/science/evidence/district-verification` for Track A (`docs/135`) and `/api/science/evidence/all-india-raw/*` (`docs/140`) | live API, hard failure on integrity errors; Raw only outside the regional domain |
+
+| `/verification` and `/regimes` (reforecast study) | `/api/science/evidence/reforecast/{overview,r05,r03}` (hash-chain-verified Phase 15 evidence, `docs/142`) | live API, hard failure on integrity errors; sealed-test label shown; the failed bias guardrail stated |
+
+The `/districts` route for Track B also offers CSV and JSON downloads of the selected case (`/api/science/operational/{year}/cases/{case_id}/districts/export`, `docs/107` addendum), carrying the year role, label and weights/geometry hashes in every row.
 
 The Forecast route also offers a **Synoptic chart** variable for the operational-era years (`docs/121`): wide-domain wind arrows, 500-hPa height contours and sea-level pressure lines drawn from the frozen forecast fields, live API only, hard failure on integrity errors, and a message instead of a chart when a case's atmosphere failed quality control.

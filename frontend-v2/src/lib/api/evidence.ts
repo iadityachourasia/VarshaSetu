@@ -137,7 +137,8 @@ export type DistrictModel = (typeof DISTRICT_MODELS)[number];
 export const DISTRICT_BREAKDOWNS = ["pooled", "by_lead", "by_regime", "by_region"] as const;
 export type DistrictBreakdown = (typeof DISTRICT_BREAKDOWNS)[number];
 export const DISTRICT_CONTRAST_KEYS = ["M1_minus_M0", "M2_minus_M0", "M3_minus_M0", "M4_minus_M0", "M3_minus_M2", "M4_minus_M2", "M3_minus_M4"] as const;
-export const DISTRICT_VERIFICATION_YEARS = [2024, 2025] as const;
+export const DISTRICT_VERIFICATION_YEARS = [2018, 2019, 2024, 2025] as const;
+export const DISTRICT_TRACK_OF_YEAR: Record<(typeof DISTRICT_VERIFICATION_YEARS)[number], "A" | "B"> = { 2018: "A", 2019: "A", 2024: "B", 2025: "B" };
 
 const districtContinuousSchema = z.object({ pairs: z.number(), rmse_mm: nullableNumber, mae_mm: nullableNumber, bias_mm: nullableNumber });
 const improvementSchema = z.object({
@@ -164,7 +165,7 @@ export type DistrictEntry = z.infer<typeof districtEntrySchema>;
 const groupedCategorical = z.record(z.string(), perModel(categoricalSchema));
 
 export const districtVerificationSchema = z.object({
-  track: z.literal("B"),
+  track: z.enum(["A", "B"]),
   year: z.number(),
   evidence_role: z.string(),
   evidence_label: z.string(),

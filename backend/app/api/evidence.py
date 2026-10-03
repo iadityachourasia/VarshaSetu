@@ -42,6 +42,18 @@ EVIDENCE_LABELS: dict[str, str] = {
         "Track B 2024 validation/selection year: development evidence (M1 was selected on it; not a holdout)",
     "PHASE4J_HOLDOUT_CONSUMED_POST_HOC_DESCRIPTIVE_ONLY":
         "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+    # western-disturbance indicator populations (docs/138): the 2022 year was consumed by the geography-aware follow-up test (docs/133)
+    "INDEPENDENT_TEST_FIRST_USE_OF_2022": "INDEPENDENT TEST: first use of this year",
+    "ALLINDIA_2023_TRAINING_YEAR_OF_THE_DOWNSTREAM_MODELS_RAW_ONLY": "2023: training year of the downstream models (this analysis fits nothing; Raw only)",
+    "ALLINDIA_2024_DEVELOPMENT_YEAR_REUSED_FOR_MODEL_SELECTION": "2024 validation/selection year: development evidence",
+    "ALLINDIA_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
+    "REFORECAST_CONFIRMATORY_TEST_2017_2019": "CONFIRMATORY TEST 2017-2019: no model of this study used these years (earlier Track A experiments did)",
+    "REFORECAST_SEALED_TEST_2014_2016_FIRST_USE": "POST-UNSEAL SEALED TEST 2014-2016: first use of these years",
+    "WD_2021_DEVELOPMENT_YEAR_NEVER_USED_FOR_ANY_SELECTION": "2021 development year: never used for any selection",
+    "WD_2022_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2022_FINAL_TEST": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2022 FINAL TEST",
+    "WD_2023_TRAINING_YEAR": "2023 training year (the indicator threshold is fitted here)",
+    "WD_2024_DEVELOPMENT_YEAR_REUSED_FOR_MODEL_SELECTION": "2024 validation/selection year: development evidence (a reused year, not a holdout)",
+    "WD_2025_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2025_FINAL_TEST": "POST-HOC EXPLORATORY ANALYSIS OF THE COMPLETED 2025 FINAL TEST",
 }
 CAVEATS = [
     "Descriptive re-aggregation of frozen predictions; no model was trained, tuned or selected for this view.",
@@ -297,14 +309,14 @@ def verification_report(track: str = Query(..., pattern="^[AB]$"), year: int = Q
 # ---------------------------------------------------------------------------------------------
 
 DISTRICT_CAVEATS = [
-    "Defined by the frozen district verification protocol v1 (docs/112): unit = district-case pair; events E1 any cell, E2 >= 25 % of valid area, E3 district mean; "
+    "Defined by the frozen district verification protocol (Track B protocol v1, docs/112; Track A protocol A v1, docs/135, which carries every definition over unchanged): unit = district-case pair; events E1 any cell, E2 >= 25 % of valid area, E3 district mean; "
     "districts need >= 5 valid IMD land cells; per-district scores need >= 30 observed events (otherwise 'insufficient support').",
     "A district is 'improved' or 'worsened' only if its mean improvement over Raw and the 95 % paired whole-case bootstrap interval agree; with about 170 districts tested, "
     "about 5 % in total (about 2.5 % per direction) are expected to be classified improved or worsened by chance alone.",
     "Bootstrap intervals resample whole cases but ignore serial correlation between consecutive days and the spatial correlation of neighbouring districts, so they are optimistic.",
     "IMD land cells only: coastal and border districts are covered by few cells; district geometry is simplified; this is district-aggregate verification of historical replay, not warning skill.",
     "Regimes are forecast-only pseudo-labels (argmax of the frozen classifier), not observed meteorological truth.",
-    "Consumed holdouts (2025) are post-hoc descriptive analyses and must not be used to select, tune or re-rank a model.",
+    "Consumed holdouts (2019 and 2025) are post-hoc descriptive analyses and must not be used to select, tune or re-rank a model. Track A and Track B are never pooled.",
 ]
 
 
@@ -331,16 +343,22 @@ class DistrictVerificationResponse(BaseModel):
     caveats: list[str]
 
 
-@lru_cache(maxsize=1)
-def _district_manifest() -> tuple[dict, str]:
-    path, sidecar = PHASE6 / "district_verification_manifest.json", PHASE6 / "district_verification_manifest.sha256"
+DISTRICT_TRACK_OF_YEAR = {2018: "A", 2019: "A", 2024: "B", 2025: "B"}
+DISTRICT_FILES = {"B": {"manifest": "district_verification_manifest", "protocol": "district_verification_protocol_v1.json"},
+                  "A": {"manifest": "district_verification_manifest_A", "protocol": "district_verification_protocol_A_v1.json"}}
+
+
+@lru_cache(maxsize=2)
+def _district_manifest(track: str = "B") -> tuple[dict, str]:
+    names = DISTRICT_FILES[track]
+    path, sidecar = PHASE6 / f"{names['manifest']}.json", PHASE6 / f"{names['manifest']}.sha256"
     if not path.is_file() or not sidecar.is_file():
         raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, "District verification manifest is unavailable")
     expected = sidecar.read_text(encoding="ascii").strip()
     if sha256_file(path) != expected:
         raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, "District verification manifest hash mismatch")
     manifest = json.loads(path.read_text(encoding="utf-8"))
-    protocol = PHASE6 / "district_verification_protocol_v1.json"
+    protocol = PHASE6 / names["protocol"]
     if not protocol.is_file() or sha256_file(protocol) != manifest["protocol_sha256"]:
         raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, "District verification protocol hash mismatch")
     return manifest, expected
@@ -348,31 +366,35 @@ def _district_manifest() -> tuple[dict, str]:
 
 @lru_cache(maxsize=4)
 def _district_evidence(year: int) -> tuple[dict, str]:
-    manifest, _ = _district_manifest()
-    name = f"district_verification_B_{year}.json"
+    track = DISTRICT_TRACK_OF_YEAR.get(year)
+    if track is None:
+        raise _science_error(404, ScienceErrorCode.PRODUCT_UNAVAILABLE,
+                             f"No district verification for {year}. Available: {', '.join(str(y) for y in sorted(DISTRICT_TRACK_OF_YEAR))}")
+    manifest, _ = _district_manifest(track)
+    name = f"district_verification_{track}_{year}.json"
     entry = manifest["files"].get(name)
     path = PHASE6 / name
     if entry is None or not path.is_file():
-        raise _science_error(404, ScienceErrorCode.PRODUCT_UNAVAILABLE,
-                             f"No district verification for Track B {year}. Available: {', '.join(str(e['year']) for e in manifest['files'].values())}")
+        raise _science_error(404, ScienceErrorCode.PRODUCT_UNAVAILABLE, f"No district verification for Track {track} {year}")
     if sha256_file(path) != entry["sha256"]:
         raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"District verification integrity failure: {name}")
     data = json.loads(path.read_text(encoding="utf-8"))
-    if data.get("evidence_role") != entry["evidence_role"] or data["evidence_role"] not in EVIDENCE_LABELS or data.get("protocol_sha256") != manifest["protocol_sha256"]:
-        raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"District verification role or protocol mismatch: {name}")
+    if (data.get("evidence_role") != entry["evidence_role"] or data["evidence_role"] not in EVIDENCE_LABELS or data.get("protocol_sha256") != manifest["protocol_sha256"]
+            or data.get("track") != track):
+        raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"District verification role, track or protocol mismatch: {name}")
     return data, entry["sha256"]
 
 
-def _protocol() -> dict:
-    return json.loads((PHASE6 / "district_verification_protocol_v1.json").read_text(encoding="utf-8"))
+def _protocol(track: str = "B") -> dict:
+    return json.loads((PHASE6 / DISTRICT_FILES[track]["protocol"]).read_text(encoding="utf-8"))
 
 
 @router.get("/district-verification", response_model=DistrictVerificationResponse)
 def district_verification(year: int = Query(...)) -> DistrictVerificationResponse:
     data, digest = _district_evidence(year)
-    protocol = _protocol()
+    protocol = _protocol(data["track"])
     return DistrictVerificationResponse(
-        track="B", year=year, evidence_role=data["evidence_role"], evidence_label=EVIDENCE_LABELS[data["evidence_role"]], evidence_sha256=digest,
+        track=data["track"], year=year, evidence_role=data["evidence_role"], evidence_label=EVIDENCE_LABELS[data["evidence_role"]], evidence_sha256=digest,
         protocol_sha256=data["protocol_sha256"], protocol_status=protocol["status"], protocol_decisions=protocol["approval"]["decisions"],
         regime_assignment=data["regime_assignment"], reproduction={k: v for k, v in data["reproduction"].items() if k != "checks"},
         inclusion=data["inclusion"], continuous=data["continuous"], categorical=data["categorical"], contrasts=data["contrasts"],
@@ -385,10 +407,10 @@ _DEF_NAMES = {"E1": "E1 any valid cell >= threshold (primary)", "E2": "E2 >= 25 
 
 def district_report_markdown(data: dict, meta: dict[str, Any]) -> str:
     inc = data["inclusion"]
-    out = [f"# VarshaSetu district-level verification report - Track B {meta['year']}", "", f"**{meta['evidence_label']}**", "",
+    out = [f"# VarshaSetu district-level verification report - Track {meta['track']} {meta['year']}", "", f"**{meta['evidence_label']}**", "",
            "Historical scientific prototype - not an operational forecast. District-aggregate verification of frozen models against IMD rainfall.", "",
            "## Provenance",
-           f"- Evidence file SHA-256: `{meta['evidence_sha256']}`", f"- Protocol v1 SHA-256: `{data['protocol_sha256']}` (approved and frozen before any result; docs/112)",
+           f"- Evidence file SHA-256: `{meta['evidence_sha256']}`", f"- Protocol SHA-256: `{data['protocol_sha256']}` (approved and frozen before any result; docs/112 for Track B, docs/135 for Track A)",
            f"- Reproduction gate: {data['reproduction']['status']} ({data['reproduction']['check_count']} checks)",
            f"- Population: {inc['cases']} cases, {inc['districts_included']} of {inc['districts_total']} districts included, {inc['district_case_pairs']:,} district-case pairs (>= {inc['min_valid_cells']} valid cells)",
            f"- Regime assignment: {data['regime_assignment']}", "",
@@ -453,8 +475,8 @@ def district_report_rows(data: dict) -> list[dict[str, Any]]:
 @router.get("/district-verification/report")
 def district_verification_report(year: int = Query(...), format: str = Query("md", pattern="^(md|csv|json)$")) -> Response:
     data, digest = _district_evidence(year)
-    meta = {"year": year, "evidence_label": EVIDENCE_LABELS[data["evidence_role"]], "evidence_sha256": digest}
-    headers = {"Content-Disposition": f'attachment; filename="varshasetu_district_verification_B_{year}.{format}"', "X-Evidence-SHA256": digest}
+    meta = {"track": data["track"], "year": year, "evidence_label": EVIDENCE_LABELS[data["evidence_role"]], "evidence_sha256": digest}
+    headers = {"Content-Disposition": f'attachment; filename="varshasetu_district_verification_{data["track"]}_{year}.{format}"', "X-Evidence-SHA256": digest}
     if format == "csv":
         import csv
         import io
@@ -519,8 +541,53 @@ def _resolve_fact(fact: dict) -> PsFact:
     kind, *rest = fact["source"].split(":")
     if kind == "regime" and len(rest) == 2 and rest[0] in ("A", "B"):
         data, digest = _evidence(f"regime_verification_{rest[0]}_{rest[1]}.json")
-    elif kind == "district" and rest[:1] == ["B"] and len(rest) == 2:
+    elif kind == "district" and rest[:1] in (["A"], ["B"]) and len(rest) == 2 and DISTRICT_TRACK_OF_YEAR.get(int(rest[1])) == rest[0]:
         data, digest = _district_evidence(int(rest[1]))
+    elif kind == "coastalregime" and len(rest) == 2 and rest[0] in ("A", "B"):
+        try:
+            from backend.app.api import coastal_regime
+        except ModuleNotFoundError:
+            from app.api import coastal_regime
+        if coastal_regime.TRACK_OF_YEAR.get(int(rest[1])) != rest[0]:
+            raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"Coverage fact has an unknown source: {fact['source']}")
+        data, digest = coastal_regime._result(int(rest[1]))
+    elif kind == "geofollow" and rest == ["2022"]:
+        try:
+            from backend.app.api import geoaware
+        except ModuleNotFoundError:
+            from app.api import geoaware
+        chain = geoaware._followup_chain()
+        data, digest = chain["docs"]["geoaware_followup_test_2022"], chain["shas"]["geoaware_followup_test_2022"]
+    elif kind == "reforecast" and rest in (["r05"], ["r03"], ["r05c"]):
+        try:
+            from backend.app.api import reforecast
+        except ModuleNotFoundError:
+            from app.api import reforecast
+        data, digest = reforecast._confirmation_result() if rest[0] == "r05c" else reforecast._result(f"reforecast_{rest[0]}_test.json")
+    elif kind == "allindia" and len(rest) == 1 and rest[0].isdigit():
+        try:
+            from backend.app.api import all_india_raw
+        except ModuleNotFoundError:
+            from app.api import all_india_raw
+        if int(rest[0]) not in all_india_raw.YEARS:
+            raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"Coverage fact has an unknown source: {fact['source']}")
+        data, digest = all_india_raw._result(int(rest[0]))
+    elif kind == "wdindicator" and len(rest) == 1 and rest[0].isdigit():
+        try:
+            from backend.app.api import wd_indicator
+        except ModuleNotFoundError:
+            from app.api import wd_indicator
+        if int(rest[0]) not in wd_indicator.YEARS:
+            raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"Coverage fact has an unknown source: {fact['source']}")
+        data, digest = wd_indicator._result(int(rest[0]))
+    elif kind == "regimeval" and len(rest) == 2 and rest[0] in ("A", "B"):
+        try:
+            from backend.app.api import regime_validation
+        except ModuleNotFoundError:
+            from app.api import regime_validation
+        if regime_validation.TRACK_OF_YEAR.get(int(rest[1])) != rest[0]:
+            raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"Coverage fact has an unknown source: {fact['source']}")
+        data, digest = regime_validation._result(int(rest[1]))
     elif kind in ("zone", "zoneforcing") and len(rest) == 2 and rest[0] in ("A", "B"):
         try:
             from backend.app.api import zones
@@ -534,6 +601,8 @@ def _resolve_fact(fact: dict) -> PsFact:
     for part in fact["pointer"].strip("/").split("/"):
         if isinstance(node, dict) and part in node:
             node = node[part]
+        elif isinstance(node, list) and part.isdigit() and int(part) < len(node):
+            node = node[int(part)]
         else:
             raise _science_error(503, ScienceErrorCode.INTEGRITY_FAILURE, f"Coverage fact pointer does not resolve: {fact['source']} {fact['pointer']}")
     if isinstance(node, bool) or not isinstance(node, (int, float)):

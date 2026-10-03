@@ -110,5 +110,38 @@ regime labels, and scientific endpoint activation remain blocked.
 ## Status after Phase 9 (2026-10-01)
 
 - [x] Geography-aware correction (M5a) protocol frozen before training, trained on 2023, selection frozen, evaluated on 2024 and the post-hoc 2025 (`docs/124`, `docs/126`). Result: pre-registered rule **not met** (heavy-rain gain on the Ghats coast replicated, but 2024 over-forecasting).
-- [ ] A follow-up (protocol v2, for example a bias-controlled recipe) needs independent years: option D1(a) of `docs/124`, a new corpus for 2021 and 2022, or waiting for 2026. Not started; needs owner decision.
+- [x] Independent years acquired (forecast side): corpus v2 for 2021 (development) and 2022 (sealed test), protocol frozen, 24,500 hash-verified messages, nothing scored (`docs/127`, `docs/128`).
+- [x] Forecast-side features built for 2021 (paired with IMD, development) and 2022 (no targets, sealed): `docs/128`.
+- [x] Follow-up protocol drafted (`docs/129`), frozen as approved for development selection only, and run: **no candidate in any arm**, sealed 2022 not opened (`docs/130`).
+- [x] Protocol v2 (G3 reported, not gating; post-hoc, disclosed) frozen and run: each arm has a candidate; 2022 still unopened (`docs/131`).
+- [x] All three options done in the only coherent order (`docs/132`, `docs/133`): protocol v3 frozen, 2022 opened once under a signed 29-hash record, both candidate sets scored; primary passes, secondary does not; reported.
+- [ ] Open after `docs/133`: decision 5 (frozen M1 to M4 on 2022, still no); IMD rights (D2); 2022 is consumed, so further tests need new data (2026 season).
+- [ ] The follow-up (protocol for a model, for example a bias-controlled recipe) still needs: owner confirmation of the year roles, a frozen follow-up protocol (including sensitivity to the forecast 500 hPa height offset), the 2022 IMD pairing done only at unseal, and the IMD rights decision (D2). Not started.
 - [x] First green CI run on GitHub Actions (backend with the checksum-verified bundle, frontend, Dockerfile lint) after fixing line-ending and missing-local-code issues that only a clean Linux checkout exposes.
+
+## Status after the completion work packages (2026-10-03, `docs/134`)
+
+- [x] WP-A: district verification for Track A (`docs/135`).
+- [x] WP-B: partial independent regime validation; the pseudo-Active class does not match observed active spells (`docs/136`).
+- [x] WP-C: forecast-time coastal/orographic forcing regime, a labelled heuristic (`docs/137`).
+- [x] WP-D: western-disturbance trough indicator, association not met (`docs/138`); Raw all-India verification (`docs/140`).
+- [x] WP-E: the 2022 independent-test figures are served on the improvement row and the Geography-Aware page (very-heavy improvement not shown).
+- [x] WP-F: experimental live-cycle worker, API and page; replay is bit-identical (`docs/139`).
+- [ ] Run the live worker on a current NOAA cycle (needs owner confirmation of the download; `plan` first).
+- [ ] Scheduler, retries, alerting and a hosted worker for the live view.
+- [ ] A validated western-disturbance regime (needs a label source and a winter or pre-monsoon corpus).
+- [ ] A corrected (post-processed) forecast outside the 10-22 N, 68-80 E box (a new corpus, protocol and independent test).
+- [ ] Very-heavy rain improvement and skill on a new cycle cannot be shown on data that exist today.
+- [ ] Owner decisions: IMD redistribution rights (D2), the frozen M1-M4 on 2022 (default no), commit and push.
+
+## Status after the reforecast study (2026-10-03, `docs/142`)
+
+- [x] Independent data acquired: GEFSv12 reforecast control 2000-2016 (about 40 GB) and ERA5 geopotential 2000-2022 (about 11 GB); 2014-2016 sealed and opened once.
+- [x] Regime detection (active, break, low/depression, western disturbance, coastal rain day) validated against objective labels: PS-R03 implemented.
+- [x] Heavy-rain correction and exceedance classifiers: RMSE, heavy and very-heavy CSI improve; regime-awareness adds nothing.
+- [x] PS-R05: round 1 failed the frozen mean-error guardrail; a pre-registered confirmatory round 2 on 2017-2019 (frozen models, one mean-error shift) met every criterion (`docs/142`).
+- [ ] A model whose mean error stays inside the guardrail without a shift taken from earlier years (2019 alone stays above it after the shift).
+- [ ] Expert- or bulletin-assigned regime labels (the labels used are objective rules).
+- [ ] Reliability analysis of the exceedance probabilities before they are called calibrated.
+- [ ] The live worker run on a current NOAA cycle (needs owner confirmation of the download).
+

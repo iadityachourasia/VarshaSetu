@@ -89,12 +89,13 @@ describe("getRegimeEvidence", () => {
 
 // ---- district-level verification (protocol v1) ---------------------------------------------------
 
-import { DISTRICT_VERIFICATION_YEARS, districtVerificationSchema, getDistrictVerification } from "./evidence";
+import { DISTRICT_TRACK_OF_YEAR, DISTRICT_VERIFICATION_YEARS, districtVerificationSchema, getDistrictVerification } from "./evidence";
 
-function districtPayload(year: number) {
-  const data = JSON.parse(readFileSync(resolve(EVIDENCE_DIR, `district_verification_B_${year}.json`), "utf8"));
+function districtPayload(year: (typeof DISTRICT_VERIFICATION_YEARS)[number]) {
+  const track = DISTRICT_TRACK_OF_YEAR[year];
+  const data = JSON.parse(readFileSync(resolve(EVIDENCE_DIR, `district_verification_${track}_${year}.json`), "utf8"));
   return {
-    track: "B", year, evidence_role: data.evidence_role, evidence_label: "label", evidence_sha256: "a".repeat(64), protocol_sha256: data.protocol_sha256,
+    track, year, evidence_role: data.evidence_role, evidence_label: "label", evidence_sha256: "a".repeat(64), protocol_sha256: data.protocol_sha256,
     protocol_status: "APPROVED_FOR_EXECUTION", protocol_decisions: {}, regime_assignment: data.regime_assignment,
     reproduction: { status: data.reproduction.status, check_count: data.reproduction.check_count }, inclusion: data.inclusion, continuous: data.continuous,
     categorical: data.categorical, contrasts: data.contrasts, improved_worsened: data.improved_worsened, supported_district_counts: data.supported_district_counts,
@@ -104,8 +105,9 @@ function districtPayload(year: number) {
 
 describe("district verification schema against the real tracked evidence", () => {
   for (const year of DISTRICT_VERIFICATION_YEARS) {
-    it(`parses Track B ${year} and keeps undefined values null`, () => {
+    it(`parses Track ${DISTRICT_TRACK_OF_YEAR[year]} ${year} and keeps undefined values null`, () => {
       const parsed = districtVerificationSchema.parse(districtPayload(year));
+      expect(parsed.track).toBe(DISTRICT_TRACK_OF_YEAR[year]);
       expect(parsed.inclusion.districts_included).toBe(169);
       expect(parsed.districts).toHaveLength(169);
       expect(Object.keys(parsed.categorical)).toEqual(["E1", "E2", "E3"]);
@@ -162,9 +164,10 @@ describe("SIH26080 coverage schema against the real tracked manifest", () => {
     const parsed = psCoverageSchema.parse(coveragePayload());
     expect(parsed.rows.length).toBeGreaterThanOrEqual(25);
     const byId = new Map(parsed.rows.map((r) => [r.id, r]));
-    for (const id of ["REGIME-WESTERN-DISTURBANCE", "LIVE-INFERENCE"]) expect(byId.get(id)?.status).toBe("PLANNED");
-    expect(byId.get("REGIME-COASTAL-OROGRAPHIC")?.status).toBe("PARTIAL");       // rule-based zones and stratified verification only; never implemented without a validated model
-    expect(byId.get("REGIME-CLASSIFIER")?.status).toBe("PARTIAL");
+    // the three regime rows are implemented only through the pre-registered sealed-year verdicts (docs/142); live inference and the all-India domain stay partial, and nothing is planned
+    for (const id of ["REGIME-CLASSIFIER", "REGIME-WESTERN-DISTURBANCE", "REGIME-COASTAL-OROGRAPHIC", "IMPROVEMENT-VS-RAW"]) expect(byId.get(id)?.status).toBe("IMPLEMENTED");
+    for (const id of ["LIVE-INFERENCE", "ALL-INDIA-DOMAIN", "REGIME-INDEPENDENT-VALIDATION"]) expect(byId.get(id)?.status).toBe("PARTIAL");
+    expect(parsed.rows.some((r) => r.status === "PLANNED")).toBe(false);
     const covered = new Set(parsed.rows.flatMap((r) => r.ps_ids));
     for (let n = 1; n <= 14; n++) expect(covered.has(`PS-R${String(n).padStart(2, "0")}`)).toBe(true);
     for (const row of parsed.rows) if (row.status === "IMPLEMENTED") expect(row.pages.length).toBeGreaterThan(0);

@@ -23,17 +23,18 @@ test("the compliance page lists every requirement with an honest status and API-
   await expect(page.locator(".coverage-table tbody tr")).toHaveCount(api.rows.length);
   const wd = api.rows.find((r) => r.id === "REGIME-WESTERN-DISTURBANCE")!;
   const wdRow = page.locator(".coverage-table tbody tr", { hasText: wd.requirement });
-  await expect(wdRow.locator(".coverage-status")).toHaveText("Planned");
-  await expect(wdRow.getByText(/Gap:/)).toBeVisible();
-  await expect(wdRow.getByText("no page yet")).toBeVisible();
-  // coastal/orographic is PARTIAL: rule-based zones with stratified verification, no specialist model, and it links to a real page
+  // western disturbance is IMPLEMENTED only through the sealed-year detection verdict, and the row says what that does not mean
+  await expect(wdRow.locator(".coverage-status")).toHaveText("Implemented");
+  await expect(wdRow.locator(".phase5-caveat")).toContainText("largely verifies the forecast height field");
+  await expect(wdRow.getByRole("link", { name: "Regime Intelligence (sealed-year regime detection)" }).first()).toHaveAttribute("href", "/regimes");
+  // coastal/orographic is IMPLEMENTED through the sealed-year detector; there is still no specialist rainfall model and the row says so
   const coastal = api.rows.find((r) => r.id === "REGIME-COASTAL-OROGRAPHIC")!;
   const coastalRow = page.locator(".coverage-table tbody tr", { hasText: coastal.requirement });
-  await expect(coastalRow.locator(".coverage-status")).toHaveText("Partial");
-  await expect(coastalRow.locator(".phase5-caveat")).toContainText("specialist model");
+  await expect(coastalRow.locator(".coverage-status")).toHaveText("Implemented");
+  await expect(coastalRow.locator(".phase5-caveat")).toContainText("no specialist rainfall model");
   await expect(coastalRow.getByRole("link", { name: "Geographic Zones" })).toHaveAttribute("href", "/zones");
   const classifier = page.locator(".coverage-table tbody tr", { hasText: "Weather-regime classifier" }).first();
-  await expect(classifier.locator(".coverage-status")).toHaveText("Partial");
+  await expect(classifier.locator(".coverage-status")).toHaveText("Implemented");
 });
 
 test("figures on the page equal the evidence-resolved API values and post-hoc years are labelled", async ({ page }) => {

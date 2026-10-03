@@ -170,14 +170,16 @@ error, never silently masked. See
 VarshaSetu/
 ├── backend/              FastAPI read-only science API (Python 3.12)
 │   ├── app/api/          science.py (Track A) · operational.py (Track B) · evidence.py and zones.py
-│   │                     (hash-verified regime, district, zone and requirement-coverage evidence)
+│   │                     (hash-verified regime, district, zone and requirement-coverage evidence) ·
+│   │                     coastal_regime, wd_indicator, regime_validation, all_india_raw (frozen evidence) · live.py
+│   ├── app/live/         experimental live-cycle worker pipeline and bundle format (docs/139)
 │   ├── app/services/     legacy pipeline (blocked, quarantined — see below)
-│   └── tests/            pytest suite (388 tests; bare checkouts skip, with printed reasons, the tests that need the data bundle)
+│   └── tests/            pytest suite (670 tests; bare checkouts skip, with printed reasons, the tests that need the data bundle)
 ├── frontend-v2/           Next.js 16 / React 19 presentation frontend (the demo app)
-│   ├── src/app/           14 routes: the overview, forecast (with the synoptic chart),
+│   ├── src/app/           16 routes: the overview, forecast (with the synoptic chart),
 │   │                      casebook, extremes, ensemble, regimes, districts, verification,
-│   │                      observations, quality, methodology, audit, zones, compliance
-│   └── tests/e2e/         Playwright suite (101 tests, real backend)
+│   │                      observations, quality, methodology, audit, zones, geoaware, live, compliance
+│   └── tests/e2e/         Playwright suite (131 tests, real backend)
 ├── frontend/              legacy Vite app (blocked CSV path — not the demo app)
 ├── data/ · experiments/   frozen scientific artifacts (gitignored; see below)
 ├── scripts/demo/          one-command demo launcher + preflight + stop
@@ -289,16 +291,16 @@ curl https://varshasetu.onrender.com/api/science/operational/quality      # data
 ```
 
 Test suite status as last verified locally against a real backend and the
-real frozen corpus on 2026-10-01 (re-run these yourself, commands above; CI runs the
+real frozen corpus on 2026-10-03 (re-run these yourself, commands above; CI runs the
 backend, frontend and Dockerfile checks on every push, but not the end-to-end suite):
 
 | Suite | Result |
 |---|---|
-| Backend (`pytest backend/tests`) | 388 passed (a bare clone without the data bundle: 235 passed, 76 skipped with reasons) |
-| Frontend unit (`npm run test`) | 134 passed |
-| Frontend E2E (`npm run e2e`, single worker) | 101 passed |
+| Backend (`pytest backend/tests`) | 670 passed, 0 skipped (run with a writable `--basetemp` on Windows; a bare clone without the data bundle was 235 passed, 76 skipped with reasons when last measured, before the geography-aware tests were added) |
+| Frontend unit (`npm run test`) | 180 passed |
+| Frontend E2E (`npm run e2e`, single worker) | 131 passed |
 | TypeScript / ESLint | clean |
-| Production build | clean, all 14 routes |
+| Production build | clean, all 16 routes |
 
 ## Scientific Constraints (non-negotiable)
 

@@ -5,6 +5,8 @@ export default defineConfig({
   timeout: 90_000,
   expect: { timeout: 20_000 },
   fullyParallel: false,
+  // One worker: the specs share one local backend and one Next server, and two workers made different map- and district-heavy specs time out on each run (all 104 pass serially).
+  workers: 1,
   reporter: [["list"]],
   use: { baseURL: "http://127.0.0.1:3100", trace: "retain-on-failure", screenshot: "only-on-failure" },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"], channel: "chrome", viewport: { width: 1440, height: 900 } } }],
