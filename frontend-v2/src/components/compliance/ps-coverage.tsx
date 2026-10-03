@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { COVERAGE_STATUSES, EvidenceApiError, getPsCoverage, type CoverageStatus, type PsCoverageRow } from "@/lib/api/evidence";
 import { ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/components/science/common";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const STATUS_LABEL: Record<CoverageStatus, string> = { IMPLEMENTED: "Implemented", PARTIAL: "Partial", PLANNED: "Planned" };
 const STATUS_HELP: Record<CoverageStatus, string> = {
@@ -63,6 +64,6 @@ export function PsCoverage() {
         <tbody>{rows.filter((row) => row.group === group).map((row) => <Row key={row.id} row={row} />)}</tbody></table></div>
     </section>)}
     {rows.length === 0 ? <p className="micro-note">No rows have this status.</p> : null}
-    <p className="micro-note">Coverage manifest SHA-256 {data.coverage_sha256.slice(0, 12)}… · Historical scientific prototype, not an operational service. Regimes are forecast-only pseudo-labels; consumed final-test years are post-hoc analyses.</p>
+    <p className="micro-note">Coverage manifest SHA-256 <HashChip hash={data.coverage_sha256} /> · Historical scientific prototype, not an operational service. Regimes are forecast-only pseudo-labels; consumed final-test years are post-hoc analyses.</p>
   </div>;
 }

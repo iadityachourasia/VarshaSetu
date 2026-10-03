@@ -15,16 +15,19 @@ import { useWeatherMap } from "@/components/maps/use-weather-map";
 
 const DOMAIN: [number, number, number, number] = [67.875, 9.875, 80.125, 22.125];
 
-export default function DistrictMap({ geometry, districts, selectedId, onSelect, onReady, colorFor = rainfallColor }: {
+export default function DistrictMap({ geometry, districts, selectedId, onSelect, onReady, colorFor = rainfallColor, hoveredId = null, onHover }: {
   geometry: Geometry["geometry"]; districts: District[]; selectedId: string | null;
   onSelect: (id: string) => void; onReady?: (map: MapLibreMap | null) => void;
   /** Colour scale for the polygon value carried in `corrected_mean_mm` (defaults to the rainfall scale). */
   colorFor?: (value: number) => string;
+  /** Linked hover: the district the table row under the pointer refers to, and a report of the polygon under the map pointer (null on leaving). */
+  hoveredId?: string | null; onHover?: (id: string | null) => void;
 }) {
   const settings = useMapSettings();
   const element = useRef<HTMLDivElement>(null);
   const selectRef = useRef(onSelect);
   const readyRef = useRef(onReady);
+  const hoverRef = useRef(onHover);
   const [hoveredName, setHoveredName] = useState<string | null>(null);
   const data = useMemo(() => {
     const byId = new Map(districts.map((item) => [item.district_id, item]));
@@ -33,7 +36,7 @@ export default function DistrictMap({ geometry, districts, selectedId, onSelect,
       return { ...feature, properties: { ...feature.properties, corrected_mean_mm: district?.corrected_mean_mm ?? null, color: district ? colorFor(district.corrected_mean_mm) : "#566a72" } };
     }) } as FeatureCollection;
   }, [geometry, districts, colorFor]);
-  useEffect(() => { selectRef.current = onSelect; readyRef.current = onReady; }, [onSelect, onReady]);
+  useEffect(() => { selectRef.current = onSelect; readyRef.current = onReady; hoverRef.current = onHover; }, [onSelect, onReady, onHover]);
 
   const installLayers = useCallback((map: MapLibreMap) => {
     const before = firstLabelLayer(map.getStyle());
@@ -65,13 +68,19 @@ export default function DistrictMap({ geometry, districts, selectedId, onSelect,
       const name = event.features?.[0]?.properties?.district_name;
       if (map.getLayer("district-hover")) map.setFilter("district-hover", ["==", ["get", "district_id"], typeof id === "string" ? id : ""]);
       setHoveredName(typeof name === "string" ? name : null);
+      hoverRef.current?.(typeof id === "string" ? id : null);
       map.getCanvas().style.cursor = typeof id === "string" ? "pointer" : "";
     };
-    const leave = () => { if (map.getLayer("district-hover")) map.setFilter("district-hover", ["==", ["get", "district_id"], ""]); setHoveredName(null); map.getCanvas().style.cursor = ""; };
+    const leave = () => { if (map.getLayer("district-hover")) map.setFilter("district-hover", ["==", ["get", "district_id"], ""]); setHoveredName(null); hoverRef.current?.(null); map.getCanvas().style.cursor = ""; };
     map.on("click", "district-fill", click); map.on("mousemove", "district-fill", hover); map.on("mouseleave", "district-fill", leave);
     return () => { map.off("click", "district-fill", click); map.off("mousemove", "district-fill", hover); map.off("mouseleave", "district-fill", leave); };
   }, [districts, mapRef]);
   useEffect(() => { (mapRef.current?.getSource("district-choropleth") as GeoJSONSource | undefined)?.setData(data); }, [data, mapRef]);
+  useEffect(() => {
+    const map = mapRef.current;
+    if (map?.getLayer("district-hover")) map.setFilter("district-hover", ["==", ["get", "district_id"], hoveredId ?? ""]);
+    if (element.current) element.current.dataset.hovered = hoveredId ?? "";
+  }, [hoveredId, mapRef]);
   useEffect(() => { const map = mapRef.current; if (map?.getLayer("district-selected")) map.setFilter("district-selected", ["==", ["get", "district_id"], selectedId ?? ""]); }, [selectedId, mapRef]);
   useEffect(() => { const map = mapRef.current; if (map) updateSelectedDistrictLabel(map, geometry as DistrictGeometry, selectedId, settings.geographicStyle); }, [selectedId, geometry, mapRef, settings.geographicStyle]);
   useEffect(() => { const map = mapRef.current; if (map?.getLayer("district-line")) map.setLayoutProperty("district-line", "visibility", settings.boundaries ? "visible" : "none"); }, [settings.boundaries, mapRef]);

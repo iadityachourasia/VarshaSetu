@@ -6,6 +6,7 @@ import { useState } from "react";
 import { ErrorState, LoadingState } from "@/components/science/common";
 import { EvidenceApiError } from "@/lib/api/evidence";
 import { WD_YEARS, getWdCases, getWdOverview, getWdResult, type WdResult } from "@/lib/api/wd-indicator";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const fixed = (value: number | null | undefined, digits: number) => (value == null || !Number.isFinite(value) ? "undefined" : value.toFixed(digits));
 
@@ -57,6 +58,6 @@ export function WdIndicatorPanel() {
     <CaseLookup year={year} />
     <p className="micro-note">Not established whatever the result: {ov.not_established.join("; ")}.</p>
     <ul className="phase5-caveats">{ov.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
-    <p className="micro-note">Protocol {ov.protocol_sha256.slice(0, 12)}… · cases file {ov.cases_file_sha256.slice(0, 12)}… · manifest {ov.manifest_sha256.slice(0, 12)}…. Historical scientific prototype.</p>
+    <p className="micro-note">Protocol <HashChip hash={ov.protocol_sha256} /> · cases file <HashChip hash={ov.cases_file_sha256} /> · manifest <HashChip hash={ov.manifest_sha256} />. Historical scientific prototype.</p>
   </section>;
 }

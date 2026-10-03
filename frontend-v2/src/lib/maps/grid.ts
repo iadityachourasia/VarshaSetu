@@ -1,5 +1,6 @@
 import type { FeatureCollection, Polygon } from "geojson";
 import type { Grid } from "@/lib/api/science";
+import { DIM_ALPHA, inBin, type Emphasis } from "./emphasis";
 
 export type CellSelection = { row: number; column: number };
 export type Palette = "rainfall" | "probability" | "error-difference" | "improvement" | "u850" | "v850" | "q700" | "z500" | "mslp" | "pwat" | "decision";
@@ -101,14 +102,15 @@ export function rasterCoordinates(grid: Grid): [[number, number], [number, numbe
   return [[west, north], [east, north], [east, south], [west, south]];
 }
 
-export function rasterPixels(grid: Grid, values: (number | null)[][], mask: boolean[][], palette: Palette, mode: RasterMode): RasterPixels {
+/** `emphasis` keeps every colour and dims (alpha only) the cells whose value is outside the emphasised legend class; no value is changed. */
+export function rasterPixels(grid: Grid, values: (number | null)[][], mask: boolean[][], palette: Palette, mode: RasterMode, emphasis: Emphasis | null = null): RasterPixels {
   const [rows, columns] = grid.shape;
   if (grid.row_order !== "south_to_north" || grid.column_order !== "west_to_east" || values.length !== rows || mask.length !== rows || grid.latitude_centers.length !== rows || grid.longitude_centers.length !== columns) {
     throw new Error("Grid orientation or dimensions do not match the frozen science contract");
   }
   for (let row = 0; row < rows; row++) if (values[row].length !== columns || mask[row].length !== columns) throw new Error("Grid row dimensions are invalid");
   const scale = mode === "weather" ? 8 : 1;
-  const key = `${palette}:${mode}:${rows}:${columns}`;
+  const key = `${palette}:${mode}:${rows}:${columns}${emphasis ? `:${emphasis.kind}:${emphasis.lo}:${emphasis.hi}` : ""}`;
   let byMask = cache.get(values);
   if (!byMask) { byMask = new WeakMap(); cache.set(values, byMask); }
   let byKey = byMask.get(mask);
@@ -144,7 +146,7 @@ export function rasterPixels(grid: Grid, values: (number | null)[][], mask: bool
         ? rgb(palette === "rainfall" ? rainfallColor(value) : probabilityColor(value))
         : smoothColor(value, palette);
       const offset = (y * width + x) * 4;
-      data[offset] = color[0]; data[offset + 1] = color[1]; data[offset + 2] = color[2]; data[offset + 3] = 255;
+      data[offset] = color[0]; data[offset + 1] = color[1]; data[offset + 2] = color[2]; data[offset + 3] = emphasis && !inBin(value, emphasis.lo, emphasis.hi) ? DIM_ALPHA : 255;
     }
   }
   const result = { width, height, data };

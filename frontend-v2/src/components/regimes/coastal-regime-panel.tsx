@@ -6,6 +6,7 @@ import { useState } from "react";
 import { ErrorState, LoadingState } from "@/components/science/common";
 import { EvidenceApiError } from "@/lib/api/evidence";
 import { COASTAL_CLASSES, COASTAL_YEARS, getCoastalCases, getCoastalOverview, getCoastalResult, type CoastalResult } from "@/lib/api/coastal-regime";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const fixed = (value: number | null | undefined, digits: number) => (value == null || !Number.isFinite(value) ? "undefined" : value.toFixed(digits));
 const pct = (value: number | null | undefined) => (value == null ? "undefined" : `${(100 * value).toFixed(0)} %`);
@@ -59,6 +60,6 @@ export function CoastalRegimePanel() {
     <div className="phase5-controls"><label>Population for the case lookup<select value={year} onChange={(event) => setYear(Number(event.target.value))}>{all.map((r) => <option key={r.year} value={r.year}>{r.evidence_label}</option>)}</select></label></div>
     <CaseLookup year={year} />
     <ul className="phase5-caveats">{ov.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
-    <p className="micro-note">Protocol {ov.protocol_sha256.slice(0, 12)}… · cases file {ov.cases_file_sha256.slice(0, 12)}… · manifest {ov.manifest_sha256.slice(0, 12)}…. Historical scientific prototype.</p>
+    <p className="micro-note">Protocol <HashChip hash={ov.protocol_sha256} /> · cases file <HashChip hash={ov.cases_file_sha256} /> · manifest <HashChip hash={ov.manifest_sha256} />. Historical scientific prototype.</p>
   </section>;
 }

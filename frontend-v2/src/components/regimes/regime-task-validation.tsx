@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { ErrorState, LoadingState } from "@/components/science/common";
 import { EvidenceApiError } from "@/lib/api/evidence";
 import { R03_TASKS, getR03Result, getReforecastOverview } from "@/lib/api/reforecast";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const fixed = (value: number | null | undefined, digits: number) => (value == null || !Number.isFinite(value) ? "undefined" : value.toFixed(digits));
 const TASK_LABEL: Record<string, string> = { ACTIVE: "Active monsoon", BREAK: "Break monsoon", LOW_DEPRESSION: "Low / depression", WESTERN_DISTURBANCE: "Western disturbance", COASTAL_OROGRAPHIC: "Coastal / orographic rain" };
@@ -36,7 +37,7 @@ export function RegimeTaskValidation() {
       <tbody>{R03_TASKS.map((t) => { const x = r.payload.tasks[t]; return <tr key={t} data-testid={`regime-task-row-${t}`}><th scope="row">{TASK_LABEL[t]}<br /><span className="micro-note">{ov.r03.tasks[t]}</span></th>
         <td>{x.cases} ({x.positives} / {x.negatives})</td><td>{x.tier === "INSUFFICIENT_SUPPORT" ? "no number" : interval(x.auc, 3)}</td><td>{x.tier === "INSUFFICIENT_SUPPORT" ? "no number" : interval(x.balanced_accuracy, 3)}</td>
         <td>{x.tier === "INSUFFICIENT_SUPPORT" ? "no number" : interval(x.auc_over_baseline, 3)}</td><td><strong>{TIER_LABEL[x.tier] ?? x.tier}</strong>{x.reason ? <><br /><span className="micro-note">{x.reason}</span></> : null}</td></tr>; })}</tbody></table></div>
-    <p className="micro-note">Verdict rule, frozen before any score: validated needs an AUC lower bound above 0.5 and a positive lower bound of the gain over the climatology baseline; useful also needs an AUC of at least 0.70; a task needs at least 30 positive and 30 negative sealed cases. Protocol {ov.protocol_sha256.slice(0, 12)}… · evidence {r.evidence_sha256.slice(0, 12)}….</p>
+    <p className="micro-note">Verdict rule, frozen before any score: validated needs an AUC lower bound above 0.5 and a positive lower bound of the gain over the climatology baseline; useful also needs an AUC of at least 0.70; a task needs at least 30 positive and 30 negative sealed cases. Protocol <HashChip hash={ov.protocol_sha256} /> · evidence <HashChip hash={r.evidence_sha256} />.</p>
     <ul className="phase5-caveats">{ov.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
   </section>;
 }

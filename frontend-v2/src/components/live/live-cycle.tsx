@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { EmptyState, ErrorState, LoadingState, PageHeading } from "@/components/science/common";
 import { EvidenceApiError } from "@/lib/api/evidence";
 import { LIVE_FIELDS, getLiveCycle, getLiveField, getLiveStatus, type LiveCycle, type LiveField } from "@/lib/api/live";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const fixed = (value: number | null | undefined, digits: number) => (value == null || !Number.isFinite(value) ? "undefined" : value.toFixed(digits));
 const PRODUCT_LABEL: Record<string, string> = { day1_24h: "Day 1 (+3 to +27 h)", day2_24h: "Day 2 (+27 to +51 h)", day3_24h: "Day 3 (+51 to +75 h)" };
@@ -40,7 +41,7 @@ function Heatmap({ field }: { field: LiveField }) {
     </div>
     <div className="live-axis-x"><span>68° E</span><span>80° E</span></div>
     <div className="live-ramp" aria-hidden="true"><span>0</span><i style={{ background: `linear-gradient(90deg, ${[0, 0.25, 0.5, 0.75, 1].map((t) => ramp(t)).join(", ")})` }} /><span>{fixed(high, digits)}</span></div>
-    <figcaption className="micro-note">{field.label} · {field.units} · 0 to {fixed(high, digits)} · 10 to 22 N, 68 to 80 E (south at the bottom) · array {field.array_sha256.slice(0, 12)}…</figcaption>
+    <figcaption className="micro-note">{field.label} · {field.units} · 0 to {fixed(high, digits)} · 10 to 22 N, 68 to 80 E (south at the bottom) · array <HashChip hash={field.array_sha256} /></figcaption>
   </figure>;
 }
 
@@ -74,7 +75,7 @@ function Detail({ kind, date }: { kind: string; date: string }) {
     </div>
     <p className="micro-note" data-testid="live-applicability">Applicability: {c.applicability ? `${c.applicability.status}${c.applicability.largest_share ? `; largest share of cells outside the 2023 training range ${fixed(100 * c.applicability.largest_share.share, 1)} % (${c.applicability.largest_share.feature}, ${PRODUCT_LABEL[c.applicability.largest_share.product] ?? c.applicability.largest_share.product})` : ""}. A range heuristic, not a validity test.` : "not computed for this bundle"}</p>
     {replayWorst != null ? <p className="micro-note" data-testid="live-replay-gate">Replay gate: the largest absolute difference between this path and the frozen 2025 artifacts is {replayWorst.toExponential(2)} (features, regime probabilities, M0 to M4 and probabilities over the paired cells).</p> : null}
-    <p className="micro-note" data-testid="live-provenance">{c.messages} NOAA messages, {(c.transferred_bytes / 1e6).toFixed(2)} MB · manifest {c.manifest_sha256.slice(0, 12)}… · frozen models {Object.entries(c.frozen_models).map(([k, v]) => `${k} ${v.slice(0, 8)}…`).join(", ")} · no observation read, no retraining or recalibration.</p>
+    <p className="micro-note" data-testid="live-provenance">{c.messages} NOAA messages, {(c.transferred_bytes / 1e6).toFixed(2)} MB · manifest <HashChip hash={c.manifest_sha256} /> · frozen models {Object.entries(c.frozen_models).map(([k, v]) => `${k} ${v.slice(0, 8)}…`).join(", ")} · no observation read, no retraining or recalibration.</p>
   </div>;
 }
 

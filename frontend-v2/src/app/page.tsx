@@ -6,6 +6,7 @@ import { casesSchema, demoCasesSchema, getScience, modelComparisonSchema, status
 import { getOperationalCases } from "@/lib/api/operational";
 import { overview2025, resolve2019Overview, type Overview2019Source, type OverviewBenchmark } from "@/lib/overview-data";
 import { score, utc } from "@/lib/format";
+import { CountUp } from "@/components/ui/count-up";
 import { defaultDemoCase } from "@/lib/demo";
 import operational2025 from "@/lib/benchmarks/operational-2025.json";
 
@@ -20,8 +21,8 @@ function BenchmarkPanel({ benchmark, year, href, source }: { benchmark: Overview
       <div className="phase5-benchmark-summary">
         <p className="overview-benchmark-context">{is2025 ? "Completed final test · preselected M1 Ridge MOS" : "Held-out test · M2 Global XGBoost"}</p>
         {source === "verified_snapshot" ? <p className="overview-source-note">API unreachable · verified frozen 2019 snapshot</p> : null}
-        <p className="overview-benchmark-improvement"><strong>{benchmark.reductionPercent}<span>%</span></strong><span>lower aggregate RMSE<br />than Raw GEFS</span></p>
-        <div className="overview-benchmark-values"><span><small>Raw GEFS</small><b>{benchmark.raw.toFixed(2)} mm</b></span><ArrowRight size={18} aria-hidden="true" /><span><small>Corrected</small><b>{benchmark.corrected.toFixed(2)} mm</b></span></div>
+        <p className="overview-benchmark-improvement"><strong><CountUp value={benchmark.reductionPercent} /><span>%</span></strong><span>lower aggregate RMSE<br />than Raw GEFS</span></p>
+        <div className="overview-benchmark-values"><span><small>Raw GEFS</small><b><CountUp value={benchmark.raw.toFixed(2)} /> mm</b></span><ArrowRight size={18} aria-hidden="true" /><span><small>Corrected</small><b><CountUp value={benchmark.corrected.toFixed(2)} /> mm</b></span></div>
       </div>
       <BenchmarkChart points={benchmark.series} year={year} raw={benchmark.raw} corrected={benchmark.corrected} correctedLabel={is2025 ? "M1 Ridge MOS" : "M2 Global XGBoost"} />
       <Link className="overview-benchmark-link" href={href}>Open {year} cases <ArrowRight size={16} aria-hidden="true" /></Link>
@@ -66,11 +67,11 @@ export default async function OverviewPage() {
         {benchmark2019 ? <>
           <span className="small-label">2019 GEFSv12 REFORECAST · {benchmark2019.caseCount} HELD-OUT CASES</span>
           {source2019 === "verified_snapshot" ? <span className="overview-source-note">API unreachable · verified frozen 2019 snapshot</span> : null}
-          <strong>{benchmark2019.reductionPercent}<span>%</span></strong>
+          <strong><CountUp value={benchmark2019.reductionPercent} /><span>%</span></strong>
           <p>lower aggregate RMSE than Raw GEFS</p>
           <div className="result-pair">
-            <span>Raw GEFS <b>{benchmark2019.raw.toFixed(2)} mm</b></span>
-            <span>M2 Global XGBoost <b>{benchmark2019.corrected.toFixed(2)} mm</b></span>
+            <span>Raw GEFS <b><CountUp value={benchmark2019.raw.toFixed(2)} /> mm</b></span>
+            <span>M2 Global XGBoost <b><CountUp value={benchmark2019.corrected.toFixed(2)} /> mm</b></span>
           </div>
           <small>Frozen 2019 final test · 24-hour rainfall</small>
         </> : <ErrorState message="The 2019 scientific API result is unavailable. Its values are hidden until the historical artifacts can be verified." />}

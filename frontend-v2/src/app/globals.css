@@ -1545,17 +1545,6 @@ html { scroll-behavior: smooth; }
 .locator-caption { display: block; padding: 2px 0 3px; text-align: center; font: 600 9px var(--font-geist-mono), monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--text-subtle); }
 @media (max-width: 560px) { .locator-inset { display: none; } }
 
-/* ---- data health in the header */
-.api-health { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; font-weight: 600; white-space: nowrap; color: var(--text-subtle); background: var(--surface-raised); }
-.api-health i { width: 8px; height: 8px; border-radius: 50%; background: var(--text-subtle); }
-.api-health-verified i { background: #2f9e6f; box-shadow: 0 0 0 3px color-mix(in srgb, #2f9e6f 22%, transparent); }
-.api-health-integrity { color: var(--destructive, #a73b4a); border-color: color-mix(in srgb, var(--destructive, #a73b4a) 55%, var(--line)); }
-.api-health-integrity i { background: var(--destructive, #a73b4a); }
-.api-health-unreachable { border-color: color-mix(in srgb, var(--amber, #b7791f) 60%, var(--line)); }
-.api-health-unreachable i { background: var(--amber, #b7791f); }
-.api-health-checking i { animation: pulse 1.4s ease-in-out infinite; }
-@media (max-width: 1280px) { .api-health { width: 34px; padding: 0; justify-content: center; } .api-health > span:not(.sr-only) { display: none; } }
-@media (max-width: 760px) { .api-health { display: none; } }   /* the phone header keeps its four controls on one row */
 
 /* ---- states: a next step, and a skeleton shaped like the content it stands in for */
 .state-retry { display: inline-flex; align-items: center; gap: 7px; margin-top: 12px; padding: 7px 14px; border: 1px solid var(--teal); border-radius: 8px; color: var(--teal); background: transparent; font-size: 12px; font-weight: 650; cursor: pointer; transition: background 140ms; }
@@ -1569,7 +1558,7 @@ html { scroll-behavior: smooth; }
 .loading-state-compact .skeleton-block:nth-child(1) { width: 38%; min-height: 20px; }
 .loading-state-compact .skeleton-block:nth-child(2) { width: 100%; min-height: 84px; }
 .loading-state-compact .skeleton-block:nth-child(3) { width: 72%; }
-@media (prefers-reduced-motion: reduce) { .state-retry-spin, .api-health-checking i { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .state-retry-spin { animation: none; } }
 
 /* ---- the heavy-rain bundle (B1) choice and notice on the 2019 products */
 .corrected-model-choice { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 4px 0 12px; }
@@ -1579,3 +1568,60 @@ html { scroll-behavior: smooth; }
 .heavy-rain-notice summary { cursor: pointer; font-weight: 600; color: var(--foreground); }
 .heavy-rain-notice summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 .decision-bins { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* ---- motion tokens: script (lib/motion.ts DURATION) and stylesheet share these values */
+:root { --dur-fast: 120ms; --dur-base: 200ms; --dur-slow: 320ms; --ease-out: cubic-bezier(.22, .8, .3, 1); }
+
+/* ---- segmented control: the highlight slides to the selected button once it has been measured */
+.segmented { position: relative; }
+.segmented > button { position: relative; z-index: 1; }
+.segmented-thumb { position: absolute; z-index: 0; top: 3px; bottom: 3px; left: 0; border-radius: 4px; background: var(--surface-raised); box-shadow: 0 1px 4px #0002; pointer-events: none; }
+.segmented-animated .segmented-thumb { transition: transform var(--dur-slow) var(--ease-out), width var(--dur-slow) var(--ease-out); }
+.segmented-ready > button.selected { background: transparent; box-shadow: none; }
+.segmented > button { transition: color var(--dur-fast); }
+.segmented > button:not(.selected):hover { color: var(--foreground); }
+.segmented > button:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
+
+/* ---- copy chip for digests and the toast that confirms it */
+.hash-chip { display: inline; padding: 0 5px; margin: 0 1px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface-recessed); color: var(--foreground); font: 600 .92em var(--font-geist-mono), monospace; cursor: copy; transition: border-color var(--dur-fast), background-color var(--dur-fast); }
+.hash-chip:hover { border-color: var(--teal); background: var(--surface-raised); }
+.hash-chip:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
+.toast-region { position: fixed; z-index: 80; right: 18px; bottom: 18px; display: grid; gap: 8px; justify-items: end; pointer-events: none; }
+.toast { padding: 9px 14px; border: 1px solid var(--line); border-left: 3px solid var(--teal); border-radius: 6px; background: var(--surface-raised); color: var(--foreground); font-size: var(--text-data); box-shadow: 0 8px 24px #0003; animation: toast-in var(--dur-slow) var(--ease-out) both; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (max-width: 760px) { .toast-region { left: 12px; right: 12px; justify-items: stretch; } }
+@media (prefers-reduced-motion: reduce) { .segmented-animated .segmented-thumb, .segmented > button, .hash-chip { transition: none; } .toast { animation: none; } }
+
+/* ---- scroll-spy: the section being read is marked in the page contents */
+.page-toc a { transition: border-color var(--dur-fast), color var(--dur-fast), background-color var(--dur-fast); }
+.page-toc a[aria-current="location"] { border-color: var(--primary); color: var(--primary); background: color-mix(in srgb, var(--primary) 9%, var(--surface-raised)); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .page-toc a { transition: none; } }
+
+/* ---- forest plot: intervals draw in from their centre once, and the row under the pointer is emphasised */
+.forest-interval, .forest-cap, .forest-point { transform-box: fill-box; transform-origin: center; }
+.forest-interval { animation: forest-draw var(--dur-slow) var(--ease-out) both; }
+.forest-point { animation: forest-pop var(--dur-slow) var(--ease-out) both; animation-delay: 120ms; }
+@keyframes forest-draw { from { transform: scaleX(0); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes forest-pop { from { transform: scale(0); } to { transform: none; } }
+.forest-row { transition: opacity var(--dur-fast); }
+.forest-plot:hover .forest-row { opacity: .55; }
+.forest-plot:hover .forest-row:hover { opacity: 1; }
+.forest-row:hover .forest-point { r: 4.6px; }
+@media (prefers-reduced-motion: reduce) { .forest-interval, .forest-point { animation: none; } .forest-row { transition: none; } }
+
+/* ---- skeleton to content: what replaces a loading state fades in instead of snapping (opacity only, so nothing shifts) */
+[data-motion="on"] .page-content > * { animation: content-in var(--dur-base) var(--ease-out) backwards; }
+@keyframes content-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---- legend classes are buttons: pointing at one emphasises it on the maps */
+.legend-bin { padding: 3px 0 2px; margin: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: default; transition: opacity var(--dur-fast), transform var(--dur-fast); }
+.legend-bin i { transition: height var(--dur-fast); }
+.legend-bins-active .legend-bin:not(.legend-bin-active) { opacity: .42; }
+.legend-bin-active i { height: 11px; }
+.legend-bin:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 2px; }
+@media (prefers-reduced-motion: reduce) { .legend-bin, .legend-bin i { transition: none; } }
+
+/* ---- linked hover between a district table row and its polygon */
+.district-table tr.linked-row > th, .district-table tr.linked-row > td { background: color-mix(in srgb, var(--teal) 12%, transparent); }
+.district-table tr > th, .district-table tr > td { transition: background-color var(--dur-fast); }
+@media (prefers-reduced-motion: reduce) { .district-table tr > th, .district-table tr > td { transition: none; } }

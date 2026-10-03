@@ -47,6 +47,7 @@ export function ForestPlot({ title, rows, showLabels = true, width = 520 }: { ti
         const ok = finite(row.point) && finite(row.low) && finite(row.high);
         const excludes = ok && ((row.low as number) > 0 || (row.high as number) < 0);
         return <g key={row.label} className={excludes ? "forest-row forest-excludes" : "forest-row"}>
+          <title>{ok ? `${row.label}: ${(row.point as number) >= 0 ? "+" : ""}${(row.point as number).toFixed(3)} (interval ${(row.low as number).toFixed(3)} to ${(row.high as number).toFixed(3)}) ${excludes ? "excludes zero" : "includes zero"}` : `${row.label}: not reported`}</title>
           {index % 2 === 0 ? <rect className="forest-band" x={0} y={y - ROW / 2} width={WIDTH} height={ROW} /> : null}
           {showLabels ? <text className="forest-label" x={0} y={y + 4}>{row.label}</text> : null}
           {ok ? <>

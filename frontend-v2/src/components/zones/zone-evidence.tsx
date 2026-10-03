@@ -8,6 +8,7 @@ import {
   type ZoneForcing, type ZoneGeography, type ZoneName, type ZoneTrackYear, type ZoneVerification,
 } from "@/lib/api/zones";
 import { ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/components/science/common";
+import { HashChip } from "@/components/ui/hash-chip";
 
 type Metric = "rmse_mm" | "bias_mm" | "CSI" | "frequency_bias";
 const METRICS: { key: Metric; label: string; q1?: string; digits: number }[] = [
@@ -209,7 +210,7 @@ export function ZoneEvidence() {
       <p className="micro-note">Stage 3, a geography-aware model, is {ov.stage_3_authorised ? "authorised" : "not authorised"}: it needs its own frozen protocol and approval, and it must beat the strongest non-regime model on held-out data.</p>
     </section>
 
-    <p className="micro-note">Frozen protocol v3 {ov.protocol_sha256.slice(0, 12)}… · geography {ov.geography_sha256.slice(0, 12)}… · Stage 1 manifest {ov.stage1_manifest_sha256.slice(0, 12)}… · Stage 2 manifest {ov.stage2_manifest_sha256.slice(0, 12)}… ·
+    <p className="micro-note">Frozen protocol v3 <HashChip hash={ov.protocol_sha256} /> · geography <HashChip hash={ov.geography_sha256} /> · Stage 1 manifest <HashChip hash={ov.stage1_manifest_sha256} /> · Stage 2 manifest <HashChip hash={ov.stage2_manifest_sha256} /> ·
       Terrain: {geo.source.original}; {geo.source.attribution}. Historical scientific prototype, not an operational service.</p>
   </div>;
 }

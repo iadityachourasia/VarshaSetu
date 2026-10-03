@@ -1,22 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { BASEMAP_SKIP_REASON, basemapReachable } from "./helpers/online";
 
-// Interface refinements: data-health light, evidence chips, forest plots, locator inset, retryable error state.
-
-test("the header reports the verified data state from the API itself", async ({ page }) => {
-  const status = await page.request.get("/api/science/status");
-  await page.goto("/observations");
-  const light = page.getByTestId("api-health");
-  await expect(light).toHaveClass(status.ok() ? /api-health-verified/ : /api-health-(unreachable|integrity)/);
-  if (status.ok()) await expect(light).toContainText("Evidence verified");
-});
-
-test("the header says so when the API cannot be reached", async ({ page }) => {
-  await page.route("**/api/science/status", (route) => route.abort());
-  await page.goto("/observations");
-  await expect(page.getByTestId("api-health")).toHaveClass(/api-health-unreachable/);
-  await expect(page.getByTestId("api-health")).toContainText("API unreachable");
-});
+// Interface refinements: evidence chips, forest plots, locator inset, retryable error state.
 
 test("population rows carry a short chip and keep the full governed label in the document", async ({ page }) => {
   await page.goto("/regimes");
@@ -34,7 +19,7 @@ test("the forest plots agree with the paired-difference table they restate", asy
   const table = page.locator("table", { hasText: "Δ CSI [95 % interval]" }).first();
   const clearing = await table.locator("tbody tr td:nth-child(2)").evaluateAll((cells) => cells.filter((cell) => /interval excludes 0/.test(cell.textContent ?? "")).length);
   await expect(forest.locator("svg").first().locator(".forest-excludes")).toHaveCount(clearing);
-  await expect(forest.locator("svg").first().locator("title")).toContainText(`${clearing} of`);
+  await expect(forest.locator("svg").first().locator(":scope > title")).toContainText(`${clearing} of`);
 });
 
 test("every map carries a whole-India locator with the data domain highlighted", async ({ page }) => {

@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { ErrorState, LoadingState } from "@/components/science/common";
 import { EvidenceApiError } from "@/lib/api/evidence";
 import { R05_MODELS, getR05Confirmation, getR05Result, getReforecastOverview, type ConfirmationResult, type R05Result } from "@/lib/api/reforecast";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const fixed = (value: number | null | undefined, digits: number) => (value == null || !Number.isFinite(value) ? "undefined" : value.toFixed(digits));
 const MODEL_LABEL: Record<string, string> = { M0: "M0 Raw GEFS control", B0: "B0 event-weighted ML (22 features)", B1: "B1 event-weighted ML + static geography", R_hard: "R hard regime routing", R_soft: "R soft regime mixture" };
@@ -82,7 +83,7 @@ export function ReforecastStudy() {
           <td>{fixed(h.test.csi, 3)} / {fixed(h.test.frequency_bias, 2)}</td><td>{fixed(v.test.csi, 3)} / {fixed(v.test.frequency_bias, 2)}</td><td>{fixed(h.auc, 3)} / {fixed(v.auc, 3)}</td></tr>; })}</tbody></table></div>
     <Decisions result={r} />
     <Confirmation result={confirmation.data} />
-    <p className="micro-note">Observed event pairs in the sealed years: heavy {p.support.observed_event_pairs.heavy.toLocaleString("en-GB")}, very heavy {p.support.observed_event_pairs.very_heavy.toLocaleString("en-GB")}. Intervals: 95 percent for RMSE and 97.5 percent for the two CSI differences, whole initialization dates resampled (optimistic). Protocol {ov.protocol_sha256.slice(0, 12)}… · evidence {r.evidence_sha256.slice(0, 12)}….</p>
+    <p className="micro-note">Observed event pairs in the sealed years: heavy {p.support.observed_event_pairs.heavy.toLocaleString("en-GB")}, very heavy {p.support.observed_event_pairs.very_heavy.toLocaleString("en-GB")}. Intervals: 95 percent for RMSE and 97.5 percent for the two CSI differences, whole initialization dates resampled (optimistic). Protocol <HashChip hash={ov.protocol_sha256} /> · evidence <HashChip hash={r.evidence_sha256} />.</p>
     <ul className="phase5-caveats">{ov.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
   </section>;
 }

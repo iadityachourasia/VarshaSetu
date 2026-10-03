@@ -13,6 +13,7 @@ import { ErrorState, LoadingState, Metric } from "@/components/science/common";
 import { HeavyRainNotice } from "@/components/science/heavy-rain-controls";
 import { DecisionLegend, ScoreLegend } from "@/components/maps/map-legend";
 import { MapControls } from "@/components/maps/map-controls";
+import { Segmented } from "@/components/ui/segmented";
 import { mapBounds } from "@/components/maps/use-weather-map";
 
 const GridMap = dynamic(() => import("@/components/maps/grid-map"), { ssr: false, loading: () => <div className="map-placeholder" aria-label="Loading classifier map" /> });
@@ -48,7 +49,7 @@ export function ExtremeClassifierView({ caseId, threshold, record }: { caseId: s
   const fullscreen = async () => { if (document.fullscreenElement) await document.exitFullscreen(); else await panel.current?.requestFullscreen(); mapRef.current?.resize(); };
   return <>
     <HeavyRainNotice />
-    <div className="segmented" role="group" aria-label="Classifier layer"><button type="button" className={layer === "score" ? "selected" : ""} aria-pressed={layer === "score"} onClick={() => setLayer("score")}>Classifier score</button><button type="button" className={layer === "decision" ? "selected" : ""} aria-pressed={layer === "decision"} onClick={() => setLayer("decision")}>Forecast yes / no at the frozen threshold</button></div>
+    <Segmented label="Classifier layer" value={layer} onChange={setLayer} options={[{ value: "score", label: "Classifier score" }, { value: "decision", label: "Forecast yes / no at the frozen threshold" }]} />
     <div className="extremes-layout" data-testid="classifier-view"><div className="extremes-map"><MapControls onReset={() => mapRef.current?.fitBounds(mapBounds(grid.bounds_west_south_east_north), { padding: 14, duration: 0 })} onZoom={(delta) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 0) + delta, { duration: 150 })} onFullscreen={fullscreen} />
       <div ref={panel}><GridMap id="classifier" title={`${heavy ? "Heavy" : "Very-heavy"} rain · ${layer === "score" ? "classifier score" : "classifier forecast (yes / no)"}`} subtitle={`B1 · frozen threshold ${tau.toFixed(3)} · rain ≥ ${limit} mm / 24 h · ${record ? utc(record.valid_period_end_utc) : ""}`}
         values={values} mask={mask} grid={grid} palette={layer === "score" ? "probability" : "decision"} valueFormat={layer === "score" ? "score" : "decision"} geometry={geometry.data?.geometry} selected={cell} onSelect={setSelected} onReady={(_, map) => { mapRef.current = map; }} /></div>

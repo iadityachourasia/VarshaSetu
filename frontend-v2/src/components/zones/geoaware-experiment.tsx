@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { EvidenceApiError } from "@/lib/api/evidence";
 import { getGeoawareEvaluation, getGeoawareFollowup, getGeoawareOverview, type GeoawareEvaluation, type GeoawareFollowup, type GeoawareOverview } from "@/lib/api/geoaware";
 import { ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/components/science/common";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const ZONE = "COASTAL_AND_OROGRAPHIC";
 const MODELS: { key: string; label: string }[] = [
@@ -55,7 +56,7 @@ function YearSection({ ev, ov }: { ev: GeoawareEvaluation; ov: GeoawareOverview 
       <span><b>Overall RMSE, A3 minus M2</b> {statText(decision.overall_rmse_A3_minus_M2, 2)} mm</span>
       <span><b>Guardrails on this year</b> G1 {yesNo(g.G1)} · G2 {yesNo(g.G2)} · G3 {yesNo(g.G3)}</span>
     </div>
-    <p className="micro-note">Evidence file {ev.evidence_sha256.slice(0, 12)}…. G1 heavy CSI no worse than Raw, G2 absolute bias at most the frozen limit, G3 very-heavy frequency bias at least the frozen floor.</p>
+    <p className="micro-note">Evidence file <HashChip hash={ev.evidence_sha256} />. G1 heavy CSI no worse than Raw, G2 absolute bias at most the frozen limit, G3 very-heavy frequency bias at least the frozen floor.</p>
   </section>;
 }
 
@@ -134,7 +135,7 @@ function FollowupSection({ data }: { data: GeoawareFollowup }) {
     <p>The pre-registered rule required all of:</p>
     <ol className="phase5-caveats">{data.decision_rule.adds_value_requires_all.map((rule) => <li className="phase5-caveat" key={rule}>{rule}</li>)}</ol>
     <ul className="phase5-caveats">{data.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
-    <p className="micro-note">Protocol v3 {data.protocol_v3_sha256.slice(0, 12)}… · selection freeze v3 {data.freeze_v3_sha256.slice(0, 12)}… · unseal record {data.unseal_record_sha256.slice(0, 12)}… · test result {data.test_result_sha256.slice(0, 12)}… · protocol v2 {data.protocol_v2_sha256.slice(0, 12)}… · protocol v1 {data.protocol_v1_sha256.slice(0, 12)}….</p>
+    <p className="micro-note">Protocol v3 <HashChip hash={data.protocol_v3_sha256} /> · selection freeze v3 <HashChip hash={data.freeze_v3_sha256} /> · unseal record <HashChip hash={data.unseal_record_sha256} /> · test result <HashChip hash={data.test_result_sha256} /> · protocol v2 <HashChip hash={data.protocol_v2_sha256} /> · protocol v1 <HashChip hash={data.protocol_v1_sha256} />.</p>
   </section>;
 }
 
@@ -194,6 +195,6 @@ export function GeoawareExperiment() {
       <p>The 2024 and 2025 results have now been seen, so tuning against them would only fit the years used to judge the result. A fair follow-up needs new years of data that were not used. Approval: {ov.approval.option_D1}.</p>
     </section>
 
-    <p className="micro-note">Frozen protocol {ov.protocol_sha256.slice(0, 12)}… · selection freeze {ov.selection_freeze_sha256.slice(0, 12)}… · manifest {ov.manifest_sha256.slice(0, 12)}… · Historical scientific prototype, not an operational service.</p>
+    <p className="micro-note">Frozen protocol <HashChip hash={ov.protocol_sha256} /> · selection freeze <HashChip hash={ov.selection_freeze_sha256} /> · manifest <HashChip hash={ov.manifest_sha256} /> · Historical scientific prototype, not an operational service.</p>
   </div>;
 }

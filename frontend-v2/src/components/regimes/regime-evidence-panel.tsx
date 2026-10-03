@@ -9,6 +9,8 @@ import {
   type BootstrapStat, type EvidenceBlock, type EvidenceModel, type EvidenceScale, type EvidenceThreshold, type RegimeEvidence,
 } from "@/lib/api/evidence";
 import { regimeName } from "@/lib/format";
+import { HashChip } from "@/components/ui/hash-chip";
+import { DownloadLink } from "@/components/ui/download-link";
 
 type MetricKey = "rmse_mm" | "mae_mm" | "bias_mm" | "POD" | "FAR" | "CSI" | "ETS" | "FSS" | "freq";
 const METRICS: { key: MetricKey; label: string; group: "continuous" | "event" }[] = [
@@ -102,10 +104,10 @@ export function RegimeEvidencePanel({ track, year }: { track: "A" | "B"; year: n
   return <section className="phase5-analysis-block regime-evidence" aria-labelledby="regime-evidence-title">
     <h2 id="regime-evidence-title">Regime-aware correction · verification by forecast-only regime and lead</h2>
     <p className={postHoc ? "phase5-caveat" : undefined}><strong>{data.evidence_label}</strong>. Track {data.track} · {data.year} · {data.summary.case_count} cases · {data.summary.cell_count.toLocaleString("en-GB")} paired cells.
-      Frozen models re-aggregated only; nothing was trained, tuned or selected for this view. Reproduction of the frozen numbers: {data.reproduction.status} ({data.reproduction.check_count} checks, max difference {data.reproduction.max_abs_diff.toExponential(1)}). Evidence SHA-256 {data.evidence_sha256.slice(0, 12)}…</p>
+      Frozen models re-aggregated only; nothing was trained, tuned or selected for this view. Reproduction of the frozen numbers: {data.reproduction.status} ({data.reproduction.check_count} checks, max difference {data.reproduction.max_abs_diff.toExponential(1)}). Evidence SHA-256 <HashChip hash={data.evidence_sha256} /></p>
 
     <p className="regime-evidence-downloads"><strong>Verification report</strong> (generated from this hash-verified evidence; RMSE, MAE, bias, POD, FAR, CSI, ETS and FSS by regime and lead):{" "}
-      {(["md", "csv", "json"] as const).map((format, index) => <span key={format}>{index ? " · " : ""}<a href={`/api/science/evidence/report?track=${track}&year=${year}&format=${format}`} download>{format === "md" ? "Markdown" : format.toUpperCase()}</a></span>)}</p>
+      {(["md", "csv", "json"] as const).map((format, index) => <span key={format}>{index ? " · " : ""}<DownloadLink href={`/api/science/evidence/report?track=${track}&year=${year}&format=${format}`}>{format === "md" ? "Markdown" : format.toUpperCase()}</DownloadLink></span>)}</p>
     <div className="phase5-metric-strip" aria-label="RMSE change relative to Raw NWP">
       {EVIDENCE_MODELS.filter((model) => model !== "M0").map((model) => {
         const value = data.overall.continuous[model].rmse_mm;

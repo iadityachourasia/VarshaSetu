@@ -188,7 +188,7 @@ test("overview benchmark and evidence have structured cards", async ({ page }) =
   const cards = await page.locator(".phase5-benchmark-pair article").evaluateAll((items) => items.map((item) => ({
     background: getComputedStyle(item).backgroundColor,
     padding: getComputedStyle(item).paddingLeft,
-    values: item.querySelectorAll(".overview-benchmark-values span").length,
+    values: item.querySelectorAll(".overview-benchmark-values > span").length,
   })));
   expect(cards.every((card) => card.background !== "rgba(0, 0, 0, 0)" && parseFloat(card.padding) >= 16 && card.values === 2)).toBe(true);
   const evidence = await page.locator(".overview-evidence-item").evaluateAll((items) => items.every((item) => parseFloat(getComputedStyle(item).paddingLeft) >= 10));

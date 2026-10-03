@@ -9,6 +9,7 @@ import {
   OBSERVED_STATES, VALIDATION_YEARS, getRegimeValidationOverview, getRegimeValidationResult, type RegimeValidationResult,
 } from "@/lib/api/regime-validation";
 import { regimeName } from "@/lib/format";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const fixed = (value: number | null | undefined, digits: number) => (value == null || !Number.isFinite(value) ? "undefined" : value.toFixed(digits));
 type TaskKey = "active_vs_not_active" | "break_vs_not_break";
@@ -67,6 +68,6 @@ export function IndependentRegimeValidation() {
       <ul className="phase5-caveats">{ov.criteria.deviations_from_the_published_work.map((d) => <li className="phase5-caveat" key={d}>{d}</li>)}</ul>
       <p>Core-zone box {ov.criteria.core_zone_box.lat.join(" to ")} N, {ov.criteria.core_zone_box.lon.join(" to ")} E; anomaly at least {ov.criteria.threshold_sd} standard deviation for at least {ov.criteria.min_spell_days} consecutive days; labels for months {ov.criteria.label_window_months.join(" and ")} only; climatology {ov.criteria.climatology.years.join(" to ")} ({ov.criteria.climatology.files} IMD files, no year shared with any evaluated population). {ov.approval.note}</p></details>
     <ul className="phase5-caveats">{ov.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
-    <p className="micro-note">Protocol {ov.protocol_sha256.slice(0, 12)}… · manifest {ov.manifest_sha256.slice(0, 12)}…. Historical scientific prototype.</p>
+    <p className="micro-note">Protocol <HashChip hash={ov.protocol_sha256} /> · manifest <HashChip hash={ov.manifest_sha256} />. Historical scientific prototype.</p>
   </section>;
 }

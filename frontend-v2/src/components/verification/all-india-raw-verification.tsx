@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ErrorState, LoadingState } from "@/components/science/common";
 import { EvidenceApiError } from "@/lib/api/evidence";
 import { ALL_INDIA_REGIONS, ALL_INDIA_YEARS, getAllIndiaOverview, getAllIndiaResult, type AllIndiaResult } from "@/lib/api/all-india-raw";
+import { HashChip } from "@/components/ui/hash-chip";
 
 const fixed = (value: number | null | undefined, digits: number) => (value == null || !Number.isFinite(value) ? "undefined" : value.toFixed(digits));
 const REGION_LABEL: Record<string, string> = {
@@ -50,7 +51,7 @@ export function AllIndiaRawVerification() {
       <thead><tr><th scope="col">Region</th><th scope="col">Land cells</th><th scope="col">RMSE mm per 24 h [95 %]</th><th scope="col">Bias mm [95 %]</th><th scope="col">Heavy rain (64.5 mm per 24 h)</th></tr></thead>
       <tbody>{ALL_INDIA_REGIONS.map((region) => <tr key={region} data-testid={`all-india-row-${region}`}><th scope="row">{REGION_LABEL[region]}</th>
         <td>{chosen.payload.region_cells_with_observation[region]}</td><td>{intervalText(chosen, region, "rmse", 2)}</td><td>{intervalText(chosen, region, "bias", 2)}</td><td>{heavyText(chosen, region)}</td></tr>)}</tbody></table></div>
-    <p className="micro-note">{ov.evaluation.uncertainty_note}. {ov.definition.regions.note}. Protocol {ov.protocol_sha256.slice(0, 12)}… · ledger {ov.ledger_sha256.slice(0, 12)}… · manifest {ov.manifest_sha256.slice(0, 12)}…. Historical scientific prototype.</p>
+    <p className="micro-note">{ov.evaluation.uncertainty_note}. {ov.definition.regions.note}. Protocol <HashChip hash={ov.protocol_sha256} /> · ledger <HashChip hash={ov.ledger_sha256} /> · manifest <HashChip hash={ov.manifest_sha256} />. Historical scientific prototype.</p>
     <p className="micro-note">Not established whatever the result: {ov.not_established.join("; ")}.</p>
     <ul className="phase5-caveats">{ov.caveats.map((c) => <li className="phase5-caveat" key={c}>{c}</li>)}</ul>
   </section>;

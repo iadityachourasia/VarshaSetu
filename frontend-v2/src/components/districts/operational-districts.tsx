@@ -23,6 +23,8 @@ import { ChartFrame } from "@/components/science/chart-frame";
 import { RainLegend } from "@/components/maps/map-legend";
 import { MapControls } from "@/components/maps/map-controls";
 import { mapBounds } from "@/components/maps/use-weather-map";
+import { HashChip } from "@/components/ui/hash-chip";
+import { DownloadLink } from "@/components/ui/download-link";
 
 const DistrictMap = dynamic(() => import("./district-map"), { ssr: false, loading: () => <div className="map-placeholder" /> });
 
@@ -172,6 +174,9 @@ export function OperationalDistrictWorkspace({ initialYear, initialCase }: { ini
 
   const defaultId = list?.reduce<OperationalDistrictRow | undefined>((first, item) => !first || item.observed_mean_mm > first.observed_mean_mm ? item : first, undefined)?.district_id ?? null;
   const effectiveId = selectedId ?? defaultId;
+  // Linked hover: pointing at a table row outlines its polygon on the map, and pointing at a polygon marks its table row.
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const rowProps = (districtId: string) => ({ className: `${districtId === effectiveId ? "selected-row" : ""}${districtId === hoveredId ? " linked-row" : ""}`.trim(), onMouseEnter: () => setHoveredId(districtId), onMouseLeave: () => setHoveredId(null), onFocus: () => setHoveredId(districtId), onBlur: () => setHoveredId(null) });
   const selected = list?.find((item) => item.district_id === effectiveId) ?? null;
   const selectedCompare = effectiveId ? compareById.get(effectiveId) ?? null : null;
   const changeSort = (key: SortKey) => { if (sort === key) setAscending(!ascending); else { setSort(key); setAscending(key === "district_name"); } };
@@ -219,10 +224,10 @@ export function OperationalDistrictWorkspace({ initialYear, initialCase }: { ini
   return <div className="page-content districts-page">{heading}{controls}
     <div className="phase5-context-strip"><strong>{year} · {body.year_role === "FINAL_TEST_COMPLETED" ? "Consumed final-test holdout (historical replay)" : "Validation / selection year"}</strong>
       <span>{body.model_role}</span>{regime ? <span>Forecast-only pseudo-regime: {regimeName(regime)}</span> : null}<span>Not live warning guidance</span></div>
-    <div className="case-meta"><span><b>DISTRICTS</b> {list.length} case-valid of {body.source_district_count} intersecting the domain</span><span><b>METHOD</b> Area-overlap weighting</span><span><b>WEIGHTS</b> sha256 {body.weights_sha256.slice(0, 12)}…</span></div>
+    <div className="case-meta"><span><b>DISTRICTS</b> {list.length} case-valid of {body.source_district_count} intersecting the domain</span><span><b>METHOD</b> Area-overlap weighting</span><span><b>WEIGHTS</b> sha256 <HashChip hash={body.weights_sha256} /></span></div>
     <div className="districts-layout"><section className="districts-map-panel" aria-label="District rainfall map"><div className="map-panel-heading"><div><strong>{MAP_VARIABLE[activeVariable].label} · district mean rainfall</strong><span>{list.length} case-valid · {geo.geometry.features.length} source districts intersect domain</span></div></div>
       <MapControls district onReset={() => mapRef.current?.fitBounds(mapBounds([67.875, 9.875, 80.125, 22.125]), { padding: 18, duration: 0 })} onZoom={(delta) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 0) + delta, { duration: 150 })} />
-      <DistrictMap geometry={geo.geometry} districts={mapDistricts} selectedId={effectiveId} onSelect={(id) => selectDistrict(id, geo)} onReady={(map) => { mapRef.current = map; }} colorFor={activeVariable === "error" ? errorColor : rainfallColor} />
+      <DistrictMap geometry={geo.geometry} districts={mapDistricts} selectedId={effectiveId} hoveredId={hoveredId} onHover={setHoveredId} onSelect={(id) => selectDistrict(id, geo)} onReady={(map) => { mapRef.current = map; }} colorFor={activeVariable === "error" ? errorColor : rainfallColor} />
       <div className="district-map-legend">{activeVariable === "error" ? <ErrorLegend /> : <RainLegend />}</div>
       <p className="micro-note">Polygon color is the frozen case-specific district mean of the selected variable{activeVariable === "error" ? ` (${MODEL_SHORT[model]} minus IMD; a district-mean error for this one case, not a skill score)` : ""}, not interpolated grid rainfall. Geography: {body.geometry_source} · {body.geometry_license}. Domain-limited coverage only.</p></section>
       <aside className="district-detail"><span className="small-label">DISTRICT INSPECTOR</span>{selected ? <><h2>{selected.district_name}</h2>
@@ -241,16 +246,16 @@ export function OperationalDistrictWorkspace({ initialYear, initialCase }: { ini
     <SectionHeading title="District product" note="Sort by any column · probabilities and area fractions are distinct measures · IMD columns are historical replay" />
     <div className="phase5-tab-row" role="group" aria-label="Table view"><button type="button" aria-pressed={view === "single"} onClick={() => setView("single")}>Selected model</button><button type="button" aria-pressed={view === "compare"} onClick={() => setView("compare")} disabled={!compareBody}>Compare all models</button></div>
     {compareBody && selectedCase ? <p className="regime-evidence-downloads" data-testid="district-export"><strong>Download this case</strong> (Raw, M1 to M4 and IMD for every district, with weights and geometry hashes):{" "}
-      {(["csv", "json"] as const).map((format, index) => <span key={format}>{index ? " · " : ""}<a href={`/api/science/operational/${year}/cases/${selectedCase.case_id}/districts/export?format=${format}`} download>{format.toUpperCase()}</a></span>)}</p> : null}
+      {(["csv", "json"] as const).map((format, index) => <span key={format}>{index ? " · " : ""}<DownloadLink href={`/api/science/operational/${year}/cases/${selectedCase.case_id}/districts/export?format=${format}`}>{format.toUpperCase()}</DownloadLink></span>)}</p> : null}
     {view === "compare" && compareBody ? <>
       <div className="phase5-tab-row" role="group" aria-label="Comparison measure">{(Object.keys(SHOW_LABEL) as Show[]).map((item) => <button key={item} type="button" aria-pressed={show === item} onClick={() => setShow(item)}>{SHOW_LABEL[item]}</button>)}</div>
       <p className="micro-note">{show === "improvement" ? compareBody.improvement_definition : "Raw and the four corrected models share the same area weights, valid cells and IMD replay; differences are not skill scores."}</p>
       <div className="district-table-wrap"><table className="science-table district-table district-compare-table"><caption className="sr-only">Area-weighted district comparison of Raw GEFS and all four corrected models with IMD replay for the selected historical case</caption>
         <thead><tr>{([["district_name", "District"], ["raw", show === "improvement" ? "Raw (reference)" : "Raw"], ...MODELS.map((key) => [key, MODEL_SHORT[key]]), ["observed", "IMD Mean"]] as [CompareSort, string][]).map(([key, label]) => <th scope="col" key={key} aria-sort={compareSort === key ? compareAscending ? "ascending" : "descending" : "none"}><button type="button" onClick={() => changeCompareSort(key)}>{label}{compareSort === key ? compareAscending ? " ↑" : " ↓" : ""}</button></th>)}</tr></thead>
-        <tbody>{compareOrdered.map((row) => <tr key={row.district_id} className={row.district_id === effectiveId ? "selected-row" : ""}><th scope="row"><button type="button" onClick={() => selectDistrict(row.district_id, geo)}>{row.district_name}</button></th>
+        <tbody>{compareOrdered.map((row) => <tr key={row.district_id} {...rowProps(row.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(row.district_id, geo)}>{row.district_name}</button></th>
           <td>{show === "means" ? mm(row.raw_mean_mm) : show === "errors" ? signed(row.raw_error_mm) : "—"}</td>{MODELS.map((key) => <td key={key}>{tableMetric(row.models[key])}</td>)}<td>{mm(row.observed_mean_mm)}</td></tr>)}</tbody></table></div>
     </> : <div className="district-table-wrap"><table className="science-table district-table"><caption className="sr-only">Area-weighted district rainfall, event probabilities and IMD replay for the selected historical operational-era case</caption><thead><tr>{columns.map((column) => <th scope="col" key={column.key} aria-sort={sort === column.key ? ascending ? "ascending" : "descending" : "none"}><button type="button" onClick={() => changeSort(column.key)}>{column.label}{sort === column.key ? ascending ? " ↑" : " ↓" : ""}</button></th>)}</tr></thead>
-      <tbody>{ordered.map((item) => <tr key={item.district_id} className={item.district_id === effectiveId ? "selected-row" : ""}><th scope="row"><button type="button" onClick={() => selectDistrict(item.district_id, geo)}>{item.district_name}</button></th><td>{mm(item.raw_mean_mm)}</td><td>{mm(item.corrected_mean_mm)}</td><td>{mm(item.observed_mean_mm)}</td><td>{mm(item.corrected_mean_mm - item.observed_mean_mm)}</td><td>{percent(item.heavy_probability)}</td><td>{percent(item.very_heavy_probability)}</td><td>{percent(item.heavy_area_fraction)}</td><td>{percent(item.observed_heavy_area_fraction)}</td></tr>)}</tbody></table></div>}
+      <tbody>{ordered.map((item) => <tr key={item.district_id} {...rowProps(item.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(item.district_id, geo)}>{item.district_name}</button></th><td>{mm(item.raw_mean_mm)}</td><td>{mm(item.corrected_mean_mm)}</td><td>{mm(item.observed_mean_mm)}</td><td>{mm(item.corrected_mean_mm - item.observed_mean_mm)}</td><td>{percent(item.heavy_probability)}</td><td>{percent(item.very_heavy_probability)}</td><td>{percent(item.heavy_area_fraction)}</td><td>{percent(item.observed_heavy_area_fraction)}</td></tr>)}</tbody></table></div>}
     <ul className="phase5-caveats">{body.caveats.map((caveat) => <li key={caveat} className="phase5-caveat">{caveat}</li>)}</ul>
   </div>;
 }

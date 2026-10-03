@@ -14,10 +14,7 @@ export function SectionHeading({ title, note, id }: { title: string; note?: stri
   return <div className="section-heading" id={id}><h2>{title}</h2>{note ? <p>{note}</p> : null}</div>;
 }
 
-/** In-page navigation for the long evidence pages; every target is an element with the matching id. */
-export function PageToc({ items }: { items: { id: string; label: string }[] }) {
-  return <nav className="page-toc" aria-label="On this page" data-testid="page-toc"><span className="page-toc-label">On this page</span>{items.map((item) => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</nav>;
-}
+export { PageToc } from "./page-toc";
 
 export function Metric({ label, value, detail, tone }: { label: string; value: string; detail?: string; tone?: "teal" | "amber" | "muted" }) {
   return <div className={`metric ${tone ? `metric-${tone}` : ""}`}><span className="metric-label">{label}</span><strong className="metric-value">{value}</strong>{detail ? <span className="metric-detail">{detail}</span> : null}</div>;

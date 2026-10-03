@@ -16,6 +16,8 @@ import { regimeName } from "@/lib/format";
 import { ErrorState, LoadingState } from "@/components/science/common";
 import { MapControls } from "@/components/maps/map-controls";
 import { mapBounds } from "@/components/maps/use-weather-map";
+import { HashChip } from "@/components/ui/hash-chip";
+import { DownloadLink } from "@/components/ui/download-link";
 
 const DistrictMap = dynamic(() => import("@/components/districts/district-map"), { ssr: false, loading: () => <div className="map-placeholder" /> });
 
@@ -93,9 +95,9 @@ export function DistrictVerificationPanel({ year }: { year: number }) {
   return <section className="phase5-analysis-block district-verification" aria-labelledby="district-verification-title">
     <h2 id="district-verification-title">District-level verification · protocol v1</h2>
     <p className={postHoc ? "phase5-caveat" : undefined}><strong>{data.evidence_label}</strong>. Track {data.track} · {data.year} · {data.inclusion.cases} cases · {data.inclusion.districts_included} of {data.inclusion.districts_total} districts included (≥ {data.inclusion.min_valid_cells} valid IMD land cells; {excluded.length} excluded) · {data.inclusion.district_case_pairs.toLocaleString("en-GB")} district-case pairs.
-      Event definitions, support rules and groupings were approved and frozen (SHA-256 {data.protocol_sha256.slice(0, 12)}…) before any result was computed. Reproduction gate: {data.reproduction.status} ({data.reproduction.check_count} checks). Evidence SHA-256 {data.evidence_sha256.slice(0, 12)}…</p>
+      Event definitions, support rules and groupings were approved and frozen (SHA-256 <HashChip hash={data.protocol_sha256} />) before any result was computed. Reproduction gate: {data.reproduction.status} ({data.reproduction.check_count} checks). Evidence SHA-256 <HashChip hash={data.evidence_sha256} /></p>
     <p className="regime-evidence-downloads"><strong>District verification report</strong> (generated from this hash-verified evidence):{" "}
-      {(["md", "csv", "json"] as const).map((format, index) => <span key={format}>{index ? " · " : ""}<a href={`/api/science/evidence/district-verification/report?year=${year}&format=${format}`} download>{format === "md" ? "Markdown" : format.toUpperCase()}</a></span>)}</p>
+      {(["md", "csv", "json"] as const).map((format, index) => <span key={format}>{index ? " · " : ""}<DownloadLink href={`/api/science/evidence/district-verification/report?year=${year}&format=${format}`}>{format === "md" ? "Markdown" : format.toUpperCase()}</DownloadLink></span>)}</p>
 
     <h3>Pooled district-mean error (mm/24 h)</h3>
     <div className="district-table-wrap"><table className="phase5-table regime-evidence-table"><caption className="sr-only">Pooled district-mean RMSE, MAE and bias of Raw and the four corrected models against IMD</caption>

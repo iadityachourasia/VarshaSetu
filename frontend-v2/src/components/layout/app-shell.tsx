@@ -1,7 +1,6 @@
 "use client";
 
 import { SHOW_COMPLIANCE_PAGE } from "@/lib/features";
-import { ApiHealth } from "@/components/layout/api-health";
 import Link from "next/link";
 import { StoryMode } from "@/components/story/story-mode";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -194,7 +193,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     </div>
     {mobileMounted ? <><button type="button" tabIndex={-1} className="mobile-nav-backdrop" data-open={mobileOpen} aria-label="Close navigation" aria-hidden={!mobileOpen} inert={!mobileOpen} onClick={() => closeMobile()} /><aside ref={mobileDrawer} className="mobile-sidebar" data-open={mobileOpen} id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden={!mobileOpen} inert={!mobileOpen}><div className="mobile-sidebar-top"><div className="mobile-sidebar-brand"><span className="drawer-brand-mark brand-symbol" aria-hidden="true" /><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span></div><button ref={closeButton} type="button" className="mobile-menu-button" aria-label="Close navigation" onClick={() => closeMobile()}><X size={20} aria-hidden="true" /></button></div><Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation onNavigate={() => closeMobile(false)} /></Suspense><ArchiveCard onNavigate={() => closeMobile(false)} /></aside></> : null}
     <div className="app-main">
-      <header className="global-header"><div className="header-context"><div className="header-brandline"><span className="header-brand-logo brand-symbol" aria-hidden="true" /><span className="header-brand-copy"><Link href="/" aria-label="Return to VarshaSetu overview"><span>Varsha</span><span>Setu</span></Link><span className="header-brand-slash" aria-hidden="true">/</span><span>Scientific workspace</span></span></div></div><div className="header-actions"><ApiHealth /><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" aria-label="Reset Demo" title="Restore the official experiment, year, case, and lead"><RotateCcw className="reset-demo-icon" size={17} aria-hidden="true" /><span>Reset Demo</span></Link><PresentButton /><ThemeToggle /></div></header>
+      <header className="global-header"><div className="header-context"><div className="header-brandline"><span className="header-brand-logo brand-symbol" aria-hidden="true" /><span className="header-brand-copy"><Link href="/" aria-label="Return to VarshaSetu overview"><span>Varsha</span><span>Setu</span></Link><span className="header-brand-slash" aria-hidden="true">/</span><span>Scientific workspace</span></span></div></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" aria-label="Reset Demo" title="Restore the official experiment, year, case, and lead"><RotateCcw className="reset-demo-icon" size={17} aria-hidden="true" /><span>Reset Demo</span></Link><PresentButton /><ThemeToggle /></div></header>
       <main id="main-content">{children}</main>
     </div>
   </div>;
