@@ -91,3 +91,6 @@ data/processed/regime_tasks_v1/
 .claude/
 # Hash-manifested evidence arrays that the read-only API serves (docs/143) are tracked even though other binary arrays are not
 !backend/app/evidence_data/**/*.npz
+
+# Launch-video renders and frames (large, regenerated locally)
+brag-output/
