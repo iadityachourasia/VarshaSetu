@@ -80,7 +80,7 @@ as the hero, benchmarks, and evidence sections. Its experiment selection
 and utility controls remain grouped to the right, with Present VarshaSetu as
 the single filled action. The separate Presentation View control and shortcut
 have been removed. The mobile top row carries the VS mark and
-wordmark. The 12-scene presentation mounts at the document root so its modal
+wordmark. The 15-scene presentation mounts at the document root so its modal
 covers the full viewport even though the glass header uses backdrop blur;
 opening it locks background scrolling and makes the workspace inert, while
 closing restores focus to the trigger.

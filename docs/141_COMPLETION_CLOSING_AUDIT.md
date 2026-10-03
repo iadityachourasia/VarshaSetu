@@ -32,8 +32,8 @@ Original first-closing statement: of the 14 official requirement IDs, 12 were im
 Final state after the reforecast study, the decision to keep the maps on the validated model box, and a visual quality pass over every page:
 
 - Backend `pytest backend/tests` (writable `--basetemp`): 670 passed. The replay gate, the broken-input cases and the independent all-India recomputation need the local frozen tree and IMD files and are skipped (not passed) on a bare clone.
-- Frontend: TypeScript and ESLint clean; Vitest 183 passed; production build clean.
-- Playwright against the real backend (single worker): 131 passed. Four of these are new and cover the in-page navigation of the two long evidence pages (every link resolves to a section), the absence of nested scroll boxes around evidence tables, and the single caveat list of the live page.
+- Frontend: TypeScript and ESLint clean; Vitest 187 passed; production build clean.
+- Playwright against the real backend (single worker): 133 passed. Four of these are new and cover the in-page navigation of the two long evidence pages (every link resolves to a section), the absence of nested scroll boxes around evidence tables, and the single caveat list of the live page.
 - Visual review of all 16 routes at desktop and phone width and in dark mode, with console errors and horizontal overflow measured: no console error and no horizontal overflow on any route.
 - Defects found and fixed in that pass: evidence tables were trapped in a 550 px scroll box (the Compliance rows were cut off); the live page printed its caveats twice and drew a small map without a scale; the Verification page had a stale "charts below" boundary note at its very end and no way to jump between its six sections; the reforecast panel had no spacing between its tables and verdicts; two synoptic label styles keyed on a `data-theme` attribute the app never sets, so they never switched in dark mode.
 - Stale assertions from earlier work packages were corrected (a coastal protocol test that expected only zone facts, a Vitest test that expected two planned rows); a copy-guard test that pins the Verification subtitle was respected, not edited.

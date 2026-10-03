@@ -20,7 +20,7 @@ test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
   expect(geometry).toMatchObject({ left: 0, top: 0, width: geometry.viewportWidth, height: geometry.viewportHeight });
   await expect(dialog.locator(".story-identity")).toContainText("VarshaSetu");
   await expect(page.locator(".app-shell")).toHaveAttribute("inert", "");
-  await expect(page.getByText("Scene 1 of 12")).toBeVisible();
+  await expect(page.getByText("Scene 1 of 15")).toBeVisible();
   await expect(page.getByRole("heading", { name: "The Problem" })).toBeVisible();
 
   await page.getByRole("button", { name: "Next →" }).click();
@@ -43,11 +43,11 @@ test("Story Mode: launch, next, back, keyboard, exit", async ({ page }) => {
 
   // Re-enter: must start fresh at scene 1, not resume where it left off.
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();
-  await expect(page.getByText("Scene 1 of 12")).toBeVisible();
+  await expect(page.getByText("Scene 1 of 15")).toBeVisible();
 
   // Walk to the last scene and confirm the closing content + Exit control.
-  for (let i = 0; i < 11; i++) await page.keyboard.press("ArrowRight");
-  await expect(page.getByText("Scene 12 of 12")).toBeVisible();
+  for (let i = 0; i < 14; i++) await page.keyboard.press("ArrowRight");
+  await expect(page.getByText("Scene 15 of 15")).toBeVisible();
   await expect(page.getByRole("heading", { name: "Reproducibility" })).toBeVisible();
   await expect(page.getByText("Research prototype for scientifically transparent")).toBeVisible();
   await page.getByRole("button", { name: "Exit", exact: true }).last().click();
@@ -102,7 +102,7 @@ test("Story Mode figures equal the verified API values (nothing is typed into th
   await page.goto("/");
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();
   const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
-  const goTo = async (title: string) => { for (let i = 0; i < 12 && !(await dialog.getByRole("heading", { name: title }).isVisible()); i++) await page.keyboard.press("ArrowRight"); await expect(dialog.getByRole("heading", { name: title })).toBeVisible(); };
+  const goTo = async (title: string) => { for (let i = 0; i < 15 && !(await dialog.getByRole("heading", { name: title }).isVisible()); i++) await page.keyboard.press("ArrowRight"); await expect(dialog.getByRole("heading", { name: title })).toBeVisible(); };
 
   await goTo("Extreme Probability");
   await expect(dialog).toContainText(`${heavyBss >= 0 ? "+" : "−"}${Math.abs(heavyBss).toFixed(4)}`);
@@ -124,11 +124,44 @@ test("Story Mode shows no number for the 2019 scene when the verified API is unr
   await page.goto("/");
   await page.getByRole("button", { name: "Present VarshaSetu" }).click();
   const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
-  for (let i = 0; i < 12 && !(await dialog.getByRole("heading", { name: "2019 Benchmark" }).isVisible()); i++) await page.keyboard.press("ArrowRight");
+  for (let i = 0; i < 15 && !(await dialog.getByRole("heading", { name: "2019 Benchmark" }).isVisible()); i++) await page.keyboard.press("ArrowRight");
   await expect(dialog.getByRole("heading", { name: "2019 Benchmark" })).toBeVisible();
   await expect(dialog.getByText(/not reachable right now, so no number is shown/)).toBeVisible();
   await expect(dialog.locator(".story-stat-row")).toHaveCount(0);
   // the 2025 scene is generated from the frozen bundle, so it still renders its figures
-  for (let i = 0; i < 12 && !(await dialog.getByRole("heading", { name: "2025 Final Test" }).isVisible()); i++) await page.keyboard.press("ArrowRight");
+  for (let i = 0; i < 15 && !(await dialog.getByRole("heading", { name: "2025 Final Test" }).isVisible()); i++) await page.keyboard.press("ArrowRight");
   await expect(dialog.locator(".story-stat-row")).toHaveCount(1);
+});
+
+test("Story Mode: the coverage, regime and reforecast scenes show the values of their own verified endpoints", async ({ page }) => {
+  const coverage = await (await page.request.get("/api/science/evidence/ps-coverage")).json();
+  const r03 = await (await page.request.get("/api/science/evidence/reforecast/r03")).json();
+  const confirmation = await (await page.request.get("/api/science/evidence/reforecast/r05-confirmation")).json();
+  const total = Object.values(coverage.counts as Record<string, number>).reduce((a, b) => a + b, 0);
+  const mandatory = Object.values(coverage.mandatory_counts as Record<string, number>).reduce((a, b) => a + b, 0);
+
+  await page.goto("/");
+  await page.getByRole("button", { name: "Present VarshaSetu" }).click();
+  const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
+  const goTo = async (title: string) => { for (let i = 0; i < 15 && !(await dialog.getByRole("heading", { name: title }).isVisible()); i++) await page.keyboard.press("ArrowRight"); await expect(dialog.getByRole("heading", { name: title })).toBeVisible(); };
+
+  await goTo("Regimes Against Observation");
+  await expect(dialog).toContainText((r03.payload.tasks.ACTIVE.auc.point as number).toFixed(3));
+  await expect(dialog).toContainText((r03.payload.tasks.WESTERN_DISTURBANCE.auc.point as number).toFixed(3));
+  await goTo("Sealed Reforecast Years");
+  await expect(dialog).toContainText(`${(confirmation.payload.pooled.M0.rmse_mm as number).toFixed(2)} → ${(confirmation.payload.pooled.B1_shifted.rmse_mm as number).toFixed(2)}`);
+  await expect(dialog).toContainText(confirmation.payload.bundle_decision.decision.tier);
+  await goTo("Requirement Coverage");
+  await expect(dialog).toContainText(`${coverage.counts.IMPLEMENTED} of ${total}`);
+  await expect(dialog).toContainText(`${coverage.mandatory_counts.IMPLEMENTED} of ${mandatory}`);
+});
+
+test("Story Mode: the scene list jumps to a scene and marks the current one", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Present VarshaSetu" }).click();
+  const dialog = page.getByRole("dialog", { name: "Present VarshaSetu" });
+  await dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Requirement Coverage/ }).click();
+  await expect(dialog.getByRole("heading", { name: "Requirement Coverage" })).toBeVisible();
+  await expect(dialog.getByRole("navigation", { name: "Scenes" }).getByRole("button", { name: /Requirement Coverage/ })).toHaveAttribute("aria-current", "step");
+  await expect(dialog.getByText("Scene 13 of 15")).toBeVisible();
 });

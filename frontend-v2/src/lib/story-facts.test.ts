@@ -75,3 +75,42 @@ describe("the Story Mode component contains no scientific literals", () => {
     for (const fragment of ["facts.benchmark2019", "facts.final2025", "facts.probability2025", "facts.quality", "buildStoryFacts"]) expect(source).toContain(fragment);
   });
 });
+
+describe("Story Mode facts for coverage, regime detection and the reforecast study", () => {
+  const PHASE15 = path.join(REPO, "backend/app/evidence_data/phase15");
+  const load = (name: string) => JSON.parse(readFileSync(path.join(PHASE15, name), "utf8"));
+  // The API serves the frozen file as the payload, with the label and role beside it.
+  const r05 = { evidence_label: load("reforecast_r05_test.json").label, payload: load("reforecast_r05_test.json") };
+  const confirmation = { evidence_label: load("reforecast_r05_confirmation.json").label, payload: load("reforecast_r05_confirmation.json") };
+  const r03 = { payload: load("reforecast_r03_test.json") };
+
+  it("derives both reforecast rounds, with their frozen tiers, from the evidence files", () => {
+    const facts = buildStoryFacts({ comparison: null, final2025: final2025 as never, quality, r05: r05 as never, confirmation: confirmation as never }).reforecast!;
+    expect(facts.round1.rawRmse).toBe(r05.payload.pooled.M0.rmse_mm);
+    expect(facts.round1.correctedRmse).toBe(r05.payload.pooled.B1.rmse_mm);
+    expect(facts.round1.tier).toBe(r05.payload.bundle_decisions.B1.decision.tier);
+    expect(facts.round1.classifierHeavyCsi).toBe(r05.payload.exceedance["B1:heavy"].test.csi);
+    expect(facts.round2?.correctedRmse).toBe(confirmation.payload.pooled.B1_shifted.rmse_mm);
+    expect(facts.round2?.tier).toBe(confirmation.payload.bundle_decision.decision.tier);
+    expect(facts.regimeAddsValue).toBe(false);
+  });
+
+  it("derives the five regime detection tasks with their AUC and verdict", () => {
+    const tasks = buildStoryFacts({ comparison: null, final2025: final2025 as never, quality, r03: r03 as never }).regimeTasks!;
+    expect(tasks.map((t) => t.key)).toEqual(["ACTIVE", "BREAK", "LOW_DEPRESSION", "WESTERN_DISTURBANCE", "COASTAL_OROGRAPHIC"]);
+    expect(tasks[0].auc).toBe(r03.payload.tasks.ACTIVE.auc.point);
+    expect(tasks.every((t) => t.verdict === "validated and useful" || t.verdict === "validated" || t.verdict === "not supported")).toBe(true);
+  });
+
+  it("derives requirement coverage from the counts, and says nothing when the source is missing", () => {
+    const coverage = { counts: { IMPLEMENTED: 3, PARTIAL: 1, PLANNED: 0 }, mandatory_counts: { IMPLEMENTED: 2, PARTIAL: 0, PLANNED: 0 } };
+    expect(buildStoryFacts({ comparison: null, final2025: final2025 as never, quality, coverage: coverage as never }).coverage).toEqual({ implemented: 3, partial: 1, planned: 0, total: 4, mandatoryImplemented: 2, mandatoryTotal: 2 });
+    expect(buildStoryFacts({ comparison: null, final2025: final2025 as never, quality }).coverage).toBeNull();
+    expect(buildStoryFacts({ comparison: null, final2025: final2025 as never, quality, coverage: { counts: {}, mandatory_counts: {} } as never }).coverage).toBeNull();
+  });
+
+  it("returns null rather than a partial or invented figure for malformed evidence", () => {
+    expect(buildStoryFacts({ comparison: null, final2025: final2025 as never, quality, r05: { payload: { pooled: {} } } as never }).reforecast).toBeNull();
+    expect(buildStoryFacts({ comparison: null, final2025: final2025 as never, quality, r03: { payload: { tasks: {} } } as never }).regimeTasks).toBeNull();
+  });
+});

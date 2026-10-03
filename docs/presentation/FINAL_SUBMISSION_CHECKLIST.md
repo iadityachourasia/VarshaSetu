@@ -41,7 +41,7 @@ did not.
   same target grid, confirmed by direct source reading of the comparison
   components.
 - [x] Judge can find mandatory metrics quickly — Overview links directly to
-  Verification and Forecast; Story Mode's 12-scene sequence surfaces every
+  Verification and Forecast; Story Mode's 15-scene sequence (chapters Context, Forecast, Regimes, Skill, Assurance) surfaces every
   mandatory number in order.
 
 ## Demo Gate (`docs/14_ACCEPTANCE_CRITERIA.md`)
@@ -79,7 +79,7 @@ did not.
 - [x] Presentation View (collapsible chrome, "P" shortcut, Reset Demo link)
   — verified end-to-end with real headless Chromium, including the
   keyboard-shortcut-ignored-while-typing case.
-- [x] Story Mode reordered to the official 12-scene sequence — verified
+- [x] Story Mode extended to 15 scenes (adds regime detection, the sealed reforecast years and requirement coverage, each read from its verified endpoint) — verified
   end-to-end with real headless Chromium.
 - [x] `scripts/demo/preflight-demo.ps1` extended with Track B checks and a
   three-state result — code-complete, structurally verified (brace/paren/
