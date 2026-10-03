@@ -14,7 +14,18 @@ import pytest
 
 from backend.app.live import bundle, pipeline
 
-LOCAL = pytest.mark.skipif(not (Path(__file__).resolve().parents[2] / "experiments/recent_historical/phase4j_operational_final_test_v1/predictions/M1.npy").exists(), reason="local frozen artifacts not present")
+def _local_tree_present() -> bool:
+    """The frozen artifacts ship in the serving-data bundle (so CI has them), but the experiment *source* the replay imports is gitignored and local only."""
+    from importlib.util import find_spec
+    artifacts = (Path(__file__).resolve().parents[2] / "experiments/recent_historical/phase4j_operational_final_test_v1/predictions/M1.npy").exists()
+    try:
+        source = find_spec("experiments.recent_historical.operational_model_protocol_v1") is not None
+    except ModuleNotFoundError:
+        source = False
+    return artifacts and source
+
+
+LOCAL = pytest.mark.skipif(not _local_tree_present(), reason="local frozen artifacts and experiment source not present (the replay needs both; they are gitignored)")
 
 
 def test_the_required_message_set_is_the_corpus_set_for_the_control_member():
