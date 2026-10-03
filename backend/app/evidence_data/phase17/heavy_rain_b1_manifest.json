@@ -1,0 +1,130 @@
+{
+  "arrays_file": "heavy_rain_b1_2019_v1.npz",
+  "arrays_sha256": "8b080d21750068c6276d0562d70b4927e08500001bbdd96c5448b8697e27d66e",
+  "built_at_utc": "2026-10-03T17:44:01+00:00",
+  "cases": 255,
+  "confirmation_record_sha256": "1d22c6d8349261471d2485f25b7d4462557c91e849c090c46f02056877d3ffbd",
+  "evidence_roles": {
+    "bundle_role": "REFORECAST_CONFIRMATORY_TEST_2017_2019",
+    "track_a_2019_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+    "wording": "Descriptive display of frozen predictions. The product year was part of the confirmatory years and had been used by earlier Track A experiments; nothing is selected or tuned on it."
+  },
+  "gates": {
+    "cases_and_cells_match_product": true,
+    "confirmatory_pooled_results_reproduced": true,
+    "models_match_record": true,
+    "product_year_slice_matches_evidence": true,
+    "reproduction_scope": "all confirmatory years, recomputed in memory with the same settings",
+    "tolerance": 1e-09,
+    "values_defined_and_in_range": true
+  },
+  "model_files_sha256": {
+    "B1.json": "6e6482777e1e02365fa7ceb9b3d30abe2583cd6b02220d74dca3dd42a676f454",
+    "exceed_B1_heavy.json": "6069f25e95af2c5273cd3430ff1909bf71b87f466d5dcc8610a1edf1a3b0139e",
+    "exceed_B1_very_heavy.json": "11fe9e999a44f42a4a809bcb096fb65c44be203e272d09516cf16d30457165ab"
+  },
+  "protocol_sha256": "d290513ca2070f8a5bd3a736061394ed44c0f62452c28486ba2e6da6eb14fc4f",
+  "schema": "heavy-rain-b1-product-manifest-v1",
+  "shift_mm": 1.761342284267306,
+  "summary_2019": {
+    "cases": 255,
+    "cells": 331755,
+    "classifier": {
+      "heavy": {
+        "csi": 0.29380727575673427,
+        "false_alarms": 11973,
+        "far": 0.6535123628622892,
+        "frequency_bias": 1.9018997197134848,
+        "hits": 6348,
+        "misses": 3285,
+        "observed_events": 9633,
+        "pod": 0.6589847399563998,
+        "tau": 0.5450971896052383
+      },
+      "very_heavy": {
+        "csi": 0.22041566520571187,
+        "false_alarms": 4155,
+        "far": 0.7271613580679034,
+        "frequency_bias": 1.958190541466758,
+        "hits": 1559,
+        "misses": 1359,
+        "observed_events": 2918,
+        "pod": 0.5342700479780672,
+        "tau": 0.5986391619625566
+      }
+    },
+    "rainfall": {
+      "B1": {
+        "bias_mm": 1.9342385492973095,
+        "cells": 331755,
+        "heavy": {
+          "csi": 0.30955457327439645,
+          "false_alarms": 5072,
+          "frequency_bias": 0.9990657116163189,
+          "hits": 4552,
+          "misses": 5081,
+          "observed_events": 9633
+        },
+        "mae_mm": 8.837235868650076,
+        "rmse_mm": 17.422968311197636,
+        "very_heavy": {
+          "csi": 0.10801186943620178,
+          "false_alarms": 452,
+          "frequency_bias": 0.2796435915010281,
+          "hits": 364,
+          "misses": 2554,
+          "observed_events": 2918
+        }
+      },
+      "M0": {
+        "bias_mm": 0.5938220006902178,
+        "cells": 331755,
+        "heavy": {
+          "csi": 0.12039539732797899,
+          "false_alarms": 3316,
+          "frequency_bias": 0.5060728744939271,
+          "hits": 1559,
+          "misses": 8074,
+          "observed_events": 9633
+        },
+        "mae_mm": 9.327648115575048,
+        "rmse_mm": 19.773472597952658,
+        "very_heavy": {
+          "csi": 0.03330510866497319,
+          "false_alarms": 625,
+          "frequency_bias": 0.2546264564770391,
+          "hits": 118,
+          "misses": 2800,
+          "observed_events": 2918
+        }
+      },
+      "M2": {
+        "bias_mm": -1.5959862519524923,
+        "cells": 331755,
+        "heavy": {
+          "csi": 0.04851940776310524,
+          "false_alarms": 363,
+          "frequency_bias": 0.08803072770684106,
+          "hits": 485,
+          "misses": 9148,
+          "observed_events": 9633
+        },
+        "mae_mm": 8.07297575941595,
+        "rmse_mm": 17.84869823727102,
+        "very_heavy": {
+          "csi": 0.0,
+          "false_alarms": 0,
+          "frequency_bias": 0.0,
+          "hits": 0,
+          "misses": 2918,
+          "observed_events": 2918
+        }
+      }
+    }
+  },
+  "thresholds": {
+    "heavy": 0.5450971896052383,
+    "very_heavy": 0.5986391619625566
+  },
+  "year": 2019
+}

@@ -28,6 +28,7 @@ try:
     from backend.app.api.live import router as live_router
     from backend.app.api.all_india_raw import router as all_india_raw_router
     from backend.app.api.reforecast import router as reforecast_router
+    from backend.app.api.heavy_rain import router as heavy_rain_router
 except ModuleNotFoundError:
     from app.core.cors import ALLOWED_HEADERS, ALLOWED_METHODS, allowed_origins
     from app.version import API_VERSION, deployed_commit
@@ -43,6 +44,7 @@ except ModuleNotFoundError:
     from app.api.live import router as live_router
     from app.api.all_india_raw import router as all_india_raw_router
     from app.api.reforecast import router as reforecast_router
+    from app.api.heavy_rain import router as heavy_rain_router
 
 def warm_evidence_caches() -> dict[str, str]:
     """Pre-verify and cache the small hash-chained evidence files so the first visitor does not pay for it.
@@ -105,6 +107,7 @@ app.include_router(wd_indicator_router, prefix="/api")
 app.include_router(live_router, prefix="/api")
 app.include_router(all_india_raw_router, prefix="/api")
 app.include_router(reforecast_router, prefix="/api")
+app.include_router(heavy_rain_router, prefix="/api")
 
 
 @app.exception_handler(HTTPException)

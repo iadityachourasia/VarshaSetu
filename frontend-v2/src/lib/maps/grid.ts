@@ -2,7 +2,7 @@ import type { FeatureCollection, Polygon } from "geojson";
 import type { Grid } from "@/lib/api/science";
 
 export type CellSelection = { row: number; column: number };
-export type Palette = "rainfall" | "probability" | "error-difference" | "improvement" | "u850" | "v850" | "q700" | "z500" | "mslp" | "pwat";
+export type Palette = "rainfall" | "probability" | "error-difference" | "improvement" | "u850" | "v850" | "q700" | "z500" | "mslp" | "pwat" | "decision";
 export type RasterMode = "weather" | "grid";
 export type RasterPixels = { width: number; height: number; data: Uint8ClampedArray<ArrayBuffer> };
 
@@ -34,6 +34,7 @@ const fieldStops: Record<Exclude<Palette, "rainfall" | "probability">, [number, 
   z500: [[5750, "#4c5890"], [5800, "#477ca8"], [5850, "#9dbabd"], [5900, "#e2c485"], [5950, "#c78462"]],
   mslp: [[97000, "#45579a"], [99000, "#5d9dbb"], [100000, "#c4d5ca"], [101000, "#d8bf81"], [103000, "#b76b58"]],
   pwat: [[0, "#293e57"], [20, "#326f93"], [40, "#53a7af"], [60, "#b9c877"], [90, "#eac778"]],
+  decision: [[0, "#cfd8dc"], [1, "#d1495b"]],
 };
 
 function rgb(hex: string): [number, number, number] {

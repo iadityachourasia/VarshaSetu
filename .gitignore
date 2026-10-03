@@ -89,3 +89,5 @@ data/processed/reforecast_control_v1/
 data/processed/regime_tasks_v1/
 # local assistant/editor session config
 .claude/
+# Hash-manifested evidence arrays that the read-only API serves (docs/143) are tracked even though other binary arrays are not
+!backend/app/evidence_data/**/*.npz

@@ -174,12 +174,12 @@ VarshaSetu/
 │   │                     coastal_regime, wd_indicator, regime_validation, all_india_raw (frozen evidence) · live.py
 │   ├── app/live/         experimental live-cycle worker pipeline and bundle format (docs/139)
 │   ├── app/services/     legacy pipeline (blocked, quarantined — see below)
-│   └── tests/            pytest suite (670 tests; bare checkouts skip, with printed reasons, the tests that need the data bundle)
+│   └── tests/            pytest suite (688 tests; bare checkouts skip, with printed reasons, the tests that need the data bundle)
 ├── frontend-v2/           Next.js 16 / React 19 presentation frontend (the demo app)
 │   ├── src/app/           16 routes: the overview, forecast (with the synoptic chart),
 │   │                      casebook, extremes, ensemble, regimes, districts, verification,
 │   │                      observations, quality, methodology, audit, zones, geoaware, live, compliance
-│   └── tests/e2e/         Playwright suite (139 tests, real backend)
+│   └── tests/e2e/         Playwright suite (141 tests, real backend)
 ├── frontend/              legacy Vite app (blocked CSV path — not the demo app)
 ├── data/ · experiments/   frozen scientific artifacts (gitignored; see below)
 ├── scripts/demo/          one-command demo launcher + preflight + stop
@@ -296,9 +296,9 @@ backend, frontend and Dockerfile checks on every push, but not the end-to-end su
 
 | Suite | Result |
 |---|---|
-| Backend (`pytest backend/tests`) | 670 passed, 0 skipped (run with a writable `--basetemp` on Windows; a bare clone without the data bundle was 235 passed, 76 skipped with reasons when last measured, before the geography-aware tests were added) |
-| Frontend unit (`npm run test`) | 195 passed |
-| Frontend E2E (`npm run e2e`, single worker) | 139 passed |
+| Backend (`pytest backend/tests`) | 688 passed, 0 skipped (run with a writable `--basetemp` on Windows; a bare clone without the data bundle was 235 passed, 76 skipped with reasons when last measured, before the geography-aware tests were added) |
+| Frontend unit (`npm run test`) | 199 passed |
+| Frontend E2E (`npm run e2e`, single worker) | 141 passed |
 | TypeScript / ESLint | clean |
 | Production build | clean, all 16 routes |
 

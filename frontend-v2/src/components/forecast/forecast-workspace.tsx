@@ -16,6 +16,8 @@ import { ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/componen
 import { RainLegend } from "@/components/maps/map-legend";
 import { MapControls } from "@/components/maps/map-controls";
 import { mapBounds } from "@/components/maps/use-weather-map";
+import { getHeavyRainCase } from "@/lib/api/heavy-rain";
+import { CorrectedModelChoice, HeavyRainNotice, type CorrectedModel } from "@/components/science/heavy-rain-controls";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
@@ -25,6 +27,7 @@ export function ForecastWorkspace({ cases, demos, initialCase }: { cases: CaseSu
   const router = useRouter();
   const [caseId, setCaseId] = useState(initialCase);
   const [selected, setSelected] = useState<CellSelection | null>(null);
+  const [model, setModel] = useState<CorrectedModel>("m2");
   const maps = useRef(new Map<string, MapLibreMap>());
   const triptych = useRef<HTMLDivElement>(null);
   const [mobile, setMobile] = useState<boolean | null>(null);
@@ -35,6 +38,7 @@ export function ForecastWorkspace({ cases, demos, initialCase }: { cases: CaseSu
   const regime = useQuery({ queryKey: ["regime", caseId], queryFn: () => getScience(`/cases/${caseId}/regime`, regimeSchema) });
   const detail = useQuery({ queryKey: ["case", caseId], queryFn: () => getScience(`/cases/${caseId}`, caseDetailSchema) });
   const fss = useQuery({ queryKey: ["fss", caseId], queryFn: () => getScience(`/cases/${caseId}/fss`, fssSchema) });
+  const b1 = useQuery({ queryKey: ["heavy-rain-case", caseId], queryFn: () => getHeavyRainCase(caseId), enabled: model === "b1" });
   const geometry = useQuery({ queryKey: ["district-geometry"], queryFn: () => getScience("/geometry/districts", geometrySchema) });
   useEffect(() => {
     const match = window.matchMedia("(max-width: 760px)");
@@ -73,12 +77,18 @@ export function ForecastWorkspace({ cases, demos, initialCase }: { cases: CaseSu
     for (const map of maps.current.values()) map.resize();
   };
   const data = rainfall.data?.data;
+  const useB1 = model === "b1" && Boolean(b1.data);                     // never a silent fallback: if B1 cannot be loaded the panel stays M2 and says so below
+  const correctedField = useB1 && b1.data ? b1.data.b1_rainfall_mm : data?.corrected;
+  const correctedRmse = useB1 && b1.data ? b1.data.b1_rmse_mm : (detail.data?.data.corrected_rmse_mm ?? selectedCase?.corrected_rmse_mm);
   const activeCell = selected ?? (data ? nearestValidCell(data.valid_mask) : null);
   const coordinate = useMemo(() => activeCell && data ? `${data.grid.latitude_centers[activeCell.row].toFixed(2)}° N, ${data.grid.longitude_centers[activeCell.column].toFixed(2)}° E` : "No valid grid cell", [activeCell, data]);
-  const values = activeCell && data ? { raw: data.raw[activeCell.row]?.[activeCell.column], corrected: data.corrected[activeCell.row]?.[activeCell.column], observed: data.observed[activeCell.row]?.[activeCell.column], valid: data.valid_mask[activeCell.row]?.[activeCell.column] } : null;
+  const values = activeCell && data ? { raw: data.raw[activeCell.row]?.[activeCell.column], corrected: correctedField?.[activeCell.row]?.[activeCell.column], observed: data.observed[activeCell.row]?.[activeCell.column], valid: data.valid_mask[activeCell.row]?.[activeCell.column] } : null;
   return <div className="page-content forecast-page">
     <PageHeading title="Forecast Explorer" subtitle="2019 historical GEFSv12 reforecast evaluation: Raw, corrected, and IMD observed rainfall. Not a live forecast." action={<PrototypeNote />} />
     <CaseSelector cases={cases} demos={demos} selectedId={caseId} onSelect={handleCase} />
+    <CorrectedModelChoice value={model} onChange={setModel} />
+    {model === "b1" ? <HeavyRainNotice /> : null}
+    {model === "b1" && b1.isError ? <ErrorState message={`The B1 layer could not be verified, so the corrected panel still shows the frozen global model M2. ${b1.error instanceof Error ? b1.error.message : ""}`} /> : null}
     {selectedCase ? <div className="case-meta"><span><b>GEFS INIT</b> {utc(selectedCase.initialization_utc)}</span><span><b>VALID PERIOD</b> {utc(selectedCase.valid_period_start_utc)} — {utc(selectedCase.valid_period_end_utc)}</span><span><b>LEAD</b> {leadName(selectedCase.lead_hours)}</span><Sheet><SheetTrigger render={<Button variant="outline" size="sm" />}><Info size={15} /> Provenance</SheetTrigger><SheetContent><SheetHeader><SheetTitle>Scientific provenance</SheetTitle><SheetDescription>Frozen historical artifacts for this forecast case.</SheetDescription></SheetHeader><dl className="provenance-list"><dt>Case ID</dt><dd>{caseId}</dd><dt>Corpus</dt><dd>{rainfall.data?.provenance.corpus_version ?? "Unavailable"}</dd><dt>Deterministic model</dt><dd>{rainfall.data?.provenance.deterministic_model ?? "Unavailable"}</dd><dt>Artifact manifest SHA-256</dt><dd>{rainfall.data?.provenance.artifact_manifest_sha256 ?? "Unavailable"}</dd><dt>Status</dt><dd>Historical prototype only — not operational</dd></dl></SheetContent></Sheet></div> : null}
     {rainfall.isPending ? <LoadingState /> : rainfall.isError || !data ? <ErrorState /> : <>
       <MapControls onReset={resetExtent} onZoom={zoom} onFullscreen={fullscreen} />
@@ -86,14 +96,14 @@ export function ForecastWorkspace({ cases, demos, initialCase }: { cases: CaseSu
       <div ref={triptych} className="triptych" aria-label="Synchronized rainfall comparison">
         {mobile === null ? <div className="map-placeholder" aria-label="Preparing geographic maps" /> : null}
         {mobile === false || activeMap === "raw" && mobile ? <GridMap id="raw" title="Raw GEFS" subtitle="Uncorrected control forecast" values={data.raw} mask={data.valid_mask} grid={data.grid} palette="rainfall" geometry={geometry.data?.geometry} selected={activeCell} onSelect={setSelected} onReady={handleReady} onMove={handleMove} /> : null}
-        {mobile === false || activeMap === "corrected" && mobile ? <GridMap id="corrected" title="VarshaSetu Corrected" subtitle="Frozen M2 Global XGBoost" values={data.corrected} mask={data.valid_mask} grid={data.grid} palette="rainfall" geometry={geometry.data?.geometry} selected={activeCell} onSelect={setSelected} onReady={handleReady} onMove={handleMove} /> : null}
+        {mobile === false || activeMap === "corrected" && mobile ? <GridMap id="corrected" title="VarshaSetu Corrected" subtitle={useB1 ? "B1 event-weighted regression + mean-error shift (reforecast study)" : "Frozen M2 Global XGBoost"} values={correctedField ?? data.corrected} mask={data.valid_mask} grid={data.grid} palette="rainfall" geometry={geometry.data?.geometry} selected={activeCell} onSelect={setSelected} onReady={handleReady} onMove={handleMove} /> : null}
         {mobile === false || activeMap === "observed" && mobile ? <GridMap id="observed" title="IMD Observed" subtitle="Verification reference" values={data.observed} mask={data.valid_mask} grid={data.grid} palette="rainfall" geometry={geometry.data?.geometry} selected={activeCell} onSelect={setSelected} onReady={handleReady} onMove={handleMove} /> : null}
       </div>
       <RainLegend />
       <p className="map-method-note">Weather Visualization interpolates only fully valid neighboring cells for display. Scientific Grid shows the original 49×49 cells. All inspection values and verification remain unchanged.</p>
       <div className="forecast-bottom"><section className="inspection-panel"><div className="panel-caption"><span className="small-label">CELL INSPECTOR</span><strong>{coordinate}</strong></div><div className="cell-values"><span>Raw <b>{values?.valid ? mm(values.raw) : "—"}</b></span><span>Corrected <b>{values?.valid ? mm(values.corrected) : "—"}</b></span><span>Observed <b>{values?.valid ? mm(values.observed) : "—"}</b></span><span>Correction Δ <b>{values?.valid && values.raw != null && values.corrected != null ? mm(values.corrected - values.raw) : "—"}</b></span></div><p className="micro-note">The nearest valid cell to the grid center is preselected for the demonstration. Click or hover a map cell; keyboard users can choose a grid row and column below. All maps use the same paired valid-cell mask.</p><div className="cell-controls"><label>Latitude row <select value={activeCell?.row ?? ""} onChange={(event) => setSelected({ row: Number(event.target.value), column: activeCell?.column ?? 24 })}><option value="" disabled>Select</option>{data.grid.latitude_centers.map((latitude, row) => <option value={row} key={row}>{latitude.toFixed(2)}° N</option>)}</select></label><label>Longitude column <select value={activeCell?.column ?? ""} onChange={(event) => setSelected({ row: activeCell?.row ?? 24, column: Number(event.target.value) })}><option value="" disabled>Select</option>{data.grid.longitude_centers.map((longitude, column) => <option value={column} key={column}>{longitude.toFixed(2)}° E</option>)}</select></label></div></section>
       {regime.data ? <RegimeBars probabilities={regime.data.data.probabilities} dominant={regime.data.data.dominant_regime} /> : <div className="state-message">Regime context unavailable</div>}
-      <section className="case-skill"><div className="panel-caption"><span className="small-label">CASE VERIFICATION</span><strong>Correction behavior</strong></div><div className="case-skill-values"><span>Raw RMSE <b>{mm(detail.data?.data.raw_rmse_mm ?? selectedCase?.raw_rmse_mm)}</b></span><span>Corrected RMSE <b>{mm(detail.data?.data.corrected_rmse_mm ?? selectedCase?.corrected_rmse_mm)}</b></span></div><p className="micro-note">A single case is illustrative, not evidence of overall superiority. {fss.data ? `Heavy 3×3 FSS: Raw ${score(fss.data.data.heavy?.["3"]?.raw.fss)} · Corrected ${score(fss.data.data.heavy?.["3"]?.corrected.fss)}.` : ""}</p><span className="model-note"><Layers3 size={14} /> 49×49 · 0.25° target grid</span></section></div>
+      <section className="case-skill"><div className="panel-caption"><span className="small-label">CASE VERIFICATION</span><strong>Correction behavior</strong></div><div className="case-skill-values"><span>Raw RMSE <b>{mm(detail.data?.data.raw_rmse_mm ?? selectedCase?.raw_rmse_mm)}</b></span><span>Corrected RMSE ({useB1 ? "B1" : "M2"}) <b>{mm(correctedRmse)}</b></span></div><p className="micro-note">A single case is illustrative, not evidence of overall superiority. {useB1 ? "FSS is not computed for the B1 layer." : fss.data ? `Heavy 3×3 FSS: Raw ${score(fss.data.data.heavy?.["3"]?.raw.fss)} · Corrected ${score(fss.data.data.heavy?.["3"]?.corrected.fss)}.` : ""}</p><span className="model-note"><Layers3 size={14} /> 49×49 · 0.25° target grid</span></section></div>
     </>}
   </div>;
 }

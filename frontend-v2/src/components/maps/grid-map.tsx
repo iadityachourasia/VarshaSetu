@@ -18,6 +18,8 @@ type Props = {
   id: string; title: string; subtitle: string;
   values: (number | null)[][]; mask: boolean[][]; grid: Grid; palette: Palette;
   unit?: string;
+  /** How the hover reads a value: a classifier score (not a probability) or a yes/no forecast. Defaults to the palette's own reading. */
+  valueFormat?: "score" | "decision";
   geometry?: Geometry["geometry"];
   selected: CellSelection | null; onSelect: (cell: CellSelection) => void;
   onReady?: (id: string, map: Map | null) => void;
@@ -32,7 +34,7 @@ function selectedFeature(grid: Grid, cell: CellSelection | null): FeatureCollect
   return { type: "FeatureCollection", features: [{ type: "Feature", properties: {}, geometry: { type: "Polygon", coordinates: [[[west, south], [east, south], [east, north], [west, north], [west, south]]] } }] };
 }
 
-export default function GridMap({ id, title, subtitle, values, mask, grid, palette, unit, geometry, selected, onSelect, onReady, onMove }: Props) {
+export default function GridMap({ id, title, subtitle, values, mask, grid, palette, unit, valueFormat, geometry, selected, onSelect, onReady, onMove }: Props) {
   const settings = useMapSettings();
   const container = useRef<HTMLDivElement>(null);
   const callbacks = useRef({ onSelect, onReady, onMove });
@@ -118,7 +120,7 @@ export default function GridMap({ id, title, subtitle, values, mask, grid, palet
       <MapAttribution status={status} />
       {status === "offline" ? <span className="map-offline-badge">Offline geography</span> : null}
       {status === "loading" ? <span className="map-offline-badge">Loading geography…</span> : null}
-      {hover ? <div className="map-hover" role="status">{hoverDistrict ? <span className="map-hover-district">{hoverDistrict} · </span> : null}{grid.latitude_centers[hover.row].toFixed(2)}° N · {grid.longitude_centers[hover.column].toFixed(2)}° E <strong>{hoveredValid && hoveredValue != null ? palette === "rainfall" ? mm(hoveredValue) : palette === "probability" ? percent(hoveredValue) : `${hoveredValue.toFixed(palette === "q700" ? 4 : 2)} ${unit ?? ""}` : "Unavailable — masked reference cell"}</strong></div> : null}
+      {hover ? <div className="map-hover" role="status">{hoverDistrict ? <span className="map-hover-district">{hoverDistrict} · </span> : null}{grid.latitude_centers[hover.row].toFixed(2)}° N · {grid.longitude_centers[hover.column].toFixed(2)}° E <strong>{hoveredValid && hoveredValue != null ? valueFormat === "decision" ? (hoveredValue >= 0.5 ? "Forecast: yes" : "Forecast: no") : valueFormat === "score" ? `score ${hoveredValue.toFixed(3)}` : palette === "rainfall" ? mm(hoveredValue) : palette === "probability" ? percent(hoveredValue) : `${hoveredValue.toFixed(palette === "q700" ? 4 : 2)} ${unit ?? ""}` : "Unavailable — masked reference cell"}</strong></div> : null}
     </div>
   </section>;
 }

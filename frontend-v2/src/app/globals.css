@@ -1570,3 +1570,12 @@ html { scroll-behavior: smooth; }
 .loading-state-compact .skeleton-block:nth-child(2) { width: 100%; min-height: 84px; }
 .loading-state-compact .skeleton-block:nth-child(3) { width: 72%; }
 @media (prefers-reduced-motion: reduce) { .state-retry-spin, .api-health-checking i { animation: none; } }
+
+/* ---- the heavy-rain bundle (B1) choice and notice on the 2019 products */
+.corrected-model-choice { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 4px 0 12px; }
+.corrected-model-choice .segmented { margin: 0; }
+.heavy-rain-notice { display: grid; gap: 8px; margin: 0 0 14px; }
+.heavy-rain-notice details { font-size: var(--text-caption); color: var(--text-subtle); }
+.heavy-rain-notice summary { cursor: pointer; font-weight: 600; color: var(--foreground); }
+.heavy-rain-notice summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.decision-bins { grid-template-columns: repeat(2, minmax(0, 1fr)); }

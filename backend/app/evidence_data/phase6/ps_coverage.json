@@ -611,7 +611,7 @@
       "ps_mandatory": true,
       "status": "IMPLEMENTED",
       "summary": "Corrected 24-hour rainfall grids (M1 to M4) are shown next to Raw GEFS and IMD observations on the same grid and scale.",
-      "limitation": "Historical replay on a regional domain; corrected extremes are often suppressed (see the improvement row).",
+      "limitation": "Historical replay on a regional domain; the frozen global model often suppresses extremes (see the improvement row). The 2019 maps can also show the heavy-rain bundle, with its own limits.",
       "pages": [
         {
           "label": "Forecast & Atmosphere",
@@ -662,8 +662,8 @@
       ],
       "ps_mandatory": true,
       "status": "IMPLEMENTED",
-      "summary": "The correction improves RMSE, heavy-rain CSI and very-heavy CSI over Raw, each with an interval excluding zero, in two independent reforecast tests: the sealed years 2014-2016 and a confirmatory test on 2017-2019 in which the frozen bundle (the event-weighted regression with a one-parameter mean-error correction, plus exceedance classifiers) meets the frozen verdict. On the operational-era track earlier corrections also improved heavy-rain detection on an independent year.",
-      "limitation": "In the first test the frozen mean-error guardrail failed (the correction over-forecast by roughly twice the limit) and the confirmatory pass depends on a mean-error shift read from that first test; the 2017-2019 years were used by earlier Track A experiments, so they are confirmatory and not untouched. The gain is for the reforecast control member (a different model version from the operational years, never pooled with them), not for operational forecasts of other years or a new cycle. Very-heavy detection comes from exceedance classifiers (yes/no forecasts at a fixed probability threshold, not shown to be calibrated), not from the corrected rainfall field. Regime-awareness was not shown to add value over the non-regime model, and the frozen regime-aware models of the operational years still have mixed heavy-rain skill.",
+      "summary": "The correction improves RMSE, heavy-rain CSI and very-heavy CSI over Raw, each with an interval excluding zero, in two independent reforecast tests: the sealed years 2014-2016 and a confirmatory test on 2017-2019 in which the frozen bundle (the event-weighted regression with a one-parameter mean-error correction, plus exceedance classifiers) meets the frozen verdict. On the operational-era track earlier corrections also improved heavy-rain detection on an independent year. The same frozen bundle is also shown on the 2019 cases of the maps and the district product, beside the global model, as a labelled descriptive layer (docs/143).",
+      "limitation": "In the first test the frozen mean-error guardrail failed (the correction over-forecast by roughly twice the limit) and the confirmatory pass depends on a mean-error shift read from that first test; the 2017-2019 years were used by earlier Track A experiments, so they are confirmatory and not untouched. The gain is for the reforecast control member (a different model version from the operational years, never pooled with them), not for operational forecasts of other years or a new cycle. Very-heavy detection comes from exceedance classifiers (yes/no forecasts at a fixed probability threshold, not shown to be calibrated), not from the corrected rainfall field. Regime-awareness was not shown to add value over the non-regime model, and the frozen regime-aware models of the operational years still have mixed heavy-rain skill. The product layer covers the 2019 reforecast cases only, shows scores and a yes/no forecast that over-forecasts events, and is not applied to the operational years.",
       "pages": [
         {
           "label": "Verification Lab",
@@ -982,7 +982,7 @@
       ],
       "ps_mandatory": true,
       "status": "IMPLEMENTED",
-      "summary": "Area-weighted district rainfall, event probabilities and area fractions for the 2019 reforecast, and for 2024 and 2025 with Raw, all four corrected models and IMD side by side plus a descriptive history.",
+      "summary": "Area-weighted district rainfall, event probabilities and area fractions for the 2019 reforecast, and for 2024 and 2025 with Raw, all four corrected models and IMD side by side plus a descriptive history. For 2019 the district product can also show the frozen heavy-rain bundle beside the global model (mean rainfall, classifier score, flagged area).",
       "limitation": "Historical decision-support prototype, not an advisory. Domain-limited, simplified geometry, IMD land cells only; no 2023 product (training year).",
       "pages": [
         {

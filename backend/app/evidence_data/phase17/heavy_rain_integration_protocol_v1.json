@@ -1,0 +1,71 @@
+{
+  "authorisation": {
+    "interpretation": "Display the already-frozen B1 bundle of the reforecast study (regression with its one-parameter mean-error shift, and the two exceedance classifiers with their frozen thresholds) in the existing Track A map and district products as an additional, clearly labelled layer next to the frozen global model. Nothing is refitted, reselected or retuned, and no frozen product artifact is changed. The owner may withdraw this interpretation.",
+    "owner_message": {
+      "date": "2026-10-03",
+      "verbatim": "integrate heavy-rain classifier into the district and map products"
+    }
+  },
+  "bundle": {
+    "builder_sha256_in_freeze": {
+      "pure_functions": "da48821aa8c89c8be309081b67780d42855d164b522836e5fe018aeb58f2fae3",
+      "script": "b4e1891f0bf7b390c6bd8115fb9026415d66c4451aa94dbf4f52d058b7f3dfea"
+    },
+    "confirmation_evidence_sha256": "0f93a91d936387ddeafe8f6c9b7b30113c870fc686deeca428f9d987742b7a76",
+    "confirmation_record_sha256": "1d22c6d8349261471d2485f25b7d4462557c91e849c090c46f02056877d3ffbd",
+    "exceedance_freeze_sha256": "13de7102aa82d1ed680709c1e597cab5506a38340003f8a5b4a7c30e0c50dc6d",
+    "model_files_sha256": {
+      "B1.json": "6e6482777e1e02365fa7ceb9b3d30abe2583cd6b02220d74dca3dd42a676f454",
+      "exceed_B1_heavy.json": "6069f25e95af2c5273cd3430ff1909bf71b87f466d5dcc8610a1edf1a3b0139e",
+      "exceed_B1_very_heavy.json": "11fe9e999a44f42a4a809bcb096fb65c44be203e272d09516cf16d30457165ab"
+    },
+    "round_one_evidence_sha256": "7cb0bcd3dc58cf83fa028a6c4f94cd35d6f57a762caf0def497d88868f639f2b",
+    "shift_source": "pooled mean error of the selected B1 regression on the sealed years, read from the round-one evidence file",
+    "thresholds_source": "the frozen exceedance selection, read from the exceedance freeze"
+  },
+  "gates": [
+    "every model file hash equals the confirmation record",
+    "every product case has exactly one corpus case with the same initialization and lead",
+    "the cells scored for a case are exactly the valid cells of the product case",
+    "recomputing the confirmatory pooled results with the same prediction function reproduces the frozen evidence: exceedance hits, misses and false alarms for both classifiers, and the pooled mean error and RMSE of the shifted regression",
+    "the slice of the shifted regression for the product year equals the per-year entry of the confirmation evidence",
+    "no rainfall value is negative or undefined on a valid cell, and scores lie between zero and one"
+  ],
+  "labels": {
+    "bundle_role": "REFORECAST_CONFIRMATORY_TEST_2017_2019",
+    "track_a_2019_role": "TRACK_A_2019_CONSUMED_FINAL_TEST__POST_HOC_EXPLORATORY_ANALYSIS_OF_THE_COMPLETED_2019_FINAL_TEST",
+    "wording": "Descriptive display of frozen predictions. The product year was part of the confirmatory years and had been used by earlier Track A experiments; nothing is selected or tuned on it."
+  },
+  "must_state_wherever_shown": [
+    "the classifier output is a score from a class-weighted model with a validation-fixed threshold, not a calibrated probability",
+    "the decision at the threshold over-forecasts heavy and very-heavy events (frequency bias above one in the frozen evidence)",
+    "the bundle was built on the reforecast control member; it is a different model version from the operational years and has not been tested there",
+    "the first round failed the mean-error guardrail and the shift was read from that round; the second round is confirmatory, not untouched",
+    "regime-aware routing is not part of this bundle and was not shown to add value"
+  ],
+  "not_authorised": [
+    "refitting or reselecting anything",
+    "changing the shift or a threshold",
+    "applying the bundle to any other year or to the operational years",
+    "calling the scores calibrated probabilities",
+    "pooling with another track"
+  ],
+  "schema": "heavy-rain-integration-protocol-v1",
+  "scope": {
+    "cases": "exactly the cases of the existing product, with exactly its valid cells",
+    "layers": [
+      "B1 corrected rainfall (shifted regression)",
+      "heavy-rain classifier score and decision at the frozen threshold",
+      "very-heavy classifier score and decision at the frozen threshold"
+    ],
+    "surfaces": [
+      "Forecast Explorer corrected panel (model choice)",
+      "Extreme Rain map (source choice)",
+      "District Intelligence map and table (model choice)"
+    ],
+    "track": "A",
+    "year": 2019
+  },
+  "written_at_utc": "2026-10-03T17:42:23+00:00",
+  "written_before_any_product_prediction_was_computed": true
+}
