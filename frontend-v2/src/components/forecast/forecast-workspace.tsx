@@ -15,7 +15,7 @@ import { RegimeBars } from "@/components/science/regime-bars";
 import { ErrorState, LoadingState, PageHeading, PrototypeNote } from "@/components/science/common";
 import { RainLegend } from "@/components/maps/map-legend";
 import { MapControls } from "@/components/maps/map-controls";
-import { mapBounds } from "@/components/maps/use-weather-map";
+import { fitToData } from "@/components/maps/use-weather-map";
 import { getHeavyRainCase } from "@/lib/api/heavy-rain";
 import { CorrectedModelChoice, HeavyRainNotice, type CorrectedModel } from "@/components/science/heavy-rain-controls";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -56,7 +56,7 @@ export function ForecastWorkspace({ cases, demos, initialCase }: { cases: CaseSu
       requestAnimationFrame(() => {
         for (const instance of maps.current.values()) {
           instance.resize();
-          instance.fitBounds([[west, south], [east, north]], { padding: 14, duration: 0 });
+          fitToData(instance, [west, south, east, north]);
         }
       });
     }
@@ -69,7 +69,7 @@ export function ForecastWorkspace({ cases, demos, initialCase }: { cases: CaseSu
   }, []);
   const resetExtent = () => {
     const bounds = rainfall.data?.data.grid.bounds_west_south_east_north;
-    if (bounds) for (const map of maps.current.values()) { map.resize(); map.fitBounds(mapBounds(bounds), { padding: 14, duration: 0 }); }
+    if (bounds) for (const map of maps.current.values()) { map.resize(); fitToData(map, bounds); }
   };
   const zoom = (delta: number) => { for (const map of maps.current.values()) map.zoomTo(map.getZoom() + delta, { duration: 150 }); };
   const fullscreen = async () => {

@@ -1759,3 +1759,12 @@ ul.phase5-caveats > li::before { content: ""; position: absolute; left: 2px; top
 .phase5-limitations { list-style: none; display: grid; gap: 8px; margin: 10px 0 0; padding: 0; }
 .phase5-limitations li { position: relative; padding: 10px 14px 10px 36px; border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); border-radius: 9px; background: color-mix(in srgb, var(--surface-recessed) 40%, var(--surface-raised)); font-size: 13px; line-height: 1.5; color: var(--foreground); }
 .phase5-limitations li::before { content: "!"; position: absolute; left: 12px; top: 12.5px; display: grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: color-mix(in srgb, var(--amber) 22%, transparent); color: var(--amber); font: 800 10px var(--font-geist-sans), sans-serif; }
+
+/* ---- map credits collapsed to an "i" (open on hover, focus or click) so they never cover the data */
+.map-attribution { display: flex; align-items: center; gap: 6px; left: auto; right: 6px; bottom: 6px; transform: none; max-width: min(86%, 560px); padding: 0; border-radius: 999px; background: transparent; }
+.map-attribution-toggle { flex: none; display: grid; place-items: center; width: 22px; height: 22px; padding: 0; border: 1px solid rgba(255, 255, 255, .35); border-radius: 50%; background: rgba(8, 22, 31, .72); color: #f4f7f6; font: italic 700 12px Georgia, "Times New Roman", serif; cursor: pointer; transition: background-color var(--dur-fast); }
+.map-attribution-toggle:hover, .map-attribution.is-open .map-attribution-toggle { background: rgba(8, 22, 31, .94); }
+.map-attribution-text { display: none; order: -1; padding: 3px 9px; border-radius: 6px; background: rgba(8, 22, 31, .9); color: #f4f7f6; font-size: 10px; line-height: 1.45; }
+.map-attribution:hover .map-attribution-text, .map-attribution:focus-within .map-attribution-text, .map-attribution.is-open .map-attribution-text { display: block; }
+.map-attribution:hover, .map-attribution:focus-within, .map-attribution.is-open { background: transparent; }
+@media (prefers-reduced-motion: reduce) { .map-attribution-toggle { transition: none; } }

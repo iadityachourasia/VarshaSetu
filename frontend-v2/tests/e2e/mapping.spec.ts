@@ -48,6 +48,8 @@ test("district selection and online-style fallback retain local geometry", async
   await expect(page.locator(".district-map[data-ready='true']")).toHaveCount(1);
   await expect.poll(async () => Number(await page.locator(".district-map").getAttribute("data-district-labels-rendered")), { timeout: 30000 }).toBeGreaterThan(1);
   await page.screenshot({ path: testInfo.outputPath("district-offline-regional-labels.png"), fullPage: true });
+  // The credits are collapsed to an "i" by default and open on click.
+  await page.getByRole("button", { name: "Show map data credits" }).first().click();
   await expect(page.getByText(/geoBoundaries, ODbL 1.0/).first()).toBeVisible();
 });
 

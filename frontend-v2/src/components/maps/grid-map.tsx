@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { type GeoJSONSource, type ImageSource, type Map } from "maplibre-gl";
 import type { FeatureCollection, Polygon } from "geojson";
 import type { Geometry, Grid } from "@/lib/api/science";
-import { cellAt, rasterCoordinates, rasterPixels, type CellSelection, type Palette } from "@/lib/maps/grid";
+import { cellAt, rasterCoordinates, rasterPixels, validBounds, type CellSelection, type Palette } from "@/lib/maps/grid";
 import { firstLabelLayer } from "@/lib/maps/basemap";
 import { installDistrictLabels, updateDistrictLabels } from "@/lib/maps/label-layers";
 import type { DistrictGeometry } from "@/lib/maps/district-labels";
@@ -71,6 +71,7 @@ export default function GridMap({ id, title, subtitle, values, mask, grid, palet
   const callbacks = useRef({ onSelect, onReady, onMove, onHoverCell });
   const [hover, setHover] = useState<CellSelection | null>(null);
   const [hoverDistrict, setHoverDistrict] = useState<string | null>(null);
+  const dataBounds = useMemo(() => validBounds(grid, mask), [grid, mask]);
   const { emphasis } = useMapEmphasis();
   const activeEmphasis = emphasisFor(emphasis, palette);
   // `baseImage` is the picture of the data itself; `image` is the same picture with the legend emphasis (if any) applied. Only a change of the data crossfades.
@@ -117,7 +118,7 @@ export default function GridMap({ id, title, subtitle, values, mask, grid, palet
   }, [grid, image, geometryData, selected, linkedHover, settings.opacity, settings.displayMode, settings.boundaries, settings.geographicStyle]);
 
   const { mapRef, status } = useWeatherMap({
-    element: container, bounds: grid.bounds_west_south_east_north, geometry: geometryData,
+    element: container, bounds: grid.bounds_west_south_east_north, fitBounds: dataBounds, geometry: geometryData,
     geographicStyle: settings.geographicStyle, onStyleReady: installLayers,
     onReady: (map) => callbacks.current.onReady?.(id, map),
   });

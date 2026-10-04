@@ -22,7 +22,7 @@ import { DataSourceIndicator, ErrorState, LoadingState, PageHeading, PrototypeNo
 import { ChartFrame } from "@/components/science/chart-frame";
 import { RainLegend } from "@/components/maps/map-legend";
 import { MapControls } from "@/components/maps/map-controls";
-import { mapBounds } from "@/components/maps/use-weather-map";
+import { fitToData } from "@/components/maps/use-weather-map";
 import { HashChip } from "@/components/ui/hash-chip";
 import { DownloadLink } from "@/components/ui/download-link";
 
@@ -226,7 +226,7 @@ export function OperationalDistrictWorkspace({ initialYear, initialCase }: { ini
       <span>{body.model_role}</span>{regime ? <span>Forecast-only pseudo-regime: {regimeName(regime)}</span> : null}<span>Not live warning guidance</span></div>
     <div className="case-meta"><span><b>DISTRICTS</b> {list.length} case-valid of {body.source_district_count} intersecting the domain</span><span><b>METHOD</b> Area-overlap weighting</span><span><b>WEIGHTS</b> sha256 <HashChip hash={body.weights_sha256} /></span></div>
     <div className="districts-layout"><section className="districts-map-panel" aria-label="District rainfall map"><div className="map-panel-heading"><div><strong>{MAP_VARIABLE[activeVariable].label} · district mean rainfall</strong><span>{list.length} case-valid · {geo.geometry.features.length} source districts intersect domain</span></div></div>
-      <MapControls district onReset={() => mapRef.current?.fitBounds(mapBounds([67.875, 9.875, 80.125, 22.125]), { padding: 18, duration: 0 })} onZoom={(delta) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 0) + delta, { duration: 150 })} />
+      <MapControls district onReset={() => { if (mapRef.current) fitToData(mapRef.current); }} onZoom={(delta) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 0) + delta, { duration: 150 })} />
       <DistrictMap geometry={geo.geometry} districts={mapDistricts} selectedId={effectiveId} hoveredId={hoveredId} onHover={setHoveredId} onSelect={(id) => selectDistrict(id, geo)} onReady={(map) => { mapRef.current = map; }} colorFor={activeVariable === "error" ? errorColor : rainfallColor} />
       <div className="district-map-legend">{activeVariable === "error" ? <ErrorLegend /> : <RainLegend />}</div>
       <p className="micro-note">Polygon color is the frozen case-specific district mean of the selected variable{activeVariable === "error" ? ` (${MODEL_SHORT[model]} minus IMD; a district-mean error for this one case, not a skill score)` : ""}, not interpolated grid rainfall. Geography: {body.geometry_source} · {body.geometry_license}. Domain-limited coverage only.</p></section>

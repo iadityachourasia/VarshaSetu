@@ -15,6 +15,7 @@ import { expandedField, getOperationalIndex, operationalGrid, operationalMask, t
 import { loadOperationalCase } from "@/lib/operational-live-case";
 import { caseDisplayLabel, loadOperationalCaseList } from "@/lib/operational-case-list";
 import type { OperationalYear } from "@/lib/api/operational";
+import { fitToData } from "@/components/maps/use-weather-map";
 
 const SynopticChart = dynamic(() => import("@/components/synoptic/synoptic-chart").then((module) => module.SynopticChart), { ssr: false, loading: () => <div className="map-placeholder" aria-label="Loading synoptic chart" /> });
 const GridMap = dynamic(() => import("@/components/maps/grid-map"), { ssr: false, loading: () => <div className="map-placeholder" aria-label="Loading historical map" /> });
@@ -163,7 +164,7 @@ function OperationalForecastContent({ index, initialYear, initialCase }: { index
         <SynopticChart key={`${year}-${caseListItem?.case_id}`} year={year as OperationalYear} caseId={caseListItem!.case_id} />
         <p className="phase5-caveat">Control-member forecast fields at forecast hour {caseListItem?.lead_label ?? ""}, shown as frozen. This chart describes the forecast atmosphere that fed the post-processing; it is not an analysis and not a causal explanation of any correction.</p>
       </> : <>
-      <MapControls onReset={() => { for (const map of maps.current.values()) map.fitBounds([[67.875, 9.875], [80.125, 22.125]], { padding: 14, duration: 0 }); }} onZoom={(delta) => { for (const map of maps.current.values()) map.zoomTo(map.getZoom() + delta, { duration: 150 }); }} onFullscreen={async () => { if (document.fullscreenElement) await document.exitFullscreen(); else await mapFrame.current?.requestFullscreen(); for (const map of maps.current.values()) map.resize(); }} />
+      <MapControls onReset={() => { for (const map of maps.current.values()) fitToData(map, [67.875, 9.875, 80.125, 22.125]); }} onZoom={(delta) => { for (const map of maps.current.values()) map.zoomTo(map.getZoom() + delta, { duration: 150 }); }} onFullscreen={async () => { if (document.fullscreenElement) await document.exitFullscreen(); else await mapFrame.current?.requestFullscreen(); for (const map of maps.current.values()) map.resize(); }} />
       <div ref={mapFrame} className={`phase5-map-grid phase5-map-${visiblePanels.length}`} aria-label="Synchronized historical forecast maps">
         {visiblePanels.map((panel) => <GridMap key={`${caseListItem?.case_id}-${panel.id}-${view}-${selectedModel}`} id={panel.id} title={panel.title} subtitle={panel.subtitle} values={expandedField(index, panel.values)} mask={mask} grid={grid} palette={panel.palette} unit={panel.unit} geometry={geometry.data?.geometry} selected={cell} onSelect={setSelected} onReady={onReady} onMove={onMove} />)}
       </div>

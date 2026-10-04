@@ -13,7 +13,7 @@ import { CaseSelector } from "@/components/science/case-selector";
 import { ErrorState, LoadingState, Metric, PageHeading, PrototypeNote, SectionHeading } from "@/components/science/common";
 import { ProbabilityLegend } from "@/components/maps/map-legend";
 import { MapControls } from "@/components/maps/map-controls";
-import { mapBounds } from "@/components/maps/use-weather-map";
+import { fitToData } from "@/components/maps/use-weather-map";
 import { ExtremeClassifierView } from "./extreme-classifier-view";
 import { Segmented } from "@/components/ui/segmented";
 
@@ -39,7 +39,7 @@ export function ExtremesWorkspace({ cases, demos, initialCase, verification }: {
   const point = activeCell && values ? values[activeCell.row]?.[activeCell.column] : null;
   const observed = activeCell && rainfall.data ? rainfall.data.data.observed[activeCell.row]?.[activeCell.column] : null;
   const valid = activeCell && rainfall.data ? rainfall.data.data.valid_mask[activeCell.row]?.[activeCell.column] : false;
-  const resetExtent = () => { if (mapRef.current && probability.data) mapRef.current.fitBounds(mapBounds(probability.data.data.grid.bounds_west_south_east_north), { padding: 14, duration: 0 }); };
+  const resetExtent = () => { if (mapRef.current && probability.data) fitToData(mapRef.current, probability.data.data.grid.bounds_west_south_east_north); };
   const fullscreen = async () => { if (document.fullscreenElement) await document.exitFullscreen(); else await mapPanel.current?.requestFullscreen(); mapRef.current?.resize(); };
   return <div className="page-content extremes-page">
     <PageHeading title="Extreme Rain" subtitle={source === "calibrated" ? "2019 historical reforecast probabilities, calibrated on 2018; not live warnings or 2025 forecasts." : "2019 historical reforecast: scores of the dedicated heavy-rain classifier (reforecast study). Scores are not calibrated probabilities; not live warnings."} action={<PrototypeNote />} />

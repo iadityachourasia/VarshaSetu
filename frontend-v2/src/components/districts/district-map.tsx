@@ -15,6 +15,23 @@ import { useWeatherMap } from "@/components/maps/use-weather-map";
 
 const DOMAIN: [number, number, number, number] = [67.875, 9.875, 80.125, 22.125];
 
+/** Extent of the polygons of the districts that carry a value, as [west, south, east, north]; null when none do. */
+function districtBounds(geometry: Geometry["geometry"], districts: District[]): [number, number, number, number] | null {
+  const ids = new Set(districts.map((item) => item.district_id));
+  let west = Infinity, south = Infinity, east = -Infinity, north = -Infinity;
+  const visit = (coordinates: unknown): void => {
+    if (!Array.isArray(coordinates)) return;
+    if (typeof coordinates[0] === "number" && typeof coordinates[1] === "number") {
+      const [longitude, latitude] = coordinates as number[];
+      west = Math.min(west, longitude); east = Math.max(east, longitude); south = Math.min(south, latitude); north = Math.max(north, latitude);
+      return;
+    }
+    for (const part of coordinates) visit(part);
+  };
+  for (const feature of geometry.features) if (ids.has(feature.properties.district_id)) visit((feature.geometry as { coordinates?: unknown } | null)?.coordinates);
+  return Number.isFinite(west) ? [west, south, east, north] : null;
+}
+
 export default function DistrictMap({ geometry, districts, selectedId, onSelect, onReady, colorFor = rainfallColor, hoveredId = null, onHover }: {
   geometry: Geometry["geometry"]; districts: District[]; selectedId: string | null;
   onSelect: (id: string) => void; onReady?: (map: MapLibreMap | null) => void;
@@ -50,8 +67,9 @@ export default function DistrictMap({ geometry, districts, selectedId, onSelect,
     if (element.current) element.current.dataset.ready = "true";
   }, [data, geometry, selectedId, settings.boundaries, settings.geographicStyle]);
 
+  const dataBounds = useMemo(() => districtBounds(geometry, districts) ?? DOMAIN, [geometry, districts]);
   const { mapRef, status } = useWeatherMap({
-    element, bounds: DOMAIN, geometry: geometry as FeatureCollection,
+    element, bounds: DOMAIN, fitBounds: dataBounds, geometry: geometry as FeatureCollection,
     geographicStyle: settings.geographicStyle, onStyleReady: installLayers,
     onReady: (map) => readyRef.current?.(map),
   });

@@ -50,6 +50,9 @@ test("online vector geography loads from the official provider", async ({ page }
   await page.goto("/forecast?case=" + primary);
   await expect(page.locator(".map-canvas[data-ready='true']")).toHaveCount(3);
   await expect.poll(() => tiles.filter((status) => status === 200).length, { timeout: 25_000 }).toBeGreaterThan(0);
+  // Credits are collapsed to an "i" so they never cover the data, and open on click with the full provider attribution.
+  await expect(page.getByText(/OpenFreeMap.*OpenMapTiles/).first()).toBeHidden();
+  await page.getByRole("button", { name: "Show map data credits" }).first().click();
   await expect(page.getByText(/OpenFreeMap.*OpenMapTiles/).first()).toBeVisible();
   await expect(page.getByText("Offline geography")).toHaveCount(0);
   expect(missingSprites).toEqual([]);

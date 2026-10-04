@@ -178,3 +178,20 @@ export function gridFeatures(grid: Grid, values: (number | null)[][], mask: bool
   }
   return { type: "FeatureCollection", features };
 }
+
+/**
+ * The edges of the cells that carry data (valid in the mask), as [west, south, east, north] in degrees, cell edges included.
+ * Maps open on this box instead of the whole grid, so no screen space goes to rows or columns that are entirely masked. Falls back to the grid bounds if nothing is valid.
+ */
+export function validBounds(grid: Grid, mask: boolean[][]): [number, number, number, number] {
+  const half = grid.cell_size_degrees / 2;
+  let west = Infinity, south = Infinity, east = -Infinity, north = -Infinity;
+  for (let row = 0; row < mask.length; row++) for (let column = 0; column < (mask[row]?.length ?? 0); column++) {
+    if (!mask[row][column]) continue;
+    const latitude = grid.latitude_centers[row], longitude = grid.longitude_centers[column];
+    if (latitude == null || longitude == null) continue;
+    west = Math.min(west, longitude - half); east = Math.max(east, longitude + half);
+    south = Math.min(south, latitude - half); north = Math.max(north, latitude + half);
+  }
+  return Number.isFinite(west) ? [west, south, east, north] : grid.bounds_west_south_east_north;
+}

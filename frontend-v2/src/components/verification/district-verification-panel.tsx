@@ -15,7 +15,7 @@ import { improvementColor } from "@/lib/maps/grid";
 import { regimeName } from "@/lib/format";
 import { ErrorState, LoadingState } from "@/components/science/common";
 import { MapControls } from "@/components/maps/map-controls";
-import { mapBounds } from "@/components/maps/use-weather-map";
+import { fitToData } from "@/components/maps/use-weather-map";
 import { HashChip } from "@/components/ui/hash-chip";
 import { DownloadLink } from "@/components/ui/download-link";
 
@@ -138,7 +138,7 @@ export function DistrictVerificationPanel({ year }: { year: number }) {
       <label className="phase5-check"><input type="checkbox" checked={supportedOnly} onChange={(event) => setSupportedOnly(event.target.checked)} /> Only districts with ≥ 30 observed heavy events (E1)</label>
     </div>
     {geometry.data ? <div className="districts-layout"><section className="districts-map-panel" aria-label="District improvement map"><div className="map-panel-heading"><div><strong>Mean improvement vs Raw · {MODEL_LABEL[model]}</strong><span>{mapDistricts.length} districts with ≥ 30 included cases · {excluded.length} excluded for coverage</span></div></div>
-      <MapControls district onReset={() => mapRef.current?.fitBounds(mapBounds([67.875, 9.875, 80.125, 22.125]), { padding: 18, duration: 0 })} onZoom={(delta) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 0) + delta, { duration: 150 })} />
+      <MapControls district onReset={() => { if (mapRef.current) fitToData(mapRef.current); }} onZoom={(delta) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 0) + delta, { duration: 150 })} />
       <DistrictMap geometry={geometry.data.geometry} districts={mapDistricts} selectedId={selected?.district_id ?? null} onSelect={setSelectedId} onReady={(map) => { mapRef.current = map; }} colorFor={improvementColor} />
       <div className="district-map-legend"><ImprovementLegend /></div>
       <p className="micro-note">Polygon colour is each district&rsquo;s mean over its cases of (|Raw − IMD| − |model − IMD|) for the district mean, in mm; grey districts are excluded or lack support. Not a skill score by itself: read it with the status column.</p></section>

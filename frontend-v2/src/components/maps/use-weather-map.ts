@@ -12,6 +12,8 @@ type Options = {
   bounds: [number, number, number, number];
   geometry?: FeatureCollection;
   geographicStyle: GeographicStyle;
+  /** The view the map opens on and returns to on reset: the data region. Defaults to `bounds`, which stays the domain the map furniture outlines. */
+  fitBounds?: [number, number, number, number];
   onStyleReady: (map: MapLibreMap) => void;
   onReady?: (map: MapLibreMap | null) => void;
 };
@@ -20,11 +22,22 @@ export function mapBounds(bounds: [number, number, number, number]): LngLatBound
   return [[bounds[0], bounds[1]], [bounds[2], bounds[3]]];
 }
 
-export function useWeatherMap({ element, bounds, geometry, geographicStyle, onStyleReady, onReady }: Options) {
+/** Padding, in pixels, between the data region and the map edge when a map is fitted. */
+export const FIT_PADDING = 8;
+const fitTargets = new WeakMap<MapLibreMap, [number, number, number, number]>();
+
+/** Fit a map to the data region it registered (its reset view); `fallback` is used for a map that registered none. */
+export function fitToData(map: MapLibreMap, fallback?: [number, number, number, number], options: { duration?: number } = {}) {
+  const target = fitTargets.get(map) ?? fallback;
+  if (target) map.fitBounds(mapBounds(target), { padding: FIT_PADDING, duration: options.duration ?? 0 });
+}
+
+export function useWeatherMap({ element, bounds, fitBounds, geometry, geographicStyle, onStyleReady, onReady }: Options) {
   const mapRef = useRef<MapLibreMap | null>(null);
   const latest = useRef({ geometry, onStyleReady, onReady, dark: geographicStyle === "dark" });
   const [status, setStatus] = useState<BasemapState>("loading");
   const boundsRef = useRef(bounds);
+  const fitRef = useRef(fitBounds ?? bounds);
   useEffect(() => { latest.current = { geometry, onStyleReady, onReady, dark: geographicStyle === "dark" }; }, [geometry, onStyleReady, onReady, geographicStyle]);
 
   useEffect(() => {
@@ -33,8 +46,8 @@ export function useWeatherMap({ element, bounds, geometry, geographicStyle, onSt
     const map = new MapLibreMap({
       container: element.current,
       style: offlineStyle(geographicStyle, latest.current.geometry),
-      bounds: mapBounds(boundsRef.current),
-      fitBoundsOptions: { padding: 14 },
+      bounds: mapBounds(fitRef.current),
+      fitBoundsOptions: { padding: FIT_PADDING },
       attributionControl: false,
       dragRotate: false, pitchWithRotate: false, touchPitch: false,
       minZoom: 3,
@@ -54,6 +67,7 @@ export function useWeatherMap({ element, bounds, geometry, geographicStyle, onSt
       map.addImage(id, new ImageData(pixels, size, size));
     });
     mapRef.current = map;
+    fitTargets.set(map, fitRef.current);
     latest.current.onReady?.(map);
     map.addControl(new ScaleControl({ maxWidth: 88, unit: "metric" }), "bottom-left");
     map.on("style.load", () => {
@@ -105,6 +119,13 @@ export function useWeatherMap({ element, bounds, geometry, geographicStyle, onSt
     const source = mapRef.current?.getSource("offline-districts") as GeoJSONSource | undefined;
     if (source && geometry) source.setData(geometry);
   }, [geometry, status]);
+
+  // A later data region (another case or mask) becomes the reset view; the camera stays where the reader left it.
+  const [fw, fs, fe, fn] = fitBounds ?? bounds;
+  useEffect(() => {
+    fitRef.current = [fw, fs, fe, fn];
+    if (mapRef.current) fitTargets.set(mapRef.current, fitRef.current);
+  }, [fw, fs, fe, fn]);
 
   return { mapRef, status };
 }

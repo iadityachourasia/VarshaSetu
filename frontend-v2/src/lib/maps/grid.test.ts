@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cellAt, gridFeatures, nearestValidCell, probabilityColor, rainfallColor, rasterCoordinates, rasterPixels } from "./grid";
+import { cellAt, gridFeatures, nearestValidCell, probabilityColor, rainfallColor, rasterCoordinates, rasterPixels, validBounds } from "./grid";
 import type { Grid } from "../api/science";
 
 const grid: Grid = {
@@ -58,5 +58,16 @@ describe("frozen grid rendering", () => {
     const original = JSON.stringify(values);
     expect(rasterPixels(grid, values, mask, "probability", "weather")).toBe(rasterPixels(grid, values, mask, "probability", "weather"));
     expect(JSON.stringify(values)).toBe(original);
+  });
+});
+
+describe("validBounds", () => {
+  const grid = { shape: [3, 4], row_order: "south_to_north", column_order: "west_to_east", latitude_centers: [10, 10.25, 10.5], longitude_centers: [70, 70.25, 70.5, 70.75], cell_size_degrees: 0.25, bounds_west_south_east_north: [69.875, 9.875, 70.875, 10.625] } as unknown as Grid;
+  it("covers exactly the valid cells, edges included", () => {
+    const mask = [[false, false, false, false], [false, true, true, false], [false, false, true, false]];
+    expect(validBounds(grid, mask)).toEqual([70.125, 10.125, 70.625, 10.625]);
+  });
+  it("falls back to the grid bounds when nothing is valid", () => {
+    expect(validBounds(grid, [[false, false, false, false], [false, false, false, false], [false, false, false, false]])).toEqual(grid.bounds_west_south_east_north);
   });
 });
