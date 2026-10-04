@@ -26,10 +26,37 @@ export function mapBounds(bounds: [number, number, number, number]): LngLatBound
 export const FIT_PADDING = 8;
 const fitTargets = new WeakMap<MapLibreMap, [number, number, number, number]>();
 
-/** Fit a map to the data region it registered (its reset view); `fallback` is used for a map that registered none. */
-export function fitToData(map: MapLibreMap, fallback?: [number, number, number, number], options: { duration?: number } = {}) {
+/** Beyond this share of empty width a panel counts as wide; there the region is centred and may lose up to WIDE_PANEL_TRIM of its height. */
+const WIDE_PANEL_SLACK = 0.35;
+const WIDE_PANEL_TRIM = 0.15;
+
+/**
+ * Point the camera so the whole data region is shown with no gap along its limiting side: the region is scaled to touch the panel edges in one direction
+ * (top and bottom for these tall regions), and any spare width is pushed to the west, where it falls on the Arabian Sea, so the east edge of the data meets
+ * the right edge of the panel. Nothing in the region is cropped. Spare height (a panel taller than the region) is split evenly. Wide panels: see WIDE_PANEL_SLACK.
+ */
+export function fillCamera(map: MapLibreMap, bounds: [number, number, number, number]) {
+  const container = map.getContainer();
+  const width = container.clientWidth, height = container.clientHeight;
+  const southWest = map.project([bounds[0], bounds[1]]), northEast = map.project([bounds[2], bounds[3]]);
+  const regionWidth = Math.abs(northEast.x - southWest.x), regionHeight = Math.abs(southWest.y - northEast.y);
+  if (!width || !height || !regionWidth || !regionHeight) { map.fitBounds(mapBounds(bounds), { padding: FIT_PADDING, duration: 0 }); return; }
+  const contain = Math.min(width / regionWidth, height / regionHeight);
+  const slack = 1 - (regionWidth * contain) / width;
+  // A panel much wider than the region (Extreme Rain, district maps) would leave a large empty band on one side: keep the region centred there,
+  // and trim at most WIDE_PANEL_TRIM of its height to narrow the bands. Comparison panels keep the whole region, east-aligned.
+  const wide = slack > WIDE_PANEL_SLACK;
+  const scale = wide ? Math.min(Math.max(width / regionWidth, height / regionHeight), contain / (1 - WIDE_PANEL_TRIM)) : contain;
+  // Screen centre in current-zoom pixels.
+  const centerX = !wide && slack * width > 1 ? Math.max(northEast.x, southWest.x) - width / 2 / scale : (southWest.x + northEast.x) / 2;
+  const centerY = (southWest.y + northEast.y) / 2;
+  map.jumpTo({ center: map.unproject([centerX, centerY]), zoom: map.getZoom() + Math.log2(scale) });
+}
+
+/** Return a map to the data region it registered (its reset view); `fallback` is used for a map that registered none. */
+export function fitToData(map: MapLibreMap, fallback?: [number, number, number, number]) {
   const target = fitTargets.get(map) ?? fallback;
-  if (target) map.fitBounds(mapBounds(target), { padding: FIT_PADDING, duration: options.duration ?? 0 });
+  if (target) fillCamera(map, target);
 }
 
 export function useWeatherMap({ element, bounds, fitBounds, geometry, geographicStyle, onStyleReady, onReady }: Options) {
@@ -68,6 +95,7 @@ export function useWeatherMap({ element, bounds, fitBounds, geometry, geographic
     });
     mapRef.current = map;
     fitTargets.set(map, fitRef.current);
+    fillCamera(map, fitRef.current);
     latest.current.onReady?.(map);
     map.addControl(new ScaleControl({ maxWidth: 88, unit: "metric" }), "bottom-left");
     map.on("style.load", () => {

@@ -121,8 +121,12 @@ test.describe("scroll-spy in the page contents", () => {
       expect(await links.count()).toBeGreaterThanOrEqual(5);
       for (const index of [2, 4]) {
         const href = await links.nth(index).getAttribute("href");
-        await page.evaluate((id) => { const top = document.getElementById(id)!.getBoundingClientRect().top + window.scrollY; window.scrollTo(0, top - 100); }, href!.slice(1));
-        await expect(links.nth(index)).toHaveAttribute("aria-current", "location");
+        // Sections above may still be loading and push the target down, so scroll again on every attempt until the layout has settled.
+        await expect.poll(async () => {
+          await page.evaluate((id) => { const top = document.getElementById(id)!.getBoundingClientRect().top + window.scrollY; window.scrollTo(0, top - 100); }, href!.slice(1));
+          await page.waitForTimeout(150);
+          return links.nth(index).getAttribute("aria-current");
+        }, { timeout: 20_000 }).toBe("location");
         await expect(toc.locator("a[aria-current='location']")).toHaveCount(1);
       }
     });
