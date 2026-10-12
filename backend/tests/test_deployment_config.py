@@ -5,6 +5,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+import conftest
+
 ROOT = Path(__file__).resolve().parents[2]
 DOCKERFILE = (ROOT / "Dockerfile").read_text(encoding="utf-8").replace("\r\n", "\n")
 DOC_102 = (ROOT / "docs/102_FREE_DEPLOYMENT.md").read_text(encoding="utf-8")
@@ -47,3 +49,16 @@ def test_ci_workflow_uses_the_same_pinned_bundle_as_the_dockerfile():
     assert "sha256sum -c" in workflow and workflow.index("sha256sum -c") < workflow.index("tar --no-same-owner")
     assert "--retry-all-errors" in workflow and "permissions:\n  contents: read" in workflow
     assert "pytest backend/tests" in workflow and "-rs" in workflow, "skips must be printed, never silent"
+
+
+def test_collection_guard_follows_script_imports_to_missing_local_experiment_code(tmp_path, monkeypatch):
+    (tmp_path / "scripts").mkdir()
+    test_file = tmp_path / "test_research.py"
+    test_file.write_text("from scripts import research_entry\n", encoding="utf-8")
+    (tmp_path / "scripts/research_entry.py").write_text(
+        "from experiments.recent_historical.local_protocol.build_protocol import outer_membership\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(conftest, "ROOT", tmp_path)
+
+    assert conftest._missing_experiment_code(test_file) == ["local_protocol"]

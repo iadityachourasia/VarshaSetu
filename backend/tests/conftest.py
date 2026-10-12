@@ -1,3 +1,4 @@
+import ast
 import re
 import sys
 from pathlib import Path
@@ -24,6 +25,28 @@ CORPUS_PROTOCOL = ROOT / "experiments/recent_historical/operational_corpus_proto
 _EXPERIMENT_IMPORT = re.compile(r"experiments\.recent_historical\.([A-Za-z0-9_]+)")
 
 
+def _local_dependencies(source_file: Path) -> tuple[set[str], set[str]]:
+    """Return recent-historical experiment packages and scripts modules imported by a local source file."""
+    try:
+        tree = ast.parse(source_file.read_text(encoding="utf-8", errors="ignore"))
+    except (OSError, SyntaxError):
+        return set(), set()
+
+    experiments: set[str] = set()
+    scripts: set[str] = set()
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.ImportFrom) or not node.module:
+            continue
+        match = _EXPERIMENT_IMPORT.search(node.module)
+        if match:
+            experiments.add(match.group(1))
+        if node.module == "scripts":
+            scripts.update(alias.name for alias in node.names if alias.name != "*")
+        elif node.module.startswith("scripts."):
+            scripts.add(node.module.removeprefix("scripts.").split(".", 1)[0])
+    return experiments, scripts
+
+
 def _missing_experiment_code(test_file: Path) -> list[str]:
     """Experiment packages (gitignored local code under experiments/) that a test module needs but this checkout lacks.
 
@@ -32,19 +55,37 @@ def _missing_experiment_code(test_file: Path) -> list[str]:
     namespace package) or a module file exists.
     """
     base = ROOT / "experiments" / "recent_historical"
-    pending = sorted(set(_EXPERIMENT_IMPORT.findall(test_file.read_text(encoding="utf-8", errors="ignore"))))
+    pending_experiments, pending_scripts = _local_dependencies(test_file)
     seen: set[str] = set()
+    seen_scripts: set[str] = set()
     missing: list[str] = []
-    while pending:
-        name = pending.pop()
+    scripts_dir = ROOT / "scripts"
+    while pending_experiments or pending_scripts:
+        while pending_scripts:
+            script = pending_scripts.pop()
+            if script in seen_scripts:
+                continue
+            seen_scripts.add(script)
+            script_file = scripts_dir / f"{script}.py"
+            if script_file.is_file():
+                child_experiments, child_scripts = _local_dependencies(script_file)
+                pending_experiments.update(child_experiments)
+                pending_scripts.update(child_scripts - seen_scripts)
+        if not pending_experiments:
+            continue
+        name = pending_experiments.pop()
         if name in seen:
             continue
         seen.add(name)
         if (base / name).is_dir():
             for source in (base / name).rglob("*.py"):
-                pending.extend(_EXPERIMENT_IMPORT.findall(source.read_text(encoding="utf-8", errors="ignore")))
+                child_experiments, child_scripts = _local_dependencies(source)
+                pending_experiments.update(child_experiments - seen)
+                pending_scripts.update(child_scripts - seen_scripts)
         elif (base / f"{name}.py").is_file():
-            pending.extend(_EXPERIMENT_IMPORT.findall((base / f"{name}.py").read_text(encoding="utf-8", errors="ignore")))
+            child_experiments, child_scripts = _local_dependencies(base / f"{name}.py")
+            pending_experiments.update(child_experiments - seen)
+            pending_scripts.update(child_scripts - seen_scripts)
         else:
             missing.append(name)
     return sorted(missing)
