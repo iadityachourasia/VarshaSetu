@@ -38,7 +38,7 @@ function Confirmation({ result }: { result: ConfirmationResult }) {
     <h3>Round 2: confirmatory test on 2017-2019</h3>
     <div className="zone-banner" role="note" data-testid="reforecast-confirmation-banner"><strong>{result.evidence_label}</strong>
       <span>The frozen B1 bundle, no refit. One parameter was added after round 1: the regression is reduced by {fixed(p.delta_mm, 2)} mm, the mean error of the same model on 2014-2016 ({p.delta_source}). {p.cases} cases on {p.initialization_dates} initialization dates.</span></div>
-    <div className="district-table-wrap"><table className="phase5-table zone-table" data-testid="reforecast-confirmation-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table" data-testid="reforecast-confirmation-table">
       <caption className="sr-only">RMSE, mean error and heavy and very-heavy rain skill of Raw and the frozen bundle on 2017-2019</caption>
       <thead><tr><th scope="col">Forecast</th><th scope="col">RMSE (mm per 24 h)</th><th scope="col">Mean error (mm)</th><th scope="col">Heavy CSI / frequency bias</th><th scope="col">Very-heavy CSI / frequency bias</th></tr></thead>
       <tbody><tr data-testid="reforecast-confirmation-M0"><th scope="row">M0 Raw</th><td>{fixed(p.pooled.M0.rmse_mm, 3)}</td><td>{fixed(p.pooled.M0.bias_mm, 3)}</td><td>{fixed(p.raw_categorical.heavy.csi, 3)} / {fixed(p.raw_categorical.heavy.frequency_bias, 2)}</td><td>{fixed(p.raw_categorical.very_heavy.csi, 3)} / {fixed(p.raw_categorical.very_heavy.frequency_bias, 2)}</td></tr>
@@ -69,13 +69,13 @@ export function ReforecastStudy() {
     <div className="zone-banner" role="note" data-testid="reforecast-banner"><strong>{r.evidence_label}</strong>
       <span>GEFSv12 reforecast control member, June to September. Trained on {ov.populations.train_years[0]}-{ov.populations.train_years[ov.populations.train_years.length - 1]}, selected on {ov.populations.validation_years.join(" and ")}; {p.cases} cases on {p.initialization_dates} initialization dates, {p.rows.toLocaleString("en-GB")} paired cells. Never pooled with the operational years.</span></div>
     <h3>Round 1: sealed years 2014-2016</h3>
-    <div className="district-table-wrap"><table className="phase5-table zone-table" data-testid="reforecast-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table" data-testid="reforecast-table">
       <caption className="sr-only">RMSE, bias, heavy-rain and very-heavy-rain skill of Raw and the frozen models on the sealed years</caption>
       <thead><tr><th scope="col">Model</th><th scope="col">RMSE (mm per 24 h)</th><th scope="col">Bias (mm)</th><th scope="col">Heavy CSI / frequency bias</th><th scope="col">Very-heavy CSI / frequency bias</th></tr></thead>
       <tbody>{R05_MODELS.filter((m) => p.pooled[m]).map((m) => { const x = p.pooled[m]; return <tr key={m} data-testid={`reforecast-row-${m}`}><th scope="row">{MODEL_LABEL[m]}</th><td>{fixed(x.rmse_mm, 3)}</td><td>{fixed(x.bias_mm, 3)}</td>
         <td>{fixed(x.heavy.csi, 3)} / {fixed(x.heavy.frequency_bias, 2)}</td><td>{fixed(x.very_heavy.csi, 3)} / {fixed(x.very_heavy.frequency_bias, 2)}</td></tr>; })}</tbody></table></div>
     <h4>Yes/no forecasts of heavy and very-heavy rain</h4>
-    <div className="district-table-wrap"><table className="phase5-table zone-table" data-testid="reforecast-exceedance-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table" data-testid="reforecast-exceedance-table">
       <caption className="sr-only">Heavy and very-heavy rain yes/no forecasts: Raw against the exceedance classifiers on the sealed years</caption>
       <thead><tr><th scope="col">Forecast</th><th scope="col">Heavy CSI / frequency bias</th><th scope="col">Very-heavy CSI / frequency bias</th><th scope="col">Probability AUC (heavy / very heavy)</th></tr></thead>
       <tbody><tr data-testid="reforecast-exc-M0"><th scope="row">M0 Raw (rain at or above the threshold)</th><td>{fixed(p.raw_categorical.heavy.csi, 3)} / {fixed(p.raw_categorical.heavy.frequency_bias, 2)}</td><td>{fixed(p.raw_categorical.very_heavy.csi, 3)} / {fixed(p.raw_categorical.very_heavy.frequency_bias, 2)}</td><td>not a probability</td></tr>

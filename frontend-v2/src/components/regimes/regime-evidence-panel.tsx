@@ -48,7 +48,7 @@ function DataTable({ caption, rows, metric, threshold, scale }: {
   caption: string; rows: { label: string; detail: string; block: EvidenceBlock | undefined }[];
   metric: MetricKey; threshold: EvidenceThreshold; scale: EvidenceScale;
 }) {
-  return <div className="district-table-wrap"><table className="phase5-table regime-evidence-table">
+  return <div className="district-table-wrap" tabIndex={0}><table className="phase5-table regime-evidence-table">
     <caption className="sr-only">{caption}</caption>
     <thead><tr><th scope="col">Group</th>{EVIDENCE_MODELS.map((model) => <th scope="col" key={model}>{MODEL_LABEL[model]}</th>)}</tr></thead>
     <tbody>{rows.map((row) => <tr key={row.label}>
@@ -135,7 +135,7 @@ export function RegimeEvidencePanel({ track, year }: { track: "A" | "B"; year: n
       {([["CSI", "Δ CSI"], ["FSS_3x3", "Δ FSS 3×3"], ["FSS_9x9", "Δ FSS 9×9"]] as const).map(([key, title], index) => <ForestPlot key={key} title={title} showLabels={index === 0} width={index === 0 ? 520 : 350}
         rows={BOOTSTRAP_PAIRS.map((pair) => { const stat = data.bootstrap.overall[threshold][pair]?.[key]; const ok = stat?.status === "ok" && stat.point !== undefined && stat.interval95; return { label: PAIR_LABEL[pair], point: ok ? stat.point ?? null : null, low: ok ? stat.interval95![0] : null, high: ok ? stat.interval95![1] : null }; })} />)}
     </div>
-    <div className="district-table-wrap"><table className="phase5-table regime-evidence-table"><caption className="sr-only">Paired bootstrap differences in CSI and FSS for {threshold === "heavy" ? "heavy" : "very heavy"} rain</caption>
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table regime-evidence-table"><caption className="sr-only">Paired bootstrap differences in CSI and FSS for {threshold === "heavy" ? "heavy" : "very heavy"} rain</caption>
       <thead><tr><th scope="col">Contrast</th><th scope="col">Δ CSI [95 % interval]</th><th scope="col">Δ FSS 3×3 [95 % interval]</th><th scope="col">Δ FSS 9×9 [95 % interval]</th></tr></thead>
       <tbody>{BOOTSTRAP_PAIRS.map((pair) => { const row = data.bootstrap.overall[threshold][pair]; return <tr key={pair}><th scope="row">{PAIR_LABEL[pair]}</th><td>{ciText(row?.CSI)}</td><td>{ciText(row?.FSS_3x3)}</td><td>{ciText(row?.FSS_9x9)}</td></tr>; })}</tbody></table></div>
     <p className="micro-note">Positive Δ means the first model scores higher. Intervals resample whole cases and ignore serial correlation between days, so they are optimistic.</p>

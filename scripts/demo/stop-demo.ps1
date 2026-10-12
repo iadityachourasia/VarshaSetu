@@ -2,7 +2,8 @@ $ErrorActionPreference = 'Stop'
 $runtime = Join-Path $PSScriptRoot '.runtime'
 $statePath = Join-Path $runtime 'owned-processes.json'
 if (-not (Test-Path -LiteralPath $statePath)) { Write-Host 'No launcher-owned demo processes recorded'; exit 0 }
-$records = @(Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json)
+# Keep the decoded array flat on Windows PowerShell 5.1 as well as PowerShell 7.
+$records = Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json
 $remaining = [System.Collections.Generic.List[object]]::new()
 foreach ($record in $records) {
   $process = Get-Process -Id $record.pid -ErrorAction SilentlyContinue

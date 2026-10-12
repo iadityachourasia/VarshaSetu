@@ -1,5 +1,81 @@
 # Documentation Index
 
+Latest website visual review:
+`182_WEBSITE_VISUAL_AUDIT_20261009.md` records the 16 enabled routes checked
+at desktop and mobile widths, focused dark-theme checks, accessible UI fixes,
+browser tests, and the intentionally disabled compliance route. Scientific
+model and promotion decisions are unchanged.
+
+Current two-day evaluator handoff:
+`181_TWO_DAY_EVALUATOR_HANDOFF_20261009.md` records the running local pilot,
+the post-build check results, the five-outcome decision matrix and the
+external dependencies that cannot be cleared by local work. Regional M2
+remains default; the 2026 score remains sealed.
+
+Latest blind-review source preparation:
+`180_RSMC_BLIND_REVIEW_PAGE_INDEX_20261009.md` records a write-once,
+local-only exact-date page index across three retained annual RSMC reports.
+Its 56 page references are unreviewed bibliographic leads, not expert labels
+or admitted dated bulletins. The independent regime gate remains blocked.
+
+Latest spatial probability verification:
+`179_NATIONWIDE_PROBABILITY_SPATIAL_FSS_20261009.md` records a write-once,
+same-case consumed-2024 FSS diagnostic for thresholded v1/v2/v4 heavy and
+very-heavy warning maps. The frozen v4 Brier failure and regional M2 default
+remain unchanged.
+
+Probability lineage correction:
+`178_PROBABILITY_V4_LINEAGE_CORRIGENDUM_20261009.md` clarifies that the
+v4 protocol's unqualified observation-read flag is not a project-wide
+claim. Earlier 2023/2024 references had been used; v3/v4 fitted bytes and
+scientific recipe match. The failed v4 development gate and default remain.
+
+Latest GEFS source follow-up:
+`177_GEFS_2023_EMC_VERSION_EVIDENCE_20261009.md` records a locally
+hash-verified official June 2023 EMC review PDF. Its historical "Current
+(Ops)" column supplies version context but does not clear exact 2023
+training-cycle identity or any 2026 scorer gate.
+
+Latest nationwide probability experiment:
+`176_NATIONWIDE_NONLINEAR_PROBABILITY_DEVELOPMENT_20261009.md` records the
+newly frozen nonlinear head/calibration protocol, preserved failed v3 execution,
+sealed v4 forecasts and failed consumed-2024 very-heavy comparison. The
+regional M2 product default and 2026 independent-test seal remain unchanged.
+
+Latest scorer-gate follow-up: `174_2026_VERSIONED_SCORE_GATE_V2_20261009.md`
+records a sealed versioned entrypoint, a supplemental metadata-only validator
+and a required hash-bound human source approval. The unchanged frozen scorer
+and new entrypoint remain blocked by missing annual IMD and GEFS evidence.
+`173_2026_CLEARANCE_READINESS_AUDIT_20261009.md` documents the v1 weakness.
+
+Latest probability failure diagnosis:
+`175_NATIONWIDE_PROBABILITY_CUTOFF_TRANSPORT_DIAGNOSTIC_20261009.md`
+reproduces the v2 zero-warning collapse from sealed 2024 forecast arrays;
+the already-consumed Brier failure and regional M2 default are unchanged.
+
+Latest source-gate follow-up: `172_2026_SELECTED_PREDICTOR_SOURCE_METADATA_20261009.md`
+checks the seven selected GEFS input fields' hash-verified GRIB headers across
+one 2023 training cycle and the announced June 2026 boundary. All four 2026
+independent-test source gates remain open; no observations were scored.
+
+Latest common-footprint feature diagnostic:
+`171_2023_2026_COMMON_FOOTPRINT_FEATURE_COMPARISON_20261008.md`. It compares
+all forecast dynamic features on the same 1,301 regional cells by month and
+lead, with the historical case-admission caveat explicit. It does not clear
+the 2026 source-version or independent-skill gates.
+
+Forecast-only applicability audit:
+`170_2026_FORECAST_FEATURE_APPLICABILITY_AUDIT_20261008.md`. It quantifies
+training-range warnings across the sealed 2026 JJAS forecast leads without
+opening observations or clearing the GEFS source-version gate.
+
+Latest integrated outcome matrix: `169_SIH26080_OUTCOME_CLOSEOUT_20261008.md`.
+It distinguishes implemented product paths, reproducible development evidence,
+failed scientific gates and external blockers for all five SIH outcomes.
+`168_PROBABILITY_AUDIT_REPAIR_AND_REMAINING_GATES_20261008.md` records the
+national probability fold/cutoff defects and the separate failed v2 repair.
+The v1 national evidence in `167` stays immutable.
+
 ## Purpose
 
 This directory is the working technical specification, scientific governance system, and Codex context for VarshaSetu.
@@ -138,6 +214,20 @@ This directory is the working technical specification, scientific governance sys
 | `143_HEAVY_RAIN_BUNDLE_IN_PRODUCTS.md` | The frozen heavy-rain bundle (B1) shown beside the global model on the 2019 maps and district product: protocol frozen first, every gate passed, scores not probabilities, over-forecasting and the 2019 mean error stated |
 | `144_INTERFACE_MOTION_AND_MAP_INTERACTIONS.md` | Micro-interactions and map interactions (sliding controls, exact count-up, copy-hash chip, scroll-spy, legend emphasis, raster crossfade, shared pointer), their reduced-motion paths, and what was deliberately left out |
 | `145_INTERFACE_POLISH_PASS.md` | Full-site interface review and fixes: regime distribution and pathway styling, contents-bar order, hero value wrap, phone table overflow, Raw vs corrected chart colour, cards, caveat lists, tables, pills, and a filterable 2019 casebook |
+| `146_RESEARCH_PILOT_ADVANCEMENT_STATUS.md` | Versioned source/year ledger, null regime-residual result, new-cycle district output, and sealed forecast-only JJAS 2026 corpus | Before interpreting the October 2026 research-pilot changes |
+| `157_2026_VERIFICATION_SCORER_AND_PILOT_CLOSEOUT.md` | Frozen one-shot 2026 scorer, blocked preflight, five-advance status, external gates and final local checks | Before attempting 2026 observation pairing or claiming research-pilot completion |
+| `158_IMD_2026_DAILY_SOURCE_AND_GEFS_EVIDENCE.md` | Complete unscored IMD real-time daily acquisition, third empty annual retry, 2025 source comparison, NOAA change-notice and radiation-GRIB audits, source ledger v4 | Before using any 2026 IMD grid or clearing the model-version gate |
+| `159_2026_SOURCE_VERSION_CLEARANCE.md` | Metadata-only audit and dated addendum of the still-open annual IMD, actual GEFS, 2023 patch and predictor-comparability gates; no clearance or 2026 score | Before changing the 2026 source preflight |
+| `174_2026_VERSIONED_SCORE_GATE_V2_20261009.md` | Sealed versioned entrypoint, human source-review requirement, exact passing tests and still-blocked 2026 score | Before any future 2026 observation pairing |
+| `175_NATIONWIDE_PROBABILITY_CUTOFF_TRANSPORT_DIAGNOSTIC_20261009.md` | Forecast-only reproduction of the national v2 very-heavy zero-warning cutoff failure; no refit or threshold change | Before designing another extreme-probability study |
+| `160_EXTREME_EVENT_PROBABILITY_RESEARCH.md` | Prespecified consumed-2024 ordinal probability experiment and lead diagnostic; candidate fails the frozen-control Brier gate and stays research-only | Before any extreme-probability promotion or June replay |
+| `161_INDEPENDENT_REGIME_EVIDENCE.md` | Validator-compatible blind reviewer handoff and hash-receipted local RSMC annual references; zero expert labels and zero winter cases admitted | Before any expert-validation or winter western-disturbance claim |
+| `162_INDIA_WIDE_CORRECTED_PRODUCT.md` | Frozen east-coast v2 development protocol, stage-trained 2023 control, consumed-2024 same-case failure against Raw, versioned static geometry and lead evidence; no promoted corrected product outside the current box | Before any India-wide corrected-product claim |
+| `163_PARALLEL_WORKTREE_COORDINATION.md` | Four dirty-working-tree worktrees, distinct ownership, ignored-data handling and integration checks | Before coordinating further parallel research work |
+| `164_INTEGRATED_RESEARCH_PILOT_STATUS_20261007.md` | Evidence matrix, exact integrated checks, machine-reproduced four-workstream disposition, model defaults, rights and shortest remaining research-pilot path | Current completion and blocker review |
+| `147_INDEPENDENT_REGIME_REVIEW_PROTOCOL.md` | Blinded expert/bulletin review rubric and independence requirements; prepared but not executed | Before requesting expert regime annotations or making an independent-validation claim |
+| `148_PARTIAL_CELL_DEVELOPMENT_RESULTS.md` | Frozen June 2023/2024 paired mask diagnostic, regional and district coverage, and decision not to promote the mask yet | Before changing strict rainfall QC or partial-grid district semantics |
+| `149_PARTIAL_GRID_INFERENCE_CANDIDATE.md` | Frozen-model 2024 partial-grid replay, probability-order refusals and same-cell M0/M2/M4 development score | Before any partial-grid publication or probability-calibration change |
 | `141_COMPLETION_CLOSING_AUDIT.md` | Closing audit of WP-A to WP-G: final status of every item, what remains and why, checks run | Before claiming completeness of any requirement |
 | `140_ALL_INDIA_RAW_VERIFICATION.md` | WP-D(2): Raw GEFS verification over the whole IMD grid by region (no model applied); populations, results, what is not established | Before any all-India claim |
 | `134_COMPLETION_PLAN.md` | Completion plan WP-A to WP-G for every partial or missing PS item, with the honest ceiling of each | Before changing the coverage status of any row |
@@ -164,16 +254,56 @@ If documentation and code disagree:
 3. update the documentation,
 4. do not pretend the conflict does not exist.
 
-## Current priorities (replaces the Phase 0-1 blocker chain)
+## Current research-pilot priorities
 
-The Phase 0-1 chain (reproducibility, provenance, causality, accumulation, pairing, FSS, districts, calibration) is resolved for the canonical research track.
-What remains, in order (see `docs/22` and the app's `/compliance` page for the evidence-linked status):
+The canonical research track has reproducible baselines and historical
+verification. Read `146_RESEARCH_PILOT_ADVANCEMENT_STATUS.md` for dated
+evidence; older phase documents describe their own frozen status.
 
-```text
-1. Coastal / orographic regime protocol (write, approve, then train)   - mandatory PS regime still PLANNED
-2. Western-disturbance feasibility (domain, upper-air fields, labels)  - mandatory PS regime still PLANNED
-3. Independent regime validation set                                   - labels are pseudo-label agreement only
-4. Next-generation model (M5) after protocol approval                  - data and independent-test question first
-5. Live / new-cycle inference                                          - currently historical replay only
-6. Engineering hardening (CORS, versions, checksums, CI)               - see the plan's P3 list
-```
+For the 7–8 October integrated closeout, read `164_INTEGRATED_RESEARCH_PILOT_STATUS_20261007.md` first. It records the final pass/fail matrix, the failed east-coast development control and the unchanged 2026 source seal.
+
+For the verified evaluator pilot after the live API/UI status correction, read `165_EVALUATOR_PILOT_RELEASE_20261008.md`. It separates PS implementation from scientific validation, records the 819-test final backend run and the research-only probability display.
+
+For the new full-India website view, read `166_INDIA_WIDE_RAW_WEBSITE_20261008.md`. The map serves real, hash-verified Raw GEFS on the full IMD grid, while corrected skill and district products remain regional.
+
+For the new local nationwide **development research** model ladder, read
+`167_NATIONWIDE_RESEARCH_PILOT_20261008.md`. It records the frozen full-grid
+protocol, sealed 2024 M0–M4 comparison, failed 2023 selection and regional/
+very-heavy gates, research probabilities and districts, and unchanged
+regional live default. It does not clear the 2026 source gate.
+
+1. Obtain the complete 2026 IMD reference and resolve the GEFS model-version
+   partition before any independent-year verification. The 122-cycle JJAS
+   forecast side is sealed, but the official IMD request returned zero bytes
+   and 2026 has no observation-paired score. `155_GEFS_2026_ANNOUNCED_VERSION_PARTITION.md`
+   records the forecast-only 15-cycle/107-cycle calendar partition around the
+   announced GEFS change; actual deployment and 2023 version equivalence
+   remain unproven. `156_GEFS_2026_FROZEN_INFERENCE_SEAL.md` records immutable
+   M0–M4 and probability predictions on all 213 strict-QC leads before any
+   2026 observation pairing; 22 leads have incoherent frozen probabilities.
+2. Repair the frozen heavy/very-heavy probability incoherence under a new
+   development protocol, then validate the partial-grid product and district
+   suppression on a later independent year. `150_COHERENT_PROBABILITY_PROJECTION_DIAGNOSTIC.md`
+   and `151_COHERENT_PARTIAL_GRID_REPLAY.md` show that a research-only
+   projection recovers all 90 June 2024 leads, but very-heavy Brier skill is
+   negative and frozen-cutoff warning frequency is 9.24 times observed.
+   Operational QC remains strict; the research bundle is not promoted.
+   `152_LEAD_AWARE_PROBABILITY_DEVELOPMENT.md` tests a fixed lead-aware
+   recalibration on consumed 2024 data; its tiny Brier gain over a pooled
+   recalibrator has an interval crossing zero and it does not beat the
+   frozen control. Independent reliability remains open; the June transport
+   check is reported next.
+   `153_JUNE_PROBABILITY_TRANSPORT.md` closes that no-refit June check:
+   lead-aware recalibration reduces the frozen-cutoff very-heavy warning
+   frequency but worsens both Brier and very-heavy BSS on the consumed
+   90-lead population. It is rejected for the research product.
+3. Obtain blinded expert/bulletin regime labels and a separate winter corpus
+   for western disturbances. `154_BLINDED_REGIME_REVIEW_PACKET.md` records the
+   72-case forecast-only, blinded review handoff; expert labels and bulletin
+   rights are still absent, so independent expert validation remains open.
+4. Test extreme-event calibration and fair same-case regime-aware correction
+   against the strongest geography-aware control. The first residual model
+   failed promotion, so the global model remains default.
+5. Extend correction and verification across India by stage; the current
+   corrected product remains regional. New-cycle local inference and a
+   scheduler exist, but operational/public-warning release gates remain open.

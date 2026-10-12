@@ -1,4 +1,4 @@
-param([switch]$SkipFrontend)
+param([switch]$SkipFrontend, [switch]$IncludeNationwideResearch)
 $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $manifest = Join-Path $root 'data\manifests\phase2c\artifact_manifest.json'
@@ -43,7 +43,7 @@ foreach ($entry in @(
   @('2019 verification', '/verification')
 )) {
   $name, $path = $entry
-  Check $name { $response = Invoke-WebRequest "$api$path" -TimeoutSec 45; if ($response.StatusCode -ne 200) { throw "HTTP $($response.StatusCode)" } }
+  Check $name { $response = Invoke-WebRequest "$api$path" -UseBasicParsing -TimeoutSec 45; if ($response.StatusCode -ne 200) { throw "HTTP $($response.StatusCode)" } }
 }
 # Phase 5B: Track-B (2025 operational-era) official demo case and its
 # principal endpoints. A SCIENCE_INTEGRITY_FAILURE (HTTP 503) here must
@@ -63,10 +63,31 @@ foreach ($entry in @(
   @('Operational ensemble', "/operational/2025/cases/$operationalPrimary/ensemble")
 )) {
   $name, $path = $entry
-  Check $name { $response = Invoke-WebRequest "$api$path" -TimeoutSec 45; if ($response.StatusCode -ne 200) { throw "HTTP $($response.StatusCode)" } }
+  Check $name { $response = Invoke-WebRequest "$api$path" -UseBasicParsing -TimeoutSec 45; if ($response.StatusCode -ne 200) { throw "HTTP $($response.StatusCode)" } }
+}
+Check 'India-wide Raw demo grid (Track B · 2025)' {
+  $grid = Invoke-RestMethod "$api/evidence/all-india-raw/grid?year=2025&case_id=20250926_day1_24h" -TimeoutSec 60
+  if ($grid.source_track -ne 'B_OPERATIONAL_GEFS' -or $grid.field -ne 'M0_RAW_GEFS' -or $grid.values.Count -ne 129 -or $grid.values[0].Count -ne 135 -or $grid.raw_array_sha256 -notmatch '^[0-9a-f]{64}$') {
+    throw 'India-wide Raw grid source, shape or hash is invalid'
+  }
+}
+Check 'Regional replay district product (M2)' {
+  $district = Invoke-RestMethod "$api/live/districts?kind=replay&date=20250926&product=day1_24h" -TimeoutSec 60
+  if ($district.schema_version -ne 'live_district_v2' -or $district.kind -ne 'replay' -or $district.model_id -ne 'M2' -or $district.source_track -ne 'B_OPERATIONAL_GEFS' -or $district.probability_status -ne 'RESEARCH_ONLY_RELIABILITY_UNVERIFIED' -or $district.evidence_manifest_sha256 -notmatch '^[0-9a-f]{64}$') {
+    throw 'Regional replay district lineage or research status is invalid'
+  }
+  if ($district.district_count -le 0 -or $district.coverage_threshold_fraction -lt 0.95) { throw 'District coverage gate failed' }
+}
+if ($IncludeNationwideResearch) {
+  Check 'Sealed nationwide development research (no promotion)' {
+    $research = Invoke-RestMethod "$api/research/nationwide/overview" -TimeoutSec 60
+    if ($research.status -ne 'CONSUMED_2024_DEVELOPMENT_RESEARCH_ONLY' -or $research.year -ne 2024 -or $research.cases -ne 156 -or $research.model_default -ne 'regional_M2' -or $research.nationwide_promotion_eligible -ne $false -or $research.score_sha256 -notmatch '^[0-9a-f]{64}$') {
+      throw 'Nationwide research lineage or no-promotion boundary is invalid'
+    }
+  }
 }
 if (-not $SkipFrontend) {
-  Check 'Production frontend' { $response = Invoke-WebRequest $frontend -TimeoutSec 30; if ($response.StatusCode -ne 200 -or $response.Content -notmatch 'VarshaSetu') { throw 'Frontend not healthy' } }
+  Check 'Production frontend' { $response = Invoke-WebRequest $frontend -UseBasicParsing -TimeoutSec 30; if ($response.StatusCode -ne 200 -or $response.Content -notmatch 'VarshaSetu') { throw 'Frontend not healthy' } }
   Check 'Frontend API proxy' { $response = Invoke-RestMethod "$frontend/api/science/status" -TimeoutSec 30; if ($response.readiness_state -ne 'prototype_scientific_ready') { throw 'Proxy mismatch' } }
 }
 $online = $false

@@ -15,7 +15,7 @@ const METRICS: { key: Metric; label: string; q1?: string; digits: number }[] = [
   { key: "rmse_mm", label: "RMSE (mm per 24 h)", q1: "rmse", digits: 2 },
   { key: "bias_mm", label: "Bias, forecast minus IMD (mm)", q1: "bias", digits: 2 },
   { key: "CSI", label: "Heavy-rain CSI", q1: "heavy_csi", digits: 3 },
-  { key: "frequency_bias", label: "Heavy-rain frequency bias (forecast / observed events)", digits: 2 },
+  { key: "frequency_bias", label: "Heavy-rain frequency bias", digits: 2 },
 ];
 const LAYERS = [
   { key: "zone", label: "Zones" }, { key: "local_relief_m", label: "Local relief (m)" },
@@ -23,9 +23,9 @@ const LAYERS = [
 ] as const;
 type Layer = (typeof LAYERS)[number]["key"];
 const RUNS: { id: string; label: string; ty: ZoneTrackYear }[] = [
-  { id: "B-2025", label: "Track B 2025 · completed final test (post-hoc)", ty: { track: "B", year: 2025 } },
+  { id: "B-2025", label: "Track B 2025 · final test (post-hoc)", ty: { track: "B", year: 2025 } },
   { id: "B-2024", label: "Track B 2024 · development year", ty: { track: "B", year: 2024 } },
-  { id: "A-2019", label: "Track A 2019 · completed final test (post-hoc)", ty: { track: "A", year: 2019 } },
+  { id: "A-2019", label: "Track A 2019 · final test (post-hoc)", ty: { track: "A", year: 2019 } },
   { id: "A-2018", label: "Track A 2018 · development year", ty: { track: "A", year: 2018 } },
 ];
 const MODEL_LABEL: Record<string, string> = { M0: "M0 Raw", M1: "M1 Ridge", M2: "M2 Global ML", M3: "M3 Hard regime", M4: "M4 Soft regime" };
@@ -90,7 +90,7 @@ function SkillTable({ data, metric }: { data: ZoneVerification; metric: Metric }
   const def = METRICS.find((m) => m.key === metric)!;
   const allEvents = payload.support.ALL.heavy.observed_event_pairs;
   const zones = ["ALL", ...ZONE_NAMES];
-  return <div className="district-table-wrap"><table className="phase5-table zone-table">
+  return <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
     <caption className="sr-only">{def.label} by zone and model</caption>
     <thead><tr><th scope="col">Zone</th><th scope="col">Cells</th><th scope="col">Heavy events (share)</th>
       {payload.models.map((m) => <th scope="col" key={m}>{MODEL_LABEL[m] ?? m}</th>)}</tr></thead>
@@ -111,7 +111,7 @@ function DifferenceTable({ data, metric }: { data: ZoneVerification; metric: Met
     if (!stat || stat.status !== "ok" || stat.point == null || !stat.interval95) return stat?.status === "insufficient_support" ? "insufficient support" : "not reported";
     return `${signed(stat.point, def.digits)} [${signed(stat.interval95[0], def.digits)}, ${signed(stat.interval95[1], def.digits)}] ${stat.excludes_zero ? "· excludes 0" : "· includes 0"}`;
   };
-  return <div className="district-table-wrap"><table className="phase5-table zone-table">
+  return <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
     <caption className="sr-only">Zone value minus all-cell value with 95 percent paired whole-case bootstrap interval</caption>
     <thead><tr><th scope="col">Zone minus all cells</th>{payload.models.map((m) => <th scope="col" key={m}>{MODEL_LABEL[m] ?? m}</th>)}</tr></thead>
     <tbody>{ZONE_NAMES.map((zone) => <tr key={zone}><th scope="row">{ZONE_LABEL[zone]}</th>
@@ -131,7 +131,7 @@ function ForcingSection({ data }: { data: ZoneForcing }) {
       return <div key={key} className="zone-forcing-block">
         <h3>{ZONE_LABEL[zone as ZoneName]} · {COMPONENT_LABEL[component]}</h3>
         <p className="micro-note">Training-year cut-points: lower {fixed(cut.q33, 1)}, upper {fixed(cut.q67, 1)}{cut.q33 === 0 ? " (a lower cut of zero means the weak group includes every pair with no such flow)" : ""}.</p>
-        <div className="district-table-wrap"><table className="phase5-table zone-table">
+        <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
           <caption className="sr-only">Heavy-rain frequency bias by forcing stratum</caption>
           <thead><tr><th scope="col">Stratum</th><th scope="col">Cell-case pairs</th><th scope="col">Heavy events (share)</th>{payload.models.map((m) => <th scope="col" key={m}>{MODEL_LABEL[m] ?? m}</th>)}</tr></thead>
           <tbody>{STRATA.map((s, i) => {

@@ -18,6 +18,7 @@ test("the compliance page lists every requirement with an honest status and API-
   const api = await coverage(page);
   await page.goto("/compliance");
   await expect(page.getByRole("heading", { level: 1, name: "SIH26080 Requirement Coverage" })).toBeVisible();
+  await expect(page.getByTestId("coverage-science-boundary")).toContainText("Implementation coverage is not scientific promotion");
   const mandatory = Object.values(api.mandatory_counts).reduce((a, b) => a + b, 0);
   for (const [status, label] of [["IMPLEMENTED", "Implemented"], ["PARTIAL", "Partial"], ["PLANNED", "Planned"]] as const) {
     await expect(page.getByLabel("Coverage summary").getByText(`${api.counts[status]} of ${api.rows.length} rows · ${api.mandatory_counts[status]} of ${mandatory} mandatory`)).toBeVisible();

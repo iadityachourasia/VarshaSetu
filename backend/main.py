@@ -27,6 +27,7 @@ try:
     from backend.app.api.wd_indicator import router as wd_indicator_router
     from backend.app.api.live import router as live_router
     from backend.app.api.all_india_raw import router as all_india_raw_router
+    from backend.app.api.nationwide_research import router as nationwide_research_router
     from backend.app.api.reforecast import router as reforecast_router
     from backend.app.api.heavy_rain import router as heavy_rain_router
 except ModuleNotFoundError:
@@ -43,6 +44,7 @@ except ModuleNotFoundError:
     from app.api.wd_indicator import router as wd_indicator_router
     from app.api.live import router as live_router
     from app.api.all_india_raw import router as all_india_raw_router
+    from app.api.nationwide_research import router as nationwide_research_router
     from app.api.reforecast import router as reforecast_router
     from app.api.heavy_rain import router as heavy_rain_router
 
@@ -106,6 +108,7 @@ app.include_router(coastal_regime_router, prefix="/api")
 app.include_router(wd_indicator_router, prefix="/api")
 app.include_router(live_router, prefix="/api")
 app.include_router(all_india_raw_router, prefix="/api")
+app.include_router(nationwide_research_router, prefix="/api")
 app.include_router(reforecast_router, prefix="/api")
 app.include_router(heavy_rain_router, prefix="/api")
 

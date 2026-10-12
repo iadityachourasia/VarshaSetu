@@ -49,6 +49,7 @@ export function PsCoverage() {
 
   return <div className="page-content compliance-page">
     <PageHeading title="SIH26080 Requirement Coverage" subtitle="What the problem statement asks for, what exists, and what does not · every figure is read from hash-verified evidence" action={<PrototypeNote />} />
+    <div className="zone-banner zone-banner-posthoc" role="note" data-testid="coverage-science-boundary"><strong>Implementation coverage is not scientific promotion</strong><span>Each row describes a reachable capability and its evidence. Read its limitation before claiming independent validation, added regime skill, probability reliability or a public product.</span></div>
     <div className="phase5-metric-strip" aria-label="Coverage summary">
       {COVERAGE_STATUSES.map((status) => <span key={status}><b>{STATUS_LABEL[status]}</b> {data.counts[status] ?? 0} of {data.rows.length} rows · {data.mandatory_counts[status] ?? 0} of {mandatoryTotal} mandatory</span>)}
     </div>
@@ -59,7 +60,7 @@ export function PsCoverage() {
     </div>
     {groups.map((group) => <section key={group} className="phase5-analysis-block" aria-labelledby={`group-${group.replace(/\W+/g, "-")}`}>
       <h2 id={`group-${group.replace(/\W+/g, "-")}`}>{group}</h2>
-      <div className="district-table-wrap"><table className="phase5-table coverage-table"><caption className="sr-only">{group}: requirement, status, evidence and links</caption>
+      <div className="district-table-wrap" tabIndex={0}><table className="phase5-table coverage-table"><caption className="sr-only">{group}: requirement, status, evidence and links</caption>
         <thead><tr><th scope="col">Requirement</th><th scope="col">Status</th><th scope="col">What exists and what is missing</th><th scope="col">Where to see it</th></tr></thead>
         <tbody>{rows.filter((row) => row.group === group).map((row) => <Row key={row.id} row={row} />)}</tbody></table></div>
     </section>)}

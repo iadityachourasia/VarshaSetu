@@ -23,6 +23,9 @@ test("the page states what exists, labels it experimental and never presents a r
     await expect(page.getByTestId("live-status-message")).toContainText("Only historical replays");
   }
   await expect(page.getByTestId("live-provenance")).toContainText("no observation read, no retraining or recalibration");
+  if (current.season_scope === "OUTSIDE_JJAS_RESEARCH_SCOPE") {
+    await expect(page.getByTestId("live-season-scope")).toContainText("no October skill or reliability claim");
+  }
 });
 
 test("statistics and regime probabilities equal the API and the map is drawn for the selected lead", async ({ page }) => {
@@ -33,6 +36,8 @@ test("statistics and regime probabilities equal the API and the map is drawn for
   const product = current.products[0];
   await page.goto("/live");
   await expect(page.getByTestId("live-map")).toBeVisible();
+  await expect(page.getByLabel("Field")).toHaveValue("M2");
+  await expect(page.getByTestId("live-model-default")).toContainText("M2 global XGBoost");
   const stats = detail.domain_statistics[product].M1;
   const row = page.getByTestId("live-stats").locator("tr", { hasText: detail.fields.M1 });
   await expect(row).toContainText(fixed(stats.mean, 3));
@@ -40,6 +45,8 @@ test("statistics and regime probabilities equal the API and the map is drawn for
   const regime = detail.regime_probabilities[product];
   await expect(page.getByTestId("live-regime")).toContainText(fixed(regime.ACTIVE_MONSOON, 3));
   await expect(page.getByTestId("live-applicability")).toContainText(detail.applicability.status);
+  await page.getByLabel("Field").selectOption("heavy_probability");
+  await expect(page.getByTestId("live-probability-status")).toContainText("reliability unverified");
   if (current.kind === "replay") await expect(page.getByTestId("live-replay-gate")).toContainText("frozen 2025 artifacts");
   for (const [withheld, why] of Object.entries(current.withheld_products as Record<string, string>)) {
     await expect(page.getByTestId("live-withheld")).toContainText(why);
@@ -55,4 +62,25 @@ test("the page is reachable from the navigation and usable on a narrow screen", 
   await expect(page.getByTestId("live-banner")).toBeVisible();
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   expect(overflow).toBeLessThanOrEqual(1);
+});
+
+test("regional district rows match the verified forecast-only API", async ({ page }) => {
+  const status = await (await page.request.get(`${API}/status`)).json();
+  test.skip(status.cycles.length === 0, "no local bundle published");
+  const current = status.latest_live ?? status.cycles[0];
+  const product = current.products[0];
+  const response = await page.request.get(`${API}/districts?kind=${current.kind}&date=${current.cycle}&product=${product}&model=M2`);
+  expect(response.ok()).toBeTruthy();
+  const data = await response.json();
+  await page.goto("/live");
+  await page.getByTestId("live-district-toggle").click();
+  await expect(page.getByTestId("live-district-provenance")).toContainText(`${data.district_count} regional districts`);
+  await expect(page.getByTestId("live-district-provenance")).toContainText(data.evidence_manifest_sha256.slice(0, 8));
+  await expect(page.getByTestId("live-district-probability-status")).toContainText("not district-wide exceedance chances");
+  const first = data.districts[0];
+  const row = page.getByTestId("live-district-table").locator("tr", { hasText: first.district_name });
+  await expect(row).toContainText(fixed(first.corrected_mean_mm, 1));
+  await expect(row).toContainText(fixed(first.heavy_probability, 3));
+  await page.getByLabel("Find district").fill(first.district_name);
+  await expect(row).toBeVisible();
 });

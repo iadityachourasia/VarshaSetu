@@ -32,11 +32,15 @@ test("overview uses sourced benchmarks, case charts, and theme artwork", async (
   await expect(page.locator(".capability-feature .capability-icon")).toHaveCount(3);
   await expect(page.locator(".capability-feature .capability-arrow")).toHaveCount(3);
   await expect(page.locator(".capability-feature").first()).toContainText("shared 0.25° grid");
-  await expect(page.locator(".overview-evidence-row")).toContainText("69.6%");
-  await expect(page.locator(".overview-evidence-row")).toContainText("85.5%");
-  await expect(page.locator(".overview-evidence-item")).toHaveCount(6);
-  await expect(page.locator(".overview-evidence-row")).toContainText("BSS +0.0948");
-  await expect(page.locator(".overview-evidence-row")).toContainText("BSS +0.0265");
+  const features = page.getByRole("list", { name: "Implemented website features" }).locator("li");
+  await expect(features).toHaveCount(6);
+  await expect(features.locator("strong")).toHaveText([
+    "FORECAST EXPLORER", "REGIME INTELLIGENCE", "EXTREME RAIN",
+    "ENSEMBLE & UNCERTAINTY", "DISTRICT INTELLIGENCE", "VERIFICATION LAB",
+  ]);
+  await expect(features.nth(1)).toContainText("pseudo-regime probabilities");
+  await expect(features.nth(3)).toContainText("five-member subset");
+  await expect(features.nth(4)).toContainText("regional summaries");
   await expect(page.getByRole("link", { name: "Explore 2019 forecast intelligence" })).toContainText("Explore forecast intelligence");
   await expect(page.getByRole("link", { name: "View scientific validation" })).toBeVisible();
   await expect(page.locator(".overview-hero")).toHaveCSS("background-image", /hero-light\.avif/);
@@ -57,6 +61,59 @@ test("overview uses sourced benchmarks, case charts, and theme artwork", async (
     }
   }
   expect(pageErrors).toEqual([]);
+});
+
+test("all six feature tiles navigate to their implemented views", async ({ page }) => {
+  for (const [title, route] of [
+    ["FORECAST EXPLORER", "/forecast"],
+    ["REGIME INTELLIGENCE", "/regimes"],
+    ["EXTREME RAIN", "/extremes"],
+    ["ENSEMBLE & UNCERTAINTY", "/ensemble"],
+    ["DISTRICT INTELLIGENCE", "/districts"],
+    ["VERIFICATION LAB", "/verification"],
+  ]) {
+    await page.goto("/");
+    const link = page.getByRole("list", { name: "Implemented website features" }).getByRole("link", { name: new RegExp(title, "i") });
+    await expect(link).toHaveAttribute("href", route);
+    if (route === "/verification") {
+      await link.focus();
+      await page.keyboard.press("Enter");
+    } else {
+      await link.click();
+    }
+    await expect(page).toHaveURL((url) => url.pathname === route);
+  }
+});
+
+test("shared GitHub control and homepage credits identify the project", async ({ page }) => {
+  for (const width of [320, 390, 1242]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto("/");
+    const github = page.getByRole("link", { name: "Open VarshaSetu GitHub repository in a new tab" });
+    const theme = page.getByRole("button", { name: /Use (dark|light) theme/ });
+    await expect(github).toHaveAttribute("href", "https://github.com/iadityachourasia/VarshaSetu");
+    await expect(github).toHaveAttribute("target", "_blank");
+    await expect(github).toBeVisible();
+    const positions = await page.locator(".github-link, .theme-button").evaluateAll((nodes) => nodes.map((node) => {
+      const rect = node.getBoundingClientRect();
+      return { left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom };
+    }));
+    expect(positions[0].right, `${width}px GitHub/theme order`).toBeLessThan(positions[1].left);
+    expect(Math.abs(positions[0].top - positions[1].top), `${width}px control alignment`).toBeLessThanOrEqual(1);
+    if (width === 320) {
+      const selector = await page.getByRole("combobox", { name: "Experiment and year" }).boundingBox();
+      expect(selector!.x, "320px selector left alignment").toBeLessThanOrEqual(16);
+      expect(selector!.width, "320px selector width").toBeGreaterThanOrEqual(80);
+    }
+    await github.focus();
+    await expect(github).toBeFocused();
+    await expect(theme).toBeVisible();
+    const credits = page.locator(".overview-credits");
+    await expect(credits).toContainText("Developed by");
+    await expect(credits).toContainText("TEAM METROLOGIX");
+    await expect(credits).toContainText("ADITYA CHOURASIA");
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), `${width}px document overflow`).toBeLessThanOrEqual(1);
+  }
 });
 
 test("overview and shared controls remain usable across viewports", async ({ page }) => {

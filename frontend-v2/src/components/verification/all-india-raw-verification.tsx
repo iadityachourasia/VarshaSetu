@@ -46,7 +46,7 @@ export function AllIndiaRawVerification() {
     <div className="phase5-controls"><label>All-India year<select value={chosen.year} onChange={(event) => setYear(Number(event.target.value))}>{all.map((r) => <option key={r.year} value={r.year}>{r.evidence_label}</option>)}</select></label></div>
     <div className={postHoc ? "zone-banner zone-banner-posthoc" : "zone-banner"} role="note" data-testid="all-india-raw-year-label"><strong>{chosen.evidence_label}</strong>
       <span>{chosen.payload.cases_scored} cases on {chosen.payload.initialization_dates} initialization dates · excluded: {Object.entries(chosen.payload.excluded_cases).map(([k, v]) => `${v} ${k.toLowerCase().replaceAll("_", " ")}`).join(", ")}</span></div>
-    <div className="district-table-wrap"><table className="phase5-table zone-table" data-testid="all-india-raw-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table" data-testid="all-india-raw-table">
       <caption className="sr-only">Raw GEFS rainfall error and heavy-rain skill against IMD by region</caption>
       <thead><tr><th scope="col">Region</th><th scope="col">Land cells</th><th scope="col">RMSE mm per 24 h [95 %]</th><th scope="col">Bias mm [95 %]</th><th scope="col">Heavy rain (64.5 mm per 24 h)</th></tr></thead>
       <tbody>{ALL_INDIA_REGIONS.map((region) => <tr key={region} data-testid={`all-india-row-${region}`}><th scope="row">{REGION_LABEL[region]}</th>

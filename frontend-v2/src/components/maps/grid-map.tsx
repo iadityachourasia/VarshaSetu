@@ -211,12 +211,12 @@ export default function GridMap({ id, title, subtitle, values, mask, grid, palet
   return <section className="map-panel" aria-label={`${title} map`}>
     <div className="map-panel-heading"><div><strong>{title}</strong><span>{subtitle}</span></div><span className={`model-dot model-${id}`} aria-hidden="true" /></div>
     <div className="map-surface">
-      <div ref={container} className="map-canvas" role="img" aria-label={`${title} 49 by 49 historical ${palette === "rainfall" ? "rainfall" : palette === "probability" ? "probability" : "forecast-field"} grid. Display interpolation does not change original values; use the coordinate inspector for keyboard access.`} />
+      <div ref={container} className="map-canvas" role="img" aria-label={`${title} ${grid.shape[0]} by ${grid.shape[1]} historical ${palette === "rainfall" ? "rainfall" : palette === "probability" ? "probability" : "forecast-field"} grid. Display interpolation does not change original values; use the coordinate inspector for keyboard access.`} />
       <LocatorInset bounds={grid.bounds_west_south_east_north} theme={settings.geographicStyle} />
       <MapAttribution status={status} />
       {status === "offline" ? <span className="map-offline-badge">Offline geography</span> : null}
       {status === "loading" ? <span className="map-offline-badge">Loading geography…</span> : null}
-      {hover ? <div className="map-hover" role="status">{hoverDistrict ? <span className="map-hover-district">{hoverDistrict} · </span> : null}{grid.latitude_centers[hover.row].toFixed(2)}° N · {grid.longitude_centers[hover.column].toFixed(2)}° E <strong>{hoveredValid && hoveredValue != null ? valueFormat === "decision" ? (hoveredValue >= 0.5 ? "Forecast: yes" : "Forecast: no") : valueFormat === "score" ? `score ${hoveredValue.toFixed(3)}` : palette === "rainfall" ? mm(hoveredValue) : palette === "probability" ? percent(hoveredValue) : `${hoveredValue.toFixed(palette === "q700" ? 4 : 2)} ${unit ?? ""}` : "Unavailable — masked reference cell"}</strong></div> : null}
+      {hover ? <div className="map-hover" role="status">{hoverDistrict ? <span className="map-hover-district">{hoverDistrict} · </span> : null}{grid.latitude_centers[hover.row].toFixed(2)}° N · {grid.longitude_centers[hover.column].toFixed(2)}° E <strong>{hoveredValid && hoveredValue != null ? valueFormat === "decision" ? (hoveredValue >= 0.5 ? "Forecast: yes" : "Forecast: no") : valueFormat === "score" ? `score ${hoveredValue.toFixed(3)}` : palette === "rainfall" ? mm(hoveredValue) : palette === "probability" ? percent(hoveredValue) : `${hoveredValue.toFixed(palette === "q700" ? 4 : 2)} ${unit ?? ""}` : "Unavailable — masked cell"}</strong></div> : null}
     </div>
   </section>;
 }

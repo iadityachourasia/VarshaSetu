@@ -1,5 +1,15 @@
 # Phase 12: the experimental live-cycle worker
 
+> Status update (2026-10-06): the original replay-only status below is
+> historical. A genuine 2026-10-04 NOAA cycle has since passed inference and
+> been published as an experimental, unverified forecast. The 2026-10-05
+> cycle was refused by canonical rainfall reconstruction. A scheduled
+> 2026-10-06 execution published Day 1 while withholding Day 2 and Day 3.
+> Both October outputs are outside the June–September research season and have
+> no skill or reliability claim. The new regional
+> forecast-only district endpoint, immutable source cache and local scheduler
+> are documented in [docs/146_RESEARCH_PILOT_ADVANCEMENT_STATUS.md](146_RESEARCH_PILOT_ADVANCEMENT_STATUS.md).
+
 Date: 2026-10-03. Work package WP-F of `docs/134`, built from the design in `docs/125`. A separate worker takes one NOAA GEFS 00 UTC cycle, applies the **frozen** Track B models without any retraining, and publishes an immutable bundle that a **read-only** API and the Experimental Live Cycle page serve. The coverage row `LIVE-INFERENCE` moves from PLANNED to **PARTIAL**: the path is built and proven by replay; **no live NOAA cycle had been fetched when this was written** (a download needs explicit owner confirmation, see "Running it").
 
 ## What it does
@@ -9,7 +19,7 @@ Date: 2026-10-03. Work package WP-F of `docs/134`, built from the design in `doc
 3. **Features and models**: the 22-column matrix and the forecast-only regime features exactly as the corpus builds them, then the frozen M1 to M4, the regime probabilities and the calibrated heavy and very-heavy probabilities. Every model file is hash-checked against the final-freeze readiness record before use. Nothing is fitted, calibrated or tuned.
 4. **Applicability**: the share of cells of each forecast feature outside the 0.1 to 99.9 percentile range of the 2023 training matrix, a warning above 5 percent. A range heuristic, not a validity test; coordinates and lead are excluded because they are fixed by construction.
 5. **Publish** (`backend/app/live/bundle.py`): `data/live/<kind>/<YYYYMMDD>/` with one `.npy` per field, `manifest.json` (source messages with their SHA-256 and byte ranges, reconstruction segments, frozen model hashes, applicability, labels, `observation_read: false`, `retrained_or_recalibrated: false`) and `manifest.sha256`. A bundle is written once and never changed. `kind` is `live` for a NOAA cycle and `replay` for a stored historical cycle pushed through the same code.
-6. **Serve** (`backend/app/api/live.py`, `/api/science/live/{status,cycle,field}`): verifies the sidecar, schema, label, flags and every array hash on every request and refuses with an integrity failure (503) otherwise. A stale live cycle (older than two days) is flagged, never silently reused. A replay is never presented as a live cycle. The `frontend-v2` page `/live` shows the label, the status message, a 49 by 49 map of any field, domain statistics, the regime probabilities, withheld leads with reasons, the applicability, the provenance and the caveats.
+6. **Serve** (`backend/app/api/live.py`, `/api/science/live/{status,cycle,field}`): verifies the sidecar, schema, label, flags and every array hash on every request and refuses with an integrity failure (503) otherwise. A live cycle older than **48 elapsed hours** is flagged stale, never silently reused; the displayed integer `age_days` is informational and does not determine staleness. A replay is never presented as a live cycle. The `frontend-v2` page `/live` shows the label, the status message, a 49 by 49 map of any field, domain statistics, the regime probabilities, withheld leads with reasons, the applicability, the provenance and the caveats.
 
 ## The scientific gate (docs/125 phase L1): the replay is bit-identical
 
@@ -42,9 +52,17 @@ A replay cycle is about 8.7 MB of stored messages; a live cycle transfers the sa
 - **No skill for a new cycle.** No observation exists for it, so nothing is verified, and every live product is labelled "EXPERIMENTAL FORECAST: frozen models, no verification yet, not an official warning".
 - **Very-heavy skill is still not shown to improve on Raw** (`docs/133`), and the calibrated probabilities were estimated on 2023 and 2024.
 - **Model drift.** NOAA can change the GEFS configuration after the training years; the frozen models would then extrapolate. The range check only flags it.
-- **Not operational infrastructure.** No scheduler, retries, alerting, hosted worker or storage service; the input is NOAA GEFS, not an NCMRWF model; only the control member is used; no district table is produced for a live cycle.
+- **Not operational infrastructure.** Later local work added a scheduled runner with retries and a regional research district table. There is no hosted worker, storage service, forecaster-governed alerting or public warning authorization; the input is NOAA GEFS, not an NCMRWF model, and the current live correction uses only the control member. The district geometry is non-official and its rows cover only the supported regional grid.
 - **NOAA retention.** The public bucket has no stated long-term retention.
 
 ## Tests
 
 `backend/tests/test_live_pipeline.py` (selection and range rules, plan, bundle, tamper, no-observation path, the replay gate and the broken-input cases; the last two skip, not pass, when the local tree is absent), `backend/tests/test_live_api.py` (synthetic bundles: served equals stored, labels, staleness, withheld leads, tamper refusal, path traversal), `frontend-v2/src/lib/api/live.test.ts`, `frontend-v2/tests/e2e/live-cycle.spec.ts`.
+
+On 9 October 2026, the stale-cycle test was extended to cover exactly 48
+elapsed hours and one second beyond it. The prior integer-day comparison
+could keep a cycle 48–71 hours old labelled fresh. The live API test file
+passed **12 tests** and the final full backend suite passed **875 tests** in
+107.76 s, both with the known Windows socket-enabled setup. This boundary
+repair does not establish the cause of an earlier intermittent live API test
+failure reported in `docs/173`; no such failure occurred in these runs.

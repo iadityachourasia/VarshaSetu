@@ -53,14 +53,14 @@ export function IndependentRegimeValidation() {
       {scored.length ? `In ${below.length} of ${scored.length} scored populations the balanced accuracy for active versus not active is below the chance level of 0.5. ` : ""}
       {lowShare.length ? `Most observed active days were classified as the low/depression pseudo-class, not the active pseudo-class (${lowShare.map((s) => `${s.year}: ${s.low} against ${s.active} of ${s.total}`).join("; ")}). ` : ""}
       So the pseudo-class named Active does not correspond to observed active spells on this evidence, and the break and depression classes could not be validated.</p>
-    <div className="district-table-wrap"><table className="phase5-table zone-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
       <caption className="sr-only">Observed-state counts and the pre-registered tasks by population</caption>
       <thead><tr><th scope="col">Population</th><th scope="col">Labelled cases</th><th scope="col">Observed active / break / neutral</th><th scope="col">Active versus not active: balanced accuracy [95 % interval]</th><th scope="col">Break versus not break</th></tr></thead>
       <tbody>{all.map((r) => <tr key={r.year} data-testid={`validation-row-${r.year}`}><th scope="row"><EvidenceChip label={r.evidence_label} /><br /><span className="micro-note">Track {r.track} · {r.year}</span></th><td>{r.payload.cases_labelled}</td>
         <td>{r.payload.observed_state_counts.ACTIVE} / {r.payload.observed_state_counts.BREAK} / {r.payload.observed_state_counts.NEUTRAL}</td><td>{taskCell(r, "active_vs_not_active")}</td><td>{taskCell(r, "break_vs_not_break")}</td></tr>)}</tbody></table></div>
     <p className="micro-note">The support gate needs at least {ov.support_gate.min_cases_per_side} cases on both sides of a task; below it no score is shown. A balanced accuracy of 0.5 is no skill; the intervals resample whole initialization dates and are optimistic.</p>
     <div className="phase5-controls"><label>Population for the confusion table<select value={selected.year} onChange={(event) => setYear(Number(event.target.value))}>{all.map((r) => <option key={r.year} value={r.year}>{r.evidence_label}</option>)}</select></label></div>
-    <div className="district-table-wrap"><table className="phase5-table zone-table" data-testid="validation-confusion">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table" data-testid="validation-confusion">
       <caption className="sr-only">Predicted regime class by observed state for the selected population</caption>
       <thead><tr><th scope="col">Predicted class</th>{OBSERVED_STATES.map((s) => <th scope="col" key={s}>Observed {s.toLowerCase()}</th>)}</tr></thead>
       <tbody>{Object.entries(table).map(([name, row]) => <tr key={name}><th scope="row">{regimeName(name)}</th>{OBSERVED_STATES.map((s) => <td key={s}>{row[s]}</td>)}</tr>)}</tbody></table></div>

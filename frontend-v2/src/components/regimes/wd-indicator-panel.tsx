@@ -46,7 +46,7 @@ export function WdIndicatorPanel() {
     <div className="zone-banner zone-banner-posthoc" role="note" data-testid="wd-indicator-banner"><strong>Rule-based heuristic, forecast height only, not a validated detection of western disturbances</strong>
       <span>{ov.definition.indicator}. {ov.definition.flag}. No model uses this indicator as an input.</span></div>
     <p data-testid="wd-indicator-decision"><strong>{ov.decision.associated ? "On the development years the indicator is associated with rainfall" : "On the development years there is no consistent association"}: {ov.decision.wording}.</strong> The decision rule was frozen before any observation was compared: {ov.decision.rule}.</p>
-    <div className="district-table-wrap"><table className="phase5-table zone-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
       <caption className="sr-only">Cases, mean observed rainfall in the north-west India rain box by indicator flag, and the association, by population</caption>
       <thead><tr><th scope="col">Population</th><th scope="col">Cases flagged / not flagged</th><th scope="col">Mean rain flagged / not flagged (mm per day)</th><th scope="col">Flagged minus not flagged [95 % interval]</th><th scope="col">Spearman [95 % interval]</th></tr></thead>
       <tbody>{all.map((r) => { const a = association(r); const g = r.payload.groups; return <tr key={r.year} data-testid={`wd-row-${r.year}`}><th scope="row"><EvidenceChip label={r.evidence_label} /><br /><span className="micro-note">{r.year}</span></th>

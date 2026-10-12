@@ -158,6 +158,7 @@ test("mobile header keeps its context and actions in two compact rows", async ({
       page.getByRole("combobox", { name: "Experiment and year" }),
       page.getByRole("link", { name: "Reset Demo" }),
       page.getByRole("button", { name: "Present VarshaSetu" }),
+      page.getByRole("link", { name: "Open VarshaSetu GitHub repository in a new tab" }),
       page.getByRole("button", { name: "Use dark theme" }),
     ];
     const boxes = await Promise.all(controls.map((control) => control.boundingBox()));
@@ -191,6 +192,9 @@ test("overview benchmark and evidence have structured cards", async ({ page }) =
     values: item.querySelectorAll(".overview-benchmark-values > span").length,
   })));
   expect(cards.every((card) => card.background !== "rgba(0, 0, 0, 0)" && parseFloat(card.padding) >= 16 && card.values === 2)).toBe(true);
-  const evidence = await page.locator(".overview-evidence-item").evaluateAll((items) => items.every((item) => parseFloat(getComputedStyle(item).paddingLeft) >= 10));
+  const evidence = await page.locator(".overview-evidence-item").evaluateAll((items) => items.every((item) => {
+    const link = item.querySelector("a.overview-evidence-link");
+    return link && parseFloat(getComputedStyle(link).paddingLeft) >= 10 && link.getBoundingClientRect().width >= item.getBoundingClientRect().width - 2;
+  }));
   expect(evidence).toBe(true);
 });

@@ -35,6 +35,28 @@ export const allIndiaResultSchema = z.object({
 });
 export type AllIndiaResult = z.infer<typeof allIndiaResultSchema>;
 
+export const allIndiaRawCasesSchema = z.object({
+  year: z.number().int(), evidence_role: z.string(), ledger_sha256: z.string().length(64),
+  cases: z.array(z.object({ case_id: z.string(), initialization: z.string(), product: z.enum(["day1_24h", "day2_24h", "day3_24h"]),
+    accumulation_window_hours: z.tuple([z.number(), z.number()]), available_locally: z.boolean() })),
+  caveat: z.string(),
+});
+export type AllIndiaRawCases = z.infer<typeof allIndiaRawCasesSchema>;
+
+export const allIndiaRawGridSchema = z.object({
+  case_id: z.string(), year: z.number().int(), evidence_role: z.string(), source_track: z.literal("B_OPERATIONAL_GEFS"),
+  field: z.literal("M0_RAW_GEFS"), units: z.literal("mm per 24 h"), initialization: z.string(),
+  accumulation_window_hours: z.tuple([z.number(), z.number()]),
+  grid: z.object({ crs: z.literal("EPSG:4326"), shape: z.tuple([z.literal(129), z.literal(135)]),
+    latitude_centers: z.array(z.number()).length(129), longitude_centers: z.array(z.number()).length(135),
+    cell_size_degrees: z.literal(0.25), bounds_west_south_east_north: z.tuple([z.number(), z.number(), z.number(), z.number()]),
+    row_order: z.literal("south_to_north"), column_order: z.literal("west_to_east"), mask_policy: z.string() }),
+  values: z.array(z.array(z.number().finite().nonnegative()).length(135)).length(129),
+  display_mask: z.array(z.array(z.boolean()).length(135)).length(129),
+  raw_array_sha256: z.string().length(64), ledger_sha256: z.string().length(64), geometry_sha256: z.string().length(64), caveat: z.string(),
+});
+export type AllIndiaRawGrid = z.infer<typeof allIndiaRawGridSchema>;
+
 async function getAllIndia<T>(path: string, schema: z.ZodType<T>, server = false): Promise<T> {
   const base = server ? (process.env.SCIENCE_API_URL ?? "http://127.0.0.1:8000") : "";
   let response: Response;
@@ -60,3 +82,6 @@ async function getAllIndia<T>(path: string, schema: z.ZodType<T>, server = false
 
 export const getAllIndiaOverview = (server = false) => getAllIndia("overview", allIndiaOverviewSchema, server);
 export const getAllIndiaResult = (year: number, server = false) => getAllIndia(`result?year=${year}`, allIndiaResultSchema, server);
+export const getAllIndiaRawCases = (year: number, server = false) => getAllIndia(`cases?year=${year}`, allIndiaRawCasesSchema, server);
+export const getAllIndiaRawGrid = (year: number, caseId: string, server = false) =>
+  getAllIndia(`grid?year=${year}&case_id=${encodeURIComponent(caseId)}`, allIndiaRawGridSchema, server);

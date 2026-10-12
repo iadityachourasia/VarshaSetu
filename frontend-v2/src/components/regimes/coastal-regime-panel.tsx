@@ -49,7 +49,7 @@ export function CoastalRegimePanel() {
     <div className="zone-banner zone-banner-posthoc" role="note" data-testid="coastal-regime-banner"><strong>Rule-based heuristic, forecast fields only, not a validated regime and not a probability</strong>
       <span>{ov.definition.index}. {ov.definition.classes}. No model uses this regime as an input.</span></div>
     <p data-testid="coastal-regime-decision"><strong>{ov.decision.discriminates ? "On the development years" : "On the development years it does not"} {ov.decision.discriminates ? `the heuristic discriminates: ${ov.decision.wording}.` : "discriminate, so it is shown without a claim."}</strong> The decision rule was frozen before any observation was compared: {ov.decision.rule}.</p>
-    <div className="district-table-wrap"><table className="phase5-table zone-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
       <caption className="sr-only">Cases, share of observed Ghats-coast heavy-rain pairs and mean heavy fraction by forcing class and population</caption>
       <thead><tr><th scope="col">Population</th><th scope="col">Cases weak / moderate / strong</th><th scope="col">Share of observed heavy pairs weak / moderate / strong</th><th scope="col">Mean heavy fraction of the zone weak / moderate / strong</th><th scope="col">Strong minus weak [95 % interval]</th><th scope="col">Spearman [95 % interval]</th></tr></thead>
       <tbody>{all.map((r) => { const d = discrimination(r); const g = r.payload.groups; return <tr key={r.year} data-testid={`coastal-row-${r.year}`}><th scope="row"><EvidenceChip label={r.evidence_label} /><br /><span className="micro-note">Track {r.track} · {r.year}</span></th>

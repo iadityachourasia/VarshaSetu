@@ -13,6 +13,7 @@ import numpy as np
 import pytest
 
 from backend.app.live import bundle, pipeline
+from backend.app.data.cache import FetchResponse
 
 def _local_tree_present() -> bool:
     """The frozen artifacts ship in the serving-data bundle (so CI has them), but the experiment *source* the replay imports is gitignored and local only."""
@@ -96,6 +97,33 @@ def test_range_requests_are_checked_for_status_content_range_and_length():
         pipeline.HttpSource("2025-09-26")
 
 
+def test_live_source_reuses_hash_verified_selected_bytes_and_refuses_tampering(tmp_path):
+    calls = []
+
+    def fetch(url, byte_range, timeout):
+        calls.append((url, byte_range))
+        return FetchResponse(b"x" * 1500, 206, {"content-range": "bytes 1000-2499/9999"})
+
+    source = pipeline.CachedHttpSource("20250926", cache_root=tmp_path, fetcher=fetch)
+    source.index = lambda family, hour: pipeline.parse_index(INDEX)
+    first = source.get("pgrb2sp25", 3, "rain")
+    second = source.get("pgrb2sp25", 3, "rain")
+    assert first.payload == second.payload and len(calls) == 1
+    cached = tmp_path / "20250926/pgrb2sp25/f003_rain.grib2"
+    assert cached.is_file() and cached.with_name(cached.name + ".receipt.json").is_file()
+    cached.write_bytes(b"corrupted")
+    with pytest.raises(pipeline.CycleRefused, match="cache invalid"):
+        source.get("pgrb2sp25", 3, "rain")
+
+
+def test_nested_exceedance_probabilities_must_be_coherent():
+    pipeline.check_exceedance_order(np.array([0.8, 0.1]), np.array([0.3, 0.1]))
+    with pytest.raises(pipeline.CycleRefused, match="exceeds heavy"):
+        pipeline.check_exceedance_order(np.array([0.1]), np.array([0.2]))
+    with pytest.raises(pipeline.CycleRefused, match="non-finite"):
+        pipeline.check_exceedance_order(np.array([np.nan]), np.array([0.1]))
+
+
 def test_plan_reports_ranges_and_bytes_without_fetching_any_body():
     calls = []
 
@@ -153,6 +181,26 @@ def test_non_finite_or_wrongly_typed_arrays_are_never_written(tmp_path):
     ints["M1_day1_24h"] = ints["M1_day1_24h"].astype(np.int32)
     with pytest.raises(bundle.BundleError):
         _write(tmp_path, date="20250927", arrays=ints)
+    assert not (tmp_path / "replay" / "20250926").exists()
+    assert not (tmp_path / "replay" / "20250927").exists()
+
+
+def test_interrupted_bundle_write_leaves_no_visible_or_staged_cycle(tmp_path, monkeypatch):
+    real_save = bundle.np.save
+    calls = 0
+
+    def interrupted_save(*args, **kwargs):
+        nonlocal calls
+        calls += 1
+        if calls == 2:
+            raise OSError("simulated interrupted write")
+        return real_save(*args, **kwargs)
+
+    monkeypatch.setattr(bundle.np, "save", interrupted_save)
+    with pytest.raises(OSError, match="simulated interrupted write"):
+        _write(tmp_path)
+    assert not (tmp_path / "replay" / "20250926").exists()
+    assert list((tmp_path / "replay").iterdir()) == []
 
 
 @pytest.mark.parametrize("victim", ["array", "manifest", "sidecar", "flag", "kind-directory"])

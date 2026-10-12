@@ -1,0 +1,19 @@
+# Blinded JJAS regime-review packet — awaiting experts
+
+Date: 2026-10-07. This is a **prepared review artifact, not an expert-validation result**. No expert labels, bulletin documents, adjudications or detector-vs-expert scores exist. The five forecast-time detectors remain validated only against the earlier objective labels described in `docs/142_REFORECAST_STUDY_RESULTS.md`.
+
+## Population and selection
+
+The frozen protocol `data/manifests/research_pilot/expert_regime_review_protocol_v1.json` (SHA-256 sidecar) selected two complete GEFSv12 reforecast control cases per 2014–2016 year × June–September month × Day 1/2/3 lead: **72 cases**. Each stratum was ranked by SHA-256 of the immutable case ID. The builder read the forecast-only `cases.json` and `X_full.npy`, verified their hashes against the original frozen reforecast protocol, and did not open paired IMD observations, ERA5 labels, existing detector scores or rainfall corrections. The years are already consumed rainfall tests, so this review can assess the regime constructs but cannot produce a new independent rainfall-skill result.
+
+The manifest is `data/manifests/research_pilot/expert_regime_review_packet_v1.json` (SHA-256 `c4654a322e3ab4ed44187168ec75b14d62ef368ac41849b2bce4e16c2688c2f2`). It records issue and lead times, map hashes, source hashes and the empty bulletin inventory. The 72 six-panel forecast atmospheric maps and blank annotation CSV are local under `data/processed/expert_regime_review_v1/`; this directory is ignored by Git and can be rebuilt from the hash-verified local source. The maps show 850-hPa U/V, 700-hPa specific humidity, 500-hPa height, MSLP and precipitable water on 10–22°N, 68–80°E. They do not display forecast rainfall, observations, regime scores or corrected rainfall. Maps use the original model-field units and one independent colour scale per panel, so they are for synoptic assessment rather than cross-case colour comparison.
+
+## Review handoff and gates
+
+Before annotation, record two independent meteorologist identities and an adjudicator, the dated bulletin inventory and permitted document use. Each meteorologist receives the same manifest, maps and a separate copy of the blank CSV. Fill five independent `present`/`absent`/`uncertain` labels per case. Positive labels need a physical rationale and timestamped cited evidence; uncertainty needs a reason. Keep original forms and timestamps, then adjudicate disagreements with detector outputs still hidden. Only after that should the detector outputs be joined by case ID and scored using predeclared support, agreement, discrimination and reliability rules. A separate winter/broader-domain corpus is required for western-disturbance rainfall relevance; the JJAS 10–22°N maps alone cannot establish it. Reviewers should mark western disturbance `uncertain` with an explicit field-of-view reason unless separate dated evidence supports a judgment.
+
+`backend/app/ml/expert_regime_review.py` implements deterministic selection and validates a completed two-reviewer form for unique case/reviewer pairs, required labels, cited positives and explained uncertainty. Four focused tests passed. The empty template is intentionally not a validated form, and the review gate remains **open**. The current strongest geography-aware global rainfall correction stays the product default because regime-aware correction has not beaten it on matched data.
+
+## Reproduction
+
+Run `python scripts/build_expert_regime_review_packet.py` in a clean copy with the verified source corpus. The builder is write-once: it refuses to replace an existing packet. The protocol pins the builder and selection-code hashes, while the packet manifest pins each rendered map. The current local packet was built once and its first map was visually inspected. No test-year observation was read in this build.

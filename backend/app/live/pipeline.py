@@ -15,11 +15,13 @@ import http.client
 import re
 from dataclasses import dataclass
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Protocol
 
 import numpy as np
 
 NOAA_HOST = "noaa-gefs-pds.s3.amazonaws.com"
+SOURCE_CACHE = Path(__file__).resolve().parents[3] / "data/live/source_cache"
 PRODUCTS = ("day1_24h", "day2_24h", "day3_24h")
 LEADS = {
     "day1_24h": {"window": (3, 27), "rain_hours": (3, 6, 12, 18, 24, 27), "atmosphere_hour": 24},
@@ -44,6 +46,14 @@ RESEARCH_LABEL = "EXPERIMENTAL FORECAST: frozen models, no verification yet, not
 
 class CycleRefused(RuntimeError):
     """A quality gate failed. Nothing is published for the cycle."""
+
+
+def check_exceedance_order(heavy: np.ndarray, very_heavy: np.ndarray) -> None:
+    """Nested 24-hour events require P(very heavy) <= P(heavy) on every cell."""
+    if heavy.shape != very_heavy.shape or not np.isfinite(heavy).all() or not np.isfinite(very_heavy).all():
+        raise CycleRefused("heavy and very-heavy probabilities have different shapes or non-finite values")
+    if np.any(very_heavy > heavy + 1e-12):
+        raise CycleRefused("very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle")
 
 
 @dataclass(frozen=True)
@@ -159,6 +169,31 @@ class HttpSource:
         return Message(family, hour, variable, key, text, start, end, body, hashlib.sha256(body).hexdigest())
 
 
+class CachedHttpSource(HttpSource):
+    """Retain selected NOAA message bytes with immutable hash receipts for replay."""
+
+    def __init__(self, date: str, *, cache_root: Path = SOURCE_CACHE, fetcher=None, timeout: int = 60):
+        super().__init__(date, timeout=timeout)
+        self.cache_root = cache_root
+        self.fetcher = fetcher
+
+    def get(self, family: str, hour: int, variable: str) -> Message:
+        from backend.app.data.cache import default_fetcher, fetch_cached
+
+        start, end, description = select_entry(self.index(family, hour), family, hour, variable)
+        key = object_key(self.date, family, hour)
+        path = self.cache_root / self.date / family / f"f{hour:03d}_{variable}.grib2"
+        try:
+            result = fetch_cached(f"https://{NOAA_HOST}/{key}", path, byte_range=(start, end),
+                                  timeout_seconds=self.timeout, fetcher=self.fetcher or default_fetcher)
+        except Exception as error:
+            raise CycleRefused(f"selected NOAA range unavailable or cache invalid for {family} {variable} f{hour:03d}: {error}") from error
+        payload = result.path.read_bytes()
+        if len(payload) != end - start + 1 or hashlib.sha256(payload).hexdigest() != result.sha256:
+            raise CycleRefused(f"selected NOAA range cache changed after verification for {family} {variable} f{hour:03d}")
+        return Message(family, hour, variable, key, description, start, end, payload, result.sha256)
+
+
 def _grib_extra(payload: bytes) -> dict:
     from eccodes import codes_get, codes_new_from_message, codes_release
     handle = codes_new_from_message(payload)
@@ -208,7 +243,7 @@ def validate_message(message: Message, date: str, metadata: dict, extra: dict) -
             raise CycleRefused(f"{message.variable} f{hour:03d}: forecast timing mismatch")
 
 
-def decode_cycle(source: MessageSource, date: str) -> dict:
+def decode_cycle(source: MessageSource, date: str, *, allow_no_eligible: bool = False) -> dict:
     """Decode every selected message once and apply the canonical rainfall reconstruction. Returns rainfall (49x49 per product), atmosphere (51x81 per hour and name) and provenance."""
     from backend.app.data.accumulation import GriddedAccumulationMessage, reconstruct_minimal_accumulation_window
     from backend.app.data_sources.noaa_gefs_monthly import ATMOSPHERIC_SPECS, crop_grid, decode_atmospheric_message, decode_precipitation_message
@@ -251,9 +286,9 @@ def decode_cycle(source: MessageSource, date: str) -> dict:
             continue
         rainfall[product] = np.asarray(result.rainfall_mm, dtype=np.float64)
         segments[product] = {"segments": [segment.__dict__ for segment in result.segments], "subtraction_count": result.subtraction_count, "normalized_negative_cells": result.normalized_negative_count}
-    if not rainfall:
+    if not rainfall and not allow_no_eligible:
         raise CycleRefused("no lead passed the canonical rainfall reconstruction: " + "; ".join(f"{k}: {v}" for k, v in failed.items()))
-    return {"rainfall": rainfall, "atmosphere": atmosphere, "sources": sources, "reconstruction": segments, "failed_products": failed}
+    return {"rainfall": rainfall, "rain_messages": rain_messages, "atmosphere": atmosphere, "sources": sources, "reconstruction": segments, "failed_products": failed}
 
 
 def build_features(rainfall: dict, atmosphere: dict) -> dict:
@@ -323,6 +358,12 @@ class FrozenModels:
         return cls(parts)
 
     def apply(self, X: np.ndarray, regime_vector: np.ndarray) -> dict:
+        out = self._apply_unchecked(X, regime_vector)
+        check_exceedance_order(out["heavy_probability"], out["very_heavy_probability"])
+        return out
+
+    def _apply_unchecked(self, X: np.ndarray, regime_vector: np.ndarray) -> dict:
+        """Compute frozen predictions; research diagnostics may inspect order before publication."""
         from backend.app.ml.phase2b import safe_ridge_predict
         from backend.app.ml.phase2c import probability_features
         from experiments.recent_historical.phase4i_operational_model_development_v1.deterministic import predict_m2

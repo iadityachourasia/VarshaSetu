@@ -31,7 +31,7 @@ export function RegimeTaskValidation() {
     <h2 id="regime-task-heading">Regime detection from the forecast, validated on sealed reforecast years</h2>
     <div className="zone-banner" role="note" data-testid="regime-task-banner"><strong>{r.evidence_label}</strong>
       <span>{r.payload.label_nature}. One standardised logistic model per task, fitted on {ov.populations.train_years[0]}-{ov.populations.train_years[ov.populations.train_years.length - 1]}; the climatology baseline uses lead and day of year only.</span></div>
-    <div className="district-table-wrap"><table className="phase5-table zone-table" data-testid="regime-task-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table" data-testid="regime-task-table">
       <caption className="sr-only">Cases, AUC, balanced accuracy and verdict of each regime-detection task on the sealed years</caption>
       <thead><tr><th scope="col">Task</th><th scope="col">Cases (positive / negative)</th><th scope="col">AUC [95 %]</th><th scope="col">Balanced accuracy [95 %] (chance 0.5)</th><th scope="col">AUC gain over climatology [95 %]</th><th scope="col">Verdict</th></tr></thead>
       <tbody>{R03_TASKS.map((t) => { const x = r.payload.tasks[t]; return <tr key={t} data-testid={`regime-task-row-${t}`}><th scope="row">{TASK_LABEL[t]}<br /><span className="micro-note">{ov.r03.tasks[t]}</span></th>

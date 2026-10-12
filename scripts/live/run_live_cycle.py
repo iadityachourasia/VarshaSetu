@@ -32,7 +32,11 @@ def _training():
 
 
 def cmd_plan(date: str) -> int:
-    rows = pipeline.HttpSource(date).plan()
+    try:
+        rows = pipeline.HttpSource(date).plan()
+    except (pipeline.CycleRefused, OSError) as error:
+        print(f"source index unavailable: {error}", file=sys.stderr)
+        return 4
     total = sum(r["bytes"] for r in rows)
     print(json.dumps({"source": f"https://{pipeline.NOAA_HOST}", "date": date, "messages": len(rows), "total_bytes": total, "ranges": rows}, indent=1))
     print(f"\n{len(rows)} messages, {total:,} bytes ({total / 1e6:.1f} MB) would be transferred as byte ranges from {pipeline.NOAA_HOST}.", file=sys.stderr)
@@ -48,6 +52,9 @@ def cmd_latest() -> int:
         except pipeline.CycleRefused as error:
             print(f"{date}: not available ({error})")
             continue
+        except OSError as error:
+            print(f"NOAA source connection unavailable: {error}", file=sys.stderr)
+            return 4
         print(f"{date}: complete index; {sum(r['bytes'] for r in rows):,} bytes for the {len(rows)} selected messages")
         return 0
     print("no cycle with a complete index was found in the last 8 days")
@@ -69,8 +76,8 @@ def cmd_run(date: str, confirmed: bool) -> int:
     models = pipeline.FrozenModels.load()
     training, names = _training()
     try:
-        result = pipeline.run_cycle(pipeline.HttpSource(date), date, models, training_matrix=training, feature_names=names)
-    except pipeline.CycleRefused as error:
+        result = pipeline.run_cycle(pipeline.CachedHttpSource(date), date, models, training_matrix=training, feature_names=names)
+    except (pipeline.CycleRefused, OSError) as error:
         print(f"CYCLE REFUSED, nothing published: {error}", file=sys.stderr)
         return 4
     path = _publish("live", date, result)

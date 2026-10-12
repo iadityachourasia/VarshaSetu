@@ -29,7 +29,7 @@ function ModelTable({ ev }: { ev: GeoawareEvaluation }) {
   const rows: { label: string; zone: string; heavy: boolean }[] = [
     { label: "Ghats coast (coastal and orographic)", zone: ZONE, heavy: true }, { label: "All land cells", zone: "ALL", heavy: true },
   ];
-  return <div className="district-table-wrap"><table className="phase5-table zone-table">
+  return <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
     <caption className="sr-only">RMSE, bias, heavy-rain CSI and heavy-rain frequency bias for Raw, the global model and the geography-aware arms</caption>
     <thead><tr><th scope="col">Score</th><th scope="col">Population</th>{MODELS.map((m) => <th scope="col" key={m.key}>{m.label}</th>)}</tr></thead>
     <tbody>{[
@@ -87,13 +87,13 @@ function IndependentTest({ data }: { data: GeoawareFollowup }) {
       <span>{t.cases} cases · one test, never re-run · the owner message was &quot;{data.unseal_record.owner_message.verbatim}&quot; · {data.unseal_record.hashes_listed} hashes were frozen and checked before any {data.sealed_test.year} observation was read.</span></div>
     <h3>Result on the independent year</h3>
     <p data-testid="geoaware-claim"><strong>{t.claim_wording}.</strong> Multiplicity: {t.multiplicity}. The test scored two pre-registered candidate sets together, so each decision interval is 97.5 percent, not 95 percent.</p>
-    <div className="district-table-wrap"><table className="phase5-table zone-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
       <caption className="sr-only">Pre-registered decision for each candidate set on the independent year</caption>
       <thead><tr><th scope="col">Candidate set</th><th scope="col">Candidate against control</th><th scope="col">P1 Ghats-coast heavy CSI difference (97.5 % interval)</th><th scope="col">P2 overall RMSE difference, mm (97.5 % interval)</th><th scope="col">P3 guardrails G1, G2, G4 (G3 reported)</th><th scope="col">Adds value</th></tr></thead>
       <tbody>{DECISION_ORDER.filter((key) => key in t.decisions).map((key) => [key, t.decisions[key]] as const).map(([key, d]) => <tr key={key} data-testid={`decision-${key}`}><th scope="row">{SET_LABEL[key] ?? key}</th><td>{d.candidate} against {d.comparator}</td>
         <td>{interval(d.zone_heavy_csi_difference, 3)} · {d.P1_zone_heavy_csi_beats_comparator_975 ? "passes" : "does not pass"}</td><td>{interval(d.overall_rmse_difference, 2)} · {d.P2_overall_rmse_within_tolerance ? "within the 0.2 mm tolerance" : "outside the tolerance"}</td>
         <td>{d.guardrails ? `G1 ${yesNo(d.guardrails.G1)} · G2 ${yesNo(d.guardrails.G2)} · G4 ${yesNo(d.guardrails.G4)} · G3 ${d.guardrails.G3 ? "met" : "not met"}` : "undefined"} · {d.P3_gating_guardrails_G1_G2_G4 ? "passes" : "does not pass"}</td><td>{d.adds_value == null ? "unevaluable" : d.adds_value ? "yes" : "no"}</td></tr>)}</tbody></table></div>
-    <div className="district-table-wrap"><table className="phase5-table zone-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
       <caption className="sr-only">Pooled scores of Raw and the scored models on the independent year</caption>
       <thead><tr><th scope="col">Model</th><th scope="col">Role</th><th scope="col">RMSE (mm)</th><th scope="col">Bias (mm)</th><th scope="col">Heavy CSI, all cells</th><th scope="col">Very-heavy frequency bias</th><th scope="col">Ghats-coast heavy CSI</th><th scope="col">Ghats-coast heavy frequency bias</th></tr></thead>
       <tbody>{labels.map((label) => { const m = t.pooled_summary[label]; return <tr key={label}><th scope="row">{label}</th><td>{roleOf(label)}</td><td>{fixed(m.rmse_mm, 2)}</td><td>{signed(m.bias_mm, 2)}</td><td>{fixed(m.heavy_csi, 3)}</td><td>{fixed(m.very_heavy_frequency_bias, 3)}</td><td>{fixed(m.zone_heavy_csi, 3)}</td><td>{fixed(m.zone_heavy_frequency_bias, 2)}</td></tr>; })}</tbody></table></div>
@@ -102,7 +102,7 @@ function IndependentTest({ data }: { data: GeoawareFollowup }) {
       const mp = t.pooled_summary[prim.candidate], mc = t.pooled_summary[prim.comparator];
       return `The primary candidate ${prim.candidate} ${prim.adds_value ? "satisfied" : "did not satisfy"} the pre-registered rule against its control ${prim.comparator}. Its Ghats-coast heavy-rain frequency bias is ${fixed(mp.zone_heavy_frequency_bias, 2)} against ${fixed(mc.zone_heavy_frequency_bias, 2)} for the control, so part of its higher CSI comes with mild over-forecasting of heavy rain in the zone. The secondary candidate ${sec.candidate} ${sec.adds_value ? "also satisfied" : "did not satisfy"} the rule: its Ghats-coast heavy CSI difference against the same control is ${interval(sec.zone_heavy_csi_difference, 3)}.`;
     })()}</p>
-    <div className="district-table-wrap"><table className="phase5-table zone-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
       <caption className="sr-only">Ghats-coast heavy-rain CSI by lead day</caption>
       <thead><tr><th scope="col">Lead</th><th scope="col">Cases</th>{[t.candidate_sets.v3_primary.candidate, t.candidate_sets.v3_primary.comparator, t.candidate_sets.v2_secondary.candidate, "M0"].map((l) => <th scope="col" key={l}>{l}</th>)}</tr></thead>
       <tbody>{Object.entries(t.by_lead).map(([lead, block]) => <tr key={lead}><th scope="row">{lead.replace("_24h", "").replace("day", "Day ")}</th><td>{block.cases}</td>
@@ -126,7 +126,7 @@ function FollowupSection({ data }: { data: GeoawareFollowup }) {
     <IndependentTest data={data} />
     <h3>How the candidates were chosen (development years only)</h3>
     <p>{data.v1_outcome.all_arms_without_candidate ? "Under the first frozen protocol (v1) no arm had an eligible candidate: no configuration passed every guardrail in every held-out year." : "Under the first frozen protocol (v1) at least one arm had a candidate."} {data.changes.map((c) => `${c.id}: ${c.what}`).join(" ")} The second change was decided after {data.post_hoc_disclosure.decided_after}. {data.post_hoc_disclosure.consequence}</p>
-    <div className="district-table-wrap"><table className="phase5-table zone-table">
+    <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
       <caption className="sr-only">Selected configuration per arm under protocols v2 and v3</caption>
       <thead><tr><th scope="col">Arm</th><th scope="col">Eligible configurations</th><th scope="col">Protocol v2 selection (lowest RMSE)</th><th scope="col">Protocol v3 selection (aligned with the test)</th></tr></thead>
       <tbody>{arms.map((arm) => { const m2 = data.v2_selection[arm], m3 = data.v3_selection[arm]; return <tr key={arm}><th scope="row">{ARM_LABEL_V2[arm] ?? arm}</th><td>{data.eligible_v2_by_arm[arm]} of 16</td>
@@ -179,7 +179,7 @@ export function GeoawareExperiment() {
     <section className="phase5-analysis-block" aria-labelledby="geo-selection-heading">
       <h2 id="geo-selection-heading">Selection on the 2023 training year</h2>
       <p>Each feature arm was searched over {total("A0")} configurations with embargoed, blocked cross-validation. A configuration is eligible only if it passes all guardrails on the pooled out-of-fold predictions.</p>
-      <div className="district-table-wrap"><table className="phase5-table zone-table">
+      <div className="district-table-wrap" tabIndex={0}><table className="phase5-table zone-table">
         <caption className="sr-only">Feature arms, eligible configurations and the frozen selection</caption>
         <thead><tr><th scope="col">Arm</th><th scope="col">Features</th><th scope="col">Eligible configurations</th><th scope="col">Frozen selection</th></tr></thead>
         <tbody>{arms.map((arm) => <tr key={arm}><th scope="row">{ARM_LABEL[arm] ?? arm}</th><td>{ov.arms[arm]?.length ?? "undefined"}</td>

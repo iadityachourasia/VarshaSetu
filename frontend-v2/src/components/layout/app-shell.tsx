@@ -6,12 +6,13 @@ import { StoryMode } from "@/components/story/story-mode";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { Activity, BookOpenText, ClipboardCheck, FlaskConical, Mountain, ChevronRight, Clock3, CloudRain, Compass, Gauge, MapPinned, Menu, Moon, PanelLeftClose, PanelLeftOpen, Play, RotateCcw, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network, Radio } from "lucide-react";
+import { Activity, BookOpenText, ClipboardCheck, FlaskConical, Mountain, ChevronRight, Clock3, CloudRain, Compass, Gauge, MapPinned, Globe2, Menu, Moon, PanelLeftClose, PanelLeftOpen, Play, RotateCcw, Sun, X, CalendarDays, Layers3, Orbit, Microscope, Network, Radio } from "lucide-react";
 
 const navigation = [
   { group: "ANALYSIS", items: [
     { href: "/", label: "Overview", icon: Gauge },
     { href: "/forecast", label: "Forecast & Atmosphere", icon: Compass },
+    { href: "/india", label: "India-wide Raw Forecast", icon: Globe2 },
     { href: "/casebook", label: "Event Casebook", icon: CalendarDays },
     { href: "/extremes", label: "Extreme Rain", icon: CloudRain },
   ] },
@@ -67,6 +68,9 @@ function ExperimentContextControl() {
   const router = useRouter();
   const pathname = usePathname();
   const search = useSearchParams();
+  // These pages consume the selected experiment/year. Other workspaces carry
+  // their own population or cycle selector, so a 2019 header value mislabels them.
+  const scopedRoutes = ["/", "/forecast", "/casebook", "/extremes", "/ensemble", "/regimes", "/districts"];
   const experiment = search.get("experiment") === "operational" ? "operational" : "reforecast";
   const year = search.get("year") ?? (experiment === "operational" ? "2025" : "2019");
   const select = (value: string) => {
@@ -74,6 +78,7 @@ function ExperimentContextControl() {
     const route = nextExperiment === "reforecast" && nextYear !== "2019" ? "/observations" : pathname === "/" ? "/forecast" : pathname;
     router.push(`${route}?experiment=${nextExperiment}&year=${nextYear}`);
   };
+  if (!scopedRoutes.includes(pathname)) return null;
   return <label className="global-experiment-control"><span>EXPERIMENT / YEAR</span><select aria-label="Experiment and year" value={`${experiment}:${year}`} onChange={(event) => select(event.target.value)}>
     <optgroup label="GEFSv12 Reforecast"><option value="reforecast:2017">2017 · Train</option><option value="reforecast:2018">2018 · Validate</option><option value="reforecast:2019">2019 · Test</option></optgroup>
     <optgroup label="Historical Operational GEFS"><option value="operational:2023">2023 · Cross-fit</option><option value="operational:2024">2024 · Validate</option><option value="operational:2025">2025 · Final test</option></optgroup>
@@ -193,7 +198,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     </div>
     {mobileMounted ? <><button type="button" tabIndex={-1} className="mobile-nav-backdrop" data-open={mobileOpen} aria-label="Close navigation" aria-hidden={!mobileOpen} inert={!mobileOpen} onClick={() => closeMobile()} /><aside ref={mobileDrawer} className="mobile-sidebar" data-open={mobileOpen} id="mobile-sidebar" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden={!mobileOpen} inert={!mobileOpen}><div className="mobile-sidebar-top"><div className="mobile-sidebar-brand"><span className="drawer-brand-mark brand-symbol" aria-hidden="true" /><span className="brand-word">VarshaSetu<small>MONSOON INTELLIGENCE</small></span></div><button ref={closeButton} type="button" className="mobile-menu-button" aria-label="Close navigation" onClick={() => closeMobile()}><X size={20} aria-hidden="true" /></button></div><Suspense fallback={<nav className="nav-list" aria-label="Primary" />}><Navigation onNavigate={() => closeMobile(false)} /></Suspense><ArchiveCard onNavigate={() => closeMobile(false)} /></aside></> : null}
     <div className="app-main">
-      <header className="global-header"><div className="header-context"><div className="header-brandline"><span className="header-brand-logo brand-symbol" aria-hidden="true" /><span className="header-brand-copy"><Link href="/" aria-label="Return to VarshaSetu overview"><span>Varsha</span><span>Setu</span></Link><span className="header-brand-slash" aria-hidden="true">/</span><span>Scientific workspace</span></span></div></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" aria-label="Reset Demo" title="Restore the official experiment, year, case, and lead"><RotateCcw className="reset-demo-icon" size={17} aria-hidden="true" /><span>Reset Demo</span></Link><PresentButton /><ThemeToggle /></div></header>
+      <header className="global-header"><div className="header-context"><div className="header-brandline"><span className="header-brand-logo brand-symbol" aria-hidden="true" /><span className="header-brand-copy"><Link href="/" aria-label="Return to VarshaSetu overview"><span>Varsha</span><span>Setu</span></Link><span className="header-brand-slash" aria-hidden="true">/</span><span>Scientific workspace</span></span></div></div><div className="header-actions"><Suspense fallback={null}><ExperimentContextControl /></Suspense><Link href="/forecast?demo=official" className="reset-demo-link" aria-label="Reset Demo" title="Restore the official experiment, year, case, and lead"><RotateCcw className="reset-demo-icon" size={17} aria-hidden="true" /><span>Reset Demo</span></Link><PresentButton /><a className="github-link" href="https://github.com/iadityachourasia/VarshaSetu" target="_blank" rel="noopener noreferrer" aria-label="Open VarshaSetu GitHub repository in a new tab" title="View source on GitHub"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 4.58c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg></a><ThemeToggle /></div></header>
       <main id="main-content">{children}</main>
     </div>
   </div>;

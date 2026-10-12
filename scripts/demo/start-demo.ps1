@@ -1,3 +1,4 @@
+param([switch]$IncludeNationwideResearch)
 $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
 $frontend = Join-Path $root 'frontend-v2'
@@ -11,14 +12,16 @@ foreach ($path in @($frontend, (Join-Path $root 'backend'), (Join-Path $root 'da
 if (-not (Test-Path -LiteralPath $python)) { throw 'Project Python environment missing; restore .venv before launch' }
 if (-not $node) { throw 'Node.js is unavailable in PATH' }
 $existing = @()
-if (Test-Path -LiteralPath $statePath) { $existing = @(Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json) }
+# Windows PowerShell 5.1 can emit a JSON array as one pipeline object; wrapping
+# ConvertFrom-Json in @() then nests it and turns each record field into an array.
+if (Test-Path -LiteralPath $statePath) { $existing = Get-Content -LiteralPath $statePath -Raw | ConvertFrom-Json }
 $owned = [System.Collections.Generic.List[object]]::new()
 foreach ($record in $existing) {
   $process = Get-Process -Id $record.pid -ErrorAction SilentlyContinue
   if ($process -and [math]::Abs(($process.StartTime.ToUniversalTime() - ([datetime]$record.started_utc).ToUniversalTime()).TotalSeconds) -lt 1) { $owned.Add($record) }
 }
 function Health([string]$url) {
-  try { return (Invoke-WebRequest $url -TimeoutSec 5).StatusCode -eq 200 } catch { return $false }
+  try { return (Invoke-WebRequest $url -UseBasicParsing -TimeoutSec 5).StatusCode -eq 200 } catch { return $false }
 }
 function PortOccupied([int]$port) {
   return $null -ne (Get-NetTCPConnection -LocalAddress '127.0.0.1' -LocalPort $port -State Listen -ErrorAction SilentlyContinue | Select-Object -First 1)
@@ -36,16 +39,22 @@ function WaitHealthy([string]$url, [int]$seconds) {
 New-Item -ItemType Directory -Force -Path $runtime | Out-Null
 if (-not (Health 'http://127.0.0.1:8000/api/science/status')) {
   if (PortOccupied 8000) { throw 'Port 8000 is occupied by an unverified service; no process was stopped' }
-  StartOwned 'backend' $python @('-m','uvicorn','backend.main:app','--host','127.0.0.1','--port','8000') $root
+  $previousResearch = [Environment]::GetEnvironmentVariable('VARSHASETU_LOCAL_NATIONWIDE_RESEARCH', 'Process')
+  try {
+    if ($IncludeNationwideResearch) { $env:VARSHASETU_LOCAL_NATIONWIDE_RESEARCH = '1' }
+    StartOwned 'backend' $python @('-m','uvicorn','backend.main:app','--host','127.0.0.1','--port','8000') $root
+  } finally {
+    [Environment]::SetEnvironmentVariable('VARSHASETU_LOCAL_NATIONWIDE_RESEARCH', $previousResearch, 'Process')
+  }
   WaitHealthy 'http://127.0.0.1:8000/api/science/status' 90
 } else { Write-Host 'Reusing existing healthy scientific API; shutdown affects it only if launcher-owned' }
-& (Join-Path $PSScriptRoot 'preflight-demo.ps1') -SkipFrontend
+& (Join-Path $PSScriptRoot 'preflight-demo.ps1') -SkipFrontend -IncludeNationwideResearch:$IncludeNationwideResearch
 if (-not $?) { throw 'Scientific preflight failed; production frontend was not started' }
 if (-not (Health 'http://127.0.0.1:3200')) {
   if (PortOccupied 3200) { throw 'Port 3200 is occupied by an unverified service; no process was stopped' }
   StartOwned 'frontend' $node @('node_modules/next/dist/bin/next','start','--hostname','127.0.0.1','--port','3200') $frontend
   WaitHealthy 'http://127.0.0.1:3200' 90
 } else { Write-Host 'Reusing existing healthy frontend; shutdown affects it only if launcher-owned' }
-& (Join-Path $PSScriptRoot 'preflight-demo.ps1')
+& (Join-Path $PSScriptRoot 'preflight-demo.ps1') -IncludeNationwideResearch:$IncludeNationwideResearch
 if (-not $?) { throw 'Final demo preflight failed; inspect logs and repair before recording' }
 Write-Host 'VarshaSetu historical prototype ready at http://127.0.0.1:3200'

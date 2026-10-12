@@ -8,8 +8,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
+import shutil
 from datetime import datetime, timezone
 from pathlib import Path
+from uuid import uuid4
 
 import numpy as np
 
@@ -42,24 +45,42 @@ def _stats(array: np.ndarray) -> dict:
 def write_bundle(root: Path, kind: str, date: str, arrays: dict[str, np.ndarray], products: list[str], provenance: dict, *, extra: dict | None = None) -> Path:
     if kind not in KINDS:
         raise BundleError(f"unknown bundle kind {kind}")
+    if not re.fullmatch(r"\d{8}", date):
+        raise BundleError("cycle date must be YYYYMMDD")
     directory = root / kind / date
     if directory.exists():
         raise BundleError(f"bundle already exists and is immutable: {directory}")
-    directory.mkdir(parents=True)
-    entries = {}
-    for name, array in sorted(arrays.items()):
-        array = np.ascontiguousarray(array)
-        if array.dtype not in (np.float32, np.float64) or not np.isfinite(array).all():
+    validated = {}
+    for name, array in arrays.items():
+        if not re.fullmatch(r"[A-Za-z0-9_]+", name):
+            raise BundleError(f"invalid array name: {name}")
+        value = np.ascontiguousarray(array)
+        if value.dtype not in (np.float32, np.float64) or not np.isfinite(value).all():
             raise BundleError(f"array {name} must be finite float32/float64")
-        path = directory / f"{name}.npy"
-        np.save(path, array, allow_pickle=False)
-        entries[name] = {"sha256": sha256_file(path), "shape": list(array.shape), "dtype": str(array.dtype), **_stats(array)}
-    manifest = {"schema": SCHEMA, "kind": kind, "label": LABELS[kind], "initialization": f"{date[:4]}-{date[4:6]}-{date[6:]}T00:00:00Z", "cycle": date,
-                "created_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "observation_read": False, "retrained_or_recalibrated": False,
-                "products": sorted(products), "arrays": entries, "provenance": provenance, **(extra or {})}
-    text = json.dumps(manifest, indent=2, sort_keys=True, allow_nan=False) + "\n"
-    (directory / "manifest.json").write_text(text, encoding="utf-8", newline="\n")
-    (directory / "manifest.sha256").write_text(hashlib.sha256(text.encode("utf-8")).hexdigest() + "\n", encoding="ascii")
+        validated[name] = value
+    directory.parent.mkdir(parents=True, exist_ok=True)
+    # A normal child directory inherits the parent's API-readable ACL on Windows.
+    # tempfile.mkdtemp uses a restrictive ACL when the worker is elevated.
+    staging = directory.parent / f".stage-{date}-{uuid4().hex}"
+    staging.mkdir(exist_ok=False)
+    entries = {}
+    try:
+        for name, array in sorted(validated.items()):
+            path = staging / f"{name}.npy"
+            np.save(path, array, allow_pickle=False)
+            entries[name] = {"sha256": sha256_file(path), "shape": list(array.shape), "dtype": str(array.dtype), **_stats(array)}
+        manifest = {"schema": SCHEMA, "kind": kind, "label": LABELS[kind], "initialization": f"{date[:4]}-{date[4:6]}-{date[6:]}T00:00:00Z", "cycle": date,
+                    "created_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"), "observation_read": False, "retrained_or_recalibrated": False,
+                    "products": sorted(products), "arrays": entries, "provenance": provenance, **(extra or {})}
+        text = json.dumps(manifest, indent=2, sort_keys=True, allow_nan=False) + "\n"
+        (staging / "manifest.json").write_text(text, encoding="utf-8", newline="\n")
+        (staging / "manifest.sha256").write_text(hashlib.sha256(text.encode("utf-8")).hexdigest() + "\n", encoding="ascii")
+        if directory.exists():
+            raise BundleError(f"bundle already exists and is immutable: {directory}")
+        staging.rename(directory)
+    except Exception:
+        shutil.rmtree(staging)
+        raise
     return directory
 
 
