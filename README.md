@@ -390,7 +390,6 @@ VarshaSetu/
 │   └── tests/e2e/            Playwright suite (real backend)
 ├── scripts/                  protocol writers, evidence builders, demo launcher
 ├── docs/                     140+ numbered documents (start at docs/00_INDEX.md)
-├── frontend/                 legacy Vite app (blocked CSV path, preserved, not developed)
 ├── Dockerfile · render.yaml  backend container and Render blueprint
 └── .github/workflows/ci.yml  continuous integration
 ```

@@ -117,3 +117,24 @@ data/pytest-*/
 
 # Launch-video renders and frames (large, regenerated locally)
 brag-output/
+
+# =========================================================
+# Unused Legacy Frontend (quarantined prototype)
+# =========================================================
+frontend/
+
+# =========================================================
+# Root text dumps and obsolete scratch files
+# =========================================================
+folder_tree.txt
+LAST_MODIFIED*.txt
+
+# =========================================================
+# Local AI agents, testing traces, and tool metadata
+# =========================================================
+.playwright-mcp/
+.21st/
+.codex/
+.impeccable/
+.agents/
+skills-lock.json
