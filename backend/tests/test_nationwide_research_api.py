@@ -21,10 +21,11 @@ def test_disabled_by_default(monkeypatch):
     monkeypatch.delenv("VARSHASETU_LOCAL_NATIONWIDE_RESEARCH", raising=False)
     response = TestClient(app).get("/api/science/research/nationwide/overview")
     assert response.status_code == 404
-    assert response.json()["code"] == "NATIONWIDE_RESEARCH_UNAVAILABLE"
+RESEARCH_AVAILABLE = api.SCORE.exists() and (api.OUT / "research_land_mask.npy").is_file() and (api.OUT / "predictions").is_dir()
+DISTRICT_AVAILABLE = api.DISTRICT.exists() and (api.OUT / "district_tables").is_dir()
 
 
-@pytest.mark.skipif(not api.SCORE.exists(), reason="ignored local national research artifacts absent")
+@pytest.mark.skipif(not RESEARCH_AVAILABLE, reason="ignored local national research artifacts absent")
 def test_overview_and_case_grid_are_consumed_development_only(client):
     overview = client.get("/api/science/research/nationwide/overview")
     assert overview.status_code == 200
@@ -48,7 +49,7 @@ def test_overview_and_case_grid_are_consumed_development_only(client):
     assert client.get("/api/science/research/nationwide/grid", params={"case_id": selected, "field": "unknown"}).status_code == 404
 
 
-@pytest.mark.skipif(not api.SCORE.exists(), reason="ignored local national research artifacts absent")
+@pytest.mark.skipif(not RESEARCH_AVAILABLE, reason="ignored local national research artifacts absent")
 def test_sealed_verification_is_same_case_and_exposes_counts_fss_uncertainty(client):
     response = client.get("/api/science/research/nationwide/verification", params={"region": "ALL_INDIA", "lead_hours": 24})
     assert response.status_code == 200
@@ -68,7 +69,7 @@ def test_sealed_verification_is_same_case_and_exposes_counts_fss_uncertainty(cli
     assert client.get("/api/science/research/nationwide/verification", params={"lead_hours": 12}).status_code == 404
 
 
-@pytest.mark.skipif(not api.DISTRICT.exists(), reason="ignored local national district artifacts absent")
+@pytest.mark.skipif(not DISTRICT_AVAILABLE, reason="ignored local national district artifacts absent")
 def test_research_district_table_never_claims_official_geometry(client):
     case_id = client.get("/api/science/research/nationwide/cases").json()["cases"][0]["case_id"]
     response = client.get("/api/science/research/nationwide/districts", params={"case_id": case_id})

@@ -30,12 +30,14 @@ def test_saved_ledger_marks_consumed_years_and_does_not_preseal_2026():
 
 def test_local_ledger_rebuild_matches_saved_hashes_when_local_data_exist():
     path = ledger.OUTPUT
-    if not ledger.REFORECAST_PROTOCOL.is_file() or not ledger.OPERATIONAL_MANIFESTS[2023].is_file():
-        pytest.skip("local source manifests are unavailable; saved ledger semantics remain tested")
+    if not ledger.REFORECAST_PROTOCOL.is_file() or not ledger.OPERATIONAL_MANIFESTS[2023].is_file() or not (ledger.IMD_DIRS[0] / "RF25_ind2005_rfp25.nc").is_file():
+        pytest.skip("local source manifests or climatology files are unavailable; saved ledger semantics remain tested")
     assert json.loads(path.read_text(encoding="utf-8")) == ledger.build()
 
 
 def test_v2_refuses_to_replace_2026_live_example_before_year_seal(monkeypatch, tmp_path):
+    v1 = json.loads(ledger.OUTPUT.read_text(encoding="utf-8"))
+    monkeypatch.setattr(ledger_v2.previous, "build", lambda: v1)
     monkeypatch.setattr(ledger_v2.yearly, "OUT", tmp_path / "missing-year.json")
     with pytest.raises(ValueError, match="year seal missing"):
         ledger_v2.build()
@@ -67,7 +69,9 @@ def test_v2_attaches_a_complete_forecast_side_without_skill_claim(monkeypatch, t
     assert "candidate" in candidate["new_experiment_role"]
 
 
-def test_v3_records_empty_imd_response_without_promoting_2026():
+def test_v3_records_empty_imd_response_without_promoting_2026(monkeypatch):
+    v2 = json.loads(ledger_v3.previous.OUT.read_text(encoding="utf-8"))
+    monkeypatch.setattr(ledger_v3.previous, "build", lambda: v2)
     result = ledger_v3.build()
     candidate = next(row for row in result["rows"] if row["track"] == "B_OPERATIONAL_GEFS" and row["year"] == 2026)
     assert candidate["imd_reference"]["status"] == "not_local"
@@ -76,7 +80,9 @@ def test_v3_records_empty_imd_response_without_promoting_2026():
     assert candidate["consumed_test"] is False
 
 
-def test_v4_keeps_daily_candidate_separate_from_missing_annual_reference():
+def test_v4_keeps_daily_candidate_separate_from_missing_annual_reference(monkeypatch):
+    v3 = json.loads(ledger_v4.previous.OUT.read_text(encoding="utf-8"))
+    monkeypatch.setattr(ledger_v4.previous, "build", lambda: v3)
     result = ledger_v4.build()
     candidate = next(row for row in result["rows"] if row["track"] == "B_OPERATIONAL_GEFS" and row["year"] == 2026)
     assert candidate["imd_reference"]["status"] == "not_local"

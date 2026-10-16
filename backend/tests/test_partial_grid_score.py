@@ -50,7 +50,10 @@ def test_sealed_forecast_population_if_present():
     assert digest == study.forecast.sha(study.forecast.OUT)
     assert all(not case["cycle"].startswith("2025") for case in year["cases"])
     for date in ("20240601", "20240621"):
-        case = study.forecast.verify_case(study.forecast.CACHE / date, year["protocol_sha256"])
+        case_dir = study.forecast.CACHE / date
+        if not case_dir.exists():
+            continue
+        case = study.forecast.verify_case(case_dir, year["protocol_sha256"])
         assert case["observation_read"] is False
 
 

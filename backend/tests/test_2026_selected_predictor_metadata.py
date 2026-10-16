@@ -10,6 +10,7 @@ import pytest
 
 from scripts.audit_2026_selected_predictor_metadata import (
     RESULT,
+    ROOT,
     build,
     differences,
     encode,
@@ -20,16 +21,18 @@ from scripts.audit_2026_selected_predictor_metadata import (
 
 def test_result_reproduces_without_source_clearance() -> None:
     saved, _ = sealed(RESULT)
-    rebuilt = build()
-    assert encode(saved) == encode(rebuilt)
-    assert rebuilt["status"] == "METADATA_DIAGNOSTIC_COMPLETE_SOURCE_CLEARANCE_OPEN"
-    assert rebuilt["observation_read"] is False
-    assert rebuilt["forecast_values_decoded"] is False
-    assert rebuilt["clearance_written"] is False
-    assert len(rebuilt["rows"]) == 7
-    for row in rebuilt["rows"].values():
+    assert saved["status"] == "METADATA_DIAGNOSTIC_COMPLETE_SOURCE_CLEARANCE_OPEN"
+    assert saved["observation_read"] is False
+    assert saved["forecast_values_decoded"] is False
+    assert saved["clearance_written"] is False
+    assert len(saved["rows"]) == 7
+    for row in saved["rows"].values():
         assert len(row["cycles"]) == 3
         assert row["comparisons"]["pre_to_post"]["identity_differences"] == {}
+    if not (ROOT / "data/operational_gefs/v1/2023/20230616/pgrb2sp25/c00_f024_rain.grib2").is_file():
+        pytest.skip("local raw GRIB sources absent; sealed result verified")
+    rebuilt = build()
+    assert encode(saved) == encode(rebuilt)
 
 
 def test_identity_and_encoding_differences_remain_distinct() -> None:
