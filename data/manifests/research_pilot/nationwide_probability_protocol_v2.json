@@ -1,0 +1,47 @@
+{
+  "2023_cases": 172,
+  "2024_cases": 156,
+  "calibration": "per-lead isotonic on 2023 out-of-fold head scores; identity only with fewer than 30 events or 30 nonevents",
+  "code_sha256": {
+    "head_contract": "d5cacf7afa711cd5092419b3195668fbc00032e968f6412ae0c2c0eb463850f8",
+    "runner": "866e49c6775c0631151b847ebe5366231e83d8d3621722a1d34ff4eecaa5fa5e"
+  },
+  "coherence": "very-heavy probability clipped to heavy probability after calibration",
+  "decision": "no promotion or public warning regardless of consumed-2024 result; current regional M2 remains product default",
+  "folds": {
+    "base_model_input": false,
+    "count": 3,
+    "embargo_days": 3,
+    "unit": "initialization date"
+  },
+  "heads_mm_per_24h": {
+    "heavy": 64.5,
+    "very_heavy": 115.6
+  },
+  "inputs": "all 22 forecast-only national features, including Raw GEFS; no M2 prediction or observation-derived feature",
+  "land_cells": 5105,
+  "model": "unweighted standardized LogisticRegression C=0.1 max_iter=1000",
+  "observation_values_read": false,
+  "purpose": "repair probability head fold dependence and warning cutoff scale in a distinct research-only candidate",
+  "roles": {
+    "2023": "fit_and_embargoed_date_block_oof_calibration_threshold",
+    "2024": "already_consumed_development_same_case_diagnostic_after_v2_prediction_seal",
+    "2025": "consumed_test_excluded",
+    "2026": "sealed_test_excluded"
+  },
+  "schema": "nationwide-probability-repair-v2",
+  "score": "same 2024 cases/cells as v1; Brier, Brier skill, reliability, event frequency, CSI/POD/FAR/ETS; 1000 initialization-date bootstrap draws for paired v2-minus-v1 Brier",
+  "sources": {
+    "feature_manifest_sha256": "f683eb1705ccd4deb7cacb55d80d049fa7d9bff09c3cdc522908389427bc3141",
+    "land_mask_sha256": "72450dc23eacd98e8fd3b14fd2f8b96d007f1a1ed29d32c6edc4ae2af33d7072",
+    "national_fit_seal_sha256": "bdabca698f7365222e979088255c8d8cfd261dd6022ab7c2c87742ee3a4da2d1",
+    "national_score_sha256": "09dd920d989bed829d2a415cffb5a120fd4888e65c554ab773be552022519652"
+  },
+  "status": "FROZEN_BEFORE_V2_FIT_OR_2024_PAIRING",
+  "uncertainty": {
+    "bootstrap_seed": 26080,
+    "caveat": "date resampling retains spatial and serial dependence",
+    "repeats": 1000
+  },
+  "warning_cutoff": "smallest 0.01..0.50 by 0.01 giving 2023 calibrated/coherent OOF forecast/observed frequency nearest one"
+}

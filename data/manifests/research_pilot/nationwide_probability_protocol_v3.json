@@ -1,0 +1,76 @@
+{
+  "2023_cases": 172,
+  "2024_cases": 156,
+  "calibration": "Per-lead, natural-frequency, monotone logistic Platt map on clipped head logits; C=1.0, no class weights; at least 30 events and nonevents per lead; nonpositive slope fails closed",
+  "code_sha256": {
+    "calibration_contract": "ddb2dc70e09b04b3a6a464c39aed005cc8b9bebd852824bdd1d0558e461202d0",
+    "runner": "2197ec5e5cd4d080c8152eb7f02f0af97772b8a606eadd89832be29eada9e18b"
+  },
+  "coherence": "P(very heavy)=min(calibrated very-heavy, calibrated heavy)",
+  "comparison": "same 2024 cases and paired cells as v1 and v2; primary very-heavy Brier against both, heavy guardrail, BSS, ten-bin reliability, CSI/POD/FAR/ETS and event frequencies by lead; date-block paired uncertainty",
+  "cutoff": "Choose one per head on nested outer OOF coherent probabilities after float32 persistence; 0.01 to 0.50 in 0.01 steps, nearest forecast/observed event frequency, lower tie break. Also report a common fixed 0.05 cutoff for all arms. No 2024 threshold tuning.",
+  "diagnostic_gate": "v3 very-heavy Brier must beat both v1 and v2 with each 95% paired date-bootstrap interval below zero, v3 very-heavy BSS positive, v3 heavy Brier <= min(v1,v2)+0.0001, and very-heavy nested-cutoff forecast/observed frequency between 0.5 and 2.0; even a pass is development only",
+  "freeze_date": "2026-10-09",
+  "heads_mm_per_24h": {
+    "heavy": 64.5,
+    "very_heavy": 115.6
+  },
+  "inputs": "Exactly the 22 sealed national forecast-time features; no fitted M2, observation-derived or valid-time reanalysis feature",
+  "land_cells": 5105,
+  "libraries": {
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.1",
+    "xgboost": "3.0.4"
+  },
+  "model_spec": {
+    "colsample_bytree": 0.9,
+    "device": "cpu",
+    "eval_metric": "logloss",
+    "learning_rate": 0.05,
+    "max_bin": 128,
+    "max_depth": 3,
+    "min_child_weight": 20,
+    "n_estimators": 80,
+    "n_jobs": 4,
+    "objective": "binary:logistic",
+    "random_state": 26080,
+    "reg_lambda": 5.0,
+    "subsample": 0.85,
+    "tree_method": "hist"
+  },
+  "motivation": "The repaired v2 linear head underfit nonlinear forecast interactions and its lead-isotonic 2024 outputs all fell below the very-heavy warning cutoff; test one fixed nonlinear head with monotone Platt calibration, not a threshold retune.",
+  "nested_validation": {
+    "embargo_days": 3,
+    "final_calibration_inner_folds": 3,
+    "inner_folds_per_outer": 2,
+    "outer_folds": 3,
+    "outer_held_never_in_its_head_or_calibrator_fit": true,
+    "unit": "initialization date"
+  },
+  "observation_values_read_before_freeze": false,
+  "product_default": "regional_M2_unchanged",
+  "release": "research-only regardless of consumed-2024 score; no API/live/public warning promotion",
+  "roles": {
+    "2023": "fit_and_nested_date_block_calibration_threshold",
+    "2024": "already_consumed_development_same_case_score_only_after_prediction_seal",
+    "2025": "consumed_test_excluded",
+    "2026": "sealed_test_excluded"
+  },
+  "schema": "nationwide-probability-nonlinear-development-v3",
+  "sources": {
+    "feature_manifest_sha256": "f683eb1705ccd4deb7cacb55d80d049fa7d9bff09c3cdc522908389427bc3141",
+    "land_mask_sha256": "72450dc23eacd98e8fd3b14fd2f8b96d007f1a1ed29d32c6edc4ae2af33d7072",
+    "national_fit_seal_sha256": "bdabca698f7365222e979088255c8d8cfd261dd6022ab7c2c87742ee3a4da2d1",
+    "national_score_sha256": "09dd920d989bed829d2a415cffb5a120fd4888e65c554ab773be552022519652",
+    "v2_fit_seal_sha256": "4611feba330552aabadfb2fd0a66ec4dc9d3ae6c9e9050d1849cb6e227ad8a60",
+    "v2_protocol_sha256": "af59dcabed694beba184023adbb7e39f542b6ecb93a7366c8c1764abcdc9b8b3",
+    "v2_score_sha256": "828dd9d359496ed9a3f61eecab9cc433f542e0cc169fceb56f76654d74ebeb74"
+  },
+  "status": "FROZEN_BEFORE_V3_FIT_OR_2024_PAIRING",
+  "uncertainty": {
+    "bootstrap_unit": "initialization date",
+    "caveat": "date resampling does not remove spatial or serial dependence",
+    "repeats": 1000,
+    "seed": 26080
+  }
+}

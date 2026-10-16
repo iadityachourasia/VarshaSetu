@@ -1,0 +1,19 @@
+{
+  "schema": "varshasetu-lead-aware-probability-development-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_CANDIDATE_FITTING_AND_SELECTION_BLOCK_SCORING",
+  "track": "B_OPERATIONAL_GEFS_CONSUMED_2024_DEVELOPMENT_ONLY",
+  "population": "All 183 Phase 4I 2024 paired cases in their original row order; calibration, purge and selection case IDs are the frozen Phase 4I chronological split",
+  "base_models": "Use exactly the already selected 2023-trained logistic base score for each 24-hour event, without refitting the NWP model. The frozen separately isotonic-calibrated output is a descriptive control, not an independent benchmark.",
+  "arms": ["raw base scores with nested Euclidean projection", "frozen selected isotonic outputs with nested Euclidean projection", "pooled logistic recalibration with nested Euclidean projection", "lead-aware logistic recalibration with Day 2 and Day 3 intercept offsets and nested Euclidean projection"],
+  "fit": "For each event separately, fit LogisticRegression(C=0.1, solver=lbfgs, max_iter=500, random_state=26080, no class weighting) on only the calibration-block 2024 labels. Predictor 1 is logit(base score clipped to [1e-6,1-1e-6]); lead-aware adds Day 2 and Day 3 indicator columns. Day 1 is reference. No hyperparameter or arm selection from evaluation blocks.",
+  "event_thresholds_mm_24h": {"heavy": 64.5, "very_heavy": 115.6},
+  "fixed_warning_cutoffs": {"heavy": 0.1, "very_heavy": 0.05},
+  "climatology_2023": {"heavy": 0.018643351268255188, "very_heavy": 0.004738662567255957},
+  "support_gate": "Each event must have at least 100 positive calibration cells and 20 event-bearing calibration cases in total; each lead's support is reported, not silently dropped.",
+  "prediction_seal": "Fit artifacts and all 2024 arm predictions are immutable and hash-sealed before any purge or selection label is read by the scoring step. The fit step accesses labels through memory-mapped calibration-row slices only.",
+  "primary_diagnostic": "On selection-block same rows, compare lead-aware versus pooled global joint and per-event Brier scores, Brier skill versus frozen 2023 climatology, 10-bin reliability, warning frequency bias and fixed-cutoff CSI/POD/FAR/ETS. Also report calibration and purge blocks and each lead. Use 1000 fixed-seed initialization-date bootstrap repeats for lead-aware minus pooled Brier differences.",
+  "interpretation": "The Phase 4I selected base models and frozen isotonic calibrators were chosen using 2024 data, including this selection block. Therefore every comparison is consumed development diagnostics only, even though candidate fitting uses only early dates. No independent calibration or performance claim.",
+  "release_rule": "No change to live worker, API, dashboard or calibrated label. Independent-year reliability, event support and model-version checks remain mandatory before product promotion.",
+  "excluded_years": [2025, 2026]
+}

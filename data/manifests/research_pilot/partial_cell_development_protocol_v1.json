@@ -1,0 +1,22 @@
+{
+  "schema": "varshasetu-partial-cell-development-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_THIS_PARTIAL_CELL_OBSERVATION_PAIRING",
+  "track": "B_OPERATIONAL_GEFS_DEVELOPMENT_ONLY",
+  "years": {"2023": "design_development", "2024": "validation_development"},
+  "dates": "June 1-30 00 UTC initialization in each year",
+  "products": {"day1_24h": [3, 27], "day2_24h": [27, 51], "day3_24h": [51, 75]},
+  "forecast": "Hash-verified NOAA GEFS control-member 0.25-degree precipitation selected messages, regional 10-22 N 68-80 E grid",
+  "reference": "Locally held hash-verified IMD 0.25-degree daily rainfall, 03-03 UTC, valid date at product window end",
+  "methods": ["existing strict minimum-subtraction accumulation", "experimental cell-masked minimum-subtraction accumulation"],
+  "same_case_rule": "On strict-pass cases, masked and canonical rainfall and eligible-cell metrics must be exactly equal. On strict-fail cases, report mask-only coverage and skill descriptively; never impute or create a fictional strict comparator.",
+  "missing_cell_rule": "Materially negative nested differences become NaN; within-packing-bound negatives become zero. Missing cells never contribute to a rainfall score, a district mean, or a district probability.",
+  "district_rule": "Use hash-verified existing regional area weights. Report weighted valid area fraction per district and lead. A prospective district value requires at least 0.95 valid weighted area; below that it must be withheld, never filled as zero.",
+  "district_minimum_area_coverage_fraction": 0.95,
+  "minimum_regional_coverage_fraction_for_future_consideration": 0.99,
+  "thresholds_mm_24h": [64.5, 115.6],
+  "reported_measures": ["strict and masked lead counts", "regional and IMD-paired coverage", "district weighted coverage", "observed rainfall and event frequency at invalid versus valid cells", "raw RMSE, mean bias, heavy and very-heavy contingency counts on masked valid cells"],
+  "selection_rule": "No model or QC promotion from this study. A future release requires a separate versioned full-pipeline protocol, nonnegative finite outputs on supported cells, same-case verification and honest partial district/API semantics.",
+  "excluded": ["2025 consumed test", "2026 independent-test candidate", "model fitting or calibration", "national corrected product", "operational QC change"],
+  "interpretation": "Development and validation diagnostic, not an independent performance test or a forecast product."
+}

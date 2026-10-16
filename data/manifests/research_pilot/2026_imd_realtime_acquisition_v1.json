@@ -1,0 +1,2140 @@
+{
+  "errors": {},
+  "expected_dates": 125,
+  "forecast_observation_pairing": false,
+  "observation_values_decoded": false,
+  "protocol_sha256": "e30fb672a191b8bcb16444dfe29ba3289f96ad72dbdc97d530571ab8fa76698c",
+  "received_dates": 125,
+  "records": {
+    "2026-06-01": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-01",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260601.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "01062026"
+      },
+      "retrieved_utc": "2026-10-07T07:15:50+00:00",
+      "sha256": "7f8efe4f3216cdb6e7f1940f9fdd37541484a5ec9372a5ee068c6be43c79110f",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-02": {
+      "attempts": 2,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-02",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260602.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "02062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:10+00:00",
+      "sha256": "ba114403ba69824892f05cd5ebf187cf61b86a0d22e1bff082126c9a7dd15d16",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-03": {
+      "attempts": 2,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-03",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260603.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "03062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:09+00:00",
+      "sha256": "5e78dea019ed785ad1dabc8aa6c98a4b36e1dd57fc3011e77e3ff7b9ee95f3ef",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-04": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-04",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260604.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "04062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:03+00:00",
+      "sha256": "faa3686cbf147d958219a351aa43c7ccb853c2cfb3b5538c6ee78ba4155b7762",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-05": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-05",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260605.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "05062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:15+00:00",
+      "sha256": "4ed782d003ff306373481e9148ed61af48a68c01cdb522f2f5598207d5fb82d8",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-06": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-06",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260606.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "06062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:19+00:00",
+      "sha256": "09590690b88d1a4a774a1f6b44086fba3138d0eaa878915a31121146d25050f5",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-07": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-07",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260607.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "07062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:20+00:00",
+      "sha256": "fd7b388bf6aaf3cbe2e89b9505166f6ef79a66d65b1873e52a13148e693d6ee1",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-08": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-08",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260608.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "08062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:24+00:00",
+      "sha256": "91457c818319e759995c427194a334ef0e778a73d9d255cb23da5fb99036c329",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-09": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-09",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260609.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "09062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:26+00:00",
+      "sha256": "c319be0ef4312a2e21ff5d879dce3c53599a4eba36b1884ca2da2e05ee6d74be",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-10": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-10",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260610.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "10062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:33+00:00",
+      "sha256": "63af0766032e2b552fc91a7318a2623b94e815f044dea1641902fcf1eacf26f8",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-11": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-11",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260611.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "11062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:30+00:00",
+      "sha256": "90c1d34ae6f16f768bcd610c9930530f8c7ccb9596b1de8e1030f93f07930c35",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-12": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-12",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260612.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "12062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:33+00:00",
+      "sha256": "22cd030c7c2df40a76e49d381d2facb6d000ba2cc6ab3978b43be3a66e43685a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-13": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-13",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260613.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "13062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:37+00:00",
+      "sha256": "9bad38fc04993da7c3a96e31d80c5d5d27e77732ff9bf91891ad5e47310b6fb9",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-14": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-14",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260614.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "14062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:42+00:00",
+      "sha256": "158bb0262f641c316f3ae5dca5d1bdf5e6317b7c5dfac6b4df9c827b09da57e0",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-15": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-15",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260615.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "15062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:42+00:00",
+      "sha256": "3e4f953b2ab343ea2c96cbb050686cd953675444f692dfa7fc6f84e1f26602d7",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-16": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-16",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260616.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "16062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:47+00:00",
+      "sha256": "6b2b240baeafbe11ec5ec504f0d02d75ef07c97b994d4f39ac7deff3c4ec40d8",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-17": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-17",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260617.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "17062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:51+00:00",
+      "sha256": "6d421bc367501a0169c51ac25d919a620d01159948b7ac73e502614876eeeb8c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-18": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-18",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260618.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "18062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:51+00:00",
+      "sha256": "ca7f1223c979aa9aa9f358ab370853ba9053aa23bd262f4dcd383a1e7925f1b2",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-19": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-19",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260619.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "19062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:55+00:00",
+      "sha256": "59fac51949ebd657f260124bce04b244c04be5f1a606c2c3c3f0ac256176c35f",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-20": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-20",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260620.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "20062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:57+00:00",
+      "sha256": "b4eb6a3acdb83de8873e1cc5df1c6b4158b0ed05ecb2e068f680c9da8de47340",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-21": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-21",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260621.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "21062026"
+      },
+      "retrieved_utc": "2026-10-07T07:16:57+00:00",
+      "sha256": "f23c1564ef71e55ad85ea29e43558b4b43965a59010bbc3caaedf726a9bc5bf5",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-22": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-22",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260622.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "22062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:02+00:00",
+      "sha256": "4aac1ff40734f0c4f0e5431c1635e7f4622f94499a66d9c95cfb9238861533a2",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-23": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-23",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260623.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "23062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:02+00:00",
+      "sha256": "b3d65d3fd1687b3ebbb0205ade96383c261742837ca1cc7f278d2404eda66c21",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-24": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-24",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260624.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "24062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:03+00:00",
+      "sha256": "0918e0302138ecdaabd8da511d9675b1930467e2bcd41ea38600f5b440c5b4b8",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-25": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-25",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260625.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "25062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:06+00:00",
+      "sha256": "224b1794be02e15e9a2561cd4e19d52604be229bbb62b23a6b6dd9e5ce412d21",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-26": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-26",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260626.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "26062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:09+00:00",
+      "sha256": "434c0b171803cb37048b736db6e233b69d95c9262d557c42200d5765a75d9040",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-27": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-27",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260627.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "27062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:09+00:00",
+      "sha256": "487fe987bf73239b99144b6c00ac3a673b4fcad29402b6212f59ff9975c64901",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-28": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-28",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260628.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "28062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:15+00:00",
+      "sha256": "1438f5e7671cb67065e41299116df014cba6d0b7d6e3baa583dd6e47b60deb2b",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-29": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-29",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260629.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "29062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:14+00:00",
+      "sha256": "867ab73406b0ea98e87f75415b2aa47e90e823c2e0c97dce8fbba68e13b4ca62",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-06-30": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-06-30",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260630.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "30062026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:15+00:00",
+      "sha256": "c3d8d7a970798394284bc78ad755fb0de7988ea4212102bd7c43c72000583810",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-01": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-01",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260701.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "01072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:22+00:00",
+      "sha256": "0a2d0a512422645d4aeafadd2316cc9b770a9ed4ddf46ca3fe177ce28647a66e",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-02": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-02",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260702.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "02072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:21+00:00",
+      "sha256": "232a84b81ba2259960aea68eb41abdeebe0ec91c5c3294cc3270a9c63196d947",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-03": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-03",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260703.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "03072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:21+00:00",
+      "sha256": "bed1fa55693abde8584e8a054ac6670346d01a1d1be0211873f71b998c4f3ceb",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-04": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-04",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260704.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "04072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:27+00:00",
+      "sha256": "1497677d9063ab83336e8f37e737844f1a60d2b4705660c198da4b4f7f45e193",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-05": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-05",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260705.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "05072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:27+00:00",
+      "sha256": "8e4d1fb1690cb11a063b7a3c5e211a27cfbede62baec7cf1222671a0b746d35c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-06": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-06",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260706.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "06072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:27+00:00",
+      "sha256": "50679cf00755a3f24c050e442c53cc4a9264ac84350cc8057828ee45dc259ffe",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-07": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-07",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260707.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "07072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:35+00:00",
+      "sha256": "31a0b8a29be4a1feeefb795f9e3418b26086168a71eb85d24677abd05289514c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-08": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-08",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260708.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "08072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:38+00:00",
+      "sha256": "420cc0e17f383ae1ec21fa5f70830f0bd375b90959dd9ab2ace7655afa8c6625",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-09": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-09",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260709.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "09072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:36+00:00",
+      "sha256": "87fc1705a5ff6cabc3b489ddc32e4198a843b08b3668800921d0316d10103b99",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-10": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-10",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260710.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "10072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:55+00:00",
+      "sha256": "81b814019ba3d0a5afaf02ae693cddd0e0cf578afe03d1adee3966070da89109",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-11": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-11",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260711.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "11072026"
+      },
+      "retrieved_utc": "2026-10-07T07:18:01+00:00",
+      "sha256": "fcaf1f5aae333f9097013c071d4c86e672f3318ef3caad2cb3daab2f7bf2551c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-12": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-12",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260712.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "12072026"
+      },
+      "retrieved_utc": "2026-10-07T07:17:55+00:00",
+      "sha256": "8280075c35eae3efc5cbabd32bf8488b188b0481b2c704c8df2315a69b11b546",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-13": {
+      "attempts": 2,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-13",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260713.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "13072026"
+      },
+      "retrieved_utc": "2026-10-07T07:18:35+00:00",
+      "sha256": "253abc2cee82ad8bbad456eb6d1a91bbb5e4716eb6eb55faf11231faf8dd338c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-14": {
+      "attempts": 3,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-14",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260714.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "14072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:00+00:00",
+      "sha256": "a51aa91827d7e81b87ff3ce6bb2268ac40e36a2c2297ea938b12f346ab2f3b7a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-15": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-15",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260715.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "15072026"
+      },
+      "retrieved_utc": "2026-10-07T07:23:07+00:00",
+      "sha256": "4843e7a74ea8571208d1a589c9e0b9dad01279f86613892c59b072722c870595",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-16": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-16",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260716.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "16072026"
+      },
+      "retrieved_utc": "2026-10-07T07:18:47+00:00",
+      "sha256": "d1ce45774f796547c38a87c7d4b549cfab8ab9ed6e99f067d54cb9d5cf0c3e51",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-17": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-17",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260717.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "17072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:10+00:00",
+      "sha256": "418ab02b627d9adf7f6ca2e7df41f236f36572940312ad21b4ed64a313d1c22d",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-18": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-18",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260718.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "18072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:20+00:00",
+      "sha256": "4ce3ba1d3057411da50e5029516ad90aec4a4f230cc11551613dc52d42ec72bf",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-19": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-19",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260719.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "19072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:21+00:00",
+      "sha256": "e56038b55b525e9cbb9d2be11c7e4b6a683c9b3a46cd3292b4ec4c314c31bcc0",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-20": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-20",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260720.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "20072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:26+00:00",
+      "sha256": "cade276b5331053932bba388ffec82b00d6e527e13a83769a5093b8d8db47c0a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-21": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-21",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260721.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "21072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:27+00:00",
+      "sha256": "38f93db5665dfbeb33e38088723defc6f57ae553616559e36ac73ab5f6bad632",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-22": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-22",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260722.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "22072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:27+00:00",
+      "sha256": "c7906bab4734d96753a02a8ddac92c2e318c57945625c875f25ed9c399e16c8c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-23": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-23",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260723.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "23072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:32+00:00",
+      "sha256": "1694dbec33ca76898779c63bfc6cb13fa95b17b0075ebc0ef705ffd81b52f269",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-24": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-24",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260724.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "24072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:33+00:00",
+      "sha256": "e8b552e6bc2e0f0e3e2846eccdc160e3277c55fa8db3e1b5956c0493c6001ec3",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-25": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-25",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260725.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "25072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:33+00:00",
+      "sha256": "7b6432115aeb34163e531e646deaf0f584290e825a32395cf3a6eb6f65b76bfd",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-26": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-26",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260726.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "26072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:40+00:00",
+      "sha256": "f05986df0af5ca8e74d88d3aff8ece33d1459c963327aa85d732319b6dbbe93c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-27": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-27",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260727.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "27072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:41+00:00",
+      "sha256": "e64e8335ef4e4cd1e50d92237345cff4fe6bf88b72958838cdef1cfeb2265583",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-28": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-28",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260728.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "28072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:42+00:00",
+      "sha256": "2f5f72caf21e880144f6bcb0e384053d34b5f2f8943f3d93699bb5e42ca25e9b",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-29": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-29",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260729.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "29072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:46+00:00",
+      "sha256": "6f1a79f0b83dd5dffcdac48a968440cfd412fd4745d9bccb6dc77ff2e56b1abf",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-30": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-30",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260730.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "30072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:47+00:00",
+      "sha256": "0fbad35e8779965063b6a4094cb36f5c0262960d86c8e8fb5cda845650b6f397",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-07-31": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-07-31",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260731.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "31072026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:48+00:00",
+      "sha256": "ca49ed0633f4d42af55aceddd425a311afc37ec618cf79c440fd45630d355ca3",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-01": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-01",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260801.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "01082026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:52+00:00",
+      "sha256": "cefe3491e61bcfdf4173414b11c22d18a9db3e366841a994c9d4a0d1e24a6119",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-02": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-02",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260802.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "02082026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:54+00:00",
+      "sha256": "7ffc1d2f45137354bdb21db4aeee128406c19251a8c7bc45e737310f3359b432",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-03": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-03",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260803.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "03082026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:54+00:00",
+      "sha256": "dd88df14743b24fe4467f74ec6fbee067e69d952a3596287d71e122778b0f4cf",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-04": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-04",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260804.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "04082026"
+      },
+      "retrieved_utc": "2026-10-07T07:19:58+00:00",
+      "sha256": "2015da7a6209e03e2fef6da5ac7147ccae6cf96ffdd9bd632a8734b15dc3bc39",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-05": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-05",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260805.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "05082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:00+00:00",
+      "sha256": "0fc9f193ee54ad2c108bf50b04cbc25babe123a0bb64bf27c50c0585fca7d87f",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-06": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-06",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260806.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "06082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:00+00:00",
+      "sha256": "d71c2737b22e30952643147c9713def656f32b34a3af58f4a3881380d41f9759",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-07": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-07",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260807.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "07082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:04+00:00",
+      "sha256": "7218e049de50120bac350ea3fae276e2534e95a63c67bc51c758b1d56ed9a258",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-08": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-08",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260808.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "08082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:05+00:00",
+      "sha256": "43b5c9afadba4ad3ae8d8332fa37260b4534398490222cb69b0ec20611dac4c5",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-09": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-09",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260809.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "09082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:06+00:00",
+      "sha256": "1a0d7446dfe7023cd230be58747658073baef392f62b54d25ca68c748f2da327",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-10": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-10",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260810.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "10082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:11+00:00",
+      "sha256": "2f15f04b7d6e5a09a9da7cc2fd1977dadc6de4158f704c2b42d0da84a142a688",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-11": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-11",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260811.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "11082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:13+00:00",
+      "sha256": "28944bc9d3d2263a2b0ca77f2b98df10788a6db828d6fbc2bed6ec1d3aa0aa3a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-12": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-12",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260812.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "12082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:13+00:00",
+      "sha256": "8ed19bca9a2ee9da35f1ee4bd841d571c2e346bc39cfbe87d1e3ebfdb05327d3",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-13": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-13",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260813.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "13082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:18+00:00",
+      "sha256": "ca2adf18bbaf558893c7a8d89259389032310a50f936922de9fd05197a1d90e6",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-14": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-14",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260814.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "14082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:21+00:00",
+      "sha256": "0e5bb0ef4187e1d40f5be095dabda9193cc0d35c82b833a4dbdc3f5f093ba22c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-15": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-15",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260815.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "15082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:22+00:00",
+      "sha256": "60301a445a5375def8c57cbabe2ba152529fb4231c85250f6b537be6d0a24db3",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-16": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-16",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260816.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "16082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:27+00:00",
+      "sha256": "9d89ba64c3470cff8fb633201852fe75e9a42d99d9feb1d9b99ee2db864558f6",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-17": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-17",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260817.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "17082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:29+00:00",
+      "sha256": "6c5309e558ce479c69a3f57ced8c38a40f2512db067fca8092f6ff9acbeb8c0f",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-18": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-18",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260818.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "18082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:30+00:00",
+      "sha256": "93f1078e5d5865484039c10aaa65060fad4bb47d505ce4a84cd4158769806dc8",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-19": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-19",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260819.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "19082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:36+00:00",
+      "sha256": "7289000bd5fe4eabcaadece5e80eae3b99c7e811f0666f7a3f6c28b9346746fa",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-20": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-20",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260820.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "20082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:37+00:00",
+      "sha256": "ca7d07170e644b0756eb180156068800334e80b40a55b0d83781f16ff905499a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-21": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-21",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260821.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "21082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:39+00:00",
+      "sha256": "762bd7981ebf87127a991599e3db40feb479c18ff182209bac7df890b0e97cb8",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-22": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-22",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260822.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "22082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:43+00:00",
+      "sha256": "1031e257faeae22aec6fcc825fce49228be837e749774f53dc2c1c97b0bbb086",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-23": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-23",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260823.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "23082026"
+      },
+      "retrieved_utc": "2026-10-07T07:20:45+00:00",
+      "sha256": "02af07139025c0b549ae1d9823d35d88766fda5aad79244b313cf50f55696dad",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-24": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-24",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260824.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "24082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:03+00:00",
+      "sha256": "4758f52b74a649e48f49ce75df6430e6d9bd2eed59d246fa29d6fab6e309f5cc",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-25": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-25",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260825.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "25082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:08+00:00",
+      "sha256": "0de00dbbbc4217093cf597a92afd95bd8f2e8aa4e7f7e5f5ea7f4aa8996da944",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-26": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-26",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260826.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "26082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:14+00:00",
+      "sha256": "3526e14ddd231485f9bcd15a286a092c63d1e548399f3627f61222f092f2600d",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-27": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-27",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260827.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "27082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:27+00:00",
+      "sha256": "727a71120c2abba107d65e50c08fc2bd12af5b13c38a827bce5e380a44f8d948",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-28": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-28",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260828.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "28082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:31+00:00",
+      "sha256": "64c5706ffa2e8731056530aba8e4f3494a4278e5e9f1dc056affa0861cc91815",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-29": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-29",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260829.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "29082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:34+00:00",
+      "sha256": "e0b41617baa373dd44676dc793eaa0661245141113505ebe8829a7475d5f3ec8",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-30": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-30",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260830.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "30082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:41+00:00",
+      "sha256": "20bb2c70e270b76de71d519b2918690773de689a08ec279e23861e3d915d8b2a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-08-31": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-08-31",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260831.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "31082026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:40+00:00",
+      "sha256": "9ecb70294835ab00fec958401144b6864b29b70945f5132fd29d6a2b06a974f2",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-01": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-01",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260901.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "01092026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:43+00:00",
+      "sha256": "0bb3155ee6c580b477ff4b9b4b45f7b540060299520b3a487deafb00454ba047",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-02": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-02",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260902.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "02092026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:53+00:00",
+      "sha256": "d92b55d6b39c6c80635cd071aa156a947ee82ef0980f15e215c32ade94036dac",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-03": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-03",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260903.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "03092026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:53+00:00",
+      "sha256": "9b994001bf962f1035e27a7c5c0136af3fea6132f1770dde2f3cdc11511dfe84",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-04": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-04",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260904.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "04092026"
+      },
+      "retrieved_utc": "2026-10-07T07:21:55+00:00",
+      "sha256": "894124ba38ed1fcedca18c3743ef552767e515b3c8d0a5a805a2933f1da41b92",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-05": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-05",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260905.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "05092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:06+00:00",
+      "sha256": "db960e9b8c69143bcc1569c7b519c419bd3cdf873fca2d0f17d0947f80469ba9",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-06": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-06",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260906.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "06092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:07+00:00",
+      "sha256": "569162c9b918b746707e7abacf10197a0d6c9542c5c26a5029229aa7a99a389a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-07": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-07",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260907.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "07092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:08+00:00",
+      "sha256": "005eb1a6818ced83f1738cd3b955ae601c99bb855e068d143ba6cacec634e816",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-08": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-08",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260908.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "08092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:12+00:00",
+      "sha256": "c410b486c46cea051b20f5edeb077a51bee611d7f757952c938108e6d03d0832",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-09": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-09",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260909.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "09092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:13+00:00",
+      "sha256": "d7330603e9f23a02f555fc95b75969fbbcc6d970b26c5777e099f15fc0057686",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-10": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-10",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260910.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "10092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:14+00:00",
+      "sha256": "cf1e5890f7be51deded181429de87426bd8070262f6fbb3165bcf549807607d7",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-11": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-11",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260911.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "11092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:17+00:00",
+      "sha256": "09e79d4ab8dfd915494bf4a5bfb14642e813d8271c83566a3be3f2f8c565027c",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-12": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-12",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260912.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "12092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:17+00:00",
+      "sha256": "799a99af28c8afafbc297ce9fe714b6b2ab3efbb6d868afc0c2a2c9ff00edb59",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-13": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-13",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260913.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "13092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:18+00:00",
+      "sha256": "b5f95b4449f1796f2063a0b58a3f299828a9ec4803c33094fded16b6e7d238f2",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-14": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-14",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260914.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "14092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:24+00:00",
+      "sha256": "b0011adec32dfd2933a3ba45e94e5f34167046e43ef450d29929c3ee3e3abc48",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-15": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-15",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260915.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "15092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:24+00:00",
+      "sha256": "91d0a39616a807f9fda92384a45e0bb49c8aa73142b76f0ed9d1e814a4273bb4",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-16": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-16",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260916.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "16092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:24+00:00",
+      "sha256": "30232671aa16aa692707bd1ed29ec77480bbea582be76d4b6accc2dda6b48915",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-17": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-17",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260917.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "17092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:28+00:00",
+      "sha256": "6e8e1f65401a24265e4c8f68632616b6b67c120e53020df38595b0dba3363916",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-18": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-18",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260918.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "18092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:29+00:00",
+      "sha256": "8e73ff76486f43547f666abec0876e4c9723d0703c08cd386e81fe2e0458184a",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-19": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-19",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260919.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "19092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:29+00:00",
+      "sha256": "70fae25f4e014b8ad807c3cc6e96c910afdb3164b55f672cc61eaf79e5511cb6",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-20": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-20",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260920.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "20092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:32+00:00",
+      "sha256": "1a73d3a9bb0ca1339f2ce4925865c6efb081d2635467671905bcd044053257dc",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-21": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-21",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260921.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "21092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:33+00:00",
+      "sha256": "f78d9cb1523eb9c3f774a15428173925b6705ae1faff894246e525eea98a89f9",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-22": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-22",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260922.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "22092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:33+00:00",
+      "sha256": "7540f8f29ad6d796d944d7e63027f0def4ca9a0431b10002408c96fed9926d78",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-23": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-23",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260923.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "23092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:37+00:00",
+      "sha256": "7ed53e7cbeb00801689d73a4f0e3fc31567a550f4532116809d29f5ee2869155",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-24": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-24",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260924.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "24092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:37+00:00",
+      "sha256": "c65e36cca540be363b0a61e0eb6f27fe91c53a3ccc13757f307090b76ae22870",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-25": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-25",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260925.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "25092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:37+00:00",
+      "sha256": "4d55699226326cf6f044b7be6f8f4baefb197ee42854ef838ebe116ad3afab5f",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-26": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-26",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260926.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "26092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:41+00:00",
+      "sha256": "8604fc65ef1040cd84e5cb37ee8c39984c48efda5a00859ec2e9ce85a1219d7e",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-27": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-27",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260927.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "27092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:41+00:00",
+      "sha256": "e8666611ad366a5b64cdccaf1c54cf7157a1321edd298d00be502701e5b00a11",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-28": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-28",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260928.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "28092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:41+00:00",
+      "sha256": "b8c042665c9223f8c97a44c6d52efbd6cf795c0d763b9243a4cf19154826de83",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-29": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-29",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260929.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "29092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:46+00:00",
+      "sha256": "404e383c6b7a6a5149cd6142722b585de10d3e51edbbd6c90a0bc736e407cec3",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-09-30": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-09-30",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20260930.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "30092026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:46+00:00",
+      "sha256": "cad3938646962b551eca90cd553e596b0293c5af5bdcbd2555ec1238ee9199ea",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-10-01": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-10-01",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20261001.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "01102026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:46+00:00",
+      "sha256": "8fe8a54f75bd12baed993ba15024c0ae8de8490759ac62dd3aab4e38f5ddaeaf",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-10-02": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-10-02",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20261002.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "02102026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:51+00:00",
+      "sha256": "373073536c473e26bd7105b736539322fbea162dd694f960a6866dbd3af506dc",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    },
+    "2026-10-03": {
+      "attempts": 1,
+      "byte_size": 69660,
+      "content_length": null,
+      "content_type": "application/octet-stream",
+      "date": "2026-10-03",
+      "forecast_pairing": false,
+      "http_status": 200,
+      "local_path": "data/raw/observations/imd_realtime_2026_v1/rainfall_20261003.grd",
+      "observation_values_decoded": false,
+      "request_form": {
+        "rain": "03102026"
+      },
+      "retrieved_utc": "2026-10-07T07:22:52+00:00",
+      "sha256": "08cf60c5e7da7eae5321a6628fa677a9982fa482221ef2b77c7205243b9be7a1",
+      "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php"
+    }
+  },
+  "schema": "varshasetu-imd-realtime-2026-acquisition-v1",
+  "scientific_role": "separate real-time gauge-product candidate; not annual RF25 NetCDF clearance",
+  "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+  "source_page": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/Rain_Download.html",
+  "status": "COMPLETE_UNSCORED_CANDIDATE"
+}

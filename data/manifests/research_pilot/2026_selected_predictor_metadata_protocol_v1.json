@@ -1,0 +1,24 @@
+{
+  "schema": "varshasetu-selected-predictor-grib-metadata-protocol-v1",
+  "status": "FORECAST_ONLY_DIAGNOSTIC_NO_VERSION_CLEARANCE_NO_SKILL",
+  "freeze_date": "2026-10-09",
+  "cycles": ["20230616", "20260615", "20260616"],
+  "forecast_hour": 24,
+  "member": "c00",
+  "selected_fields": ["rain", "u850", "v850", "q700", "z500", "mslp", "pwat"],
+  "source_paths": {
+    "2023": "data/operational_gefs/v1/2023/{cycle}/{family}/c00_f024_{field}.grib2",
+    "2026": "data/live/source_cache/{cycle}/{family}/f024_{field}.grib2"
+  },
+  "2023_source_manifest": "experiments/recent_historical/phase4f_payload_acquisition_v1/manifests/2023_source_manifest.json",
+  "2023_source_manifest_sha256": "c35deea16c289de7cffeca502dd5409d7bdf0430b8a4b7bdd8556957083483e3",
+  "2026_source_receipts": "adjacent .grib2.receipt.json with source URL, byte range, length and SHA-256",
+  "identity_keys": ["centre", "subCentre", "discipline", "parameterCategory", "parameterNumber", "shortName", "typeOfFirstFixedSurface", "scaledValueOfFirstFixedSurface", "stepType", "stepRange", "dataTime", "gridDefinitionTemplateNumber", "Ni", "Nj", "numberOfValues", "typeOfGeneratingProcess", "generatingProcessIdentifier", "productionStatusOfProcessedData", "typeOfProcessedData"],
+  "encoding_keys": ["packingType", "bitsPerValue", "binaryScaleFactor", "decimalScaleFactor"],
+  "analysis_rule": "Hash-check the selected local messages and receipts, then read GRIB header metadata only. Report each identity or encoding difference by field and cycle pair; never infer executable identity or numeric equivalence from matching metadata.",
+  "observation_read": false,
+  "forecast_values_decoded": false,
+  "model_inference": false,
+  "model_training": false,
+  "clearance_written": false
+}

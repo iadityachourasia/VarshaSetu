@@ -1,0 +1,1638 @@
+{
+  "cases": [
+    {
+      "cycle": "20240601",
+      "manifest_sha256": "434c7eb2d0efe792764bb28feac7c0db64dcb2a65be6f524c514c90d5c234d7c",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 12,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2389
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 6.855614068938245e-05,
+              "modified_cells": 6
+            },
+            "lead_aware": {
+              "maximum_gap": 3.1708399882257165e-06,
+              "modified_cells": 1
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.00034697490571025365,
+              "modified_cells": 35
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0003068311771763691,
+              "modified_cells": 27
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240602",
+      "manifest_sha256": "feea1bdac95a585de3c6597f5001272a50ccdb8dd976dfc75aab340cf3450104",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 15,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 2.2876628204262063e-05,
+              "modified_cells": 2
+            },
+            "lead_aware": {
+              "maximum_gap": 0.00018791170699788582,
+              "modified_cells": 8
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2386
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0008095606167975765,
+              "modified_cells": 57
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0007217685445157682,
+              "modified_cells": 47
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 6,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0005471575056253002,
+              "modified_cells": 14
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0004756448965407851,
+              "modified_cells": 10
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        }
+      }
+    },
+    {
+      "cycle": "20240603",
+      "manifest_sha256": "437673b474c22cdab92e4006a7edb55f886465dcd218604908ebd8d7015d5f95",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0005817756260948904,
+              "modified_cells": 46
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0007108066580706258,
+              "modified_cells": 70
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0001143242982131398,
+              "modified_cells": 19
+            },
+            "lead_aware": {
+              "maximum_gap": 6.53355428917124e-05,
+              "modified_cells": 13
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2397
+        },
+        "day3_24h": {
+          "invalid_cells": 12,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0001749748702536281,
+              "modified_cells": 26
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0001474616604948886,
+              "modified_cells": 19
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2389
+        }
+      }
+    },
+    {
+      "cycle": "20240604",
+      "manifest_sha256": "93a0e90de819bdeefddfa79e7e903fabf40c54da8be2fdeddd0cb0b84073eee8",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0004124815516345715,
+              "modified_cells": 22
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0006707148681436414,
+              "modified_cells": 44
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 11,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0001244263190958981,
+              "modified_cells": 21
+            },
+            "lead_aware": {
+              "maximum_gap": 8.024677563549254e-05,
+              "modified_cells": 15
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2390
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0004057449441474759,
+              "modified_cells": 24
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0002997850575220586,
+              "modified_cells": 19
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240605",
+      "manifest_sha256": "27fd2aea088b3bbf226912e287b950bf1636776cb9beb8049e9d78eb64bf9df2",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 12,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.00032257762078720343,
+              "modified_cells": 44
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0004883459834172004,
+              "modified_cells": 81
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2389
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0005693528514628546,
+              "modified_cells": 42
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0004567759244714837,
+              "modified_cells": 32
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 6,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        }
+      }
+    },
+    {
+      "cycle": "20240606",
+      "manifest_sha256": "1ab6aa05a037306bc117c0a708c39c91e1e57c82da2853390680017860ece9d4",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0003804056352767588,
+              "modified_cells": 46
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0004921512523397157,
+              "modified_cells": 66
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2397
+        },
+        "day3_24h": {
+          "invalid_cells": 15,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2386
+        }
+      }
+    },
+    {
+      "cycle": "20240607",
+      "manifest_sha256": "b6b18d36769fcec6bbf5c9325efd70f87ea1affa39c026ef7ae4cb64d2f79efb",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 9,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2392
+        },
+        "day2_24h": {
+          "invalid_cells": 2,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        },
+        "day3_24h": {
+          "invalid_cells": 4,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2397
+        }
+      }
+    },
+    {
+      "cycle": "20240608",
+      "manifest_sha256": "765ca4bd7128c59589959cb5a3481653fbba394701ae48dced5e40e309d17e52",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 7,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2394
+        },
+        "day3_24h": {
+          "invalid_cells": 2,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        }
+      }
+    },
+    {
+      "cycle": "20240609",
+      "manifest_sha256": "be03113cc8fe3157c6c68bb81384f9be8f1e01d027c84cd115682288b97a5e49",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 10,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2391
+        },
+        "day3_24h": {
+          "invalid_cells": 1,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2400
+        }
+      }
+    },
+    {
+      "cycle": "20240610",
+      "manifest_sha256": "fafd061ed007c724d3d5dee4b2a4aef5fb4522dc2b0728dbe076a9e6fdf3d9cd",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 9,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2392
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2397
+        },
+        "day3_24h": {
+          "invalid_cells": 18,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2383
+        }
+      }
+    },
+    {
+      "cycle": "20240611",
+      "manifest_sha256": "0edc3eb8646b11c28053f339d534130fec36e2aef1ac729daa9d4055f2520f53",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 6,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        },
+        "day3_24h": {
+          "invalid_cells": 8,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2393
+        }
+      }
+    },
+    {
+      "cycle": "20240612",
+      "manifest_sha256": "944209a1d9d1d3182ac9a79c9f0a3fc23beeeb4eb19cc47724bc9c3f455576ab",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 8,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2393
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        },
+        "day3_24h": {
+          "invalid_cells": 3,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2398
+        }
+      }
+    },
+    {
+      "cycle": "20240613",
+      "manifest_sha256": "43addc9739a90a85248f98b3e6d18319443b43579e0ccc8a3a610a8fb07c6509",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 5,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2396
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240614",
+      "manifest_sha256": "e175796f0b582e31c4709a8b55c5c47bb37f7baa5cea88060a3baf040cc94698",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 13,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2388
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240615",
+      "manifest_sha256": "b730e87cf18a8d4f41a07fa0a06f10be60918fc9f47c7c2032f67a2b7a200b38",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        },
+        "day3_24h": {
+          "invalid_cells": 9,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2392
+        }
+      }
+    },
+    {
+      "cycle": "20240616",
+      "manifest_sha256": "5781732494cea0e54de109f7703670465ab8cf34d3c7d13a616627b6766409dc",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 5,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2396
+        },
+        "day2_24h": {
+          "invalid_cells": 12,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2389
+        },
+        "day3_24h": {
+          "invalid_cells": 11,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2390
+        }
+      }
+    },
+    {
+      "cycle": "20240617",
+      "manifest_sha256": "a4bbb81439bb5d412db4bf2e0d27764e9f165ba9ad9d3ddcf8112e367ed38e0b",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 14,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2387
+        },
+        "day3_24h": {
+          "invalid_cells": 6,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        }
+      }
+    },
+    {
+      "cycle": "20240618",
+      "manifest_sha256": "2597647c84f67bc624ecfc6e42b83cebede1e0cd8e631e73b2721c91211c67c6",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 6,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2395
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240619",
+      "manifest_sha256": "99ea26e70a0f9b349852aafff8718130265c8ae42bdc6aa2bb70002e2056a531",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 5,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2396
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240620",
+      "manifest_sha256": "8abed05e2f7aa54a5f483daff554b1865805ef7ff6f9f10c0db470d9856abde5",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 2,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        }
+      }
+    },
+    {
+      "cycle": "20240621",
+      "manifest_sha256": "7e15dfd13e5f04c4ca728d30e6170fde4a883914c71f42970f7be0f00f91905d",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240622",
+      "manifest_sha256": "913d4c34f8c01ff7c8a9f4b7f2408e43da5b7ca8b80b839f28e65a285094cf70",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 3,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2398
+        },
+        "day3_24h": {
+          "invalid_cells": 4,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2397
+        }
+      }
+    },
+    {
+      "cycle": "20240623",
+      "manifest_sha256": "302c0f86d42d2c023aec8db8898fcedbdee3057d372ba8e8bbaae089571d38b2",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 2,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240624",
+      "manifest_sha256": "095082fc884587a2e5580bf19aea2b971ce998d42780d2ccc23e16031c517701",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 3,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2398
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 2,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        }
+      }
+    },
+    {
+      "cycle": "20240625",
+      "manifest_sha256": "662cdbf32cf76feb3a0b6e8918edad0a0be491e40d5df8b031bdea6479987fb5",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 3,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2398
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240626",
+      "manifest_sha256": "5412c199dc8390da7235353c154cf1ea73bebdd19406b7be0f38136562a97ce9",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 1,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2400
+        },
+        "day3_24h": {
+          "invalid_cells": 1,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2400
+        }
+      }
+    },
+    {
+      "cycle": "20240627",
+      "manifest_sha256": "6487503815f64227353d4e28f58c8109a589cf0a87e6c35bfd82917355ebf5f6",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 2,
+          "prior_ready": true,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        },
+        "day2_24h": {
+          "invalid_cells": 5,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2396
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0020491948411727294,
+              "modified_cells": 39
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0015953060322967429,
+              "modified_cells": 24
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240628",
+      "manifest_sha256": "7cae13a86e274bf0f33f8e4d8e72d0768c2d5e7d6429f7212bc14dc2d950900b",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 3,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0,
+              "modified_cells": 0
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2398
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0019339348836735215,
+              "modified_cells": 146
+            },
+            "lead_aware": {
+              "maximum_gap": 0.001756095343827549,
+              "modified_cells": 127
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2397
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.004795754815921503,
+              "modified_cells": 153
+            },
+            "lead_aware": {
+              "maximum_gap": 0.004666681558094559,
+              "modified_cells": 136
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240629",
+      "manifest_sha256": "1a3827c20237da1a386a8fcc9ed15c868c0aafc592595626d58176763bd2f460",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0001982838045472661,
+              "modified_cells": 15
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0008513275345117437,
+              "modified_cells": 79
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        },
+        "day2_24h": {
+          "invalid_cells": 3,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.020194676238179693,
+              "modified_cells": 197
+            },
+            "lead_aware": {
+              "maximum_gap": 0.01770720074725035,
+              "modified_cells": 175
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2398
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.000797284580098534,
+              "modified_cells": 25
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0006572347005562498,
+              "modified_cells": 18
+            }
+          },
+          "strict_passed": true,
+          "valid_cells": 2401
+        }
+      }
+    },
+    {
+      "cycle": "20240630",
+      "manifest_sha256": "bc08686498d6bce1df303f3e5aaede7b4ae41c6d27cf8adf18b58f5445ba800a",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 2,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0027929842687067965,
+              "modified_cells": 222
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0035696171268532213,
+              "modified_cells": 276
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        },
+        "day2_24h": {
+          "invalid_cells": 2,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0010458983000880251,
+              "modified_cells": 103
+            },
+            "lead_aware": {
+              "maximum_gap": 0.000938424065368558,
+              "modified_cells": 90
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2399
+        },
+        "day3_24h": {
+          "invalid_cells": 1,
+          "prior_ready": false,
+          "projection": {
+            "global": {
+              "maximum_gap": 0.0004209392975856891,
+              "modified_cells": 11
+            },
+            "lead_aware": {
+              "maximum_gap": 0.0003932547525072787,
+              "modified_cells": 7
+            }
+          },
+          "strict_passed": false,
+          "valid_cells": 2400
+        }
+      }
+    }
+  ],
+  "coherent_forecast_sha256": "4499e0b4a6f9192ed7c4d5934f5925ebce0f49a540ed1a5f59823a441aea42bc",
+  "cycle_count": 30,
+  "lead_aware_fit_seal_sha256": "03a8d63359282f6f3faf3f60d2cd2582205be81543531d902afb85523f094e98",
+  "lead_count": 90,
+  "meaning": "No-refit forecast-only transport; consumed 2024 development population, not independent reliability",
+  "newly_ready_leads": 35,
+  "observation_read": false,
+  "prior_ready_leads": 55,
+  "projection_modified_cells": {
+    "global": 1315,
+    "lead_aware": 1384
+  },
+  "protocol_sha256": "f854b88e3033d3b98d69bd494f1d953c6aceed258161b2206415e3be59986053",
+  "schema": "varshasetu-june-probability-transport-forecast-v1"
+}

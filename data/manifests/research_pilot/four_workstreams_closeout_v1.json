@@ -1,0 +1,50 @@
+{
+  "east_coast": {
+    "disposition": "DEVELOPMENT_MODEL_FAILED_RAW_COMPARISON_NO_PRODUCT",
+    "evidence_sha256": [
+      "6849d31ec0412a1e90025d91aa2cf983a336b022e8a97ddd849fc00026951dcb",
+      "8a8ee88eef2529e01ea756d577b5bc87ddd5787324a8c0b098a9536011c6435f",
+      "4240ea36a5ff0bf7f590038d19bb5e4417a912a4a40a5d8dcb4bdd42be04481f",
+      "fd3b421b46e858e7611c91ce70ed69fad73e2641e747ba9779588e773322d5f6"
+    ],
+    "global_heavy_csi": 0.029582366589327145,
+    "paired_cells": 72696,
+    "product_connected": false,
+    "raw_heavy_csi": 0.06350314026517795,
+    "same_case_count": 156
+  },
+  "extreme_probability": {
+    "disposition": "FAILED_PRESPECIFIED_GATE_RESEARCH_ONLY",
+    "evidence_sha256": "2112e11124a72ad299b99a82384a2d1240ab9798f324d558d8d24e554ae49c5d",
+    "promotion_eligible": false
+  },
+  "independent_2026_skill_claim": false,
+  "independent_regime": {
+    "disposition": "HANDOFF_READY_EXPERT_VALIDATION_BLOCKED",
+    "evidence_sha256": [
+      "26502f718e3d8d0033db2f00e47d54e0fb16d702853f17ac4fad7ab1bb624820",
+      "bb43d176327bbc7f78991e190d1e95bfe54b48ce115245f544017737e9cebdf8",
+      "ff903617336f012555c113210b366add11c0c20e10b0357d97b3ffee5fc240a0"
+    ],
+    "expert_labels": 0,
+    "winter_cases": 0
+  },
+  "model_default": "regional M2 global non-regime; no research candidate promoted",
+  "public_warning_claim": false,
+  "schema": "varshasetu-four-workstreams-closeout-v1",
+  "source_2026": {
+    "blockers": [
+      "COMPLETE_2026_IMD_ANNUAL_REFERENCE_NOT_OBTAINED",
+      "ACTUAL_2026_GEFS_EXECUTABLE_TRANSITION_UNCONFIRMED",
+      "EXACT_2023_TRAINING_GEFS_PATCH_UNCONFIRMED",
+      "2023_TO_2026_PREDICTOR_COMPARABILITY_UNREVIEWED"
+    ],
+    "disposition": "EXTERNALLY_BLOCKED_NO_SCORE",
+    "evidence_sha256": [
+      "b36a2740c3e51fd47cb7f39aa88d09af7a912aac66a96aba422f0c963d82f1b6",
+      "09a22b79b5d06165e23a9db11075b464356816c89ac1fe26c0ef7fc68e9e77e6"
+    ],
+    "observation_values_opened": false
+  },
+  "status": "INTEGRATED_WORK_COMPLETE_SCIENTIFIC_GATES_OPEN"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "varshasetu-2026-imd-annual-header-probe-protocol-v3",
+  "created_utc_date": "2026-10-07",
+  "purpose": "One bounded new-day retry after the 2026-10-06 HTTP-200 zero-byte result; acquire only a complete official annual NetCDF and inspect metadata without rainfall values.",
+  "source_endpoint": "https://www.imdpune.gov.in/cmpg/Griddata/RF25.php",
+  "request": {"method": "POST", "form": {"RF25": 2026}},
+  "maximum_response_bytes": 60000000,
+  "minimum_free_disk_bytes": 53687091200,
+  "previous_result_sha256": "bf479aa4c920acc1bc184d510c0bb60608885b399cc174f387d025642fac83bc",
+  "allowed_checks": ["HTTP status and content headers", "CDF signature and file SHA-256", "NetCDF time/coordinate/rainfall metadata", "complete 2026-06-01 through 2026-10-03 date coverage"],
+  "forbidden": ["Do not read rainfall values", "Do not pair forecasts and observations", "Do not score skill", "Do not overwrite any prior probe or candidate file"]
+}

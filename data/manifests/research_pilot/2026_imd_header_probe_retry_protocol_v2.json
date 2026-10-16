@@ -1,0 +1,16 @@
+{
+  "schema": "varshasetu-2026-imd-header-probe-retry-protocol-v2",
+  "created_utc_date": "2026-10-06",
+  "status": "FROZEN_BEFORE_RETRY_REQUEST",
+  "reason": "The v1 POST failed with URLError before an HTTP status or response byte. A subsequent header-only GET to the same official endpoint returned HTTP 200; repeat the bounded metadata-only POST without rewriting v1.",
+  "previous_result_sha256": "8c4fafc2cb4de7643ccae480054676fabcbce0fe8e71fb83d2ff2f5759217883",
+  "source_endpoint": "https://www.imdpune.gov.in/cmpg/Griddata/RF25.php",
+  "request": {"method": "POST", "form": {"RF25": 2026}},
+  "maximum_response_bytes": 60000000,
+  "minimum_free_disk_bytes": 53687091200,
+  "required_time_axis": "Daily records spanning 2026-06-01 through 2026-10-03 inclusive",
+  "allowed_reads": ["HTTP status and headers", "response bytes for hashing and local retention", "NetCDF variable metadata and TIME/LATITUDE/LONGITUDE coordinate values"],
+  "prohibited_reads": ["RAINFALL variable values", "forecast/observation pairing", "model fitting, tuning, selection or verification"],
+  "on_unavailable_or_incomplete": "Record source outcome without scoring 2026; preserve v1 result.",
+  "independent_test_status": "CANDIDATE_NOT_CLEARED_BY_THIS_PROBE"
+}

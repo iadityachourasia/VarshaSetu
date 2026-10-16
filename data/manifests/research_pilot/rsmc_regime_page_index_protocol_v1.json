@@ -1,0 +1,33 @@
+{
+  "case_count": 72,
+  "case_level_evidence_admitted": false,
+  "date": "2026-10-09",
+  "expert_labels_created": false,
+  "extractor": "pdftotext version 26.02.0",
+  "match_rule": "Only exact day/month or month/day wording, optional ordinal and explicit matching year; no ranges, numeric-only dates or semantic classification",
+  "packet_sha256": "c4654a322e3ab4ed44187168ec75b14d62ef368ac41849b2bce4e16c2688c2f2",
+  "report_intake_sha256": "bb43d176327bbc7f78991e190d1e95bfe54b48ce115245f544017737e9cebdf8",
+  "reports": [
+    {
+      "pdf_pages": 241,
+      "sha256": "50db2e7fc85700c88dc34a6d610591169a2e926d0088651c16ec3dc473e6645f",
+      "year": 2014
+    },
+    {
+      "pdf_pages": 338,
+      "sha256": "fe6325b81136e06644433f8947b2b62e798f84bbafc85f189a8a5041ba89c0b6",
+      "year": 2015
+    },
+    {
+      "pdf_pages": 271,
+      "sha256": "1c862162f981a8cfdd6e1809f22ee3c9abcda4314bc7b2d6c4713a4deafdcf33",
+      "year": 2016
+    }
+  ],
+  "rights": "local_review_only_reproduction_permission_not_established",
+  "role": "local_only_unreviewed_bibliographic_page_leads",
+  "runner_sha256": "f7282172650b6154f47c7fc66af747d410265ee443161e4c80f95d2f109f7440",
+  "schema": "rsmc-regime-page-index-protocol-v1",
+  "status": "FROZEN_BEFORE_REPORT_DATE_TO_CASE_MATCHING",
+  "warning": "A page hit may refer to another system, geography or historical comparison; no hit is not evidence of absence."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "varshasetu-imd-realtime-preprotocol-availability-probe-v1",
+  "probe_utc_date": "2026-10-07",
+  "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+  "request_form": {"rain": "30092026"},
+  "http_status": 200,
+  "response_bytes": 69660,
+  "content_type": "application/octet-stream",
+  "first_16_bytes_hex_displayed": "00C079C400C079C400C079C400C079C4",
+  "raw_response_retained_from_probe": false,
+  "rainfall_values_decoded_or_interpreted": false,
+  "forecast_observation_pairing": false,
+  "purpose": "Bounded availability and byte-format check before freezing daily acquisition; disclosed because it preceded the 2026 daily acquisition protocol. The subsequent full acquisition re-requested and hash-receipted every day."
+}

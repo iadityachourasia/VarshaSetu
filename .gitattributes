@@ -1,8 +1,18 @@
 # Hash-manifested evidence must never be line-ending converted (SHA-256 is computed over the exact bytes).
 backend/app/evidence_data/** -text
+data/manifests/** -text
 # Files whose sha256 is recorded in the 2022 unseal record (docs/132) must check out byte-identical on every platform
 scripts/score_geoaware_followup_2022.py -text
 backend/app/ml/geoaware_followup.py -text
 backend/app/ml/geoaware_followup_scoring.py -text
 backend/app/ml/zone_verification.py -text
 backend/app/ml/geoaware.py -text
+# Research pilot scripts and contracts whose sha256 is pinned in sealed protocols
+scripts/score_2026_frozen_inference.py -text
+scripts/audit_2026_selected_predictor_metadata.py -text
+scripts/score_2026_with_clearance_gate_v2.py -text
+scripts/diagnose_nationwide_probability_cutoff_transport.py -text
+scripts/nationwide_probability_v2.py -text
+backend/app/ml/nationwide_probability_v2.py -text
+scripts/audit_2026_clearance_readiness.py -text
+backend/app/ml/nationwide_research.py -text

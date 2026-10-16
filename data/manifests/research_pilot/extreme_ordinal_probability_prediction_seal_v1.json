@@ -1,0 +1,53 @@
+{
+  "calibration_positive_cells": {
+    "heavy": 5047,
+    "very_heavy": 1256
+  },
+  "calibration_very_heavy_event_cases": 71,
+  "model": {
+    "C": 0.1,
+    "base_score_clip": 1e-06,
+    "fit_block": "2024_early_calibration_only",
+    "format": "varshasetu-extreme-ordinal-logistic-v1",
+    "heavy": {
+      "coefficient": 0.6352584638285425,
+      "fit_events": 5047,
+      "fit_rows": 140508,
+      "intercept": -4.213535919826236,
+      "iterations": 11
+    },
+    "max_iter": 500,
+    "random_state": 26080,
+    "solver": "lbfgs",
+    "very_heavy_given_heavy": {
+      "coefficient": 0.16437217247106548,
+      "fit_events": 1256,
+      "fit_rows": 5047,
+      "intercept": -1.7474918903013341,
+      "iterations": 10
+    }
+  },
+  "prediction_archive_sha256": "6083f591d5b3859b0d84a1ebd81aa2ff3a35fc2a9582645669769807e483554a",
+  "protocol_sha256": "a8432a1e2d10f7b79f9697d9881fa9f9d2be2b67c8942b8a1e1b2bba93b91f96",
+  "role": "consumed_2024_development_only_no_promotion",
+  "schema": "varshasetu-extreme-ordinal-prediction-seal-v1",
+  "selection_labels_decoded": false,
+  "source_hashes": {
+    "cases_sha256": "6465230b6a1ad5a6ae8ced447ae0cb89f67af1231aa935e8927c3ec9828b4dba",
+    "heavy": {
+      "base_probability_sha256": "289eb8e964fbfe0eecbcff1a41d41d6ba20567f441222a236d4bdd98a8754f46",
+      "label_sha256": "1f8521b0e0fdb54cd572dde2d11b8feb776c5743ce1b7623e82e2ad116e1ac8a",
+      "selection_report_sha256": "6ef81bd1785ad7f901f19bac6b02e23d9f27a73862834908af14c751b4a57446"
+    },
+    "prior_fit_manifest_sha256": "3b51af9cd5a09a7502152ba5c23fa77662897ead40b520121f8fb3cc99dd6659",
+    "prior_prediction_seal_sha256": "03a8d63359282f6f3faf3f60d2cd2582205be81543531d902afb85523f094e98",
+    "prior_prediction_sha256": "346ba05eebfdf8160c1a248d8dac786265a93c0c37fa05ba45d4a93551a76a8a",
+    "split_sha256": "43ab6f8204901c662e3ba822acf886eb1394c8b50e110be917bb4601bd0c9cd8",
+    "very_heavy": {
+      "base_probability_sha256": "fd97d219575175ec422aa00d15f58bfbf9e3f3232703a22f5001f5f7489b7aaa",
+      "label_sha256": "7e3cafb0087e7bc40ee1ed562903f864d545904d1039ed63f32fa64e3e7eae66",
+      "selection_report_sha256": "4d8a8455a60423f58248cbcffaea27107d38eccf37283bb2a0ecf0cf720098b9"
+    },
+    "year_manifest_sha256": "d7e4c78159debd15183b45f69bce5e9dd15631f4a2aa72bdc4b801dd52873c68"
+  }
+}

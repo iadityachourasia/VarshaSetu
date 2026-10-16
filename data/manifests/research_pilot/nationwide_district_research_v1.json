@@ -1,0 +1,28 @@
+{
+  "files": {
+    "districts.json": "3274b98f5dced2bf5167c694895457831156b120c0cc4cdad812603af816b92f",
+    "weights.npz": "f408ac1861e9ff51daf23f461b8c7e35344c4889eca8c32cc111a7952fad3454"
+  },
+  "geometry_sha256": "d68db39cd3e2d0892af268e2b0454166368ce3b5b8a78fcda63069ec92a641db",
+  "grid_shape": [
+    129,
+    135
+  ],
+  "model_fitted": false,
+  "nonzero_weights": 10829,
+  "observation_values_read": false,
+  "protocol_sha256": "f342c99477702dee346bd8fbb4ab3ddbd7dea2e8d4241d26e8165b2555c73e26",
+  "public_district_product_allowed": false,
+  "redistribution_rights_cleared": false,
+  "represented_districts": 735,
+  "schema": "nationwide-research-district-weights-v1",
+  "source_features": 735,
+  "static_sha256": "3184329890579f9cf9a54ae2507d797952cc647e28da2b2a132b869dadea55b0",
+  "status": "LOCAL_RESEARCH_ONLY_NONOFFICIAL_GEOMETRY_RIGHTS_OPEN",
+  "unrepresented_districts": [],
+  "weights_meaning": "cos(latitude)-adjusted polygon/grid-cell overlap; not official area or boundary",
+  "weights_shape": [
+    735,
+    17415
+  ]
+}

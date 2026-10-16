@@ -1,0 +1,19 @@
+{
+  "schema": "varshasetu-2026-gefs-model-change-note-v1",
+  "source": "NOAA/NWS Service Change Notice 26-57",
+  "source_url": "https://www.weather.gov/media/notification/pdf_2026/scn26-57_GEFS_Shortwave_radiation_fix.pdf",
+  "notice_subject": "Upgrade of GEFS to Version 12.3.20",
+  "announced_effective_cycle_utc": "2026-06-15T12:00:00Z",
+  "contingency": "Notice permits postponement for a Critical Weather Day, Enhanced Caution Event, or other significant weather; actual implementation confirmation has not been obtained.",
+  "announced_change": "GRIB2 storage precision for DSWRFsfc, USWRFsfc and USWRFtoa short-wave radiation fields increased from three to six significant digits to mitigate errant negative values.",
+  "impacted_output_families": ["pgrb2ap5", "pgrb2bp5", "pgrb2sp25"],
+  "selected_varshasetu_fields": ["APCP", "PWAT", "UGRD_850", "VGRD_850", "SPFH_700", "HGT_500", "PRMSL"],
+  "selected_fields_explicitly_named_as_changed_by_notice": [],
+  "cycle_partition_if_announced_time_held": {
+    "pre_12_3_20_00z_dates": ["20260601", "20260615"],
+    "post_12_3_20_00z_dates": ["20260616", "20260930"]
+  },
+  "evaluation_rule": "Preserve the frozen primary same-case comparison. Before any 2026 observation pairing, verify the actual transition date and evaluate feature and skill sensitivity on either side of the version boundary. Do not infer full model-version equivalence from matching GRIB keys or marginal feature ranges.",
+  "test_year_status": "CANDIDATE_NOT_CLEARED",
+  "observation_read": false
+}

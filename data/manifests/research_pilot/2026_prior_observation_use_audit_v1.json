@@ -1,0 +1,18 @@
+{
+  "schema": "varshasetu-2026-prior-observation-use-audit-v1",
+  "recorded_at_utc": "2026-10-06T15:46:05Z",
+  "team_attestation": "Project owner answered: No 2026 IMD values used. The question covered team inspection or use of 2026 IMD rainfall to train, tune, compare, or evaluate VarshaSetu.",
+  "local_checks": {
+    "known_imd_annual_locations": [
+      "experiments/recent_historical/imd_climatology/RF25_ind2026_rfp25.nc",
+      "experiments/recent_historical/imd_v2/RF25_ind2026_rfp25.nc",
+      "experiments/recent_historical/imd/RF25_ind2026_rfp25.nc"
+    ],
+    "all_known_annual_locations_absent": true,
+    "repository_text_scan": "No script or document found pairing 2026 IMD rainfall with forecast cases; forecast-only 2026 scripts and artifacts declare observation_read=false."
+  },
+  "prior_use_gate": "PROVISIONALLY_CLEARED_BY_TEAM_ATTESTATION_AND_LOCAL_AUDIT",
+  "limitations": "This records the team's statement and checked local paths. It cannot prove absence of files or analysis outside this workspace; it does not establish 2026 reference availability, model-version comparability, corpus completeness, event support, or independent skill.",
+  "test_year_status": "CANDIDATE_NOT_YET_SCORED",
+  "observation_values_read_for_this_audit": false
+}

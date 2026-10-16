@@ -1,0 +1,845 @@
+{
+  "base_config": {
+    "cap": 8.0,
+    "max_depth": 6,
+    "n_estimators": 350,
+    "objective": "reg:squarederror"
+  },
+  "detector_calibration_status": "UNCALIBRATED_LOGISTIC_OUTPUT",
+  "evaluation_cases": 511,
+  "evaluation_cells": 664811,
+  "evaluation_years": [
+    2012,
+    2013
+  ],
+  "input_sha256": {
+    "data/processed/reforecast_control_v1/2000/X.npy": "d5e7d3ea437506805aaf70944063938c984560de6b76b6f1682f4929bbd44705",
+    "data/processed/reforecast_control_v1/2000/pairs.json": "37ab8f29d9a924e43092c723e0bb1983dbbe0793cee7de748679071fe93152be",
+    "data/processed/reforecast_control_v1/2000/pixel_index.npy": "977c31dbd23aa9c4e3bea3d43bab700059fb8c1ecf72d88384ca348a74411a26",
+    "data/processed/reforecast_control_v1/2000/y_mm.npy": "34a594ff8e218c039b959bda5c267a4fcaf982024ec6a574991e1019230b9220",
+    "data/processed/reforecast_control_v1/2001/X.npy": "7ea9fba797453c6f0cdbc3ee7bf6852bd96f276abe4009510be117f96d1339c7",
+    "data/processed/reforecast_control_v1/2001/pairs.json": "3886acb71ab462581e1cfa205daf779187abd1ba917f899aece10f5fff45d177",
+    "data/processed/reforecast_control_v1/2001/pixel_index.npy": "04d5d901b1ea53c208073d6b96dc0686374e2933e1575572ff8100bfad73accf",
+    "data/processed/reforecast_control_v1/2001/y_mm.npy": "d4f03d802864918a78a5d5307abdefe683b644214affde41300206513b4a3550",
+    "data/processed/reforecast_control_v1/2002/X.npy": "022c4d8f96f36b9cc54c0bb53ef3c305a202864a65c8db30bb9ffc46e2343056",
+    "data/processed/reforecast_control_v1/2002/pairs.json": "f01572ba49b42560e89f133ecbcfc928fdb0ab04b76ae7aa4e0b69a5a70ea90b",
+    "data/processed/reforecast_control_v1/2002/pixel_index.npy": "6abb0274009acae7c9fdf07e127c9e556a39ddf9970828a1521410429e503299",
+    "data/processed/reforecast_control_v1/2002/y_mm.npy": "efdafcfd0c73885485e12028a34e3f2f5c781582965b33ff0251a687a78d7901",
+    "data/processed/reforecast_control_v1/2003/X.npy": "0edfa2288454f93f3837f7c94c99a925ea0b5e87575f5200992420ea6424910d",
+    "data/processed/reforecast_control_v1/2003/pairs.json": "baec0d94b7ecb03c99b8ec8c2fd0514c74252229a4cd7778386b8eda4e949e2b",
+    "data/processed/reforecast_control_v1/2003/pixel_index.npy": "d2aeecf88211d5b7e032086c0764169f7fd7fefe6bfc7aa51fb16c45d778561d",
+    "data/processed/reforecast_control_v1/2003/y_mm.npy": "42b9a335a56a83c5770ec091c551e74b4b0da152ad62ff8c17dd8c1aba52ced8",
+    "data/processed/reforecast_control_v1/2004/X.npy": "68c39dbd63306eb81fe291ba7392f703207265b5f3967c765267adb9b1767851",
+    "data/processed/reforecast_control_v1/2004/pairs.json": "ece20e2da1dcbf77cdec897b9bde1082fac2c016eb9ca02f74859d40c36cf773",
+    "data/processed/reforecast_control_v1/2004/pixel_index.npy": "bea773571b8fc877bc51bd44f8b731fa2e92e8fc7feff626afe1a5ee4e910472",
+    "data/processed/reforecast_control_v1/2004/y_mm.npy": "3ca534037118a0f54f5e872374f6eab2ecc65e214dd12ed0868344c680aee8bd",
+    "data/processed/reforecast_control_v1/2005/X.npy": "5ed747a8e8f00b8fc2e99c406138abf972b79ee299c47d3333b6d45df33d986a",
+    "data/processed/reforecast_control_v1/2005/pairs.json": "9d86c1f0de85b680197d12375275a4450fac1701430afaddb4c6ee1f4fa33666",
+    "data/processed/reforecast_control_v1/2005/pixel_index.npy": "5a10386874b29cb339db509430e4bfc6f187fb16ad758aeddae5f6fec208d7a2",
+    "data/processed/reforecast_control_v1/2005/y_mm.npy": "e88ffb3b2a17fef77ab55f0a429d412fb1461b766026747991210663cedbd56a",
+    "data/processed/reforecast_control_v1/2006/X.npy": "1fba1fe55fd8670372c0caeb51ba7e825cc58ae8e5d9179d8f0bdd38787bc51f",
+    "data/processed/reforecast_control_v1/2006/pairs.json": "04b5176e452ab70d62f6b90524c0c286c1cc38636439177918038a17db27efa6",
+    "data/processed/reforecast_control_v1/2006/pixel_index.npy": "f24d4ae257cb82f2267277c2889d3693ada4378253aad9230d7b650d0d340c1d",
+    "data/processed/reforecast_control_v1/2006/y_mm.npy": "8d4615802b9bef243fc34996f670d3b2292222e9cb82adcb99f673b417bedce3",
+    "data/processed/reforecast_control_v1/2007/X.npy": "1286c280adafbb8f73c6cebf06c442cd178bad11c0b124de35585b3a99dea281",
+    "data/processed/reforecast_control_v1/2007/pairs.json": "3bc5bf65aa823af5edfa8baeb50e996cec02efbcdc3ef826b07d3b29ed3c06d6",
+    "data/processed/reforecast_control_v1/2007/pixel_index.npy": "bea773571b8fc877bc51bd44f8b731fa2e92e8fc7feff626afe1a5ee4e910472",
+    "data/processed/reforecast_control_v1/2007/y_mm.npy": "b5e0ffebd7fe2d5c42b176d93cbd7c6d4c11f600947979bf7109a230957ded4e",
+    "data/processed/reforecast_control_v1/2008/X.npy": "c90e278fb729bf2a36d47a26f8d4197439e4b5385f3f6db101c59883a05fa85e",
+    "data/processed/reforecast_control_v1/2008/pairs.json": "d3a8d7473dab2456609fc1a2a15945768c08aba7b958f257f5008889e8c5d551",
+    "data/processed/reforecast_control_v1/2008/pixel_index.npy": "6d25c6bafa0fde35c93be8444343c5a10abaf18ba824f80b7b84aa224f2ea786",
+    "data/processed/reforecast_control_v1/2008/y_mm.npy": "b15873fde65bf46007f828e590c3538e0f790981e46ae4954b89f39bd9115844",
+    "data/processed/reforecast_control_v1/2009/X.npy": "f4a4be25af8313dc6f41b1e47409d7ce2563c8c80ce2906aee5049432c1cf68a",
+    "data/processed/reforecast_control_v1/2009/pairs.json": "7e79054fce9cddd438436be7ea7041f48a65d6e764c95952d7b7d005551fcf30",
+    "data/processed/reforecast_control_v1/2009/pixel_index.npy": "25e9c405cdc7feb5d5f7803b3b58a64322ddd5ac1ade427f53768a944af3665e",
+    "data/processed/reforecast_control_v1/2009/y_mm.npy": "c9b4aeffd5ea23e08027c92301ee4f62e1329411732b993f86b406ab28a7ad98",
+    "data/processed/reforecast_control_v1/2010/X.npy": "bee7a9bd3f479fc80289d77561e7d14388e9dead35f592350d9c177a355f5394",
+    "data/processed/reforecast_control_v1/2010/pairs.json": "0cc98fa9baa3dadbbaa6b220d928f89aa1d908c474c43853eb57683676de62d0",
+    "data/processed/reforecast_control_v1/2010/pixel_index.npy": "a3912183e6be692d35ffd82df9401a63de46f97a3178bc9de84ce254c933e828",
+    "data/processed/reforecast_control_v1/2010/y_mm.npy": "1cd2c9c3511535d9afb0cca8b1557e406d20ab48fdbdd422d28113e22a5e9667",
+    "data/processed/reforecast_control_v1/2011/X.npy": "049b606b2c61df3247fde01d4137c64ded42a1e71176f52f599f8ecf1e55bd2b",
+    "data/processed/reforecast_control_v1/2011/pairs.json": "ac2f45beb8adf456f4995d8afb903c88896838f4406a477346c807490236c840",
+    "data/processed/reforecast_control_v1/2011/pixel_index.npy": "77589857bf27321c316d1b517a5b08cfdda15c4e938c80199e304de247780df5",
+    "data/processed/reforecast_control_v1/2011/y_mm.npy": "458a2d3aedb522726d375280a44962b3475f7b36bb2cc6993452e5d72c16789f",
+    "data/processed/reforecast_control_v1/2012/X.npy": "064aa44a6f323afc0ce31319210bb4c9ff6236281b4bd55a36b902d5317add5e",
+    "data/processed/reforecast_control_v1/2012/pairs.json": "2b1ccb01e5ef5da2a1195ee639ce0f82af9cb01fc36ac67181b1aedd65dc6c07",
+    "data/processed/reforecast_control_v1/2012/pixel_index.npy": "f24d4ae257cb82f2267277c2889d3693ada4378253aad9230d7b650d0d340c1d",
+    "data/processed/reforecast_control_v1/2012/y_mm.npy": "40c7348246cf3c1879ec7d37e7159bf6d27df362ff85f54a7a4fb58e81ed2186",
+    "data/processed/reforecast_control_v1/2013/X.npy": "262c23732132a00bf4c5ce296c87cea8632077742509d982c2af4ed896343b44",
+    "data/processed/reforecast_control_v1/2013/pairs.json": "9550b877261e494806cca47064c324d3a5e1f4be3914d15549601778114a5141",
+    "data/processed/reforecast_control_v1/2013/pixel_index.npy": "75311629b54c7fd853990c4848b7687a98cc9f428d56379ecb1390de717bfcc9",
+    "data/processed/reforecast_control_v1/2013/y_mm.npy": "278c80ee3be6b3448b34f52b557d419a2b0d503560c50f622db1b5969cdff066",
+    "data/processed/regime_tasks_v1/features_2000.json": "27d672d12b61526412e4cb413297d74accc9a06f08328b28b302b5310bb6407d",
+    "data/processed/regime_tasks_v1/features_2000.npy": "31d2d0ef52999678811a04196fb0af6bb9d5644404101c4ad14a01fa04cfc802",
+    "data/processed/regime_tasks_v1/features_2001.json": "6245f83869a3470c1fa722dd56f3e349370c80a451253b918bcb6402a98da8f0",
+    "data/processed/regime_tasks_v1/features_2001.npy": "b4e9751cf943b1bc8e6e094d79c1fef8044c1e76ee8b0c2aaca42374ba1fed71",
+    "data/processed/regime_tasks_v1/features_2002.json": "b3b11c4725fdd5b7d918f007668f0b1f783bfe77578715ac722499d94a255af8",
+    "data/processed/regime_tasks_v1/features_2002.npy": "9ba9a2d1d631301cca0f681d7f5158f11ad20a209d61a7e17e0185e10ddb719c",
+    "data/processed/regime_tasks_v1/features_2003.json": "2b905788f2cc9416a7c994f5466886039e07edb2c6261bbea301061afb7cea08",
+    "data/processed/regime_tasks_v1/features_2003.npy": "0d6bab183774eb0543810525fe65397da56fd5b16d55f7042221e7cf6cf3a40c",
+    "data/processed/regime_tasks_v1/features_2004.json": "f1fe84c33ed1a72e30b232765cc28e7dc54a4cad7523b51ef30ed8e3d6736251",
+    "data/processed/regime_tasks_v1/features_2004.npy": "9a0bcde111098276291f8967d13b8d114779003b8662871f9cbd7d202bbf688a",
+    "data/processed/regime_tasks_v1/features_2005.json": "39af77e1f36c537a89b95f859c82ff0830f34427b4cff87f8b33c2f90c330ce2",
+    "data/processed/regime_tasks_v1/features_2005.npy": "5c36602945750cfa42dcdbe1da07a489796fb799dc379b89979066e0d55d5457",
+    "data/processed/regime_tasks_v1/features_2006.json": "052b0591671f45634ecbee95ac152756e266d7084acbaec59243aa5c04be48d8",
+    "data/processed/regime_tasks_v1/features_2006.npy": "324de598cdfe5e1e71cb2a54a0b6a0cc116fc7d1f81edb4c0af9979cb63a6864",
+    "data/processed/regime_tasks_v1/features_2007.json": "56ad17803c3b0245c0cecfdee4034df4ccb3c4f44dea930ca8ed89c984b7717c",
+    "data/processed/regime_tasks_v1/features_2007.npy": "aa2e0123c0214791e505f0e25780a8f2ffc3148941056d050338edb4eea542ed",
+    "data/processed/regime_tasks_v1/features_2008.json": "87b606d4218a2687fc6277163df4e60415c0b2ef53b2df8f5cfac5e537564bd8",
+    "data/processed/regime_tasks_v1/features_2008.npy": "69f986647dff01178f1df5c9e033cfa77429c5d5cce8f18cd51f95cdd385e212",
+    "data/processed/regime_tasks_v1/features_2009.json": "c91787fbbba4b360f1ec7af185fcd5d04c9f8ef0cf89e750a6d53dd8c46a7f18",
+    "data/processed/regime_tasks_v1/features_2009.npy": "95dc5367340e79c9f8bede7a712edb0d5761cb3bbf2f52df49be69055b02faa9",
+    "data/processed/regime_tasks_v1/features_2010.json": "5ec71df83c27224abde8ce3ee4c99f25ccefcae30cef925481ec71f94b2a8d63",
+    "data/processed/regime_tasks_v1/features_2010.npy": "bee3745dfd7d4eac8da721999977366d15b6aa7d4fa301e3009b4b20b47d5dd1",
+    "data/processed/regime_tasks_v1/features_2011.json": "11a8bbfda7bb5718591f149dbadd2c0dddf820db5b9ff81c02b8d1898fcadfb2",
+    "data/processed/regime_tasks_v1/features_2011.npy": "5c3640a9f9aec57795e1c7de58bfd80f78c7bf8cd018edd54084d2d20c8a2f55",
+    "data/processed/regime_tasks_v1/features_2012.json": "dc280b9026e637e91b6dc433d9ab5b56730bc70be43aabed3d5ab60a4e69ccc2",
+    "data/processed/regime_tasks_v1/features_2012.npy": "23c2c1928bec5543b8352c2af7461380d1ecee9576166c9389f42e1217e1dfac",
+    "data/processed/regime_tasks_v1/features_2013.json": "9bd5478327fe6a42b1197562fa8cb9f8afbb46b80a8317f8973fb211526c426f",
+    "data/processed/regime_tasks_v1/features_2013.npy": "3c20cacbef354b68d6240be439196f162e951c5e671c90b76c0c30ef712fed77",
+    "data/processed/regime_tasks_v1/tasks_Y_2000.npy": "18b10753e2d8fd1d8d13e3aae0dabc8fed5164f4abf8a0afde0a87f59e8d54b7",
+    "data/processed/regime_tasks_v1/tasks_Y_2001.npy": "38dc96894f6f5ab259b29d612e7e61242d9b05a0fb071dc62732dc59b63b383e",
+    "data/processed/regime_tasks_v1/tasks_Y_2002.npy": "af23be381cde436d3b6722b3a3d6f9beea12be1226dbc8d3e9e8ff406d9b3cf3",
+    "data/processed/regime_tasks_v1/tasks_Y_2003.npy": "5124f9cf0013fdf45c7f7506794991022bef0ea1eca8ee5ca758245f49154b8f",
+    "data/processed/regime_tasks_v1/tasks_Y_2004.npy": "16b9989f190640f0cee7da5d38d6ae9015d130d02601eb1fb5d0eb79d3104176",
+    "data/processed/regime_tasks_v1/tasks_Y_2005.npy": "1f96d44b8cda3d829797e9a3e67080f0f3cd0e00a8baadf0482072da0ade63bf",
+    "data/processed/regime_tasks_v1/tasks_Y_2006.npy": "553c65c138efbe083fe4db715cdf684d12506f1c5d969d95b723e27b3e54a226",
+    "data/processed/regime_tasks_v1/tasks_Y_2007.npy": "97f38b23d673312199b04bbede67436bda999fb8d9fcac3044bf5f1cdbe8db4f",
+    "data/processed/regime_tasks_v1/tasks_Y_2008.npy": "79b4e39f7974285e3479fd0c04adb1333045e3f0e65badf255b5640b5030ac58",
+    "data/processed/regime_tasks_v1/tasks_Y_2009.npy": "9822d73ceccc84ac1121da9c87ac43327f3b5655b56acbb509489ad55b510e42",
+    "data/processed/regime_tasks_v1/tasks_Y_2010.npy": "7b0ee561f68456f21d9e04d1be6afde001b454939e780ca659a059af2d56d296",
+    "data/processed/regime_tasks_v1/tasks_Y_2011.npy": "dde1851615d8e9a5dcf77c94715fc6ab710f29ea9f4bdbfa5df55fccc13a9d90",
+    "data/processed/regime_tasks_v1/tasks_Y_2012.npy": "60b32be321c6922f39de4cbd4b82ff9fd255de9027274ca17c0c13f3089b943a",
+    "data/processed/regime_tasks_v1/tasks_Y_2013.npy": "98f116e1ec8aefcf4ace13ab3aee738604478ee49b0cd0458e77ebf65a65de9c"
+  },
+  "interpretation": "No promotion or regime-skill claim follows from development years; compare the candidate with global_residual, not Raw alone.",
+  "limitations": [
+    "Objective regime labels are not independent expert annotations.",
+    "Detector logistic scores have not been independently calibrated.",
+    "2012-2013 were used for earlier model development and are not an untouched test.",
+    "The GEFSv12 reforecast population is separate from operational GEFS."
+  ],
+  "model_sha256": {
+    "B1_base_2000_2010.json": "9f1f8907e9ab7bafa1f61867f0a5b6d7dc365603cce61f69e39dcd32821a95aa",
+    "correction_2011.json": "70b8cc3377f70f3f0171cadcb026500f331f425c6c09d32cefba710923b5ec4a",
+    "regime_detectors_2000_2010.json": "ee43245c1940ca8d11a5a7d9498cd70a34819b7ffd4751b8f6460058a0ed7075"
+  },
+  "prior_selection_sha256": "9511fec1786c45191312759979c1cc538dd4e2d0b7340e565015570a79b31c30",
+  "protocol_sha256": "4be4265e1fc700397471de77aa8f1c93a35dd66d7b151b2f3d526be7081896a7",
+  "residual_training_years": [
+    2011
+  ],
+  "results": {
+    "B1_base": {
+      "by_lead": {
+        "day1_24h": {
+          "bias_mm": 1.3706177561720039,
+          "cells": 317444,
+          "heavy": {
+            "ETS": 0.169301846844069,
+            "FAR": 0.5812350119904077,
+            "POD": 0.2327169748459104,
+            "csi": 0.17590027700831026,
+            "false_alarms": 1939,
+            "frequency_bias": 0.5557221389305347,
+            "hits": 1397,
+            "misses": 4606,
+            "observed_events": 6003
+          },
+          "mae_mm": 7.31598325016603,
+          "rmse_mm": 13.645703402916888,
+          "very_heavy": {
+            "ETS": 0.0330293307187436,
+            "FAR": 0.7823834196891192,
+            "POD": 0.03814713896457766,
+            "csi": 0.03354632587859425,
+            "false_alarms": 151,
+            "frequency_bias": 0.17529518619436876,
+            "hits": 42,
+            "misses": 1059,
+            "observed_events": 1101
+          }
+        },
+        "day2_24h": {
+          "bias_mm": 0.3778308394490449,
+          "cells": 166528,
+          "heavy": {
+            "ETS": 0.1609580082012549,
+            "FAR": 0.5299760191846523,
+            "POD": 0.206914753233043,
+            "csi": 0.1677723090092018,
+            "false_alarms": 884,
+            "frequency_bias": 0.440221694378464,
+            "hits": 784,
+            "misses": 3005,
+            "observed_events": 3789
+          },
+          "mae_mm": 7.52780684488615,
+          "rmse_mm": 14.350432063605721,
+          "very_heavy": {
+            "ETS": 0.012172130748730072,
+            "FAR": 0.8392857142857143,
+            "POD": 0.013353115727002967,
+            "csi": 0.012482662968099861,
+            "false_alarms": 47,
+            "frequency_bias": 0.0830860534124629,
+            "hits": 9,
+            "misses": 665,
+            "observed_events": 674
+          }
+        },
+        "day3_24h": {
+          "bias_mm": 0.12418627144924271,
+          "cells": 180839,
+          "heavy": {
+            "ETS": 0.11532183857882784,
+            "FAR": 0.6042378673957621,
+            "POD": 0.14865211810012838,
+            "csi": 0.12115505335844319,
+            "false_alarms": 884,
+            "frequency_bias": 0.375609756097561,
+            "hits": 579,
+            "misses": 3316,
+            "observed_events": 3895
+          },
+          "mae_mm": 7.793176873535196,
+          "rmse_mm": 14.934434200024105,
+          "very_heavy": {
+            "ETS": 0.0024401775936921236,
+            "FAR": 0.92,
+            "POD": 0.002652519893899204,
+            "csi": 0.002574002574002574,
+            "false_alarms": 23,
+            "frequency_bias": 0.033156498673740056,
+            "hits": 2,
+            "misses": 752,
+            "observed_events": 754
+          }
+        }
+      },
+      "by_year": {
+        "2012": {
+          "bias_mm": 0.07811966524361054,
+          "cells": 336959,
+          "heavy": {
+            "ETS": 0.10029149762158099,
+            "FAR": 0.512249443207127,
+            "POD": 0.11611876988335101,
+            "csi": 0.10349716446124764,
+            "false_alarms": 690,
+            "frequency_bias": 0.23806998939554613,
+            "hits": 657,
+            "misses": 5001,
+            "observed_events": 5658
+          },
+          "mae_mm": 6.944422212573402,
+          "rmse_mm": 13.075433756350552,
+          "very_heavy": {
+            "ETS": 0.000988795478319855,
+            "FAR": 0.9615384615384616,
+            "POD": 0.001092896174863388,
+            "csi": 0.0010638297872340426,
+            "false_alarms": 25,
+            "frequency_bias": 0.02841530054644809,
+            "hits": 1,
+            "misses": 914,
+            "observed_events": 915
+          }
+        },
+        "2013": {
+          "bias_mm": 1.5072300729714139,
+          "cells": 327852,
+          "heavy": {
+            "ETS": 0.18108990283168022,
+            "FAR": 0.5892578125,
+            "POD": 0.2619255199900361,
+            "csi": 0.19038565996740903,
+            "false_alarms": 3017,
+            "frequency_bias": 0.6376883796238635,
+            "hits": 2103,
+            "misses": 5926,
+            "observed_events": 8029
+          },
+          "mae_mm": 8.068672307741352,
+          "rmse_mm": 15.238251359376086,
+          "very_heavy": {
+            "ETS": 0.02807369204535691,
+            "FAR": 0.7903225806451613,
+            "POD": 0.0322180916976456,
+            "csi": 0.028729281767955802,
+            "false_alarms": 196,
+            "frequency_bias": 0.1536555142503098,
+            "hits": 52,
+            "misses": 1562,
+            "observed_events": 1614
+          }
+        }
+      },
+      "pooled": {
+        "bias_mm": 0.7828864416573218,
+        "cells": 664811,
+        "heavy": {
+          "ETS": 0.15218586222654673,
+          "FAR": 0.5732178753672491,
+          "POD": 0.20165120187038796,
+          "csi": 0.1586754053121766,
+          "false_alarms": 3707,
+          "frequency_bias": 0.4724921458318112,
+          "hits": 2760,
+          "misses": 10927,
+          "observed_events": 13687
+        },
+        "mae_mm": 7.498846917039787,
+        "rmse_mm": 14.18330717399729,
+        "very_heavy": {
+          "ETS": 0.018900865620853014,
+          "FAR": 0.8065693430656934,
+          "POD": 0.02095689996045868,
+          "csi": 0.01927272727272727,
+          "false_alarms": 221,
+          "frequency_bias": 0.10834321866350335,
+          "hits": 53,
+          "misses": 2476,
+          "observed_events": 2529
+        }
+      }
+    },
+    "Raw": {
+      "by_lead": {
+        "day1_24h": {
+          "bias_mm": 1.311685689877599,
+          "cells": 317444,
+          "heavy": {
+            "ETS": 0.08895412991785845,
+            "FAR": 0.756547619047619,
+            "POD": 0.13626520073296686,
+            "csi": 0.0957284961966062,
+            "false_alarms": 2542,
+            "frequency_bias": 0.559720139930035,
+            "hits": 818,
+            "misses": 5185,
+            "observed_events": 6003
+          },
+          "mae_mm": 8.008214811806841,
+          "rmse_mm": 15.68809036000712,
+          "very_heavy": {
+            "ETS": 0.03320803693660566,
+            "FAR": 0.8973384030418251,
+            "POD": 0.04904632152588556,
+            "csi": 0.034329307056579786,
+            "false_alarms": 472,
+            "frequency_bias": 0.47774750227066304,
+            "hits": 54,
+            "misses": 1047,
+            "observed_events": 1101
+          }
+        },
+        "day2_24h": {
+          "bias_mm": -1.308242606554199,
+          "cells": 166528,
+          "heavy": {
+            "ETS": 0.058933374934562334,
+            "FAR": 0.7082906857727738,
+            "POD": 0.07521773555027712,
+            "csi": 0.06360187458156662,
+            "false_alarms": 692,
+            "frequency_bias": 0.25785167590393243,
+            "hits": 285,
+            "misses": 3504,
+            "observed_events": 3789
+          },
+          "mae_mm": 7.633343911203121,
+          "rmse_mm": 16.088946465758813,
+          "very_heavy": {
+            "ETS": 0.02482755269464478,
+            "FAR": 0.8910891089108911,
+            "POD": 0.032640949554896145,
+            "csi": 0.02576112412177986,
+            "false_alarms": 180,
+            "frequency_bias": 0.2997032640949555,
+            "hits": 22,
+            "misses": 652,
+            "observed_events": 674
+          }
+        },
+        "day3_24h": {
+          "bias_mm": -1.671405644689554,
+          "cells": 180839,
+          "heavy": {
+            "ETS": 0.0342521974556367,
+            "FAR": 0.7661064425770309,
+            "POD": 0.042875481386392814,
+            "csi": 0.03759567762269248,
+            "false_alarms": 547,
+            "frequency_bias": 0.18331193838254173,
+            "hits": 167,
+            "misses": 3728,
+            "observed_events": 3895
+          },
+          "mae_mm": 7.861284214675021,
+          "rmse_mm": 16.865628225407782,
+          "very_heavy": {
+            "ETS": 0.013030003170397729,
+            "FAR": 0.9117647058823529,
+            "POD": 0.015915119363395226,
+            "csi": 0.01366742596810934,
+            "false_alarms": 124,
+            "frequency_bias": 0.18037135278514588,
+            "hits": 12,
+            "misses": 742,
+            "observed_events": 754
+          }
+        }
+      },
+      "by_year": {
+        "2012": {
+          "bias_mm": -0.35874470381764206,
+          "cells": 336959,
+          "heavy": {
+            "ETS": 0.06160014438058947,
+            "FAR": 0.7305389221556886,
+            "POD": 0.07953340402969247,
+            "csi": 0.06542599592904914,
+            "false_alarms": 1220,
+            "frequency_bias": 0.295157299399081,
+            "hits": 450,
+            "misses": 5208,
+            "observed_events": 5658
+          },
+          "mae_mm": 7.347058963103555,
+          "rmse_mm": 14.650054010108157,
+          "very_heavy": {
+            "ETS": 0.026153715250009254,
+            "FAR": 0.8739495798319328,
+            "POD": 0.03278688524590164,
+            "csi": 0.026714158504007122,
+            "false_alarms": 208,
+            "frequency_bias": 0.26010928961748636,
+            "hits": 30,
+            "misses": 885,
+            "observed_events": 915
+          }
+        },
+        "2013": {
+          "bias_mm": 0.052324398286182405,
+          "cells": 327852,
+          "heavy": {
+            "ETS": 0.07016143920096861,
+            "FAR": 0.7574682046731737,
+            "POD": 0.1021297795491344,
+            "csi": 0.07743153918791312,
+            "false_alarms": 2561,
+            "frequency_bias": 0.4210985178727114,
+            "hits": 820,
+            "misses": 7209,
+            "observed_events": 8029
+          },
+          "mae_mm": 8.416280432979667,
+          "rmse_mm": 17.495636245279464,
+          "very_heavy": {
+            "ETS": 0.025204356274480737,
+            "FAR": 0.9073482428115016,
+            "POD": 0.03593556381660471,
+            "csi": 0.026581118240146653,
+            "false_alarms": 568,
+            "frequency_bias": 0.3878562577447336,
+            "hits": 58,
+            "misses": 1556,
+            "observed_events": 1614
+          }
+        }
+      },
+      "pooled": {
+        "bias_mm": -0.1560256945609615,
+        "cells": 664811,
+        "heavy": {
+          "ETS": 0.06715101664539234,
+          "FAR": 0.7485646406652148,
+          "POD": 0.09278877767224374,
+          "csi": 0.07270437371193039,
+          "false_alarms": 3781,
+          "frequency_bias": 0.3690363118287426,
+          "hits": 1270,
+          "misses": 12417,
+          "observed_events": 13687
+        },
+        "mae_mm": 7.874346263316432,
+        "rmse_mm": 16.116269923926705,
+        "very_heavy": {
+          "ETS": 0.025657366500204976,
+          "FAR": 0.8981481481481481,
+          "POD": 0.03479636219849743,
+          "csi": 0.026626323751891074,
+          "false_alarms": 776,
+          "frequency_bias": 0.3416370106761566,
+          "hits": 88,
+          "misses": 2441,
+          "observed_events": 2529
+        }
+      }
+    },
+    "global_residual": {
+      "by_lead": {
+        "day1_24h": {
+          "bias_mm": 0.5445817106664577,
+          "cells": 317444,
+          "heavy": {
+            "ETS": 0.113852890863375,
+            "FAR": 0.4861021331609567,
+            "POD": 0.13243378310844578,
+            "csi": 0.11769059955588453,
+            "false_alarms": 752,
+            "frequency_bias": 0.25770448109278693,
+            "hits": 795,
+            "misses": 5208,
+            "observed_events": 6003
+          },
+          "mae_mm": 7.188489362440919,
+          "rmse_mm": 13.346233635123093,
+          "very_heavy": {
+            "ETS": 0.014054040671493403,
+            "FAR": 0.627906976744186,
+            "POD": 0.014532243415077202,
+            "csi": 0.014184397163120567,
+            "false_alarms": 27,
+            "frequency_bias": 0.03905540417801998,
+            "hits": 16,
+            "misses": 1085,
+            "observed_events": 1101
+          }
+        },
+        "day2_24h": {
+          "bias_mm": -0.5626203568807694,
+          "cells": 166528,
+          "heavy": {
+            "ETS": 0.10270789732666961,
+            "FAR": 0.43060959792477305,
+            "POD": 0.11586170493533914,
+            "csi": 0.10652754185877214,
+            "false_alarms": 332,
+            "frequency_bias": 0.2034837688044339,
+            "hits": 439,
+            "misses": 3350,
+            "observed_events": 3789
+          },
+          "mae_mm": 7.442035883263746,
+          "rmse_mm": 14.388740051649556,
+          "very_heavy": {
+            "ETS": 0.00443310344950478,
+            "FAR": 0.0,
+            "POD": 0.004451038575667656,
+            "csi": 0.004451038575667656,
+            "false_alarms": 0,
+            "frequency_bias": 0.004451038575667656,
+            "hits": 3,
+            "misses": 671,
+            "observed_events": 674
+          }
+        },
+        "day3_24h": {
+          "bias_mm": -0.9630804272121376,
+          "cells": 180839,
+          "heavy": {
+            "ETS": 0.05690740566650474,
+            "FAR": 0.5557522123893806,
+            "POD": 0.06444159178433889,
+            "csi": 0.05963411736754574,
+            "false_alarms": 314,
+            "frequency_bias": 0.14505776636713735,
+            "hits": 251,
+            "misses": 3644,
+            "observed_events": 3895
+          },
+          "mae_mm": 7.612290887092605,
+          "rmse_mm": 14.948860685361078,
+          "very_heavy": {
+            "ETS": -1.1030424837544077e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "csi": 0.0,
+            "false_alarms": 2,
+            "frequency_bias": 0.002652519893899204,
+            "hits": 0,
+            "misses": 754,
+            "observed_events": 754
+          }
+        }
+      },
+      "by_year": {
+        "2012": {
+          "bias_mm": -0.5221306328124913,
+          "cells": 336959,
+          "heavy": {
+            "ETS": 0.052827721321670004,
+            "FAR": 0.3747534516765286,
+            "POD": 0.05602686461647225,
+            "csi": 0.05420656634746922,
+            "false_alarms": 190,
+            "frequency_bias": 0.08960763520678686,
+            "hits": 317,
+            "misses": 5341,
+            "observed_events": 5658
+          },
+          "mae_mm": 6.862314849080667,
+          "rmse_mm": 13.011688453069652,
+          "very_heavy": {
+            "ETS": -1.4758173774221973e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "csi": 0.0,
+            "false_alarms": 5,
+            "frequency_bias": 0.00546448087431694,
+            "hits": 0,
+            "misses": 915,
+            "observed_events": 915
+          }
+        },
+        "2013": {
+          "bias_mm": 0.24692931046756084,
+          "cells": 327852,
+          "heavy": {
+            "ETS": 0.12091024386526635,
+            "FAR": 0.5084175084175084,
+            "POD": 0.14547266160169386,
+            "csi": 0.12644798094619467,
+            "false_alarms": 1208,
+            "frequency_bias": 0.29592726366919914,
+            "hits": 1168,
+            "misses": 6861,
+            "observed_events": 8029
+          },
+          "mae_mm": 7.886273352727472,
+          "rmse_mm": 15.062661584426062,
+          "very_heavy": {
+            "ETS": 0.011471759121697865,
+            "FAR": 0.5581395348837209,
+            "POD": 0.011771995043370507,
+            "csi": 0.0115995115995116,
+            "false_alarms": 24,
+            "frequency_bias": 0.02664188351920694,
+            "hits": 19,
+            "misses": 1595,
+            "observed_events": 1614
+          }
+        }
+      },
+      "pooled": {
+        "bias_mm": -0.14286819503054776,
+        "cells": 664811,
+        "heavy": {
+          "ETS": 0.0948808068590208,
+          "FAR": 0.48491155046826223,
+          "POD": 0.1084971140498283,
+          "csi": 0.09844216108717269,
+          "false_alarms": 1398,
+          "frequency_bias": 0.2106378315189596,
+          "hits": 1485,
+          "misses": 12202,
+          "observed_events": 13687
+        },
+        "mae_mm": 7.367280686495527,
+        "rmse_mm": 14.060566255983874,
+        "very_heavy": {
+          "ETS": 0.0073568205907820474,
+          "FAR": 0.6041666666666666,
+          "POD": 0.007512850929221036,
+          "csi": 0.007427677873338546,
+          "false_alarms": 29,
+          "frequency_bias": 0.018979833926453145,
+          "hits": 19,
+          "misses": 2510,
+          "observed_events": 2529
+        }
+      }
+    },
+    "regime_soft_residual": {
+      "by_lead": {
+        "day1_24h": {
+          "bias_mm": 0.49015033225385995,
+          "cells": 317444,
+          "heavy": {
+            "ETS": 0.11897009441370932,
+            "FAR": 0.49150485436893204,
+            "POD": 0.13959686823255038,
+            "csi": 0.1230001467782181,
+            "false_alarms": 810,
+            "frequency_bias": 0.2745294019656838,
+            "hits": 838,
+            "misses": 5165,
+            "observed_events": 6003
+          },
+          "mae_mm": 7.161539733318208,
+          "rmse_mm": 13.362745004913661,
+          "very_heavy": {
+            "ETS": 0.01666928791322357,
+            "FAR": 0.6041666666666666,
+            "POD": 0.01725703905540418,
+            "csi": 0.016814159292035398,
+            "false_alarms": 29,
+            "frequency_bias": 0.043596730245231606,
+            "hits": 19,
+            "misses": 1082,
+            "observed_events": 1101
+          }
+        },
+        "day2_24h": {
+          "bias_mm": -0.5444748412295581,
+          "cells": 166528,
+          "heavy": {
+            "ETS": 0.10638530538846479,
+            "FAR": 0.4537914691943128,
+            "POD": 0.12166798627606229,
+            "csi": 0.11049856184084372,
+            "false_alarms": 383,
+            "frequency_bias": 0.22275006598046979,
+            "hits": 461,
+            "misses": 3328,
+            "observed_events": 3789
+          },
+          "mae_mm": 7.449125465856319,
+          "rmse_mm": 14.404956296348203,
+          "very_heavy": {
+            "ETS": 0.00443310344950478,
+            "FAR": 0.0,
+            "POD": 0.004451038575667656,
+            "csi": 0.004451038575667656,
+            "false_alarms": 0,
+            "frequency_bias": 0.004451038575667656,
+            "hits": 3,
+            "misses": 671,
+            "observed_events": 674
+          }
+        },
+        "day3_24h": {
+          "bias_mm": -0.8741761245623265,
+          "cells": 180839,
+          "heavy": {
+            "ETS": 0.06049661712358282,
+            "FAR": 0.5700636942675159,
+            "POD": 0.0693196405648267,
+            "csi": 0.06348459910651305,
+            "false_alarms": 358,
+            "frequency_bias": 0.16123234916559692,
+            "hits": 270,
+            "misses": 3625,
+            "observed_events": 3895
+          },
+          "mae_mm": 7.643895528316536,
+          "rmse_mm": 14.944045157027636,
+          "very_heavy": {
+            "ETS": -1.1030424837544077e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "csi": 0.0,
+            "false_alarms": 2,
+            "frequency_bias": 0.002652519893899204,
+            "hits": 0,
+            "misses": 754,
+            "observed_events": 754
+          }
+        }
+      },
+      "by_year": {
+        "2012": {
+          "bias_mm": -0.5277642306948501,
+          "cells": 336959,
+          "heavy": {
+            "ETS": 0.054800767926958135,
+            "FAR": 0.38661710037174724,
+            "POD": 0.05832449628844114,
+            "csi": 0.056256392771905896,
+            "false_alarms": 208,
+            "frequency_bias": 0.09508660303994344,
+            "hits": 330,
+            "misses": 5328,
+            "observed_events": 5658
+          },
+          "mae_mm": 6.855410858673688,
+          "rmse_mm": 13.00679923163888,
+          "very_heavy": {
+            "ETS": -1.4758173774221973e-05,
+            "FAR": 1.0,
+            "POD": 0.0,
+            "csi": 0.0,
+            "false_alarms": 5,
+            "frequency_bias": 0.00546448087431694,
+            "hits": 0,
+            "misses": 915,
+            "observed_events": 915
+          }
+        },
+        "2013": {
+          "bias_mm": 0.2582712532871475,
+          "cells": 327852,
+          "heavy": {
+            "ETS": 0.12630754424417265,
+            "FAR": 0.5201394268009295,
+            "POD": 0.15431560592850915,
+            "csi": 0.132202304737516,
+            "false_alarms": 1343,
+            "frequency_bias": 0.32158425706812804,
+            "hits": 1239,
+            "misses": 6790,
+            "observed_events": 8029
+          },
+          "mae_mm": 7.888308811899861,
+          "rmse_mm": 15.086394103302993,
+          "very_heavy": {
+            "ETS": 0.013272460097307178,
+            "FAR": 0.5416666666666666,
+            "POD": 0.013630731102850062,
+            "csi": 0.013414634146341463,
+            "false_alarms": 26,
+            "frequency_bias": 0.02973977695167286,
+            "hits": 22,
+            "misses": 1592,
+            "observed_events": 1614
+          }
+        }
+      },
+      "pooled": {
+        "bias_mm": -0.14013029338865954,
+        "cells": 664811,
+        "heavy": {
+          "ETS": 0.09916892354503919,
+          "FAR": 0.4971153846153846,
+          "POD": 0.11463432454153577,
+          "csi": 0.10296626853917837,
+          "false_alarms": 1551,
+          "frequency_bias": 0.22795353254913422,
+          "hits": 1569,
+          "misses": 12118,
+          "observed_events": 13687
+        },
+        "mae_mm": 7.364785191771525,
+        "rmse_mm": 14.070817417803228,
+        "very_heavy": {
+          "ETS": 0.008515664140632179,
+          "FAR": 0.5849056603773585,
+          "POD": 0.008699090549624358,
+          "csi": 0.00859375,
+          "false_alarms": 31,
+          "frequency_bias": 0.02095689996045868,
+          "hits": 22,
+          "misses": 2507,
+          "observed_events": 2529
+        }
+      }
+    }
+  },
+  "schema": "regime-residual-development-result-v1",
+  "status": "DEVELOPMENT_ONLY_NO_INDEPENDENT_TEST",
+  "training_years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010
+  ]
+}

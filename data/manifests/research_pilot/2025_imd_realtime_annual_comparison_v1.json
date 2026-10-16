@@ -1,0 +1,21 @@
+{
+  "schema": "varshasetu-imd-realtime-annual-comparison-v1",
+  "date": "2025-09-30",
+  "year_role": "CONSUMED_2025_TEST_SOURCE_DIAGNOSTIC_ONLY",
+  "daily_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+  "daily_request_form": {"rain": "30092025"},
+  "daily_file_sha256": "124f8d49f64ad49e4e117386ac8165863b2c07ffe20bdcd4e0948c1fe64a89fb",
+  "annual_file_sha256": "7d03cd397ebb1d7209ffae947d3965113643e1f30023cca657f0aa2c800af035",
+  "grid_shape": [129, 135],
+  "both_valid_cells": 4964,
+  "daily_missing_cells": 12451,
+  "annual_missing_cells": 12451,
+  "nonidentical_valid_cells": 330,
+  "mean_absolute_valid_difference_mm": 0.009501330554485321,
+  "maximum_absolute_valid_difference_mm": 7.852302551269531,
+  "same_date_mean_absolute_difference_mm": 0.009501330554485321,
+  "previous_date_mean_absolute_difference_mm": 5.123981475830078,
+  "next_date_mean_absolute_difference_mm": 5.133090019226074,
+  "conclusion": "Grid and missing mask match on this date and temporal alignment is strongly supported, but daily real-time values are not identical to the annual NetCDF. Treat 2026 daily source separately and provisionally; never silently substitute it into the frozen annual-reference score.",
+  "2026_observation_values_used": false
+}

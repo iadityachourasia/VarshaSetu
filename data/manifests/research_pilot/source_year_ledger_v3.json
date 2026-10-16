@@ -1,0 +1,1020 @@
+{
+  "2026_forecast_year_sha256": "fc0183682a84d864781170169b3b4365b4a92a0b09c8bfffffbf71f4a9108884",
+  "2026_imd_probe_retry_sha256": "bf479aa4c920acc1bc184d510c0bb60608885b399cc174f387d025642fac83bc",
+  "meaning": "Forecast-only 2026 side sealed; official IMD 2026 POST returned an empty body, so no independent-year rainfall score exists",
+  "previous_ledger_sha256": "f02efa81e02ef48852e3e41fb2f03b161551ad5c3d27d2a15cf7276fadbce41c",
+  "protocol_anchor_sha256": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7",
+  "rows": [
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 50075384,
+        "path": "data/processed/reforecast_control_v1/2000/X_full.npy",
+        "sha256": "0978d2cd0371d3d8a196e367bee22d289a34e0ebbbff6c0aa50f3043de2a8652",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25501500,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2000_rfp25.nc",
+        "sha256": "eee32b28de22dee336d1b414a8b6a3f420e3dfcfb7ca6186d56a3a02dd344782",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2000
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 51343112,
+        "path": "data/processed/reforecast_control_v1/2001/X_full.npy",
+        "sha256": "d887456fcdee3a0eab6448fd9ebad65b9f50e08db04003cbe12cc766cf5f203a",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2001_rfp25.nc",
+        "sha256": "f3e0536f688908cfbcd5bc8272362c4bf238aac198e607220071867899b7f175",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2001
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 55780160,
+        "path": "data/processed/reforecast_control_v1/2002/X_full.npy",
+        "sha256": "20cafe5f4289ab7f91a600b327c236c52dade9deefd4edbcddb5d8054efa9b42",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2002_rfp25.nc",
+        "sha256": "4c61fdae1ea69b733cdfe2a27ebadbfa79f11aea2ae5ef4cf2e99624f7f1efdb",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2002
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 51554400,
+        "path": "data/processed/reforecast_control_v1/2003/X_full.npy",
+        "sha256": "4ae980c05e139b20a8a2599d3c426828d2df579661d0352dc26ab941a1091d27",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2003_rfp25.nc",
+        "sha256": "f215e6182fb15f1e2b59da09e408fa10d23cca6c3041aea54adb878d784b64d2",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2003
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 53667280,
+        "path": "data/processed/reforecast_control_v1/2004/X_full.npy",
+        "sha256": "299f3d229348edcc3f574a87024cf418ddfa0eb76873d9609108e23d0df70d51",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25501500,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2004_rfp25.nc",
+        "sha256": "1ab45a65b10277e415dc06965008156637777a79b86367cf45329b2718545935",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2004
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 55357584,
+        "path": "data/processed/reforecast_control_v1/2005/X_full.npy",
+        "sha256": "493f8468b53506006ea2bd39351fe57aef1838be7a468bd6d31b0d0172080645",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2005_rfp25.nc",
+        "sha256": "c6de4f7b35238f6c9fca22950934390ac8f08f630fe0bfb3c90cc62849f9cc50",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2005
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 54723720,
+        "path": "data/processed/reforecast_control_v1/2006/X_full.npy",
+        "sha256": "ac6dae25a546310fcdb80693da568b32765fc3677ac9475568dde0eaffdaa448",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2006_rfp25.nc",
+        "sha256": "8caf5b4fa2900a2be070f87b760a84297d686e74ee0dacded6c2944451e1d9f1",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2006
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 53667280,
+        "path": "data/processed/reforecast_control_v1/2007/X_full.npy",
+        "sha256": "0699de1f370b4647ef2f040269977094fd797a3f29646d9f85db11bc76b12ebc",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2007_rfp25.nc",
+        "sha256": "f4430feb443d8f8e8d8882e8c52ebe738f20aefea269bd7a10aa14e5da799ef8",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2007
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 53455992,
+        "path": "data/processed/reforecast_control_v1/2008/X_full.npy",
+        "sha256": "65852b39ca73c19c0b6689859948f4726388c4c83339ce2947749b5b42803afe",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25501500,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2008_rfp25.nc",
+        "sha256": "345079a1a4c84a3d0ca198f46693384767e9639c05f131e40de4d5a649931279",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2008
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 54512432,
+        "path": "data/processed/reforecast_control_v1/2009/X_full.npy",
+        "sha256": "2b304caf167c800124ff2e9a33ae9b0d73c630aec2a3531b6fcc2695ac7002e7",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2009_rfp25.nc",
+        "sha256": "109c02519016c3e12e248d8032f6baebc4a3635a163dbf13d374b582f43e0486",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2009
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 49230232,
+        "path": "data/processed/reforecast_control_v1/2010/X_full.npy",
+        "sha256": "052fb3041b363ba5c0b9fcdff780dd5332a79c52fd25b0665a9fba3d905b0b1c",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2010_rfp25.nc",
+        "sha256": "fe7ea2aba9dab02865684040e9c1abfd1402481feac214c78b5bd94cf881b84b",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2010
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 52610840,
+        "path": "data/processed/reforecast_control_v1/2011/X_full.npy",
+        "sha256": "a500136b21d61ff3fa8bdff9738b88131003398f86c107420cf0e93cdba62d00",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2011_rfp25.nc",
+        "sha256": "925e06db22b6797afd393b781e834ee8016cf8850b2501f73dbb13e6c2c936de",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2011
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 54723720,
+        "path": "data/processed/reforecast_control_v1/2012/X_full.npy",
+        "sha256": "a961db10e3752237f31b3b5d7424c9411fde32018770c2bd3dbae69fbc2c4d3e",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25501500,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2012_rfp25.nc",
+        "sha256": "7708a4846e8ef0664962c7042e886f3a5f055af365d536782eff63760dc3f666",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "development_validation",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2012
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 53244704,
+        "path": "data/processed/reforecast_control_v1/2013/X_full.npy",
+        "sha256": "b0ef9824702a6be77155532b3da841dfba9503036a1310eaf7228e2dbcccd9eb",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2013_rfp25.nc",
+        "sha256": "2042932a2aea8288bbf45482272f65b9225e8aafa9a44cf06c65962007f8bc79",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "development_validation",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2013
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": true,
+      "forecast": {
+        "bytes": 50920536,
+        "path": "data/processed/reforecast_control_v1/2014/X_full.npy",
+        "sha256": "9ea2d2d68e23d0e98a203e8caed3e8be091f42c2f3df75bdfa5bc4689ec8c60e",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2014_rfp25.nc",
+        "sha256": "9ecca0e9049f0e6cf366a44420e2e7361bff67bf97ae43c6502999b25da76457",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "consumed_test",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2014
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": true,
+      "forecast": {
+        "bytes": 57047888,
+        "path": "data/processed/reforecast_control_v1/2015/X_full.npy",
+        "sha256": "7376a1a9a0f9758bd9a739493c50d708f71d68799091b5224afaf090be010dc0",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2015_rfp25.nc",
+        "sha256": "c276ce7ebff1d74d79123a7c777d9ef61c3c5765aa3b6db464ff6224b30a3926",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "consumed_test",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2015
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": true,
+      "forecast": {
+        "bytes": 56414024,
+        "path": "data/processed/reforecast_control_v1/2016/X_full.npy",
+        "sha256": "4e0e2a73a4a90c014ed2051f60402760ae71674238af0241a876b2926162e5ca",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25501500,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2016_rfp25.nc",
+        "sha256": "e5b0ba1feb2bf10a3347091867237b1c480a71cbd8087037ef846e4346cbcdef",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "consumed_test",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2016
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 54512432,
+        "path": "data/processed/reforecast_control_v1/2017/X_full.npy",
+        "sha256": "8c7e47e99641ef6d5a64d06169ecef8cb7cc90e11591dd0151cda62246b91bc7",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": null,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2017_rfp25.nc",
+        "sha256": null,
+        "status": "not_local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "reused_development",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2017
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 53033416,
+        "path": "data/processed/reforecast_control_v1/2018/X_full.npy",
+        "sha256": "ca8788b6d6ead20c8901fd102fe6cb1b79a7fe85c5e39679f88fdfc5fb829ae7",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": null,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2018_rfp25.nc",
+        "sha256": null,
+        "status": "not_local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "reused_development",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2018
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": true,
+      "forecast": {
+        "bytes": 53878568,
+        "path": "data/processed/reforecast_control_v1/2019/X_full.npy",
+        "sha256": "27a03ce79ceae32fa6d371d8ad6b6784fffd5ce0928c62f109e82a69a8ccc052",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": null,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2019_rfp25.nc",
+        "sha256": null,
+        "status": "not_local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "consumed_test",
+      "track": "A_GEFSV12_REFORECAST",
+      "year": 2019
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": null,
+        "path": "data/operational_gefs/2020/source_manifest.json",
+        "sha256": null,
+        "status": "not_local"
+      },
+      "imd_reference": {
+        "bytes": null,
+        "path": "experiments/recent_historical/imd_climatology/RF25_ind2020_rfp25.nc",
+        "sha256": null,
+        "status": "not_local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "not_acquired",
+      "track": "B_OPERATIONAL_GEFS",
+      "year": 2020
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 6141671,
+        "path": "experiments/recent_historical/corpus2_payload_acquisition_v1/manifests/2021_source_manifest.json",
+        "sha256": "25907de3604bca1cb22e0b358371d736423fcbc5cce6381cf60b50ce79cf4436",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_v2/RF25_ind2021_rfp25.nc",
+        "sha256": "fb0f291fa7e214a7811023a9309cead67233b6b4e0bfcc5b277643f976f68374",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "development",
+      "track": "B_OPERATIONAL_GEFS",
+      "year": 2021
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": true,
+      "forecast": {
+        "bytes": 6133487,
+        "path": "experiments/recent_historical/corpus2_payload_acquisition_v1/manifests/2022_source_manifest.json",
+        "sha256": "27301da0a0ac1869d7331e520ad9501ec92f232a3d16d147c4fb7ba85b10d3d8",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd_v2/RF25_ind2022_rfp25.nc",
+        "sha256": "83ae0d4e48f3a408eec3b54844476d406faf70928dc13c79f0bd085e3b0224b8",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "consumed_test",
+      "track": "B_OPERATIONAL_GEFS",
+      "year": 2022
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 6147728,
+        "path": "experiments/recent_historical/phase4f_payload_acquisition_v1/manifests/2023_source_manifest.json",
+        "sha256": "c35deea16c289de7cffeca502dd5409d7bdf0430b8a4b7bdd8556957083483e3",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd/RF25_ind2023_rfp25.nc",
+        "sha256": "1fa0cbcb56769fd3cd2702e36dc3ee1b81b74755b77c7f058c70dfc3afb82831",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "training_history",
+      "track": "B_OPERATIONAL_GEFS",
+      "year": 2023
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 6151355,
+        "path": "experiments/recent_historical/phase4f_payload_acquisition_v1/manifests/2024_source_manifest.json",
+        "sha256": "525e2316f470dbf731fbb73bfdcebd7878c3de9008a46980c93fe35c48048aa4",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25501532,
+        "path": "experiments/recent_historical/imd/RF25_ind2024_rfp25.nc",
+        "sha256": "1ef02aeba5694dbb57a6cca23a3c2cc11740affb185137c1eacbeab59893228a",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "development_validation",
+      "track": "B_OPERATIONAL_GEFS",
+      "year": 2024
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": true,
+      "forecast": {
+        "bytes": 6158723,
+        "path": "experiments/recent_historical/phase4f_payload_acquisition_v1/manifests/2025_source_manifest.json",
+        "sha256": "97a66d7a3e8f111a5f4237535f3cdcaf87732820c4ba97a4db4b938b4c23f9d1",
+        "status": "local"
+      },
+      "imd_reference": {
+        "bytes": 25431832,
+        "path": "experiments/recent_historical/imd/RF25_ind2025_rfp25.nc",
+        "sha256": "7d03cd397ebb1d7209ffae947d3965113643e1f30023cca657f0aa2c800af035",
+        "status": "local"
+      },
+      "new_experiment_role": "UNASSIGNED; requires a separate frozen protocol",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "consumed_test",
+      "track": "B_OPERATIONAL_GEFS",
+      "year": 2025
+    },
+    {
+      "accumulation_windows_hours": {
+        "day1_24h": [
+          3,
+          27
+        ],
+        "day2_24h": [
+          27,
+          51
+        ],
+        "day3_24h": [
+          51,
+          75
+        ]
+      },
+      "consumed_test": false,
+      "forecast": {
+        "bytes": 2086,
+        "path": "data/manifests/research_pilot/2026_forecast_jjas_year_v1.json",
+        "sha256": "fc0183682a84d864781170169b3b4365b4a92a0b09c8bfffffbf71f4a9108884",
+        "status": "local"
+      },
+      "forecast_content": {
+        "accumulation_window_hours": {
+          "day1_24h": [
+            3,
+            27
+          ],
+          "day2_24h": [
+            27,
+            51
+          ],
+          "day3_24h": [
+            51,
+            75
+          ]
+        },
+        "case_count": 122,
+        "forecast_publication_time": "not recorded by cache receipts",
+        "initialization_time_utc": "00:00",
+        "licence_and_redistribution": "NOAA archive public access; downstream reuse terms not independently audited",
+        "model_change_note_sha256": "4512a0327dce352ba86c4837b28017599422c467c78c2cca4ec86d51dc4396a9",
+        "month_manifest_sha256": {
+          "202606": "5e29b6dac9ce7ec5870a4807e971d66dd93a7283635e997bcc88d38c05a1b8a3",
+          "202607": "d54798ce596c59a5095f2ed2f62093016b0309e8c927ed79e0b5b8c32dbaad37",
+          "202608": "cbc031599b916a628ebab6b9ec542b4fe05e7e03612452455e1c6de3427f2fa6",
+          "202609": "ae2da1407b2e23f44421b741f422f8c14f837f768f7fb2a5c87d03c56749f7c1"
+        },
+        "no_eligible_lead_cycles": 8,
+        "observation_read": false,
+        "passing_leads": {
+          "day1_24h": 64,
+          "day2_24h": 69,
+          "day3_24h": 80
+        },
+        "prior_observation_use_audit_sha256": "107d530ae31aa63291a0e45ca4b8657afa787c24f5805fc05cbd332be586dee9",
+        "processing_time": "per-cycle created_at_utc in immutable local case manifests",
+        "source": "NOAA operational GEFS control member, selected byte ranges",
+        "source_url_pattern": "https://noaa-gefs-pds.s3.amazonaws.com/gefs.YYYYMMDD/00/atmos/",
+        "spatial_coverage": "10-22 N, 68-80 E, 0.25-degree, 49x49 cells",
+        "training_or_model_selection": false,
+        "withheld_leads": {
+          "day1_24h": 58,
+          "day2_24h": 53,
+          "day3_24h": 42
+        }
+      },
+      "imd_reference": {
+        "bytes": null,
+        "header_probe_http_status": 200,
+        "header_probe_response_bytes": 0,
+        "header_probe_sha256": "bf479aa4c920acc1bc184d510c0bb60608885b399cc174f387d025642fac83bc",
+        "header_probe_status": "UNAVAILABLE_OR_NON_NETCDF_RESPONSE",
+        "path": null,
+        "sha256": null,
+        "status": "not_local"
+      },
+      "new_experiment_role": "2026 Track B test candidate only; independence, reference and model-version gates pending",
+      "observation_window_utc": "03:00 to next-day 03:00",
+      "reference_use": "local_research_only_redistribution_unresolved",
+      "role_in_prior_work": "test_candidate_audit_pending",
+      "track": "B_OPERATIONAL_GEFS",
+      "year": 2026
+    }
+  ],
+  "schema": "source-year-ledger-v3",
+  "sources": {
+    "A_GEFSV12_REFORECAST": "https://psl.noaa.gov/forecasts/reforecast2/probabilities/index.html",
+    "B_OPERATIONAL_GEFS": "https://www.noaa.gov/nodd/datasets",
+    "IMD_RF25": "https://imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html"
+  },
+  "test_reservation": {
+    "2026": "candidate only; prior-observation-use audit and protocol freeze required before any test claim",
+    "fallback": 2027
+  },
+  "unavailable_or_unapproved": [
+    "NCMRWF NCUM/NEPS historical grids and data terms",
+    "expert-annotated regime labels",
+    "IMERG Final V07 paired 03-03 UTC corpus",
+    "winter western-disturbance rainfall corpus",
+    "authorized current Survey of India district boundary"
+  ]
+}

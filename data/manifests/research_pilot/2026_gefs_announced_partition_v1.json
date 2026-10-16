@@ -1,0 +1,57 @@
+{
+  "announced_effective_utc": "2026-06-15T12:00:00Z",
+  "cycle_hour_utc": 0,
+  "evaluation_rule": "Preserve the frozen pooled primary comparison; report these pre/post strata without using 2026 observations to choose a model or cutoff.",
+  "interpretation": "Calendar and forecast-QC sensitivity strata only. The change notice names three radiation fields, none selected here. Counts and feature warnings cannot prove actual implementation time, numerical equivalence to the 2023 training model, or forecast skill.",
+  "model_inference": false,
+  "observation_read": false,
+  "schema": "varshasetu-2026-gefs-announced-partition-v1",
+  "source_hashes": {
+    "2026_forecast_jjas_year_v1.json": "fc0183682a84d864781170169b3b4365b4a92a0b09c8bfffffbf71f4a9108884",
+    "2026_forecast_month_202606_v1.json": "5e29b6dac9ce7ec5870a4807e971d66dd93a7283635e997bcc88d38c05a1b8a3",
+    "2026_forecast_month_202607_v1.json": "d54798ce596c59a5095f2ed2f62093016b0309e8c927ed79e0b5b8c32dbaad37",
+    "2026_forecast_month_202608_v1.json": "cbc031599b916a628ebab6b9ec542b4fe05e7e03612452455e1c6de3427f2fa6",
+    "2026_forecast_month_202609_v1.json": "ae2da1407b2e23f44421b741f422f8c14f837f768f7fb2a5c87d03c56749f7c1",
+    "2026_gefs_model_change_note_v1.json": "4512a0327dce352ba86c4837b28017599422c467c78c2cca4ec86d51dc4396a9",
+    "2026_jjas_feature_range_v1.json": "9a732c498d91071e1398fc6c6372313f957d90c1c11ef1f87b2b8fcbe7de504f"
+  },
+  "status": "ANNOUNCED_BOUNDARY_ONLY_ACTUAL_VERSION_UNCONFIRMED",
+  "strata": {
+    "after_announced_change": {
+      "cycle_count": 107,
+      "dynamic_feature_warning_case_count": 42,
+      "dynamic_feature_warning_case_feature_count": 119,
+      "first_cycle": "20260616",
+      "last_cycle": "20260930",
+      "no_eligible_lead_cycles": 6,
+      "strict_qc_passing": {
+        "day1_24h": 56,
+        "day2_24h": 64,
+        "day3_24h": 72
+      },
+      "strict_qc_withheld": {
+        "day1_24h": 51,
+        "day2_24h": 43,
+        "day3_24h": 35
+      }
+    },
+    "before_announced_change": {
+      "cycle_count": 15,
+      "dynamic_feature_warning_case_count": 3,
+      "dynamic_feature_warning_case_feature_count": 4,
+      "first_cycle": "20260601",
+      "last_cycle": "20260615",
+      "no_eligible_lead_cycles": 2,
+      "strict_qc_passing": {
+        "day1_24h": 8,
+        "day2_24h": 5,
+        "day3_24h": 8
+      },
+      "strict_qc_withheld": {
+        "day1_24h": 7,
+        "day2_24h": 10,
+        "day3_24h": 7
+      }
+    }
+  }
+}

@@ -1,0 +1,757 @@
+{
+  "2023_source_manifest_sha256": "c35deea16c289de7cffeca502dd5409d7bdf0430b8a4b7bdd8556957083483e3",
+  "clearance_written": false,
+  "forecast_values_decoded": false,
+  "interpretation_limit": "Header identity/encoding differences are processing evidence; matching headers do not prove numerical equivalence, executable identity or rainfall skill.",
+  "model_inference": false,
+  "observation_read": false,
+  "protocol_sha256": "17cc03151aa5f1144c115c7dd2d7f06050e5981269c12a257cd3a87f3fec9a29",
+  "rows": {
+    "mslp": {
+      "comparisons": {
+        "2023_to_pre": {
+          "encoding_differences": {
+            "binaryScaleFactor": {
+              "first": 1,
+              "second": 4
+            },
+            "bitsPerValue": {
+              "first": 14,
+              "second": 15
+            },
+            "decimalScaleFactor": {
+              "first": 1,
+              "second": 2
+            }
+          },
+          "identity_differences": {}
+        },
+        "pre_to_post": {
+          "encoding_differences": {
+            "bitsPerValue": {
+              "first": 15,
+              "second": 14
+            }
+          },
+          "identity_differences": {}
+        }
+      },
+      "cycles": {
+        "20230616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 1,
+            "bitsPerValue": 14,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 1,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 3,
+            "parameterNumber": 0,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "msl",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "sfc",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/operational_gefs/v1/2023/20230616/pgrb2bp5/c00_f024_mslp.grib2",
+          "source_sha256": "a3552f9b68ad23208c37f2660c7d6acde23f00163f63fd0b91c08a049c058761"
+        },
+        "20260615": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 4,
+            "bitsPerValue": 15,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 3,
+            "parameterNumber": 0,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "msl",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "sfc",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260615/pgrb2bp5/f024_mslp.grib2",
+          "source_sha256": "d184512daa805a587e0b59d4df508532e1a25696db1bd4f386a73d3e03100840"
+        },
+        "20260616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 4,
+            "bitsPerValue": 14,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 3,
+            "parameterNumber": 0,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "msl",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "sfc",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260616/pgrb2bp5/f024_mslp.grib2",
+          "source_sha256": "fe7937c734e6d6a924d230223a3db51da719a236e22b9364aba1e3b4515bbdfa"
+        }
+      }
+    },
+    "pwat": {
+      "comparisons": {
+        "2023_to_pre": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        },
+        "pre_to_post": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        }
+      },
+      "cycles": {
+        "20230616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 10,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 1,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 3,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "pwat",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "200",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/operational_gefs/v1/2023/20230616/pgrb2ap5/c00_f024_pwat.grib2",
+          "source_sha256": "1cdd2bd528c1297c8a28b188da986e66e1d4a2969fb4df1c14b11c80b3e61e9c"
+        },
+        "20260615": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 10,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 1,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 3,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "pwat",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "200",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260615/pgrb2ap5/f024_pwat.grib2",
+          "source_sha256": "906c26c23ad1da98c411967ecb2025f54375d11b7685fc511c352705ea1efb42"
+        },
+        "20260616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 10,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 1,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 3,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "pwat",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "200",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260616/pgrb2ap5/f024_pwat.grib2",
+          "source_sha256": "e0937f90570445c39dd2c79b8095c5239302db848a7c54a65bb5f697e35ba635"
+        }
+      }
+    },
+    "q700": {
+      "comparisons": {
+        "2023_to_pre": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        },
+        "pre_to_post": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        }
+      },
+      "cycles": {
+        "20230616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 11,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 5,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 0,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 70000,
+            "shortName": "q",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/operational_gefs/v1/2023/20230616/pgrb2bp5/c00_f024_q700.grib2",
+          "source_sha256": "811439e3e126a6247afeb56205f9ec5b361ee3bd39e2f33db1bc2ef31529b3ca"
+        },
+        "20260615": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 11,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 5,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 0,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 70000,
+            "shortName": "q",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260615/pgrb2bp5/f024_q700.grib2",
+          "source_sha256": "fe25b22966cc9ceb1183e32ee95d697ee0020d577327114d1decce0294e8d0ed"
+        },
+        "20260616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 11,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 5,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 0,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 70000,
+            "shortName": "q",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260616/pgrb2bp5/f024_q700.grib2",
+          "source_sha256": "e50d2706d2a5829322fc7fc3ef2856f827037c4f939dadc9b8369fe74baed07e"
+        }
+      }
+    },
+    "rain": {
+      "comparisons": {
+        "2023_to_pre": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        },
+        "pre_to_post": {
+          "encoding_differences": {
+            "bitsPerValue": {
+              "first": 10,
+              "second": 9
+            }
+          },
+          "identity_differences": {}
+        }
+      },
+      "cycles": {
+        "20230616": {
+          "grib_header": {
+            "Ni": 1440,
+            "Nj": 721,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 10,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 1,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 1038240,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 8,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "tp",
+            "stepRange": "18-24",
+            "stepType": "accum",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "sfc",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/operational_gefs/v1/2023/20230616/pgrb2sp25/c00_f024_rain.grib2",
+          "source_sha256": "992cdd21de8e0aced5def078225cf9bb90cad032ee10f4b7894347cce01574a0"
+        },
+        "20260615": {
+          "grib_header": {
+            "Ni": 1440,
+            "Nj": 721,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 10,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 1,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 1038240,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 8,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "tp",
+            "stepRange": "18-24",
+            "stepType": "accum",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "sfc",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260615/pgrb2sp25/f024_rain.grib2",
+          "source_sha256": "4420974f163c7096725ec61dde032205a56ca797f224bdea26f9d7f53568a10b"
+        },
+        "20260616": {
+          "grib_header": {
+            "Ni": 1440,
+            "Nj": 721,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 9,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 1,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 1038240,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 1,
+            "parameterNumber": 8,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 0,
+            "shortName": "tp",
+            "stepRange": "18-24",
+            "stepType": "accum",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "sfc",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260616/pgrb2sp25/f024_rain.grib2",
+          "source_sha256": "fee5edb8b984e8c69f0359fc38f7ab76ff0cafdcfa44527c2b3d46f68964bd9c"
+        }
+      }
+    },
+    "u850": {
+      "comparisons": {
+        "2023_to_pre": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        },
+        "pre_to_post": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        }
+      },
+      "cycles": {
+        "20230616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 12,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 2,
+            "parameterNumber": 2,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 85000,
+            "shortName": "u",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/operational_gefs/v1/2023/20230616/pgrb2ap5/c00_f024_u850.grib2",
+          "source_sha256": "00513200c2ba5402750e882b5ef08a8ee4054dd8be9773b47fb750b51fefb5a0"
+        },
+        "20260615": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 12,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 2,
+            "parameterNumber": 2,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 85000,
+            "shortName": "u",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260615/pgrb2ap5/f024_u850.grib2",
+          "source_sha256": "180707c65f06c40a061605ee3b9dd8962398d8298ef2c327fbab5771c461adb5"
+        },
+        "20260616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 12,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 2,
+            "parameterNumber": 2,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 85000,
+            "shortName": "u",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260616/pgrb2ap5/f024_u850.grib2",
+          "source_sha256": "d688c6f5d0a214798b54cfffa980ad2031b0839fe27ebbccce6ab65a8b3e4ef3"
+        }
+      }
+    },
+    "v850": {
+      "comparisons": {
+        "2023_to_pre": {
+          "encoding_differences": {
+            "bitsPerValue": {
+              "first": 13,
+              "second": 12
+            }
+          },
+          "identity_differences": {}
+        },
+        "pre_to_post": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        }
+      },
+      "cycles": {
+        "20230616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 13,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 2,
+            "parameterNumber": 3,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 85000,
+            "shortName": "v",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/operational_gefs/v1/2023/20230616/pgrb2ap5/c00_f024_v850.grib2",
+          "source_sha256": "25c50656ab765071ecc3680c583cc29cadba53343f562a1fdf2fc2e62b5dfd25"
+        },
+        "20260615": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 12,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 2,
+            "parameterNumber": 3,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 85000,
+            "shortName": "v",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260615/pgrb2ap5/f024_v850.grib2",
+          "source_sha256": "992891c09593519b347e692ee3db7eed090ecbfe548edf0d093929596f90e83c"
+        },
+        "20260616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 0,
+            "bitsPerValue": 12,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 2,
+            "parameterNumber": 3,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 85000,
+            "shortName": "v",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260616/pgrb2ap5/f024_v850.grib2",
+          "source_sha256": "333a73f1463754ec2f87469f777e45476270fb2cfb260e69763a6941229e90ce"
+        }
+      }
+    },
+    "z500": {
+      "comparisons": {
+        "2023_to_pre": {
+          "encoding_differences": {
+            "binaryScaleFactor": {
+              "first": 1,
+              "second": 2
+            },
+            "bitsPerValue": {
+              "first": 12,
+              "second": 11
+            }
+          },
+          "identity_differences": {}
+        },
+        "pre_to_post": {
+          "encoding_differences": {},
+          "identity_differences": {}
+        }
+      },
+      "cycles": {
+        "20230616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 1,
+            "bitsPerValue": 12,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 3,
+            "parameterNumber": 5,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 50000,
+            "shortName": "gh",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/operational_gefs/v1/2023/20230616/pgrb2ap5/c00_f024_z500.grib2",
+          "source_sha256": "18492bea589ae1bac051e762e2a40af770d60126dabeaecc8ffd632d74eb8fbf"
+        },
+        "20260615": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 2,
+            "bitsPerValue": 11,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 3,
+            "parameterNumber": 5,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 50000,
+            "shortName": "gh",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260615/pgrb2ap5/f024_z500.grib2",
+          "source_sha256": "86c2b215d1eaae7005641526d4f968df3484e15803290e59e075f9565c5cba6b"
+        },
+        "20260616": {
+          "grib_header": {
+            "Ni": 720,
+            "Nj": 361,
+            "binaryScaleFactor": 2,
+            "bitsPerValue": 11,
+            "centre": "kwbc",
+            "dataTime": 0,
+            "decimalScaleFactor": 2,
+            "discipline": 0,
+            "generatingProcessIdentifier": 107,
+            "gridDefinitionTemplateNumber": 0,
+            "numberOfValues": 259920,
+            "packingType": "grid_complex_spatial_differencing",
+            "parameterCategory": 3,
+            "parameterNumber": 5,
+            "productionStatusOfProcessedData": 0,
+            "scaledValueOfFirstFixedSurface": 50000,
+            "shortName": "gh",
+            "stepRange": "24",
+            "stepType": "instant",
+            "subCentre": 2,
+            "typeOfFirstFixedSurface": "pl",
+            "typeOfGeneratingProcess": 4,
+            "typeOfProcessedData": "cf"
+          },
+          "source_path": "data/live/source_cache/20260616/pgrb2ap5/f024_z500.grib2",
+          "source_sha256": "2b58e314cf89e3c0508a963c7cbef91ba0aeaefb4efc1898f2a1d114211c7acc"
+        }
+      }
+    }
+  },
+  "schema": "varshasetu-selected-predictor-grib-metadata-result-v1",
+  "status": "METADATA_DIAGNOSTIC_COMPLETE_SOURCE_CLEARANCE_OPEN"
+}

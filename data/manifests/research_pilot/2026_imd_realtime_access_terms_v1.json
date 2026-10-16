@@ -1,0 +1,14 @@
+{
+  "schema": "varshasetu-imd-realtime-access-terms-v1",
+  "checked_utc_date": "2026-10-07",
+  "provider": "India Meteorological Department, Climate Research and Services, Pune",
+  "source_page": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/Rain_Download.html",
+  "source_page_description": "Public daily 0.25 x 0.25 degree rainfall binary download page; page retrieval was intermittent, but the official-domain daily POST returned the expected-size binary and a 2025 sample aligned to the held annual file.",
+  "disclaimer_url": "https://imdpune.gov.in/disclaimer.html",
+  "disclaimer_local_path": "data/raw/evidence/imd_disclaimer_2026-10-07.html",
+  "disclaimer_byte_size": 1629,
+  "disclaimer_sha256": "88b56b6d84997fdb33abd2a6c864d037c052b2e3d7b52d91bbc5717518197ccf",
+  "reuse_interpretation": "Keep source grids local. Do not reproduce or redistribute them without prior IMD permission. Derived public products and publication rights require separate review.",
+  "source_role": "PROVISIONAL_DAILY_GAUGE_CANDIDATE_NOT_ANNUAL_NETCDF_REFERENCE",
+  "rights_for_public_warning_or_raw_redistribution": "NOT_ESTABLISHED"
+}

@@ -1,0 +1,85 @@
+{
+  "cycle_count": 122,
+  "interpretation": "Forecast-side availability only; no reference rainfall, independence clearance or model skill.",
+  "model_inference": false,
+  "months": [
+    {
+      "cycle_count": 30,
+      "manifest_sha256": "5e29b6dac9ce7ec5870a4807e971d66dd93a7283635e997bcc88d38c05a1b8a3",
+      "month": "202606",
+      "no_eligible_lead_cycles": 4,
+      "passing": {
+        "day1_24h": 13,
+        "day2_24h": 10,
+        "day3_24h": 17
+      },
+      "withheld": {
+        "day1_24h": 17,
+        "day2_24h": 20,
+        "day3_24h": 13
+      }
+    },
+    {
+      "cycle_count": 31,
+      "manifest_sha256": "d54798ce596c59a5095f2ed2f62093016b0309e8c927ed79e0b5b8c32dbaad37",
+      "month": "202607",
+      "no_eligible_lead_cycles": 2,
+      "passing": {
+        "day1_24h": 20,
+        "day2_24h": 20,
+        "day3_24h": 22
+      },
+      "withheld": {
+        "day1_24h": 11,
+        "day2_24h": 11,
+        "day3_24h": 9
+      }
+    },
+    {
+      "cycle_count": 31,
+      "manifest_sha256": "cbc031599b916a628ebab6b9ec542b4fe05e7e03612452455e1c6de3427f2fa6",
+      "month": "202608",
+      "no_eligible_lead_cycles": 1,
+      "passing": {
+        "day1_24h": 15,
+        "day2_24h": 22,
+        "day3_24h": 25
+      },
+      "withheld": {
+        "day1_24h": 16,
+        "day2_24h": 9,
+        "day3_24h": 6
+      }
+    },
+    {
+      "cycle_count": 30,
+      "manifest_sha256": "ae2da1407b2e23f44421b741f422f8c14f837f768f7fb2a5c87d03c56749f7c1",
+      "month": "202609",
+      "no_eligible_lead_cycles": 1,
+      "passing": {
+        "day1_24h": 16,
+        "day2_24h": 17,
+        "day3_24h": 16
+      },
+      "withheld": {
+        "day1_24h": 14,
+        "day2_24h": 13,
+        "day3_24h": 14
+      }
+    }
+  ],
+  "no_eligible_lead_cycles": 8,
+  "observation_read": false,
+  "possible_date_lead_products": 366,
+  "products_passing_qc": {
+    "day1_24h": 64,
+    "day2_24h": 69,
+    "day3_24h": 80
+  },
+  "products_withheld_qc": {
+    "day1_24h": 58,
+    "day2_24h": 53,
+    "day3_24h": 42
+  },
+  "schema": "varshasetu-2026-forecast-only-jjas-year-v1"
+}

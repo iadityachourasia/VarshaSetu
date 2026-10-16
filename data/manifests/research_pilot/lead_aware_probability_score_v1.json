@@ -1,0 +1,5177 @@
+{
+  "fit_manifest_sha256": "3b51af9cd5a09a7502152ba5c23fa77662897ead40b520121f8fb3cc99dd6659",
+  "interpretation": "No method selection or live promotion. Existing base models and frozen isotonic control were selected with 2024 outcomes; any apparent advantage needs independent-year validation.",
+  "prediction_seal_sha256": "03a8d63359282f6f3faf3f60d2cd2582205be81543531d902afb85523f094e98",
+  "primary_selection_date_bootstrap": {
+    "date_count": 38,
+    "lead_aware_minus_global_heavy_brier_95pct_interval": [
+      -0.00011041513312075886,
+      1.3918018019063151e-05
+    ],
+    "lead_aware_minus_global_joint_brier_95pct_interval": [
+      -0.00011741894971111945,
+      1.4648408132094677e-05
+    ],
+    "lead_aware_minus_global_very_heavy_brier_95pct_interval": [
+      -1.8927663793344205e-05,
+      6.808593587722848e-06
+    ],
+    "remaining_dependence": "Spatial and serial dependence remain; consumed 2024 development blocks, not an independent promotion test",
+    "repeats": 1000,
+    "seed": 26080,
+    "unit": "initialization_date"
+  },
+  "primary_selection_lead_aware_minus_global_brier": {
+    "heavy": -3.941833058373166e-05,
+    "joint_brier_sum": -4.413524020218003e-05,
+    "very_heavy": -4.7169096184479335e-06
+  },
+  "protocol_sha256": "2b26000c6674de1cd90c38c34bcab5751d777a44cd7e6fd33fd0473c00a21d0e",
+  "role": "consumed_2024_development_diagnostic_no_independent_reliability_claim",
+  "schema": "varshasetu-lead-aware-probability-score-v1",
+  "scores": {
+    "calibration": {
+      "arms": {
+        "frozen": {
+          "heavy": {
+            "brier": 0.027640256887913998,
+            "brier_reference": 0.03492791169669683,
+            "bss": 0.20864845491097694,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 10733,
+              "forecast_event_count": 14219,
+              "hits": 3486,
+              "metrics": {
+                "CSI": 0.2209125475285171,
+                "ETS": 0.19485283775836637,
+                "FAR": 0.7548350798227723,
+                "POD": 0.6907073509015257
+              },
+              "misses": 1561,
+              "observed_event_count": 5047,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 2.817317218149396,
+            "forecast_event_frequency_at_cutoff": 0.10119708486349532,
+            "log_loss": 0.10386799139376665,
+            "mean_forecast_probability": 0.035920463289186896,
+            "observed_event_count": 5047,
+            "observed_event_frequency": 0.03591966293734165,
+            "pr_auc": 0.3363719064638113,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.012361428595024692,
+                "observed_event_frequency": 0.01236053813079524,
+                "sample_count": 126289
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13942598187311178,
+                "observed_event_frequency": 0.13942598187311178,
+                "sample_count": 6620
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.23302752293577977,
+                "observed_event_frequency": 0.23302752293577983,
+                "sample_count": 2725
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.33035439137134043,
+                "observed_event_frequency": 0.33035439137134054,
+                "sample_count": 3245
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44755244755244755,
+                "observed_event_frequency": 0.44755244755244755,
+                "sample_count": 1001
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.553191489361702,
+                "observed_event_frequency": 0.5531914893617021,
+                "sample_count": 47
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6539130434782608,
+                "observed_event_frequency": 0.6539130434782608,
+                "sample_count": 575
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 1.0,
+                "observed_event_frequency": 1.0,
+                "sample_count": 6
+              }
+            ],
+            "roc_auc": 0.9048361755497467,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.035809536188978766,
+          "very_heavy": {
+            "brier": 0.00816927930106477,
+            "brier_reference": 0.008876729979371872,
+            "bss": 0.07969721732564872,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 7402,
+              "forecast_event_count": 8218,
+              "hits": 816,
+              "metrics": {
+                "CSI": 0.09424809424809424,
+                "ETS": 0.0864972861435766,
+                "FAR": 0.9007057678267218,
+                "POD": 0.6496815286624203
+              },
+              "misses": 440,
+              "observed_event_count": 1256,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 6.542993630573248,
+            "forecast_event_frequency_at_cutoff": 0.05848777293819569,
+            "log_loss": 0.03506369794905966,
+            "mean_forecast_probability": 0.00893819244571787,
+            "observed_event_count": 1256,
+            "observed_event_frequency": 0.008938992797563128,
+            "pr_auc": 0.12225297902041586,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.005693882709270674,
+                "observed_event_frequency": 0.005694702686937184,
+                "sample_count": 137145
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1334405144694534,
+                "observed_event_frequency": 0.13344051446945338,
+                "sample_count": 3110
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.22580645161290314,
+                "observed_event_frequency": 0.22580645161290322,
+                "sample_count": 248
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.75,
+                "observed_event_frequency": 0.75,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 1.0,
+                "observed_event_frequency": 1.0,
+                "sample_count": 1
+              }
+            ],
+            "roc_auc": 0.9341127400473247,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          }
+        },
+        "global": {
+          "heavy": {
+            "brier": 0.02795838486198302,
+            "brier_reference": 0.03492791169669683,
+            "bss": 0.19954032451854053,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 8653,
+              "forecast_event_count": 11870,
+              "hits": 3217,
+              "metrics": {
+                "CSI": 0.23481751824817518,
+                "ETS": 0.21023886034773803,
+                "FAR": 0.7289806234203875,
+                "POD": 0.6374083614028135
+              },
+              "misses": 1830,
+              "observed_event_count": 5047,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 2.351892213195958,
+            "forecast_event_frequency_at_cutoff": 0.08447917556295727,
+            "log_loss": 0.10515269217860844,
+            "mean_forecast_probability": 0.0359184343366794,
+            "observed_event_count": 5047,
+            "observed_event_frequency": 0.03591966293734165,
+            "pr_auc": 0.34283961527758244,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.014673838896660686,
+                "observed_event_frequency": 0.014225967443523687,
+                "sample_count": 128638
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14191157840602167,
+                "observed_event_frequency": 0.17365573216097396,
+                "sample_count": 5914
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24569251908230255,
+                "observed_event_frequency": 0.27901234567901234,
+                "sample_count": 2430
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3467688260399896,
+                "observed_event_frequency": 0.3480870217554389,
+                "sample_count": 1333
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4472361302941613,
+                "observed_event_frequency": 0.36614645858343337,
+                "sample_count": 833
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5462289936419589,
+                "observed_event_frequency": 0.45981308411214955,
+                "sample_count": 535
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6461537411302589,
+                "observed_event_frequency": 0.524547803617571,
+                "sample_count": 387
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7449251410516144,
+                "observed_event_frequency": 0.6781609195402298,
+                "sample_count": 261
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8402820143761659,
+                "observed_event_frequency": 0.668918918918919,
+                "sample_count": 148
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9325667835158549,
+                "observed_event_frequency": 0.6206896551724138,
+                "sample_count": 29
+              }
+            ],
+            "roc_auc": 0.9040123436912882,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.03628650896106694,
+          "very_heavy": {
+            "brier": 0.008328124099083921,
+            "brier_reference": 0.008876729979371872,
+            "bss": 0.06180270004414068,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 4987,
+              "forecast_event_count": 5666,
+              "hits": 679,
+              "metrics": {
+                "CSI": 0.10876181323081852,
+                "ETS": 0.10147221937942753,
+                "FAR": 0.8801623720437699,
+                "POD": 0.5406050955414012
+              },
+              "misses": 577,
+              "observed_event_count": 1256,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 4.511146496815287,
+            "forecast_event_frequency_at_cutoff": 0.04032510604378398,
+            "log_loss": 0.036012801136549095,
+            "mean_forecast_probability": 0.008941404699150108,
+            "observed_event_count": 1256,
+            "observed_event_frequency": 0.008938992797563128,
+            "pr_auc": 0.12348531392354434,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.005667592003565353,
+                "observed_event_frequency": 0.006348194098208592,
+                "sample_count": 137992
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13821549428776503,
+                "observed_event_frequency": 0.13150371640937678,
+                "sample_count": 1749
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24208082084813512,
+                "observed_event_frequency": 0.17819706498951782,
+                "sample_count": 477
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3425893943155308,
+                "observed_event_frequency": 0.2596685082872928,
+                "sample_count": 181
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4359451298828383,
+                "observed_event_frequency": 0.14925373134328357,
+                "sample_count": 67
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5419832601875865,
+                "observed_event_frequency": 0.13636363636363635,
+                "sample_count": 22
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6505851123224948,
+                "observed_event_frequency": 0.08333333333333333,
+                "sample_count": 12
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7528269896998163,
+                "observed_event_frequency": 0.42857142857142855,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8276385851749907,
+                "observed_event_frequency": 1.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9327432729299271,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          }
+        },
+        "lead_aware": {
+          "heavy": {
+            "brier": 0.02790552797446134,
+            "brier_reference": 0.03492791169669683,
+            "bss": 0.20105363822537392,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 8696,
+              "forecast_event_count": 11921,
+              "hits": 3225,
+              "metrics": {
+                "CSI": 0.23466492032307357,
+                "ETS": 0.21005207298866632,
+                "FAR": 0.7294690042781646,
+                "POD": 0.6389934614622548
+              },
+              "misses": 1822,
+              "observed_event_count": 5047,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 2.3619972260748963,
+            "forecast_event_frequency_at_cutoff": 0.08484214421954622,
+            "log_loss": 0.10492359007841158,
+            "mean_forecast_probability": 0.03589621305438348,
+            "observed_event_count": 5047,
+            "observed_event_frequency": 0.03591966293734165,
+            "pr_auc": 0.344603772243641,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.014591695436856874,
+                "observed_event_frequency": 0.014169395039934052,
+                "sample_count": 128587
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1412628520416254,
+                "observed_event_frequency": 0.17169684775318578,
+                "sample_count": 5964
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2453930076742013,
+                "observed_event_frequency": 0.2827903091060986,
+                "sample_count": 2394
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3455762640168773,
+                "observed_event_frequency": 0.3404885270170244,
+                "sample_count": 1351
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.445855511837913,
+                "observed_event_frequency": 0.39015606242497,
+                "sample_count": 833
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5473943312654441,
+                "observed_event_frequency": 0.4290657439446367,
+                "sample_count": 578
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6479478199649903,
+                "observed_event_frequency": 0.5380281690140845,
+                "sample_count": 355
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.745476039585391,
+                "observed_event_frequency": 0.6954887218045113,
+                "sample_count": 266
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8424777029249073,
+                "observed_event_frequency": 0.6283783783783784,
+                "sample_count": 148
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9303235183914426,
+                "observed_event_frequency": 0.6875,
+                "sample_count": 32
+              }
+            ],
+            "roc_auc": 0.9043640549170221,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.03623261171604794,
+          "very_heavy": {
+            "brier": 0.008327083741586604,
+            "brier_reference": 0.008876729979371872,
+            "bss": 0.0619199005785418,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 4999,
+              "forecast_event_count": 5674,
+              "hits": 675,
+              "metrics": {
+                "CSI": 0.1079136690647482,
+                "ETS": 0.10062088417734369,
+                "FAR": 0.8810363059569968,
+                "POD": 0.5374203821656051
+              },
+              "misses": 581,
+              "observed_event_count": 1256,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 4.5175159235668785,
+            "forecast_event_frequency_at_cutoff": 0.04038204230364107,
+            "log_loss": 0.0359876573153557,
+            "mean_forecast_probability": 0.008940120624834487,
+            "observed_event_count": 1256,
+            "observed_event_frequency": 0.008938992797563128,
+            "pr_auc": 0.12342214504304216,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.005654956053729318,
+                "observed_event_frequency": 0.006327600078279589,
+                "sample_count": 137967
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1378865649258,
+                "observed_event_frequency": 0.13148984198645597,
+                "sample_count": 1772
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24014795827937854,
+                "observed_event_frequency": 0.18200836820083682,
+                "sample_count": 478
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3429166667063385,
+                "observed_event_frequency": 0.24083769633507854,
+                "sample_count": 191
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44112554783612373,
+                "observed_event_frequency": 0.16129032258064516,
+                "sample_count": 62
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5486748172268355,
+                "observed_event_frequency": 0.06666666666666667,
+                "sample_count": 15
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6436350807047002,
+                "observed_event_frequency": 0.13333333333333333,
+                "sample_count": 15
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7536420015817392,
+                "observed_event_frequency": 0.42857142857142855,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8284199965148358,
+                "observed_event_frequency": 1.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9327716090390862,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          }
+        },
+        "raw": {
+          "heavy": {
+            "brier": 0.2441242909633943,
+            "brier_reference": 0.03492791169669683,
+            "bss": -5.98937551959287,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 103018,
+              "forecast_event_count": 108017,
+              "hits": 4999,
+              "metrics": {
+                "CSI": 0.04625919585434692,
+                "ETS": 0.010741134156250096,
+                "FAR": 0.9537202477387818,
+                "POD": 0.9904893996433525
+              },
+              "misses": 48,
+              "observed_event_count": 5047,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 21.402219140083215,
+            "forecast_event_frequency_at_cutoff": 0.7687604976229111,
+            "log_loss": 0.8414508921341621,
+            "mean_forecast_probability": 0.4051027198619786,
+            "observed_event_count": 5047,
+            "observed_event_frequency": 0.03591966293734165,
+            "pr_auc": 0.3405474549366967,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.05146310083632065,
+                "observed_event_frequency": 0.00147733218429719,
+                "sample_count": 32491
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14602411597753037,
+                "observed_event_frequency": 0.0029529728062056503,
+                "sample_count": 22689
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24742524402765192,
+                "observed_event_frequency": 0.004907042642891699,
+                "sample_count": 14469
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34850817784941324,
+                "observed_event_frequency": 0.007505360972122945,
+                "sample_count": 11192
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4485801065744158,
+                "observed_event_frequency": 0.011057054400707651,
+                "sample_count": 9044
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5498153801608291,
+                "observed_event_frequency": 0.015092097445038621,
+                "sample_count": 8415
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6498694629331699,
+                "observed_event_frequency": 0.018525425836130798,
+                "sample_count": 8043
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.750007018687604,
+                "observed_event_frequency": 0.0265986769570011,
+                "sample_count": 7256
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8509287605631385,
+                "observed_event_frequency": 0.04414515525626637,
+                "sample_count": 8019
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9676146715995833,
+                "observed_event_frequency": 0.20402329274748543,
+                "sample_count": 18890
+              }
+            ],
+            "roc_auc": 0.9041230371771425,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.4415126188259384,
+          "very_heavy": {
+            "brier": 0.1973883278625441,
+            "brier_reference": 0.008876729979371872,
+            "bss": -21.236603830604693,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 97013,
+              "forecast_event_count": 98269,
+              "hits": 1256,
+              "metrics": {
+                "CSI": 0.012781243321902126,
+                "ETS": 0.0038769061605852975,
+                "FAR": 0.9872187566780979,
+                "POD": 1.0
+              },
+              "misses": 0,
+              "observed_event_count": 1256,
+              "sample_count": 140508,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 78.23964968152866,
+            "forecast_event_frequency_at_cutoff": 0.699383664987047,
+            "log_loss": 0.7258359741575008,
+            "mean_forecast_probability": 0.3061858481724495,
+            "observed_event_count": 1256,
+            "observed_event_frequency": 0.008938992797563128,
+            "pr_auc": 0.12387110974323606,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.03733525320828655,
+                "observed_event_frequency": 0.00016406083375715714,
+                "sample_count": 60953
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14404112592446222,
+                "observed_event_frequency": 0.0008333333333333334,
+                "sample_count": 18000
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24670004037601714,
+                "observed_event_frequency": 0.0012974976830398518,
+                "sample_count": 10790
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3470129308370608,
+                "observed_event_frequency": 0.001982029598308668,
+                "sample_count": 7568
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44893675885185774,
+                "observed_event_frequency": 0.0032216494845360823,
+                "sample_count": 6208
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5501871851799163,
+                "observed_event_frequency": 0.0024390243902439024,
+                "sample_count": 5740
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6494785448408161,
+                "observed_event_frequency": 0.004645760743321719,
+                "sample_count": 5166
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7502923440955674,
+                "observed_event_frequency": 0.003748438150770512,
+                "sample_count": 4802
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.851891966740948,
+                "observed_event_frequency": 0.014161220043572984,
+                "sample_count": 5508
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.968086800839958,
+                "observed_event_frequency": 0.0664426551702276,
+                "sample_count": 15773
+              }
+            ],
+            "roc_auc": 0.9335225044967279,
+            "sample_count": 140508,
+            "undefined_reasons": {}
+          }
+        }
+      },
+      "paired_cells": 140508
+    },
+    "purged": {
+      "arms": {
+        "frozen": {
+          "heavy": {
+            "brier": 0.009773480413613646,
+            "brier_reference": 0.00848734877564175,
+            "bss": -0.15153514624767483,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 532,
+              "forecast_event_count": 565,
+              "hits": 33,
+              "metrics": {
+                "CSI": 0.054187192118226604,
+                "ETS": 0.046709426608013804,
+                "FAR": 0.9415929203539823,
+                "POD": 0.42857142857142855
+              },
+              "misses": 44,
+              "observed_event_count": 77,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 7.337662337662337,
+            "forecast_event_frequency_at_cutoff": 0.062040188865707696,
+            "log_loss": 0.057700193840315744,
+            "mean_forecast_probability": 0.03195586020954288,
+            "observed_event_count": 77,
+            "observed_event_frequency": 0.008455034588777863,
+            "pr_auc": 0.04411784916648734,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.022925394347772608,
+                "observed_event_frequency": 0.005151018496839147,
+                "sample_count": 8542
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13147529572483208,
+                "observed_event_frequency": 0.047505938242280284,
+                "sample_count": 421
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.23309130565326663,
+                "observed_event_frequency": 0.08536585365853659,
+                "sample_count": 82
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.31472482742020574,
+                "observed_event_frequency": 0.11538461538461539,
+                "sample_count": 52
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4363022820060463,
+                "observed_event_frequency": 0.0,
+                "sample_count": 10
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.7333045691849678,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.010349486954205313,
+          "very_heavy": {
+            "brier": 0.0005760065405916671,
+            "brier_reference": 0.00045751484380716835,
+            "bss": -0.2589898412879479,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 116,
+              "forecast_event_count": 116,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": -0.0004247621698023391,
+                "FAR": 1.0,
+                "POD": 0.0
+              },
+              "misses": 4,
+              "observed_event_count": 4,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 28.999999999999996,
+            "forecast_event_frequency_at_cutoff": 0.012737454705171845,
+            "log_loss": 0.007677996150597831,
+            "mean_forecast_probability": 0.004831545864180905,
+            "observed_event_count": 4,
+            "observed_event_frequency": 0.0004392225760404085,
+            "pr_auc": 0.0004445199393235592,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.004659936649758149,
+                "observed_event_frequency": 0.0004398504508467121,
+                "sample_count": 9094
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.12487879170729975,
+                "observed_event_frequency": 0.0,
+                "sample_count": 13
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.46803251675271884,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          }
+        },
+        "global": {
+          "heavy": {
+            "brier": 0.00947416374232265,
+            "brier_reference": 0.00848734877564175,
+            "bss": -0.1162689307069611,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 329,
+              "forecast_event_count": 355,
+              "hits": 26,
+              "metrics": {
+                "CSI": 0.06403940886699508,
+                "ETS": 0.057068363401938965,
+                "FAR": 0.9267605633802817,
+                "POD": 0.33766233766233766
+              },
+              "misses": 51,
+              "observed_event_count": 77,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 4.6103896103896105,
+            "forecast_event_frequency_at_cutoff": 0.03898100362358625,
+            "log_loss": 0.0567320579792032,
+            "mean_forecast_probability": 0.030822692860350845,
+            "observed_event_count": 77,
+            "observed_event_frequency": 0.008455034588777863,
+            "pr_auc": 0.04704188855809944,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.024979445570156522,
+                "observed_event_frequency": 0.005827239488117002,
+                "sample_count": 8752
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13344132153864546,
+                "observed_event_frequency": 0.07307692307692308,
+                "sample_count": 260
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24261058652714165,
+                "observed_event_frequency": 0.07142857142857142,
+                "sample_count": 70
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3376269517902396,
+                "observed_event_frequency": 0.14285714285714285,
+                "sample_count": 14
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4756762009182988,
+                "observed_event_frequency": 0.0,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5490202642956424,
+                "observed_event_frequency": 0.0,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6277560045017712,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.7336842559433921,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.01000434105419779,
+          "very_heavy": {
+            "brier": 0.0005301773118751405,
+            "brier_reference": 0.00045751484380716835,
+            "bss": -0.1588199138268782,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 61,
+              "forecast_event_count": 61,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": -0.0004123634679767657,
+                "FAR": 1.0,
+                "POD": 0.0
+              },
+              "misses": 4,
+              "observed_event_count": 4,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 15.25,
+            "forecast_event_frequency_at_cutoff": 0.0066981442846162295,
+            "log_loss": 0.007672955454952904,
+            "mean_forecast_probability": 0.005021765886647496,
+            "observed_event_count": 4,
+            "observed_event_frequency": 0.0004392225760404085,
+            "pr_auc": 0.000488305039610699,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.004910930160848988,
+                "observed_event_frequency": 0.00043956043956043956,
+                "sample_count": 9100
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13870230644841008,
+                "observed_event_frequency": 0.0,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2115436272824949,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.4689113479072833,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          }
+        },
+        "lead_aware": {
+          "heavy": {
+            "brier": 0.00959103008484056,
+            "brier_reference": 0.00848734877564175,
+            "bss": -0.13003840638272335,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 372,
+              "forecast_event_count": 400,
+              "hits": 28,
+              "metrics": {
+                "CSI": 0.062360801781737196,
+                "ETS": 0.0552445972308706,
+                "FAR": 0.93,
+                "POD": 0.36363636363636365
+              },
+              "misses": 49,
+              "observed_event_count": 77,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 5.194805194805194,
+            "forecast_event_frequency_at_cutoff": 0.043922257604040844,
+            "log_loss": 0.05729341949703495,
+            "mean_forecast_probability": 0.03190906523999588,
+            "observed_event_count": 77,
+            "observed_event_frequency": 0.008455034588777863,
+            "pr_auc": 0.049178744636708106,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.025381997148376547,
+                "observed_event_frequency": 0.005627655909038704,
+                "sample_count": 8707
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1323288896770585,
+                "observed_event_frequency": 0.06734006734006734,
+                "sample_count": 297
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24747468489085364,
+                "observed_event_frequency": 0.06666666666666667,
+                "sample_count": 75
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3312147279654252,
+                "observed_event_frequency": 0.2,
+                "sample_count": 15
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.42847795706421404,
+                "observed_event_frequency": 0.0,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5409333733257171,
+                "observed_event_frequency": 0.0,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6319300039046352,
+                "observed_event_frequency": 0.0,
+                "sample_count": 2
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.7441256418000605,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.010127975657844263,
+          "very_heavy": {
+            "brier": 0.0005369455730037025,
+            "brier_reference": 0.00045751484380716835,
+            "bss": -0.17361344723934735,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 64,
+              "forecast_event_count": 64,
+              "hits": 0,
+              "metrics": {
+                "CSI": 0.0,
+                "ETS": -0.0004135569125391748,
+                "FAR": 1.0,
+                "POD": 0.0
+              },
+              "misses": 4,
+              "observed_event_count": 4,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 16.0,
+            "forecast_event_frequency_at_cutoff": 0.007027561216646536,
+            "log_loss": 0.007755842062344578,
+            "mean_forecast_probability": 0.005126005382456069,
+            "observed_event_count": 4,
+            "observed_event_frequency": 0.0004392225760404085,
+            "pr_auc": 0.0005088008226881665,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.004999185454099015,
+                "observed_event_frequency": 0.00043960874821408945,
+                "sample_count": 9099
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13825505896312362,
+                "observed_event_frequency": 0.0,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.22715715843861845,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.48975612435460836,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          }
+        },
+        "raw": {
+          "heavy": {
+            "brier": 0.40837661396443964,
+            "brier_reference": 0.00848734877564175,
+            "bss": -47.11592226967971,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 9000,
+              "forecast_event_count": 9077,
+              "hits": 77,
+              "metrics": {
+                "CSI": 0.008482978957805443,
+                "ETS": 2.8182654344868107e-05,
+                "FAR": 0.9915170210421945,
+                "POD": 1.0
+              },
+              "misses": 0,
+              "observed_event_count": 77,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 117.88311688311688,
+            "forecast_event_frequency_at_cutoff": 0.996705830679697,
+            "log_loss": 1.1870574184439406,
+            "mean_forecast_probability": 0.5927416762498476,
+            "observed_event_count": 77,
+            "observed_event_frequency": 0.008455034588777863,
+            "pr_auc": 0.046582236181696,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.08871913153346439,
+                "observed_event_frequency": 0.0,
+                "sample_count": 30
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.15829883069937645,
+                "observed_event_frequency": 0.0,
+                "sample_count": 533
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2489395297881586,
+                "observed_event_frequency": 0.006557377049180328,
+                "sample_count": 915
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3504358051097461,
+                "observed_event_frequency": 0.004136504653567736,
+                "sample_count": 967
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.449436849396459,
+                "observed_event_frequency": 0.0040941658137154556,
+                "sample_count": 977
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5530157001432008,
+                "observed_event_frequency": 0.005714285714285714,
+                "sample_count": 1050
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6503897615245499,
+                "observed_event_frequency": 0.0018604651162790699,
+                "sample_count": 1075
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7505168770443563,
+                "observed_event_frequency": 0.002707581227436823,
+                "sample_count": 1108
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8516906598750176,
+                "observed_event_frequency": 0.011389521640091117,
+                "sample_count": 1317
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9446942045208498,
+                "observed_event_frequency": 0.03259911894273128,
+                "sample_count": 1135
+              }
+            ],
+            "roc_auc": 0.733248479095655,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.6488914668904527,
+          "very_heavy": {
+            "brier": 0.24051485292601313,
+            "brier_reference": 0.00045751484380716835,
+            "bss": -524.6984689821003,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 8689,
+              "forecast_event_count": 8693,
+              "hits": 4,
+              "metrics": {
+                "CSI": 0.0004601403428045554,
+                "ETS": 2.0926958356705056e-05,
+                "FAR": 0.9995398596571955,
+                "POD": 1.0
+              },
+              "misses": 0,
+              "observed_event_count": 4,
+              "sample_count": 9107,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 2173.25,
+            "forecast_event_frequency_at_cutoff": 0.9545404633798177,
+            "log_loss": 0.7338810845273224,
+            "mean_forecast_probability": 0.4056623038512189,
+            "observed_event_count": 4,
+            "observed_event_frequency": 0.0004392225760404085,
+            "pr_auc": 0.0004885868198895377,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.06355108066841937,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1283
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14866368902162952,
+                "observed_event_frequency": 0.0006596306068601583,
+                "sample_count": 1516
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24692349717087783,
+                "observed_event_frequency": 0.000856898029134533,
+                "sample_count": 1167
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3479004562431813,
+                "observed_event_frequency": 0.0009624639076034649,
+                "sample_count": 1039
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4481792727907878,
+                "observed_event_frequency": 0.0,
+                "sample_count": 880
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5510275125634188,
+                "observed_event_frequency": 0.0012515644555694619,
+                "sample_count": 799
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6465665700744972,
+                "observed_event_frequency": 0.0,
+                "sample_count": 773
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7517001736466928,
+                "observed_event_frequency": 0.0,
+                "sample_count": 532
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8501887406033042,
+                "observed_event_frequency": 0.0,
+                "sample_count": 584
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9493421324523915,
+                "observed_event_frequency": 0.0,
+                "sample_count": 534
+              }
+            ],
+            "roc_auc": 0.4692134461166648,
+            "sample_count": 9107,
+            "undefined_reasons": {}
+          }
+        }
+      },
+      "paired_cells": 9107
+    },
+    "selection": {
+      "arms": {
+        "frozen": {
+          "heavy": {
+            "brier": 0.011795829416694334,
+            "brier_reference": 0.013863082023222386,
+            "bss": 0.1491192653311253,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 959,
+              "forecast_event_count": 1420,
+              "hits": 461,
+              "metrics": {
+                "CSI": 0.20945024988641528,
+                "ETS": 0.20222447551190692,
+                "FAR": 0.6753521126760563,
+                "POD": 0.3711755233494364
+              },
+              "misses": 781,
+              "observed_event_count": 1242,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 1.1433172302737518,
+            "forecast_event_frequency_at_cutoff": 0.016051001492064926,
+            "log_loss": 0.050635121626385865,
+            "mean_forecast_probability": 0.00963682838934573,
+            "observed_event_count": 1242,
+            "observed_event_frequency": 0.014038974544468057,
+            "pr_auc": 0.28002874797775557,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.006266807626961313,
+                "observed_event_frequency": 0.008972061391416231,
+                "sample_count": 87048
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13425569257940545,
+                "observed_event_frequency": 0.22461170848267623,
+                "sample_count": 837
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2329259118942571,
+                "observed_event_frequency": 0.2962962962962963,
+                "sample_count": 243
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3302784796533424,
+                "observed_event_frequency": 0.5381165919282511,
+                "sample_count": 223
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44469370446583084,
+                "observed_event_frequency": 0.6,
+                "sample_count": 65
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5531914893617021,
+                "observed_event_frequency": 1.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.651144362715846,
+                "observed_event_frequency": 0.825,
+                "sample_count": 40
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7367243883839971,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.844660194174757,
+                "observed_event_frequency": 1.0,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9771838469224018,
+                "observed_event_frequency": 0.0,
+                "sample_count": 2
+              }
+            ],
+            "roc_auc": 0.9253583007371267,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.015164223393030378,
+          "very_heavy": {
+            "brier": 0.003368393976336044,
+            "brier_reference": 0.0037060688853844392,
+            "bss": 0.09111404010326896,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 374,
+              "forecast_event_count": 490,
+              "hits": 116,
+              "metrics": {
+                "CSI": 0.16500711237553342,
+                "ETS": 0.16283710898317724,
+                "FAR": 0.763265306122449,
+                "POD": 0.3525835866261398
+              },
+              "misses": 213,
+              "observed_event_count": 329,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.4893617021276597,
+            "forecast_event_frequency_at_cutoff": 0.005538725866980151,
+            "log_loss": 0.018094247739650567,
+            "mean_forecast_probability": 0.0014433642182622994,
+            "observed_event_count": 329,
+            "observed_event_frequency": 0.0037188587964009584,
+            "pr_auc": 0.19997284759992393,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0009825362778755245,
+                "observed_event_frequency": 0.0028556211542602014,
+                "sample_count": 88247
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1372965730463,
+                "observed_event_frequency": 0.32386363636363635,
+                "sample_count": 176
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.22580645161290322,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 33
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4611623815000304,
+                "observed_event_frequency": 1.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7367243883839971,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.844660194174757,
+                "observed_event_frequency": 1.0,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9771838469224018,
+                "observed_event_frequency": 0.0,
+                "sample_count": 2
+              }
+            ],
+            "roc_auc": 0.9551737168677094,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          }
+        },
+        "global": {
+          "heavy": {
+            "brier": 0.01184656658640857,
+            "brier_reference": 0.013863082023222386,
+            "bss": 0.14545938871572006,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 659,
+              "forecast_event_count": 1062,
+              "hits": 403,
+              "metrics": {
+                "CSI": 0.21199368753287742,
+                "ETS": 0.20576456251621433,
+                "FAR": 0.620527306967985,
+                "POD": 0.3244766505636071
+              },
+              "misses": 839,
+              "observed_event_count": 1242,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.8550724637681159,
+            "forecast_event_frequency_at_cutoff": 0.012004340552516164,
+            "log_loss": 0.05043705650428602,
+            "mean_forecast_probability": 0.01040513302887662,
+            "observed_event_count": 1242,
+            "observed_event_frequency": 0.014038974544468057,
+            "pr_auc": 0.28812039832942804,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.007611022802528904,
+                "observed_event_frequency": 0.009598883371850903,
+                "sample_count": 87406
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13719958882685884,
+                "observed_event_frequency": 0.27056962025316456,
+                "sample_count": 632
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24378001851224385,
+                "observed_event_frequency": 0.41081081081081083,
+                "sample_count": 185
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34830152120217184,
+                "observed_event_frequency": 0.5444444444444444,
+                "sample_count": 90
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4479770016076759,
+                "observed_event_frequency": 0.7,
+                "sample_count": 60
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5528091946552517,
+                "observed_event_frequency": 0.6176470588235294,
+                "sample_count": 34
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6543718209055214,
+                "observed_event_frequency": 0.5454545454545454,
+                "sample_count": 22
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7444960289328082,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 18
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8587751155814566,
+                "observed_event_frequency": 0.9166666666666666,
+                "sample_count": 12
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9265696185390628,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 9
+              }
+            ],
+            "roc_auc": 0.9261087390177839,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.015219503533546045,
+          "very_heavy": {
+            "brier": 0.0033729369471374743,
+            "brier_reference": 0.0037060688853844392,
+            "bss": 0.08988822079393388,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 234,
+              "forecast_event_count": 333,
+              "hits": 99,
+              "metrics": {
+                "CSI": 0.17584369449378331,
+                "ETS": 0.1740268764127727,
+                "FAR": 0.7027027027027027,
+                "POD": 0.3009118541033435
+              },
+              "misses": 230,
+              "observed_event_count": 329,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.0121580547112463,
+            "forecast_event_frequency_at_cutoff": 0.003764072885111001,
+            "log_loss": 0.01614599802895394,
+            "mean_forecast_probability": 0.0018274899140437635,
+            "observed_event_count": 329,
+            "observed_event_frequency": 0.0037188587964009584,
+            "pr_auc": 0.21241803896297617,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0012890009641159388,
+                "observed_event_frequency": 0.0029335810076114533,
+                "sample_count": 88288
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14285413055800855,
+                "observed_event_frequency": 0.3883495145631068,
+                "sample_count": 103
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2525124212232741,
+                "observed_event_frequency": 0.35714285714285715,
+                "sample_count": 28
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3506949171795011,
+                "observed_event_frequency": 0.16666666666666666,
+                "sample_count": 18
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4520431353528018,
+                "observed_event_frequency": 0.3,
+                "sample_count": 10
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5365137079716874,
+                "observed_event_frequency": 0.25,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6477863857913909,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7634807452741615,
+                "observed_event_frequency": 0.875,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.84275625663598,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9604212136459919,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          }
+        },
+        "lead_aware": {
+          "heavy": {
+            "brier": 0.011807148255824839,
+            "brier_reference": 0.013863082023222386,
+            "bss": 0.14830279182894557,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 696,
+              "forecast_event_count": 1109,
+              "hits": 413,
+              "metrics": {
+                "CSI": 0.2131062951496388,
+                "ETS": 0.20673346574423782,
+                "FAR": 0.6275924256086565,
+                "POD": 0.3325281803542673
+              },
+              "misses": 829,
+              "observed_event_count": 1242,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.892914653784219,
+            "forecast_event_frequency_at_cutoff": 0.012535606094859158,
+            "log_loss": 0.05027929207564169,
+            "mean_forecast_probability": 0.010819965258072809,
+            "observed_event_count": 1242,
+            "observed_event_frequency": 0.014038974544468057,
+            "pr_auc": 0.2864545844688317,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.00787804899101703,
+                "observed_event_frequency": 0.009489577490584829,
+                "sample_count": 87359
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13767724235755405,
+                "observed_event_frequency": 0.26604068857589985,
+                "sample_count": 639
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24216909583826965,
+                "observed_event_frequency": 0.37320574162679426,
+                "sample_count": 209
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3459651063406908,
+                "observed_event_frequency": 0.5268817204301075,
+                "sample_count": 93
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44422269364738354,
+                "observed_event_frequency": 0.6774193548387096,
+                "sample_count": 62
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5375841863456216,
+                "observed_event_frequency": 0.625,
+                "sample_count": 40
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.642749474868825,
+                "observed_event_frequency": 0.64,
+                "sample_count": 25
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7357636159887715,
+                "observed_event_frequency": 0.7894736842105263,
+                "sample_count": 19
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8441591276269376,
+                "observed_event_frequency": 0.9285714285714286,
+                "sample_count": 14
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9158378795402459,
+                "observed_event_frequency": 0.625,
+                "sample_count": 8
+              }
+            ],
+            "roc_auc": 0.9259015477701271,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.015175368293343865,
+          "very_heavy": {
+            "brier": 0.0033682200375190264,
+            "brier_reference": 0.0037060688853844392,
+            "bss": 0.09116097361216935,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 250,
+              "forecast_event_count": 349,
+              "hits": 99,
+              "metrics": {
+                "CSI": 0.17098445595854922,
+                "ETS": 0.16912196647458447,
+                "FAR": 0.7163323782234957,
+                "POD": 0.3009118541033435
+              },
+              "misses": 230,
+              "observed_event_count": 329,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.0607902735562311,
+            "forecast_event_frequency_at_cutoff": 0.003944929239951169,
+            "log_loss": 0.016098178651839563,
+            "mean_forecast_probability": 0.0018609870533047392,
+            "observed_event_count": 329,
+            "observed_event_frequency": 0.0037188587964009584,
+            "pr_auc": 0.21148213468501087,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0013124839877418258,
+                "observed_event_frequency": 0.0029224861521731744,
+                "sample_count": 88281
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14073582557838898,
+                "observed_event_frequency": 0.375,
+                "sample_count": 104
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2443744206304139,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 33
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.35521193438333215,
+                "observed_event_frequency": 0.23809523809523808,
+                "sample_count": 21
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.46432566062210046,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 9
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5537975951032109,
+                "observed_event_frequency": 0.25,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6584505303712342,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7567551548800276,
+                "observed_event_frequency": 0.875,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8373114381511539,
+                "observed_event_frequency": 0.6,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.960639265189404,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          }
+        },
+        "raw": {
+          "heavy": {
+            "brier": 0.10298314223289776,
+            "brier_reference": 0.013863082023222386,
+            "bss": -6.428589260338227,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 39602,
+              "forecast_event_count": 40822,
+              "hits": 1220,
+              "metrics": {
+                "CSI": 0.029869748310645382,
+                "ETS": 0.016063732506223168,
+                "FAR": 0.9701141541325756,
+                "POD": 0.9822866344605475
+              },
+              "misses": 22,
+              "observed_event_count": 1242,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 32.86795491143317,
+            "forecast_event_frequency_at_cutoff": 0.4614323823303341,
+            "log_loss": 0.33092764693079507,
+            "mean_forecast_probability": 0.20793841310540348,
+            "observed_event_count": 1242,
+            "observed_event_frequency": 0.014038974544468057,
+            "pr_auc": 0.2893029752727728,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.031886420926286914,
+                "observed_event_frequency": 0.00046173865592074887,
+                "sample_count": 47646
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.144944225961086,
+                "observed_event_frequency": 0.0025501231093914877,
+                "sample_count": 11372
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24600047849267367,
+                "observed_event_frequency": 0.005115463314820228,
+                "sample_count": 6842
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34782121164418567,
+                "observed_event_frequency": 0.013003355704697987,
+                "sample_count": 4768
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.449151264147641,
+                "observed_event_frequency": 0.01814300960512273,
+                "sample_count": 3748
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.549616030808173,
+                "observed_event_frequency": 0.021606648199445983,
+                "sample_count": 3610
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6488691055813811,
+                "observed_event_frequency": 0.029430181590482152,
+                "sample_count": 3194
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7493842348013546,
+                "observed_event_frequency": 0.045307443365695796,
+                "sample_count": 2781
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8479442590945618,
+                "observed_event_frequency": 0.07243816254416961,
+                "sample_count": 2264
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9554072574751216,
+                "observed_event_frequency": 0.2514489522960321,
+                "sample_count": 2243
+              }
+            ],
+            "roc_auc": 0.926141950908948,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.1487366210789151,
+          "very_heavy": {
+            "brier": 0.045753478846017354,
+            "brier_reference": 0.0037060688853844392,
+            "bss": -11.345555428409485,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 26896,
+              "forecast_event_count": 27220,
+              "hits": 324,
+              "metrics": {
+                "CSI": 0.011900826446280991,
+                "ETS": 0.008213188715493046,
+                "FAR": 0.9880969875091844,
+                "POD": 0.9848024316109423
+              },
+              "misses": 5,
+              "observed_event_count": 329,
+              "sample_count": 88468,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 82.73556231003039,
+            "forecast_event_frequency_at_cutoff": 0.30768187367183614,
+            "log_loss": 0.1635098221976391,
+            "mean_forecast_probability": 0.0982567455449965,
+            "observed_event_count": 329,
+            "observed_event_frequency": 0.0037188587964009584,
+            "pr_auc": 0.20748619788597564,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.016378015127087996,
+                "observed_event_frequency": 0.00016096932802622335,
+                "sample_count": 68336
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14262858082098945,
+                "observed_event_frequency": 0.003065245949496424,
+                "sample_count": 6851
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24643831203096336,
+                "observed_event_frequency": 0.003303964757709251,
+                "sample_count": 3632
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3478820922514995,
+                "observed_event_frequency": 0.004477004477004477,
+                "sample_count": 2457
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4465349516785837,
+                "observed_event_frequency": 0.003500583430571762,
+                "sample_count": 1714
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5493880317906051,
+                "observed_event_frequency": 0.003129890453834116,
+                "sample_count": 1278
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6492744981199196,
+                "observed_event_frequency": 0.013111888111888112,
+                "sample_count": 1144
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7472583771881398,
+                "observed_event_frequency": 0.023397761953204477,
+                "sample_count": 983
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8512920007883655,
+                "observed_event_frequency": 0.036231884057971016,
+                "sample_count": 828
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9612349131756543,
+                "observed_event_frequency": 0.157429718875502,
+                "sample_count": 1245
+              }
+            ],
+            "roc_auc": 0.9604410427836578,
+            "sample_count": 88468,
+            "undefined_reasons": {}
+          }
+        }
+      },
+      "paired_cells": 88468
+    },
+    "selection_day1": {
+      "arms": {
+        "frozen": {
+          "heavy": {
+            "brier": 0.007374688852540579,
+            "brier_reference": 0.009177996285992187,
+            "bss": 0.19648160418237326,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 114,
+              "forecast_event_count": 182,
+              "hits": 68,
+              "metrics": {
+                "CSI": 0.23208191126279865,
+                "ETS": 0.22768158749987027,
+                "FAR": 0.6263736263736264,
+                "POD": 0.37988826815642457
+              },
+              "misses": 111,
+              "observed_event_count": 179,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 1.016759776536313,
+            "forecast_event_frequency_at_cutoff": 0.00932615936459134,
+            "log_loss": 0.032256106857707516,
+            "mean_forecast_probability": 0.006195309501721877,
+            "observed_event_count": 179,
+            "observed_event_frequency": 0.009172431462977196,
+            "pr_auc": 0.342380471605361,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.003700149371877826,
+                "observed_event_frequency": 0.0057414783013500234,
+                "sample_count": 19333
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13145136277464056,
+                "observed_event_frequency": 0.25471698113207547,
+                "sample_count": 106
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2296797114149598,
+                "observed_event_frequency": 0.25,
+                "sample_count": 20
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.33124922314065186,
+                "observed_event_frequency": 0.5625,
+                "sample_count": 16
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4556166028216891,
+                "observed_event_frequency": 0.38461538461538464,
+                "sample_count": 13
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6692087764732415,
+                "observed_event_frequency": 0.875,
+                "sample_count": 16
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7367243883839971,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.844660194174757,
+                "observed_event_frequency": 1.0,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9771838469224018,
+                "observed_event_frequency": 0.0,
+                "sample_count": 2
+              }
+            ],
+            "roc_auc": 0.9652707312957797,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.009825119329779686,
+          "very_heavy": {
+            "brier": 0.002450430477239108,
+            "brier_reference": 0.0029663603875534354,
+            "bss": 0.17392691477378142,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 44,
+              "forecast_event_count": 66,
+              "hits": 22,
+              "metrics": {
+                "CSI": 0.21568627450980393,
+                "ETS": 0.2141750499068305,
+                "FAR": 0.6666666666666666,
+                "POD": 0.3793103448275862
+              },
+              "misses": 36,
+              "observed_event_count": 58,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.1379310344827585,
+            "forecast_event_frequency_at_cutoff": 0.003382013835511145,
+            "log_loss": 0.012715528241426273,
+            "mean_forecast_probability": 0.001284469262982011,
+            "observed_event_count": 58,
+            "observed_event_frequency": 0.0029720727645400975,
+            "pr_auc": 0.331174349035084,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.00047506773256478306,
+                "observed_event_frequency": 0.0019520213694970976,
+                "sample_count": 19467
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14941485484098083,
+                "observed_event_frequency": 0.13636363636363635,
+                "sample_count": 22
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.22580645161290316,
+                "observed_event_frequency": 0.5714285714285714,
+                "sample_count": 14
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4611623815000304,
+                "observed_event_frequency": 1.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7367243883839971,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.844660194174757,
+                "observed_event_frequency": 1.0,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9771838469224018,
+                "observed_event_frequency": 0.0,
+                "sample_count": 2
+              }
+            ],
+            "roc_auc": 0.988929611362279,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          }
+        },
+        "global": {
+          "heavy": {
+            "brier": 0.007426661160540273,
+            "brier_reference": 0.009177996285992187,
+            "bss": 0.19081889672638785,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 74,
+              "forecast_event_count": 131,
+              "hits": 57,
+              "metrics": {
+                "CSI": 0.22529644268774704,
+                "ETS": 0.221599537307437,
+                "FAR": 0.5648854961832062,
+                "POD": 0.31843575418994413
+              },
+              "misses": 122,
+              "observed_event_count": 179,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.7318435754189945,
+            "forecast_event_frequency_at_cutoff": 0.00671278503715091,
+            "log_loss": 0.031373577022434526,
+            "mean_forecast_probability": 0.007116910322615855,
+            "observed_event_count": 179,
+            "observed_event_frequency": 0.009172431462977196,
+            "pr_auc": 0.3469310294616997,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.004790936692866415,
+                "observed_event_frequency": 0.006293850598431696,
+                "sample_count": 19384
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13523516879935119,
+                "observed_event_frequency": 0.2857142857142857,
+                "sample_count": 70
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24901578141373396,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 12
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3555536786744121,
+                "observed_event_frequency": 0.8,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4547875950138707,
+                "observed_event_frequency": 0.5714285714285714,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5634988963180954,
+                "observed_event_frequency": 0.42857142857142855,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6524495524385547,
+                "observed_event_frequency": 0.5,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7593763391616345,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8720534610286557,
+                "observed_event_frequency": 0.8888888888888888,
+                "sample_count": 9
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9265696185390628,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 9
+              }
+            ],
+            "roc_auc": 0.9650416162979639,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.009763733924902082,
+          "very_heavy": {
+            "brier": 0.00233707276436181,
+            "brier_reference": 0.0029663603875534354,
+            "bss": 0.21214132505007022,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 32,
+              "forecast_event_count": 54,
+              "hits": 22,
+              "metrics": {
+                "CSI": 0.24444444444444444,
+                "ETS": 0.2430946978641561,
+                "FAR": 0.5925925925925926,
+                "POD": 0.3793103448275862
+              },
+              "misses": 36,
+              "observed_event_count": 58,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 0.9310344827586207,
+            "forecast_event_frequency_at_cutoff": 0.0027671022290545735,
+            "log_loss": 0.011111068374920749,
+            "mean_forecast_probability": 0.0017770070308720611,
+            "observed_event_count": 58,
+            "observed_event_frequency": 0.0029720727645400975,
+            "pr_auc": 0.34169390864051563,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0007107091503833041,
+                "observed_event_frequency": 0.002003081664098613,
+                "sample_count": 19470
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1547722957032373,
+                "observed_event_frequency": 0.08333333333333333,
+                "sample_count": 12
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2566364079464545,
+                "observed_event_frequency": 0.16666666666666666,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3452437073801245,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.43749361806057924,
+                "observed_event_frequency": 0.4,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5563785907805787,
+                "observed_event_frequency": 0.5,
+                "sample_count": 2
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6477863857913909,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7634807452741615,
+                "observed_event_frequency": 0.875,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.84275625663598,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9888020090278652,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          }
+        },
+        "lead_aware": {
+          "heavy": {
+            "brier": 0.007508992269272729,
+            "brier_reference": 0.009177996285992187,
+            "bss": 0.1818484083793711,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 54,
+              "forecast_event_count": 104,
+              "hits": 50,
+              "metrics": {
+                "CSI": 0.2145922746781116,
+                "ETS": 0.21136349232252866,
+                "FAR": 0.5192307692307693,
+                "POD": 0.27932960893854747
+              },
+              "misses": 129,
+              "observed_event_count": 179,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.5810055865921788,
+            "forecast_event_frequency_at_cutoff": 0.0053292339226236225,
+            "log_loss": 0.03187249524071675,
+            "mean_forecast_probability": 0.006088546130395141,
+            "observed_event_count": 179,
+            "observed_event_frequency": 0.009172431462977196,
+            "pr_auc": 0.3469310294616997,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.004061466454790045,
+                "observed_event_frequency": 0.006645716346401525,
+                "sample_count": 19411
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13351447150158072,
+                "observed_event_frequency": 0.2916666666666667,
+                "sample_count": 48
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.25011950467851424,
+                "observed_event_frequency": 0.5555555555555556,
+                "sample_count": 9
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.35367214304961925,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.43635710018248614,
+                "observed_event_frequency": 0.4,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5381991365988243,
+                "observed_event_frequency": 0.375,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6353138565599419,
+                "observed_event_frequency": 0.8,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7329738842049489,
+                "observed_event_frequency": 0.8,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8543529014401935,
+                "observed_event_frequency": 0.9,
+                "sample_count": 10
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9158378795402459,
+                "observed_event_frequency": 0.625,
+                "sample_count": 8
+              }
+            ],
+            "roc_auc": 0.9650416162979639,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.00984945682789301,
+          "very_heavy": {
+            "brier": 0.002340464558620281,
+            "brier_reference": 0.0029663603875534354,
+            "bss": 0.21099790556783105,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 31,
+              "forecast_event_count": 52,
+              "hits": 21,
+              "metrics": {
+                "CSI": 0.23595505617977527,
+                "ETS": 0.23462599037154397,
+                "FAR": 0.5961538461538461,
+                "POD": 0.3620689655172414
+              },
+              "misses": 37,
+              "observed_event_count": 58,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 0.8965517241379309,
+            "forecast_event_frequency_at_cutoff": 0.0026646169613118113,
+            "log_loss": 0.011252295097800713,
+            "mean_forecast_probability": 0.001657785851041023,
+            "observed_event_count": 58,
+            "observed_event_frequency": 0.0029720727645400975,
+            "pr_auc": 0.34169390864051563,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0006380053972746193,
+                "observed_event_frequency": 0.0020029787889682092,
+                "sample_count": 19471
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14596668432523766,
+                "observed_event_frequency": 0.09090909090909091,
+                "sample_count": 11
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24450419813345606,
+                "observed_event_frequency": 0.14285714285714285,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.36439604144682797,
+                "observed_event_frequency": 0.4,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.47206202208613623,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5789042919087007,
+                "observed_event_frequency": 0.5,
+                "sample_count": 2
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6584505303712342,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7567551548800276,
+                "observed_event_frequency": 0.875,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8373114381511539,
+                "observed_event_frequency": 0.6,
+                "sample_count": 5
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9888020090278652,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          }
+        },
+        "raw": {
+          "heavy": {
+            "brier": 0.05439018953485018,
+            "brier_reference": 0.009177996285992187,
+            "bss": -4.92615074576382,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 5679,
+              "forecast_event_count": 5854,
+              "hits": 175,
+              "metrics": {
+                "CSI": 0.0298736770228747,
+                "ETS": 0.020899073164390776,
+                "FAR": 0.9701059104885549,
+                "POD": 0.9776536312849162
+              },
+              "misses": 4,
+              "observed_event_count": 179,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 32.70391061452514,
+            "forecast_event_frequency_at_cutoff": 0.2999743786830643,
+            "log_loss": 0.19186011359038418,
+            "mean_forecast_probability": 0.12939603380497725,
+            "observed_event_count": 179,
+            "observed_event_frequency": 0.009172431462977196,
+            "pr_auc": 0.34652010918097526,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.027079181148290693,
+                "observed_event_frequency": 0.00029280433350413584,
+                "sample_count": 13661
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14243640485976886,
+                "observed_event_frequency": 0.0009813542688910696,
+                "sample_count": 2038
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24722843102868022,
+                "observed_event_frequency": 0.0039447731755424065,
+                "sample_count": 1014
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3460458370179661,
+                "observed_event_frequency": 0.0057306590257879654,
+                "sample_count": 698
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4492567918874406,
+                "observed_event_frequency": 0.018480492813141684,
+                "sample_count": 487
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5504563459051037,
+                "observed_event_frequency": 0.013779527559055118,
+                "sample_count": 508
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6463789407317276,
+                "observed_event_frequency": 0.04843304843304843,
+                "sample_count": 351
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7494823651266956,
+                "observed_event_frequency": 0.07392996108949416,
+                "sample_count": 257
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8480751020601637,
+                "observed_event_frequency": 0.11842105263157894,
+                "sample_count": 228
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9576663331809879,
+                "observed_event_frequency": 0.315018315018315,
+                "sample_count": 273
+              }
+            ],
+            "roc_auc": 0.9650398827670852,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.07735346423380071,
+          "very_heavy": {
+            "brier": 0.022963274698950535,
+            "brier_reference": 0.0029663603875534354,
+            "bss": -6.7412288794383315,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 3507,
+              "forecast_event_count": 3565,
+              "hits": 58,
+              "metrics": {
+                "CSI": 0.016269284712482467,
+                "ETS": 0.013336850036701205,
+                "FAR": 0.9837307152875175,
+                "POD": 1.0
+              },
+              "misses": 0,
+              "observed_event_count": 58,
+              "sample_count": 19515,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 61.46551724137931,
+            "forecast_event_frequency_at_cutoff": 0.18267998975147323,
+            "log_loss": 0.08927945034255037,
+            "mean_forecast_probability": 0.05442256563383466,
+            "observed_event_count": 58,
+            "observed_event_frequency": 0.0029720727645400975,
+            "pr_auc": 0.33887049500773314,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.011382087733071946,
+                "observed_event_frequency": 0.0,
+                "sample_count": 17062
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14059717971072494,
+                "observed_event_frequency": 0.0009652509652509653,
+                "sample_count": 1036
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24447383557201657,
+                "observed_event_frequency": 0.007352941176470588,
+                "sample_count": 408
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3477238392694139,
+                "observed_event_frequency": 0.004651162790697674,
+                "sample_count": 215
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4494153137666318,
+                "observed_event_frequency": 0.011764705882352941,
+                "sample_count": 170
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5455000415830578,
+                "observed_event_frequency": 0.006802721088435374,
+                "sample_count": 147
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6516569836842965,
+                "observed_event_frequency": 0.04807692307692308,
+                "sample_count": 104
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.748122817899469,
+                "observed_event_frequency": 0.01818181818181818,
+                "sample_count": 110
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8486837236655517,
+                "observed_event_frequency": 0.08653846153846154,
+                "sample_count": 104
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9608333705637048,
+                "observed_event_frequency": 0.2138364779874214,
+                "sample_count": 159
+              }
+            ],
+            "roc_auc": 0.9888028951551875,
+            "sample_count": 19515,
+            "undefined_reasons": {}
+          }
+        }
+      },
+      "paired_cells": 19515
+    },
+    "selection_day2": {
+      "arms": {
+        "frozen": {
+          "heavy": {
+            "brier": 0.011451762816676698,
+            "brier_reference": 0.013513042712566831,
+            "bss": 0.15254002667905353,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 382,
+              "forecast_event_count": 549,
+              "hits": 167,
+              "metrics": {
+                "CSI": 0.20642768850432633,
+                "ETS": 0.1989940938135307,
+                "FAR": 0.6958105646630237,
+                "POD": 0.3911007025761124
+              },
+              "misses": 260,
+              "observed_event_count": 427,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 1.2857142857142858,
+            "forecast_event_frequency_at_cutoff": 0.017582628747117603,
+            "log_loss": 0.04972149169145388,
+            "mean_forecast_probability": 0.010268664565484226,
+            "observed_event_count": 427,
+            "observed_event_frequency": 0.013675377914424802,
+            "pr_auc": 0.27728983157898734,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.006561182762775543,
+                "observed_event_frequency": 0.008475957620211898,
+                "sample_count": 30675
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13336590082880953,
+                "observed_event_frequency": 0.19480519480519481,
+                "sample_count": 308
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.23506375162498777,
+                "observed_event_frequency": 0.31,
+                "sample_count": 100
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.33027435600542676,
+                "observed_event_frequency": 0.494949494949495,
+                "sample_count": 99
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44461707785152954,
+                "observed_event_frequency": 0.5416666666666666,
+                "sample_count": 24
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5531914893617021,
+                "observed_event_frequency": 1.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6388391720254053,
+                "observed_event_frequency": 0.7647058823529411,
+                "sample_count": 17
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9217359670134238,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.014718107863955332,
+          "very_heavy": {
+            "brier": 0.003266345047278635,
+            "brier_reference": 0.0035754442767866336,
+            "bss": 0.08645057944681389,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 146,
+              "forecast_event_count": 194,
+              "hits": 48,
+              "metrics": {
+                "CSI": 0.18604651162790697,
+                "ETS": 0.1838451871929325,
+                "FAR": 0.7525773195876289,
+                "POD": 0.42857142857142855
+              },
+              "misses": 64,
+              "observed_event_count": 112,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.7321428571428572,
+            "forecast_event_frequency_at_cutoff": 0.006213169356904945,
+            "log_loss": 0.017335161623410974,
+            "mean_forecast_probability": 0.0014659420487316186,
+            "observed_event_count": 112,
+            "observed_event_frequency": 0.0035869843709966692,
+            "pr_auc": 0.19110160278346827,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0010698819724510923,
+                "observed_event_frequency": 0.002729695879764925,
+                "sample_count": 31139
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1347790381310751,
+                "observed_event_frequency": 0.32432432432432434,
+                "sample_count": 74
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2258064516129032,
+                "observed_event_frequency": 0.2727272727272727,
+                "sample_count": 11
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9592572227528193,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          }
+        },
+        "global": {
+          "heavy": {
+            "brier": 0.011501219297324814,
+            "brier_reference": 0.013513042712566831,
+            "bss": 0.14888011960260183,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 260,
+              "forecast_event_count": 412,
+              "hits": 152,
+              "metrics": {
+                "CSI": 0.22125181950509462,
+                "ETS": 0.21481230238509452,
+                "FAR": 0.6310679611650486,
+                "POD": 0.3559718969555035
+              },
+              "misses": 275,
+              "observed_event_count": 427,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.9648711943793911,
+            "forecast_event_frequency_at_cutoff": 0.013194978221880605,
+            "log_loss": 0.04923004615091952,
+            "mean_forecast_probability": 0.011006689397657792,
+            "observed_event_count": 427,
+            "observed_event_frequency": 0.013675377914424802,
+            "pr_auc": 0.2873127277283966,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0079339299218863,
+                "observed_event_frequency": 0.008925094119174347,
+                "sample_count": 30812
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13600892085493774,
+                "observed_event_frequency": 0.2556053811659193,
+                "sample_count": 223
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24246588492904333,
+                "observed_event_frequency": 0.4431818181818182,
+                "sample_count": 88
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34364330546102273,
+                "observed_event_frequency": 0.45454545454545453,
+                "sample_count": 44
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44818520662116257,
+                "observed_event_frequency": 0.5652173913043478,
+                "sample_count": 23
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5532011937829908,
+                "observed_event_frequency": 0.5384615384615384,
+                "sample_count": 13
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6587102009091045,
+                "observed_event_frequency": 0.7,
+                "sample_count": 10
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7351913520422655,
+                "observed_event_frequency": 0.75,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.81894007923986,
+                "observed_event_frequency": 1.0,
+                "sample_count": 3
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9226741191601512,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.01481608456948321,
+          "very_heavy": {
+            "brier": 0.0033148652721583963,
+            "brier_reference": 0.0035754442767866336,
+            "bss": 0.07288017500930766,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 98,
+              "forecast_event_count": 136,
+              "hits": 38,
+              "metrics": {
+                "CSI": 0.18095238095238095,
+                "ETS": 0.17904530368362995,
+                "FAR": 0.7205882352941176,
+                "POD": 0.3392857142857143
+              },
+              "misses": 74,
+              "observed_event_count": 112,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.2142857142857144,
+            "forecast_event_frequency_at_cutoff": 0.004355623879067384,
+            "log_loss": 0.015228085506002275,
+            "mean_forecast_probability": 0.001815207661931676,
+            "observed_event_count": 112,
+            "observed_event_frequency": 0.0035869843709966692,
+            "pr_auc": 0.1990993851129925,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0013880251333898603,
+                "observed_event_frequency": 0.00288813298247866,
+                "sample_count": 31162
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14420655670046817,
+                "observed_event_frequency": 0.41025641025641024,
+                "sample_count": 39
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.25612785541786853,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 9
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3438413310028257,
+                "observed_event_frequency": 0.2222222222222222,
+                "sample_count": 9
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4668793444929081,
+                "observed_event_frequency": 0.25,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5331090623836784,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9653707917018697,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          }
+        },
+        "lead_aware": {
+          "heavy": {
+            "brier": 0.011482944839303165,
+            "brier_reference": 0.013513042712566831,
+            "bss": 0.15023247661133488,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 265,
+              "forecast_event_count": 418,
+              "hits": 153,
+              "metrics": {
+                "CSI": 0.22109826589595374,
+                "ETS": 0.2146105083682393,
+                "FAR": 0.6339712918660287,
+                "POD": 0.3583138173302108
+              },
+              "misses": 274,
+              "observed_event_count": 427,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.9789227166276346,
+            "forecast_event_frequency_at_cutoff": 0.013387138098898283,
+            "log_loss": 0.049155363815100765,
+            "mean_forecast_probability": 0.011232459299414034,
+            "observed_event_count": 427,
+            "observed_event_frequency": 0.013675377914424802,
+            "pr_auc": 0.2873127277283966,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.008082687700579702,
+                "observed_event_frequency": 0.00889437122638447,
+                "sample_count": 30806
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13677304397169962,
+                "observed_event_frequency": 0.2544642857142857,
+                "sample_count": 224
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24344220389158452,
+                "observed_event_frequency": 0.4222222222222222,
+                "sample_count": 90
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34620419037329325,
+                "observed_event_frequency": 0.45652173913043476,
+                "sample_count": 46
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4464902453917532,
+                "observed_event_frequency": 0.6190476190476191,
+                "sample_count": 21
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5433750541942711,
+                "observed_event_frequency": 0.5,
+                "sample_count": 14
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6553317464953005,
+                "observed_event_frequency": 0.6666666666666666,
+                "sample_count": 12
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7332076087864732,
+                "observed_event_frequency": 0.7142857142857143,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8186746930937974,
+                "observed_event_frequency": 1.0,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9226741191601512,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.014798619346325186,
+          "very_heavy": {
+            "brier": 0.0033156745070220205,
+            "brier_reference": 0.0035754442767866336,
+            "bss": 0.07265384373381334,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 98,
+              "forecast_event_count": 136,
+              "hits": 38,
+              "metrics": {
+                "CSI": 0.18095238095238095,
+                "ETS": 0.17904530368362995,
+                "FAR": 0.7205882352941176,
+                "POD": 0.3392857142857143
+              },
+              "misses": 74,
+              "observed_event_count": 112,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.2142857142857144,
+            "forecast_event_frequency_at_cutoff": 0.004355623879067384,
+            "log_loss": 0.0152383591498147,
+            "mean_forecast_probability": 0.001800702146791848,
+            "observed_event_count": 112,
+            "observed_event_frequency": 0.0035869843709966692,
+            "pr_auc": 0.1990993851129925,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0013738073272557716,
+                "observed_event_frequency": 0.00288813298247866,
+                "sample_count": 31162
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14391810533139768,
+                "observed_event_frequency": 0.41025641025641024,
+                "sample_count": 39
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2559960639911527,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 9
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34390477318433743,
+                "observed_event_frequency": 0.2222222222222222,
+                "sample_count": 9
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4672481692089146,
+                "observed_event_frequency": 0.25,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.533633580144728,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9653707917018697,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          }
+        },
+        "raw": {
+          "heavy": {
+            "brier": 0.11052697174340902,
+            "brier_reference": 0.013513042712566831,
+            "bss": -7.17928086918732,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 14617,
+              "forecast_event_count": 15038,
+              "hits": 421,
+              "metrics": {
+                "CSI": 0.02798457856952938,
+                "ETS": 0.014513047054210457,
+                "FAR": 0.9720042558850911,
+                "POD": 0.9859484777517564
+              },
+              "misses": 6,
+              "observed_event_count": 427,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 35.21779859484777,
+            "forecast_event_frequency_at_cutoff": 0.4816167050986421,
+            "log_loss": 0.35245395864919626,
+            "mean_forecast_probability": 0.2193462502058349,
+            "observed_event_count": 427,
+            "observed_event_frequency": 0.013675377914424802,
+            "pr_auc": 0.28799310033636344,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.031084855238580143,
+                "observed_event_frequency": 0.00037069072037563324,
+                "sample_count": 16186
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14455527608017074,
+                "observed_event_frequency": 0.0039001560062402497,
+                "sample_count": 3846
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24601854840059698,
+                "observed_event_frequency": 0.008173273395995096,
+                "sample_count": 2447
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3489159914589441,
+                "observed_event_frequency": 0.0064516129032258064,
+                "sample_count": 1860
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44852836057049245,
+                "observed_event_frequency": 0.010171646535282899,
+                "sample_count": 1573
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5485934465376543,
+                "observed_event_frequency": 0.01838235294117647,
+                "sample_count": 1360
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6507029564164379,
+                "observed_event_frequency": 0.020651310563939634,
+                "sample_count": 1259
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7483361848892974,
+                "observed_event_frequency": 0.044036697247706424,
+                "sample_count": 1090
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8491346608795515,
+                "observed_event_frequency": 0.0847682119205298,
+                "sample_count": 755
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.956529238904259,
+                "observed_event_frequency": 0.22995283018867924,
+                "sample_count": 848
+              }
+            ],
+            "roc_auc": 0.9226829402389403,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.1591659253612794,
+          "very_heavy": {
+            "brier": 0.0486389536178704,
+            "brier_reference": 0.0035754442767866336,
+            "bss": -12.603611146635961,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 10089,
+              "forecast_event_count": 10198,
+              "hits": 109,
+              "metrics": {
+                "CSI": 0.010685226938535438,
+                "ETS": 0.007124846657182668,
+                "FAR": 0.9893116297313199,
+                "POD": 0.9732142857142857
+              },
+              "misses": 3,
+              "observed_event_count": 112,
+              "sample_count": 31224,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 91.05357142857142,
+            "forecast_event_frequency_at_cutoff": 0.32660773763771456,
+            "log_loss": 0.17406975642729616,
+            "mean_forecast_probability": 0.10429680764069565,
+            "observed_event_count": 112,
+            "observed_event_frequency": 0.0035869843709966692,
+            "pr_auc": 0.1902720640435977,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.01651190839837682,
+                "observed_event_frequency": 0.00012741017582604264,
+                "sample_count": 23546
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14322678979143677,
+                "observed_event_frequency": 0.0,
+                "sample_count": 2540
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24770048106572776,
+                "observed_event_frequency": 0.003970880211780278,
+                "sample_count": 1511
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34567934227943026,
+                "observed_event_frequency": 0.008138351983723296,
+                "sample_count": 983
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4468573436742937,
+                "observed_event_frequency": 0.004709576138147566,
+                "sample_count": 637
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5511242825636746,
+                "observed_event_frequency": 0.004454342984409799,
+                "sample_count": 449
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6500258650328491,
+                "observed_event_frequency": 0.009433962264150943,
+                "sample_count": 424
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7488804266180127,
+                "observed_event_frequency": 0.014367816091954023,
+                "sample_count": 348
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8531793155102172,
+                "observed_event_frequency": 0.018808777429467086,
+                "sample_count": 319
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.962336986139798,
+                "observed_event_frequency": 0.16059957173447537,
+                "sample_count": 467
+              }
+            ],
+            "roc_auc": 0.9653862887080777,
+            "sample_count": 31224,
+            "undefined_reasons": {}
+          }
+        }
+      },
+      "paired_cells": 31224
+    },
+    "selection_day3": {
+      "arms": {
+        "frozen": {
+          "heavy": {
+            "brier": 0.014367371032650528,
+            "brier_reference": 0.01657608993750467,
+            "bss": 0.1332472804612833,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 463,
+              "forecast_event_count": 689,
+              "hits": 226,
+              "metrics": {
+                "CSI": 0.20564149226569609,
+                "ETS": 0.19715683971568543,
+                "FAR": 0.6719883889695211,
+                "POD": 0.3553459119496855
+              },
+              "misses": 410,
+              "observed_event_count": 636,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 1.0833333333333333,
+            "forecast_event_frequency_at_cutoff": 0.01826181451933526,
+            "log_loss": 0.06089761610805975,
+            "mean_forecast_probability": 0.010894025461312419,
+            "observed_event_count": 636,
+            "observed_event_frequency": 0.01685705955630947,
+            "pr_auc": 0.27172691101571445,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.007362683619251473,
+                "observed_event_frequency": 0.011069114470842332,
+                "sample_count": 37040
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13560631862784187,
+                "observed_event_frequency": 0.23877068557919623,
+                "sample_count": 423
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.23171566828867074,
+                "observed_event_frequency": 0.2926829268292683,
+                "sample_count": 123
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.33013844581395985,
+                "observed_event_frequency": 0.5740740740740741,
+                "sample_count": 108
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4396880387557265,
+                "observed_event_frequency": 0.75,
+                "sample_count": 28
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6397383086614402,
+                "observed_event_frequency": 0.8571428571428571,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9075209481115545,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.018295028001532498,
+          "very_heavy": {
+            "brier": 0.00392765696888197,
+            "brier_reference": 0.004196779853446936,
+            "bss": 0.06412604281445144,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 184,
+              "forecast_event_count": 230,
+              "hits": 46,
+              "metrics": {
+                "CSI": 0.13411078717201166,
+                "ETS": 0.13165694355532578,
+                "FAR": 0.8,
+                "POD": 0.2893081761006289
+              },
+              "misses": 113,
+              "observed_event_count": 159,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.4465408805031446,
+            "forecast_event_frequency_at_cutoff": 0.006096106443319462,
+            "log_loss": 0.02150455323148211,
+            "mean_forecast_probability": 0.0015068661630188742,
+            "observed_event_count": 159,
+            "observed_event_frequency": 0.004214264889077368,
+            "pr_auc": 0.15617046740887303,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.00117272869009028,
+                "observed_event_frequency": 0.00342711405116761,
+                "sample_count": 37641
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1362927653493458,
+                "observed_event_frequency": 0.375,
+                "sample_count": 80
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.22580645161290322,
+                "observed_event_frequency": 0.0,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9344298190547455,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          }
+        },
+        "global": {
+          "heavy": {
+            "brier": 0.014418529218340801,
+            "brier_reference": 0.01657608993750467,
+            "bss": 0.13016101669925317,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 325,
+              "forecast_event_count": 519,
+              "hits": 194,
+              "metrics": {
+                "CSI": 0.20187304890738814,
+                "ETS": 0.19454025240007755,
+                "FAR": 0.626204238921002,
+                "POD": 0.3050314465408805
+              },
+              "misses": 442,
+              "observed_event_count": 636,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.8160377358490566,
+            "forecast_event_frequency_at_cutoff": 0.013755996713403483,
+            "log_loss": 0.0612963820459608,
+            "mean_forecast_probability": 0.011608098123468464,
+            "observed_event_count": 636,
+            "observed_event_frequency": 0.01685705955630947,
+            "pr_auc": 0.2810561270043315,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.008812719523519435,
+                "observed_event_frequency": 0.011878527277613545,
+                "sample_count": 37210
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1383884630441566,
+                "observed_event_frequency": 0.27728613569321536,
+                "sample_count": 339
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24440136675346466,
+                "observed_event_frequency": 0.38823529411764707,
+                "sample_count": 85
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.35241617254971735,
+                "observed_event_frequency": 0.6097560975609756,
+                "sample_count": 41
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4462282393025572,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 30
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5471003446337865,
+                "observed_event_frequency": 0.7857142857142857,
+                "sample_count": 14
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6490634560331828,
+                "observed_event_frequency": 0.3333333333333333,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7407849173706537,
+                "observed_event_frequency": 1.0,
+                "sample_count": 4
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9083473173920997,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.018375317301379406,
+          "very_heavy": {
+            "brier": 0.003956788083038606,
+            "brier_reference": 0.004196779853446936,
+            "bss": 0.05718474134668228,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 104,
+              "forecast_event_count": 143,
+              "hits": 39,
+              "metrics": {
+                "CSI": 0.1482889733840304,
+                "ETS": 0.14633287508371218,
+                "FAR": 0.7272727272727273,
+                "POD": 0.24528301886792453
+              },
+              "misses": 120,
+              "observed_event_count": 159,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 0.8993710691823898,
+            "forecast_event_frequency_at_cutoff": 0.003790187919107318,
+            "log_loss": 0.019509923731069048,
+            "mean_forecast_probability": 0.0018637663726046479,
+            "observed_event_count": 159,
+            "observed_event_frequency": 0.004214264889077368,
+            "pr_auc": 0.1603754157019316,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0015060593465904563,
+                "observed_event_frequency": 0.0034523050775440833,
+                "sample_count": 37656
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1390894651484187,
+                "observed_event_frequency": 0.4423076923076923,
+                "sample_count": 52
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24810604983170242,
+                "observed_event_frequency": 0.46153846153846156,
+                "sample_count": 13
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.36370090134420235,
+                "observed_event_frequency": 0.0,
+                "sample_count": 6
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4654458852534895,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.500188587941914,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9404948080145574,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          }
+        },
+        "lead_aware": {
+          "heavy": {
+            "brier": 0.014298638662542143,
+            "brier_reference": 0.01657608993750467,
+            "bss": 0.13739375712541346,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 377,
+              "forecast_event_count": 587,
+              "hits": 210,
+              "metrics": {
+                "CSI": 0.2073050345508391,
+                "ETS": 0.19948552223746963,
+                "FAR": 0.6422487223168655,
+                "POD": 0.330188679245283
+              },
+              "misses": 426,
+              "observed_event_count": 636,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 0.9229559748427673,
+            "forecast_event_frequency_at_cutoff": 0.015558323835776194,
+            "log_loss": 0.060730196585188446,
+            "mean_forecast_probability": 0.012925876634727143,
+            "observed_event_count": 636,
+            "observed_event_frequency": 0.01685705955630947,
+            "pr_auc": 0.2810561270043315,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.009702926044592884,
+                "observed_event_frequency": 0.011469495449894998,
+                "sample_count": 37142
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.1387735732554236,
+                "observed_event_frequency": 0.26975476839237056,
+                "sample_count": 367
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24047697398044657,
+                "observed_event_frequency": 0.3181818181818182,
+                "sample_count": 110
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34456900668817164,
+                "observed_event_frequency": 0.5853658536585366,
+                "sample_count": 41
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4439923986666259,
+                "observed_event_frequency": 0.75,
+                "sample_count": 36
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5328068667952485,
+                "observed_event_frequency": 0.8333333333333334,
+                "sample_count": 18
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6285233288721643,
+                "observed_event_frequency": 0.5,
+                "sample_count": 8
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7403122887509432,
+                "observed_event_frequency": 0.8571428571428571,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9083473173920997,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.018241942317833906,
+          "very_heavy": {
+            "brier": 0.003943303655291761,
+            "brier_reference": 0.004196779853446936,
+            "bss": 0.06039778282556019,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 121,
+              "forecast_event_count": 161,
+              "hits": 40,
+              "metrics": {
+                "CSI": 0.14285714285714285,
+                "ETS": 0.14077506701367298,
+                "FAR": 0.7515527950310559,
+                "POD": 0.25157232704402516
+              },
+              "misses": 119,
+              "observed_event_count": 159,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 1.012578616352201,
+            "forecast_event_frequency_at_cutoff": 0.004267274510323623,
+            "log_loss": 0.019316244905604366,
+            "mean_forecast_probability": 0.002015982080555261,
+            "observed_event_count": 159,
+            "observed_event_frequency": 0.004214264889077368,
+            "pr_auc": 0.1603754157019316,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.0016105559896822583,
+                "observed_event_frequency": 0.003426476838079048,
+                "sample_count": 37648
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.13737196712315425,
+                "observed_event_frequency": 0.4074074074074074,
+                "sample_count": 54
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.23816834811465248,
+                "observed_event_frequency": 0.4117647058823529,
+                "sample_count": 17
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.3631896365938285,
+                "observed_event_frequency": 0.14285714285714285,
+                "sample_count": 7
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4468761012524187,
+                "observed_event_frequency": 0.0,
+                "sample_count": 2
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.523748216450714,
+                "observed_event_frequency": 0.0,
+                "sample_count": 1
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": null,
+                "observed_event_frequency": null,
+                "sample_count": 0
+              }
+            ],
+            "roc_auc": 0.9404948080145574,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          }
+        },
+        "raw": {
+          "heavy": {
+            "brier": 0.12187425886111994,
+            "brier_reference": 0.01657608993750467,
+            "bss": -6.35241298283319,
+            "categorical": {
+              "decision_threshold_probability": 0.1,
+              "false_alarms": 19306,
+              "forecast_event_count": 19930,
+              "hits": 624,
+              "metrics": {
+                "CSI": 0.03129074315514994,
+                "ETS": 0.014691330866796517,
+                "FAR": 0.9686904164576016,
+                "POD": 0.9811320754716981
+              },
+              "misses": 12,
+              "observed_event_count": 636,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.1,
+            "event_frequency_bias_at_cutoff": 31.33647798742138,
+            "forecast_event_frequency_at_cutoff": 0.528240875718943,
+            "log_loss": 0.38504425102957207,
+            "mean_forecast_probability": 0.2391228130742325,
+            "observed_event_count": 636,
+            "observed_event_frequency": 0.01685705955630947,
+            "pr_auc": 0.28285027221259784,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.03630497504890211,
+                "observed_event_frequency": 0.0006741951795044666,
+                "sample_count": 17799
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14614809634127632,
+                "observed_event_frequency": 0.002186588921282799,
+                "sample_count": 5488
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.2456191235869656,
+                "observed_event_frequency": 0.003253475303164744,
+                "sample_count": 3381
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34746054242864294,
+                "observed_event_frequency": 0.02081447963800905,
+                "sample_count": 2210
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.44970128507037344,
+                "observed_event_frequency": 0.0254739336492891,
+                "sample_count": 1688
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.550169322736224,
+                "observed_event_frequency": 0.02640642939150402,
+                "sample_count": 1742
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6479633162258837,
+                "observed_event_frequency": 0.032196969696969696,
+                "sample_count": 1584
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.7501632828561177,
+                "observed_event_frequency": 0.041143654114365415,
+                "sample_count": 1434
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.847219367959648,
+                "observed_event_frequency": 0.05698672911787666,
+                "sample_count": 1281
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9540096033578223,
+                "observed_event_frequency": 0.2522281639928699,
+                "sample_count": 1122
+              }
+            ],
+            "roc_auc": 0.9084166654373921,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          },
+          "joint_brier_sum": 0.17702779521339693,
+          "very_heavy": {
+            "brier": 0.055153536352276995,
+            "brier_reference": 0.004196779853446936,
+            "bss": -12.141870262024302,
+            "categorical": {
+              "decision_threshold_probability": 0.05,
+              "false_alarms": 13300,
+              "forecast_event_count": 13457,
+              "hits": 157,
+              "metrics": {
+                "CSI": 0.011665056839289695,
+                "ETS": 0.007482948629230065,
+                "FAR": 0.9883332094820539,
+                "POD": 0.9874213836477987
+              },
+              "misses": 2,
+              "observed_event_count": 159,
+              "sample_count": 37729,
+              "undefined_metric_reasons": {},
+              "undefined_reason": null
+            },
+            "decision_threshold": 0.05,
+            "event_frequency_bias_at_cutoff": 84.63522012578616,
+            "forecast_event_frequency_at_cutoff": 0.3566752365554348,
+            "log_loss": 0.193165586208486,
+            "mean_forecast_probability": 0.11593092514398431,
+            "observed_event_count": 159,
+            "observed_event_frequency": 0.004214264889077368,
+            "pr_auc": 0.15882546631536526,
+            "reliability": [
+              {
+                "bin_lower": 0.0,
+                "bin_upper": 0.1,
+                "mean_predicted_probability": 0.019338483326414854,
+                "observed_event_frequency": 0.00028851702250432774,
+                "sample_count": 27728
+              },
+              {
+                "bin_lower": 0.1,
+                "bin_upper": 0.2,
+                "mean_predicted_probability": 0.14280723143634758,
+                "observed_event_frequency": 0.0061068702290076335,
+                "sample_count": 3275
+              },
+              {
+                "bin_lower": 0.2,
+                "bin_upper": 0.3,
+                "mean_predicted_probability": 0.24579287652817366,
+                "observed_event_frequency": 0.0017513134851138354,
+                "sample_count": 1713
+              },
+              {
+                "bin_lower": 0.3,
+                "bin_upper": 0.4,
+                "mean_predicted_probability": 0.34962897677389226,
+                "observed_event_frequency": 0.0015885623510722795,
+                "sample_count": 1259
+              },
+              {
+                "bin_lower": 0.4,
+                "bin_upper": 0.5,
+                "mean_predicted_probability": 0.4457686614291509,
+                "observed_event_frequency": 0.0011025358324145535,
+                "sample_count": 907
+              },
+              {
+                "bin_lower": 0.5,
+                "bin_upper": 0.6,
+                "mean_predicted_probability": 0.5490829848161203,
+                "observed_event_frequency": 0.001466275659824047,
+                "sample_count": 682
+              },
+              {
+                "bin_lower": 0.6,
+                "bin_upper": 0.7,
+                "mean_predicted_probability": 0.6483550856689823,
+                "observed_event_frequency": 0.00974025974025974,
+                "sample_count": 616
+              },
+              {
+                "bin_lower": 0.7,
+                "bin_upper": 0.8,
+                "mean_predicted_probability": 0.746002069226536,
+                "observed_event_frequency": 0.030476190476190476,
+                "sample_count": 525
+              },
+              {
+                "bin_lower": 0.8,
+                "bin_upper": 0.9,
+                "mean_predicted_probability": 0.8504752289970122,
+                "observed_event_frequency": 0.037037037037037035,
+                "sample_count": 405
+              },
+              {
+                "bin_lower": 0.9,
+                "bin_upper": 1.0,
+                "mean_predicted_probability": 0.9605066049382472,
+                "observed_event_frequency": 0.14054927302100162,
+                "sample_count": 619
+              }
+            ],
+            "roc_auc": 0.9405346497858086,
+            "sample_count": 37729,
+            "undefined_reasons": {}
+          }
+        }
+      },
+      "paired_cells": 37729
+    }
+  },
+  "training_labels": "early_2024_calibration_block_only"
+}

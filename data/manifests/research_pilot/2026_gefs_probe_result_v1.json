@@ -1,0 +1,44 @@
+{
+  "created_at_utc": "2026-10-06T13:45:16.469015+00:00",
+  "cycles": [
+    {
+      "cycle": "20260615",
+      "model_version": "NOT_DECLARED_BY_INDEX",
+      "planned_selected_bytes": 9208173,
+      "selected_index_rows_sha256": "6ba43e53ef03245fce385fa9b989c1e1f5857e776e3ac25769f040ba5b62d479",
+      "selected_messages": 34,
+      "status": "COMPLETE_SELECTED_INDEX"
+    },
+    {
+      "cycle": "20260715",
+      "model_version": "NOT_DECLARED_BY_INDEX",
+      "planned_selected_bytes": 9275928,
+      "selected_index_rows_sha256": "7c1710febd97d08dbb624b52ef469b1ae8fdbd13d68e9f2d5f37e704a5f30258",
+      "selected_messages": 34,
+      "status": "COMPLETE_SELECTED_INDEX"
+    },
+    {
+      "cycle": "20260815",
+      "model_version": "NOT_DECLARED_BY_INDEX",
+      "planned_selected_bytes": 9664627,
+      "selected_index_rows_sha256": "c1f3b94fa3245c6260b38d7625d585cbb21ae3ba3d9a36246f240b00777f025d",
+      "selected_messages": 34,
+      "status": "COMPLETE_SELECTED_INDEX"
+    },
+    {
+      "cycle": "20260915",
+      "model_version": "NOT_DECLARED_BY_INDEX",
+      "planned_selected_bytes": 9500398,
+      "selected_index_rows_sha256": "d4435c150055f31c7042d83424425e1288bb7a91e9d9703bd537b04837631432",
+      "selected_messages": 34,
+      "status": "COMPLETE_SELECTED_INDEX"
+    }
+  ],
+  "forecast_payload_download": false,
+  "interpretation": "Index availability alone does not prove complete archive coverage, GRIB model version, comparable accumulation semantics, or independent 2026 test eligibility.",
+  "observation_read": false,
+  "protocol_sha256": "8e4b2051d640bf0d4f86769bdd1d63d66c26d0e5d379c1d85de09f9af073bf0c",
+  "role": "SOURCE_AVAILABILITY_PROBE_ONLY",
+  "schema": "varshasetu-forecast-only-source-probe-result-v1",
+  "source": "noaa-gefs-pds.s3.amazonaws.com"
+}

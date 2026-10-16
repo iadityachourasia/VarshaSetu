@@ -1,0 +1,18 @@
+{
+  "schema": "varshasetu-coherent-partial-grid-forecast-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_2024_JUNE_FORECAST_REPLAY",
+  "track": "B_OPERATIONAL_GEFS_DEVELOPMENT_REPLAY_ONLY",
+  "population": "All 30 June 2024 00 UTC GEFS control cycles, each with Day 1/2/3 24-hour windows +3-27/+27-51/+51-75 hours, including every previously refused lead",
+  "forecast_source": "Existing hash-verified Phase 4E/4F selected GEFS message archive through StoredSource",
+  "frozen_models": "Same final-freeze M0/M2/M4 and separately calibrated heavy/very-heavy models as the strict live worker; no fitting or changed features",
+  "probability_projection": "After the frozen models predict, where P(very heavy)>P(heavy), set both to their arithmetic mean; otherwise leave both unchanged. This research-only wrapper uses the sealed projection diagnostic method and does not relabel the result calibrated.",
+  "rainfall_mask": "Same partial-grid masked nested-accumulation reconstruction as partial_grid_inference_protocol_v1; invalid rainfall rows never enter a model",
+  "regional_minimum_valid_fraction": 0.99,
+  "district_minimum_weighted_valid_fraction": 0.95,
+  "comparison": "For all 55 leads READY in the prior immutable partial-grid candidate, require all M0/M2/M4 and event probability fields to match bitwise after projection. Check every newly ready lead for nonnegative finite rain, coherent [0,1] probabilities, NaN invalid cells and null unsupported districts.",
+  "forecast_only": true,
+  "reference_read": false,
+  "no_promotion": "2024 is consumed development validation. No live worker, API, dashboard, official warning or calibrated reliability claim; independent-year reliability remains required.",
+  "excluded_years": [2025, 2026]
+}

@@ -1,0 +1,503 @@
+{
+  "cases": [
+    {
+      "cycle": "20260901",
+      "manifest_sha256": "b8cdb0ab5b40325a443a1d5417a2fb252ec4b65735dbfcd4ed9b346154f8da8b",
+      "planned_selected_bytes": 8818767,
+      "products_passing_qc": [
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260902",
+      "manifest_sha256": "42deea306ee3da9b8072d01d8ff69b15e6479be4d4d2121ebaa696d2e876247c",
+      "planned_selected_bytes": 8655935,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260903",
+      "manifest_sha256": "f64314adfda705c20c5914c76a326af10e640bb3b9ed17fa0ea058a0d9667493",
+      "planned_selected_bytes": 8929993,
+      "products_passing_qc": [
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    },
+    {
+      "cycle": "20260904",
+      "manifest_sha256": "24c0f841f29136d01e464b1e2032faaa50cde2cb40da5c5ca15ad3cd3ca87e2d",
+      "planned_selected_bytes": 8644411,
+      "products_passing_qc": [
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260905",
+      "manifest_sha256": "ea5498527c86fabd0fc614e2869e222a47bbb1fbe6f162acf618131c59f77417",
+      "planned_selected_bytes": 8781112,
+      "products_passing_qc": [
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260906",
+      "manifest_sha256": "cb06b8794e9e8b4413721faa3bd6bb6bd4d4ac0422863bb796cea03e539cdbe8",
+      "planned_selected_bytes": 8946226,
+      "products_passing_qc": [
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    },
+    {
+      "cycle": "20260907",
+      "manifest_sha256": "68adc1799113d14161b8d01aa7016c651a2044e14b6090c57f536feb55af34df",
+      "planned_selected_bytes": 9649395,
+      "products_passing_qc": [
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260908",
+      "manifest_sha256": "4164461bcee88f44d741e5a483bb5f25625ddfa3ed6af768e08fe128ea77f5b0",
+      "planned_selected_bytes": 9188586,
+      "products_passing_qc": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    },
+    {
+      "cycle": "20260909",
+      "manifest_sha256": "3a133f7eb0cfd1b156c9901bc13a152f1b5c3f5ef921e60c1b04980fee833c83",
+      "planned_selected_bytes": 9627981,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [],
+      "status": "FEATURES_READY",
+      "withheld_products": {}
+    },
+    {
+      "cycle": "20260910",
+      "manifest_sha256": "5be1280a6d8f3e9ebba55fea8af33ad93429d6c475fbe55d3e7d496fd4d521ac",
+      "planned_selected_bytes": 9396897,
+      "products_passing_qc": [
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260911",
+      "manifest_sha256": "dfda3306e8c8c3ef0e024b2548437d6897fbf7f88a6e6fef78fb9a9b5bc1b62c",
+      "planned_selected_bytes": 9159501,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260912",
+      "manifest_sha256": "a76808bd76a7631b6c418c340779ab6eeae33433dddfa95fcef2ab884d22edb8",
+      "planned_selected_bytes": 10240494,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260913",
+      "manifest_sha256": "309cfb19b403cba4accce355aa84d696349953e26108610dd8c496cd8256bc45",
+      "planned_selected_bytes": 9340905,
+      "products_passing_qc": [
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    },
+    {
+      "cycle": "20260914",
+      "manifest_sha256": "91d1b07431908a925e9de7abd13cecf2ba935018d2ded46d26bb5ce9454de1d8",
+      "planned_selected_bytes": 8883048,
+      "products_passing_qc": [
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)"
+      }
+    },
+    {
+      "cycle": "20260915",
+      "manifest_sha256": "b05b337169cd76e70d8dc1f97ee29ff3c88712ccf48b5b749a075562c3aab967",
+      "planned_selected_bytes": 9500398,
+      "products_passing_qc": [
+        "day1_24h"
+      ],
+      "products_withheld": [
+        "day2_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260916",
+      "manifest_sha256": "cb5263d9cf33097cde8a70a88926f758864ac692e21c90d8ba6f2ceb9258724b",
+      "planned_selected_bytes": 9536859,
+      "products_passing_qc": [],
+      "products_withheld": [
+        "day1_24h",
+        "day2_24h",
+        "day3_24h"
+      ],
+      "status": "NO_ELIGIBLE_LEAD",
+      "withheld_products": {
+        "all": "no lead passed the canonical rainfall reconstruction: day1_24h: canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6); day2_24h: canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30); day3_24h: canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260917",
+      "manifest_sha256": "6105a966c8b51e0795bbb9a7a03100f9a6e532a23b5ed9a78f3cf001312f0c45",
+      "planned_selected_bytes": 10198097,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [],
+      "status": "FEATURES_READY",
+      "withheld_products": {}
+    },
+    {
+      "cycle": "20260918",
+      "manifest_sha256": "c8d63fd1a1e4ae41f94ce5b59afcaf9abde60ff74937ae97abe989ac28af945a",
+      "planned_selected_bytes": 9374595,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [],
+      "status": "FEATURES_READY",
+      "withheld_products": {}
+    },
+    {
+      "cycle": "20260919",
+      "manifest_sha256": "a5aaed58e919b42f19269acdff5ad5ca96072e3fd820ea58f5946ab0524c7f4c",
+      "planned_selected_bytes": 9511768,
+      "products_passing_qc": [
+        "day1_24h"
+      ],
+      "products_withheld": [
+        "day2_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260920",
+      "manifest_sha256": "03450c7ee7f2aa7d7d662f2ad9102d50406645c8c953519ea4ca34d2fe224370",
+      "planned_selected_bytes": 9526741,
+      "products_passing_qc": [
+        "day1_24h"
+      ],
+      "products_withheld": [
+        "day2_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260921",
+      "manifest_sha256": "3949b6ad082cc66e1b7ee12a03a704c68c7860dc95511666756c3ad1d812c081",
+      "planned_selected_bytes": 8763915,
+      "products_passing_qc": [
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    },
+    {
+      "cycle": "20260922",
+      "manifest_sha256": "205ced19a58d41f744c68449c464380e6b21a9f7ea0bb916551ff3a8f3479045",
+      "planned_selected_bytes": 8760394,
+      "products_passing_qc": [
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)"
+      }
+    },
+    {
+      "cycle": "20260923",
+      "manifest_sha256": "0f87f45cd522ead157a359640e5989731eaa58acd47eeb3e34c9c7f590878098",
+      "planned_selected_bytes": 8229133,
+      "products_passing_qc": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    },
+    {
+      "cycle": "20260924",
+      "manifest_sha256": "5e872b32ef732e45f0a2b4189e1456144f4e0c983f9ac9ea508f5ccb3b413454",
+      "planned_selected_bytes": 8246803,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [],
+      "status": "FEATURES_READY",
+      "withheld_products": {}
+    },
+    {
+      "cycle": "20260925",
+      "manifest_sha256": "f0bdcb5be20efc3b127b328051bbc3092e3e65abcefef609ebe31c7e40e032b1",
+      "planned_selected_bytes": 8683917,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [],
+      "status": "FEATURES_READY",
+      "withheld_products": {}
+    },
+    {
+      "cycle": "20260926",
+      "manifest_sha256": "0b3a10cf4fdafeccd57f820e2904d597a36bbd0a92403ce4ba772f85b7f6dbf2",
+      "planned_selected_bytes": 8930390,
+      "products_passing_qc": [
+        "day1_24h"
+      ],
+      "products_withheld": [
+        "day2_24h",
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)",
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260927",
+      "manifest_sha256": "fb92958a7b8165521788e30cd3e7e863c3139997a13c4be4fef9202ca960ae30",
+      "planned_selected_bytes": 8946878,
+      "products_passing_qc": [
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)",
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    },
+    {
+      "cycle": "20260928",
+      "manifest_sha256": "ccc4fa30531f1ff59fed2349e2853686ee2f893b50f0f986121f89a1e027ad62",
+      "planned_selected_bytes": 8993673,
+      "products_passing_qc": [
+        "day2_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day1_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day1_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 3--6)"
+      }
+    },
+    {
+      "cycle": "20260929",
+      "manifest_sha256": "26ccbe1930892a292ca9506c92e05500031108b1846e09bd8216c49c20d7ef5f",
+      "planned_selected_bytes": 8754631,
+      "products_passing_qc": [
+        "day1_24h",
+        "day2_24h"
+      ],
+      "products_withheld": [
+        "day3_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day3_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 51--54)"
+      }
+    },
+    {
+      "cycle": "20260930",
+      "manifest_sha256": "8bb122990a90e1eeca11c8541f7258034eff4f8f939406493b7fe22660487783",
+      "planned_selected_bytes": 8790992,
+      "products_passing_qc": [
+        "day1_24h",
+        "day3_24h"
+      ],
+      "products_withheld": [
+        "day2_24h"
+      ],
+      "status": "FEATURES_READY",
+      "withheld_products": {
+        "day2_24h": "canonical rainfall reconstruction failed (ValueError: negative difference exceeds packing bound for 27--30)"
+      }
+    }
+  ],
+  "cycle_count": 30,
+  "interpretation": "Forecast-side acquisition and QC only. No observation, 2026 skill, independence, or model promotion claim.",
+  "model_inference": false,
+  "month": "202609",
+  "no_eligible_lead_cycles": 1,
+  "observation_read": false,
+  "planned_selected_bytes": 273012435,
+  "products_passing_qc": {
+    "day1_24h": 16,
+    "day2_24h": 17,
+    "day3_24h": 16
+  },
+  "products_withheld_qc": {
+    "day1_24h": 14,
+    "day2_24h": 13,
+    "day3_24h": 14
+  },
+  "protocol_sha256": "5f03c73ab64a748b7bdffe8f0a28e5fd7cb591858e4de42e2a6f15043d5ccaf7",
+  "role": "2026_TRACK_B_TEST_CANDIDATE_FORECAST_SIDE_ONLY",
+  "schema": "varshasetu-2026-forecast-only-month-summary-v1",
+  "training_or_selection": false
+}

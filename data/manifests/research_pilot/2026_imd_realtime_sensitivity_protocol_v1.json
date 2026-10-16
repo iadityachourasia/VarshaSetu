@@ -1,0 +1,22 @@
+{
+  "schema": "varshasetu-2026-imd-realtime-sensitivity-protocol-v1",
+  "created_utc_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_2026_DAILY_VALUE_DECODING_AND_PAIRING",
+  "role": "SECONDARY_SOURCE_SENSITIVITY_ONLY_AFTER_PRIMARY_ANNUAL_NETCDF_SCORE",
+  "primary_result_required": "2026_track_b_score_v1.json, sealed and matched to the same frozen forecast-year archive",
+  "population": "All 213 sealed strict-QC forecast leads, identical M0-M4 cases and common valid daily-source cells; no outcome-dependent case selection",
+  "daily_grid_contract": "125 official-domain POST files, 2026-06-01 through 2026-10-03, each 129x135 little-endian float32; crop to 10-22 N and 68-80 E; finite 0-10000 mm cells only; negatives/missing remain masked",
+  "provisional_source_warning": "A 2025 same-day test found 330/4964 valid cells differ from annual RF25; this source cannot substitute for the primary annual NetCDF or be described as final truth.",
+  "forecast_year_sha256": "ef557185447aa4cc57770b2aa32e3ebb20b070eea0745a3f77eb72f546cf9b10",
+  "acquisition_sha256": "638e713868e664509176aef207a6117213de437d924dc60f41dc2958cce50db4",
+  "2025_source_comparison_sha256": "1c811414e674e1dbf4a71f492efe99495fbcc55adb22e77a9612efc6a448399d",
+  "selection_sha256": "ef87ae7fea19413e1cbf5bc2cc5aabbed2555bbf9d678b8722bc2bc639d916f0",
+  "scorer_sha256": "4ef79ebe308b5a1cb646e801249b22abf00227efd0f686c4e5349409549b5f9e",
+  "pure_scoring_sha256": "69c515e383e312007a489f1a0aebe2f4ad92ff3fcf45b82c1d2f040499ff2270",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 26080,
+  "probability_rule": "Exclude all 22 frozen incoherent leads from probability metrics, retain all for deterministic M0-M4 comparison",
+  "version_rule": "Report the announced June 15 boundary as a sensitivity stratum, never as proof of actual rollout or model equivalence",
+  "promotion_rule": "No promotion from this provisional source regardless of diagnostic metric values",
+  "2026_observation_values_read_at_freeze": false
+}

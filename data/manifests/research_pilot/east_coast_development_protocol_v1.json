@@ -1,0 +1,61 @@
+{
+  "schema": "varshasetu-east-coast-development-protocol-v1",
+  "frozen_utc_date": "2026-10-07",
+  "status": "PROTOCOL_FROZEN_BEFORE_STAGE_FIT_OR_PAIRING",
+  "source_track": "B_OPERATIONAL_GEFS",
+  "stage": "EAST_COAST_PENINSULA",
+  "grid": {
+    "latitude_start": 6.5,
+    "latitude_end": 22.0,
+    "longitude_start": 80.25,
+    "longitude_end": 88.0,
+    "resolution_degrees": 0.25,
+    "shape_all_imd": [129, 135],
+    "partition_source": "backend.app.ml.all_india_raw.region_of"
+  },
+  "geometry": {
+    "source": "geoBoundaries India ADM2 simplified 2021",
+    "source_sha256": "d68db39cd3e2d0892af268e2b0454166368ce3b5b8a78fcda63069ec92a641db",
+    "license": "ODbL-1.0",
+    "role": "local_research_static_mask_and_district_weights_only",
+    "not_official_current_boundaries": true,
+    "published_district_product_allowed": false,
+    "minimum_weighted_district_coverage": 0.95
+  },
+  "population_roles": {
+    "2023": "development_fit_only",
+    "2024": "consumed_development_selection_and_diagnostic_only",
+    "2025": "consumed_test_excluded_from_selection_and_no_new_independent_claim",
+    "2026": "sealed_independent_test_not_accessible_to_this_development_protocol"
+  },
+  "forecast_features": {
+    "source": "GEFS c00 available at initialization, same canonical 24-hour windows",
+    "raw_plus_atmosphere": ["raw_c00_rain_mm", "u850", "v850", "q700", "z500", "mslp", "pwat"],
+    "derived_feature_contract_sha256": "100894f11b677b1de20869d7a741ed16d770d2f4dbff415084fe9888a393842f",
+    "require_stage_wide_hash_verified_messages": true,
+    "valid_time_observations_as_predictors": false,
+    "reanalysis_as_predictors": false
+  },
+  "reference": {
+    "source": "IMD annual RF25 0.25-degree daily gridded rainfall",
+    "window_utc": "03:00-to-03:00",
+    "use_only_after_forecast_feature_and_model_seal": true,
+    "missing_cells_zero_filled": false
+  },
+  "comparison": {
+    "arms": ["Raw GEFS c00", "stage-trained global non-regime correction"],
+    "same_case_and_valid_cell_intersection": true,
+    "training_domain_must_equal_stage": true,
+    "selection_year": 2024,
+    "primary_metric": "heavy_rain_CSI_64.5mm_per_24h",
+    "secondary_metrics": ["RMSE", "bias", "very_heavy_CSI_115.6mm_per_24h", "POD", "FAR", "ETS", "FSS"],
+    "uncertainty_unit": "forecast_initialization_date",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 26080,
+    "minimum_paired_cases": 30,
+    "minimum_observed_event_pairs_per_threshold": 30,
+    "district_coverage_gate": 0.95,
+    "required_supported_district_fraction_per_case": 0.90
+  },
+  "release_boundary": "Even a passing consumed-2024 development result is not independent skill or India-wide corrected coverage. No API or live product connection without later independent evaluation, geometry rights review and governance."
+}

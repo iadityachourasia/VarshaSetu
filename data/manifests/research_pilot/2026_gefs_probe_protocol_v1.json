@@ -1,0 +1,16 @@
+{
+  "schema": "varshasetu-forecast-only-source-probe-v1",
+  "created_utc_date": "2026-10-06",
+  "purpose": "Check representative 2026 JJAS operational GEFS 00 UTC control-member archive availability and selected-message layout before defining a 2026 evaluation corpus.",
+  "cycles": ["20260615", "20260715", "20260815", "20260915"],
+  "source": "noaa-gefs-pds.s3.amazonaws.com",
+  "selected_message_rule": "backend.app.live.pipeline.required_messages and HttpSource.plan",
+  "read_only": true,
+  "observation_read": false,
+  "forecast_payload_download": false,
+  "role": "SOURCE_AVAILABILITY_PROBE_ONLY",
+  "prohibited_inferences": [
+    "No 2026 rainfall skill, calibration, or model-selection claim follows from this probe.",
+    "The probe does not establish an uncontaminated 2026 test year or a complete 2026 forecast corpus."
+  ]
+}

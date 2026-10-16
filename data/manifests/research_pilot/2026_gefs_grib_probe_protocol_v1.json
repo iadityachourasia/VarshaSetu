@@ -1,0 +1,29 @@
+{
+  "created_utc_date": "2026-10-06",
+  "cycles": [
+    "20260615",
+    "20260715",
+    "20260815",
+    "20260915"
+  ],
+  "maximum_planned_bytes_per_cycle": 104857600,
+  "minimum_free_disk_bytes": 53687091200,
+  "model_inference": false,
+  "observation_read": false,
+  "payload_scope": "Exactly the 34 control-member byte ranges selected by backend.app.live.pipeline.required_messages per cycle; hash-receipted cache, no full GRIB files.",
+  "prohibited_inferences": [
+    "No 2026 forecast skill or independent-year claim follows from this probe.",
+    "The sample does not establish complete seasonal availability or model-version identity unless the GRIB fields themselves document it."
+  ],
+  "role": "SOURCE_AND_GRIB_SEMANTICS_PROBE_ONLY",
+  "schema": "varshasetu-forecast-only-grib-probe-v1",
+  "source": "noaa-gefs-pds.s3.amazonaws.com",
+  "source_index_probe_sha256": "5942d9777f9490a7eeb59202600a1a1f0e1069711d0b2767ea0e235e47cdd705",
+  "tests": [
+    "selected range receipt SHA-256",
+    "decoded GRIB identity and timing",
+    "native grid and units",
+    "regional 24-hour accumulation QC",
+    "sampled GRIB metadata identifiers"
+  ]
+}

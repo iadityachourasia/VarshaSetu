@@ -1,0 +1,32 @@
+{
+  "schema": "varshasetu-track-b-2026-evaluation-protocol-v1",
+  "created_utc_date": "2026-10-06",
+  "status": "FROZEN_BEFORE_2026_OBSERVATION_PAIRING_CANDIDATE_NOT_CLEARED",
+  "candidate_test_year": 2026,
+  "eligibility_blockers": [
+    "An audit of prior use of 2026 observations must clear the year before calling it an independent test.",
+    "The full June-September 2026 forecast-only corpus, IMD 03-03 UTC reference, and model-version comparability must pass source and QC gates."
+  ],
+  "track": "B_OPERATIONAL_GEFS_ONLY",
+  "season_initializations_utc": ["20260601T0000Z", "20260930T0000Z"],
+  "leads_and_accumulation_hours": {"day1_24h": [3, 27], "day2_24h": [27, 51], "day3_24h": [51, 75]},
+  "forecast_features": "Frozen 22-column forecast-only Track B pipeline with no valid-time observations or reanalysis",
+  "reference": "Locally held IMD 0.25-degree daily rainfall aligned to 03-03 UTC; no replacement by IMERG",
+  "grid_and_mask": "Existing regional 49x49 grid; only paired cells with both forecast and IMD reference valid; no missing cell filled as zero",
+  "frozen_comparators": ["M0_raw_GEFS", "M1_linear_MOS", "M2_global_XGBoost", "M3_hard_regime", "M4_soft_regime"],
+  "primary_regime_comparison": "M4_soft_regime minus M2_global_XGBoost heavy-rain CSI on exactly paired eligible cell-days",
+  "secondary_regime_comparison": "M3_hard_regime minus M2_global_XGBoost heavy-rain CSI on the same cells",
+  "thresholds_mm_per_24h": {"heavy": 64.5, "very_heavy": 115.6},
+  "promotion_gate": {
+    "heavy_CSI_adjustment": "Bonferroni family of two regime comparisons; two-sided 97.5-percent initialization-date block-bootstrap interval; M4 lower bound must be greater than zero",
+    "M4_minus_M2_RMSE_mm_max": 0.2,
+    "M4_absolute_mean_error_mm_max": 1.5,
+    "minimum_heavy_event_bearing_initialization_dates": 30,
+    "if_any_gate_fails": "Keep M2 as the product default and publish the null or adverse result"
+  },
+  "bootstrap": {"unit": "UTC initialization date; all leads and spatial cells stay in the date block", "replicates": 2000, "seed": 26080},
+  "reported_metrics": ["RMSE", "bias", "heavy_CSI", "heavy_ETS", "heavy_POD", "heavy_FAR", "heavy_frequency_bias", "very_heavy_CSI", "very_heavy_event_count", "FSS_from_aligned_2D_fields", "heavy_Brier", "very_heavy_Brier", "reliability_bins_with_counts"],
+  "strata": ["lead", "objective_forecast_regime", "region", "district_if_boundary_and_reference_coverage_valid"],
+  "probability_rule": "Use frozen 2024-fitted calibrators without refitting. Require very-heavy probability not to exceed heavy probability. Report 2026 reliability only after observations arrive; no warning threshold is reselected on 2026.",
+  "prohibited": ["No model, threshold, bias shift, QC tolerance, mask, or metric selection based on 2026 observations.", "No pooling with GEFSv12 reforecast Track A.", "No public or official warning claim from this research evaluation."]
+}

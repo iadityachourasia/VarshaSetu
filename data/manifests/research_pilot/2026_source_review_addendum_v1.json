@@ -1,0 +1,43 @@
+{
+  "schema": "varshasetu-2026-source-review-addendum-v1",
+  "review_utc_date": "2026-10-07",
+  "status": "OPEN_NO_CLEARANCE",
+  "prior_source_audit_sha256": "b36a2740c3e51fd47cb7f39aa88d09af7a912aac66a96aba422f0c963d82f1b6",
+  "prior_gefs_source_audit_sha256": "51ae2b6be2c70abf90218912119c6336db58214e3828e88a0b1475bc64d9ae83",
+  "selected_feature_manifest_sha256": "f1520a32aadef460249ba26a39c106f9593fcd3407c23d2967ddc90d889ed67b",
+  "annual_imd": {
+    "official_page": "https://imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html",
+    "file_semantics": "365 or 366 daily records per complete calendar year",
+    "complete_2026_annual_file_possible_on_review_date": false,
+    "last_bounded_official_endpoint_result": "HTTP 200 with zero response bytes in sealed retry v3; no further retry made",
+    "125_realtime_daily_grids_role": "separate provisional sensitivity source, not annual reference",
+    "local_use_or_redistribution_terms_cleared": false
+  },
+  "gefs_2026": {
+    "scn_26_57_url": "https://www.weather.gov/media/notification/pdf_2026/scn26-57_GEFS_Shortwave_radiation_fix.pdf",
+    "scn_26_57_local_sha256": "76de5e532d39d69a62ed380e214c9f3cdf86760126e2f9f4a55e38cf87d8b06f",
+    "announced_start_utc": "2026-06-15T12:00:00Z",
+    "conditional_postponement": true,
+    "observed_grib_packing_change": "DSWRF metadata changed between 2026-06-15 and 2026-06-16 00 UTC samples",
+    "actual_cycle_specific_executable_record_obtained": false,
+    "nco_change_history_url": "https://www.nco.ncep.noaa.gov/pmb/changes/",
+    "nco_2026_table_has_gefs_12_3_20_row_in_reviewed_page": false
+  },
+  "gefs_2023": {
+    "exact_patch_in_training_forecast_manifests": false,
+    "exact_patch_in_reviewed_nco_2023_table": false,
+    "training_patch_confirmed": false
+  },
+  "selected_predictor_comparability": {
+    "raw_and_atmospheric_fields": ["24h accumulated precipitation", "u850", "v850", "q700", "z500", "mslp", "pwat"],
+    "derived_fields": "12 regime-context summaries plus latitude, longitude and lead hours",
+    "scn_26_57_named_changed_fields": ["DSWRFsfc", "USWRFsfc", "USWRFtoa"],
+    "selected_predictor_named_changed_in_scn_26_57": false,
+    "interpretation": "The notice describes a short-wave radiation GRIB encoding fix. It does not establish numerical equivalence for the selected predictors, the actual running executable, or comparability to the unknown 2023 patch.",
+    "cross_version_numerical_equivalence_established": false
+  },
+  "observation_values_read": false,
+  "forecast_reference_paired": false,
+  "score_run": false,
+  "clearance_file_written": false
+}

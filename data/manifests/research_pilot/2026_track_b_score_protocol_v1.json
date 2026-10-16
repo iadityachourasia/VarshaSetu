@@ -1,0 +1,36 @@
+{
+  "schema": "varshasetu-2026-track-b-score-protocol-v1",
+  "created_utc_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_2026_OBSERVATION_PAIRING",
+  "role": "ONE_SHOT_INDEPENDENT_YEAR_CANDIDATE_VERIFICATION_ONLY_AFTER_SOURCE_GATES",
+  "population": "All 213 strict-QC 2026 JJAS forecast-only leads from the sealed 122-cycle prediction archive; every valid IMD 03-03 UTC regional grid cell paired identically across M0-M4",
+  "reference_required_path": "experiments/recent_historical/imd/RF25_ind2026_rfp25.nc",
+  "reference_clearance_required": "2026_imd_reference_clearance_v1.json with SHA-256, source receipt, authorized local use and 03:00-03:00 UTC window",
+  "model_version_clearance_required": "2026_gefs_version_clearance_v1.json with authoritative transition evidence and reviewed comparability",
+  "frozen_primary": "M4 minus M2 heavy-rain CSI, two-sided 97.5-percent date-block bootstrap; all paired cells, no post-outcome filtering",
+  "frozen_secondary": "M3 minus M2 heavy-rain CSI on identical cells",
+  "frozen_promotion_gates": [
+    "at least 30 heavy-event-bearing initialization dates",
+    "M4 heavy CSI adjusted lower interval above zero",
+    "M4 minus M2 RMSE at most +0.2 mm",
+    "absolute M4 mean error at most 1.5 mm"
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 26080,
+  "probability_population_rule": "Exclude complete leads with frozen P(very heavy)>P(heavy) from probability metrics only; retain them for deterministic M0-M4 comparisons; never project or tune on 2026 outcomes",
+  "reporting": [
+    "pooled",
+    "lead",
+    "announced GEFS boundary stratum",
+    "forecast-regime argmax with no expert-truth claim",
+    "FSS 1/3/5/9",
+    "heavy and very-heavy event counts",
+    "Brier/BSS/reliability on coherent-probability leads"
+  ],
+  "observations_read_during_freeze": false,
+  "forecast_year_sha256": "ef557185447aa4cc57770b2aa32e3ebb20b070eea0745a3f77eb72f546cf9b10",
+  "evaluation_protocol_sha256": "62092d17a88f5adfdc91885ef2df4dffbca07e74f9a8d0055edbce6ec70ed5a7",
+  "selection_sha256": "ef87ae7fea19413e1cbf5bc2cc5aabbed2555bbf9d678b8722bc2bc639d916f0",
+  "scorer_sha256": "f8b1cc0c0d002bb7745f156ddc92c26b1fb603ea47253915866cc66120e71da4",
+  "pure_scoring_sha256": "69c515e383e312007a489f1a0aebe2f4ad92ff3fcf45b82c1d2f040499ff2270"
+}

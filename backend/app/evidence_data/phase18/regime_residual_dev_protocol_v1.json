@@ -1,0 +1,41 @@
+{
+  "schema": "regime-residual-development-protocol-v1",
+  "status": "FROZEN_BEFORE_MODEL_FIT",
+  "authorization": "Owner request of 2026-10-06 to implement the VarshaSetu scientific advancement plan",
+  "claim_scope": "Track A GEFSv12 reforecast development experiment only; no independent test or operational promotion",
+  "forecast_source": "NOAA GEFSv12 reforecast control member c00, 00 UTC, canonical 24 h Day 1-3",
+  "reference_source": "IMD RF25 0.25 degree daily rainfall, 03-03 UTC; local research only",
+  "target_grid": "10-22 N, 68-80 E, 0.25 degree; finite paired land cells",
+  "year_roles": {
+    "global_base_training": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+    "regime_detector_training": [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010],
+    "residual_training": [2011],
+    "development_evaluation": [2012, 2013],
+    "forbidden_for_fitting_selection_or_evaluation": [2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026]
+  },
+  "detectors": {
+    "tasks": ["ACTIVE", "BREAK", "LOW_DEPRESSION", "WESTERN_DISTURBANCE", "COASTAL_OROGRAPHIC"],
+    "model": "five independent standardized logistic heads",
+    "C": 1.0,
+    "minimum_positive_and_negative_training_cases": 30,
+    "calibration_status": "UNCALIBRATED_LOGISTIC_OUTPUT",
+    "label_warning": "objective retrospective labels, not expert meteorological truth; WD rainfall skill is not tested"
+  },
+  "correction": {
+    "base": "B1 static-geography XGBoost with the selected frozen Phase 15 B1 configuration, refit only on 2000-2010",
+    "matched_control": "global residual ridge on the same 2011 rows and residual feature set",
+    "candidate": "five probability-weighted residual ridge specialists; overlapping heads, effective-case shrinkage and global fallback",
+    "ridge_alpha": 100.0,
+    "minimum_weighted_case_mass": 30.0,
+    "minimum_effective_cases": 30.0,
+    "shrinkage_cases": 30.0,
+    "residual_features": ["base_corrected_mm", "raw_forecast_mm", "latitude_deg", "longitude_deg", "lead_hours"]
+  },
+  "evaluation": {
+    "primary": "candidate minus matched-control heavy-rain CSI on exactly the same paired cells in 2012-2013",
+    "rain_thresholds_mm_per_24h": {"heavy": 64.5, "very_heavy": 115.6},
+    "report": ["RMSE", "MAE", "mean_error", "heavy_and_very_heavy_CSI_POD_FAR_ETS_frequency_bias", "case_and_event_counts", "by_year_and_lead"],
+    "promotion": "NONE; development evidence only, irrespective of the measured result"
+  },
+  "compute": "CPU XGBoost, at most eight native threads, bounded local arrays, no GPU"
+}

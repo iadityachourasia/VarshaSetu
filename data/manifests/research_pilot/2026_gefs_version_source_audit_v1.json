@@ -1,0 +1,34 @@
+{
+  "schema": "varshasetu-2026-gefs-version-source-audit-v1",
+  "retrieved_utc_date": "2026-10-07",
+  "local_evidence": [
+    {
+      "source": "NWS Service Change Notice 26-15",
+      "url": "https://www.weather.gov/media/notification/pdf_2026/scn26-15_GEFS_12.3.18.pdf",
+      "local_path": "data/raw/evidence/noaa_gefs_2026/scn26-15_GEFS_12.3.18.pdf",
+      "byte_size": 43208,
+      "sha256": "26b2532aedc7da0f9a8e81853e65e5da26dff8909b92855eef37812b4faccd8d",
+      "finding": "Announced transition from 12.3.17 to 12.3.18 on or about 2026-02-24 12 UTC; wave-station ensemble-statistics fix; conditional postponement."
+    },
+    {
+      "source": "NWS Service Change Notice 26-57",
+      "url": "https://www.weather.gov/media/notification/pdf_2026/scn26-57_GEFS_Shortwave_radiation_fix.pdf",
+      "local_path": "data/raw/evidence/noaa_gefs_2026/scn26-57_GEFS_12.3.20.pdf",
+      "byte_size": 48827,
+      "sha256": "76de5e532d39d69a62ed380e214c9f3cdf86760126e2f9f4a55e38cf87d8b06f",
+      "finding": "Announced 12.3.20 from 2026-06-15 12 UTC; short-wave radiation GRIB precision fix; conditional postponement. Selected VarshaSetu predictors are not named as changed."
+    },
+    {
+      "source": "NCEP Central Operations model-change history",
+      "url": "https://www.nco.ncep.noaa.gov/pmb/changes/",
+      "local_path": "data/raw/evidence/noaa_gefs_2026/nco_model_changes_2023_2026.html",
+      "byte_size": 215940,
+      "sha256": "e8ca80d1e9c07b6ee30aef69e2534d4da7d4f5ef99af4e19d07aef7a905bf7ab",
+      "finding": "The retrieved page lists an October 2022 GEFS-Aerosols v12.3 upgrade and has 2023/2026 tables, but no retrieved row confirms the actual June 2026 GEFS 12.3.20 rollout or exact 2023 rain-grid version."
+    }
+  ],
+  "actual_2026_transition_confirmed": false,
+  "exact_2023_training_version_confirmed": false,
+  "model_numerical_equivalence_established": false,
+  "clearance_status": "OPEN_DO_NOT_SCORE_ANNUAL_INDEPENDENT_TEST_YET"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "varshasetu-2026-feature-comparability-protocol-v2",
+  "frozen_date": "2026-10-08",
+  "base_v1_protocol_sha256": "bd50eac26610ebc576025ffe42217fccd18d9275267f69af2b5df7c0808784fd",
+  "change_from_v1": "Before any distribution result was computed, clarify that the 2023 training corpus inherits historical forecast/reference admission whereas 2026 cases are forecast-only strict-QC admissions. All source hashes, the fixed 1301-cell footprint, all-dynamic-feature rule, month/lead strata and descriptive statistics remain as in v1.",
+  "preprotocol_inspection_disclosure": "The existing full-year 2026 range-warning counts and one 2023/2026 static-grid smoke case were inspected before this comparison protocol. This is exploratory, not a new independent validation or a prespecified model-selection test.",
+  "case_admission_limit": "The source case populations are not matched by date, weather event or admission process. Use every available June-September 2023 training case and every sealed 2026 strict-QC lead in its month/lead stratum. Exclude the eight October 2023 training cases. Do not interpret distribution differences as GEFS executable effects or rainfall skill.",
+  "allowed_read": "Only the hash-verified 2023 feature matrix, its case and pixel-index metadata, the sealed 2026 forecast-only feature arrays and their source receipts; never observed rainfall targets, 2026 observation values, reanalysis or score arrays.",
+  "status": "EXPLORATORY_FORECAST_FEATURE_COMPARISON_NO_VERSION_CLEARANCE_NO_PROMOTION"
+}

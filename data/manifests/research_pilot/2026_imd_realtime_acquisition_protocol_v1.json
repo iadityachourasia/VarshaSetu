@@ -1,0 +1,19 @@
+{
+  "schema": "varshasetu-imd-realtime-2026-acquisition-protocol-v1",
+  "created_utc_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_2026_DAILY_VALUE_DECODING_OR_FORECAST_PAIRING",
+  "source_page": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/Rain_Download.html",
+  "source_endpoint": "https://imdpune.gov.in/cmpg/Realtimedata/Rainfall/rain.php",
+  "request": "POST form rain=DDMMYYYY for each daily grid",
+  "start_date": "2026-06-01",
+  "end_date": "2026-10-03",
+  "expected_bytes_per_day": 69660,
+  "expected_grid": "129 latitude x 135 longitude, little-endian float32; 0.25-degree IMD grid, to be QC checked against 2025 annual NetCDF",
+  "maximum_concurrent_requests": 3,
+  "retries_per_day": 3,
+  "minimum_free_disk_gib": 50,
+  "role": "SEPARATE_UNSCORED_REALTIME_GAUGE_CANDIDATE_NOT_FROZEN_ANNUAL_NETCDF_REFERENCE",
+  "observation_values_decoded_at_freeze": false,
+  "forecast_observation_pairing_at_freeze": false,
+  "release_rule": "Acquisition alone cannot clear the annual RF25 reference or the GEFS version gate; any scoring against this product requires a separately frozen source-comparison and verification protocol before 2026 outcome inspection."
+}

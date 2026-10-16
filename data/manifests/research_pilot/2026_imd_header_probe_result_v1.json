@@ -1,0 +1,19 @@
+{
+  "error_type": "URLError",
+  "forecast_observation_pairing": false,
+  "forecast_year_sha256": "fc0183682a84d864781170169b3b4365b4a92a0b09c8bfffffbf71f4a9108884",
+  "independent_test_status": "CANDIDATE_NOT_SCORED",
+  "observation_rainfall_values_read": false,
+  "prior_use_audit_sha256": "107d530ae31aa63291a0e45ca4b8657afa787c24f5805fc05cbd332be586dee9",
+  "probed_at_utc": "2026-10-06T16:44:53+00:00",
+  "protocol_sha256": "a2dd27dd4b5958040d8ba42ec8e379cdea595d6f461ab6559bf5c362767d0ba0",
+  "request": {
+    "form": {
+      "RF25": 2026
+    },
+    "method": "POST"
+  },
+  "schema": "varshasetu-2026-imd-header-probe-result-v1",
+  "source_endpoint": "https://www.imdpune.gov.in/cmpg/Griddata/RF25.php",
+  "status": "SOURCE_UNAVAILABLE"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "varshasetu-gefs-radiation-transition-protocol-v1",
+  "purpose": "Bounded forecast-only evidence for NOAA's announced June 2026 short-wave GRIB precision change",
+  "official_notice": "https://www.weather.gov/media/notification/pdf_2026/scn26-57_GEFS_Shortwave_radiation_fix.pdf",
+  "source": "NOAA public GEFS S3 control-member pgrb2s 0.25-degree f024 index and DSWRF message",
+  "cycles": ["20230616", "20260615", "20260616"],
+  "marker": ":DSWRF:surface:18-24 hour ave fcst:ENS=low-res ctl",
+  "maximum_index_bytes": 10000,
+  "maximum_message_bytes": 2000000,
+  "minimum_free_disk_bytes": 53687091200,
+  "observation_read": false,
+  "model_inference": false,
+  "model_training": false,
+  "analysis_rule": "Compare decoded packing metadata by cycle; do not infer exact software version or selected-predictor equivalence from radiation alone."
+}

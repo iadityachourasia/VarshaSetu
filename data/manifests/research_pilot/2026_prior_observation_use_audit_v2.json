@@ -1,0 +1,13 @@
+{
+  "schema": "varshasetu-2026-prior-observation-use-audit-v2",
+  "previous_audit_sha256": "792906b50de3bd730dff30e5f1c0f6a1bf9bbfcfcce1c1a89d9d779d9968de19",
+  "additional_local_checks": {
+    "data_raw_observation_path": "data/raw/observations/imd/2026/RF25_ind2026_rfp25.nc",
+    "data_raw_observation_path_absent": true,
+    "git_history_search": "git log --all -S'RF25_ind2026' -- docs scripts backend data/manifests returned no tracked earlier reference"
+  },
+  "prior_use_gate": "PROVISIONALLY_CLEARED_BY_TEAM_ATTESTATION_AND_LOCAL_AUDIT",
+  "test_year_status": "CANDIDATE_NOT_YET_SCORED",
+  "observation_values_read_for_this_audit": false,
+  "limitations": "The project owner's attestation remains the primary team-wide evidence. The local checks cover known paths and tracked history only, not external or untracked analyses."
+}

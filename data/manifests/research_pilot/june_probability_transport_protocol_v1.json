@@ -1,0 +1,18 @@
+{
+  "schema": "varshasetu-june-probability-transport-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_JUNE_2024_NO_REFIT_FORECAST_REPLAY",
+  "track": "B_OPERATIONAL_GEFS_CONSUMED_2024_TRANSPORT_DIAGNOSTIC",
+  "population": "All 30 June 2024 00 UTC control-member cycles and all 90 Day 1/2/3 24-hour leads, exactly as in the sealed coherent_partial_grid_forecast_v1 population",
+  "inputs": "Hash-verified stored GEFS selected messages, frozen Track B M0/M2/M4 and 2023-trained extreme-event base models, masked rainfall reconstruction, sealed lead_aware_probability_prediction_seal_v1 fit artifacts",
+  "forecast_rule": "Build the same 22 forecast-time features on valid masked rainfall cells only. Recreate frozen selected base scores; apply the already fitted pooled and lead-aware logistic recalibrators with no fitting, coefficient or cutoff change. Symmetrically project both event probabilities to P(very heavy)<=P(heavy), and restore NaN on invalid cells.",
+  "audit_rule": "For each lead, require the new valid mask, M0/M2/M4 fields and projected frozen heavy/very-heavy probabilities to match the previously sealed coherent partial-grid case bitwise before retaining any candidate probability array.",
+  "candidate_arrays": ["global_heavy", "global_very_heavy", "lead_aware_heavy", "lead_aware_very_heavy"],
+  "regional_minimum_valid_fraction": 0.99,
+  "forecast_only": true,
+  "observation_read": false,
+  "score_rule": "Only after a complete forecast seal, pair the same eligible cells with hash-verified June 2024 IMD 03-03 UTC daily rainfall. Compare frozen, pooled and lead-aware projected probabilities over identical cells, all 90 leads, prior-ready 55, newly-ready 35, and each lead. Report Brier/BSS against frozen 2023 climatology, fixed 10-bin reliability, observed/predicted event frequency, CSI/POD/FAR/ETS at the unchanged 0.10/0.05 cutoffs, event counts and 1000 date-bootstrap Brier-difference intervals.",
+  "selection_rule": "No tuning or promotion from June 2024. June outcomes were already inspected in the preceding partial-grid and coherence studies, and 2024 informed the base-model selection; this is a no-refit consumed-development transport diagnostic.",
+  "release_rule": "No live worker, API, district warning or calibrated-status change. An independent year and reliable very-heavy probabilities are required for any promotion.",
+  "excluded_years": [2025, 2026]
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "varshasetu-partial-grid-inference-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_2024_PARTIAL_MODEL_SCORING",
+  "track": "B_OPERATIONAL_GEFS_DEVELOPMENT_VALIDATION_ONLY",
+  "population": "All 30 June 2024 00 UTC GEFS control cycles and all three 24-hour leads; no cherry-picking by QC or outcome",
+  "source": "Existing hash-verified Phase 4E/4F GEFS selected-message archive and frozen Track B model artifacts",
+  "reference": "Existing hash-verified IMD 2024 0.25-degree daily rain, used only by the separate verification step",
+  "lead_windows_hours": {"day1_24h": [3, 27], "day2_24h": [27, 51], "day3_24h": [51, 75]},
+  "regional_minimum_valid_fraction": 0.99,
+  "district_minimum_weighted_valid_fraction": 0.95,
+  "model_ids": ["M0", "M2", "M4"],
+  "inference_rule": "Reconstruct the experimental cell mask; put a zero placeholder into invalid rain rows only while constructing features; slice those rows out before any model call. Predict on valid rows with unchanged frozen M0/M2/M4 and forecast-only regime. Scatter NaN back to invalid cells; no imputation or retraining.",
+  "district_rule": "Use pinned regional polygon weights. Include a candidate mean/probability only if at least 95% of that district's weighted grid area is valid; otherwise return null with explicit coverage and reason.",
+  "same_case_rule": "On strict-pass cases, all candidate M0/M2/M4 valid-cell predictions must match the existing full-grid worker path to numerical tolerance 1e-6. On strict-withheld cases, compare M0/M2/M4 only over exactly the same jointly valid forecast/IMD cells; no fictional strict-model score.",
+  "metrics": ["paired cell count", "RMSE", "mean bias", "heavy and very-heavy hits/misses/false alarms/CSI", "regional and district weighted coverage", "missing observed-event counts"],
+  "thresholds_mm_24h": [64.5, 115.6],
+  "no_promotion": "Research candidate only. No live worker, bundle schema, API, dashboard or public-warning change; 2024 is a development validation year, not a new independent test.",
+  "excluded_years": [2025, 2026]
+}

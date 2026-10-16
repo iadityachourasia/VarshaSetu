@@ -1,0 +1,17 @@
+{
+  "schema": "varshasetu-2021-june-masked-coverage-protocol-v1",
+  "status": "EXPLORATORY_DEVELOPMENT_YEAR_POST_2026_FORECAST_QC_INSPECTION",
+  "source": "locally held NOAA operational GEFS control-member v2 payloads, 2021 June, hash-verified against 2021_source_manifest",
+  "cycle_start": "20210601",
+  "cycle_end": "20210630",
+  "cycle_hour_utc": 0,
+  "domain": "10-22 N, 68-80 E, 0.25 degree, 49x49 cells",
+  "products": {"day1_24h": [3, 27], "day2_24h": [27, 51], "day3_24h": [51, 75]},
+  "method": "Run the unchanged canonical minimal-subtraction QC and separately mask only cells with an incremental negative difference beyond the two-field half-quantum packing bound; verify exact rainfall equality on canonical-passing leads.",
+  "reported": ["canonical_pass_counts", "masked_valid_cell_fraction", "invalid_cell_count_by_date_and_lead", "source_hashes"],
+  "observation_read": false,
+  "model_inference": false,
+  "training_or_selection": false,
+  "changes_canonical_qc": false,
+  "interpretation": "Exploratory cross-year forecast-side diagnostic. Chosen after inspecting 2026 June forecast QC, so it is neither independent validation of a mask rule nor rainfall skill evidence."
+}

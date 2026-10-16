@@ -1,0 +1,950 @@
+{
+  "case_count": 30,
+  "cases": [
+    {
+      "cycle": "20240601",
+      "manifest_sha256": "15435efa93612f51b4f6fb3e6ec9ad242d4c1677edb7bbf61d742ad095ebe665",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 12,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 182,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240602",
+      "manifest_sha256": "d29f384a96ce3c99ea44922f1afa70c68fc0b3acbeefa98d44644aa7b1eba500",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 15,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2386,
+          "valid_fraction": 0.9937526030820492
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 6,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        }
+      }
+    },
+    {
+      "cycle": "20240603",
+      "manifest_sha256": "b93f9f8ef32790373ba267c7fb1b5bc28ea9ba8c465f88d564dc40a91f2c161c",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day3_24h": {
+          "invalid_cells": 12,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        }
+      }
+    },
+    {
+      "cycle": "20240604",
+      "manifest_sha256": "314d92b5808707bec88de3c4e47b69096b13c83ae5ba89104b830f7c60d8adb8",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 11,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2390,
+          "valid_fraction": 0.9954185755935027
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240605",
+      "manifest_sha256": "8243957fda3e433c8b9fee05299bb0373f9dd73632bb4a7fb339f2e3853c1589",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 12,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 6,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        }
+      }
+    },
+    {
+      "cycle": "20240606",
+      "manifest_sha256": "32fbfbfcd11c6ab80e6a314703e703fd912e2a6e99444777c004b2fa384e4728",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 187,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day3_24h": {
+          "invalid_cells": 15,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 178,
+          "valid_cells": 2386,
+          "valid_fraction": 0.9937526030820492
+        }
+      }
+    },
+    {
+      "cycle": "20240607",
+      "manifest_sha256": "c4036fca950246e90f0b9e1924822fd5298b1c30d593cb0acc8707b87f9ecc0f",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 9,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 181,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        },
+        "day2_24h": {
+          "invalid_cells": 2,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 186,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "invalid_cells": 4,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 186,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "cycle": "20240608",
+      "manifest_sha256": "2b82e62fb32b551f1a90d89aea8940a89077c6319994a8a2e55bd1a9ac7311d7",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 7,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 184,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        },
+        "day3_24h": {
+          "invalid_cells": 2,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 187,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "cycle": "20240609",
+      "manifest_sha256": "cc36ae4071af5cb0b221ced85d23bf48cb050634fac6c8375f405ada21e045ac",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 10,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 179,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        },
+        "day3_24h": {
+          "invalid_cells": 1,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 187,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "cycle": "20240610",
+      "manifest_sha256": "89bf9081fac9db5231a3f0b13af4f419067eb601193d59b83e2b1aaa8ca263d2",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 9,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 183,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 187,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day3_24h": {
+          "invalid_cells": 18,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 173,
+          "valid_cells": 2383,
+          "valid_fraction": 0.9925031236984589
+        }
+      }
+    },
+    {
+      "cycle": "20240611",
+      "manifest_sha256": "46ed4e75e3e088714c4a00aeb982f348b5b9317d0ac95809c07c29e5bbd93912",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 6,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 184,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 186,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "invalid_cells": 8,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 181,
+          "valid_cells": 2393,
+          "valid_fraction": 0.9966680549770929
+        }
+      }
+    },
+    {
+      "cycle": "20240612",
+      "manifest_sha256": "3cf5f248957192aae730ce911399afa6629d388c50c74adfd68eecea75233b7f",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 8,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 180,
+          "valid_cells": 2393,
+          "valid_fraction": 0.9966680549770929
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 184,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "invalid_cells": 3,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 186,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        }
+      }
+    },
+    {
+      "cycle": "20240613",
+      "manifest_sha256": "8ac7c696a973d5028d4e27cfd59625f695b3cb367fa12099c8646411d277d5c0",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 5,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 185,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240614",
+      "manifest_sha256": "e3b34262887cca26769af484f188803b45d37abc4b86418404d30ea28d2ed779",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 13,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 183,
+          "valid_cells": 2388,
+          "valid_fraction": 0.994585589337776
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240615",
+      "manifest_sha256": "ea3e39e41a29230e7d9c1990c2cd2cf75003449411095a04c9afdc54b3ce3210",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 6,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "invalid_cells": 9,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        }
+      }
+    },
+    {
+      "cycle": "20240616",
+      "manifest_sha256": "9a1e8ea4b35ebd9193325070c75df44ab4b37954c4028099d1fda8554a9912e8",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 5,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day2_24h": {
+          "invalid_cells": 12,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        },
+        "day3_24h": {
+          "invalid_cells": 11,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 179,
+          "valid_cells": 2390,
+          "valid_fraction": 0.9954185755935027
+        }
+      }
+    },
+    {
+      "cycle": "20240617",
+      "manifest_sha256": "06a00307d0337c52e48623ac5c185f6bb95755b1504acca6b2befeb8fea96998",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 14,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 182,
+          "valid_cells": 2387,
+          "valid_fraction": 0.9941690962099126
+        },
+        "day3_24h": {
+          "invalid_cells": 6,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 186,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        }
+      }
+    },
+    {
+      "cycle": "20240618",
+      "manifest_sha256": "035bc6721d3a0abd91ada4d46b6c4a867c66678186841e89fb01de88840a2516",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 6,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 184,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240619",
+      "manifest_sha256": "02eb339cae14fe1227b38bbcb69f90d7d02b39a86f15e0d20811fbcaf03e3188",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 5,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 184,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240620",
+      "manifest_sha256": "fadea9e546f6d44b6a1f67f7b7dfd2ce11e1e152113171de279253932909aa8c",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 2,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 186,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "cycle": "20240621",
+      "manifest_sha256": "18f06061ce0290b058cf5beb45108bbf8b7f57d25818fcf76355ce637fca2d88",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240622",
+      "manifest_sha256": "afe180720eb3fc60f97f8cc8b52e8557a16a8efecbcfec82aa8c5f1fbfb68f96",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 3,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 185,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "invalid_cells": 4,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 183,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "cycle": "20240623",
+      "manifest_sha256": "e2b338102b2cc8d9441f120a77be8427d51c1d50952107bf1850bacf04d96551",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 2,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 187,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240624",
+      "manifest_sha256": "5db0b115e73740adbd4ee6e760eacc911527efe42b998151f2b5d6b223a740d3",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 3,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 185,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 2,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 187,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "cycle": "20240625",
+      "manifest_sha256": "11be088123997978416cdad5e7f04978d9168107e000dbd01be8010aa881dd01",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 3,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 184,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240626",
+      "manifest_sha256": "0ddb9ae024381ced0f2b8fa9f724072d6311822e399d47ee29146d70834697ea",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "status": "READY",
+          "strict_passed": true,
+          "supported_districts": 188,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 1,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 187,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "invalid_cells": 1,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "cycle": "20240627",
+      "manifest_sha256": "e902de577fad960b37abceab4435feadfe938883f4ef426b6d46094ec557a49b",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 2,
+          "status": "READY",
+          "strict_passed": false,
+          "supported_districts": 186,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "invalid_cells": 5,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240628",
+      "manifest_sha256": "e8e61063d7c1208f53ae8ce8c0c4170269f734e98cb5c8aa8e6795025f086fbb",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 3,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "invalid_cells": 4,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240629",
+      "manifest_sha256": "aa179e902f854607ee1065972e20db439a7def6247c6785a3d4f47e5aa414f80",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "invalid_cells": 3,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "invalid_cells": 0,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": true,
+          "supported_districts": 0,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "cycle": "20240630",
+      "manifest_sha256": "0f2c23902f86a3bfa09ed6d258de1c36fe33fe5de76fd63e6f3bdda2fecadb5f",
+      "products": {
+        "day1_24h": {
+          "invalid_cells": 2,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "invalid_cells": 2,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "invalid_cells": 1,
+          "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+          "status": "REFUSED_BY_FROZEN_MODEL_GATE",
+          "strict_passed": false,
+          "supported_districts": 0,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    }
+  ],
+  "district_values_suppressed_on_ready_leads": 146,
+  "lead_count": 90,
+  "meaning": "Forecast-only, development-validation research candidate; no skill or promotion claim",
+  "model_ready_leads": 55,
+  "model_refused_leads": 35,
+  "observation_read": false,
+  "protocol_sha256": "f2de5a377f7ac95577c091963c8308ebae4a5d8c4c7576e60c970bb31b1da216",
+  "regional_eligible_leads": 90,
+  "schema": "varshasetu-partial-grid-inference-forecast-result-v1",
+  "strict_passing_leads": 35
+}

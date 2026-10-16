@@ -1,0 +1,22 @@
+{
+  "schema": "nationwide-probability-cutoff-transport-protocol-v1",
+  "status": "FROZEN_FORECAST_ONLY_CUTOFF_DIAGNOSTIC",
+  "freeze_date": "2026-10-09",
+  "question": "At which probability-processing stage does the sealed v2 very-heavy 2023-selected display cutoff stop issuing warnings on 2024 forecast arrays?",
+  "population": "All 156 sealed 2024 national research forecast cases and every 5105 forecast-supported land cell per case; no 2024 IMD validity mask or rainfall value is read in this diagnostic.",
+  "stages": ["raw_head", "lead_calibrated", "coherent_saved"],
+  "heads": ["heavy", "very_heavy"],
+  "leads_hours": [24, 48, 72],
+  "metrics": ["case_count", "forecast_cell_count", "maximum_probability", "mean_probability", "cells_at_or_above_frozen_cutoff", "cases_with_at_least_one_cutoff_exceedance"],
+  "cutoff_rule": "Use only the already sealed 2023 calibrated/coherent out-of-fold cutoff stored in v2 models.json; do not refit, retune or select a new cutoff.",
+  "v2_probability_protocol_sha256": "af59dcabed694beba184023adbb7e39f542b6ecb93a7366c8c1764abcdc9b8b3",
+  "v2_fit_seal_sha256": "4611feba330552aabadfb2fd0a66ec4dc9d3ae6c9e9050d1849cb6e227ad8a60",
+  "forecast_feature_manifest_sha256": "f683eb1705ccd4deb7cacb55d80d049fa7d9bff09c3cdc522908389427bc3141",
+  "v2_model_sha256": "5ebda7db4bc13efb07edc53fced40843bad14e0d844d8077d5948e41d3320b5d",
+  "diagnostic_code_sha256": "c1eda773696fcc191fc45085f7c11dc75c63d60d87780a72fce1481408e419a8",
+  "reference_values_read": false,
+  "model_fit": false,
+  "warning_policy_change": false,
+  "comparison_role": "2024 is already consumed development evidence. This forecast-only diagnostic explains a prior failure; it cannot establish reliability, skill or a new warning threshold.",
+  "product_default": "regional_M2_unchanged"
+}

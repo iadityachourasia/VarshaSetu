@@ -1,0 +1,193 @@
+{
+  "admission": {
+    "forecast_mask": "finite nonnegative Raw on static land, all six forecast fields finite",
+    "raw_status": "INCLUDED",
+    "reference": "valid finite nonnegative annual IMD at fit or score only; no zero fill",
+    "same_cases_cells_all_arms": true,
+    "six_atmospheric_messages": "hash-verified c00 GRIB and complete finite context"
+  },
+  "code_sha256": {
+    "pure_contract": "f18246799a611208e200dc6f0ed89628c1d6943da879d36980a5a7356d86290a"
+  },
+  "grid": {
+    "context_latitude": [
+      5.0,
+      40.0,
+      0.5
+    ],
+    "context_longitude": [
+      60.0,
+      105.0,
+      0.5
+    ],
+    "latitude": [
+      6.5,
+      38.5,
+      0.25
+    ],
+    "longitude": [
+      66.5,
+      100.0,
+      0.25
+    ],
+    "mask": "pinned research geometry positive cell-area overlap, not IMD reference validity",
+    "shape": [
+      129,
+      135
+    ]
+  },
+  "metrics": [
+    "RMSE",
+    "bias",
+    "CSI",
+    "POD",
+    "FAR",
+    "ETS",
+    "FSS_1_3_5",
+    "Brier",
+    "BSS",
+    "reliability"
+  ],
+  "models": {
+    "M0": "Raw GEFS",
+    "M1": {
+      "alpha": 100.0,
+      "estimator": "standardized Ridge"
+    },
+    "M2": {
+      "direct": "reg:squarederror observed mm",
+      "estimator": "XGBRegressor",
+      "fixed": {
+        "colsample_bytree": 0.9,
+        "device": "cpu",
+        "learning_rate": 0.05,
+        "max_bin": 256,
+        "max_depth": 4,
+        "min_child_weight": 5,
+        "n_estimators": 200,
+        "n_jobs": 8,
+        "random_state": 26080,
+        "reg_lambda": 2.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      },
+      "residual": "reg:squarederror observed-minus-Raw mm, clip output to zero"
+    },
+    "M3_M4": {
+      "expert_fixed": {
+        "colsample_bytree": 0.9,
+        "device": "cpu",
+        "learning_rate": 0.05,
+        "max_bin": 256,
+        "max_depth": 3,
+        "min_child_weight": 5,
+        "n_estimators": 100,
+        "n_jobs": 8,
+        "random_state": 26080,
+        "reg_lambda": 2.0,
+        "subsample": 0.9,
+        "tree_method": "hist"
+      },
+      "method": "three pseudo-regime residual specialists over selected M2, hard or soft weighting",
+      "minimum_heavy_event_cells": 30,
+      "minimum_training_cases": 30,
+      "regime_labels": "forecast-derived pseudo-labels, not independent expert truth",
+      "shrinkage": "n_cases/(n_cases+100); weak experts contribute zero residual"
+    }
+  },
+  "probability": {
+    "calibration": "lead-specific isotonic on embargoed date-block out-of-fold head probabilities, minimum 30 positives and negatives, otherwise identity",
+    "coherence": "P(very heavy)=min(P(very heavy),P(heavy))",
+    "estimator": "unweighted standardized LogisticRegression C=0.1",
+    "heads": [
+      64.5,
+      115.6
+    ],
+    "inputs": "Raw, out-of-fold M2 prediction, latitude, longitude, lead; 2023 only",
+    "warning_threshold": "smallest of 0.01..0.50 step 0.01 with forecast/observed frequency nearest 1 on 2023 OOF; research only"
+  },
+  "purpose": "Separate JJAS Day1-3 nationwide development ladder; no independent or operational claim",
+  "release": "2024 development research view only; M2 regional remains live default; no public warning, official district or independent skill claim",
+  "roles": {
+    "2023": "fit_and_embargoed_date_block_selection",
+    "2024": "consumed_development_score_after_prediction_seal",
+    "2025": "consumed_test_excluded",
+    "2026": "sealed_test_excluded"
+  },
+  "schema": "varshasetu-nationwide-track-b-research-v1",
+  "selection": {
+    "embargo_days": 3,
+    "folds": 3,
+    "guardrail": "2023 OOF RMSE <= Raw RMSE + 0.2 mm and abs(bias) <= 5 mm",
+    "m2_candidates": [
+      "direct",
+      "residual"
+    ],
+    "primary": "2023 OOF heavy CSI, require at least Raw heavy CSI",
+    "tie_break": "lower RMSE then direct; if none passes, retain Raw as research control and fit candidates without promotion"
+  },
+  "sources": {
+    "forecast_features": [
+      "raw_c00_rain_mm",
+      "forecast_u850",
+      "forecast_v850",
+      "forecast_q700",
+      "forecast_z500",
+      "forecast_mslp",
+      "forecast_pwat",
+      "pwat_area_mean",
+      "q700_area_mean",
+      "u850_area_mean",
+      "v850_area_mean",
+      "wind_speed_area_mean",
+      "moisture_transport_area_mean",
+      "mslp_area_mean",
+      "mslp_minimum",
+      "mslp_range",
+      "z500_area_mean",
+      "relative_vorticity_area_mean",
+      "relative_vorticity_p90",
+      "latitude_deg",
+      "longitude_deg",
+      "lead_hours"
+    ],
+    "forecast_hour_by_product": {
+      "day1_24h": 24,
+      "day2_24h": 48,
+      "day3_24h": 72
+    },
+    "imd_annual_sha256": {
+      "2023": "1fa0cbcb56769fd3cd2702e36dc3ee1b81b74755b77c7f058c70dfc3afb82831",
+      "2024": "1ef02aeba5694dbb57a6cca23a3c2cc11740affb185137c1eacbeab59893228a"
+    },
+    "raw_ledger_sha256": "fe58393174c3d528c61fa8471712288156a06e52782c216afe4072f5913ea3bd",
+    "raw_protocol_sha256": "46a62e7f31bc87a10abff594bb6fdf5731782576738db4bc172bb22ec7e21f8c",
+    "source_manifest_sha256": {
+      "2023": "c35deea16c289de7cffeca502dd5409d7bdf0430b8a4b7bdd8556957083483e3",
+      "2024": "525e2316f470dbf731fbb73bfdcebd7878c3de9008a46980c93fe35c48048aa4"
+    },
+    "static_manifest_sha256": "3184329890579f9cf9a54ae2507d797952cc647e28da2b2a132b869dadea55b0",
+    "track": "B_OPERATIONAL_GEFS_C00",
+    "windows_hours": {
+      "day1_24h": [
+        3,
+        27
+      ],
+      "day2_24h": [
+        27,
+        51
+      ],
+      "day3_24h": [
+        51,
+        75
+      ]
+    }
+  },
+  "status": "FROZEN_BEFORE_NATIONAL_FEATURE_DECODING_FIT_OR_PAIRING",
+  "uncertainty": {
+    "bootstrap_unit": "initialization_date",
+    "caveat": "date resampling does not remove spatial or serial dependence",
+    "repeats": 1000,
+    "seed": 26080
+  }
+}

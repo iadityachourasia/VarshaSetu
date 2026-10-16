@@ -1,0 +1,26 @@
+{
+  "annual_http_status": 200,
+  "annual_response_bytes": 0,
+  "blockers": [
+    "COMPLETE_2026_IMD_ANNUAL_REFERENCE_NOT_OBTAINED",
+    "ACTUAL_2026_GEFS_EXECUTABLE_TRANSITION_UNCONFIRMED",
+    "EXACT_2023_TRAINING_GEFS_PATCH_UNCONFIRMED",
+    "2023_TO_2026_PREDICTOR_COMPARABILITY_UNREVIEWED"
+  ],
+  "clearance_manifests_written": false,
+  "daily_candidate_dates_receipted": 125,
+  "daily_candidate_is_annual_reference": false,
+  "evidence_sha256": {
+    "annual_retry": "f066bd5afc1e5dc476b25d8a00fa70e65d28bc957d9a4ea46bcb6f838ba905b8",
+    "daily_candidate": "638e713868e664509176aef207a6117213de437d924dc60f41dc2958cce50db4",
+    "gefs_source_audit": "51ae2b6be2c70abf90218912119c6336db58214e3828e88a0b1475bc64d9ae83",
+    "radiation_probe": "bf9b23194bd245c8ec79bdd6983aff9a8cbf73b66ccbc28e859309d63dbd5b6c",
+    "score_protocol": "e3ce114a91036bb5ffbe937c49b2dbf347a6594840735a13f6564f7f3b987d84"
+  },
+  "forecast_pairing_or_scoring": false,
+  "observation_values_read": false,
+  "radiation_packing_change_observed": true,
+  "radiation_probe_identifies_executable": false,
+  "schema": "varshasetu-2026-source-version-audit-v1",
+  "status": "OPEN_NO_CLEARANCE"
+}

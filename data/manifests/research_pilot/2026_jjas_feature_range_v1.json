@@ -1,0 +1,837 @@
+{
+  "by_lead": {
+    "day1_24h": {
+      "cases": 64,
+      "mean_outside_fraction_by_feature": {
+        "forecast_mslp": 0.012956840899625156,
+        "forecast_pwat": 0.0035466992919616826,
+        "forecast_q700": 0.003605268638067472,
+        "forecast_u850": 0.0034295605997501036,
+        "forecast_v850": 0.0018937421907538527,
+        "forecast_z500": 0.012358132028321533,
+        "latitude_deg": 0.0,
+        "lead_hours": 0.0,
+        "longitude_deg": 0.10204081632653061,
+        "moisture_transport_area_mean": 0.03125,
+        "mslp_area_mean": 0.09375,
+        "mslp_minimum": 0.046875,
+        "mslp_range": 0.0,
+        "pwat_area_mean": 0.0,
+        "q700_area_mean": 0.03125,
+        "raw_c00_rain_mm": 0.002837359433569346,
+        "relative_vorticity_area_mean": 0.03125,
+        "relative_vorticity_p90": 0.03125,
+        "u850_area_mean": 0.09375,
+        "v850_area_mean": 0.03125,
+        "wind_speed_area_mean": 0.046875,
+        "z500_area_mean": 0.046875
+      }
+    },
+    "day2_24h": {
+      "cases": 69,
+      "mean_outside_fraction_by_feature": {
+        "forecast_mslp": 0.0077866106513590355,
+        "forecast_pwat": 0.002692115000392348,
+        "forecast_q700": 0.0025532839577712186,
+        "forecast_u850": 0.0025834646192105944,
+        "forecast_v850": 0.000627757757939023,
+        "forecast_z500": 0.0013581297647719246,
+        "latitude_deg": 0.0,
+        "lead_hours": 0.0,
+        "longitude_deg": 0.1020408163265306,
+        "moisture_transport_area_mean": 0.028985507246376812,
+        "mslp_area_mean": 0.10144927536231885,
+        "mslp_minimum": 0.043478260869565216,
+        "mslp_range": 0.0,
+        "pwat_area_mean": 0.0,
+        "q700_area_mean": 0.014492753623188406,
+        "raw_c00_rain_mm": 0.0014969608073930548,
+        "relative_vorticity_area_mean": 0.0,
+        "relative_vorticity_p90": 0.028985507246376812,
+        "u850_area_mean": 0.07246376811594203,
+        "v850_area_mean": 0.014492753623188406,
+        "wind_speed_area_mean": 0.057971014492753624,
+        "z500_area_mean": 0.043478260869565216
+      }
+    },
+    "day3_24h": {
+      "cases": 80,
+      "mean_outside_fraction_by_feature": {
+        "forecast_mslp": 0.015160349854227404,
+        "forecast_pwat": 0.002197001249479384,
+        "forecast_q700": 0.0038629737609329447,
+        "forecast_u850": 0.0016867971678467305,
+        "forecast_v850": 0.0024677217825905874,
+        "forecast_z500": 0.014327363598500625,
+        "latitude_deg": 0.0,
+        "lead_hours": 0.0,
+        "longitude_deg": 0.10204081632653061,
+        "moisture_transport_area_mean": 0.05,
+        "mslp_area_mean": 0.0875,
+        "mslp_minimum": 0.05,
+        "mslp_range": 0.0,
+        "pwat_area_mean": 0.0,
+        "q700_area_mean": 0.0,
+        "raw_c00_rain_mm": 0.0017024156601416075,
+        "relative_vorticity_area_mean": 0.0,
+        "relative_vorticity_p90": 0.0375,
+        "u850_area_mean": 0.0625,
+        "v850_area_mean": 0.0,
+        "wind_speed_area_mean": 0.05,
+        "z500_area_mean": 0.025
+      }
+    }
+  },
+  "cases": 213,
+  "dynamic_case_feature_warnings_over_5pct": [
+    {
+      "cycle": "20260601",
+      "feature": "forecast_z500",
+      "lead": "day1_24h",
+      "outside_fraction": 0.07621824239900042
+    },
+    {
+      "cycle": "20260601",
+      "feature": "z500_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260604",
+      "feature": "relative_vorticity_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260605",
+      "feature": "relative_vorticity_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260703",
+      "feature": "forecast_pwat",
+      "lead": "day2_24h",
+      "outside_fraction": 0.07580174927113703
+    },
+    {
+      "cycle": "20260703",
+      "feature": "forecast_pwat",
+      "lead": "day3_24h",
+      "outside_fraction": 0.07580174927113703
+    },
+    {
+      "cycle": "20260704",
+      "feature": "forecast_u850",
+      "lead": "day1_24h",
+      "outside_fraction": 0.09870887130362349
+    },
+    {
+      "cycle": "20260704",
+      "feature": "forecast_pwat",
+      "lead": "day1_24h",
+      "outside_fraction": 0.07246980424822991
+    },
+    {
+      "cycle": "20260704",
+      "feature": "forecast_pwat",
+      "lead": "day2_24h",
+      "outside_fraction": 0.060807996668054975
+    },
+    {
+      "cycle": "20260704",
+      "feature": "raw_c00_rain_mm",
+      "lead": "day3_24h",
+      "outside_fraction": 0.052478134110787174
+    },
+    {
+      "cycle": "20260704",
+      "feature": "forecast_u850",
+      "lead": "day3_24h",
+      "outside_fraction": 0.051228654727197
+    },
+    {
+      "cycle": "20260704",
+      "feature": "forecast_z500",
+      "lead": "day3_24h",
+      "outside_fraction": 0.05747605164514785
+    },
+    {
+      "cycle": "20260704",
+      "feature": "forecast_mslp",
+      "lead": "day3_24h",
+      "outside_fraction": 0.10453977509371096
+    },
+    {
+      "cycle": "20260705",
+      "feature": "forecast_pwat",
+      "lead": "day1_24h",
+      "outside_fraction": 0.05164514785506039
+    },
+    {
+      "cycle": "20260711",
+      "feature": "forecast_q700",
+      "lead": "day3_24h",
+      "outside_fraction": 0.08246563931695126
+    },
+    {
+      "cycle": "20260712",
+      "feature": "forecast_q700",
+      "lead": "day2_24h",
+      "outside_fraction": 0.08788004997917534
+    },
+    {
+      "cycle": "20260713",
+      "feature": "forecast_q700",
+      "lead": "day1_24h",
+      "outside_fraction": 0.09037900874635568
+    },
+    {
+      "cycle": "20260714",
+      "feature": "forecast_q700",
+      "lead": "day1_24h",
+      "outside_fraction": 0.05039566847147022
+    },
+    {
+      "cycle": "20260727",
+      "feature": "forecast_z500",
+      "lead": "day3_24h",
+      "outside_fraction": 0.20741357767596835
+    },
+    {
+      "cycle": "20260729",
+      "feature": "forecast_z500",
+      "lead": "day1_24h",
+      "outside_fraction": 0.23281965847563516
+    },
+    {
+      "cycle": "20260729",
+      "feature": "forecast_mslp",
+      "lead": "day1_24h",
+      "outside_fraction": 0.06788837984173261
+    },
+    {
+      "cycle": "20260730",
+      "feature": "forecast_z500",
+      "lead": "day1_24h",
+      "outside_fraction": 0.34860474802165764
+    },
+    {
+      "cycle": "20260730",
+      "feature": "forecast_mslp",
+      "lead": "day1_24h",
+      "outside_fraction": 0.11995002082465639
+    },
+    {
+      "cycle": "20260731",
+      "feature": "forecast_z500",
+      "lead": "day1_24h",
+      "outside_fraction": 0.06538942107455227
+    },
+    {
+      "cycle": "20260903",
+      "feature": "mslp_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260905",
+      "feature": "forecast_mslp",
+      "lead": "day2_24h",
+      "outside_fraction": 0.17159516867971678
+    },
+    {
+      "cycle": "20260905",
+      "feature": "mslp_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260905",
+      "feature": "z500_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260911",
+      "feature": "u850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260911",
+      "feature": "u850_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260912",
+      "feature": "u850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260912",
+      "feature": "u850_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260912",
+      "feature": "wind_speed_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260912",
+      "feature": "mslp_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260913",
+      "feature": "mslp_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260914",
+      "feature": "mslp_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260915",
+      "feature": "forecast_mslp",
+      "lead": "day1_24h",
+      "outside_fraction": 0.0687213660974594
+    },
+    {
+      "cycle": "20260915",
+      "feature": "mslp_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "v850_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "mslp_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "mslp_minimum",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "z500_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "u850_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "wind_speed_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "mslp_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "mslp_minimum",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260917",
+      "feature": "z500_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "v850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "mslp_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "mslp_minimum",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "z500_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "u850_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "wind_speed_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "mslp_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "mslp_minimum",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "z500_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "u850_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260918",
+      "feature": "mslp_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260919",
+      "feature": "u850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260919",
+      "feature": "wind_speed_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260919",
+      "feature": "mslp_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260919",
+      "feature": "mslp_minimum",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260919",
+      "feature": "z500_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260920",
+      "feature": "u850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260920",
+      "feature": "mslp_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260922",
+      "feature": "forecast_v850",
+      "lead": "day3_24h",
+      "outside_fraction": 0.10787172011661808
+    },
+    {
+      "cycle": "20260923",
+      "feature": "forecast_v850",
+      "lead": "day3_24h",
+      "outside_fraction": 0.07996668054977094
+    },
+    {
+      "cycle": "20260923",
+      "feature": "forecast_z500",
+      "lead": "day3_24h",
+      "outside_fraction": 0.08121615993336109
+    },
+    {
+      "cycle": "20260924",
+      "feature": "forecast_v850",
+      "lead": "day1_24h",
+      "outside_fraction": 0.10370678883798418
+    },
+    {
+      "cycle": "20260925",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260926",
+      "feature": "v850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260927",
+      "feature": "forecast_mslp",
+      "lead": "day3_24h",
+      "outside_fraction": 0.1407746772178259
+    },
+    {
+      "cycle": "20260927",
+      "feature": "u850_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260927",
+      "feature": "wind_speed_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260927",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260927",
+      "feature": "mslp_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260927",
+      "feature": "mslp_minimum",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260927",
+      "feature": "relative_vorticity_p90",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "forecast_mslp",
+      "lead": "day2_24h",
+      "outside_fraction": 0.1149521032902957
+    },
+    {
+      "cycle": "20260928",
+      "feature": "u850_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "wind_speed_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "mslp_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "relative_vorticity_p90",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "forecast_mslp",
+      "lead": "day3_24h",
+      "outside_fraction": 0.07955018742190754
+    },
+    {
+      "cycle": "20260928",
+      "feature": "u850_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "wind_speed_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "mslp_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "mslp_minimum",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260928",
+      "feature": "relative_vorticity_p90",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "forecast_mslp",
+      "lead": "day1_24h",
+      "outside_fraction": 0.19033735943356936
+    },
+    {
+      "cycle": "20260929",
+      "feature": "q700_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "u850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "wind_speed_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "mslp_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "relative_vorticity_p90",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "forecast_mslp",
+      "lead": "day2_24h",
+      "outside_fraction": 0.06663890045814244
+    },
+    {
+      "cycle": "20260929",
+      "feature": "q700_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "u850_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "wind_speed_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "mslp_area_mean",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "mslp_minimum",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260929",
+      "feature": "relative_vorticity_p90",
+      "lead": "day2_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "forecast_mslp",
+      "lead": "day1_24h",
+      "outside_fraction": 0.30112453144523116
+    },
+    {
+      "cycle": "20260930",
+      "feature": "q700_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "u850_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "wind_speed_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "mslp_area_mean",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "mslp_minimum",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "relative_vorticity_p90",
+      "lead": "day1_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "forecast_z500",
+      "lead": "day3_24h",
+      "outside_fraction": 0.753436068304873
+    },
+    {
+      "cycle": "20260930",
+      "feature": "forecast_mslp",
+      "lead": "day3_24h",
+      "outside_fraction": 0.6268221574344023
+    },
+    {
+      "cycle": "20260930",
+      "feature": "u850_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "wind_speed_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "moisture_transport_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "mslp_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "mslp_minimum",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "z500_area_mean",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    },
+    {
+      "cycle": "20260930",
+      "feature": "relative_vorticity_p90",
+      "lead": "day3_24h",
+      "outside_fraction": 1.0
+    }
+  ],
+  "forecast_year_sha256": "fc0183682a84d864781170169b3b4365b4a92a0b09c8bfffffbf71f4a9108884",
+  "interpretation": "Descriptive forecast-feature applicability only. It cannot prove model-version equivalence or rainfall skill.",
+  "model_inference": false,
+  "observation_read": false,
+  "range_quantiles": [
+    0.001,
+    0.999
+  ],
+  "schema": "varshasetu-2026-jjas-feature-range-v1",
+  "source_track": "B_OPERATIONAL_GEFS",
+  "training_X_sha256": "8716ec75c04dce7e8bb432926203e24876e710a3ba6d0a7d8f63da4c0699ff47"
+}

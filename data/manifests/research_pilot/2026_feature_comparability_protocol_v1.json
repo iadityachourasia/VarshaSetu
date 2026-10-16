@@ -1,0 +1,25 @@
+{
+  "schema": "varshasetu-2026-feature-comparability-protocol-v1",
+  "frozen_date": "2026-10-08",
+  "purpose": "Forecast-only, common-footprint, same-calendar-month and same-lead distribution comparison between the 2023 training features and sealed 2026 JJAS forecast features",
+  "research_status": "DESCRIPTIVE_NO_GEFS_VERSION_CLEARANCE_NO_SKILL_NO_PROMOTION",
+  "source_track": "B_OPERATIONAL_GEFS",
+  "inputs": {
+    "training_X_sha256": "8716ec75c04dce7e8bb432926203e24876e710a3ba6d0a7d8f63da4c0699ff47",
+    "training_cases_sha256": "54d2ae6e37beb610b48e467885b3e3803d1d9330d7c7d2d9047621ada0abf253",
+    "training_pixel_index_sha256": "bdb302277c00bc1c402df72395a6dc3e5f47d4f704d00dbc486cca027cd6dfcd",
+    "feature_names_module_sha256": "9faf58c4ef7e51ef8480918577a654bb5734ae861132804ef4264eb99b89d248",
+    "forecast_year_sha256": "fc0183682a84d864781170169b3b4365b4a92a0b09c8bfffffbf71f4a9108884",
+    "forecast_corpus_protocol_sha256": "5f03c73ab64a748b7bdffe8f0a28e5fd7cb591858e4de42e2a6f15043d5ccaf7"
+  },
+  "case_rule": "Only 2023 JJAS rows in the existing 2023 training X and 2026 JJAS strict-QC forecast leads; exclude the eight October 2023 training cases from this comparison. Group independently by initialization month and Day 1/2/3 lead. Never select cases from observed rainfall or 2026 outcomes.",
+  "spatial_rule": "Require the 2023 pixel_index to be the same 1301 unique 49x49 flattened indices for all training cases. Subset every 2026 2401-cell forecast X to exactly those ordered indices. Require latitude, longitude and lead columns to match the corresponding 2023 stratum exactly.",
+  "features": "Report every forecast-time dynamic column in phase2b.FEATURE_NAMES; exclude only latitude_deg, longitude_deg and lead_hours from distribution summaries. Do not select features after seeing a result.",
+  "statistics": "For each month, lead and dynamic feature, report 2023 and 2026 cell-value p01, median and p99; 2026 minus 2023 median; and the 2026 fraction outside the 2023 stratum p0.1-p99.9 range. Report forecast-case and cell counts. These are descriptive; no hypothesis test or gate is inferred.",
+  "interpretation_limits": [
+    "The 2023 and 2026 dates are not meteorologically paired, and strict-QC admission differs by year.",
+    "Cell values are spatially dependent; quantiles are descriptions, not independent-sample uncertainty.",
+    "A distribution shift does not identify a GEFS executable or prove a cause, skill change, selected-predictor equivalence, or operational suitability.",
+    "No observation, rainfall target, reanalysis at valid time, 2026 score, model fit, threshold selection, or promotion is allowed."
+  ]
+}

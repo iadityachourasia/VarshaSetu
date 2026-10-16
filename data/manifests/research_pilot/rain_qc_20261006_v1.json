@@ -1,0 +1,53 @@
+{
+  "cycle": "20261006",
+  "diagnostic_only": true,
+  "intervals": [
+    {
+      "cells_below_negative_packing_bound": 0,
+      "grid_cells": 2401,
+      "interval_hours": [
+        3,
+        6
+      ],
+      "minimum_difference_mm": 0.0,
+      "negative_cells": 0,
+      "packing_bound_mm": 0.01,
+      "prefix_quantum_mm": 0.01,
+      "prefix_sha256": "7618e250ff49e980f12fc3abde3e2429d2152e322db7e5d3e232fb88ca458982",
+      "total_quantum_mm": 0.01,
+      "total_sha256": "fb9078579354691138c44787f875b5e242681f29f0489794eb2d5f2a0d88c21c"
+    },
+    {
+      "cells_below_negative_packing_bound": 5,
+      "grid_cells": 2401,
+      "interval_hours": [
+        27,
+        30
+      ],
+      "minimum_difference_mm": -0.07,
+      "negative_cells": 179,
+      "packing_bound_mm": 0.055,
+      "prefix_quantum_mm": 0.01,
+      "prefix_sha256": "b6096cccdb11c977e6c58e88283cbced0dd3eda86de52a227b81225c3e5274b9",
+      "total_quantum_mm": 0.1,
+      "total_sha256": "7631664a18c83ff38482ee35e416b02f2aff866dc3706412361d56caaaf4e136"
+    },
+    {
+      "cells_below_negative_packing_bound": 1,
+      "grid_cells": 2401,
+      "interval_hours": [
+        51,
+        54
+      ],
+      "minimum_difference_mm": -0.06,
+      "negative_cells": 97,
+      "packing_bound_mm": 0.055,
+      "prefix_quantum_mm": 0.01,
+      "prefix_sha256": "07357a322b1a2e4f8dc5ad1cf4e0467aa2b2e96732acfd2f11bc6a9f7148a2e0",
+      "total_quantum_mm": 0.1,
+      "total_sha256": "ea5c65d31bf6df4fc9aa860266db3a23f6f5d54aca8ba6651ab969219634adb2"
+    }
+  ],
+  "observation_read": false,
+  "scope": "REGIONAL_10_TO_22_N_68_TO_80_E"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "varshasetu-coherent-probability-projection-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "FROZEN_BEFORE_OUTCOME_PAIRED_ANALYSIS",
+  "track": "B_OPERATIONAL_GEFS_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "population": "All 183 Phase 4I 2024 development cases, using their exact common 1301-cell row order and separately selected frozen heavy and very-heavy calibrated predictions",
+  "forecast_inputs": "Hash-verified Phase 4I selected_2024_probability.npy arrays; no refitting, observation features, or future-time inputs",
+  "reference": "Phase 4G 2024 IMD 24-hour 03-03 UTC heavy >=64.5 mm and very-heavy >=115.6 mm labels, loaded only after protocol sealing",
+  "primary_projection": "For p_very_heavy > p_heavy, replace both probabilities by their arithmetic mean. Otherwise leave both unchanged. This is the Euclidean projection onto 0<=p_very_heavy<=p_heavy<=1; it cannot increase the sum of the two squared probability errors for any nested observed label pair.",
+  "comparison": "Frozen original separate calibrators versus the prespecified symmetric projection on identical 2024 rows; evaluate all rows, the original calibration block, purged block, and model-selection block separately",
+  "metrics": ["violation cells and fraction", "absolute violation gap", "heavy Brier", "very-heavy Brier", "joint Brier sum", "fixed 10-bin reliability with counts and observed frequency", "event counts"],
+  "selection_rule": "No model or threshold selection. Report the projection as a deterministic coherence repair diagnostic. The original 2024 selection block was already used to select calibrators, so no result is an independent validation or calibration claim.",
+  "release_rule": "No live worker, API, dashboard, calibrated-label, or promotion change. A separately frozen genuinely independent-year reliability test is required before product use.",
+  "excluded_years": [2025, 2026]
+}

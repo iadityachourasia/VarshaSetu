@@ -1,0 +1,31 @@
+{
+  "2026_observation_values_read_by_audit": false,
+  "fit_artifact_sha256_identical": {
+    "heavy_head.json": "45041fe2bbf62df91a62b9c794e6f28924cf7112aa34a4435a3b7ca2f36806c2",
+    "models.json": "4727801ba466cb9d53a0c799d260e9c22e586bd5d844e0779950edffa065f4ae",
+    "nested_oof_float32.npz": "bb1e028485dde134a3163b27af9a839fbfc69e29902104224a15b78c5cff1dc8",
+    "very_heavy_head.json": "d8c3995488481c3db91f603bde4b43f83d92b4decc3edcfbf7984758c46700c4"
+  },
+  "frozen_field": {
+    "correct_scope": "v4.prepare itself did not open reference values",
+    "global_interpretation_valid": false,
+    "name": "observation_values_read_before_freeze",
+    "value": false
+  },
+  "known_prior_reference_use": {
+    "2023": "v3 fit read the 2023 reference before the v4 freeze",
+    "2024": "v1 and v2 consumed-development scores existed and were pinned before the v4 freeze"
+  },
+  "schema": "nationwide-probability-v4-lineage-audit-v1",
+  "science_contract_equivalent": true,
+  "scientific_decision": "v4 remains failed consumed-2024 development evidence; no product promotion",
+  "status": "V4_FREEZE_FLAG_SCOPE_CORRIGENDUM",
+  "v3_2024_predictions": 0,
+  "v3_fit_seal_exists": false,
+  "v3_protocol_sha256": "94b413b11d5e6cce5588708098aeefd53f47016e8828c43cf10a57c4a01bfa3f",
+  "v3_score_exists": false,
+  "v4_fit_seal_sha256": "e9073dc770fef5ff6a8074786e229178ea75b0ae505c82a8410e858155e20814",
+  "v4_forecasts_sealed_before_its_2024_score": true,
+  "v4_protocol_sha256": "93b6f93c0e174f80efa2175a97932b9968ea8697f799c534467e8633fb247516",
+  "v4_score_sha256": "91bb11098c2f082c5ba650999e21794b0cbb52dda5713c7d373e14f9042f3758"
+}

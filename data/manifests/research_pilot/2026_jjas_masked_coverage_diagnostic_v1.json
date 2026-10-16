@@ -1,0 +1,3311 @@
+{
+  "canonical_passing_leads": 213,
+  "canonical_withheld_leads": 153,
+  "changes_canonical_qc": false,
+  "date_count": 122,
+  "diagnostic_only": true,
+  "forecast_year_sha256": "fc0183682a84d864781170169b3b4365b4a92a0b09c8bfffffbf71f4a9108884",
+  "interpretation": "Post hoc forecast-side coverage only. Missing cells stay missing; no partial forecast is published or scored.",
+  "minimum_valid_fraction_among_withheld": 0.9920866305705955,
+  "model_inference": false,
+  "observation_read": false,
+  "possible_date_lead_products": 366,
+  "rows": [
+    {
+      "case_manifest_sha256": "6e581f86a0f8beb45d0ce485c81b98c9953f3b7121817919e032e05033d2febe",
+      "cycle": "20260601",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "54638c090361cbe63f141da13c6ebc413e4394d5c60ea94237a81b17d281001d",
+      "cycle": "20260602",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 7,
+          "total_cells": 2401,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "2da7d95dfba850996704b50d2b5cd84b28adb69ebd5ee9df9a622efae4ccb665",
+      "cycle": "20260603",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 8,
+          "total_cells": 2401,
+          "valid_cells": 2393,
+          "valid_fraction": 0.9966680549770929
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "838fc326002a1b7c08a3e01e76844a5157738dadeb3c24bc565b8ade3c37a2e8",
+      "cycle": "20260604",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 17,
+          "total_cells": 2401,
+          "valid_cells": 2384,
+          "valid_fraction": 0.9929196168263223
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "3613735cdbdc52897bdb9817453fbdf536e48c8c484265e1c349ebb767f46b93",
+      "cycle": "20260605",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "ef6bb9de1cc490f6f8f5a79bf61c065db476cb50cb2216fc027f41715bb15f3c",
+      "cycle": "20260606",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "b486e7c4549e85a211e4ac1736ce5b110771d5826d138d60efcbe0388d7198a6",
+      "cycle": "20260607",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "2cfb76570737c2415247e3f850e14825e5515d3751804e618512a9d35cd06e1f",
+      "cycle": "20260608",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "72dfb4a2d55b37f7ac96a5eee218dfea912686748e1da826c8980e81eb132277",
+      "cycle": "20260609",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "11d60b3e5f299a06103edbbf796eb14818e446a5a8e53e2184396f4e9fb23ac6",
+      "cycle": "20260610",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 8,
+          "total_cells": 2401,
+          "valid_cells": 2393,
+          "valid_fraction": 0.9966680549770929
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 12,
+          "total_cells": 2401,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "953028e5fc5b9c93108251e94667897ab3b887bec9d386cb9eb4b185df3a1a37",
+      "cycle": "20260611",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "c77b61f8b8903e4d6e2560245e63618610cc4ac90abb789a7788aa5d49790ad0",
+      "cycle": "20260612",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 7,
+          "total_cells": 2401,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "9ca04faebe174e9de451c30fc8c9577c0dfd0f500be765b05c0ecc428bad2e20",
+      "cycle": "20260613",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "76359f8cdf0e465a96c04d1e6061b471b3152d26807acff3a71175cbd44213c3",
+      "cycle": "20260614",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "e13c423ef8883e841494d243257253493a96477266ff32aeaf3057b5100144eb",
+      "cycle": "20260615",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "afe421648648a9fd3a76502fc46f8ab149d66912d9655267acbb2c326db2933c",
+      "cycle": "20260616",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "3881fb5d8f0305b7e72db857d2d0b57fc2321e1a1f85779da0fa80a85b8e2afb",
+      "cycle": "20260617",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "51eda80af8bb05c43442e5acd8b7f699780acbe8ca937298411c668ae1c965d8",
+      "cycle": "20260618",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 19,
+          "total_cells": 2401,
+          "valid_cells": 2382,
+          "valid_fraction": 0.9920866305705955
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 16,
+          "total_cells": 2401,
+          "valid_cells": 2385,
+          "valid_fraction": 0.9933361099541858
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "d7d84f4abe720a7dbf8d1d4cfab446a46a1887ccaae29ccc81b77a46d0912b87",
+      "cycle": "20260619",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 13,
+          "total_cells": 2401,
+          "valid_cells": 2388,
+          "valid_fraction": 0.994585589337776
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "893d537aebd8a89a0fe0fa3fa791252df222f45fb632e9d0240d60a178979456",
+      "cycle": "20260620",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 17,
+          "total_cells": 2401,
+          "valid_cells": 2384,
+          "valid_fraction": 0.9929196168263223
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 13,
+          "total_cells": 2401,
+          "valid_cells": 2388,
+          "valid_fraction": 0.994585589337776
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "e2490a2558a26f3bdb2e076dc1a5ad7e29d855b17a8b30c078490bd20fb9c324",
+      "cycle": "20260621",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 7,
+          "total_cells": 2401,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 12,
+          "total_cells": 2401,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "57bc563780fa3e27197bd648d4786f66cbeb46f9a55b22cc9bb0d54423282c7c",
+      "cycle": "20260622",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 12,
+          "total_cells": 2401,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "6a50813be2cadac557c78b92999b622842f8130719b1bba546291b4ba2e75ecb",
+      "cycle": "20260623",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "508bc63876a423d0061fa72ce8938b4aa9b256bfd0bf12a4639ed49a412e76d9",
+      "cycle": "20260624",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "6b8f85190c6e77fc94f34e1d9d776597e408e2bd83eff560ae70534dd69f2cfc",
+      "cycle": "20260625",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "28d5593725869338778da12a03327cbcd198b61f77be7a8033b6f770db0852ea",
+      "cycle": "20260626",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "d97198d9b5e4009caee86b12eb44bd3a6f97e0e884328f2d36976c08ab353ed8",
+      "cycle": "20260627",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "17e1bf4cf8258a147602d53ed6aa76bc128a11af4c556b380005ad2e3b8247e9",
+      "cycle": "20260628",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 11,
+          "total_cells": 2401,
+          "valid_cells": 2390,
+          "valid_fraction": 0.9954185755935027
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "87e004fb44e165564dbd93f5376befb57b14d6123a19ffaf6bbf9734d46205b0",
+      "cycle": "20260629",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "33c0226a368457a926a12edac6e7d212ccbc2252d79613366ed88153d4eec2b6",
+      "cycle": "20260630",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "9ea4be500ed178e9ab4ef375107c9eb4ef816a7c326f70b03ff860dab26c7cfa",
+      "cycle": "20260701",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "b3654cff5b9f8bb3f56b6d8bb63738c4817995bd6db2bf77d80f79beb37b45a6",
+      "cycle": "20260702",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "71a192ea1759b7becc01346ae96591902922b08db3c82740689ca587347810a0",
+      "cycle": "20260703",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "d57ce1b417bf52cd0292ba3a36b88704fcd053f6a119aa595870a11f478bc469",
+      "cycle": "20260704",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "f21906e8c6a6c8ddfe2e66b9ea77bca1bfbf235a99452a19633ecd27a9d5c3dc",
+      "cycle": "20260705",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "1ebc907e94d75360ca6b0e5e9e4c46b2e547e0031682c018e480823d29ff3ee8",
+      "cycle": "20260706",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "eaac77cf81770a240e32e4b20891e9aba9dad599d67f5ab70ffceefb5b09b1ef",
+      "cycle": "20260707",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "930100516a414524ab4fcadd78eacb706a05da454952be5589010bbfa0528799",
+      "cycle": "20260708",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "71ac4d2fa93209e178d8f751024dd4b814546782a58c175ad9747d84c733cd63",
+      "cycle": "20260709",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "6b7caa666561efdbe8beb7076dfc9cb46da013e4b6cb895542398f34422aebce",
+      "cycle": "20260710",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "fa7f9f1f3f60566c77256d2ee1ec354b788152ebb62ca6b9ce5db13f72c75486",
+      "cycle": "20260711",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "99db27d1628184c6bdee378fa4092fe14da279a610553b1dc530ace4f6c30122",
+      "cycle": "20260712",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "ffb5076a7fa3c69f273ce375d444658a09d448f054b20d402b8ee9ef443fc1bf",
+      "cycle": "20260713",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "5b32efcb20bc60685ba51171f2b2e079c66135e71b3a4b6aaf144b074d77264a",
+      "cycle": "20260714",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "9ed00f4bcf3a107d9dd16256e09b983a63c7a1d3340cbad1b8f7d19b9a0e7b42",
+      "cycle": "20260715",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "c9e84cb1304b52908cf84969264f5a879020cc9b6c38567ef23c51019de47d22",
+      "cycle": "20260716",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "acf7ae830addf3f64233a689d80bc800c286fa23bd6431cf9e176171ead4a211",
+      "cycle": "20260717",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "7b16c2501080e2c35247eb226d28b0416fedda695bb9fc82804740b8d5c61149",
+      "cycle": "20260718",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "76ae339ca3334f3c8a9d416d02647abea35ea6dcfa634e44ed0324999bf28661",
+      "cycle": "20260719",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 8,
+          "total_cells": 2401,
+          "valid_cells": 2393,
+          "valid_fraction": 0.9966680549770929
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "0a4483c48144b1d084774ce60a5942ad8d48b10a2ab169d31989034783d55a96",
+      "cycle": "20260720",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "bc1acdf6d9ae5f2bc4cb8d8869b76dd8af1b2c3657498f14c96576552f5384db",
+      "cycle": "20260721",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "629db6727260b720df8f6d49413f4446113c42baf1691d05d2de3d99069e5a71",
+      "cycle": "20260722",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "540fd9ba026917dbd5d0785e61a37081f826cc16f7792be48f1f73c894b97219",
+      "cycle": "20260723",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "437f1a40e5401b6bfca1dd7267f27b4e10658df61e1e06f58e3e9b94bf699e9d",
+      "cycle": "20260724",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "daf3971fee0518fd7a7acba79a8940d12ad4d5701af5ab91eace082defef876d",
+      "cycle": "20260725",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "c5137a5d684e00e95060e6b1d84b16d9bcb06168b69d98361bc685a50d2cbec6",
+      "cycle": "20260726",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "e58719c5eff0cde6c24e458a05606be63ada1ce19ab9a2efddb4dfddb0a36a3e",
+      "cycle": "20260727",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "58dff9642430584f927ceaf5601c2581f8a216b9841c9934993241bd555461f9",
+      "cycle": "20260728",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "b942421809a41a05bf59835a65dd96da6c78d250f2395819128ce3d6e0de91dd",
+      "cycle": "20260729",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "3a5f796764e2a620d2331ef57593332d703c444d37fe0b160b535dbfc70a6eb9",
+      "cycle": "20260730",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "0db1b0855793078bbd51da87aae48058d895bb280357a1723ae78175f8fcba79",
+      "cycle": "20260731",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "310d09d2f4d45e2b85bfc28197f9c2f5bab6284173575dcf9e22e41e03e3ac6b",
+      "cycle": "20260801",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "99c527313d16efd1853a364f495a4020fdca033a3309a3b74a8d18ffcda74c01",
+      "cycle": "20260802",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 7,
+          "total_cells": 2401,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "a90ff6bbdc12b43ff03b58838101063011669ab632e8fc9d910e516d8e44bbce",
+      "cycle": "20260803",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "f5d2b090819b34371a6f081d1850eea1a6af44ad9ab06c85eb7d1d24b1e81aef",
+      "cycle": "20260804",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "dd1564865b606e43bc9a128d4106be7df2837a06ada45974ffcd72c55d7a173a",
+      "cycle": "20260805",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "68e153c910780cdec6ee95085028dc26e963798200619accf343c537983262e5",
+      "cycle": "20260806",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "18ff6b3da9373ecfbf6e59453402e3047422175214dd66c7b1f26e80f84a7107",
+      "cycle": "20260807",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "e043b3c9cc77a9dbe74d98328368cb0fe31a1c9214fbb91df87a36c3b8dc5d93",
+      "cycle": "20260808",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "ddd9507098aa8fea7767bf29e90d8d53bce1831aaeb2130c803e7c928f963b65",
+      "cycle": "20260809",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "6e590feee44f470efbe23561f4ab6fdae68df63c8eb4c4a36571d2ad67038bc3",
+      "cycle": "20260810",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "2ff9aa5870aeb30ff2732614ce9f4ef309d21f2cdbe59caf1939c1fd08af21d0",
+      "cycle": "20260811",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "c87440ff0e35614d23e61f1beab405d4d9fbac5ca50156dfffec8199e8fb716a",
+      "cycle": "20260812",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "61bf305328fc889d20fdcf07bfdedd5dc57e3a98496047ab40503cf363f9d916",
+      "cycle": "20260813",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "3d7b8ffa9ddc04dccbe307a9783e91de3b1b828a75337cf0f5756daf7c5d76c9",
+      "cycle": "20260814",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "5d182a0ced40f4565a848e01c389975d85e579710e8c8ff17ba1a8c72d4efd8d",
+      "cycle": "20260815",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "d73f7468f00a5a9239e173e18d432facd84a09e0b6a22800bcbdbcedc9c3ff2b",
+      "cycle": "20260816",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "fa18d69ffb6ba38540d9344f0a371c5c33c77b10d0ce5753d4410d1430145ffb",
+      "cycle": "20260817",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "3ed17a2e625118a35b7152cfb4aaf381aab963e82a678c590f1e30bcf2a3644b",
+      "cycle": "20260818",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "cda141f1f880350979a30bedc2c42853ed6d4fa38e8b84e45583aa2ccab25fbb",
+      "cycle": "20260819",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "cfac7daf9cfdc78400474e4c28ad83b9ecfa1aca97368a28f9e2a1f5778fe5c1",
+      "cycle": "20260820",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "574f6487e8f74894ff98ecb53d4cd552ac67fa8f8e802af40a0b2311b75af78e",
+      "cycle": "20260821",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "4f58149cee1e396b9a9a48fb736cd73195e54829d91d94caf02d69c9c88e4afa",
+      "cycle": "20260822",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "0ed32ae5e7dc5d7396071918b85f741cd5999cba1628df2ea374c16274b86a2a",
+      "cycle": "20260823",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "2637893ab492db5f7526804f976b770fd39656294e29848c72b59ca3b5dc216f",
+      "cycle": "20260824",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "b1ad10770f17c5d168e55224e51a41bfe50a7e43a4b57edb56a2017be490e765",
+      "cycle": "20260825",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "e781e428fd168a33eb4f44cec17863e0e74b85ff37b1991a1ccaa89356f05560",
+      "cycle": "20260826",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "e29621204a0fff1efb1f9cba1e249ebc957b9b199c092aa105209205de9854ee",
+      "cycle": "20260827",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "94065294debb3bf33f1f422d4366859b792b32a8d3fa3f20573b6b7ec0610860",
+      "cycle": "20260828",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "673f80ac3b1ec2b3fe63e1f98098aec9734a0d4093fb0a524ad431f6def0212f",
+      "cycle": "20260829",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "e56c28d1530bbae9c733a2b622dc917ecd0b64b84394ced01fc002029193fbbd",
+      "cycle": "20260830",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "2eb2f33b3a6377726ba275e5cf98337f51f1033254dd82ac77d5a6ee1c63156c",
+      "cycle": "20260831",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "b8cdb0ab5b40325a443a1d5417a2fb252ec4b65735dbfcd4ed9b346154f8da8b",
+      "cycle": "20260901",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "42deea306ee3da9b8072d01d8ff69b15e6479be4d4d2121ebaa696d2e876247c",
+      "cycle": "20260902",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "f64314adfda705c20c5914c76a326af10e640bb3b9ed17fa0ea058a0d9667493",
+      "cycle": "20260903",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "24c0f841f29136d01e464b1e2032faaa50cde2cb40da5c5ca15ad3cd3ca87e2d",
+      "cycle": "20260904",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 14,
+          "total_cells": 2401,
+          "valid_cells": 2387,
+          "valid_fraction": 0.9941690962099126
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "ea5498527c86fabd0fc614e2869e222a47bbb1fbe6f162acf618131c59f77417",
+      "cycle": "20260905",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 12,
+          "total_cells": 2401,
+          "valid_cells": 2389,
+          "valid_fraction": 0.9950020824656394
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "cb06b8794e9e8b4413721faa3bd6bb6bd4d4ac0422863bb796cea03e539cdbe8",
+      "cycle": "20260906",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 7,
+          "total_cells": 2401,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "68adc1799113d14161b8d01aa7016c651a2044e14b6090c57f536feb55af34df",
+      "cycle": "20260907",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "4164461bcee88f44d741e5a483bb5f25625ddfa3ed6af768e08fe128ea77f5b0",
+      "cycle": "20260908",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "3a133f7eb0cfd1b156c9901bc13a152f1b5c3f5ef921e60c1b04980fee833c83",
+      "cycle": "20260909",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "5be1280a6d8f3e9ebba55fea8af33ad93429d6c475fbe55d3e7d496fd4d521ac",
+      "cycle": "20260910",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "dfda3306e8c8c3ef0e024b2548437d6897fbf7f88a6e6fef78fb9a9b5bc1b62c",
+      "cycle": "20260911",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "a76808bd76a7631b6c418c340779ab6eeae33433dddfa95fcef2ab884d22edb8",
+      "cycle": "20260912",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 7,
+          "total_cells": 2401,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "309cfb19b403cba4accce355aa84d696349953e26108610dd8c496cd8256bc45",
+      "cycle": "20260913",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 8,
+          "total_cells": 2401,
+          "valid_cells": 2393,
+          "valid_fraction": 0.9966680549770929
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "91d1b07431908a925e9de7abd13cecf2ba935018d2ded46d26bb5ce9454de1d8",
+      "cycle": "20260914",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "b05b337169cd76e70d8dc1f97ee29ff3c88712ccf48b5b749a075562c3aab967",
+      "cycle": "20260915",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 11,
+          "total_cells": 2401,
+          "valid_cells": 2390,
+          "valid_fraction": 0.9954185755935027
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "cb5263d9cf33097cde8a70a88926f758864ac692e21c90d8ba6f2ceb9258724b",
+      "cycle": "20260916",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 11,
+          "total_cells": 2401,
+          "valid_cells": 2390,
+          "valid_fraction": 0.9954185755935027
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 7,
+          "total_cells": 2401,
+          "valid_cells": 2394,
+          "valid_fraction": 0.9970845481049563
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "6105a966c8b51e0795bbb9a7a03100f9a6e532a23b5ed9a78f3cf001312f0c45",
+      "cycle": "20260917",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "c8d63fd1a1e4ae41f94ce5b59afcaf9abde60ff74937ae97abe989ac28af945a",
+      "cycle": "20260918",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "a5aaed58e919b42f19269acdff5ad5ca96072e3fd820ea58f5946ab0524c7f4c",
+      "cycle": "20260919",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 9,
+          "total_cells": 2401,
+          "valid_cells": 2392,
+          "valid_fraction": 0.9962515618492295
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "03450c7ee7f2aa7d7d662f2ad9102d50406645c8c953519ea4ca34d2fe224370",
+      "cycle": "20260920",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 6,
+          "total_cells": 2401,
+          "valid_cells": 2395,
+          "valid_fraction": 0.9975010412328197
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "3949b6ad082cc66e1b7ee12a03a704c68c7860dc95511666756c3ad1d812c081",
+      "cycle": "20260921",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 13,
+          "total_cells": 2401,
+          "valid_cells": 2388,
+          "valid_fraction": 0.994585589337776
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 4,
+          "total_cells": 2401,
+          "valid_cells": 2397,
+          "valid_fraction": 0.9983340274885465
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "205ced19a58d41f744c68449c464380e6b21a9f7ea0bb916551ff3a8f3479045",
+      "cycle": "20260922",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "0f87f45cd522ead157a359640e5989731eaa58acd47eeb3e34c9c7f590878098",
+      "cycle": "20260923",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 3,
+          "total_cells": 2401,
+          "valid_cells": 2398,
+          "valid_fraction": 0.9987505206164098
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "5e872b32ef732e45f0a2b4189e1456144f4e0c983f9ac9ea508f5ccb3b413454",
+      "cycle": "20260924",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "f0bdcb5be20efc3b127b328051bbc3092e3e65abcefef609ebe31c7e40e032b1",
+      "cycle": "20260925",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "0b3a10cf4fdafeccd57f820e2904d597a36bbd0a92403ce4ba772f85b7f6dbf2",
+      "cycle": "20260926",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 1,
+          "total_cells": 2401,
+          "valid_cells": 2400,
+          "valid_fraction": 0.9995835068721366
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "fb92958a7b8165521788e30cd3e7e863c3139997a13c4be4fef9202ca960ae30",
+      "cycle": "20260927",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 11,
+          "total_cells": 2401,
+          "valid_cells": 2390,
+          "valid_fraction": 0.9954185755935027
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "ccc4fa30531f1ff59fed2349e2853686ee2f893b50f0f986121f89a1e027ad62",
+      "cycle": "20260928",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 10,
+          "total_cells": 2401,
+          "valid_cells": 2391,
+          "valid_fraction": 0.9958350687213661
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "26ccbe1930892a292ca9506c92e05500031108b1846e09bd8216c49c20d7ef5f",
+      "cycle": "20260929",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day3_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 2,
+          "total_cells": 2401,
+          "valid_cells": 2399,
+          "valid_fraction": 0.9991670137442732
+        }
+      }
+    },
+    {
+      "case_manifest_sha256": "8bb122990a90e1eeca11c8541f7258034eff4f8f939406493b7fe22660487783",
+      "cycle": "20260930",
+      "leads": {
+        "day1_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        },
+        "day2_24h": {
+          "canonical_passed": false,
+          "invalid_cells": 5,
+          "total_cells": 2401,
+          "valid_cells": 2396,
+          "valid_fraction": 0.9979175343606831
+        },
+        "day3_24h": {
+          "canonical_passed": true,
+          "invalid_cells": 0,
+          "total_cells": 2401,
+          "valid_cells": 2401,
+          "valid_fraction": 1.0
+        }
+      }
+    }
+  ],
+  "schema": "varshasetu-2026-jjas-masked-coverage-diagnostic-v1",
+  "withheld_leads_with_at_least_99pct_valid_cells": 153
+}

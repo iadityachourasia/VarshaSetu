@@ -1,0 +1,73 @@
+{
+  "schema": "varshasetu-east-coast-development-protocol-v2",
+  "frozen_utc_date": "2026-10-08",
+  "status": "PROTOCOL_FROZEN_BEFORE_STAGE_TRAINING_OR_OBSERVATION_PAIRING",
+  "supersedes_v1_reference_order_only": true,
+  "v1_protocol_sha256": "c6a0add86a22392c2561f13b8fc127753b834bcb2627c95682942883706ecb72",
+  "static_manifest_sha256": "3c614758a709e6ca5067a2bdecdd889eddb7e658f0b70e22760a328d073e2bb0",
+  "forecast_feature_probe_sha256": "15f27ae13723b34d993668a6d71c410a1bea7e0c9d3da6610315246ceaabd900",
+  "source_track": "B_OPERATIONAL_GEFS",
+  "stage": "EAST_COAST_PENINSULA",
+  "roles": {
+    "2023": "fit_only_consumed_development",
+    "2024": "prediction_sealed_before_outcomes_consumed_development_evaluation",
+    "2025": "consumed_test_no_stage_fit_or_score",
+    "2026": "sealed_independent_test_no_access"
+  },
+  "case_admission": {
+    "source": "frozen all-India Raw ledger status INCLUDED intersect complete six-field Phase4F cached atmosphere at the matching 00 UTC initialization and 24/48/72 h forecast lead",
+    "source_array_sha256_required": true,
+    "static_mask_sha256_required": true,
+    "raw_rainfall_nonnegative_finite": true,
+    "atmosphere_finite": true,
+    "reference_valid_nonnegative_only_at_2023_fit_or_2024_score": true,
+    "missing_reference_zero_filled": false,
+    "same_valid_cell_intersection_for_raw_and_corrected": true
+  },
+  "feature_processing": {
+    "feature_order": "existing 22-column Phase2B deterministic forecast-only schema",
+    "context_domain": "5-30N,55-95E at 0.5 degree",
+    "target_stage": "IMD 0.25-degree grid, static east-coast mask",
+    "interpolation": "existing deterministic Phase2B bilinear interpolation",
+    "derived_context": "existing 12 forecast-only regime-summary features; no regime class or probability in global model",
+    "observation_or_reanalysis_feature": false
+  },
+  "model": {
+    "name": "stage_global_nonregime_M2_fixed",
+    "library": "xgboost.XGBRegressor",
+    "objective": "reg:squarederror",
+    "tree_method": "hist",
+    "device": "cpu",
+    "n_estimators": 200,
+    "max_depth": 6,
+    "learning_rate": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 2.0,
+    "min_child_weight": 5,
+    "max_bin": 256,
+    "random_state": 26080,
+    "n_jobs": 8,
+    "threads_external_libraries": 1,
+    "target": "2023 IMD annual RF25 mm/24h on valid paired cells",
+    "output": "nonnegative finite mm/24h",
+    "hyperparameter_search": false,
+    "early_stopping_on_2024": false
+  },
+  "observation_seal_order": [
+    "verify forecast-only 2023/2024 source and static hashes",
+    "fit fixed model on 2023 valid paired IMD target only",
+    "seal model and all 2024 forecast-only corrected arrays and case membership",
+    "then open 2024 annual IMD values once for consumed-development evaluation"
+  ],
+  "reference_sha256": {
+    "2023": "1fa0cbcb56769fd3cd2702e36dc3ee1b81b74755b77c7f058c70dfc3afb82831",
+    "2024": "1ef02aeba5694dbb57a6cca23a3c2cc11740affb185137c1eacbeab59893228a"
+  },
+  "paired_metrics": ["RMSE", "bias", "heavy_CSI", "very_heavy_CSI", "POD", "FAR", "ETS", "frequency_bias", "FSS_1_3_5_cells"],
+  "thresholds_mm_per_24h": {"heavy": 64.5, "very_heavy": 115.6},
+  "date_bootstrap": {"repeats": 2000, "seed": 26080, "unit": "initialization_date", "primary_delta": "global_minus_raw_heavy_CSI", "spatial_and_serial_dependence_caveat": true},
+  "development_support": {"minimum_paired_cases": 30, "minimum_observed_event_pairs_each_threshold": 30, "minimum_district_weighted_forecast_coverage": 0.95, "minimum_supported_district_fraction_each_case": 0.90},
+  "promotion_rule": "none: consumed 2024 development cannot support independent or public-product promotion",
+  "forbidden": ["2025 or 2026 outcomes", "model family or threshold selection after 2024 score", "transfer of the existing regional model", "API or live publication", "claim of official current district boundaries"]
+}

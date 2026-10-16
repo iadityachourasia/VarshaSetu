@@ -1,0 +1,4459 @@
+{
+  "cases": [
+    {
+      "case_manifest_sha256": "15435efa93612f51b4f6fb3e6ec9ad242d4c1677edb7bbf61d742ad095ebe665",
+      "cycle": "20240601",
+      "forecast_valid_cells": 2389,
+      "models": {
+        "M0": {
+          "error_sum": -1178.3578313477337,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1292,
+          "squared_error_sum": 133617.44873570817
+        },
+        "M2": {
+          "error_sum": -2232.8750289040618,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1285,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1292,
+          "squared_error_sum": 129703.35007664446
+        },
+        "M4": {
+          "error_sum": -1695.810170656945,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1285,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1292,
+          "squared_error_sum": 120825.09001967883
+        }
+      },
+      "paired_cells": 1292,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-02"
+    },
+    {
+      "case_manifest_sha256": "32fbfbfcd11c6ab80e6a314703e703fd912e2a6e99444777c004b2fa384e4728",
+      "cycle": "20240606",
+      "forecast_valid_cells": 2397,
+      "models": {
+        "M0": {
+          "error_sum": 83.2692542783916,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 6
+            },
+            "64.5": {
+              "correct_negatives": 1276,
+              "false_alarms": 11,
+              "hits": 0,
+              "misses": 12
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 493641.07778715447
+        },
+        "M2": {
+          "error_sum": -3914.9617986874655,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 6
+            },
+            "64.5": {
+              "correct_negatives": 1287,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 12
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 307764.89763225254
+        },
+        "M4": {
+          "error_sum": -1950.013153270876,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 6
+            },
+            "64.5": {
+              "correct_negatives": 1287,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 12
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 347215.8625388313
+        }
+      },
+      "paired_cells": 1299,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-08"
+    },
+    {
+      "case_manifest_sha256": "32fbfbfcd11c6ab80e6a314703e703fd912e2a6e99444777c004b2fa384e4728",
+      "cycle": "20240606",
+      "forecast_valid_cells": 2386,
+      "models": {
+        "M0": {
+          "error_sum": -4769.894519660622,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1244,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 40
+            }
+          },
+          "paired_cells": 1287,
+          "squared_error_sum": 489097.0789650419
+        },
+        "M2": {
+          "error_sum": -6830.280283557251,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1247,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 40
+            }
+          },
+          "paired_cells": 1287,
+          "squared_error_sum": 407505.27050376567
+        },
+        "M4": {
+          "error_sum": -6223.19570844376,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1247,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 40
+            }
+          },
+          "paired_cells": 1287,
+          "squared_error_sum": 415243.58743523434
+        }
+      },
+      "paired_cells": 1287,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-09"
+    },
+    {
+      "case_manifest_sha256": "c4036fca950246e90f0b9e1924822fd5298b1c30d593cb0acc8707b87f9ecc0f",
+      "cycle": "20240607",
+      "forecast_valid_cells": 2392,
+      "models": {
+        "M0": {
+          "error_sum": -749.1400879677385,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1288,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 6
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 12
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 310382.3048833
+        },
+        "M2": {
+          "error_sum": -124.27635280042887,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1288,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 6
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 12
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 294728.7774404187
+        },
+        "M4": {
+          "error_sum": 563.1728794357032,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1288,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 6
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 12
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 287458.50872492645
+        }
+      },
+      "paired_cells": 1294,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-08"
+    },
+    {
+      "case_manifest_sha256": "c4036fca950246e90f0b9e1924822fd5298b1c30d593cb0acc8707b87f9ecc0f",
+      "cycle": "20240607",
+      "forecast_valid_cells": 2399,
+      "models": {
+        "M0": {
+          "error_sum": -84.06712578237057,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1285,
+              "false_alarms": 9,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1233,
+              "false_alarms": 25,
+              "hits": 9,
+              "misses": 32
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 432055.53045791056
+        },
+        "M2": {
+          "error_sum": -3640.3765481831506,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1258,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 41
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 328742.96332726156
+        },
+        "M4": {
+          "error_sum": -5482.995391896177,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1258,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 41
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 374265.4478950618
+        }
+      },
+      "paired_cells": 1299,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-09"
+    },
+    {
+      "case_manifest_sha256": "c4036fca950246e90f0b9e1924822fd5298b1c30d593cb0acc8707b87f9ecc0f",
+      "cycle": "20240607",
+      "forecast_valid_cells": 2397,
+      "models": {
+        "M0": {
+          "error_sum": -4201.927312698215,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1284,
+              "false_alarms": 12,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1244,
+              "false_alarms": 24,
+              "hits": 2,
+              "misses": 27
+            }
+          },
+          "paired_cells": 1297,
+          "squared_error_sum": 537056.1122716912
+        },
+        "M2": {
+          "error_sum": -5598.112978442572,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1268,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 29
+            }
+          },
+          "paired_cells": 1297,
+          "squared_error_sum": 297746.41795508366
+        },
+        "M4": {
+          "error_sum": -4488.291723266244,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1268,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 29
+            }
+          },
+          "paired_cells": 1297,
+          "squared_error_sum": 293712.503215304
+        }
+      },
+      "paired_cells": 1297,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-10"
+    },
+    {
+      "case_manifest_sha256": "2b82e62fb32b551f1a90d89aea8940a89077c6319994a8a2e55bd1a9ac7311d7",
+      "cycle": "20240608",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 1601.4937595520169,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1288,
+              "false_alarms": 8,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1239,
+              "false_alarms": 21,
+              "hits": 13,
+              "misses": 28
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 352839.0447288635
+        },
+        "M2": {
+          "error_sum": -1782.455080607906,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1260,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 41
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 290096.50103984546
+        },
+        "M4": {
+          "error_sum": -3555.874965487048,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1260,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 41
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 343705.05117758585
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-09"
+    },
+    {
+      "case_manifest_sha256": "2b82e62fb32b551f1a90d89aea8940a89077c6319994a8a2e55bd1a9ac7311d7",
+      "cycle": "20240608",
+      "forecast_valid_cells": 2394,
+      "models": {
+        "M0": {
+          "error_sum": 1755.7260676976293,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1277,
+              "false_alarms": 16,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1216,
+              "false_alarms": 49,
+              "hits": 3,
+              "misses": 26
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 719076.6172874102
+        },
+        "M2": {
+          "error_sum": -3476.9062088089995,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1265,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 29
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 258391.66989397942
+        },
+        "M4": {
+          "error_sum": -2444.4277414232492,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1265,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 29
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 260567.04704730943
+        }
+      },
+      "paired_cells": 1294,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-10"
+    },
+    {
+      "case_manifest_sha256": "2b82e62fb32b551f1a90d89aea8940a89077c6319994a8a2e55bd1a9ac7311d7",
+      "cycle": "20240608",
+      "forecast_valid_cells": 2399,
+      "models": {
+        "M0": {
+          "error_sum": 5004.405866937712,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 8,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1213,
+              "false_alarms": 72,
+              "hits": 2,
+              "misses": 13
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 876725.0223114365
+        },
+        "M2": {
+          "error_sum": -861.5455722510815,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1284,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 378005.5819350027
+        },
+        "M4": {
+          "error_sum": 2321.431043162942,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1272,
+              "false_alarms": 13,
+              "hits": 1,
+              "misses": 14
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 433750.32338787836
+        }
+      },
+      "paired_cells": 1300,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-11"
+    },
+    {
+      "case_manifest_sha256": "cc36ae4071af5cb0b221ced85d23bf48cb050634fac6c8375f405ada21e045ac",
+      "cycle": "20240609",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -1397.0196975320578,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 6,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1257,
+              "false_alarms": 15,
+              "hits": 2,
+              "misses": 27
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 407177.93425010116
+        },
+        "M2": {
+          "error_sum": -1940.0166781577282,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1272,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 29
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 261460.07607455188
+        },
+        "M4": {
+          "error_sum": -2453.965323612094,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1272,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 29
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 262140.05326256066
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-10"
+    },
+    {
+      "case_manifest_sha256": "cc36ae4071af5cb0b221ced85d23bf48cb050634fac6c8375f405ada21e045ac",
+      "cycle": "20240609",
+      "forecast_valid_cells": 2391,
+      "models": {
+        "M0": {
+          "error_sum": 2672.0169693902135,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 2,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1234,
+              "false_alarms": 45,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 664052.8261454683
+        },
+        "M2": {
+          "error_sum": 269.23912184126675,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1279,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 351016.5091744828
+        },
+        "M4": {
+          "error_sum": -1035.836370140314,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1279,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 302715.6261861899
+        }
+      },
+      "paired_cells": 1294,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-11"
+    },
+    {
+      "case_manifest_sha256": "cc36ae4071af5cb0b221ced85d23bf48cb050634fac6c8375f405ada21e045ac",
+      "cycle": "20240609",
+      "forecast_valid_cells": 2400,
+      "models": {
+        "M0": {
+          "error_sum": -2407.6814475934952,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 4,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1274,
+              "false_alarms": 19,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 372836.8678156345
+        },
+        "M2": {
+          "error_sum": -3061.480080170557,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 208688.35093412272
+        },
+        "M4": {
+          "error_sum": 1460.411972798407,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1272,
+              "false_alarms": 21,
+              "hits": 1,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 289941.02055471856
+        }
+      },
+      "paired_cells": 1300,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-12"
+    },
+    {
+      "case_manifest_sha256": "89bf9081fac9db5231a3f0b13af4f419067eb601193d59b83e2b1aaa8ca263d2",
+      "cycle": "20240610",
+      "forecast_valid_cells": 2392,
+      "models": {
+        "M0": {
+          "error_sum": -231.1423897743225,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1270,
+              "false_alarms": 11,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 469167.1067184489
+        },
+        "M2": {
+          "error_sum": 262.47480200231075,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 309996.391387993
+        },
+        "M4": {
+          "error_sum": -443.20946431159973,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 314680.7814812766
+        }
+      },
+      "paired_cells": 1296,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-11"
+    },
+    {
+      "case_manifest_sha256": "89bf9081fac9db5231a3f0b13af4f419067eb601193d59b83e2b1aaa8ca263d2",
+      "cycle": "20240610",
+      "forecast_valid_cells": 2397,
+      "models": {
+        "M0": {
+          "error_sum": -2393.216739328578,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 2,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 228911.02402877173
+        },
+        "M2": {
+          "error_sum": -2643.2513508121483,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 182570.5001622162
+        },
+        "M4": {
+          "error_sum": 1378.3787829652429,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 201704.97878715952
+        }
+      },
+      "paired_cells": 1298,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-12"
+    },
+    {
+      "case_manifest_sha256": "89bf9081fac9db5231a3f0b13af4f419067eb601193d59b83e2b1aaa8ca263d2",
+      "cycle": "20240610",
+      "forecast_valid_cells": 2383,
+      "models": {
+        "M0": {
+          "error_sum": -1878.7338804919273,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1283,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1283,
+          "squared_error_sum": 143692.7636757396
+        },
+        "M2": {
+          "error_sum": -757.3800543323159,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1283,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1283,
+          "squared_error_sum": 116629.67329645556
+        },
+        "M4": {
+          "error_sum": 1636.6632429705933,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1283,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1283,
+          "squared_error_sum": 139105.69282491918
+        }
+      },
+      "paired_cells": 1283,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-13"
+    },
+    {
+      "case_manifest_sha256": "46ed4e75e3e088714c4a00aeb982f348b5b9317d0ac95809c07c29e5bbd93912",
+      "cycle": "20240611",
+      "forecast_valid_cells": 2395,
+      "models": {
+        "M0": {
+          "error_sum": -1351.6802362538874,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 198152.24988954735
+        },
+        "M2": {
+          "error_sum": -1388.4651377163827,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 183623.1928711796
+        },
+        "M4": {
+          "error_sum": 2261.5394403263927,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 182718.7131249174
+        }
+      },
+      "paired_cells": 1296,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-12"
+    },
+    {
+      "case_manifest_sha256": "46ed4e75e3e088714c4a00aeb982f348b5b9317d0ac95809c07c29e5bbd93912",
+      "cycle": "20240611",
+      "forecast_valid_cells": 2395,
+      "models": {
+        "M0": {
+          "error_sum": 2154.787861103192,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 10,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1295,
+          "squared_error_sum": 267582.2230797333
+        },
+        "M2": {
+          "error_sum": 500.7120269211009,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1292,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1295,
+          "squared_error_sum": 129638.90848633103
+        },
+        "M4": {
+          "error_sum": 3815.99601611495,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1292,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1295,
+          "squared_error_sum": 169020.392098622
+        }
+      },
+      "paired_cells": 1295,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-13"
+    },
+    {
+      "case_manifest_sha256": "46ed4e75e3e088714c4a00aeb982f348b5b9317d0ac95809c07c29e5bbd93912",
+      "cycle": "20240611",
+      "forecast_valid_cells": 2393,
+      "models": {
+        "M0": {
+          "error_sum": -4256.5167630221695,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1293,
+          "squared_error_sum": 104556.04029675097
+        },
+        "M2": {
+          "error_sum": -2762.1925121676177,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1293,
+          "squared_error_sum": 89288.1632683812
+        },
+        "M4": {
+          "error_sum": -1840.3034656867385,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1293,
+          "squared_error_sum": 92734.3411337067
+        }
+      },
+      "paired_cells": 1293,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-14"
+    },
+    {
+      "case_manifest_sha256": "3cf5f248957192aae730ce911399afa6629d388c50c74adfd68eecea75233b7f",
+      "cycle": "20240612",
+      "forecast_valid_cells": 2393,
+      "models": {
+        "M0": {
+          "error_sum": 1269.902545047924,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 159588.2064673261
+        },
+        "M2": {
+          "error_sum": 798.1674760472961,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 118560.26035835556
+        },
+        "M4": {
+          "error_sum": 5235.162938117981,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 160053.74747789302
+        }
+      },
+      "paired_cells": 1294,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-13"
+    },
+    {
+      "case_manifest_sha256": "3cf5f248957192aae730ce911399afa6629d388c50c74adfd68eecea75233b7f",
+      "cycle": "20240612",
+      "forecast_valid_cells": 2395,
+      "models": {
+        "M0": {
+          "error_sum": -1923.9012819342315,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 92231.67533898991
+        },
+        "M2": {
+          "error_sum": -2111.443773528561,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 86400.26451573941
+        },
+        "M4": {
+          "error_sum": -1450.7876969575882,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 91157.66004251043
+        }
+      },
+      "paired_cells": 1298,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-14"
+    },
+    {
+      "case_manifest_sha256": "3cf5f248957192aae730ce911399afa6629d388c50c74adfd68eecea75233b7f",
+      "cycle": "20240612",
+      "forecast_valid_cells": 2398,
+      "models": {
+        "M0": {
+          "error_sum": -1897.090347616002,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 59778.44122426829
+        },
+        "M2": {
+          "error_sum": 346.98784854868427,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 51131.92381009764
+        },
+        "M4": {
+          "error_sum": -107.54785675555468,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 52911.01496886838
+        }
+      },
+      "paired_cells": 1299,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-15"
+    },
+    {
+      "case_manifest_sha256": "8ac7c696a973d5028d4e27cfd59625f695b3cb367fa12099c8646411d277d5c0",
+      "cycle": "20240613",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -1251.428315738216,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1297,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 79239.81187520953
+        },
+        "M2": {
+          "error_sum": -1264.9124837052077,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1297,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 83858.59714104496
+        },
+        "M4": {
+          "error_sum": -1497.9273939356208,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1297,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 92610.78413720119
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-14"
+    },
+    {
+      "case_manifest_sha256": "8ac7c696a973d5028d4e27cfd59625f695b3cb367fa12099c8646411d277d5c0",
+      "cycle": "20240613",
+      "forecast_valid_cells": 2396,
+      "models": {
+        "M0": {
+          "error_sum": -2837.730324724689,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 56508.05120473574
+        },
+        "M2": {
+          "error_sum": 750.5254564210773,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 64496.892312319156
+        },
+        "M4": {
+          "error_sum": -1643.1019025128335,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 55224.21897917443
+        }
+      },
+      "paired_cells": 1298,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-15"
+    },
+    {
+      "case_manifest_sha256": "e3b34262887cca26769af484f188803b45d37abc4b86418404d30ea28d2ed779",
+      "cycle": "20240614",
+      "forecast_valid_cells": 2388,
+      "models": {
+        "M0": {
+          "error_sum": -539.0854502562433,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 68087.11746249594
+        },
+        "M2": {
+          "error_sum": -74.44921810179949,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 46392.39465384969
+        },
+        "M4": {
+          "error_sum": -1193.997170707091,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1294,
+          "squared_error_sum": 49103.04480306225
+        }
+      },
+      "paired_cells": 1294,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-15"
+    },
+    {
+      "case_manifest_sha256": "ea3e39e41a29230e7d9c1990c2cd2cf75003449411095a04c9afdc54b3ce3210",
+      "cycle": "20240615",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -232.1477459501475,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 23973.09501796127
+        },
+        "M2": {
+          "error_sum": 2654.1008322127163,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 31608.871824104113
+        },
+        "M4": {
+          "error_sum": 1839.400547191035,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 27482.317090710032
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-16"
+    },
+    {
+      "case_manifest_sha256": "9a1e8ea4b35ebd9193325070c75df44ab4b37954c4028099d1fda8554a9912e8",
+      "cycle": "20240616",
+      "forecast_valid_cells": 2390,
+      "models": {
+        "M0": {
+          "error_sum": -2428.5236197710037,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1288,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1291,
+          "squared_error_sum": 129112.3270982831
+        },
+        "M2": {
+          "error_sum": -2079.968618556857,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1288,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1291,
+          "squared_error_sum": 104257.03333799595
+        },
+        "M4": {
+          "error_sum": -522.0505000799894,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1288,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1291,
+          "squared_error_sum": 106597.32002733024
+        }
+      },
+      "paired_cells": 1291,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-19"
+    },
+    {
+      "case_manifest_sha256": "06a00307d0337c52e48623ac5c185f6bb95755b1504acca6b2befeb8fea96998",
+      "cycle": "20240617",
+      "forecast_valid_cells": 2387,
+      "models": {
+        "M0": {
+          "error_sum": -3507.3176934681833,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1290,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1287,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1290,
+          "squared_error_sum": 136136.95071393647
+        },
+        "M2": {
+          "error_sum": -1500.4382070451975,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1290,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1287,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1290,
+          "squared_error_sum": 111196.91857698686
+        },
+        "M4": {
+          "error_sum": -778.8302483782172,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1290,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1287,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1290,
+          "squared_error_sum": 110821.19272525194
+        }
+      },
+      "paired_cells": 1290,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-19"
+    },
+    {
+      "case_manifest_sha256": "06a00307d0337c52e48623ac5c185f6bb95755b1504acca6b2befeb8fea96998",
+      "cycle": "20240617",
+      "forecast_valid_cells": 2395,
+      "models": {
+        "M0": {
+          "error_sum": -4400.133570954204,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 193472.16051951936
+        },
+        "M2": {
+          "error_sum": -2110.0687455311418,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 159287.06561860608
+        },
+        "M4": {
+          "error_sum": -1137.6995727792382,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 149656.57786390086
+        }
+      },
+      "paired_cells": 1296,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-20"
+    },
+    {
+      "case_manifest_sha256": "035bc6721d3a0abd91ada4d46b6c4a867c66678186841e89fb01de88840a2516",
+      "cycle": "20240618",
+      "forecast_valid_cells": 2395,
+      "models": {
+        "M0": {
+          "error_sum": -2855.8888749610633,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1291,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1295,
+          "squared_error_sum": 131634.67959281855
+        },
+        "M2": {
+          "error_sum": -565.2108330130577,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1292,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1295,
+          "squared_error_sum": 101964.66658574616
+        },
+        "M4": {
+          "error_sum": 1035.4069835543633,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1292,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            }
+          },
+          "paired_cells": 1295,
+          "squared_error_sum": 109581.01895888818
+        }
+      },
+      "paired_cells": 1295,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-19"
+    },
+    {
+      "case_manifest_sha256": "035bc6721d3a0abd91ada4d46b6c4a867c66678186841e89fb01de88840a2516",
+      "cycle": "20240618",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -4285.525929130614,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1286,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 181508.1418946861
+        },
+        "M2": {
+          "error_sum": -2153.8779095187783,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1286,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 148446.67949699616
+        },
+        "M4": {
+          "error_sum": -247.02632715553045,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1285,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 130543.61471470953
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day2_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-20"
+    },
+    {
+      "case_manifest_sha256": "035bc6721d3a0abd91ada4d46b6c4a867c66678186841e89fb01de88840a2516",
+      "cycle": "20240618",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -5136.38545996882,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 325975.84589330707
+        },
+        "M2": {
+          "error_sum": -2866.2855826411396,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 289799.5959023673
+        },
+        "M4": {
+          "error_sum": -2002.9172865308065,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 259507.06956133503
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day3_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-21"
+    },
+    {
+      "case_manifest_sha256": "02eb339cae14fe1227b38bbcb69f90d7d02b39a86f15e0d20811fbcaf03e3188",
+      "cycle": "20240619",
+      "forecast_valid_cells": 2396,
+      "models": {
+        "M0": {
+          "error_sum": -1922.259478263557,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 131848.79989755322
+        },
+        "M2": {
+          "error_sum": 2633.765424095094,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1273,
+              "false_alarms": 8,
+              "hits": 7,
+              "misses": 8
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 131141.0864508159
+        },
+        "M4": {
+          "error_sum": 4123.970236502588,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1296,
+          "squared_error_sum": 171726.88195962226
+        }
+      },
+      "paired_cells": 1296,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-20"
+    },
+    {
+      "case_manifest_sha256": "02eb339cae14fe1227b38bbcb69f90d7d02b39a86f15e0d20811fbcaf03e3188",
+      "cycle": "20240619",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -2642.1354703828692,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 300523.1550757352
+        },
+        "M2": {
+          "error_sum": -1294.959456808865,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 263849.3550455944
+        },
+        "M4": {
+          "error_sum": 403.8269028396462,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 250584.021949256
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day2_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-21"
+    },
+    {
+      "case_manifest_sha256": "02eb339cae14fe1227b38bbcb69f90d7d02b39a86f15e0d20811fbcaf03e3188",
+      "cycle": "20240619",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 244.1804334204644,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 5,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1261,
+              "false_alarms": 24,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 380016.40660111915
+        },
+        "M2": {
+          "error_sum": -465.8857497051358,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 4,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 192829.2272600079
+        },
+        "M4": {
+          "error_sum": 1368.0335446968675,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1280,
+              "false_alarms": 5,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 185503.4825935222
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day3_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-22"
+    },
+    {
+      "case_manifest_sha256": "fadea9e546f6d44b6a1f67f7b7dfd2ce11e1e152113171de279253932909aa8c",
+      "cycle": "20240620",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 1857.6845428589731,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1263,
+              "false_alarms": 19,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 429226.91772037256
+        },
+        "M2": {
+          "error_sum": 632.1170937530696,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 284853.2284467644
+        },
+        "M4": {
+          "error_sum": 308.61767391860485,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1294,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 7
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 19
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 255100.32466792554
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-21"
+    },
+    {
+      "case_manifest_sha256": "fadea9e546f6d44b6a1f67f7b7dfd2ce11e1e152113171de279253932909aa8c",
+      "cycle": "20240620",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 374.4104458093643,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1271,
+              "false_alarms": 14,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 287628.43099020474
+        },
+        "M2": {
+          "error_sum": 1540.7927674390376,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1282,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 176352.5951675375
+        },
+        "M4": {
+          "error_sum": 1133.3840910866857,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1285,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 179653.73305338042
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day2_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-22"
+    },
+    {
+      "case_manifest_sha256": "fadea9e546f6d44b6a1f67f7b7dfd2ce11e1e152113171de279253932909aa8c",
+      "cycle": "20240620",
+      "forecast_valid_cells": 2399,
+      "models": {
+        "M0": {
+          "error_sum": -206.01409948058426,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1271,
+              "false_alarms": 23,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 349215.9029930406
+        },
+        "M2": {
+          "error_sum": 971.7404867187142,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1293,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 148863.33285005417
+        },
+        "M4": {
+          "error_sum": 2578.105791963637,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1291,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 168976.9847703311
+        }
+      },
+      "paired_cells": 1299,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-23"
+    },
+    {
+      "case_manifest_sha256": "18f06061ce0290b058cf5beb45108bbf8b7f57d25818fcf76355ce637fca2d88",
+      "cycle": "20240621",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -8.729532942175865,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1279,
+              "false_alarms": 6,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 230000.8935741082
+        },
+        "M2": {
+          "error_sum": -432.4436440728605,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1284,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 177041.56209249256
+        },
+        "M4": {
+          "error_sum": 152.57717920839787,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 3
+            },
+            "64.5": {
+              "correct_negatives": 1285,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 183440.59768398397
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-22"
+    },
+    {
+      "case_manifest_sha256": "18f06061ce0290b058cf5beb45108bbf8b7f57d25818fcf76355ce637fca2d88",
+      "cycle": "20240621",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 867.7455498762429,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1284,
+              "false_alarms": 12,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 247357.46224332022
+        },
+        "M2": {
+          "error_sum": 2850.0959617868066,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 142854.35334885042
+        },
+        "M4": {
+          "error_sum": 4823.5988990440965,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 156460.67270942318
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day2_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-23"
+    },
+    {
+      "case_manifest_sha256": "18f06061ce0290b058cf5beb45108bbf8b7f57d25818fcf76355ce637fca2d88",
+      "cycle": "20240621",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 2162.6161799170077,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1262,
+              "false_alarms": 30,
+              "hits": 0,
+              "misses": 9
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 384014.243954499
+        },
+        "M2": {
+          "error_sum": 4111.8708564937115,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1265,
+              "false_alarms": 27,
+              "hits": 1,
+              "misses": 8
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 340272.8278112834
+        },
+        "M4": {
+          "error_sum": 6600.290752977133,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 6,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1269,
+              "false_alarms": 23,
+              "hits": 1,
+              "misses": 8
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 372537.161127186
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day3_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-24"
+    },
+    {
+      "case_manifest_sha256": "afe180720eb3fc60f97f8cc8b52e8557a16a8efecbcfec82aa8c5f1fbfb68f96",
+      "cycle": "20240622",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 1933.4554995186627,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1283,
+              "false_alarms": 13,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 259787.42203518472
+        },
+        "M2": {
+          "error_sum": 3894.3630459085107,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 161109.26383981193
+        },
+        "M4": {
+          "error_sum": 8102.561238028109,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 206820.98630102378
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-23"
+    },
+    {
+      "case_manifest_sha256": "afe180720eb3fc60f97f8cc8b52e8557a16a8efecbcfec82aa8c5f1fbfb68f96",
+      "cycle": "20240622",
+      "forecast_valid_cells": 2398,
+      "models": {
+        "M0": {
+          "error_sum": 2408.190983911976,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1273,
+              "false_alarms": 16,
+              "hits": 2,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 304560.95886205253
+        },
+        "M2": {
+          "error_sum": 5371.072204113007,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1273,
+              "false_alarms": 16,
+              "hits": 2,
+              "misses": 7
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 297647.37645090756
+        },
+        "M4": {
+          "error_sum": 11284.445149838924,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1276,
+              "false_alarms": 13,
+              "hits": 1,
+              "misses": 8
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 347543.16389026545
+        }
+      },
+      "paired_cells": 1298,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-24"
+    },
+    {
+      "case_manifest_sha256": "afe180720eb3fc60f97f8cc8b52e8557a16a8efecbcfec82aa8c5f1fbfb68f96",
+      "cycle": "20240622",
+      "forecast_valid_cells": 2397,
+      "models": {
+        "M0": {
+          "error_sum": 4171.992473307997,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1297,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1290,
+              "false_alarms": 1,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1297,
+          "squared_error_sum": 165724.3832327973
+        },
+        "M2": {
+          "error_sum": 7251.982194125652,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1297,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1288,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1297,
+          "squared_error_sum": 199568.8144260734
+        },
+        "M4": {
+          "error_sum": 10894.951961994171,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1297,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1283,
+              "false_alarms": 8,
+              "hits": 2,
+              "misses": 4
+            }
+          },
+          "paired_cells": 1297,
+          "squared_error_sum": 247629.4019485653
+        }
+      },
+      "paired_cells": 1297,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-25"
+    },
+    {
+      "case_manifest_sha256": "e2b338102b2cc8d9441f120a77be8427d51c1d50952107bf1850bacf04d96551",
+      "cycle": "20240623",
+      "forecast_valid_cells": 2399,
+      "models": {
+        "M0": {
+          "error_sum": 3554.933901326731,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1287,
+              "false_alarms": 4,
+              "hits": 0,
+              "misses": 9
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 266942.19531200506
+        },
+        "M2": {
+          "error_sum": 4387.867241352797,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1281,
+              "false_alarms": 10,
+              "hits": 0,
+              "misses": 9
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 305360.9389477809
+        },
+        "M4": {
+          "error_sum": 10573.304976671934,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1300,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1288,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 9
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 345475.6222686631
+        }
+      },
+      "paired_cells": 1300,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-24"
+    },
+    {
+      "case_manifest_sha256": "e2b338102b2cc8d9441f120a77be8427d51c1d50952107bf1850bacf04d96551",
+      "cycle": "20240623",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 5882.75245834142,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1295,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 218790.1508006274
+        },
+        "M2": {
+          "error_sum": 9164.091764513403,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1275,
+              "false_alarms": 20,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 391805.5705458153
+        },
+        "M4": {
+          "error_sum": 10628.751858890057,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1301,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1277,
+              "false_alarms": 18,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 370712.638821777
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day2_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-25"
+    },
+    {
+      "case_manifest_sha256": "e2b338102b2cc8d9441f120a77be8427d51c1d50952107bf1850bacf04d96551",
+      "cycle": "20240623",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 4133.42215780355,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1242,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 59
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 456741.48323494743
+        },
+        "M2": {
+          "error_sum": 9688.370638087392,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1212,
+              "false_alarms": 30,
+              "hits": 12,
+              "misses": 47
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 484474.76309320977
+        },
+        "M4": {
+          "error_sum": 9495.633665949106,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1233,
+              "false_alarms": 9,
+              "hits": 7,
+              "misses": 52
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 466589.77330731385
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day3_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-26"
+    },
+    {
+      "case_manifest_sha256": "5db0b115e73740adbd4ee6e760eacc911527efe42b998151f2b5d6b223a740d3",
+      "cycle": "20240624",
+      "forecast_valid_cells": 2398,
+      "models": {
+        "M0": {
+          "error_sum": 4932.696966243908,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1289,
+              "false_alarms": 3,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 202472.16566704214
+        },
+        "M2": {
+          "error_sum": 13196.053017139435,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1262,
+              "false_alarms": 30,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 423264.7757042974
+        },
+        "M4": {
+          "error_sum": 12760.913021564484,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1266,
+              "false_alarms": 26,
+              "hits": 0,
+              "misses": 6
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 365686.3586037375
+        }
+      },
+      "paired_cells": 1298,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-25"
+    },
+    {
+      "case_manifest_sha256": "5db0b115e73740adbd4ee6e760eacc911527efe42b998151f2b5d6b223a740d3",
+      "cycle": "20240624",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -42.027856290340424,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1242,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 59
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 300033.7061385035
+        },
+        "M2": {
+          "error_sum": 11144.053094297647,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1192,
+              "false_alarms": 50,
+              "hits": 7,
+              "misses": 52
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 620572.2442820544
+        },
+        "M4": {
+          "error_sum": 11354.452513843775,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1296,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1196,
+              "false_alarms": 46,
+              "hits": 14,
+              "misses": 45
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 582880.0257105073
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day2_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-26"
+    },
+    {
+      "case_manifest_sha256": "5db0b115e73740adbd4ee6e760eacc911527efe42b998151f2b5d6b223a740d3",
+      "cycle": "20240624",
+      "forecast_valid_cells": 2399,
+      "models": {
+        "M0": {
+          "error_sum": -453.4735529720783,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1278,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1233,
+              "false_alarms": 3,
+              "hits": 3,
+              "misses": 60
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 453609.64734790404
+        },
+        "M2": {
+          "error_sum": 7253.879956036806,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1278,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1221,
+              "false_alarms": 15,
+              "hits": 25,
+              "misses": 38
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 467150.7750698346
+        },
+        "M4": {
+          "error_sum": 7743.210677653551,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1278,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1210,
+              "false_alarms": 26,
+              "hits": 31,
+              "misses": 32
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 545865.4719214046
+        }
+      },
+      "paired_cells": 1299,
+      "product": "day3_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-27"
+    },
+    {
+      "case_manifest_sha256": "11be088123997978416cdad5e7f04978d9168107e000dbd01be8010aa881dd01",
+      "cycle": "20240625",
+      "forecast_valid_cells": 2398,
+      "models": {
+        "M0": {
+          "error_sum": -268.8201536927372,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1293,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1234,
+              "false_alarms": 5,
+              "hits": 0,
+              "misses": 59
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 311305.1762458132
+        },
+        "M2": {
+          "error_sum": 8624.596848160028,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1288,
+              "false_alarms": 5,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1198,
+              "false_alarms": 41,
+              "hits": 2,
+              "misses": 57
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 635810.3748741942
+        },
+        "M4": {
+          "error_sum": 9768.53810158372,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1291,
+              "false_alarms": 2,
+              "hits": 0,
+              "misses": 5
+            },
+            "64.5": {
+              "correct_negatives": 1200,
+              "false_alarms": 39,
+              "hits": 2,
+              "misses": 57
+            }
+          },
+          "paired_cells": 1298,
+          "squared_error_sum": 605795.5860346728
+        }
+      },
+      "paired_cells": 1298,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-26"
+    },
+    {
+      "case_manifest_sha256": "11be088123997978416cdad5e7f04978d9168107e000dbd01be8010aa881dd01",
+      "cycle": "20240625",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": -2416.803556635976,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1238,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 63
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 482247.3796449215
+        },
+        "M2": {
+          "error_sum": 7036.377345860004,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1224,
+              "false_alarms": 14,
+              "hits": 24,
+              "misses": 39
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 451795.95998174505
+        },
+        "M4": {
+          "error_sum": 6867.971816737205,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1220,
+              "false_alarms": 18,
+              "hits": 36,
+              "misses": 27
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 396727.92223473697
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day2_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-27"
+    },
+    {
+      "case_manifest_sha256": "11be088123997978416cdad5e7f04978d9168107e000dbd01be8010aa881dd01",
+      "cycle": "20240625",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 2909.16896395199,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 2,
+              "hits": 1,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1251,
+              "false_alarms": 6,
+              "hits": 9,
+              "misses": 35
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 403660.6817715142
+        },
+        "M2": {
+          "error_sum": 7837.0818836167455,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1295,
+              "false_alarms": 5,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1223,
+              "false_alarms": 34,
+              "hits": 29,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 359284.3499214486
+        },
+        "M4": {
+          "error_sum": 4423.8497390774355,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1292,
+              "false_alarms": 8,
+              "hits": 1,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1217,
+              "false_alarms": 40,
+              "hits": 29,
+              "misses": 15
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 351379.41727289604
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day3_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-28"
+    },
+    {
+      "case_manifest_sha256": "0ddb9ae024381ced0f2b8fa9f724072d6311822e399d47ee29146d70834697ea",
+      "cycle": "20240626",
+      "forecast_valid_cells": 2401,
+      "models": {
+        "M0": {
+          "error_sum": 710.9064633864909,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1232,
+              "false_alarms": 6,
+              "hits": 5,
+              "misses": 58
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 510124.28528628714
+        },
+        "M2": {
+          "error_sum": 8770.25785651803,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1280,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1218,
+              "false_alarms": 20,
+              "hits": 34,
+              "misses": 29
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 448259.87076017313
+        },
+        "M4": {
+          "error_sum": 7566.988453775644,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1276,
+              "false_alarms": 4,
+              "hits": 0,
+              "misses": 21
+            },
+            "64.5": {
+              "correct_negatives": 1224,
+              "false_alarms": 14,
+              "hits": 40,
+              "misses": 23
+            }
+          },
+          "paired_cells": 1301,
+          "squared_error_sum": 409081.3824763629
+        }
+      },
+      "paired_cells": 1301,
+      "product": "day1_24h",
+      "strict_passed": true,
+      "valid_date": "2024-06-27"
+    },
+    {
+      "case_manifest_sha256": "0ddb9ae024381ced0f2b8fa9f724072d6311822e399d47ee29146d70834697ea",
+      "cycle": "20240626",
+      "forecast_valid_cells": 2400,
+      "models": {
+        "M0": {
+          "error_sum": 6148.79898827523,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1297,
+              "false_alarms": 2,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1227,
+              "false_alarms": 29,
+              "hits": 13,
+              "misses": 31
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 462703.9113754848
+        },
+        "M2": {
+          "error_sum": 10224.775714993477,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1221,
+              "false_alarms": 35,
+              "hits": 30,
+              "misses": 14
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 379650.36818709143
+        },
+        "M4": {
+          "error_sum": 9482.65606013313,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1299,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1212,
+              "false_alarms": 44,
+              "hits": 28,
+              "misses": 16
+            }
+          },
+          "paired_cells": 1300,
+          "squared_error_sum": 389246.278432357
+        }
+      },
+      "paired_cells": 1300,
+      "product": "day2_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-28"
+    },
+    {
+      "case_manifest_sha256": "e902de577fad960b37abceab4435feadfe938883f4ef426b6d46094ec557a49b",
+      "cycle": "20240627",
+      "forecast_valid_cells": 2399,
+      "models": {
+        "M0": {
+          "error_sum": 6045.018980301917,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1298,
+              "false_alarms": 0,
+              "hits": 0,
+              "misses": 1
+            },
+            "64.5": {
+              "correct_negatives": 1223,
+              "false_alarms": 32,
+              "hits": 17,
+              "misses": 27
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 427269.9989973225
+        },
+        "M2": {
+          "error_sum": 11223.151831962168,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1277,
+              "false_alarms": 21,
+              "hits": 1,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1206,
+              "false_alarms": 49,
+              "hits": 30,
+              "misses": 14
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 548293.3834891763
+        },
+        "M4": {
+          "error_sum": 11223.614980233833,
+          "events": {
+            "115.6": {
+              "correct_negatives": 1263,
+              "false_alarms": 35,
+              "hits": 1,
+              "misses": 0
+            },
+            "64.5": {
+              "correct_negatives": 1205,
+              "false_alarms": 50,
+              "hits": 31,
+              "misses": 13
+            }
+          },
+          "paired_cells": 1299,
+          "squared_error_sum": 635622.7024290514
+        }
+      },
+      "paired_cells": 1299,
+      "product": "day1_24h",
+      "strict_passed": false,
+      "valid_date": "2024-06-28"
+    }
+  ],
+  "common_cell_comparison": true,
+  "date_bootstrap_all_ready": {
+    "heavy_csi_defined_repeats": 1000,
+    "heavy_csi_m4_minus_m2_95pct_interval": [
+      -0.013214505284106138,
+      0.029305091812765128
+    ],
+    "interpretation": "Descriptive development-validation interval; serial and spatial dependence remain, not an independent-test promotion gate",
+    "repeats": 1000,
+    "rmse_m4_minus_m2_95pct_interval_mm": [
+      0.01435324049922149,
+      0.47549742908599063
+    ],
+    "seed": 26080,
+    "unit": "initialization_date"
+  },
+  "forecast_year_sha256": "8768b20959e6257349876757de923db03bdff809805292c37a8d6c23dfe854d6",
+  "imd_reference_sha256": "1ef02aeba5694dbb57a6cca23a3c2cc11740affb185137c1eacbeab59893228a",
+  "interpretation": "Development validation of a partial-grid candidate; no independent-year skill, calibration promotion or live product claim",
+  "prior_development_result_sha256": "1093c2480a0e85ecc0016875e399dd4c3f7b177f1181f82edceca0ffa7b7e2f9",
+  "protocol_sha256": "f2de5a377f7ac95577c091963c8308ebae4a5d8c4c7576e60c970bb31b1da216",
+  "ready_case_count": 55,
+  "reference_used_only_after_forecast_seal": true,
+  "refusals": [
+    {
+      "cycle": "20240601",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240601",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240602",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240602",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240602",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240603",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240603",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240603",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240604",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240604",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240604",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240605",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240605",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240605",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240606",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240613",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240614",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240614",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240615",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240615",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240616",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240616",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240617",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240626",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240627",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240627",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240628",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240628",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240628",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240629",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240629",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240629",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": true
+    },
+    {
+      "cycle": "20240630",
+      "product": "day1_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240630",
+      "product": "day2_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    },
+    {
+      "cycle": "20240630",
+      "product": "day3_24h",
+      "reason": "very-heavy event probability exceeds heavy event probability; frozen calibrators are incoherent for this cycle",
+      "strict_passed": false
+    }
+  ],
+  "refused_case_count": 35,
+  "role": "2024_DEVELOPMENT_VALIDATION_ONLY",
+  "schema": "varshasetu-partial-grid-inference-score-v1",
+  "source_track": "B_OPERATIONAL_GEFS_DEVELOPMENT_VALIDATION_ONLY",
+  "summary": {
+    "all_ready": {
+      "case_count": 55,
+      "initialization_count": 23,
+      "models": {
+        "M0": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 71146,
+              "csi": 0.004347826086956522,
+              "false_alarms": 82,
+              "far": 0.9879518072289156,
+              "hits": 1,
+              "misses": 147,
+              "pod": 0.006756756756756757
+            },
+            "64.5": {
+              "correct_negatives": 69775,
+              "csi": 0.04996876951905059,
+              "false_alarms": 557,
+              "far": 0.8744113029827315,
+              "hits": 80,
+              "misses": 964,
+              "pod": 0.07662835249042145
+            }
+          },
+          "mean_bias_mm": -0.01786627205682372,
+          "rmse_mm": 15.343554805617968
+        },
+        "M2": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 71196,
+              "csi": 0.005555555555555556,
+              "false_alarms": 32,
+              "far": 0.9696969696969697,
+              "hits": 1,
+              "misses": 147,
+              "pod": 0.006756756756756757
+            },
+            "64.5": {
+              "correct_negatives": 69920,
+              "csi": 0.13942307692307693,
+              "false_alarms": 412,
+              "far": 0.6699186991869919,
+              "hits": 203,
+              "misses": 841,
+              "pod": 0.19444444444444445
+            }
+          },
+          "mean_bias_mm": 1.1972658162847136,
+          "rmse_mm": 13.982680927357638
+        },
+        "M4": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 71173,
+              "csi": 0.009852216748768473,
+              "false_alarms": 55,
+              "far": 0.9649122807017544,
+              "hits": 2,
+              "misses": 146,
+              "pod": 0.013513513513513514
+            },
+            "64.5": {
+              "correct_negatives": 69912,
+              "csi": 0.15300546448087432,
+              "false_alarms": 420,
+              "far": 0.6521739130434783,
+              "hits": 224,
+              "misses": 820,
+              "pod": 0.21455938697318008
+            }
+          },
+          "mean_bias_mm": 2.0036987741098247,
+          "rmse_mm": 14.212593116841512
+        }
+      },
+      "paired_cells": 71376
+    },
+    "day1_24h": {
+      "case_count": 20,
+      "initialization_count": 20,
+      "models": {
+        "M0": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 25893,
+              "csi": 0.0,
+              "false_alarms": 15,
+              "far": 1.0,
+              "hits": 0,
+              "misses": 52,
+              "pod": 0.0
+            },
+            "64.5": {
+              "correct_negatives": 25464,
+              "csi": 0.07459677419354839,
+              "false_alarms": 139,
+              "far": 0.7897727272727273,
+              "hits": 37,
+              "misses": 320,
+              "pod": 0.10364145658263306
+            }
+          },
+          "mean_bias_mm": 0.382141481647024,
+          "rmse_mm": 14.020177038448011
+        },
+        "M2": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 25882,
+              "csi": 0.01282051282051282,
+              "false_alarms": 26,
+              "far": 0.9629629629629629,
+              "hits": 1,
+              "misses": 51,
+              "pod": 0.019230769230769232
+            },
+            "64.5": {
+              "correct_negatives": 25444,
+              "csi": 0.14147286821705427,
+              "false_alarms": 159,
+              "far": 0.6853448275862069,
+              "hits": 73,
+              "misses": 284,
+              "pod": 0.20448179271708683
+            }
+          },
+          "mean_bias_mm": 1.8209480359041612,
+          "rmse_mm": 13.832488336970346
+        },
+        "M4": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 25867,
+              "csi": 0.010752688172043012,
+              "false_alarms": 41,
+              "far": 0.9761904761904762,
+              "hits": 1,
+              "misses": 51,
+              "pod": 0.019230769230769232
+            },
+            "64.5": {
+              "correct_negatives": 25471,
+              "csi": 0.1492842535787321,
+              "false_alarms": 132,
+              "far": 0.6439024390243903,
+              "hits": 73,
+              "misses": 284,
+              "pod": 0.20448179271708683
+            }
+          },
+          "mean_bias_mm": 2.49133220960718,
+          "rmse_mm": 14.056223161984057
+        }
+      },
+      "paired_cells": 25960
+    },
+    "day2_24h": {
+      "case_count": 18,
+      "initialization_count": 18,
+      "models": {
+        "M0": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 23289,
+              "csi": 0.0,
+              "false_alarms": 30,
+              "far": 1.0,
+              "hits": 0,
+              "misses": 51,
+              "pod": 0.0
+            },
+            "64.5": {
+              "correct_negatives": 22807,
+              "csi": 0.047957371225577264,
+              "false_alarms": 213,
+              "far": 0.8875,
+              "hits": 27,
+              "misses": 323,
+              "pod": 0.07714285714285714
+            }
+          },
+          "mean_bias_mm": 0.0947784596065814,
+          "rmse_mm": 15.856045381558648
+        },
+        "M2": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 23319,
+              "csi": 0.0,
+              "false_alarms": 0,
+              "far": null,
+              "hits": 0,
+              "misses": 51,
+              "pod": 0.0
+            },
+            "64.5": {
+              "correct_negatives": 22882,
+              "csi": 0.1290983606557377,
+              "false_alarms": 138,
+              "far": 0.6865671641791045,
+              "hits": 63,
+              "misses": 287,
+              "pod": 0.18
+            }
+          },
+          "mean_bias_mm": 1.203060342524333,
+          "rmse_mm": 14.1711435850708
+        },
+        "M4": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 23319,
+              "csi": 0.0,
+              "false_alarms": 0,
+              "far": null,
+              "hits": 0,
+              "misses": 51,
+              "pod": 0.0
+            },
+            "64.5": {
+              "correct_negatives": 22880,
+              "csi": 0.16122448979591836,
+              "false_alarms": 140,
+              "far": 0.639269406392694,
+              "hits": 79,
+              "misses": 271,
+              "pod": 0.2257142857142857
+            }
+          },
+          "mean_bias_mm": 1.9743450260915245,
+          "rmse_mm": 14.207106314280486
+        }
+      },
+      "paired_cells": 23370
+    },
+    "day3_24h": {
+      "case_count": 17,
+      "initialization_count": 17,
+      "models": {
+        "M0": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 21964,
+              "csi": 0.012195121951219513,
+              "false_alarms": 37,
+              "far": 0.9736842105263158,
+              "hits": 1,
+              "misses": 44,
+              "pod": 0.022222222222222223
+            },
+            "64.5": {
+              "correct_negatives": 21504,
+              "csi": 0.02952029520295203,
+              "false_alarms": 205,
+              "far": 0.9276018099547512,
+              "hits": 16,
+              "misses": 321,
+              "pod": 0.04747774480712166
+            }
+          },
+          "mean_bias_mm": -0.6083003038596753,
+          "rmse_mm": 16.255251852609852
+        },
+        "M2": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 21995,
+              "csi": 0.0,
+              "false_alarms": 6,
+              "far": 1.0,
+              "hits": 0,
+              "misses": 45,
+              "pod": 0.0
+            },
+            "64.5": {
+              "correct_negatives": 21594,
+              "csi": 0.14823008849557523,
+              "false_alarms": 115,
+              "far": 0.6318681318681318,
+              "hits": 67,
+              "misses": 270,
+              "pod": 0.19881305637982197
+            }
+          },
+          "mean_bias_mm": 0.4567138567663992,
+          "rmse_mm": 13.957438393224987
+        },
+        "M4": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 21987,
+              "csi": 0.01694915254237288,
+              "false_alarms": 14,
+              "far": 0.9333333333333333,
+              "hits": 1,
+              "misses": 44,
+              "pod": 0.022222222222222223
+            },
+            "64.5": {
+              "correct_negatives": 21561,
+              "csi": 0.14845360824742268,
+              "false_alarms": 148,
+              "far": 0.6727272727272727,
+              "hits": 72,
+              "misses": 265,
+              "pod": 0.21364985163204747
+            }
+          },
+          "mean_bias_mm": 1.4606085584551172,
+          "rmse_mm": 14.400287564907453
+        }
+      },
+      "paired_cells": 22046
+    },
+    "strict_pass_ready": {
+      "case_count": 20,
+      "initialization_count": 13,
+      "models": {
+        "M0": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 25904,
+              "csi": 0.008620689655172414,
+              "false_alarms": 26,
+              "far": 0.9629629629629629,
+              "hits": 1,
+              "misses": 89,
+              "pod": 0.011111111111111112
+            },
+            "64.5": {
+              "correct_negatives": 25347,
+              "csi": 0.04309063893016345,
+              "false_alarms": 166,
+              "far": 0.8512820512820513,
+              "hits": 29,
+              "misses": 478,
+              "pod": 0.05719921104536489
+            }
+          },
+          "mean_bias_mm": 0.20236867370733921,
+          "rmse_mm": 15.511849246736414
+        },
+        "M2": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 25924,
+              "csi": 0.0,
+              "false_alarms": 6,
+              "far": 1.0,
+              "hits": 0,
+              "misses": 90,
+              "pod": 0.0
+            },
+            "64.5": {
+              "correct_negatives": 25310,
+              "csi": 0.15070422535211267,
+              "false_alarms": 203,
+              "far": 0.6548387096774193,
+              "hits": 107,
+              "misses": 400,
+              "pod": 0.21104536489151873
+            }
+          },
+          "mean_bias_mm": 2.1953396062747674,
+          "rmse_mm": 14.671165638568072
+        },
+        "M4": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 25912,
+              "csi": 0.009259259259259259,
+              "false_alarms": 18,
+              "far": 0.9473684210526315,
+              "hits": 1,
+              "misses": 89,
+              "pod": 0.011111111111111112
+            },
+            "64.5": {
+              "correct_negatives": 25339,
+              "csi": 0.18649045521292218,
+              "false_alarms": 174,
+              "far": 0.5780730897009967,
+              "hits": 127,
+              "misses": 380,
+              "pod": 0.2504930966469428
+            }
+          },
+          "mean_bias_mm": 2.5100779239255457,
+          "rmse_mm": 14.516894965025148
+        }
+      },
+      "paired_cells": 26020
+    },
+    "strict_withheld_ready": {
+      "case_count": 35,
+      "initialization_count": 21,
+      "models": {
+        "M0": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 45242,
+              "csi": 0.0,
+              "false_alarms": 56,
+              "far": 1.0,
+              "hits": 0,
+              "misses": 58,
+              "pod": 0.0
+            },
+            "64.5": {
+              "correct_negatives": 44428,
+              "csi": 0.05495689655172414,
+              "false_alarms": 391,
+              "far": 0.8846153846153846,
+              "hits": 51,
+              "misses": 486,
+              "pod": 0.09497206703910614
+            }
+          },
+          "mean_bias_mm": -0.1442114808226655,
+          "rmse_mm": 15.246168474140662
+        },
+        "M2": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 45272,
+              "csi": 0.011904761904761904,
+              "false_alarms": 26,
+              "far": 0.9629629629629629,
+              "hits": 1,
+              "misses": 57,
+              "pod": 0.017241379310344827
+            },
+            "64.5": {
+              "correct_negatives": 44610,
+              "csi": 0.128686327077748,
+              "false_alarms": 209,
+              "far": 0.6852459016393443,
+              "hits": 96,
+              "misses": 441,
+              "pod": 0.1787709497206704
+            }
+          },
+          "mean_bias_mm": 0.6246871052973866,
+          "rmse_mm": 13.571952137948417
+        },
+        "M4": {
+          "events": {
+            "115.6": {
+              "correct_negatives": 45261,
+              "csi": 0.010526315789473684,
+              "false_alarms": 37,
+              "far": 0.9736842105263158,
+              "hits": 1,
+              "misses": 57,
+              "pod": 0.017241379310344827
+            },
+            "64.5": {
+              "correct_negatives": 44573,
+              "csi": 0.12388250319284802,
+              "false_alarms": 246,
+              "far": 0.717201166180758,
+              "hits": 97,
+              "misses": 440,
+              "pod": 0.18063314711359404
+            }
+          },
+          "mean_bias_mm": 1.7131972863638798,
+          "rmse_mm": 14.035042197446712
+        }
+      },
+      "paired_cells": 45356
+    }
+  }
+}

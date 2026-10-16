@@ -1,0 +1,26 @@
+{
+  "schema": "winter-regime-readiness-v1",
+  "date": "2026-10-07",
+  "status": "NO_CORPUS_NO_LABELS",
+  "purpose": "Separate winter/pre-monsoon western-disturbance construct study; no forecast or rainfall skill claim",
+  "relationship_to_jjas_packet": "Separate population; the 72 JJAS central-western India cases are ineligible for a winter western-disturbance conclusion",
+  "candidate_season_months": [12, 1, 2, 3],
+  "candidate_synoptic_region": "Northwest India and western Himalaya; exact polygon and bounds to freeze before acquisition",
+  "forecast_case_count": 0,
+  "independent_western_disturbance_label_count": 0,
+  "forecast_source_status": "No winter case file has been admitted or hash-verified for this study",
+  "label_source_status": "No dated, rights-cleared IMD bulletin or independent expert record has been admitted",
+  "observed_rainfall_status": "No winter forecast/reference pair has been constructed",
+  "required_before_case_selection": [
+    "Choose historical winter years and reserve an untouched evaluation period before looking at detector outputs",
+    "Inventory genuine forecast cycles, model versions, upper-level fields, geographic extent and acquisition rights",
+    "Define winter case unit and broad-domain map with source and byte hashes",
+    "Inventory dated independent bulletins or authorized expert reviews with issue time, validity window, use rights and source hash",
+    "Freeze sampling, labels, support thresholds, analysis code and reviewer roster"
+  ],
+  "prohibited_substitutes": [
+    "JJAS western-disturbance trough heuristic flags",
+    "Forecast-only pseudo-labels described as expert or bulletin truth",
+    "Observed rainfall used as a western-disturbance label without independent synoptic evidence"
+  ]
+}

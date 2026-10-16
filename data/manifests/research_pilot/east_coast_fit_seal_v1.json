@@ -1,0 +1,2284 @@
+{
+  "2024_observation_values_read": false,
+  "2025_or_2026_values_read": false,
+  "fit_cases": [
+    {
+      "case_id": "20230601_day1_24h",
+      "feature_matrix_sha256": "2d5bdbfba203b3fbbebe90acc98a490d9387fbfba8ef817fb37f721aae353058",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230602_day3_24h",
+      "feature_matrix_sha256": "a268dc77766c7d5398dcc236d82292080ffee643befda403d8cdfef1c86f59aa",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230603_day1_24h",
+      "feature_matrix_sha256": "908eb9511ee12c313cbb8af676a0ded3557310b8e688422fb29532885f0230ae",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230603_day2_24h",
+      "feature_matrix_sha256": "3bb2c2f9f4f290bc772d99fafc61e5db4eb22536599502cab204efd34e77ee99",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230604_day1_24h",
+      "feature_matrix_sha256": "f1ea495a665d22d05f023b61b5e6150bb0b078599f71930297266a23eb8d74ee",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230604_day3_24h",
+      "feature_matrix_sha256": "1834c3be73a6c134c3b46ae4b01fc1ac2acfc942ad0d5eb90ccd6f6cd711f587",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230605_day2_24h",
+      "feature_matrix_sha256": "20e68c303e0d4cc02c1ed87874419ccd53ef8fff7c8bc177418d3b8897143dea",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230605_day3_24h",
+      "feature_matrix_sha256": "3c8cabf20cfeeb3266e86121b22d7a89d54e627576dbd147d8684b4e924ccaac",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230606_day2_24h",
+      "feature_matrix_sha256": "22dc1a3bb9ac4552596ff810e2fceec8d48be8e99e6a8bcb104270c19a2d9af9",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230606_day3_24h",
+      "feature_matrix_sha256": "1f02d7e0aed6d6fdb73044e9d50a09f34d0bacf4429a74c7d70e9af39af525a3",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230607_day3_24h",
+      "feature_matrix_sha256": "d4766d705eb8bf110e5c02b28db87ed7bf5b15469d981663faeeeef0a3f39823",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230608_day2_24h",
+      "feature_matrix_sha256": "783bf21289fd18359521f87a6b47d62479b4c5e9e559df50442c362e24ef7e99",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230608_day3_24h",
+      "feature_matrix_sha256": "b94c7ac3b4c52a143240aa77115308a501f8a681d3ce4a8a53f369ee21f33936",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230609_day2_24h",
+      "feature_matrix_sha256": "7338477ccda63ebde7eb088e205986d0a4e62c07d8fe330856d5ccc38617ca6e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230609_day3_24h",
+      "feature_matrix_sha256": "344c4c9d8b22f91dce03ec8034ec3953cf5b658a0a0165e4e2a1f4ab47dbe7fd",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230610_day1_24h",
+      "feature_matrix_sha256": "fdf342329e3eafd75ea04ce94b51ef13293af3d220d1e37c86948a7c06f7317f",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230610_day2_24h",
+      "feature_matrix_sha256": "ad7652015d668009d3ce9c8a3b6de9524e2d565994dfd2307b8656fcb4ba91d3",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230610_day3_24h",
+      "feature_matrix_sha256": "14d20c37c3ea52320a8a2d469e63d2a3371936976c786316da156b4c9bdc080e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230611_day1_24h",
+      "feature_matrix_sha256": "6b1a2fa6eb52476d657401887869da7a2bdcc6707c6b206f848ad881a20138ff",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230611_day3_24h",
+      "feature_matrix_sha256": "f3ec5d1a9c3d84aa248a539cc3fb067b865017cf26742f4b88d4594c477e4389",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230612_day1_24h",
+      "feature_matrix_sha256": "6a2d1dd7c42a3067486b057b01e5d141eccc4bb984afd17863f752744cf53109",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230612_day2_24h",
+      "feature_matrix_sha256": "de9fe8bed54fc82691053c8419d29dd9d26ebab42ed863b28df427c756228a1a",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230612_day3_24h",
+      "feature_matrix_sha256": "ae9814091e93655babeb024dccd9d66a34e8b4023290f1e57892c9f513b15281",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230613_day2_24h",
+      "feature_matrix_sha256": "571882a38f48cde9b6455ff8e969e12aec1cd9c11c7fd58cbcdc5cf131cde51f",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230613_day3_24h",
+      "feature_matrix_sha256": "98a3594e9c445fd39d6a2a15cee839968328dc0bbcd56e94b068f0b6d6c34f6e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230614_day2_24h",
+      "feature_matrix_sha256": "6e429d2aa0c529ba8022e746ddddc67f877697124ca1f8c471acf86c24c1c6c6",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230614_day3_24h",
+      "feature_matrix_sha256": "f68312a17d10b8259d6aec94d046ddd90ae761102489d40d6e34938cf5af8835",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230615_day2_24h",
+      "feature_matrix_sha256": "8bb2e06ddb2d7ead34c444af82682d03aeed7fcce268ce47be4e92d4b388ab7e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230615_day3_24h",
+      "feature_matrix_sha256": "8b40c47d74e70915324443e16eaf19e6c64842df7236cc466865b8a842315b79",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230616_day2_24h",
+      "feature_matrix_sha256": "153c77c01561412c74dd683444d94916df9c475534ff3738dcbe90766a1433cd",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230617_day2_24h",
+      "feature_matrix_sha256": "e343074eb76fd74a05e343b64c390b220bd1730c394a3fdab711984ff82d67f0",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230618_day1_24h",
+      "feature_matrix_sha256": "5784711b84f67d936d747b44421d27bb1ec40b9f6e51447d4cda7a7d6f34a659",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230620_day3_24h",
+      "feature_matrix_sha256": "ad8019818dec5a0c80cd4f254720017ab88e18bb5a7b74a8a324b9b2e8ac134c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230621_day3_24h",
+      "feature_matrix_sha256": "bb4e2ef99906fb5c7b7ad4aa58b5defb1a8b2c6dddf6afb8cdafef0596fa9a10",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230622_day2_24h",
+      "feature_matrix_sha256": "eea14d42820467f883c8d7c60973129468c986298e1558b711714689b92fe2f9",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230623_day2_24h",
+      "feature_matrix_sha256": "86f3eab432aa4965ff8af8f2b3fbf28ed319fe8da141c8b51c2ff5991dbd293f",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230625_day1_24h",
+      "feature_matrix_sha256": "8e158e3ad95ea0cb5fdf2dad08f8b4fd349e8f778498b50de9cb6fe0ccf62b26",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230626_day1_24h",
+      "feature_matrix_sha256": "e74d602ee16690173c274dc528df2e8effe0c63e49ab11dfe82b8b65cec0463f",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230627_day3_24h",
+      "feature_matrix_sha256": "84bc2b55573ad4e4665f7516a453c9bbedf7a12690446eaf5f1ad0043b6f37ef",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230628_day1_24h",
+      "feature_matrix_sha256": "cf2e96b3ab88eeeb58044c73efa6dd9a8bf77f16971bad54eb85c8b6059d143f",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230628_day3_24h",
+      "feature_matrix_sha256": "4507173924132c5a9dca23c33bf5c8112d2dae43e74ddc1a1c4340026f1ba77d",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230629_day2_24h",
+      "feature_matrix_sha256": "4644f60113a52d5ee0c5fb0e5a55a40dddbff437dc7b7f6591b5de37b8a37b62",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230630_day2_24h",
+      "feature_matrix_sha256": "8830189d8dfb84e0cafe412710ee8caa9686b14d5df3c58eaf251cef02a7f324",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230701_day3_24h",
+      "feature_matrix_sha256": "73dd01eb7e1976049054049c027001c99a4d22dedb1f6b57432c536e84758526",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230703_day3_24h",
+      "feature_matrix_sha256": "94bcc284a7d6b75d718f1d808a8b3fd6570a005b344e2284efdc6e09118a714e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230705_day1_24h",
+      "feature_matrix_sha256": "3fbe69f4adde66be61f20f08be001958e9eb409cebc0bcf7eb11bf75d69b55d4",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230705_day2_24h",
+      "feature_matrix_sha256": "1e6a2ddf1e92660dfb83da7ba267976fa146302c0c0a75e0bf21467bcc63dfe4",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230705_day3_24h",
+      "feature_matrix_sha256": "d0dcf7ad3b43d2dd8d47336f50852dbc0beb46cf879ae57ba9efa2532143c595",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230706_day1_24h",
+      "feature_matrix_sha256": "578f61e38c4ba101445c81c8807b66cb85e26938dcb53baa8225a8a0ad81ca6d",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230707_day1_24h",
+      "feature_matrix_sha256": "55204fe591aca957e42298cf3327b3c5b5cace07dfdca4553e3bee2ad7409668",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230707_day2_24h",
+      "feature_matrix_sha256": "6ee4697fe1360dbc3f3f51802af59155ac00d6680cc09634c03454be990cc259",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230708_day1_24h",
+      "feature_matrix_sha256": "8d5833852eac14ac3ba6b040e92fdf12612cf61f477c8fa7ab8c053705757906",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230708_day2_24h",
+      "feature_matrix_sha256": "0d44e0327016ea85586129a843255ed36cb82fe3b126a2843ad743c23331a2de",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230709_day2_24h",
+      "feature_matrix_sha256": "7d4ca8834e56de9400ac74c8fa62748396599c64d7cfad546e4b39f5f11fbbec",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230709_day3_24h",
+      "feature_matrix_sha256": "a89136de2df943ac5ab45d2058a585fa6d7c3bc0f43e73cadb6ff2b58f9a6929",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230710_day3_24h",
+      "feature_matrix_sha256": "1c514ece6098e7b597414f387bd2bbbcec52023c7cc3ad3d56060b3307b1e92c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230713_day3_24h",
+      "feature_matrix_sha256": "b46e4ad30d02a50bcc1ae5556f2bc111972c8feab493a49c140c0268185c8db1",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230714_day1_24h",
+      "feature_matrix_sha256": "e74e7a270aa9e7f15ccccb8685be2eaa253891d0d72c0de5b3b5497f4b09ea07",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230714_day2_24h",
+      "feature_matrix_sha256": "db67df028543f9ddeda284d2a94b03f9e67b5f598167c437cb5ccb5507c866b1",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230715_day2_24h",
+      "feature_matrix_sha256": "49b80df72be06494e390dd6a893cf5dd74e6df28570ca7831ccdf3089c443936",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230715_day3_24h",
+      "feature_matrix_sha256": "5d501297ca76b00c4526dca6fd492338f8f3e06b859adfa9008a9941947ee7e6",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230716_day2_24h",
+      "feature_matrix_sha256": "c4b82f8eb72ef8bd81e85a291b17480fbfca668793faa22a974baf34fc06df23",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230717_day3_24h",
+      "feature_matrix_sha256": "54f3bdb62abdc4cf5ff200d671dbaac6b38785e6f9db07ef07e812ce7f286271",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230718_day3_24h",
+      "feature_matrix_sha256": "726612c30b172a3e32a6cd2fc46e7aa5d421b0c70373259364cc6bae2c374b76",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230719_day1_24h",
+      "feature_matrix_sha256": "f7ba2a5714b7d131f5884014b1ca88d714e8c9aa24c4374bb3f1dba2a9fb6dea",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230719_day2_24h",
+      "feature_matrix_sha256": "dc6d89c162cde78c24270ab1c354e305bbf92c79a566e8b3005646054f41fc4c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230719_day3_24h",
+      "feature_matrix_sha256": "d0d64fcbffc951c2f7dd558af0d1ba8d04fbf7bb38f844b05e3b381551b45b7e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230722_day2_24h",
+      "feature_matrix_sha256": "dc89ab21c2f7237386ce076d72a1e8d3a456869ebf0b955c671e5aafbe38b792",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230723_day3_24h",
+      "feature_matrix_sha256": "79c7deb7d29b7f0045372792410b53e926f024d179b82344a7f60c4d8c26d959",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230724_day2_24h",
+      "feature_matrix_sha256": "a6cf1b40a4f17d96b3397d31fde5124cda64ba6d62218515ba765d9174021e97",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230724_day3_24h",
+      "feature_matrix_sha256": "f53bdd551dd8a4714f4579daf61c6621dcb5a2ccd5ac42c0924340f47bb22092",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230725_day2_24h",
+      "feature_matrix_sha256": "0456c0fa669374300eb615eec3fc9e7b684fbc1ad2585abccab94ed0d7bec104",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230725_day3_24h",
+      "feature_matrix_sha256": "e66298b568d5d6610cedfd4dd0adf90efd0a5f790583636205bca6e31ea9f7e9",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230726_day1_24h",
+      "feature_matrix_sha256": "ff362483ac393008a24496c18506719194e06993d46972f3c31df7a1592b965c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230726_day2_24h",
+      "feature_matrix_sha256": "7d8b0c69ee006cd7823d1181395331b0f5e94c150df7eda27374e2bc5ad313df",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230728_day2_24h",
+      "feature_matrix_sha256": "7dbacf6f161e5c3346cb148be50c0e508b05844825a6a1ae230592167f80e03e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230728_day3_24h",
+      "feature_matrix_sha256": "7028bac68d64778d7cbd0d7a46f4139dcdf2001b154409428124f303cef63807",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230729_day2_24h",
+      "feature_matrix_sha256": "5440b55edc5b5299be379360e84638f1c700193e7f4c88d3bb20d8b4ca974433",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230729_day3_24h",
+      "feature_matrix_sha256": "0b7d4efd30d4e74a64b7104fab771b44bb6d95d8b4c2a0dacf94479fd86962b8",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230731_day2_24h",
+      "feature_matrix_sha256": "a7cb5f321e229562ecad4ffa476b0731627458b84001a87d17153354d115f872",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230731_day3_24h",
+      "feature_matrix_sha256": "51610b430313f8d22a8d63e911ce646b97de12031684b23cfd39eda13326e66d",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230801_day3_24h",
+      "feature_matrix_sha256": "05e8dc27a95089407a0d2fec32e7468e7eb2fadcfe1fd55b2d494a46284151ca",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230802_day2_24h",
+      "feature_matrix_sha256": "419e01cc04b97de186c88c7f36298ce4f529b03dd9d4f299b7ce1463d009cf7b",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230802_day3_24h",
+      "feature_matrix_sha256": "f319065076c172700f9704843422e4b972695464b33312125be2aa0815a2f247",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230803_day2_24h",
+      "feature_matrix_sha256": "cad8b3d07a33b105d2f0b766806c33d0c42785a4ada9ad5cec3eec6c69a72c17",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230804_day2_24h",
+      "feature_matrix_sha256": "f8bb27bb1f346b415dece9c0225b01ad62a9d2cfd5fde9126c2511358e633026",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230805_day3_24h",
+      "feature_matrix_sha256": "e579f191b3adb0a243686047694cd199b783529f75f05235af5c1b5d9dc39e49",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230806_day3_24h",
+      "feature_matrix_sha256": "7b5b773523785994c9d545027fcc876e8fffc3aa62e71f345334af942fe35295",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230807_day1_24h",
+      "feature_matrix_sha256": "356f469a97245a20c1f3a59b806f9c9cf4e42f9fbbd872bdfd0201d60e02fb75",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230808_day2_24h",
+      "feature_matrix_sha256": "bbe2865917b5d2142ffb4f292913cd496760bf64ca50b23edc62155f5f586650",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230808_day3_24h",
+      "feature_matrix_sha256": "0f26d6395d4975e6b7ea9a4a8e2830294e0548287707e72fa31f6398774b1035",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230809_day1_24h",
+      "feature_matrix_sha256": "504b1ff025be2a8a89e24e1242cf395740cb0baadca3d8d78e2e12a3f27d240d",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230810_day2_24h",
+      "feature_matrix_sha256": "244fe5c131804f7c7fc52cb1d64a4a4ed422c97b3a63c9244725d44c38cdf31c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230810_day3_24h",
+      "feature_matrix_sha256": "a9cfac45b0cb5e7828411098d54f6e649fc7bf042fc13f09b5d44574b6548c50",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230812_day1_24h",
+      "feature_matrix_sha256": "00fabee2e81b54c68fbdc7f2bc8047bd4ece8fd543f8c2680d6816807d00d99d",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230812_day2_24h",
+      "feature_matrix_sha256": "e0a9eba45db15b4da00cb6c71fcbc83177189213f4fefe899fb57d0ef26e0954",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230812_day3_24h",
+      "feature_matrix_sha256": "883aff8c86223658a5c726b6b09e65f305b6debe320623e74330e06975f2df38",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230813_day2_24h",
+      "feature_matrix_sha256": "722fab30f7d541ed9e63a140cc054311ae13d2056aa9c9772ba73bba3735352e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230813_day3_24h",
+      "feature_matrix_sha256": "039b4f733652bc9bc1eca62eea931ef6228966c3584f3a532861faf830669b16",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230814_day2_24h",
+      "feature_matrix_sha256": "13838d2fc82ebb87fe345e60305f118c836f46382567e57d594cd041cbe56760",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230815_day1_24h",
+      "feature_matrix_sha256": "a4a4a93c7b74043854e7a3a0fceec2d9681698bd02004bdd8c6badeafe8e2e00",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230815_day2_24h",
+      "feature_matrix_sha256": "bf357b3c91cc9095c1d128f2b30b89c6d07151f335df2a43c64d4748ee160de9",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230815_day3_24h",
+      "feature_matrix_sha256": "4d387eef54d47da555fb266754a35a925af4cdde3db7e152389ab990e5b29bbe",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230816_day2_24h",
+      "feature_matrix_sha256": "f4b3779c1916ba30b33d1fcfff5be48c14ace9269e03c54f7d96fd914f432ae7",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230816_day3_24h",
+      "feature_matrix_sha256": "fba838a79c29ed393e0a2fcb31a4529a65d7a579b90f839165505c8cf2eb90ab",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230818_day3_24h",
+      "feature_matrix_sha256": "1e1f6e99feb8f316e68dd39488c6fd81a4edee534eb8568824798b7f2482b552",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230819_day3_24h",
+      "feature_matrix_sha256": "f72f486d4d71c2b3b5ccfcd8166685fd0fd1f73b89b59033b4a99c1620f393ea",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230820_day2_24h",
+      "feature_matrix_sha256": "d02e60ddf58f33e738c922755f123370e9e819023ac457fdb54a511748942616",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230821_day1_24h",
+      "feature_matrix_sha256": "65ed317ec6a9c434e08f0b44fa4bd4ef32c53d01298bc6e69e6e6e0ff1fee45e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230821_day2_24h",
+      "feature_matrix_sha256": "c0fa7fd97514b883075e52f9255599791b8fc4dbf3ed9244833e80d235d79115",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230821_day3_24h",
+      "feature_matrix_sha256": "1e1b53e3cd36cf4210ed17ab449f3eafa7d0a6947f3b3e0013288e9990f16233",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230823_day2_24h",
+      "feature_matrix_sha256": "361dd5385fee00cf9d2e5edb09b0d85477fdbd1b6988bf8da65ffaa0f1d06756",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230823_day3_24h",
+      "feature_matrix_sha256": "5deb5c77330371ef0b737c87844c1a9af539024920d6552075263263cffc5c54",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230824_day3_24h",
+      "feature_matrix_sha256": "e36936ff756f5ae62cbea9831b876ec5b77b831fd4209beee9806de0cb32b854",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230825_day2_24h",
+      "feature_matrix_sha256": "5aabf1a642c39cd57593e1bc9477d98f81cfd82c49eac44347513576e70be8fe",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230826_day2_24h",
+      "feature_matrix_sha256": "86c62b643a18bd08310e1f8bc3b06544126bcef7a6488fb28d9f0ef18e1cb046",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230826_day3_24h",
+      "feature_matrix_sha256": "38d7865910fe98876a7c8a3a0d9fcf5c417c121070ae05efa2532e87c861755f",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230827_day1_24h",
+      "feature_matrix_sha256": "294bdfc4074ad1a35e23fd1d08ce19134f018a86c284bbe8021ca4bfe0f0b45d",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230827_day2_24h",
+      "feature_matrix_sha256": "916d200e71619617604bd646a681a9fc1719b2369b39abe2fa3c5a26a63bda8a",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230827_day3_24h",
+      "feature_matrix_sha256": "a2beceaa389ebafb3c6e4c1ceea942e0ed1c76717a10c0c83eec06f83a3d1858",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230828_day2_24h",
+      "feature_matrix_sha256": "25a74c6278e63a23524d882c35bb69406a7a92e40b4f6f0d704d842ae8829f71",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230828_day3_24h",
+      "feature_matrix_sha256": "72c281159f1af9f1451325d5e3ab8028304595d92f0ade315d1ff59988838f12",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230829_day2_24h",
+      "feature_matrix_sha256": "40e762132c7151d5ed74dfb86514b0e2021fd2cc5b8afbc85482d6568ef6ff9c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230829_day3_24h",
+      "feature_matrix_sha256": "607b490fb8ea8e68586598ca2326077f94a10e741fcee49d14bafa3d01901faf",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230830_day1_24h",
+      "feature_matrix_sha256": "44f0a1090f1fbd2389a96416e712448e45d507ba54e7aa80497e7ace1f8afc44",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230830_day2_24h",
+      "feature_matrix_sha256": "cf9d751025b051f86d7a045d258f2bd5681f8c718baf5f300870ceec279b6801",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230830_day3_24h",
+      "feature_matrix_sha256": "796d41b1d95a3234f63e75f143bb5699dce98fc3743f97ec10571f069187e03a",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230831_day1_24h",
+      "feature_matrix_sha256": "cea1101f6defaf884114f4b238afbec5e4d5d2de2762ea3f680d9fcef9200c5a",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230831_day2_24h",
+      "feature_matrix_sha256": "127c409ffa757d0bedda7e762dc873ceb1bae619af66121501cf4dcc71e2539c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230831_day3_24h",
+      "feature_matrix_sha256": "6a066e342a4092b31c58409da8e1c82745c2bee6bbcc5ddec8dd55f29257f362",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230901_day2_24h",
+      "feature_matrix_sha256": "87465849e277b603c625d69b91874a8aadc449a3fe840e7679e967dbe2a703f7",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230901_day3_24h",
+      "feature_matrix_sha256": "4b03e6cc9f5d38935de3223500e79d86a70262f30de3d72f06dba190f86598aa",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230902_day2_24h",
+      "feature_matrix_sha256": "41d2095be10a294ba64588fc7fe3618f7f57ea6b49a2da76b1ab6da232eb9fc5",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230902_day3_24h",
+      "feature_matrix_sha256": "9795eca31f16b510e8a135a8068980210d7e43080c3d5737dc48f5f97e6d9bc8",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230903_day1_24h",
+      "feature_matrix_sha256": "8b955c3e4eb49f818d3d3263f45bb751ec40b8ac24beb9062fed221df027c7f6",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230905_day1_24h",
+      "feature_matrix_sha256": "0f8cb465686e62fb4cf4ca1ad1957c9bdf34e85f0cd2405e459745357673baa2",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230905_day2_24h",
+      "feature_matrix_sha256": "6143af2208bfb667225bd37e73afdf18644e92b405c9490d2a8022865d00513b",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230906_day2_24h",
+      "feature_matrix_sha256": "260618c432873512f1059dd75bca733ae5f3f43601e0569c4561cb28600735c2",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230907_day2_24h",
+      "feature_matrix_sha256": "2450edbf24bcfc086890ab23aaedff8298fb8bdd1bbc82936302bbdff3f7d7f0",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230907_day3_24h",
+      "feature_matrix_sha256": "f0b95c556e3c3a75a12265c6dea927f7e65cd412b25bf7119144eed385c7ca65",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230908_day3_24h",
+      "feature_matrix_sha256": "7249d64cdc8b413213826304ff9245e33d6ac64b840088a612389f2f386e0430",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230909_day1_24h",
+      "feature_matrix_sha256": "d45ba2b8db9dd104618662df1e96a6a488e02e4a5c81771ed1c74482867493dc",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230910_day1_24h",
+      "feature_matrix_sha256": "9e45e68ef03ca3c6af7aed2d3ceabc64a2f95800828e18aa1fa66025bac6c5a1",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230914_day1_24h",
+      "feature_matrix_sha256": "f6f5ac6d765c3bc174ace016fab3afa28d8d04859aba9d4946588e710bfd9a48",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230916_day1_24h",
+      "feature_matrix_sha256": "565bc4bcbd4ccacbbd8b462b07b91e3aa0d0d30935104b82acfdda3c5848a413",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230916_day3_24h",
+      "feature_matrix_sha256": "7214ce7f32fe7d9ff6e50ebb666e14ed1f47f324013bed9e30f94f064e533515",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230919_day1_24h",
+      "feature_matrix_sha256": "c1286d519722fff6b2d847ad93310958c9d2b0a62441a6cba891056465d2e370",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230919_day2_24h",
+      "feature_matrix_sha256": "2242d7d9a69462efb7927478786639a3bd461810d3326c65321df421819a7e7e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230922_day1_24h",
+      "feature_matrix_sha256": "dee733ba38f02056d3b7102c36bdbeecddc4ef1a0f9ce74776a9412bb05558b7",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230922_day3_24h",
+      "feature_matrix_sha256": "7a0ef41b052c5b9c9e6e1a4b8040d360718bfd9f4c7e4cd6a2a47e14c7c15ee6",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230923_day1_24h",
+      "feature_matrix_sha256": "5ab97486d08bd2fc8775a1d0fb84026d2ab44a47abc774ab6c804daa63ed6972",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230923_day2_24h",
+      "feature_matrix_sha256": "fc3202390d4e05220a751c61229f0e39303ee2fd69f8ee194eabed9ea56e221e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230924_day3_24h",
+      "feature_matrix_sha256": "542a62300572fa86a8c5d3abca45cedf0b6c7b170fb062d5a463d79b6fe3b8f1",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230925_day2_24h",
+      "feature_matrix_sha256": "90fcb84f1491e0732d866e05193ed529fa912b9de6f5c4b4823dcaafb84084ac",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230925_day3_24h",
+      "feature_matrix_sha256": "252399016e641841424a362844b69282c8959fea2b751fc3e7acba0c23eb465e",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230926_day1_24h",
+      "feature_matrix_sha256": "cf0bee18e89bddb3d053fbcf69450caec672d24221b13e73de656e4234e85ae0",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230926_day2_24h",
+      "feature_matrix_sha256": "85ffa75b1c0f25688393cb5fb4b61f711a3b9f0a0a2f0fae19c708f792a4036a",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230927_day1_24h",
+      "feature_matrix_sha256": "9d3a48fc683445d91190ae316482825e3c65c436a29dcd93c0118ac7f9e4ae2c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230927_day2_24h",
+      "feature_matrix_sha256": "89b511f9ce21134e5eca15f90492349446658f2cf12c5233e5f40a7aeb767cae",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230928_day2_24h",
+      "feature_matrix_sha256": "2512576d0910e8350b3c8426acb1e216c3c5e7cf03c3266062aeeb86a3494517",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230928_day3_24h",
+      "feature_matrix_sha256": "f1b039a40c0e0d25bccce52033d2c5746ba4e815b617ef500809f6fdf22c5c87",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230930_day1_24h",
+      "feature_matrix_sha256": "732179e0c5bf64394b889552ca673838be26747ad3d642476f2130d940d7b007",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230930_day2_24h",
+      "feature_matrix_sha256": "88c4badf24a597639c88be818ba24818f33bc8f9d1b44cb4d34864428de527d9",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20230930_day3_24h",
+      "feature_matrix_sha256": "0815ffce4671482daa477fbfb68aa4479d32572f7052d098029bf359576b71a6",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231001_day1_24h",
+      "feature_matrix_sha256": "92b0925eac78713d284ff1008c4303bc27bde739b1b8957e72e8f0c67d4c5db1",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231001_day2_24h",
+      "feature_matrix_sha256": "3eef1ccce9c64061f87e8b25dcb5395eb35a5e64260c8e1481e5f05361dfc09c",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231001_day3_24h",
+      "feature_matrix_sha256": "47fc2ce55ad4c57335022da42a0c06431a3d424aafa6db6952779a20b8a80f08",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231002_day2_24h",
+      "feature_matrix_sha256": "1ea7a08a0826ad72db582362cd94ea9d8f7c7c3f485c35251d8c61c456604090",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231002_day3_24h",
+      "feature_matrix_sha256": "cff38f1011f6450897a02cbd4d788ab56bc94527b141a160a2c6a6f0752e5095",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231003_day1_24h",
+      "feature_matrix_sha256": "d1deaeb422f92b71d3c6b0c15cdb8aa3b05c008492fa2753d53fd77114c51e29",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231003_day2_24h",
+      "feature_matrix_sha256": "0e5a823fad72b0818f9b6f8333d4a99f6bf6e955c0b9eb771c2e66b170532ce6",
+      "paired_cells": 466
+    },
+    {
+      "case_id": "20231003_day3_24h",
+      "feature_matrix_sha256": "7f4e375cd12b324c0a9ded3c6136c8642f59b29344bdd574e254371b846fc0c6",
+      "paired_cells": 466
+    }
+  ],
+  "fit_cells": 80152,
+  "fit_observed_heavy": 1118,
+  "fit_observed_very_heavy": 190,
+  "fit_year": 2023,
+  "forecast_year": 2024,
+  "forecasts": [
+    {
+      "case_id": "20240601_day2_24h",
+      "feature_matrix_sha256": "e32c9b0150a40a395177dddd4946922b9ae99b6aa7265b9ba016e5f2afec8869",
+      "file": "data/processed/east_coast_development_v1/20240601_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "0cec069b06f811abcfab424ab75aff4d78cc4c689cb584b24c7b11995f86ccbb",
+      "sha256": "d340af3e14997d5a06d657601821d67e926bd44dc73bac3ff5900975175dd558"
+    },
+    {
+      "case_id": "20240601_day3_24h",
+      "feature_matrix_sha256": "984e9bf0a3c9e4989e642f4762ceb33c6386f158a0ea19f3ebfa91d324ef0e15",
+      "file": "data/processed/east_coast_development_v1/20240601_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "0647057c8ed851f48c8000909618b0ed760e2cd78ce7bc9af838df03d2b7e638",
+      "sha256": "778209260e467bce41f292e141eb093d05aea7d46cf72fe141a14ca54f0b5eae"
+    },
+    {
+      "case_id": "20240602_day2_24h",
+      "feature_matrix_sha256": "4ffca81d147bb1b90cf701f204838074abf6402150c27ba0c6d2b3b610dea34c",
+      "file": "data/processed/east_coast_development_v1/20240602_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "7220e177a2a5a3ec96c20ff42a9e2fdf793344e08901d4d7e59a3b7e3b11024c",
+      "sha256": "14763f109a03e0abdd5052b86168e69f6d1cbf18147a78353a28e070ceff652f"
+    },
+    {
+      "case_id": "20240603_day1_24h",
+      "feature_matrix_sha256": "dcd15e3e4135300c3c511322670e7c423b91a499150e4b6ee9180472c7526658",
+      "file": "data/processed/east_coast_development_v1/20240603_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "57f33def26eb4b47b1fad61fff045b9c9539a50ca875034c5025242304632cb4",
+      "sha256": "3c2b049fda840d7d5409013a9c3238a342389cf9d1dd28efe336ddf7738cb0bf"
+    },
+    {
+      "case_id": "20240604_day1_24h",
+      "feature_matrix_sha256": "9a439c0b90f94ee5c63e5c54fa2ce4b2cbf5d1f1654bd0f3ae2a100425a69db4",
+      "file": "data/processed/east_coast_development_v1/20240604_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "96be78d1df0a05c73d3b89c121a27c186b4be774f68474fe576d738fa412db84",
+      "sha256": "36063e39cd93ffad206740abbd07a051b098b4c1a3410c1c4efca78b4e1cec46"
+    },
+    {
+      "case_id": "20240604_day3_24h",
+      "feature_matrix_sha256": "a211f95376d580b4a073ac73d95f95698076a0c3c9d25882827018cbca2ddb5d",
+      "file": "data/processed/east_coast_development_v1/20240604_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3e56a5840fbdf6c37ff947c05822edb7d9a671b87b7972d24e537980975432bf",
+      "sha256": "cf3fb803a7c2d70bd42beec3c8bad4d182e886fc29f59467e6bb1334061d968e"
+    },
+    {
+      "case_id": "20240605_day2_24h",
+      "feature_matrix_sha256": "d4fc914882f7f016f21effaf28ca1b0391d02417376fda68cfe835cd1775d8a0",
+      "file": "data/processed/east_coast_development_v1/20240605_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "8a23ad85b2728b2ac8dd26887fcc88f2d4f97f62eeb50b2550af245f205684d9",
+      "sha256": "7bac6216227ba29ca7adf2012041c6580441ad586841194b0b34899822291fb9"
+    },
+    {
+      "case_id": "20240606_day1_24h",
+      "feature_matrix_sha256": "d27774bae422b9af4f57c1e08a473e2446afce8ad0ef507e618dfa94914b68c4",
+      "file": "data/processed/east_coast_development_v1/20240606_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "a5b22596c6ff3dbd84f50d50aaa52dd686ab122a0b263aa9c9a593763d7e1ad8",
+      "sha256": "cbc67acd9f60c827276bc07c82384fd3b86f8615149949db45e31050917d10bf"
+    },
+    {
+      "case_id": "20240608_day1_24h",
+      "feature_matrix_sha256": "324aad22f8fe14879f9b48cb5e2bf4d57c219a9c82dfbe5716654495849655c8",
+      "file": "data/processed/east_coast_development_v1/20240608_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "ea19059ac843320f08d3efa58928df0325e93cfbc1ffd8d6ca621b48396ed2d2",
+      "sha256": "072c7f7107ae17b18baf1d63a986d470c4567d109e3718cc9f348c707f0a7b53"
+    },
+    {
+      "case_id": "20240609_day1_24h",
+      "feature_matrix_sha256": "9b33f3f45802bea4b7876a8eaa1ddf7e93efaf9612fe0e73f44ba137b61dda41",
+      "file": "data/processed/east_coast_development_v1/20240609_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "b3f4fd28341499b7323697622993bdbd3b6e451ceed9469d1964290f4cae2c80",
+      "sha256": "b7250da05039cf452d91492aca806d2779d3bec9a123d535e6512be57f2a3e42"
+    },
+    {
+      "case_id": "20240613_day1_24h",
+      "feature_matrix_sha256": "46a6a08ad6e9dd0ccb2972727e585785e904903e706a3a981379f6ca33492223",
+      "file": "data/processed/east_coast_development_v1/20240613_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "2f994a02f325763f9abf0853211085460c9bac86bef858bf83845b343dbbc02e",
+      "sha256": "94aa8642d74030c38d8d722f1a8af0fc4d3f290d45270cdef1c748865f47cc8a"
+    },
+    {
+      "case_id": "20240613_day3_24h",
+      "feature_matrix_sha256": "a0415ba62984383d611f758523cddec52476289f6ccb8ad7993cbec739cbda53",
+      "file": "data/processed/east_coast_development_v1/20240613_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "f4c1db3c9702617f79e3df977af98f97181f0e48e5d9b749cb3d16c402ccf594",
+      "sha256": "5ed186fb3273b46b35652c1579184e8b8103551d48e701492bf6dd0321a7d5a6"
+    },
+    {
+      "case_id": "20240614_day3_24h",
+      "feature_matrix_sha256": "655e5e5a24750893e869fd164780a005b591e2b7427c556c8265d4451009849f",
+      "file": "data/processed/east_coast_development_v1/20240614_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3c4124b6beb9fa2a40f11b610b3fa0c2db9623594dcdedf5e9a11abb55ccdbdb",
+      "sha256": "fe297cdd549e5bd94db5cd74e54ffb6db69118e455e4f6e33e07ae46709b2c13"
+    },
+    {
+      "case_id": "20240615_day1_24h",
+      "feature_matrix_sha256": "c41ed46b5f1de273eccf9777c69dfad8e488f46720b0208139094cba387c605f",
+      "file": "data/processed/east_coast_development_v1/20240615_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "553f2c649cc5a7d8346a3c5d19d48d29b277da70747d72910d6af5aa2600dea4",
+      "sha256": "59073444d69c887e3534f8cbaf6911b0d8b3fa7a04a97f95c9f623ed3e2b79a0"
+    },
+    {
+      "case_id": "20240617_day1_24h",
+      "feature_matrix_sha256": "bc19e1caf6428100f44998daa9ede7c6d539f4facc80c82730bcac9c499269b4",
+      "file": "data/processed/east_coast_development_v1/20240617_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "77176ef4ee504bbe794e91420c930eba933e386ed4227c4eec8542e700f9c4e7",
+      "sha256": "734474df886a5c1078ddc116de269dc24c224ed46a0384e2624121e5092808eb"
+    },
+    {
+      "case_id": "20240618_day2_24h",
+      "feature_matrix_sha256": "8364122c1985e7f98586aef24a72c8306f67e90224ad29d069d00934cbbf0fac",
+      "file": "data/processed/east_coast_development_v1/20240618_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "cdf63275b625902fb59eb59ca6a1dd59ed17321647e895909bc20cf2fe0a49e9",
+      "sha256": "075194234b96bf754136f4f34e6a784014aa190e4784e62531b0b452ffc7cfcc"
+    },
+    {
+      "case_id": "20240618_day3_24h",
+      "feature_matrix_sha256": "f63fcd40fcdb4447f8611b0cddc288f2d2eeb551e7ccdccba54f53e30288ccae",
+      "file": "data/processed/east_coast_development_v1/20240618_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "9a7806a3ce436d0cd51b13ebf5a9eb67f55a697c9db8b5f380e4d431d716fdd6",
+      "sha256": "a6bbc5b152905c2e123e76caee52f2a3ce2c7b217b80a398a000bd7d3f19b4ed"
+    },
+    {
+      "case_id": "20240619_day2_24h",
+      "feature_matrix_sha256": "21fe3d76aa465544ba86af6f6ac3eb3d449531849b4678e08a837dc355d584c3",
+      "file": "data/processed/east_coast_development_v1/20240619_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "1c86dedb1cbde61d1d3da4e4e6bab07f2fecfc5f6679bcff53e0719e5da4eb41",
+      "sha256": "683620a580cf835df103fc0e40978585e68a0263481f6c0b3aa680804562978e"
+    },
+    {
+      "case_id": "20240620_day1_24h",
+      "feature_matrix_sha256": "eda99120e880c4efb1cd1e27b0975119cb061f3c7fa18fde0398466f26910f55",
+      "file": "data/processed/east_coast_development_v1/20240620_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "b41caf9d1d422a7a0113e1ffcdde4c385a957938d5355e7d3d7b23dae85b2d3c",
+      "sha256": "332dc42cbbb0ad9b862a6bbdd32a9de76b42e989547bcee7744d2cad408b1ca0"
+    },
+    {
+      "case_id": "20240620_day2_24h",
+      "feature_matrix_sha256": "b1c81847d9480423f5c9f5789dfaa44c46efd4de1b6ed1d64adf95df53146e78",
+      "file": "data/processed/east_coast_development_v1/20240620_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "c3c3148a2e236527ea9fb28d84694ec2eb6d7f0d937b11b2e4d4f40dc308d6df",
+      "sha256": "b45063bef38e5a38a3262e51b81cfec67e2c1732f22462a6eb3e1e772865bb90"
+    },
+    {
+      "case_id": "20240621_day1_24h",
+      "feature_matrix_sha256": "7455d7f933b5b890ff182914150ed4e318bca24547d62df2d333604443810210",
+      "file": "data/processed/east_coast_development_v1/20240621_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "0b1b628634a9d66dcdaeb3f49547c68abc1f9d76f7789b088f739c85fb8bd7c7",
+      "sha256": "74dce0b88b19b334c326c4f703204159efafe04ea9172431fcfbca919bc7b50b"
+    },
+    {
+      "case_id": "20240621_day2_24h",
+      "feature_matrix_sha256": "7b9dde3d7a42487172f06f8b30c6de73b06a54e7f8a9dc5fab0f9e1bc8d0d954",
+      "file": "data/processed/east_coast_development_v1/20240621_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "6258903b1b002d4fdbdd46be26640f10747ac15eedef7cbdf5d20a2d7fc18c8c",
+      "sha256": "0e4685edd3d7363104a2b3214a9dcdd8c7d01ac0658a8220f34fa5d92793c16a"
+    },
+    {
+      "case_id": "20240621_day3_24h",
+      "feature_matrix_sha256": "dc9e551ed5588206a53627d18ac3b09caf2431a60335c8c59701fdfc26d698ad",
+      "file": "data/processed/east_coast_development_v1/20240621_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "0be5cc091c430b33348dc4d57929bee224f3c42b14e1221efe95afa06a80e496",
+      "sha256": "5b1537608c992856f4729dfed14aa0fc5d007766db422990f01b6bfc46e20716"
+    },
+    {
+      "case_id": "20240622_day1_24h",
+      "feature_matrix_sha256": "c4b1baf24492c6c0214d7104b61545f11a25d28a9dbd788c05eccb9f50176b12",
+      "file": "data/processed/east_coast_development_v1/20240622_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "fff27ea87f33e6e4c78202322d9e1032f700e699f445955e674389d6e9177479",
+      "sha256": "aee65df395cc3ded0334cab6a7b6491388f8d9ce9fb79ed31840de5e752e641d"
+    },
+    {
+      "case_id": "20240623_day2_24h",
+      "feature_matrix_sha256": "e70f1d456813502bfd774aaca3f43e91e8d28018d4558f3f6de9cea3826ca75b",
+      "file": "data/processed/east_coast_development_v1/20240623_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "be32f98e4665477fba17549a724d76b83e9e60f2966175a80c3fece53fedae38",
+      "sha256": "37625c88b7fc32644c9abfabd3ef305dc3eeb275651d641687d76bc22f579c20"
+    },
+    {
+      "case_id": "20240625_day2_24h",
+      "feature_matrix_sha256": "073afadd3ae39e0b5c4db65649903496b1a0410f8b71f27d3c49f846eae9505e",
+      "file": "data/processed/east_coast_development_v1/20240625_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "97c880444189be8762d9bab2cb34730c82b601b11966648e7993732bb1c492c9",
+      "sha256": "46e4b5da049669f3047a489a15ee2781384820588a712add5355c45758e42c63"
+    },
+    {
+      "case_id": "20240625_day3_24h",
+      "feature_matrix_sha256": "b6a3e5e6150b50f40b94ad58eff0f2d5d417a0ca5efb9caa5b33e1299d9e7e22",
+      "file": "data/processed/east_coast_development_v1/20240625_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "c114c02684674e5b4c5cf8e56a1fadb69351e3c402cc7b3f8eb885bcd9db915f",
+      "sha256": "6a521bc78b0fed8a8539b76540384e3d327b5ce13e3e7f6e805289d4aba8585c"
+    },
+    {
+      "case_id": "20240626_day1_24h",
+      "feature_matrix_sha256": "5b2f63933ba981ba119f07d699371e01e3a4ba1d8827549b2dcd85a6a15f5048",
+      "file": "data/processed/east_coast_development_v1/20240626_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "177742efefb65a6e8b0ebcf158e1d0a90fc6c95c22a52573a0f9f05a3937507b",
+      "sha256": "901a6ef272dd00081757df916a6fcb7af7420e4259a2ba7e2a69986064bbc826"
+    },
+    {
+      "case_id": "20240628_day3_24h",
+      "feature_matrix_sha256": "be51e2baa822f6d5fdabd4e4e94b0a1169ce260f9a12830365d3a2b585436358",
+      "file": "data/processed/east_coast_development_v1/20240628_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "95a9c6b5fdca3d576ec52d32a8ca8c6a16fe736cd01b9bce6f0d189bc5e83b7e",
+      "sha256": "2b1cd5338134389b72d0e397be3161c26b83ac2c06f50c11c6bd2ee0ca6cbfa7"
+    },
+    {
+      "case_id": "20240629_day1_24h",
+      "feature_matrix_sha256": "c9dc36da7941452a2ea30ec66f855860bc778af15ba3ab6d74fb48db8cedce4e",
+      "file": "data/processed/east_coast_development_v1/20240629_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "55ebf81e8cba8d39d23434488d0e941eaadd9c50646de630c39f3afbcd5a178f",
+      "sha256": "87d4237130fee6256695ae0cf19092c794f7a17bba16dd9ee2c2b48478fa83b9"
+    },
+    {
+      "case_id": "20240701_day3_24h",
+      "feature_matrix_sha256": "d52d2f8663a6cc7e781f9d5d512c55c2fd2a3e2e47c4686f97d077ea8396b72a",
+      "file": "data/processed/east_coast_development_v1/20240701_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "e0cdfb36bacc5422063988937f47e2bbac2a3f767edbaa96aed6a9f23b8ecafb",
+      "sha256": "2468b285f7fd0a25c409d8bff0e76532d8b25f22a85fe7d4d78fa63f95549d8c"
+    },
+    {
+      "case_id": "20240702_day1_24h",
+      "feature_matrix_sha256": "ebe8fb6f93774f9bd261c19596f8ffccc41ec84a6d0f099def3691897ae812cb",
+      "file": "data/processed/east_coast_development_v1/20240702_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "4d22accc7a1af898b23d234779fabf479996652fff1273e90a88cc432357f02a",
+      "sha256": "e70e0e9dcb6685d758e2b1e36e94768032d3482dcbeeea037b377608ec633f31"
+    },
+    {
+      "case_id": "20240702_day2_24h",
+      "feature_matrix_sha256": "0810d710b1abb0e41c54e917ea96fea6d3a6b7bcad18aafa85e124168bac5e88",
+      "file": "data/processed/east_coast_development_v1/20240702_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "09648a941f9d4075c7bcfcb1cbca3570d4c63ffb5dbee2abdf3a188904c2cb98",
+      "sha256": "d4439972f4a85ac7b584bf98dcc1e091fc29926b5e7cfba60f4e8dd2a87ac451"
+    },
+    {
+      "case_id": "20240702_day3_24h",
+      "feature_matrix_sha256": "02a994a1249525d8268bbc115711d461f64a356086aada3f27d1ddbdf3554780",
+      "file": "data/processed/east_coast_development_v1/20240702_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "aecd5f1d2df2a62b4f271f78f257da9c1c2d9eb097c90d488e67f779993320e8",
+      "sha256": "73454825f2e2bff933db84044fbe987350417eaef785c59531bdb17c80c8bebd"
+    },
+    {
+      "case_id": "20240703_day1_24h",
+      "feature_matrix_sha256": "52096ac934bf96322a01bd1d01775f949e5699107d02218f1a816d689ce697ba",
+      "file": "data/processed/east_coast_development_v1/20240703_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "c11f920461081df3e235fd0cb94dcc1fb24dde9a91072769947835e1b1ecd8f6",
+      "sha256": "688c162355dddd387ed8fcd013e362cd55f3fbe1d7b4b85d5af556e095c64777"
+    },
+    {
+      "case_id": "20240705_day2_24h",
+      "feature_matrix_sha256": "b531cad88e1103d0d7b28b7e71b97d7502f028e2c5c5b2e3783b3488be1313d1",
+      "file": "data/processed/east_coast_development_v1/20240705_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "f71332cf1e97eb7ae0aa2f9b9cbaa982547ecb2853baf5164b2090918ea888a3",
+      "sha256": "84c12f185a5d4dcf83bf1058b5653354f8343b3ec423d9a86579d9f137e60479"
+    },
+    {
+      "case_id": "20240706_day1_24h",
+      "feature_matrix_sha256": "d015b2bf7e1e31605b1e9af8e9bc77ca7df29a52e1f8330e7db43939acf48272",
+      "file": "data/processed/east_coast_development_v1/20240706_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "43d48d0689a096112dcd9fda7ce39e30873384c81be4c39dc738aa5bde769b53",
+      "sha256": "7d6da4d376ee574f7a98da38a40f3774b024ae9a750660b72a457bc27bb16ee5"
+    },
+    {
+      "case_id": "20240706_day2_24h",
+      "feature_matrix_sha256": "ace3c7b2d6943820e23767c58fbb02f4ef87774a6c9cdf242ac60b4cbb3c7b3f",
+      "file": "data/processed/east_coast_development_v1/20240706_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "a0a8f6689c5150dfc2983503b177d60101f2734cb7b0d2957659106f39c5e95d",
+      "sha256": "4b7a9ebad71dd106e6ddc5b0543b4a9bd374b788eb1ba3b6966003abff79811e"
+    },
+    {
+      "case_id": "20240706_day3_24h",
+      "feature_matrix_sha256": "f53b76237b451399bb7aa1a4199c009230725bb2429d6fe0539f1d1ab1e49afa",
+      "file": "data/processed/east_coast_development_v1/20240706_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "39784467fda63b56510d4695586dd95fc5948d913c8f801cf9ee00ff08b044cd",
+      "sha256": "5cfd873e78ab196d17f5114d25caf84a9c1fc2cd1eff132733c299bd15704142"
+    },
+    {
+      "case_id": "20240708_day3_24h",
+      "feature_matrix_sha256": "37389ddb3919d67d993bb07df2c99e1d20e046b511a7c0e5936c17c932aea024",
+      "file": "data/processed/east_coast_development_v1/20240708_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "ceeb5639b64f573ea7b8af01f23f50c43cdf73156985805620535fb896072dfb",
+      "sha256": "4ec448ddcb501088651fb000b931ad783449c4ad9b26b08097a2171c1c2d3af9"
+    },
+    {
+      "case_id": "20240709_day1_24h",
+      "feature_matrix_sha256": "201d71cfa567063965d132056d247fd0524c7306de40ea1823d5f82166fca801",
+      "file": "data/processed/east_coast_development_v1/20240709_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "2df63ce60564f6604cc5d20892078081747519cf5a33de7a16f9714b5e4645ed",
+      "sha256": "53a96ecf8c08400c25b9679d8fa626d8c48166c52339aa81ecb59d49c87a5c0b"
+    },
+    {
+      "case_id": "20240709_day3_24h",
+      "feature_matrix_sha256": "ba1317978626e99ff85888355e1943df854d9eefc2500b5b03f58adad986feba",
+      "file": "data/processed/east_coast_development_v1/20240709_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "be50fb09888c386e9c4b80446f7baf29e73684fb79114b4044e163147638d2bd",
+      "sha256": "beccffa101209119ff790ff63a4a8822e1da74bfb7ca2438ab74de7b8eaa4e5e"
+    },
+    {
+      "case_id": "20240710_day1_24h",
+      "feature_matrix_sha256": "1c3a45bb8c5f493d3763fdf4d5feb4d3ef5c46b84670efbc70919ec271d39254",
+      "file": "data/processed/east_coast_development_v1/20240710_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "14955ad8b7a2bd52c9faaa497db29da0527fe33034c77021cc90309d8114e425",
+      "sha256": "0e9633bb5c691b1e59365d389784715ec2f9997c0887e102fc2155cb282d95dd"
+    },
+    {
+      "case_id": "20240710_day3_24h",
+      "feature_matrix_sha256": "6c04e56e9814536443f35b33623369d5073f2f22809e7aac280a7af842cf857f",
+      "file": "data/processed/east_coast_development_v1/20240710_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "996ebc7509cff63d0a65130bcd809458c64e825979f6b8b161bda46fc97db54e",
+      "sha256": "52df96c903184b49af10a30f5fe522a05d9997f66037f02b4416c7cab192d47e"
+    },
+    {
+      "case_id": "20240711_day2_24h",
+      "feature_matrix_sha256": "29833b908585a68f4a0ccdfd55739d7d4bbbcba5d69819e621fa1ce89b401ad2",
+      "file": "data/processed/east_coast_development_v1/20240711_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "435f3b077a0f8c0beb7c7262a2fd33201662ce62cf26bfe880dd55e02f6e00a1",
+      "sha256": "27cf87b5e6580d33225c71df750fbf5ea76ebe4a8984b29163670506a1a39755"
+    },
+    {
+      "case_id": "20240711_day3_24h",
+      "feature_matrix_sha256": "b8445036799af69c9ebc87153077aaa60b88d3866347e5fa49d70ab4678ccf76",
+      "file": "data/processed/east_coast_development_v1/20240711_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "673a9bbc626b7fb3362edef6d68443a1474f8eb7d946fa03a8fe916b16b32285",
+      "sha256": "06d261ade43779131842b219a44a915e91eae9e362464b506d2c49c4e82a154e"
+    },
+    {
+      "case_id": "20240712_day2_24h",
+      "feature_matrix_sha256": "9604436ab97f0819b818d78dc776e8b575b50885c78f1e446fac6533d4f5dfcd",
+      "file": "data/processed/east_coast_development_v1/20240712_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "983a777aefae5d692c5b353e99694bb7b17c003ad86a82612dfd63f512f0354b",
+      "sha256": "c0fab38170cd062633d7a6a8a90b0e05bbca27aa97f27a2a10be01ba58aff01c"
+    },
+    {
+      "case_id": "20240713_day2_24h",
+      "feature_matrix_sha256": "7b69fe02a824456d0cbd551f8bfc6d7971f69176fe20592ae9367a51ac0d871d",
+      "file": "data/processed/east_coast_development_v1/20240713_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "95a709544d7186f0eb35d1d8b8dfd8d39409e3bf7c162f61734fd0522fe580c3",
+      "sha256": "ae7d2c190c1e6f0f1a21e3b3a095241ad0a00486d288a8706253656191d8280a"
+    },
+    {
+      "case_id": "20240714_day1_24h",
+      "feature_matrix_sha256": "0a2345c61be38287c682be01e477280f095fa2f609fc1cc43ee3250085c9aa55",
+      "file": "data/processed/east_coast_development_v1/20240714_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "4cbaaa84bc4f392e75869047b5b8e6c71b9c42f7dfd80b41f321bed712bf3d5a",
+      "sha256": "66348baf3ab6e6a7a1d5f768c05c6e3a72d997fec7f31cabdd72d2e296bd583b"
+    },
+    {
+      "case_id": "20240714_day2_24h",
+      "feature_matrix_sha256": "0b1b29c839871900c3ea5864439fe7d4d76e60c864e5e21f36cf41108b69a5c9",
+      "file": "data/processed/east_coast_development_v1/20240714_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "771f4b5500315f20146ec5417184b168ff9a51bfeaace8fda4d37f8c4dcb5abf",
+      "sha256": "054912f344bbd2ea44888b382dec785a8d7a5389358ca5603a68b006de7f31f9"
+    },
+    {
+      "case_id": "20240714_day3_24h",
+      "feature_matrix_sha256": "ad73986be3a93afed84eef6a45f40b181c051e10db5621f74971446256eb7e52",
+      "file": "data/processed/east_coast_development_v1/20240714_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "f524980badcd5830312ad946093bc984b84afda37329a8f25d51ffb29f36a3aa",
+      "sha256": "d68260dfabfc8a84d2098978285f23a86135391813f2dcd00f645217bbb4aa0c"
+    },
+    {
+      "case_id": "20240715_day3_24h",
+      "feature_matrix_sha256": "7c80a01396b470a2c897454b71aaef0e17174e4c153e0c0f6aaef9ec88ea17c3",
+      "file": "data/processed/east_coast_development_v1/20240715_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "4b2ff153b02cad7514353882bb5681fcc5f82753e9c1803a26b7e2f62a29759a",
+      "sha256": "7f02de63f609b7ad29306229e8dc0d7548ed012e7fdcba15617facff392efdd2"
+    },
+    {
+      "case_id": "20240716_day1_24h",
+      "feature_matrix_sha256": "998cf5ff68f950b8ad0f73fc9e9d558635663c3f54abda2b0c8690c19d5f27dc",
+      "file": "data/processed/east_coast_development_v1/20240716_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "de0edd155a10fed8424e38c874d9477aca666ed922b01f4c570fbebfce607f67",
+      "sha256": "456890ec4c81f2bfce618b56f559e2d76e89f7edb466b7833875fcdbf83efb73"
+    },
+    {
+      "case_id": "20240716_day3_24h",
+      "feature_matrix_sha256": "972e661d38fa9c56a413ad51215225cc70e8d57054a28d1a56e34cd1827a8328",
+      "file": "data/processed/east_coast_development_v1/20240716_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "8b78a38d6b3b47a23dfb678f97e0aa43a1d6e1d265eaa09eb3215f417730b868",
+      "sha256": "8fbf279263fb78e2f2475903944cb8fad19122f436661ec4fd675e528152b0ef"
+    },
+    {
+      "case_id": "20240717_day3_24h",
+      "feature_matrix_sha256": "3a27831a32199c98040710d880fd998e3023a8927ab556312920ee383bad7ba1",
+      "file": "data/processed/east_coast_development_v1/20240717_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "0f4a0112f197abfdc2b3c1fce14798ea5b52b0fddee3e4da8cafbdadf9ba03af",
+      "sha256": "e6b799a7de8da5c860e7dfa6e00c937fb20d8b38716b8ec2e7e2b111c0daa930"
+    },
+    {
+      "case_id": "20240718_day1_24h",
+      "feature_matrix_sha256": "e336e29c764ebca8673c96c3390a682c7b9137d7cef411188cdb6a402a4c0b4f",
+      "file": "data/processed/east_coast_development_v1/20240718_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "a1934d084af7aa11e151c226c323be7bea4576407b49ce2279a75d44a0c9d9bd",
+      "sha256": "d5015c38e20e8a40019e91c06aa1253fdc7c7270a1ee979f6006326f8d45fe26"
+    },
+    {
+      "case_id": "20240718_day2_24h",
+      "feature_matrix_sha256": "00d3dbb116ae4f99803b76e2f7f22b5a8af63bb073802d54c966eedfb9d01f11",
+      "file": "data/processed/east_coast_development_v1/20240718_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "0775edea3f494a9907238307b42723ab3076f6cbd01213917e4434da9b100a03",
+      "sha256": "5e93bc73d8d4dce573727290d8060da239fcda0fecff399c4c7c267814c51a6b"
+    },
+    {
+      "case_id": "20240718_day3_24h",
+      "feature_matrix_sha256": "529ecd5c9b966986d7274bd3707cac25c27fc883832d77d27235afb7e86364fa",
+      "file": "data/processed/east_coast_development_v1/20240718_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "41adb8879f9f4c94f876ceb00932285724d3045be3d3f4eef35327055adead33",
+      "sha256": "57121714576accc4ec871141ef58ad63e776a0b2322c8df3f2a3fa164b803cb9"
+    },
+    {
+      "case_id": "20240719_day2_24h",
+      "feature_matrix_sha256": "e5e7b6813f6ac0ccb4db2de049647acc68d4c22c047eb7cdc1d12c514d2c6d04",
+      "file": "data/processed/east_coast_development_v1/20240719_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "505d74371cb0e2bbe3b4ac531eb7f5cc4fc1af8e244d7c738386546562d89df4",
+      "sha256": "5f606e421b5c744d7796f7e17d8be247de44a8140854812c7100953e1a06e9fd"
+    },
+    {
+      "case_id": "20240719_day3_24h",
+      "feature_matrix_sha256": "d90f899e570ee4e70e3720752aa44db4ad0413b8ab054e95c1a5d44ca57eb906",
+      "file": "data/processed/east_coast_development_v1/20240719_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "0d30ab4abddd9a3db9af562e74d62d0943be9998b4fa63f92e8c25c5089f31ad",
+      "sha256": "12330f09ea7b418e5da9832fb78dfe664a3691e12639594748646836d9018a67"
+    },
+    {
+      "case_id": "20240720_day3_24h",
+      "feature_matrix_sha256": "c3771df2c4c1174d2fee6cde88cad4f88b4a433ea5246c0b3ff6dad7f0bc1bff",
+      "file": "data/processed/east_coast_development_v1/20240720_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3443625c3d5d9f6908ea38e7079aabfdd5600c8d7fe9c9e7ad0ee68ee02d8c14",
+      "sha256": "f84773dd858c8e8c9b6a9a2c9b62eda633985be1c7f5b47d0da100f007b8b8da"
+    },
+    {
+      "case_id": "20240721_day2_24h",
+      "feature_matrix_sha256": "cd03b7a5c2e7e06afc730084b947f64bf6b2a210be83d90cfcb952d1f3e5e7f8",
+      "file": "data/processed/east_coast_development_v1/20240721_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "94ff684ab36aa5853d4682fba910e5fd331c96380b1fde8c543d568640082346",
+      "sha256": "5712a4fed937334dc5410c07c2ce9bd87878c784846534f2d314e2b7ec6aa0b9"
+    },
+    {
+      "case_id": "20240721_day3_24h",
+      "feature_matrix_sha256": "21c6664276290ce3000bdd3ade46925d86400d05d9a67b90bd588f3c14e1f8b1",
+      "file": "data/processed/east_coast_development_v1/20240721_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "71447eb0a104d6ac15a9aba14d5ca36a59491872059ecdaed2935827e2a8b270",
+      "sha256": "ab6560803b74ae3b04caa0b98246ceb30f3da609fd73ecf2d02ed77e1d200a53"
+    },
+    {
+      "case_id": "20240722_day3_24h",
+      "feature_matrix_sha256": "07b1e1c508ed07deaf0ac1eb28982ca13a976b043c84d5da85aeecbf06b89dd0",
+      "file": "data/processed/east_coast_development_v1/20240722_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "8f93cff122f68f5831af9719c8ac76a693fcef233b9b4639b8dabe59b3e4d397",
+      "sha256": "0541bd40d29fea9e22cefa5d33c1b08f49a10b4335fa3d1dd6741904fc6c1f69"
+    },
+    {
+      "case_id": "20240723_day1_24h",
+      "feature_matrix_sha256": "2d1b38ee67a79b0c9bbcc315f01cd3a2e1e7d4cd469b76d3b75b07f0bac7bbaa",
+      "file": "data/processed/east_coast_development_v1/20240723_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "44968afcfc06ac9450fd6c51757a542aa8137484c5ebdd3c344d962a7f190880",
+      "sha256": "ce2fb7ffcd684cf1167ded8510282f5b7269888588458cdae8304883a3ffad83"
+    },
+    {
+      "case_id": "20240723_day2_24h",
+      "feature_matrix_sha256": "a77ed48085d1d5963bfbfa4e5b543cbc089a882d6ff8649712afeef6d1f9a6ce",
+      "file": "data/processed/east_coast_development_v1/20240723_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "d632d7579a3b03829143534bf848617864ca6523f7f046dfc0cf2e088844ee36",
+      "sha256": "d0e39b24bfd072bef94987fc9ee2f91d6c93e7ec34fc3d788eba5ce2bc0d339b"
+    },
+    {
+      "case_id": "20240723_day3_24h",
+      "feature_matrix_sha256": "646a900ee23fdd8759110ce561b1c43fb099cf3c376c765026896522d341e3fb",
+      "file": "data/processed/east_coast_development_v1/20240723_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "a14a3aef090ef20608d554c6f6dc53ac8dd278fb04330f56181a8d7d397d2256",
+      "sha256": "d4ebaecc1b100654aa5311377621c2a85712c67bc2d8f2117514a5f5f7855afd"
+    },
+    {
+      "case_id": "20240724_day2_24h",
+      "feature_matrix_sha256": "a48e47b112c63ca6cc3afc057f9bd9cbc9c7037da6cddd1c8b4c8d8af9bc8a15",
+      "file": "data/processed/east_coast_development_v1/20240724_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "e8575d6db354b13c7ab6a066b5bba647e434f64217b701cff2ebb5f0ceb1b21e",
+      "sha256": "0c27edc08f3c2fe904be40eca4dfc83db97d131b50460fb3f0ea05cb565b1988"
+    },
+    {
+      "case_id": "20240725_day1_24h",
+      "feature_matrix_sha256": "4f00da4e69ea0a454966c55fe816f960c90ed2acb427f6b393e835b2ce564943",
+      "file": "data/processed/east_coast_development_v1/20240725_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "1c81c83842fb30199bebaa7681b07fcc054cc0c3b424824c6d5782c1f916b93e",
+      "sha256": "432fc76dddcaaa7c95d4fb4c2e0151acb5320f51c28b6fe369c0aa433c9c52f0"
+    },
+    {
+      "case_id": "20240725_day2_24h",
+      "feature_matrix_sha256": "0ca60af0cc5c0cc6c71d955f190389c3b7f150a384cc7e42e5a70a1e51f6394f",
+      "file": "data/processed/east_coast_development_v1/20240725_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "d54f12d3502d3a66251739077052ef3a7f5f6a2abff986e5ca3ca5468ba4ecf9",
+      "sha256": "efc802e5396e83cb973ff524c6e0f3efee81391d026dfed3aafb650241350d69"
+    },
+    {
+      "case_id": "20240725_day3_24h",
+      "feature_matrix_sha256": "96a0116b42dedf91c1a6fe72f9dd7e0a5efb49c5e00b0afa1ec2db8fcb7ef8e7",
+      "file": "data/processed/east_coast_development_v1/20240725_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "86f926438a39664ec98e8efd5f07ac9518c6a85fd5c4e7562a0359f0097bca5c",
+      "sha256": "755d6e7c4af1583241dae32413d330f940dbd270e8f07c6da929daf2d064832f"
+    },
+    {
+      "case_id": "20240726_day3_24h",
+      "feature_matrix_sha256": "fc0964e79f3570f27eb5e37a18bf9812f237feef89b197ec68f61cd9ba3fa281",
+      "file": "data/processed/east_coast_development_v1/20240726_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "c033ef9ba110293bb0765aaea088db4d2aa128dae211f19553b0721d3996d777",
+      "sha256": "c6f981ea39017049a1c51fc3c4caab2c348228959f1f4347b2bed4c3ba35d1ff"
+    },
+    {
+      "case_id": "20240727_day2_24h",
+      "feature_matrix_sha256": "0b5fe618ea28a512f7045e98e29cc0c84e44fdc7e64fad3f859e710eb847a712",
+      "file": "data/processed/east_coast_development_v1/20240727_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "a6aa56cc7aebaaccad55f33aa7c90e288f9417a6acaa0b53277fbc036bba8a9f",
+      "sha256": "2b3ab538eb37529e088bb5ea418134971b3297e639d14010ce8e30bae1affb67"
+    },
+    {
+      "case_id": "20240729_day1_24h",
+      "feature_matrix_sha256": "74e6fb43c817ba176a6962fbb44457da0cc67a4bad1fcec2ae6a06c33461ce89",
+      "file": "data/processed/east_coast_development_v1/20240729_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "df5d0c6a1dbed337b732297a0fe03517b5517416271bae0bf9bc06d675480c7a",
+      "sha256": "b2e08e6b1bb964b59db9fbbc3d4a15745ef39de287d533002efdcbfb221caf5f"
+    },
+    {
+      "case_id": "20240730_day3_24h",
+      "feature_matrix_sha256": "0ffe1db28e8bf5423dd60522582d49d7537be075203b429e0ae25df201951487",
+      "file": "data/processed/east_coast_development_v1/20240730_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3cdfec1b149a5d0725f26c68b2b4300d05da2586358487fb10281b4aff191a44",
+      "sha256": "7f2d589bc81a067e76e9f1e223c1b71f1dedce82160313065335c2c79c358353"
+    },
+    {
+      "case_id": "20240731_day2_24h",
+      "feature_matrix_sha256": "2c449ae921bc524bd2eb15ca9289153f368a466e237daff21ccba3c3f7e51585",
+      "file": "data/processed/east_coast_development_v1/20240731_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "f14a9b5fc1cbd405f603bdeeeed8771b617a4e22d01db1c7ae38f0f2089c2b31",
+      "sha256": "156c2d75a044033b1e56679ca187e9687bbcdc069677d4c4125e86fadb686069"
+    },
+    {
+      "case_id": "20240801_day1_24h",
+      "feature_matrix_sha256": "63eb07284d6f1df0879fa063a9eb9eb109b1d1ae501dde071a2f83bebb706cc4",
+      "file": "data/processed/east_coast_development_v1/20240801_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "5171074c0c4472a1e70a19032fb01f2a28442bb8ae54ef11600d036874bfd683",
+      "sha256": "964e760ec74b194f4ac6e9bf9b06cbace2a5c958f3d2b084c81b7e9c882bf4b5"
+    },
+    {
+      "case_id": "20240802_day1_24h",
+      "feature_matrix_sha256": "d24f95f0180eb5be0fa1e7773bf33f60715b3eacb3f13f119bb2ceb9c3efa06a",
+      "file": "data/processed/east_coast_development_v1/20240802_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "b042bb756a5d7ceaf90309f054236051c0dd26b7f97f0deed73a15585250b6ed",
+      "sha256": "8bb2de4e9b641d93a4c76f524e9a0f75472635b3cadf8ab86b55b6bc6fd0cb1c"
+    },
+    {
+      "case_id": "20240803_day3_24h",
+      "feature_matrix_sha256": "5e14ab4a50821a3e2c13d29865331815fced193d937255b9c33feb9594ea55fb",
+      "file": "data/processed/east_coast_development_v1/20240803_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "d0c7bde79b5229c6163ca37a1bbad1c2df9471716d3701472e9cd1c0c9aca737",
+      "sha256": "bd075637f1bcdb1fb96e4ed503a24e037a8e43e848d5537367c9f683d289d96f"
+    },
+    {
+      "case_id": "20240804_day1_24h",
+      "feature_matrix_sha256": "d6a9ee72b74400b6bb34e7ae93db04f2cba8cc67ccbe3a5474a861e878d8083e",
+      "file": "data/processed/east_coast_development_v1/20240804_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "a7beb623af18aa59eb6326e953359f0bdef6153179da9d72284fa293ed9f269c",
+      "sha256": "4797f801884e2bdf1ac78b58ccfe6a6d9a4586ddf89fe2daf5c38c82026fca76"
+    },
+    {
+      "case_id": "20240805_day1_24h",
+      "feature_matrix_sha256": "29343f5ba1ea1ef27b8881d70f2f01e35aa1af7e0cb4ce400acec93ac7188199",
+      "file": "data/processed/east_coast_development_v1/20240805_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "65f693ef0b1e763175422df76a152d0b26c105aaabb9cf5058e39f30e354598e",
+      "sha256": "14980865ddaf474a1fee56d944e5a150e2f3ef4fb1e30aca1e59a0a832ac5bcc"
+    },
+    {
+      "case_id": "20240806_day2_24h",
+      "feature_matrix_sha256": "34f7bd4d5845a1a65aae5fb275a7e2bfe0f3d97eac8801f2ca187b35fbfbdef1",
+      "file": "data/processed/east_coast_development_v1/20240806_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "17eb80df7dd21d2be7b45c5e630af0564e142d0df773b126d7231671741b44d1",
+      "sha256": "f7d13ecdf21e457285b25e335bee5a8d8d4ee64b6411c39bdbb53c85654dce16"
+    },
+    {
+      "case_id": "20240807_day1_24h",
+      "feature_matrix_sha256": "56e3fc6e3def074c881e43f4ac9188fcc1eea347e80ad89fd6e5634e0c746355",
+      "file": "data/processed/east_coast_development_v1/20240807_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "81559fa9cc10848c59ded25fdda18b2dde66ec56fdc46342ecbffcb363df4ffb",
+      "sha256": "b639e63df1d875cb6a5fd65371902f73cf890f29c4da3dcdacf8ecf808359107"
+    },
+    {
+      "case_id": "20240807_day3_24h",
+      "feature_matrix_sha256": "3094a915afbf873cbb6ce1b506274cc3c6ef38cb3cf149dd3d56b9d6686b71f3",
+      "file": "data/processed/east_coast_development_v1/20240807_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "48caeb0f3741b540327102e80720c41dd893e55fe5a68345bf7992aa95f35319",
+      "sha256": "b40d5e1c5a089ef70aa9273cde0110780e0c9a9fc416f9ea7b79291ff189772d"
+    },
+    {
+      "case_id": "20240808_day2_24h",
+      "feature_matrix_sha256": "31cc4579b89df2d81d9d56e7c6462887883f5c85c51ac71e76693bedc7bac102",
+      "file": "data/processed/east_coast_development_v1/20240808_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "d6012923799dfb516b0a919be98ffd3d8d03a2742208a483aa3b5fee0105b813",
+      "sha256": "086237f74dceda809e81062782ab61b89c2322ca5a8a1c79c90901a4ec007e3d"
+    },
+    {
+      "case_id": "20240809_day2_24h",
+      "feature_matrix_sha256": "5e182252e92f819ad95bae7a0344de74dd6ab297a6f10fb8ca807db7566353a7",
+      "file": "data/processed/east_coast_development_v1/20240809_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "a9ab14e0ab8629b013fdaf1420014ec2f21f44e91bbf08bfc0a50be96fa2a465",
+      "sha256": "93b1af78fad9b1d1fe2a8702142861ff91755941f42cf10ff93497c3a2711b23"
+    },
+    {
+      "case_id": "20240809_day3_24h",
+      "feature_matrix_sha256": "81aeea7a5684ce3e0c7cbd07367e412e6bb570d3f334c635a518a4cd2bb1953b",
+      "file": "data/processed/east_coast_development_v1/20240809_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "cad4921cc3a14e7007142ad705a7ca8c157ada2de2b4c5691e6029c8edce4f87",
+      "sha256": "79f101ccfd53e9df5f8d0dcc29c823a45b07b2ffbb5bee9808592c2cdf3dde63"
+    },
+    {
+      "case_id": "20240810_day1_24h",
+      "feature_matrix_sha256": "24b761c2ecb98f3a729a8a78e8d71970fa38a0c6c3f44afea7effb7663380455",
+      "file": "data/processed/east_coast_development_v1/20240810_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "863d0012d15c5ff7efafde6d2a88a0280365af52c027440532b051f75a5d602f",
+      "sha256": "c2c8a8ab9cdb6484498cf8a4b77603a7fd39605f13285df8355b77280d60c322"
+    },
+    {
+      "case_id": "20240810_day3_24h",
+      "feature_matrix_sha256": "7648a09b1b6bacbd4a3e5be9d3646483cdcbc4bf9934399aba986271c046e0c2",
+      "file": "data/processed/east_coast_development_v1/20240810_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "e0176c7d68811484a2c2343ef11cf06ff8e274aa7aef4dc93d958553f8d7964d",
+      "sha256": "2e98383b5840bb69df453968335ae87f8189859c35c7524fa65f78d48bd2b4cd"
+    },
+    {
+      "case_id": "20240811_day1_24h",
+      "feature_matrix_sha256": "034a8d9921b65a920237090461be2b8e332db7f76a387f01c895e351a85b960e",
+      "file": "data/processed/east_coast_development_v1/20240811_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "d7a06d8ccaeeda57b718ca2090f464480dc8d282dda02080baeb875b889c1610",
+      "sha256": "f1f125849096e29765f8a6e3141054fae2d2a8052d4c3f699ad3b921defb603f"
+    },
+    {
+      "case_id": "20240812_day3_24h",
+      "feature_matrix_sha256": "94759b679c83bc1237a3222b5e0686ab9bbf27ca9aa60e8a98ebaf9706d6717a",
+      "file": "data/processed/east_coast_development_v1/20240812_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "ef284be023faf7738d8addae480ff6a9ff8204c653d928acaaec9b6aea145da5",
+      "sha256": "84430a3dd2dacdbfac9d9d9ee951e06e448f4f56770211d80b047853520ee9a4"
+    },
+    {
+      "case_id": "20240813_day2_24h",
+      "feature_matrix_sha256": "c2931ea87275e792ac227cb0fa6bce817a6bbbd8c73d312eaf43600311c55976",
+      "file": "data/processed/east_coast_development_v1/20240813_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "da8df1954cddb9228d733e83b2580805df8d973122e75bda84dab746c76c8db2",
+      "sha256": "da48eb7055467d6424d68c6d7daed38b2cf8a5b15b12f8e9feb861e20b64d068"
+    },
+    {
+      "case_id": "20240814_day3_24h",
+      "feature_matrix_sha256": "07657e4ad10fbddf85cc2b68e755de99bd767c73afd8b75287ab3e12ee0d6a18",
+      "file": "data/processed/east_coast_development_v1/20240814_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "952d1ebf8c26fdf42b58a833747adc7b857f449a458034d31fb20fbe62f9dc11",
+      "sha256": "2da2366b1bf16bcb6d56943bc16119564f6b6e15003af1a2c58e6270d66aadf3"
+    },
+    {
+      "case_id": "20240815_day2_24h",
+      "feature_matrix_sha256": "dc98c6bff34517a406c794ec19616e82c0db1972426e0d2908dbb460bae36bea",
+      "file": "data/processed/east_coast_development_v1/20240815_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "07a160f65d92851edd830af0105242bcd03e67ab348ef2aff70068f85d207037",
+      "sha256": "bbcd53f022f0e69f5c0f085749b08e438d055832be64d1758f40f013e8718de4"
+    },
+    {
+      "case_id": "20240816_day2_24h",
+      "feature_matrix_sha256": "ce652ed5f2cf28a28fe908432ca16c9689c435a141a0babd89942eddcb041e38",
+      "file": "data/processed/east_coast_development_v1/20240816_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "555235966bf73b5484fda05366e06a2eaefead02ccf574038c609075ea69ab6f",
+      "sha256": "8200fb012663f6025dd7123daf305d69f9d086f59666703e9488a5cffc20fefe"
+    },
+    {
+      "case_id": "20240817_day1_24h",
+      "feature_matrix_sha256": "3a56d385f486312964e8eb472b2660d34d9bad30f3c299f0b79a8da316aaef32",
+      "file": "data/processed/east_coast_development_v1/20240817_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "865c8eba26cf299a785faecbf48f2fb516f30a5b7dc9d4b57a7b337f45fbee6c",
+      "sha256": "e85f54f027f96eddbc6c0b2b4e6048f865c0f50b13c3f0b6495237ac8633e7f4"
+    },
+    {
+      "case_id": "20240817_day3_24h",
+      "feature_matrix_sha256": "483fbe4500ea6c04cf648338205f788c09c996ccca1e5ec7cd47b3605feee7c2",
+      "file": "data/processed/east_coast_development_v1/20240817_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "32ba080294ac39d3bfd755ca3a8b37620ec988d6bd4b0fcdec8e9de96f0d4ebc",
+      "sha256": "7a64056409e8ea47ce98da8362345dac7c9342286f1af6109ff838f7d6fcf2c9"
+    },
+    {
+      "case_id": "20240818_day3_24h",
+      "feature_matrix_sha256": "0ee244b628916a04af9b777c0d670dc46181faafd4d614c676633b60a669f17a",
+      "file": "data/processed/east_coast_development_v1/20240818_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "b2ad965c453c45578c7464da3372c8c7869481dc16b08a5f72238dca124fbf40",
+      "sha256": "6afa694e70c3737e3a5dfb8ec8ab5d2aff088add4d83847104ed7844f20a4d64"
+    },
+    {
+      "case_id": "20240819_day2_24h",
+      "feature_matrix_sha256": "f45632ed09e4eb92de2060bdb4876fd0aa232a4471565f5101737cf23c207d1e",
+      "file": "data/processed/east_coast_development_v1/20240819_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "52b8e2d9a6ef812e8804d6f5b4cbde2c35a50ce8e030a385346fedad249a2dbd",
+      "sha256": "7dd548992c53eff8f1b060355180f91e39dd223ff79129c166be66acba375dd1"
+    },
+    {
+      "case_id": "20240819_day3_24h",
+      "feature_matrix_sha256": "a8bc8287a6a4a12dbc0045a00f64e947450161874beb9a25c1a4ece018965a30",
+      "file": "data/processed/east_coast_development_v1/20240819_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3dc69663a951bf7d5038912c4902731a083da249d10da1d27ebda508eb09ca2b",
+      "sha256": "56cf52b5e5aff6e5472cdaebe03da9195dc0dde0a06565cb598cc4bc02c30799"
+    },
+    {
+      "case_id": "20240821_day3_24h",
+      "feature_matrix_sha256": "9a02cfdf1ccc511df3e3e7fd9db768456d597657dbcdaf1a388863d86dbbdc5a",
+      "file": "data/processed/east_coast_development_v1/20240821_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "61e97cb3566da1fd176604495dc350dea0aca6219a541f41ee251dc0128bfe27",
+      "sha256": "0d80831e8713e819e449f54f32d6e7ce91073a349a3b41bc13f23989b6c879eb"
+    },
+    {
+      "case_id": "20240822_day1_24h",
+      "feature_matrix_sha256": "c9b3f3d70cd4bb40fc46f7239bffaaf590dc0d6ab0daa280d0a97ad9c8b24812",
+      "file": "data/processed/east_coast_development_v1/20240822_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "634e02cc1d7650924f22f6a9deca9f57716ab6475b37e8f967994e989d0fd3e5",
+      "sha256": "259398a467fe9137ef82f0b7de0e68b0d567f5417f52c4dd60574a15ff6a828f"
+    },
+    {
+      "case_id": "20240822_day2_24h",
+      "feature_matrix_sha256": "5039dfcc92e2b014082fdad40f1041a45d25b71f32518d13093db87a409ffd5a",
+      "file": "data/processed/east_coast_development_v1/20240822_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "6dee90f22211d9df002c62ebdd80e2e7a3539c1eb8983cc95d0d0525e48e9bfe",
+      "sha256": "7b75927aacf1c8c98f8a0da1b69c45e24f488bc8456368a5d3c178f47395b365"
+    },
+    {
+      "case_id": "20240822_day3_24h",
+      "feature_matrix_sha256": "f945103dd756ff09109879beba8fcab76a810abcde9b851d1ceeb5d16f7c71ce",
+      "file": "data/processed/east_coast_development_v1/20240822_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "006c419434e29275fb6123edf5789b00cbbee6ec82796d1fdf1cdc392a72f1ee",
+      "sha256": "df1a5919ffc679c3f0384d30b40efd02d98b29efd095fd260f8e01d8308817be"
+    },
+    {
+      "case_id": "20240823_day3_24h",
+      "feature_matrix_sha256": "c83081bd171400f15d05d3096f7904bf82f5b5096efb268bff72f77cd4b40767",
+      "file": "data/processed/east_coast_development_v1/20240823_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "830e7d4ded932dd85b5fd06cea3ddd6c30eeb25de7d4886264007e3fc451b0a2",
+      "sha256": "e8fc7e814c84ac88a5f77d3ab7cd38da80defb7c756b0c9222cab6a4f4afa716"
+    },
+    {
+      "case_id": "20240825_day3_24h",
+      "feature_matrix_sha256": "366417e72786a373511494ae3348fce0fdbbd4546418c2d0dc881251120b9420",
+      "file": "data/processed/east_coast_development_v1/20240825_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "528536697157bd697384f53f615fd7916c2a61ba9993ca8a85ed8255ae7291cb",
+      "sha256": "5de4942b493bb96d1a68e136a854c69b2d517eeb98d441b935b620aecf33371a"
+    },
+    {
+      "case_id": "20240826_day2_24h",
+      "feature_matrix_sha256": "180c30c460f06d910554cda59d064d4afa373bc112fcd8e5b6ea5d0915425cdb",
+      "file": "data/processed/east_coast_development_v1/20240826_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "d879db7ccfff2aab8f3baacd5b1408ed922d7f2cee13fbbf7ac21839a98a7b97",
+      "sha256": "c42655f9cad9aadd8ffdfca20df5e8d96b104c76fde7c36d9c5e85462f18957e"
+    },
+    {
+      "case_id": "20240826_day3_24h",
+      "feature_matrix_sha256": "e27cf225db83353958aa54b5992aba85454616836da0dc43e3f94d4407bb866f",
+      "file": "data/processed/east_coast_development_v1/20240826_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "aefbd41783069645229b010d89b4e3602bf6d99c8600d07e272ff0b74dcd4713",
+      "sha256": "df058c45bd29a712bafd36c3a5c11075710cf498af03330703d544e0b480dda0"
+    },
+    {
+      "case_id": "20240827_day1_24h",
+      "feature_matrix_sha256": "49a4fc337ab8d4a1120e55dde3b2c86899c570ef1461f54a53f0be58f346ed71",
+      "file": "data/processed/east_coast_development_v1/20240827_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "cbb82cc8779ad4da584b6c4c9246552230507ba378050c06e48d86d19ce87b50",
+      "sha256": "f88380b0c2c7fb1d765b24b7ee30ec12362dca1fe21d540de6dd848a3ede945e"
+    },
+    {
+      "case_id": "20240827_day2_24h",
+      "feature_matrix_sha256": "90ed9a2a503f1362ae11f64388f4a781cd5e2e1c186444f6a4b095c1c2d1935c",
+      "file": "data/processed/east_coast_development_v1/20240827_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "70f44e935d7107373fe5ebde2ff6380f5caa81d47bd857820fb9861ef0447d0b",
+      "sha256": "e926907111a1adc29da8553f43ae5cde16394570363053dbb1cefddee7bdbca1"
+    },
+    {
+      "case_id": "20240830_day3_24h",
+      "feature_matrix_sha256": "43a12a7aad8862c284102b8321e653e1dd9f21e14bc7a5d14d77df87806eaca3",
+      "file": "data/processed/east_coast_development_v1/20240830_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "96b5b81507c437bb63011faeacbedaa58d236432c3b138cf9570cbb9fc933a71",
+      "sha256": "7184a64266f799ed5afaf2aba19a60e1848b6a5cd85e7d3c23247f8719d454fb"
+    },
+    {
+      "case_id": "20240901_day3_24h",
+      "feature_matrix_sha256": "312bc87ad2b2e384868a140d1f60ff1c80af3c7f4ff03611099040b5fa9e011f",
+      "file": "data/processed/east_coast_development_v1/20240901_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "470508385cd105568b38e4d86f61a7df1414bb84af097d34744289060ebdb18e",
+      "sha256": "ec3c4c06fbc390fa4cf7472a868a35a3e477a36c2964a8c7a2eac605a01601de"
+    },
+    {
+      "case_id": "20240902_day3_24h",
+      "feature_matrix_sha256": "a9535d0cd03886e7a2735138c38b2ff8fd72a3b4b413ff07cc688fc8b21846e1",
+      "file": "data/processed/east_coast_development_v1/20240902_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3268deb4a87ce32500de63c18fb7f637abd257a9d7e7697ed0410524ea87c0d8",
+      "sha256": "e98668662b36b27c7e67285e8f901fecc45041da82670524f92b8cf49e956d76"
+    },
+    {
+      "case_id": "20240903_day2_24h",
+      "feature_matrix_sha256": "5b54a2cf72b0b801f5b277195b3c652f853e55ec7e92b17d8019133c62782fcd",
+      "file": "data/processed/east_coast_development_v1/20240903_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "fe90a9abe32f7912ec9fcf53c32e343d770461e01566df7e6844683d8e129c37",
+      "sha256": "5f7b511b00bb5dd1380529dc617d5a152f24b7571ca0128b4d037efb5878ef42"
+    },
+    {
+      "case_id": "20240903_day3_24h",
+      "feature_matrix_sha256": "12b638630c7adf717b0c6a7998153783f729c8ef0f92935bc5db95a034384727",
+      "file": "data/processed/east_coast_development_v1/20240903_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "c3c333b12fd6f6f59e0ea6c64eb03318efce4014683c5a98eedad78586baca0e",
+      "sha256": "388deb9b6a5b6311c9be1c42acc42451caec2b87bd473e0dbc2d720665cc0870"
+    },
+    {
+      "case_id": "20240904_day3_24h",
+      "feature_matrix_sha256": "320a80951d5acc0fb2318527ca7948a8406895b14590f8c8b77dc87ab7a19ce6",
+      "file": "data/processed/east_coast_development_v1/20240904_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "87aa1aa9dba6cac3db06f739c82c2a626bfdf26614680828c6b792425730e21c",
+      "sha256": "f52ebff9c783a2a8dfbaeef8937a5421d7e031f618ea8838c107057d6d62d79f"
+    },
+    {
+      "case_id": "20240906_day2_24h",
+      "feature_matrix_sha256": "6b2f219f180b1485b9114a137e74d39bafa859c218868813c09ad792b3968c89",
+      "file": "data/processed/east_coast_development_v1/20240906_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "623476349e4e0d60bff0c2433aa65446607aa671fd92e1073ae1e7cde57bd85c",
+      "sha256": "17304f294516151daad3bf600c6e711c0a79072a53240a0604136fcfc2815c5f"
+    },
+    {
+      "case_id": "20240906_day3_24h",
+      "feature_matrix_sha256": "c33c35666ee2614bae82a9dc280c1b1648ef4ceb23a5dd6538359ccc9288e95c",
+      "file": "data/processed/east_coast_development_v1/20240906_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "ae4c86d0153ad8cf22aea2324a12b9b0439674d9a4ee3e3f3102bc34922ebdc3",
+      "sha256": "8a493ed90a32539494f63fd31b8304d96ecb1272e9eb1a9d11030c90bef0c565"
+    },
+    {
+      "case_id": "20240907_day1_24h",
+      "feature_matrix_sha256": "4359dbcc5da552475475d0fb368e038b005f5fdbd52bdbe7f5f3913534333b3b",
+      "file": "data/processed/east_coast_development_v1/20240907_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "c05cd55a3737ed3efe92bdb82eb0ff10934d21fc6196ca2d25f43bf7082e00de",
+      "sha256": "24df81e4c5ee6ca48a8467e81453ea893ab10659f9fbe28c7a1262daa8cc7911"
+    },
+    {
+      "case_id": "20240908_day2_24h",
+      "feature_matrix_sha256": "041c82453c76e59dd06fbfbe7cdb8576f439551a1831e1a940ce9342395c097f",
+      "file": "data/processed/east_coast_development_v1/20240908_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "fbb487c67169b45b746a7a059fc82fb7e4bed735eb0a08c9fa7faacec83c20f2",
+      "sha256": "7054023a479ba6c238340294bbdc495e31f46f0ecc527bb5bcb81b5827cf9848"
+    },
+    {
+      "case_id": "20240908_day3_24h",
+      "feature_matrix_sha256": "f056a1939104775fcd8e4ea879c2425a4964d201cf8d79f0a7d9ab461d0962cd",
+      "file": "data/processed/east_coast_development_v1/20240908_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "39377ebc6d9e4ba63c19830dd2b96390313e9c6af5ff1c7d89eb83c40925695f",
+      "sha256": "3e1ae118c849c7286aa083d8fea5a654b85748ae7b1d7f54ebea515754baeafe"
+    },
+    {
+      "case_id": "20240909_day2_24h",
+      "feature_matrix_sha256": "a80aef7bdaf640c76c7a1a4e70d104c93331135b13eed2fa63d2931792439e22",
+      "file": "data/processed/east_coast_development_v1/20240909_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "4a3b62920cb3285197cd84b143b9ca87b6dab8710f9bf2f8d43c0ec347cd43c1",
+      "sha256": "9156dc337c01b54cd1c58beaa19ecdb6499c15343652bc095d75ded1e00fdb29"
+    },
+    {
+      "case_id": "20240910_day2_24h",
+      "feature_matrix_sha256": "839300fd2ad69ea925c3dd16abb14064f9d5fd44691e67bc049725c5d68ff13e",
+      "file": "data/processed/east_coast_development_v1/20240910_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "55ff703269de4b89ae5f61cedec7cd4c58839203a45a44335fc5328c2ef98ab5",
+      "sha256": "db29aeb1c15fe70ae2fb65e95e19dd27f6dca8360d315fdf1aca488770378a63"
+    },
+    {
+      "case_id": "20240910_day3_24h",
+      "feature_matrix_sha256": "ace453a9a3a329b192faa46cb3b1f2a53a7f4749d144a5a27fc47c1feabf1844",
+      "file": "data/processed/east_coast_development_v1/20240910_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "fc6e86155598ea916d509d45b443ee4928083c1ae40754b2940c302f8b40968e",
+      "sha256": "9ea831d3390e1ca0e869852127ece1a65b7485b12d0e935c83987fa7aeda1b22"
+    },
+    {
+      "case_id": "20240911_day2_24h",
+      "feature_matrix_sha256": "968d16997a8f29803da199e029552a1e16fbd5bb28778d07b4cf1d551e243b55",
+      "file": "data/processed/east_coast_development_v1/20240911_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "83902607767825a251fb790d03eecd85046cd7003e08c5fdd05ff0a7c40337f2",
+      "sha256": "3783d97aba67fbdba31d3e8618fb819cbb2972ac7686159f01b06a02363d8d9a"
+    },
+    {
+      "case_id": "20240911_day3_24h",
+      "feature_matrix_sha256": "c371eba6e6e47f1f95bf4f3471fc48ff9ce620563438ef9b1a33301a01fb0cfd",
+      "file": "data/processed/east_coast_development_v1/20240911_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "4f4ef2055c271ceef717f17990d5f47bbef1f5f1ec8e86d4c7e772e0d7554bcd",
+      "sha256": "a225c0dde559db257535ed9b72b28f93729956f37bb9cf7d3a0a5a6844f47ef1"
+    },
+    {
+      "case_id": "20240912_day2_24h",
+      "feature_matrix_sha256": "68557163d9237884d3ffb36e050ba65c1e2e5b4d29afae2d9fa8ac1ee76522d9",
+      "file": "data/processed/east_coast_development_v1/20240912_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "a0fb96ce77f501eab2c12e9f2b68ce2029b5c13534c4974cfdca2ab5ce97b356",
+      "sha256": "40a65db53bbac6b2db07ef2d0165e45b9becda3830ffbf7c8f99a1ea62a148c6"
+    },
+    {
+      "case_id": "20240913_day1_24h",
+      "feature_matrix_sha256": "a628d5d9efe90c2a2adb91e9a002be7f2b95c2f48e265184d7a76c7f129b0bd1",
+      "file": "data/processed/east_coast_development_v1/20240913_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "4aff5f561692236d0ea9c18913125b071609bb9aee949db8593965f79d25e023",
+      "sha256": "b6adda5bef4bec670a8713f5224f2930685b227e908c2f887f8275b4eb622dbc"
+    },
+    {
+      "case_id": "20240913_day2_24h",
+      "feature_matrix_sha256": "d0685208e9f7c32129fa22dee5393523955d3e8daed667dc7889a43ed59f3992",
+      "file": "data/processed/east_coast_development_v1/20240913_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "fcdc43a1c6f1dd43f9d83474c0f4cd9394b41200363770b19959ad15b015abb5",
+      "sha256": "30ebc355995347e2ee0088897396a7396d633cedafe27ec2dd07c921e3a24249"
+    },
+    {
+      "case_id": "20240914_day1_24h",
+      "feature_matrix_sha256": "6823e8e1ed29a4627e29b97755a748de87dc0ea5e6bf775e24c0d92809b86d12",
+      "file": "data/processed/east_coast_development_v1/20240914_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "b6b87f4ae84734e073d644d897341ea0b7b48d559fbcd0a69b53bea239240955",
+      "sha256": "73b549f6d9a7625163fc23b76a7f171573a6c6c51b1f00efe32634dff7c9a8f6"
+    },
+    {
+      "case_id": "20240914_day2_24h",
+      "feature_matrix_sha256": "857ad5406a6f9e9b498d1bd9fb662125ed9be5b2a3bed6f784935b3739201349",
+      "file": "data/processed/east_coast_development_v1/20240914_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "b25a339c2a4e660f7147ab9e7b13e1db058d05580e7a68c2e93fafc8a00ec57c",
+      "sha256": "ae095e79e03fd9ba24a88dcf29614f18ff48bc5806b1404d37de2869aec55b80"
+    },
+    {
+      "case_id": "20240917_day1_24h",
+      "feature_matrix_sha256": "bdecb2250711ddac9e04d87cf400788087d3a13b9a561725ba069a3a859d50bb",
+      "file": "data/processed/east_coast_development_v1/20240917_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "aeac3c251061772601ead7b8f9125a30aa3f6c20ead799309b41ad5290194d66",
+      "sha256": "4626fba947d16d27cd31e1c4be94322b11ea9be69eb313e6e17db33f7e800fb6"
+    },
+    {
+      "case_id": "20240917_day3_24h",
+      "feature_matrix_sha256": "2ce7d886f8296c63714c27dc3c7ee59fb8d1e0f6b3c4fdd918a07b9d1da49042",
+      "file": "data/processed/east_coast_development_v1/20240917_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "114362cc65a9e601c78de416b881706746f6ae8bb87e7ed2cf2e7ad92cae85f4",
+      "sha256": "b58c44c10412be906509e453939054c38400eb9df44e947cb10ea8b513fc6dfa"
+    },
+    {
+      "case_id": "20240918_day1_24h",
+      "feature_matrix_sha256": "bef4d6e537ab96f6b5e96382a61f70acf860bca0280c39c037be4bc408c8ecf5",
+      "file": "data/processed/east_coast_development_v1/20240918_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "2225b533427867a05443307c29ba5ea363579c02b2bc79d10a2c54636e11ee69",
+      "sha256": "65ba35190dd32ce0fa99d5963a0adf33375c1b6f0a7cb3c9b3fcd43a16ab6a2d"
+    },
+    {
+      "case_id": "20240918_day2_24h",
+      "feature_matrix_sha256": "380d2d25b1bf7917f257a3f30310df4f8e2ecd71cba303feb88476ad376100f7",
+      "file": "data/processed/east_coast_development_v1/20240918_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "d702e10ea7633c2b1b6798066255091c0421fa55f7cccc63fb4b76f23976b827",
+      "sha256": "70fdbb484762176024a09394a62086afc2fe9728443358c5e52eda9ecf69cdd4"
+    },
+    {
+      "case_id": "20240919_day1_24h",
+      "feature_matrix_sha256": "4ff73956b7a1cf2a9f9aeb0ba992b35f0540430943ed3349f6a60dcd36f15350",
+      "file": "data/processed/east_coast_development_v1/20240919_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "31a0195da73b6a82776d01022981081b69a19de1436b818f27bbe17dafb7e365",
+      "sha256": "5d880ad8126c05c45e17160bdfac0a5c6908ce092e4ef951bbeae706ecb54d95"
+    },
+    {
+      "case_id": "20240919_day3_24h",
+      "feature_matrix_sha256": "73cbac056145c8990d075c00d4e2b16c03fcc3ffb6432391c1c360d306792cf4",
+      "file": "data/processed/east_coast_development_v1/20240919_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "a6d9aad6bbb487a443b7091266216f47d6e0539bd0c4dda8b5ad8247c7d641d2",
+      "sha256": "fdef87f683782a870630d861da846f289fc7a1628b4831b7a3545d3cf413ecac"
+    },
+    {
+      "case_id": "20240920_day2_24h",
+      "feature_matrix_sha256": "93ba878ed2eebf24adae99310c1150d46afdb2fd47c265cba45a1d5e35874fa7",
+      "file": "data/processed/east_coast_development_v1/20240920_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "bc883d95a1ed5e30f48f875c5abc7c5c0fea7d23c5338b4311c486dbcdcbb662",
+      "sha256": "81351f9ac0cb0a5822853a61deb02fb2494d9c6d84f3766c630fbfabfaac2edc"
+    },
+    {
+      "case_id": "20240920_day3_24h",
+      "feature_matrix_sha256": "d4d4075a08afc1f1d741af18aca252e9e3868d0973dd74a2d0911fcaa0e1bcf6",
+      "file": "data/processed/east_coast_development_v1/20240920_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "c7562464e8063adcc6b320869248c3289db4bf4cf101fbe001645349446b8bdb",
+      "sha256": "75dcc44eddcc1fa94fedfa57d512cf4305395b15cf9102a5a39931ea73cfeaf6"
+    },
+    {
+      "case_id": "20240921_day2_24h",
+      "feature_matrix_sha256": "30ba405d2f65ddb8bd1702e660a720599522a6aff5f0ad7de55a92dc0ab41f61",
+      "file": "data/processed/east_coast_development_v1/20240921_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "5712ef14d9197fd23a50853f2a1828d7ad6015a39d80557cd22f6b1cddc12a5c",
+      "sha256": "3be95bf73bd493633d5967956101eda3a1b6cbf63b6daa0d8ccbbdffc45d6a94"
+    },
+    {
+      "case_id": "20240921_day3_24h",
+      "feature_matrix_sha256": "663b9188ff09d90b5e5b288b4ad9daa8a34851c463cd631eea74f0c86566ea2b",
+      "file": "data/processed/east_coast_development_v1/20240921_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3714574f6440673c6e52f02c30cf61cb7752146d9ffc3909548c7c7fa16a5620",
+      "sha256": "5c75549ead3a65fbd1a51d2711d74e3e3906b3fc318d945419cc07bb481b85dc"
+    },
+    {
+      "case_id": "20240922_day1_24h",
+      "feature_matrix_sha256": "5584f0fce3f94e632e836e17fb704aab571bba609e74e4505cb990aaf5902c03",
+      "file": "data/processed/east_coast_development_v1/20240922_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "9289c10a1358e42cde26a6786c7a3ca9f345eba692f75ae98ee0cbd718048e93",
+      "sha256": "6ae494208dc818922c85c437d79bd7053f30f326f8c0c4d916873f78d7b4cd96"
+    },
+    {
+      "case_id": "20240922_day2_24h",
+      "feature_matrix_sha256": "2757aabf8d85d48b57cfeec49da02a18d080b87e8373b17f90084b5344313c56",
+      "file": "data/processed/east_coast_development_v1/20240922_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "dac377dffb2e69cb203285e1d443e4cd392fdd39ad67bfd4d88433465ea9e803",
+      "sha256": "e6d06f342a9184bd72d3dfbe5623a8f2827987ecad859467ea1a36f98c359a25"
+    },
+    {
+      "case_id": "20240923_day2_24h",
+      "feature_matrix_sha256": "202e01bdb7fdd1819a1b8e2b7dd79c390c61c6e23baa5bda3d06f3d89a37e6b7",
+      "file": "data/processed/east_coast_development_v1/20240923_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "547af61d28178bf456f457262ca0be523a123f7654428ea8e46624d76f4d1cb2",
+      "sha256": "2027595cb12d3ac68c1325c6f60d1d64eb6ec6293d26dd51b4754528ea541800"
+    },
+    {
+      "case_id": "20240923_day3_24h",
+      "feature_matrix_sha256": "227805578141ef7af96ac98c45eca9d3ae5e60eb275eccada41e3b1d18f369cc",
+      "file": "data/processed/east_coast_development_v1/20240923_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "01deabf36064ca2b76b922f05ba0ad96bd7d0d56ead88ae301f0528093290230",
+      "sha256": "d0b115497d91333994ba157001b8a5b6cd6eab176136c6f747608a77be9241ab"
+    },
+    {
+      "case_id": "20240924_day2_24h",
+      "feature_matrix_sha256": "18b7871d9f3246d2cad1e3b8c157cf8bb327e8633128ab7b9dea610371a77ee4",
+      "file": "data/processed/east_coast_development_v1/20240924_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "bb671ac655092e3ac2ab9a6321c86185864e327fb355179012bea90ce982260b",
+      "sha256": "dd6a8757284c7a44bd099387cda009e0b00ec3610a48019d086fd58619137356"
+    },
+    {
+      "case_id": "20240924_day3_24h",
+      "feature_matrix_sha256": "99b1e03cebdf073b0a6813d70fa28012e1716eaa169e375d33682faac718cb69",
+      "file": "data/processed/east_coast_development_v1/20240924_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "1d6df207758c8fee4b7e9fae83d6e5bcb01e475541a0ad32900dd5f21d31ed14",
+      "sha256": "9bb6335867a3a3e6e4149899166255c2998bfe671b2a64420ed2a7edc6ce5335"
+    },
+    {
+      "case_id": "20240927_day1_24h",
+      "feature_matrix_sha256": "99a3ad797225d7229f71be1f406b20934d7233e069a6f0af9c79f96f54539701",
+      "file": "data/processed/east_coast_development_v1/20240927_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "6473883a57bfd2e6f1c5b94b98911af463f9c36d22a6ddf9091baa0af6afbb2e",
+      "sha256": "5e881774e145f37b3e2a7cda2aece91a479b91704e58a1e75fc7a5932fc7c6dc"
+    },
+    {
+      "case_id": "20240928_day1_24h",
+      "feature_matrix_sha256": "4655ace07d2a32e8380d742881b8c4c845e954095bae54d25c5c5e98c67cf0e5",
+      "file": "data/processed/east_coast_development_v1/20240928_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "4953a4fbc9d8c5175e3439418b118d3cd9c895fbc9ed27f915e2ac345ea25d8a",
+      "sha256": "188282e226d80e43c26ae3dcc2153dba7886d8031c775c79567f73c423c432c7"
+    },
+    {
+      "case_id": "20240928_day3_24h",
+      "feature_matrix_sha256": "c645d30d25a1e0c7e8b0a7f8460009172abbe27bcd3f4cbe7d13b723051d0c15",
+      "file": "data/processed/east_coast_development_v1/20240928_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "8eaa8a9391d153498eb97f7be74a324be08fa23c6436a481cc0a90a6f8238b31",
+      "sha256": "e0d0a7dfe8b2618459b2a5bba0f42e78e77f40f4be08864de1b15791146ff5f2"
+    },
+    {
+      "case_id": "20240929_day3_24h",
+      "feature_matrix_sha256": "a2415b020c0eccf10bc3db77caa3663065b86ac103fb39e9cda515ca59eb654c",
+      "file": "data/processed/east_coast_development_v1/20240929_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "f1fc2517ebe8ef666d1f88d25ec9e482fd9318bd047d6e0100099b1b930be140",
+      "sha256": "c106898e46288b049d0b566286c80b7a1a36904e25fc6608b1c1185c33fc9efe"
+    },
+    {
+      "case_id": "20240930_day1_24h",
+      "feature_matrix_sha256": "f0f77c3e6c22790781392d5cd1bc015899ea1baf7448587da521053bb5f9021c",
+      "file": "data/processed/east_coast_development_v1/20240930_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "beebfecc75d917a0dbd90559af803da373c851c22c32d656438def1e45e866ac",
+      "sha256": "6353eb730163065c45ea6b4c4565a5b33cca5773b867774e654fbb48ee616f9c"
+    },
+    {
+      "case_id": "20240930_day2_24h",
+      "feature_matrix_sha256": "9b0e1bcf08d7a723e7ef07de7d81439c0461ba86fdb3616955afcf98934516cc",
+      "file": "data/processed/east_coast_development_v1/20240930_day2_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 48,
+      "raw_sha256": "712b35ec82e83752b668fb484953b375b8a0cf6441b0da9ab7f38491ee056477",
+      "sha256": "cd4fb254743c5366daad0f5435d40863b62b95b35191b2cb76482550d6749ff7"
+    },
+    {
+      "case_id": "20240930_day3_24h",
+      "feature_matrix_sha256": "e4786c821a970862c1b4032ddc2df64bc298b65d861d6a58e04069a12d1517b7",
+      "file": "data/processed/east_coast_development_v1/20240930_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "15fcae6e3918798bf1ec4f3e175ba2044f00b31274dab17460abaa1a78a42144",
+      "sha256": "a80c2bf09f030be76db51cb5d164f672cec8d809afaedf12f225300ed26164b5"
+    },
+    {
+      "case_id": "20241001_day1_24h",
+      "feature_matrix_sha256": "a540e2e23f2e724fbc78b72b5688e2a13b1c13bd3a2c5bee54bc3658ae3edfc6",
+      "file": "data/processed/east_coast_development_v1/20241001_day1_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 24,
+      "raw_sha256": "3f01363523d5a28ecfe4f4488d3f04dd96dcf5d39b6dfbd5b1744f1c2fee31c9",
+      "sha256": "170115f2faa521637cf2e290c63dc144d639e8be628b50d7dd28ccfc79ca790a"
+    },
+    {
+      "case_id": "20241001_day3_24h",
+      "feature_matrix_sha256": "ce91ab94da625959e5e2333ad7135c79e07f541f0c6aa96bf625e1f19f6e94cb",
+      "file": "data/processed/east_coast_development_v1/20241001_day3_24h.npy",
+      "forecast_valid_cells": 508,
+      "lead_hours": 72,
+      "raw_sha256": "3bf59bda7acc36d7e8f936b5ab982a68b20386d654e7f129a4f4d7d40d104cb7",
+      "sha256": "29e01f7c0a68a635a8f1e48832669a662df2855d8a53b0b4384a46dea82bc52e"
+    }
+  ],
+  "independent_skill_claim": false,
+  "model_path": "data/processed/east_coast_development_v1/stage_global_xgb.json",
+  "model_sha256": "96e4462a794ede1f4764958ca01219f6c9ac9427044d6d3793e6db6c96e02199",
+  "model_training_domain": "EAST_COAST_PENINSULA",
+  "protocol_sha256": "6849d31ec0412a1e90025d91aa2cf983a336b022e8a97ddd849fc00026951dcb",
+  "schema": "varshasetu-east-coast-fit-seal-v1",
+  "status": "2024_PREDICTIONS_SEALED_BEFORE_2024_OBSERVATION_READ"
+}

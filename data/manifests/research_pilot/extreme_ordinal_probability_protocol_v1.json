@@ -1,0 +1,22 @@
+{
+  "schema": "varshasetu-extreme-ordinal-probability-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "PRESPECIFIED_BEFORE_ORDINAL_FIT_OR_SELECTION_SCORE",
+  "scope": "Consumed 2024 Track B development only; no 2025 or 2026 value access",
+  "population": "All 183 Phase 4I 2024 paired 24-hour cases, 238083 cells, original case and pixel order; same-case and same-cell comparisons on the frozen chronological calibration, 7-case purge, and later selection blocks",
+  "inputs": "Hash-verified 2023-trained selected logistic base-score arrays for heavy and very heavy, Phase 4G 2024 nested IMD labels, Phase 4I split/case ledger, previously sealed frozen and pooled projected controls",
+  "thresholds_mm_24h_inclusive": {"heavy": 64.5, "very_heavy": 115.6},
+  "fixed_warning_cutoffs": {"heavy": 0.10, "very_heavy": 0.05},
+  "climatology_2023": {"heavy": 0.018643351268255188, "very_heavy": 0.004738662567255957},
+  "fit": "On early 2024 calibration cases only, fit unweighted LogisticRegression(C=0.1, solver=lbfgs, max_iter=500, random_state=26080): heavy event on clipped heavy-base logit; conditional very-heavy event among observed heavy cells on clipped very-heavy-base logit. No lead/month terms, sampling, class weighting, hyperparameter search, threshold tuning or refit after scoring. Forecast p(VH)=p(H)*p(VH|H).",
+  "support_gate": "At least 100 very-heavy positive calibration cells and 20 very-heavy event-bearing calibration cases; report heavy and very-heavy counts by case and lead, and reject nonnested labels.",
+  "control_arms": ["frozen separate isotonic outputs with the previously sealed symmetric nested projection", "previously sealed pooled logistic outputs with the same nested projection"],
+  "prediction_seal": "Hash-seal model, source hashes and all 2024 arm predictions before loading purge/selection label values; no rerun may overwrite the seal.",
+  "primary_comparison": "On identical later-selection cells, ordinal minus frozen projected very-heavy Brier. Report heavy and joint Brier differences; 2023 fixed-climatology BSS; ten fixed [0,0.1,...,1] reliability bins; event counts and event-bearing cases; mean probability and forecast/observed warning-frequency ratio at unchanged 0.10 heavy and 0.05 very-heavy cutoffs; CSI/POD/FAR/ETS. Show calibration/purge blocks and each lead separately.",
+  "uncertainty": "1000 fixed-seed 26080 initialization-date paired bootstrap replicates for ordinal minus each control Brier differences and warning-frequency ratios. Spatial and serial dependence remain; all intervals are descriptive.",
+  "diagnostic_gate": "An ordinal arm is only a candidate for later independent evaluation if later-block very-heavy Brier is lower than the frozen control with a date-bootstrap 95% interval entirely below zero, very-heavy BSS is positive, heavy Brier does not worsen by more than 0.0001, and the absolute log warning-frequency ratio is lower at the unchanged cutoff. Any failure is reported, never hidden. Passing this consumed-data gate is not promotion.",
+  "june_followup": "If the later-block diagnostic gate passes, a separate no-refit, forecast-sealed June 2024 replay may examine the previously observed 9.24-fold warning-frequency bias on identical 90-lead cells. June cases overlap the calibration block and are consumed; such a replay can only be descriptive and requires a separately sealed protocol before decoding.",
+  "interpretation": "Base models and frozen controls were selected using 2024 outcomes, so even later-block comparisons are consumed development diagnostics. An independent year, source/version comparability, very-heavy event support and reliability are required before any scientific product or warning change.",
+  "release_rule": "Do not alter frozen models, live inference, public API, dashboard, warning cutoffs, or district product. No 2026 value decoding, pairing, scoring or tuning.",
+  "excluded_years": [2025, 2026]
+}

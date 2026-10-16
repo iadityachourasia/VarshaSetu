@@ -1,0 +1,16 @@
+{
+  "schema": "varshasetu-coherent-partial-grid-score-protocol-v1",
+  "created_local_date": "2026-10-07",
+  "status": "FROZEN_AFTER_FORECAST_SEAL_BEFORE_IMD_PAIRING",
+  "population": "Every READY date/lead in the sealed 30-cycle June 2024 coherent forecast result, split into all, prior-ready and newly-ready strata and each lead",
+  "reference": "Hash-verified 2024 IMD 0.25-degree daily rainfall aligned to valid-date 03-03 UTC; pair only forecast-valid and IMD-valid cells",
+  "thresholds_mm_24h": {"heavy": 64.5, "very_heavy": 115.6},
+  "probability_decision_thresholds": {"heavy": 0.1, "very_heavy": 0.05},
+  "climatology_2023": {"heavy": 0.018643351268255188, "very_heavy": 0.004738662567255957},
+  "probability_metrics": ["Brier", "Brier skill versus 2023 climatology", "10-bin reliability with counts", "observed and predicted event frequency", "hits/misses/false alarms/CSI/POD/FAR/ETS at frozen 2024-selected cutoffs"],
+  "deterministic_metrics": ["same-cell M0/M2/M4 RMSE", "bias", "heavy and very-heavy CSI/POD/FAR", "3x3 heavy-rain FSS"],
+  "uncertainty": "1000 fixed-seed initialization-date bootstrap repeats for Brier skill at the two thresholds, descriptive only; cell-level independence is not assumed",
+  "no_selection": "No fitting, cutoff change, model promotion or evaluation of 2025/2026. June 2024 is consumed development data, and its cutoffs were selected during 2024 development.",
+  "release_rule": "No independent skill, calibration, operational or public-warning claim. Live worker and dashboard stay unchanged.",
+  "excluded_years": [2025, 2026]
+}

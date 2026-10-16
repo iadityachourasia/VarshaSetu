@@ -1,0 +1,19 @@
+{
+  "schema": "varshasetu-2026-track-b-score-gate-protocol-v2",
+  "freeze_date": "2026-10-09",
+  "status": "FROZEN_SOURCE_GATE_AMENDMENT_BEFORE_2026_OBSERVATION_PAIRING",
+  "purpose": "Require a complete annual IMD metadata and terms review, cycle-specific GEFS version and predictor review, and explicit human source approval before invoking the unchanged v1 one-shot score algorithm.",
+  "v1_score_protocol_sha256": "e3ce114a91036bb5ffbe937c49b2dbf347a6594840735a13f6564f7f3b987d84",
+  "v1_scorer_sha256": "f8b1cc0c0d002bb7745f156ddc92c26b1fb603ea47253915866cc66120e71da4",
+  "supplemental_auditor_sha256": "98aed0ed9e8b71a1655571da0070f9db5d816dbdef2c23c674d598aed2b8b0d0",
+  "v2_entrypoint_sha256": "178c765b8454a2e5a71014cdaa3fb929d69cd09ec78d1557bf6f4bb6f279406c",
+  "entrypoint": "scripts/score_2026_with_clearance_gate_v2.py",
+  "source_review_approval_required": "2026_source_review_approval_v2.json with a SHA-256 receipt, named reviewer, UTC review date, explicit authenticity/rights, deployment/predictor and independent-test-seal decisions, and exact hashes of both clearance manifests and the annual file",
+  "reference_requirements": "Complete 365-day 2026 annual RF25 NetCDF, verified 129x135 shape and daily axis, 03-03 UTC accumulation, authorized local research use, explicit redistribution decision, immutable source receipt and file SHA-256",
+  "version_requirements": "Authoritative actual 2026 deployment evidence, 2023 training patch evidence, a version for every frozen forecast and admitted training cycle, and evidence-backed seven-field predictor review",
+  "score_algorithm": "The original v1 score_once is called without modification only after this v2 gate reports READY_FOR_AUTHORIZED_ONE_SHOT_SCORE; the v1 metrics, population, bootstrap and promotion rules remain frozen.",
+  "post_score_lineage": "A write-once 2026_track_b_score_gate_result_v2.json binds the v2 gate protocol, human approval, both source clearances and the v1 score SHA-256; absent companion means the v2 source gate has not been evidenced.",
+  "observation_values_read_during_freeze": false,
+  "score_run_during_freeze": false,
+  "model_default": "REGIONAL_M2_UNCHANGED"
+}

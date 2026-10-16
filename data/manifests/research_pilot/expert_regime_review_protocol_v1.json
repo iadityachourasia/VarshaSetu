@@ -1,0 +1,50 @@
+{
+  "schema": "expert-regime-review-protocol-v1",
+  "date": "2026-10-07",
+  "status": "FROZEN_BEFORE_EXPERT_ANNOTATION",
+  "purpose": "Blinded construct-validity review of forecast-time regime phenomena; no rainfall-skill claim",
+  "source_track": "A_REFORECAST",
+  "years": [
+    2014,
+    2015,
+    2016
+  ],
+  "year_status": "Previously consumed rainfall test years; expert labels are a new construct-validity check only",
+  "population": "Forecast-side INCLUDED GEFSv12 reforecast c00 JJAS cases on 10-22 N, 68-80 E",
+  "sampling": "For each year x JJAS month x Day 1/2/3 stratum, choose the two complete cases with smallest SHA256(case_id); no target, objective label or detector score used",
+  "cases_per_year_month_lead": 2,
+  "expected_cases": 72,
+  "reviewer_view": [
+    "case ID",
+    "UTC issue and valid time",
+    "six GEFS forecast atmospheric maps",
+    "separately inventoried dated bulletin if later supplied"
+  ],
+  "blinded_fields": [
+    "VarshaSetu detector scores",
+    "objective regime labels",
+    "corrected rainfall",
+    "observed rainfall",
+    "verification metrics"
+  ],
+  "tasks": [
+    "active_monsoon",
+    "break_weak_monsoon",
+    "low_depression",
+    "coastal_orographic",
+    "western_disturbance"
+  ],
+  "label_values": [
+    "present",
+    "absent",
+    "uncertain"
+  ],
+  "review_rule": "Two independent reviewers per case; cited rationale for positive; reason for uncertainty; preserve original forms and adjudicate blind to scores",
+  "western_disturbance_scope": "JJAS central-western India maps alone are insufficient; winter/broad-domain corpus required for rainfall relevance",
+  "bulletin_inventory_status": "EMPTY_PENDING_AUTHORIZED_CORPUS_AND_RIGHTS_REVIEW",
+  "reviewer_roster_status": "PENDING_BEFORE_ANNOTATION",
+  "analysis_code_status": "ANNOTATION_VALIDATOR_FROZEN; DETECTOR_COMPARISON_DEFERRED_UNTIL_LABELS_EXIST",
+  "source_protocol_sha256": "506c71b429e5c6d9ec4bbcbed09990556ed2e61ecbe9df16461a1cf228d177a7",
+  "builder_sha256": "8ebbd46d9f5e078448c5a14b39b6b962a73b1ba2a49547ddf203a8ad775f4695",
+  "sampling_module_sha256": "c7b13325af346124c624bfa2be52ee622c84bae857d1931199d8b8a00f64e7c5"
+}
