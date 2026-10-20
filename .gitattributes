@@ -9,6 +9,7 @@ backend/app/ml/zone_verification.py -text
 backend/app/ml/geoaware.py -text
 # Research pilot scripts and contracts whose sha256 is pinned in sealed protocols
 scripts/score_2026_frozen_inference.py -text
+backend/app/ml/track_b_2026_scoring.py -text
 scripts/audit_2026_selected_predictor_metadata.py -text
 scripts/score_2026_with_clearance_gate_v2.py -text
 scripts/diagnose_nationwide_probability_cutoff_transport.py -text
