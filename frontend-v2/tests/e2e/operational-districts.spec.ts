@@ -37,6 +37,48 @@ test("district table sorts by a column and the inspector follows a selected dist
   await expect(page.locator(".district-detail h2")).toHaveText(names[3]);
 });
 
+test("district filter announces results, explains its scope, and clears in both table views", async ({ page }) => {
+  await page.goto(`/districts?experiment=operational&year=2025&case=${CASE_2025}`);
+  const table = page.locator("#district-product-table");
+  const search = page.getByRole("searchbox", { name: "Filter district table by name" });
+  const status = page.locator(".district-search-count");
+  const inspectorName = await page.locator(".district-detail h2").innerText();
+
+  await expect(table.locator("tbody tr")).toHaveCount(187);
+  await expect(status).toHaveAttribute("role", "status");
+  await expect(status).toHaveAttribute("aria-live", "polite");
+  await expect(status).toHaveText("Showing 187 of 187 districts");
+  await expect(page.getByText(/Filtering changes the table only; the map and inspector/)).toBeVisible();
+
+  const firstDistrict = (await table.locator("tbody th button").first().innerText()).trim();
+  await search.fill(`  ${firstDistrict.slice(0, 4).toLowerCase()}  `);
+  await expect(table.locator("tbody")).toContainText(firstDistrict);
+  await expect(status).toContainText("of 187 districts");
+
+  await search.fill("district-name-that-does-not-exist");
+  await expect(status).toHaveText("Showing 0 of 187 districts");
+  await expect(table.locator("tbody tr")).toHaveCount(1);
+  await expect(table).toContainText("No districts match");
+  await expect(page.locator(".district-detail h2")).toHaveText(inspectorName);
+
+  const clear = page.getByRole("button", { name: "Clear district filter" });
+  const clearBounds = await clear.boundingBox();
+  expect(clearBounds?.width).toBeGreaterThanOrEqual(32);
+  expect(clearBounds?.height).toBeGreaterThanOrEqual(32);
+  await clear.click();
+  await expect(status).toHaveText("Showing 187 of 187 districts");
+  await expect(table.locator("tbody tr")).toHaveCount(187);
+
+  await page.getByRole("button", { name: "Compare all models" }).click();
+  await search.fill("district-name-that-does-not-exist");
+  await expect(status).toHaveText("Showing 0 of 187 districts");
+  await expect(table.locator("tbody tr")).toHaveCount(1);
+  await expect(table).toContainText("No districts match");
+  await clear.click();
+  await expect(status).toHaveText("Showing 187 of 187 districts");
+  await expect(table.locator("tbody tr")).toHaveCount(187);
+});
+
 test("switching the corrected model and map variable re-renders without inventing a value", async ({ page }) => {
   await page.goto(`/districts?experiment=operational&year=2025&case=${CASE_2025}`);
   await expect(page.locator(".district-table tbody tr")).toHaveCount(187);

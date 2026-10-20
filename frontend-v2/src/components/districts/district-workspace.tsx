@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useRef, useState } from "react";
 import type { Map as MapLibreMap } from "maplibre-gl";
+import { Search, X } from "lucide-react";
 import type { CaseSummary, District, Geometry } from "@/lib/api/science";
 import { districtsSchema, getScience } from "@/lib/api/science";
 import { leadName, mm, percent, regimeName, score, utc } from "@/lib/format";
@@ -30,6 +31,7 @@ export function DistrictWorkspace({ cases, demos, initialCase, geometry }: { cas
   const [caseId, setCaseId] = useState(initialCase);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [model, setModel] = useState<CorrectedModel>("m2");
+  const [searchQuery, setSearchQuery] = useState("");
   const [sort, setSort] = useState<SortKey>("corrected_mean_mm");
   const [ascending, setAscending] = useState(false);
   const mapRef = useRef<MapLibreMap | null>(null);
@@ -47,6 +49,11 @@ export function DistrictWorkspace({ cases, demos, initialCase, geometry }: { cas
     const order = typeof x === "string" && typeof y === "string" ? x.localeCompare(y) : Number(x) - Number(y);
     return (ascending ? order : -order) || a.district_name.localeCompare(b.district_name);
   }), [list, sort, ascending]);
+  const filteredOrdered = useMemo(() => {
+    if (!searchQuery.trim()) return ordered;
+    const q = searchQuery.toLowerCase().trim();
+    return ordered.filter((item) => item.district_name.toLowerCase().includes(q));
+  }, [ordered, searchQuery]);
   const defaultId = list?.reduce((first, item) => !first || item.corrected_mean_mm > first.corrected_mean_mm || item.corrected_mean_mm === first.corrected_mean_mm && item.district_id.localeCompare(first.district_id) < 0 ? item : first, undefined as District | undefined)?.district_id ?? null;
   const effectiveId = selectedId ?? defaultId;
   // Linked hover: pointing at a table row outlines its polygon on the map, and pointing at a polygon marks its table row.
@@ -87,7 +94,36 @@ export function DistrictWorkspace({ cases, demos, initialCase, geometry }: { cas
     {pending ? <LoadingState label="Loading district aggregation" /> : failed || !list ? <ErrorState message={heavy.error instanceof Error && b1 ? heavy.error.message : undefined} /> : <>
       <div className="districts-layout"><section className="districts-map-panel"><div className="map-panel-heading"><div><strong>{b1 ? "B1 district mean rainfall (heavy-rain bundle)" : "Corrected district mean rainfall"}</strong><span>{list.length} case-valid · {geometry.geometry.features.length} source districts intersect domain</span></div></div><MapControls district onReset={() => { if (mapRef.current) fitToData(mapRef.current); }} onZoom={(delta) => mapRef.current?.zoomTo((mapRef.current?.getZoom() ?? 0) + delta, { duration: 150 })} /><DistrictMap geometry={geometry.geometry} districts={list} selectedId={effectiveId} hoveredId={hoveredId} onHover={setHoveredId} onSelect={selectDistrict} onReady={(map) => { mapRef.current = map; }} /><div className="district-map-legend"><RainLegend /></div><p className="micro-note">Polygon color is the frozen case-specific {b1 ? "B1 corrected" : "corrected"} mean, not interpolated grid rainfall. Geography: {geometry.source} · {geometry.license}. Domain-limited coverage only.</p></section>
       <aside className="district-detail"><span className="small-label">DISTRICT INSPECTOR</span>{selected ? <><h2>{selected.district_name}</h2><p className="micro-note">{regimeName(selected.dominant_regime)} · {selected.valid_grid_cells} valid intersecting grid cells.</p><div className="detail-pair"><span>Raw GEFS mean <b>{mm(selected.raw_mean_mm)}</b></span><span>{b1 ? "B1 mean" : "Corrected mean"} <b>{mm(selected.corrected_mean_mm)}</b></span><span>{b1 ? "B1 maximum" : "Corrected maximum"} <b>{mm(selected.corrected_max_mm)}</b></span><span>Change from Raw <b>{mm(selected.corrected_mean_mm - selected.raw_mean_mm)}</b></span></div><div className="detail-pair"><span>{b1 ? "Heavy score" : "Heavy probability"} <b>{scoreOrPercent(selected.heavy_probability)}</b></span><span>{b1 ? "Very Heavy score" : "Very Heavy probability"} <b>{scoreOrPercent(selected.very_heavy_probability)}</b></span><span>{b1 ? "Heavy flagged area" : "Heavy area"} <b>{percent(selected.heavy_area_fraction)}</b></span><span>{b1 ? "Very Heavy flagged area" : "Very Heavy area"} <b>{percent(selected.very_heavy_area_fraction)}</b></span></div></> : <><h2>No case-valid district</h2><p>The selected historical case has no district product in this domain.</p></>}</aside></div>
-      <SectionHeading title="District product" note={b1 ? "Sort by any column · scores are not calibrated probabilities; flagged area is the share of the district where the yes/no forecast says yes" : "Sort by any column · probabilities and area fractions are distinct measures"} /><div className="district-table-wrap" tabIndex={0}><table className="science-table district-table"><caption className="sr-only">Area-weighted district rainfall and event probabilities for the selected historical case</caption><thead><tr>{shownColumns.map((column) => <th scope="col" key={column.key} aria-sort={sort === column.key ? ascending ? "ascending" : "descending" : "none"}><button type="button" onClick={() => changeSort(column.key)}>{column.label}{sort === column.key ? ascending ? " ↑" : " ↓" : ""}</button></th>)}</tr></thead><tbody>{ordered.map((item: District) => <tr key={item.district_id} {...rowProps(item.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(item.district_id)}>{item.district_name}</button></th><td>{mm(item.corrected_mean_mm)}</td><td>{mm(item.corrected_max_mm)}</td><td>{scoreOrPercent(item.heavy_probability)}</td><td>{scoreOrPercent(item.very_heavy_probability)}</td><td>{percent(item.heavy_area_fraction)}</td><td>{percent(item.very_heavy_area_fraction)}</td></tr>)}</tbody></table></div>
+      <SectionHeading title="District product" note={b1 ? "Sort by any column · scores are not calibrated probabilities; flagged area is the share of the district where the yes/no forecast says yes" : "Sort by any column · probabilities and area fractions are distinct measures"} />
+      <div className="district-table-toolbar">
+        <div className="district-search-wrap">
+          <Search className="district-search-icon" aria-hidden="true" />
+          <input
+            type="search"
+            className="district-search-input"
+            placeholder="Filter districts by name..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label="Filter district table by name"
+            aria-controls="district-product-table"
+          />
+          {searchQuery ? (
+            <button
+              type="button"
+              className="district-search-clear"
+              onClick={() => setSearchQuery("")}
+              aria-label="Clear district filter"
+            >
+              <X size={14} />
+            </button>
+          ) : null}
+        </div>
+        <span className="district-search-count" role="status" aria-live="polite" aria-atomic="true">
+          Showing {filteredOrdered.length} of {list?.length ?? 0} districts
+        </span>
+      </div>
+      <p className="micro-note district-filter-note">Filtering changes the table only; the map and inspector keep the current district selection.</p>
+      <div className="district-table-wrap" tabIndex={0}><table id="district-product-table" className="science-table district-table"><caption className="sr-only">Area-weighted district rainfall and event probabilities for the selected historical case</caption><thead><tr>{shownColumns.map((column) => <th scope="col" key={column.key} aria-sort={sort === column.key ? ascending ? "ascending" : "descending" : "none"}><button type="button" onClick={() => changeSort(column.key)}>{column.label}{sort === column.key ? ascending ? " ↑" : " ↓" : ""}</button></th>)}</tr></thead><tbody>{filteredOrdered.length ? filteredOrdered.map((item: District) => <tr key={item.district_id} {...rowProps(item.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(item.district_id)}>{item.district_name}</button></th><td>{mm(item.corrected_mean_mm)}</td><td>{mm(item.corrected_max_mm)}</td><td>{scoreOrPercent(item.heavy_probability)}</td><td>{scoreOrPercent(item.very_heavy_probability)}</td><td>{percent(item.heavy_area_fraction)}</td><td>{percent(item.very_heavy_area_fraction)}</td></tr>) : <tr><td colSpan={shownColumns.length}>No districts match “{searchQuery.trim()}”.</td></tr>}</tbody></table></div>
     </>}
   </div>;
 }

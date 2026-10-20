@@ -6,6 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useMemo, useRef, useState } from "react";
 import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 import type { Map as MapLibreMap } from "maplibre-gl";
+import { Search, X } from "lucide-react";
 import type { District, Geometry } from "@/lib/api/science";
 import { geometrySchema, getScience } from "@/lib/api/science";
 import {
@@ -120,6 +121,7 @@ export function OperationalDistrictWorkspace({ initialYear, initialCase }: { ini
   const [view, setView] = useState<View>("single");
   const [show, setShow] = useState<Show>("means");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
   const [sort, setSort] = useState<SortKey>("observed_mean_mm");
   const [ascending, setAscending] = useState(false);
   const [compareSort, setCompareSort] = useState<CompareSort>("observed");
@@ -159,6 +161,16 @@ export function OperationalDistrictWorkspace({ initialYear, initialCase }: { ini
     const order = typeof x === "string" && typeof y === "string" ? x.localeCompare(y) : Number(x) - Number(y);
     return (compareAscending ? order : -order) || a.district_name.localeCompare(b.district_name);
   }), [compareBody, compareSort, compareAscending, show]);
+  const filteredOrdered = useMemo(() => {
+    if (!searchQuery.trim()) return ordered;
+    const q = searchQuery.toLowerCase().trim();
+    return ordered.filter((item) => item.district_name.toLowerCase().includes(q));
+  }, [ordered, searchQuery]);
+  const filteredCompareOrdered = useMemo(() => {
+    if (!searchQuery.trim()) return compareOrdered;
+    const q = searchQuery.toLowerCase().trim();
+    return compareOrdered.filter((item) => item.district_name.toLowerCase().includes(q));
+  }, [compareOrdered, searchQuery]);
   // The shared choropleth reads `corrected_mean_mm`; feed it the selected variable (and its colour scale).
   const mapDistricts: District[] = useMemo(() => (list ?? []).map((row) => {
     const value = activeVariable === "error"
@@ -247,15 +259,43 @@ export function OperationalDistrictWorkspace({ initialYear, initialCase }: { ini
     <div className="phase5-tab-row" role="group" aria-label="Table view"><button type="button" aria-pressed={view === "single"} onClick={() => setView("single")}>Selected model</button><button type="button" aria-pressed={view === "compare"} onClick={() => setView("compare")} disabled={!compareBody}>Compare all models</button></div>
     {compareBody && selectedCase ? <p className="regime-evidence-downloads" data-testid="district-export"><strong>Download this case</strong> (Raw, M1 to M4 and IMD for every district, with weights and geometry hashes):{" "}
       {(["csv", "json"] as const).map((format, index) => <span key={format}>{index ? " · " : ""}<DownloadLink href={`/api/science/operational/${year}/cases/${selectedCase.case_id}/districts/export?format=${format}`}>{format.toUpperCase()}</DownloadLink></span>)}</p> : null}
+    <div className="district-table-toolbar">
+      <div className="district-search-wrap">
+        <Search className="district-search-icon" aria-hidden="true" />
+        <input
+          type="search"
+          className="district-search-input"
+          placeholder="Filter districts by name..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          aria-label="Filter district table by name"
+          aria-controls="district-product-table"
+        />
+        {searchQuery ? (
+          <button
+            type="button"
+            className="district-search-clear"
+            onClick={() => setSearchQuery("")}
+            aria-label="Clear district filter"
+          >
+            <X size={14} />
+          </button>
+        ) : null}
+      </div>
+      <span className="district-search-count" role="status" aria-live="polite" aria-atomic="true">
+        Showing {view === "compare" ? filteredCompareOrdered.length : filteredOrdered.length} of {list.length} districts
+      </span>
+    </div>
+    <p className="micro-note district-filter-note">Filtering changes the table only; the map and inspector keep the current district selection.</p>
     {view === "compare" && compareBody ? <>
       <div className="phase5-tab-row" role="group" aria-label="Comparison measure">{(Object.keys(SHOW_LABEL) as Show[]).map((item) => <button key={item} type="button" aria-pressed={show === item} onClick={() => setShow(item)}>{SHOW_LABEL[item]}</button>)}</div>
       <p className="micro-note">{show === "improvement" ? compareBody.improvement_definition : "Raw and the four corrected models share the same area weights, valid cells and IMD replay; differences are not skill scores."}</p>
-      <div className="district-table-wrap" tabIndex={0}><table className="science-table district-table district-compare-table"><caption className="sr-only">Area-weighted district comparison of Raw GEFS and all four corrected models with IMD replay for the selected historical case</caption>
+      <div className="district-table-wrap" tabIndex={0}><table id="district-product-table" className="science-table district-table district-compare-table"><caption className="sr-only">Area-weighted district comparison of Raw GEFS and all four corrected models with IMD replay for the selected historical case</caption>
         <thead><tr>{([["district_name", "District"], ["raw", show === "improvement" ? "Raw (reference)" : "Raw"], ...MODELS.map((key) => [key, MODEL_SHORT[key]]), ["observed", "IMD Mean"]] as [CompareSort, string][]).map(([key, label]) => <th scope="col" key={key} aria-sort={compareSort === key ? compareAscending ? "ascending" : "descending" : "none"}><button type="button" onClick={() => changeCompareSort(key)}>{label}{compareSort === key ? compareAscending ? " ↑" : " ↓" : ""}</button></th>)}</tr></thead>
-        <tbody>{compareOrdered.map((row) => <tr key={row.district_id} {...rowProps(row.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(row.district_id, geo)}>{row.district_name}</button></th>
-          <td>{show === "means" ? mm(row.raw_mean_mm) : show === "errors" ? signed(row.raw_error_mm) : "—"}</td>{MODELS.map((key) => <td key={key}>{tableMetric(row.models[key])}</td>)}<td>{mm(row.observed_mean_mm)}</td></tr>)}</tbody></table></div>
-    </> : <div className="district-table-wrap" tabIndex={0}><table className="science-table district-table"><caption className="sr-only">Area-weighted district rainfall, event probabilities and IMD replay for the selected historical operational-era case</caption><thead><tr>{columns.map((column) => <th scope="col" key={column.key} aria-sort={sort === column.key ? ascending ? "ascending" : "descending" : "none"}><button type="button" onClick={() => changeSort(column.key)}>{column.label}{sort === column.key ? ascending ? " ↑" : " ↓" : ""}</button></th>)}</tr></thead>
-      <tbody>{ordered.map((item) => <tr key={item.district_id} {...rowProps(item.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(item.district_id, geo)}>{item.district_name}</button></th><td>{mm(item.raw_mean_mm)}</td><td>{mm(item.corrected_mean_mm)}</td><td>{mm(item.observed_mean_mm)}</td><td>{mm(item.corrected_mean_mm - item.observed_mean_mm)}</td><td>{percent(item.heavy_probability)}</td><td>{percent(item.very_heavy_probability)}</td><td>{percent(item.heavy_area_fraction)}</td><td>{percent(item.observed_heavy_area_fraction)}</td></tr>)}</tbody></table></div>}
+        <tbody>{filteredCompareOrdered.length ? filteredCompareOrdered.map((row) => <tr key={row.district_id} {...rowProps(row.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(row.district_id, geo)}>{row.district_name}</button></th>
+          <td>{show === "means" ? mm(row.raw_mean_mm) : show === "errors" ? signed(row.raw_error_mm) : "—"}</td>{MODELS.map((key) => <td key={key}>{tableMetric(row.models[key])}</td>)}<td>{mm(row.observed_mean_mm)}</td></tr>) : <tr><td colSpan={MODELS.length + 3}>No districts match “{searchQuery.trim()}”.</td></tr>}</tbody></table></div>
+    </> : <div className="district-table-wrap" tabIndex={0}><table id="district-product-table" className="science-table district-table"><caption className="sr-only">Area-weighted district rainfall, event probabilities and IMD replay for the selected historical operational-era case</caption><thead><tr>{columns.map((column) => <th scope="col" key={column.key} aria-sort={sort === column.key ? ascending ? "ascending" : "descending" : "none"}><button type="button" onClick={() => changeSort(column.key)}>{column.label}{sort === column.key ? ascending ? " ↑" : " ↓" : ""}</button></th>)}</tr></thead>
+      <tbody>{filteredOrdered.length ? filteredOrdered.map((item) => <tr key={item.district_id} {...rowProps(item.district_id)}><th scope="row"><button type="button" onClick={() => selectDistrict(item.district_id, geo)}>{item.district_name}</button></th><td>{mm(item.raw_mean_mm)}</td><td>{mm(item.corrected_mean_mm)}</td><td>{mm(item.observed_mean_mm)}</td><td>{mm(item.corrected_mean_mm - item.observed_mean_mm)}</td><td>{percent(item.heavy_probability)}</td><td>{percent(item.very_heavy_probability)}</td><td>{percent(item.heavy_area_fraction)}</td><td>{percent(item.observed_heavy_area_fraction)}</td></tr>) : <tr><td colSpan={columns.length}>No districts match “{searchQuery.trim()}”.</td></tr>}</tbody></table></div>}
     <ul className="phase5-caveats">{body.caveats.map((caveat) => <li key={caveat} className="phase5-caveat">{caveat}</li>)}</ul>
   </div>;
 }
